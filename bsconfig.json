@@ -1,0 +1,17 @@
+{
+  "name": "reindex-web",
+  "package-specs": [{
+    "module": "commonjs",
+    "in-source": true
+  }],
+  "sources": [{
+    "dir": "src",
+    "subdirs": ["layouts", "pages"]
+  }, {
+    "dir": "bindings",
+    "subdirs": ["gatsby"]
+  }],
+  "bs-dependencies": ["reason-react"],
+  "reason": {"react-jsx": 2},
+  "bsc-flags": ["-bs-super-errors"]
+}
