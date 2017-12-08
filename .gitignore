@@ -9,3 +9,4 @@ yarn-error.log
 yarn.lock
 lib/
 .merlin
+.bsb.lock
