@@ -2,18 +2,15 @@
 'use strict';
 
 var React       = require("react");
+var Helpers     = require("../utils/Helpers.js");
 var ReasonReact = require("reason-react/src/ReasonReact.js");
-
-function text(prim) {
-  return prim;
-}
 
 var component = ReasonReact.statelessComponent("NotFoundPage");
 
 function make() {
   var newrecord = component.slice();
   newrecord[/* render */9] = (function () {
-      return React.createElement("div", undefined, React.createElement("h1", undefined, "NOT FOUND"), React.createElement("p", undefined, "You just hit a route that doesn't exist... the sadness."));
+      return React.createElement("div", undefined, React.createElement("h1", undefined, Helpers.text("NOT FOUND")), React.createElement("p", undefined, Helpers.text("You just hit a route that doesn't exist... the sadness.")));
     });
   return newrecord;
 }
@@ -22,7 +19,6 @@ var $$default = ReasonReact.wrapReasonForJs(component, (function () {
         return make(/* array */[]);
       }));
 
-exports.text      = text;
 exports.component = component;
 exports.make      = make;
 exports.$$default = $$default;

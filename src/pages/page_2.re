@@ -1,4 +1,4 @@
-let text = ReasonReact.stringToElement;
+open Helpers;
 
 let component = ReasonReact.statelessComponent("Page 2");
 let make = _children => {

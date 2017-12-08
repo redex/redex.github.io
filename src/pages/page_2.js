@@ -3,18 +3,15 @@
 
 var Link        = require("../../bindings/gatsby/link.js");
 var React       = require("react");
+var Helpers     = require("../utils/Helpers.js");
 var ReasonReact = require("reason-react/src/ReasonReact.js");
-
-function text(prim) {
-  return prim;
-}
 
 var component = ReasonReact.statelessComponent("Page 2");
 
 function make() {
   var newrecord = component.slice();
   newrecord[/* render */9] = (function () {
-      return React.createElement("div", undefined, React.createElement("h1", undefined, "Hi from the second page"), React.createElement("p", undefined, "Welcome to page 2"), ReasonReact.element(/* None */0, /* None */0, Link.make("/", /* None */0, /* array */["Go back to the homepage"])));
+      return React.createElement("div", undefined, React.createElement("h1", undefined, Helpers.text("Hi from the second page")), React.createElement("p", undefined, Helpers.text("Welcome to page 2")), ReasonReact.element(/* None */0, /* None */0, Link.make("/", /* None */0, /* array */[Helpers.text("Go back to the homepage")])));
     });
   return newrecord;
 }
@@ -23,7 +20,6 @@ var $$default = ReasonReact.wrapReasonForJs(component, (function () {
         return make(/* array */[]);
       }));
 
-exports.text      = text;
 exports.component = component;
 exports.make      = make;
 exports.$$default = $$default;

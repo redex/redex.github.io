@@ -1,4 +1,4 @@
-let text = ReasonReact.stringToElement;
+open Helpers;
 
 [%raw "require('./index.css')"];
 

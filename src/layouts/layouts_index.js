@@ -5,11 +5,8 @@ var Link        = require("../../bindings/gatsby/link.js");
 var Curry       = require("bs-platform/lib/js/curry.js");
 var React       = require("react");
 var Helmet      = require("../../bindings/gatsby/helmet.js");
+var Helpers     = require("../utils/Helpers.js");
 var ReasonReact = require("reason-react/src/ReasonReact.js");
-
-function text(prim) {
-  return prim;
-}
 
 ((require('./index.css')));
 
@@ -36,7 +33,7 @@ function make() {
                         }, ReasonReact.element(/* None */0, /* None */0, Link.make("/", /* Some */[{
                                     color: "white",
                                     textDecoration: "none"
-                                  }], /* array */["Gatsby"])))));
+                                  }], /* array */[Helpers.text("Gatsby")])))));
     });
   return newrecord;
 }
@@ -78,7 +75,6 @@ var $$default = ReasonReact.wrapReasonForJs(component$1, (function (jsProps) {
 
 var $$__esModule = /* true */1;
 
-exports.text         = text;
 exports.Header       = Header;
 exports.component    = component$1;
 exports.make         = make$1;
