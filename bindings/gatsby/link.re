@@ -1,14 +1,11 @@
-external linkClass : ReasonReact.reactClass = "default" [@@bs.module "gatsby-link"];
+[@bs.module "gatsby-link"] external reactClass : ReasonReact.reactClass = "default";
 
-let make
-  to_::(to_: string)
-  style::(style: option ReactDOMRe.Style.t)=?
-  children
-  =>
-  ReasonReact.wrapJsForReason
-    reactClass::linkClass
-    props::{
+let make = (~to_: string, ~style: option(ReactDOMRe.Style.t)=?, children) =>
+  ReasonReact.wrapJsForReason(
+    ~reactClass,
+    ~props={
       "to": to_,
-      "style": Js.Nullable.from_opt style
-    }
-    children;
+      "style": Js.Nullable.from_opt(style)
+    },
+    children
+  );

@@ -1,16 +1,13 @@
 let text = ReasonReact.stringToElement;
-let component = ReasonReact.statelessComponent "NotFoundPage";
 
-let make _children => {
+let component = ReasonReact.statelessComponent("NotFoundPage");
+let make = _children => {
   ...component,
-  render: fun _self =>
+  render: _self =>
     <div>
-      <h1> (text "NOT FOUND") </h1>
-      <p> (text "You just hit a route that doesn't exist... the sadness.") </p>
+      <h1> ("NOT FOUND" |> text) </h1>
+      <p> ("You just hit a route that doesn't exist... the sadness." |> text) </p>
     </div>
 };
 
-let default =
-  ReasonReact.wrapReasonForJs
-    ::component
-    (fun _ => make [||])
+let default = ReasonReact.wrapReasonForJs(~component=component, (_) => make([||]));
