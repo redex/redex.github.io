@@ -5,10 +5,9 @@ var Link        = require("../../bindings/gatsby/link.js");
 var Curry       = require("bs-platform/lib/js/curry.js");
 var React       = require("react");
 var Helmet      = require("../../bindings/gatsby/helmet.js");
+var Styles      = require("../styles/Styles.js");
 var Helpers     = require("../utils/Helpers.js");
 var ReasonReact = require("reason-react/src/ReasonReact.js");
-
-((require('./index.css')));
 
 var component = ReasonReact.statelessComponent("IndexLayout Header");
 
@@ -16,24 +15,12 @@ function make() {
   var newrecord = component.slice();
   newrecord[/* render */9] = (function () {
       return React.createElement("div", {
-                  style: {
-                    background: "rebeccapurple",
-                    marginBottom: "1.45rem"
-                  }
+                  className: Styles.Layout[/* header */0]
                 }, React.createElement("div", {
-                      style: {
-                        margin: "0 auto",
-                        maxWidth: "960px",
-                        padding: "1.45rem 1.0875rem"
-                      }
+                      className: Styles.Layout[/* widthContainer */1]
                     }, React.createElement("h1", {
-                          style: {
-                            margin: "0"
-                          }
-                        }, ReasonReact.element(/* None */0, /* None */0, Link.make("/", /* Some */[{
-                                    color: "white",
-                                    textDecoration: "none"
-                                  }], /* array */[Helpers.text("Gatsby")])))));
+                          className: Styles.Layout[/* title */2]
+                        }, ReasonReact.element(/* None */0, /* None */0, Link.make("/", /* None */0, /* array */[Helpers.text("re:index")])))));
     });
   return newrecord;
 }
@@ -58,12 +45,7 @@ function make$1(children, _) {
                               content: "sample, something"
                             }
                           ]], /* array */[])), ReasonReact.element(/* None */0, /* None */0, make(/* array */[])), React.createElement("div", {
-                      style: {
-                        margin: "0 auto",
-                        maxWidth: "960px",
-                        padding: "0px 1.0875rem 1.45rem",
-                        paddingTop: "0"
-                      }
+                      className: Styles.Layout[/* widthContainer */1]
                     }, Curry._1(children, /* () */0)));
     });
   return newrecord;
@@ -82,4 +64,4 @@ exports.$$default    = $$default;
 exports.default      = $$default;
 exports.__esModule   = true;
 exports.$$__esModule = $$__esModule;
-/*  Not a pure module */
+/* component Not a pure module */
