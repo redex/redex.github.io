@@ -1,0 +1,12 @@
+{
+  "name": "reason-react",
+  "version": "0.3.0",
+  "description": "Come join us in [Discord](https://discord.gg/reasonml)!",
+  "updated": "2017-11-16T23:48:04.872Z",
+  "keywords": [
+    "reason",
+    "react"
+  ],
+  "license": "MIT",
+  "readme": "# ReasonReact\n\nCome join us in [Discord](https://discord.gg/reasonml)!\n\n![reason-react](https://cloud.githubusercontent.com/assets/1909539/25026859/84a5a4e8-205d-11e7-857b-777ce6909cfd.png)\n\n```sh\nnpm install --save reason-react\n```\n\n## Usage\nSee https://github.com/reasonml-community/reason-react-example\n\n## Documentation\n\nSee https://reasonml.github.io/reason-react/\n\n## Contribute\n\n```sh\ngit clone https://github.com/reasonml/reason-react.git\ncd reason-react\nnpm install\nnpm start\n```\n\nThen add some files somewhere (don't forget to change `bsconfig.json`, if needed).\n\nSee the README inside `src` for more info!"
+}
