@@ -1,5 +1,4 @@
 open Helpers;
-
 let component = ReasonReact.statelessComponent("Package");
 let make = (~data, _children) => {
   ...component,
@@ -8,6 +7,7 @@ let make = (~data, _children) => {
       <h1> (data##packagesJson##name |> text) </h1>
       <span> ("(" ++ data##packagesJson##version ++ ")" |> text) </span>
       <div> (data##packagesJson##description |> text) </div>
+      <div dangerouslySetInnerHTML={ "__html": data##packagesJson##fields##html } />
     </div>
 };
 
@@ -20,6 +20,10 @@ let default = ReasonReact.wrapReasonForJs(~component=component, jsProps => make(
         name
         version
         description
+
+        fields {
+          html
+        }
       }
     }
   `

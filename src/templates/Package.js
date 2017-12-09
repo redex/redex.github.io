@@ -10,7 +10,11 @@ var component = ReasonReact.statelessComponent("Package");
 function make(data, _) {
   var newrecord = component.slice();
   newrecord[/* render */9] = (function () {
-      return React.createElement("div", undefined, React.createElement("h1", undefined, Helpers.text(data.packagesJson.name)), React.createElement("span", undefined, Helpers.text("(" + (data.packagesJson.version + ")"))), React.createElement("div", undefined, Helpers.text(data.packagesJson.description)));
+      return React.createElement("div", undefined, React.createElement("h1", undefined, Helpers.text(data.packagesJson.name)), React.createElement("span", undefined, Helpers.text("(" + (data.packagesJson.version + ")"))), React.createElement("div", undefined, Helpers.text(data.packagesJson.description)), React.createElement("div", {
+                      dangerouslySetInnerHTML: {
+                        __html: data.packagesJson.fields.html
+                      }
+                    }));
     });
   return newrecord;
 }
@@ -26,6 +30,10 @@ var $$default = ReasonReact.wrapReasonForJs(component, (function (jsProps) {
         name
         version
         description
+
+        fields {
+          html
+        }
       }
     }
   `
