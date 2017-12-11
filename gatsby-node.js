@@ -6,9 +6,8 @@ var html = require('remark-html');
 
 exports.onCreateNode = ({ node, getNode, boundActionCreators: { createNodeField} }) => {
   if (node.internal.type === "PackagesJson") {
-    const slug = createFilePath({ node, getNode, basePath: `pages` });
-    createNodeField({ node, name: `slug`, value: slug });
-
+    const slug = createFilePath({ node, getNode, trailingSlash: false });
+    createNodeField({ node, name: `slug`, value: "/packages" + decodeURIComponent(slug) });
 
     remark()
       .use(html)
