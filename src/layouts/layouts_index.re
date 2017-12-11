@@ -9,7 +9,7 @@ module Header = {
       <div className=Styles.Layout.header>
         <div className=Styles.Layout.widthContainer>
           <h1 className=Styles.Layout.title>
-            <Link to_="/"> ("re:index" |> text) </Link>
+            <Link to_="/"> ("re:libs" |> text) </Link>
           </h1>
         </div>
       </div>
@@ -21,8 +21,8 @@ let make = (~children: unit => ReasonReact.reactElement, _children) => {
   ...component,
 
   render: _self =>
-    <div>
-      <Helmet title="Gatsby Default Starter"
+    <div className=Styles.Layout.root>
+      <Helmet title="re:libs"
               meta=[|
                 {"name": "description", "content": "Sample"},
                 {"name": "keywords", "content": "sample, something"}

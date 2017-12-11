@@ -7,10 +7,12 @@ var Glamor = require("bs-glamor/src/glamor.js");
 require('./reset.css')
 ;
 
-var header = Glamor.css(/* :: */[
-      Glamor.background("#DD4C39"),
-      /* [] */0
-    ]);
+require('./global.css')
+;
+
+var root = Glamor.css(/* [] */0);
+
+var header = Glamor.css(/* [] */0);
 
 var widthContainer = Glamor.css(/* :: */[
       Glamor.margin("0 auto"),
@@ -29,7 +31,7 @@ var title = Glamor.css(/* :: */[
         /* Selector */Block.__(1, [
             "& > a",
             /* :: */[
-              Glamor.color("white"),
+              Glamor.color("#DD4C39"),
               /* :: */[
                 Glamor.textDecoration("none"),
                 /* [] */0
@@ -41,10 +43,75 @@ var title = Glamor.css(/* :: */[
     ]);
 
 var Layout = /* module */[
+  /* root */root,
   /* header */header,
   /* widthContainer */widthContainer,
   /* title */title
 ];
 
+var searchInput = Glamor.css(/* :: */[
+      Glamor.display("block"),
+      /* :: */[
+        Glamor.background("white"),
+        /* :: */[
+          Glamor.border("1px solid #eee"),
+          /* :: */[
+            Glamor.padding(".25em .5em"),
+            /* :: */[
+              Glamor.width("50vw"),
+              /* :: */[
+                Glamor.margin("0 auto"),
+                /* :: */[
+                  Glamor.color("#666"),
+                  /* [] */0
+                ]
+              ]
+            ]
+          ]
+        ]
+      ]
+    ]);
+
+var links = Glamor.css(/* :: */[
+      Glamor.textAlign("center"),
+      /* :: */[
+        /* Selector */Block.__(1, [
+            "& > a",
+            /* :: */[
+              Glamor.color("#DD4C39"),
+              /* :: */[
+                Glamor.fontSize(".85rem"),
+                /* :: */[
+                  Glamor.textDecoration("none"),
+                  /* :: */[
+                    Glamor.opacity(".5"),
+                    /* :: */[
+                      Glamor.margin("0 1em"),
+                      /* :: */[
+                        /* Selector */Block.__(1, [
+                            "&:hover",
+                            /* :: */[
+                              Glamor.opacity("1"),
+                              /* [] */0
+                            ]
+                          ]),
+                        /* [] */0
+                      ]
+                    ]
+                  ]
+                ]
+              ]
+            ]
+          ]),
+        /* [] */0
+      ]
+    ]);
+
+var Index = /* module */[
+  /* searchInput */searchInput,
+  /* links */links
+];
+
 exports.Layout = Layout;
+exports.Index  = Index;
 /*  Not a pure module */

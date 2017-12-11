@@ -2,49 +2,28 @@
 'use strict';
 
 var Link        = require("../../bindings/gatsby/link.js");
-var $$Array     = require("bs-platform/lib/js/array.js");
 var React       = require("react");
+var Styles      = require("../styles/Styles.js");
 var Helpers     = require("../utils/Helpers.js");
 var ReasonReact = require("reason-react/src/ReasonReact.js");
 
 var component = ReasonReact.statelessComponent("Index");
 
-function make(data, _) {
+function make() {
   var newrecord = component.slice();
   newrecord[/* render */9] = (function () {
-      return React.createElement("div", undefined, React.createElement("h1", undefined, Helpers.text("Hi people")), React.createElement("p", undefined, Helpers.text("Welcome to your new Gatsby site.")), React.createElement("p", undefined, Helpers.text("Now go build something great.")), $$Array.map((function (node) {
-                        return React.createElement("div", undefined, ReasonReact.element(/* None */0, /* None */0, Link.make(node.fields.slug, /* None */0, /* array */[Helpers.text(node.name)])));
-                      }), $$Array.map((function (edge) {
-                            return edge.node;
-                          }), data.allPackagesJson.edges)));
+      return React.createElement("div", undefined, React.createElement("input", {
+                      className: Styles.Index[/* searchInput */0]
+                    }), React.createElement("div", {
+                      className: Styles.Index[/* links */1]
+                    }, ReasonReact.element(/* None */0, /* None */0, Link.make("/packages", /* None */0, /* array */[Helpers.text("Packages")])), ReasonReact.element(/* None */0, /* None */0, Link.make("/keywords", /* None */0, /* array */[Helpers.text("Keywords")])), ReasonReact.element(/* None */0, /* None */0, Link.make("/about", /* None */0, /* array */[Helpers.text("About")]))));
     });
   return newrecord;
 }
 
-var $$default = ReasonReact.wrapReasonForJs(component, (function (jsProps) {
-        return make(jsProps.data, /* array */[]);
+var $$default = ReasonReact.wrapReasonForJs(component, (function () {
+        return make(/* array */[]);
       }));
-
-
-  export const query = graphql`
-    query IndexQuery {
-      allPackagesJson {
-        edges {
-          node {
-            name
-            version
-            description
-
-            fields {
-              slug
-            }
-          }
-        }
-      }
-    }
-  `
-
-;
 
 exports.component = component;
 exports.make      = make;

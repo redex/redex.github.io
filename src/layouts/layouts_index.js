@@ -15,12 +15,12 @@ function make() {
   var newrecord = component.slice();
   newrecord[/* render */9] = (function () {
       return React.createElement("div", {
-                  className: Styles.Layout[/* header */0]
+                  className: Styles.Layout[/* header */1]
                 }, React.createElement("div", {
-                      className: Styles.Layout[/* widthContainer */1]
+                      className: Styles.Layout[/* widthContainer */2]
                     }, React.createElement("h1", {
-                          className: Styles.Layout[/* title */2]
-                        }, ReasonReact.element(/* None */0, /* None */0, Link.make("/", /* None */0, /* array */[Helpers.text("re:index")])))));
+                          className: Styles.Layout[/* title */3]
+                        }, ReasonReact.element(/* None */0, /* None */0, Link.make("/", /* None */0, /* array */[Helpers.text("re:libs")])))));
     });
   return newrecord;
 }
@@ -35,7 +35,9 @@ var component$1 = ReasonReact.statelessComponent("IndexLayout");
 function make$1(children, _) {
   var newrecord = component$1.slice();
   newrecord[/* render */9] = (function () {
-      return React.createElement("div", undefined, ReasonReact.element(/* None */0, /* None */0, Helmet.make(/* Some */["Gatsby Default Starter"], /* Some */[/* array */[
+      return React.createElement("div", {
+                  className: Styles.Layout[/* root */0]
+                }, ReasonReact.element(/* None */0, /* None */0, Helmet.make(/* Some */["re:libs"], /* Some */[/* array */[
                             {
                               name: "description",
                               content: "Sample"
@@ -45,7 +47,7 @@ function make$1(children, _) {
                               content: "sample, something"
                             }
                           ]], /* array */[])), ReasonReact.element(/* None */0, /* None */0, make(/* array */[])), React.createElement("div", {
-                      className: Styles.Layout[/* widthContainer */1]
+                      className: Styles.Layout[/* widthContainer */2]
                     }, Curry._1(children, /* () */0)));
     });
   return newrecord;
