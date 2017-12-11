@@ -87,12 +87,18 @@ var colors = /* array */[
 ];
 
 var style = Glamor.css(/* :: */[
-      Glamor.opacity(".75"),
+      Glamor.display("inline-block"),
       /* :: */[
-        Glamor.fontSize(".85em"),
+        Glamor.opacity(".75"),
         /* :: */[
-          Glamor.marginLeft(".5em"),
-          /* [] */0
+          Glamor.fontSize(".85em"),
+          /* :: */[
+            Glamor.marginLeft(".5em"),
+            /* :: */[
+              Glamor.whiteSpace("nowrap"),
+              /* [] */0
+            ]
+          ]
         ]
       ]
     ]);

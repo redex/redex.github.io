@@ -11,7 +11,7 @@
     "dir": "bindings",
     "subdirs": true
   }],
-  "bs-dependencies": ["reason-react", "bs-glamor"],
+  "bs-dependencies": ["reason-react", "bs-glamor", "reason-rebase"],
   "reason": {"react-jsx": 2},
   "refmt": 3,
   "bsc-flags": ["-bs-super-errors"]

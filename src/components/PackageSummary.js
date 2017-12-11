@@ -17,21 +17,28 @@ var component = ReasonReact.statelessComponent("PackageSummary");
 function make($$package, _) {
   var newrecord = component.slice();
   newrecord[/* render */9] = (function () {
+      var keywords = $$package.keywords;
+      var match = $$package.license;
+      var match$1 = $$package.stars;
       return React.createElement("div", {
                   className: PackageSummaryStyles.root
                 }, React.createElement("div", {
                       className: PackageSummaryStyles.left
-                    }, ReasonReact.element(/* None */0, /* None */0, Link.make($$package.fields.slug, /* None */0, /* array */[Helpers.text($$package.name)])), Helpers.text(" (" + ($$package.version + ")")), React.createElement("div", undefined, Helpers.text($$package.description)), React.createElement("div", undefined, ReasonReact.element(/* None */0, /* None */0, FaTags.make(/* Some */["#ccc"], /* array */[])), $$Array.map((function (keyword) {
-                                return ReasonReact.element(/* None */0, /* None */0, Tag.make(keyword, /* array */[]));
-                              }), $$package.keywords))), React.createElement("div", {
+                    }, ReasonReact.element(/* None */0, /* None */0, Link.make($$package.fields.slug, /* None */0, /* array */[Helpers.text($$package.name)])), React.createElement("span", {
+                          className: PackageSummaryStyles.version
+                        }, Helpers.text($$package.version)), React.createElement("div", undefined, Helpers.text($$package.description)), keywords.length !== 0 ? React.createElement("div", undefined, ReasonReact.element(/* None */0, /* None */0, FaTags.make(/* Some */["#ccc"], /* array */[])), $$Array.map((function (keyword) {
+                                  return ReasonReact.element(/* Some */[keyword], /* None */0, Tag.make(keyword, /* array */[]));
+                                }), keywords)) : null), React.createElement("div", {
                       className: PackageSummaryStyles.right
                     }, React.createElement("div", {
                           className: PackageSummaryStyles.updated
-                        }, ReasonReact.element(/* None */0, /* None */0, TimeAgo.make($$package.updated, /* array */[]))), React.createElement("div", {
-                          className: PackageSummaryStyles.license
-                        }, Helpers.text($$package.license)), React.createElement("div", {
-                          className: PackageSummaryStyles.stars
-                        }, Helpers.text($$package.stars), ReasonReact.element(/* None */0, /* None */0, FaStar.make(/* Some */[PackageSummaryStyles.starIcon], /* None */0, /* array */[])))));
+                        }, ReasonReact.element(/* None */0, /* None */0, TimeAgo.make($$package.updated, /* array */[]))), (match == null) ? React.createElement("div", {
+                            className: PackageSummaryStyles.nolicense
+                          }, Helpers.text("No license")) : React.createElement("div", {
+                            className: PackageSummaryStyles.license
+                          }, Helpers.text(match)), (match$1 == null) ? null : React.createElement("div", {
+                            className: PackageSummaryStyles.stars
+                          }, Helpers.text(match$1), ReasonReact.element(/* None */0, /* None */0, FaStar.make(/* Some */[PackageSummaryStyles.starIcon], /* None */0, /* array */[])))));
     });
   return newrecord;
 }

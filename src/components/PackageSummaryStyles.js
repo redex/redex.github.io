@@ -38,6 +38,17 @@ var root = Glamor.css(/* :: */[
 
 var left = Glamor.css(/* [] */0);
 
+var version = Glamor.css(/* :: */[
+      Glamor.fontSize(".85em"),
+      /* :: */[
+        Glamor.fontStyle("italic"),
+        /* :: */[
+          Glamor.marginLeft(".5em"),
+          /* [] */0
+        ]
+      ]
+    ]);
+
 var right = Glamor.css(/* :: */[
       Glamor.textAlign("right"),
       /* [] */0
@@ -47,7 +58,10 @@ var updated = Glamor.css(/* :: */[
       Glamor.opacity(".5"),
       /* :: */[
         Glamor.fontSize(".85em"),
-        /* [] */0
+        /* :: */[
+          Glamor.whiteSpace("nowrap"),
+          /* [] */0
+        ]
       ]
     ]);
 
@@ -55,7 +69,21 @@ var license = Glamor.css(/* :: */[
       Glamor.opacity(".5"),
       /* :: */[
         Glamor.fontSize(".85em"),
-        /* [] */0
+        /* :: */[
+          Glamor.whiteSpace("nowrap"),
+          /* [] */0
+        ]
+      ]
+    ]);
+
+var nolicense = Glamor.css(/* :: */[
+      Glamor.color("red"),
+      /* :: */[
+        Glamor.fontSize(".85em"),
+        /* :: */[
+          Glamor.whiteSpace("nowrap"),
+          /* [] */0
+        ]
       ]
     ]);
 
@@ -63,7 +91,10 @@ var stars = Glamor.css(/* :: */[
       Glamor.opacity(".5"),
       /* :: */[
         Glamor.fontSize(".85em"),
-        /* [] */0
+        /* :: */[
+          Glamor.whiteSpace("nowrap"),
+          /* [] */0
+        ]
       ]
     ]);
 
@@ -75,11 +106,13 @@ var starIcon = Glamor.css(/* :: */[
       ]
     ]);
 
-exports.root     = root;
-exports.left     = left;
-exports.right    = right;
-exports.updated  = updated;
-exports.license  = license;
-exports.stars    = stars;
-exports.starIcon = starIcon;
+exports.root      = root;
+exports.left      = left;
+exports.version   = version;
+exports.right     = right;
+exports.updated   = updated;
+exports.license   = license;
+exports.nolicense = nolicense;
+exports.stars     = stars;
+exports.starIcon  = starIcon;
 /* root Not a pure module */

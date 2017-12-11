@@ -14,9 +14,11 @@ let colors = [|
 |];
 
 let style = Glamor.(css([
+  display("inline-block"),
   opacity(".75"),
   fontSize(".85em"),
   marginLeft(".5em"),
+  whiteSpace("nowrap"),
 ]));
 
 let component = ReasonReact.statelessComponent("Tag");

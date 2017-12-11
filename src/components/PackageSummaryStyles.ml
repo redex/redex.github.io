@@ -18,6 +18,12 @@ let left = css [
 
 ]
 
+let version = css [
+  fontSize ".85em";
+  fontStyle "italic";
+  marginLeft ".5em";
+]
+
 let right = css [
   textAlign "right";
 ]
@@ -25,16 +31,25 @@ let right = css [
 let updated = css [
   opacity ".5";
   fontSize ".85em";
+  whiteSpace "nowrap";
 ]
 
 let license = css [
   opacity ".5";
   fontSize ".85em";
+  whiteSpace "nowrap";
+]
+
+let nolicense = css [
+  color "red";
+  fontSize ".85em";
+  whiteSpace "nowrap";
 ]
 
 let stars = css [
   opacity ".5";
   fontSize ".85em";
+  whiteSpace "nowrap";
 ]
 
 let starIcon = css [
