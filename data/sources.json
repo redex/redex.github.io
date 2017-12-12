@@ -1,0 +1,92 @@
+{
+  "published": [
+
+    "bs-webapi",
+    "bs-director",
+    "bs-fetch",
+    "reason-react",
+    "reglinterface",
+    "reglweb",
+    "reglnative",
+    "reglios",
+    "@nebuta/bs-jquery",
+    "bs-dom",
+    "bucklescript-phx",
+    "bs-rebass",
+    "bs-glamor",
+    "bs-snabbdom",
+    "@bs-blueprintjs/core",
+    "@bs-blueprintjs/table",
+    "@bs-blueprintjs/datetime",
+    "@bs-blueprintjs/labs",
+    "reason-react-toolbox",
+    "bs-react-pdf",
+    "bs-react-intl",
+    "bs-nprogress",
+    "reason-apollo",
+
+    "bs-express",
+    "bs-spotify-web-api",
+    "bs-next",
+    "bs-mongodb",
+
+    "bs-react-native",
+    "bs-vscode",
+    "bs-atom",
+
+    "bs-moment",
+    "bs-axios",
+    "bs-json",
+    "bs-numeral",
+    "bs-most",
+
+    "bs-jest",
+    "bs-react-test-renderer",
+    "bs-enzyme",
+
+    "bucklescript-tea",
+    "tween.re",
+    "regql",
+
+    "reason-nact",
+
+    "bs-batteries",
+    "immutable-re",
+    "reductive",
+    "bs-ocaml-protoc-json",
+    "bs-rebug",
+    "reason-rebase",
+
+    "re-respect",
+
+    "bs-date-fns",
+    "bs-websockets"
+  ],
+
+  "unpublished": [
+    "glennsl/refetch",
+    "bs-leaflet",
+    "rewebrtc",
+    "reason-vue",
+    "bs-d3",
+    "bs-storybook",
+    "bs-node",
+    "bs-discord.js",
+    "bs-socket.io",
+    "bs-glob",
+    "bs-chalk",
+    "bs-puppeteer",
+    "bucklescript-electron",
+    "bs-immutablejs",
+    "bs-transit-js",
+    "bs-history",
+    "bs-geofire",
+    "bs-benchmarkjs",
+    "reprocessing",
+    "transducers.re",
+    "bs-revamp",
+    "reason-react-native-navigation",
+    "infinite-jest",
+    "vow"
+  ]
+}
