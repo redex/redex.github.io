@@ -49,29 +49,6 @@ var Layout = /* module */[
   /* title */title
 ];
 
-var searchInput = Glamor.css(/* :: */[
-      Glamor.display("block"),
-      /* :: */[
-        Glamor.background("white"),
-        /* :: */[
-          Glamor.border("1px solid #eee"),
-          /* :: */[
-            Glamor.padding(".25em .5em"),
-            /* :: */[
-              Glamor.width("50vw"),
-              /* :: */[
-                Glamor.margin("0 auto"),
-                /* :: */[
-                  Glamor.color("#666"),
-                  /* [] */0
-                ]
-              ]
-            ]
-          ]
-        ]
-      ]
-    ]);
-
 var links = Glamor.css(/* :: */[
       Glamor.textAlign("center"),
       /* :: */[
@@ -107,10 +84,7 @@ var links = Glamor.css(/* :: */[
       ]
     ]);
 
-var Index = /* module */[
-  /* searchInput */searchInput,
-  /* links */links
-];
+var Index = /* module */[/* links */links];
 
 exports.Layout = Layout;
 exports.Index  = Index;

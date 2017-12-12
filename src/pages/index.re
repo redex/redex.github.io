@@ -6,7 +6,7 @@ let make = _children => {
 
   render: _self =>
     <div>
-      <input className=Styles.Index.searchInput />
+      <PackageSearchBox />
       <div className=Styles.Index.links>
         <Link to_="/packages"> ("Packages" |> text) </Link>
         <Link to_="/keywords"> ("Keywords" |> text) </Link>

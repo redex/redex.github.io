@@ -31,17 +31,7 @@ end
 
 
 module Index = struct
-
-  let searchInput = css [
-    display "block";
-    background "white";
-    border "1px solid #eee";
-    padding ".25em .5em";
-    width "50vw";
-    margin "0 auto";
-    color "#666";
-  ]
-
+  
   let links = css [
     textAlign "center";
 
