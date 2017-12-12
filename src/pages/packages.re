@@ -5,24 +5,18 @@ let make = (~data, _children) => {
   ...component,
 
   render: _self =>
-    <div>
-      {
-        data##allPackagesJson##edges
-        |> Array.map(edge => edge##node)
-        |> Array.map(package => <PackageSummary package />)
-        |> ReasonReact.arrayToElement
-      }
-    </div>
+    <PackageList packages={data##packages##edges |> Array.map(edge => edge##node)} />
 };
 
 let default = ReasonReact.wrapReasonForJs(~component=component, jsProps => make(~data=jsProps##data, [||]));
 
 [%%raw {|
   export const query = graphql`
-    query IndexQuery {
-      allPackagesJson {
+    query PackagesQuery {
+      packages: allPackagesJson {
         edges {
           node {
+            id
             name
             version
             description
