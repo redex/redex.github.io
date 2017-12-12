@@ -31,7 +31,7 @@ end
 
 
 module Index = struct
-  
+
   let links = css [
     textAlign "center";
 
@@ -44,6 +44,28 @@ module Index = struct
 
       Selector("&:hover", [
         opacity "1";
+      ])
+    ])
+  ]
+
+  let lists = css [
+    display "flex";
+
+    Selector("& > *", [
+      padding "0 1em";
+      flex "1";
+
+      Selector("& > h2", [
+        textAlign "center";
+        fontSize "1.1em";
+        fontWeight "600";
+        margin "1em 0";
+      ]);
+
+      Selector("& > div", [
+        background "none";
+        border "none";
+        padding "0";
       ])
     ])
   ]

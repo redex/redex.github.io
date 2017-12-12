@@ -84,7 +84,60 @@ var links = Glamor.css(/* :: */[
       ]
     ]);
 
-var Index = /* module */[/* links */links];
+var lists = Glamor.css(/* :: */[
+      Glamor.display("flex"),
+      /* :: */[
+        /* Selector */Block.__(1, [
+            "& > *",
+            /* :: */[
+              Glamor.padding("0 1em"),
+              /* :: */[
+                Glamor.flex("1"),
+                /* :: */[
+                  /* Selector */Block.__(1, [
+                      "& > h2",
+                      /* :: */[
+                        Glamor.textAlign("center"),
+                        /* :: */[
+                          Glamor.fontSize("1.1em"),
+                          /* :: */[
+                            Glamor.fontWeight("600"),
+                            /* :: */[
+                              Glamor.margin("1em 0"),
+                              /* [] */0
+                            ]
+                          ]
+                        ]
+                      ]
+                    ]),
+                  /* :: */[
+                    /* Selector */Block.__(1, [
+                        "& > div",
+                        /* :: */[
+                          Glamor.background("none"),
+                          /* :: */[
+                            Glamor.border("none"),
+                            /* :: */[
+                              Glamor.padding("0"),
+                              /* [] */0
+                            ]
+                          ]
+                        ]
+                      ]),
+                    /* [] */0
+                  ]
+                ]
+              ]
+            ]
+          ]),
+        /* [] */0
+      ]
+    ]);
+
+var Index = /* module */[
+  /* links */links,
+  /* lists */lists
+];
 
 exports.Layout = Layout;
 exports.Index  = Index;
