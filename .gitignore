@@ -10,4 +10,4 @@ yarn.lock
 lib/
 .merlin
 .bsb.lock
-data/packages
+data/generated
