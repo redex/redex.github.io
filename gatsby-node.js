@@ -4,7 +4,7 @@ var remark = require('remark');
 var html = require('remark-html');
     
 
-exports.onCreateNode = ({ node, getNode, boundActionCreators: { createNodeField} }) => {
+exports.onCreateNode = ({ node, getNode, boundActionCreators: { createNodeField } }) => {
   if (node.internal.type === "PackagesJson") {
     const slug = createFilePath({ node, getNode, trailingSlash: false });
     createNodeField({ node, name: `slug`, value: "/packages" + decodeURIComponent(slug) });
@@ -15,9 +15,13 @@ exports.onCreateNode = ({ node, getNode, boundActionCreators: { createNodeField}
         createNodeField({ node, name: `html`, value: file.contents });
       });
   }
+
+  if (node.internal.type === "KeywordsJson") {
+    createNodeField({ node, name: `slug`, value: "/keywords/" + node.name });
+  }
 };
 
-exports.createPages = ({ graphql, boundActionCreators: { createPage} }) =>
+exports.createPages = ({ graphql, boundActionCreators: { createPage } }) => {
   new Promise((resolve, reject) => {
     graphql(`
       {
@@ -37,7 +41,6 @@ exports.createPages = ({ graphql, boundActionCreators: { createPage} }) =>
           path: node.fields.slug,
           component: path.resolve(`./src/templates/Package.js`),
           context: {
-            // Data passed to context is available in page queries as GraphQL variables.
             slug: node.fields.slug,
           },
         })
@@ -45,3 +48,32 @@ exports.createPages = ({ graphql, boundActionCreators: { createPage} }) =>
       resolve()
     })
   })
+
+  new Promise((resolve, reject) => {
+    graphql(`
+      {
+        allKeywordsJson {
+          edges {
+            node {
+              name
+              fields {
+                slug
+              }
+            }
+          }
+        }
+      }
+    `).then(result => {
+      result.data.allKeywordsJson.edges.map(({ node }) => {
+        createPage({
+          path: node.fields.slug,
+          component: path.resolve(`./src/templates/Keyword.js`),
+          context: {
+            keyword: node.name,
+          },
+        })
+      })
+      resolve()
+    })
+  })
+}
