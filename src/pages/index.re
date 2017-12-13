@@ -22,7 +22,7 @@ let make = (~data, _children) => {
             data##recentPackages##edges
             |> Array.map(edge => edge##node)
             |> Array.map(package =>
-                <div className=PackageSummaryStyles.root>
+                <div key=package##name className=PackageSummaryStyles.root>
                   <div className=PackageSummaryStyles.left>
                     <Link to_=package##fields##slug> {package##name |> text} </Link>
                     <span className=PackageSummaryStyles.version> {package##version |> text} </span>
@@ -42,7 +42,7 @@ let make = (~data, _children) => {
             data##popularPackages##edges
             |> Array.map(edge => edge##node)
             |> Array.map(package =>
-                <div className=PackageSummaryStyles.root>
+                <div key=package##name className=PackageSummaryStyles.root>
                   <div className=PackageSummaryStyles.left>
                     <Link to_=package##fields##slug> {package##name |> text} </Link>
                     <span className=PackageSummaryStyles.version> {package##version |> text} </span>
@@ -54,6 +54,25 @@ let make = (~data, _children) => {
                       | None 				=> ReasonReact.nullElement
                       }
                     }
+                  </div>
+                </div>
+               )
+            |> ReasonReact.arrayToElement
+          }
+        </div>
+
+        <div>
+          <h2> {"Keywords" |> text} </h2>
+          {
+            data##keywords##edges
+            |> Array.map(edge => edge##node)
+            |> Array.map(keyword =>
+                <div key=keyword##name className=PackageSummaryStyles.root>
+                  <div className=PackageSummaryStyles.left>
+                    <Link to_=keyword##fields##slug> {keyword##name |> text} </Link>
+                  </div>
+                  <div className=PackageSummaryStyles.right>
+                    <div> {keyword##count |> text} </div>
                   </div>
                 </div>
                )
@@ -77,10 +96,22 @@ let default = ReasonReact.wrapReasonForJs(~component, jsProps => make(~data=jsPr
         }
       }
 
-      popularPackages: allPackagesJson(filter: { stars: { ne: null }}, limit: 10, sort: { fields: [stars], order: DESC } ) {
+      popularPackages: allPackagesJson(limit: 10, sort: { fields: [popularity], order: DESC } ) {
         edges {
           node {
             ...package
+          }
+        }
+      }
+
+      keywords: allKeywordsJson(limit: 10, sort: { fields: [count], order: DESC } ) {
+        edges {
+          node {
+            name
+            count
+            fields {
+              slug
+            }
           }
         }
       }

@@ -23,6 +23,7 @@ function make(data, _) {
                       className: Styles.Index[/* lists */1]
                     }, React.createElement("div", undefined, React.createElement("h2", undefined, Helpers.text("Recent releases")), $$Array.map((function ($$package) {
                                 return React.createElement("div", {
+                                            key: $$package.name,
                                             className: PackageSummaryStyles.root
                                           }, React.createElement("div", {
                                                 className: PackageSummaryStyles.left
@@ -38,6 +39,7 @@ function make(data, _) {
                                   }), data.recentPackages.edges))), React.createElement("div", undefined, React.createElement("h2", undefined, Helpers.text("Most popular")), $$Array.map((function ($$package) {
                                 var match = $$package.stars;
                                 return React.createElement("div", {
+                                            key: $$package.name,
                                             className: PackageSummaryStyles.root
                                           }, React.createElement("div", {
                                                 className: PackageSummaryStyles.left
@@ -50,7 +52,18 @@ function make(data, _) {
                                                     }, Helpers.text(match), ReasonReact.element(/* None */0, /* None */0, FaStar.make(/* Some */[PackageSummaryStyles.starIcon], /* None */0, /* array */[])))));
                               }), $$Array.map((function (edge) {
                                     return edge.node;
-                                  }), data.popularPackages.edges)))));
+                                  }), data.popularPackages.edges))), React.createElement("div", undefined, React.createElement("h2", undefined, Helpers.text("Keywords")), $$Array.map((function (keyword) {
+                                return React.createElement("div", {
+                                            key: keyword.name,
+                                            className: PackageSummaryStyles.root
+                                          }, React.createElement("div", {
+                                                className: PackageSummaryStyles.left
+                                              }, ReasonReact.element(/* None */0, /* None */0, Link.make(keyword.fields.slug, /* None */0, /* array */[Helpers.text(keyword.name)]))), React.createElement("div", {
+                                                className: PackageSummaryStyles.right
+                                              }, React.createElement("div", undefined, Helpers.text(keyword.count))));
+                              }), $$Array.map((function (edge) {
+                                    return edge.node;
+                                  }), data.keywords.edges)))));
     });
   return newrecord;
 }
@@ -70,10 +83,22 @@ var $$default = ReasonReact.wrapReasonForJs(component, (function (jsProps) {
         }
       }
 
-      popularPackages: allPackagesJson(filter: { stars: { ne: null }}, limit: 10, sort: { fields: [stars], order: DESC } ) {
+      popularPackages: allPackagesJson(limit: 10, sort: { fields: [popularity], order: DESC } ) {
         edges {
           node {
             ...package
+          }
+        }
+      }
+
+      keywords: allKeywordsJson(limit: 10, sort: { fields: [count], order: DESC } ) {
+        edges {
+          node {
+            name
+            count
+            fields {
+              slug
+            }
           }
         }
       }
