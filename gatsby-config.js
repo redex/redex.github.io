@@ -2,6 +2,9 @@ module.exports = {
   siteMetadata: {
     title: `re:index`,
   },
+  mapping: {
+    "KeywordsJson.packages": "PackagesJson"
+  },
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
