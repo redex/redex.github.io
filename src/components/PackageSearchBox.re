@@ -54,8 +54,12 @@ let make = _children => {
   render: ({ state, reduce }) =>
     <div className=Styles.root>
 
-      <input className = Styles.input
-             onChange  = reduce(e => QueryChanged(Obj.magic(e)##target##value)) />
+      <div className=Styles.fakeInput>
+        <Icon.Search className=Styles.searchIcon />
+        <input className   = Styles.input
+              placeholder = "Search packages"
+              onChange    = reduce(e => QueryChanged(Obj.magic(e)##target##value)) />
+      </div>
 
       {
         switch (state.results |> Array.length) {

@@ -4,6 +4,7 @@
 var ReasonReact = require("reason-react/src/ReasonReact.js");
 var Fa          = require("react-icons/lib/fa");
 var Go          = require("react-icons/lib/go");
+var Md          = require("react-icons/lib/md");
 
 function Icon(Ext) {
   var make = function (className, children) {
@@ -14,7 +15,7 @@ function Icon(Ext) {
   return /* module */[/* make */make];
 }
 
-var Ext = /* module */[/* FaTags */Fa.FaTags];
+var Ext = /* module */[/* MdBook */Md.MdBook];
 
 function make(className, children) {
   return ReasonReact.wrapJsForReason(Ext[/* reactClass */0], {
@@ -22,9 +23,9 @@ function make(className, children) {
             }, children);
 }
 
-var Tags = /* module */[/* make */make];
+var Book = /* module */[/* make */make];
 
-var Ext$1 = /* module */[/* GoStar */Go.GoStar];
+var Ext$1 = /* module */[/* FaSearch */Fa.FaSearch];
 
 function make$1(className, children) {
   return ReasonReact.wrapJsForReason(Ext$1[/* reactClass */0], {
@@ -32,9 +33,31 @@ function make$1(className, children) {
             }, children);
 }
 
-var Star = /* module */[/* make */make$1];
+var Search = /* module */[/* make */make$1];
 
-exports.Icon = Icon;
-exports.Tags = Tags;
-exports.Star = Star;
+var Ext$2 = /* module */[/* GoStar */Go.GoStar];
+
+function make$2(className, children) {
+  return ReasonReact.wrapJsForReason(Ext$2[/* reactClass */0], {
+              className: className
+            }, children);
+}
+
+var Star = /* module */[/* make */make$2];
+
+var Ext$3 = /* module */[/* FaTags */Fa.FaTags];
+
+function make$3(className, children) {
+  return ReasonReact.wrapJsForReason(Ext$3[/* reactClass */0], {
+              className: className
+            }, children);
+}
+
+var Tags = /* module */[/* make */make$3];
+
+exports.Icon   = Icon;
+exports.Book   = Book;
+exports.Search = Search;
+exports.Star   = Star;
+exports.Tags   = Tags;
 /* Ext Not a pure module */

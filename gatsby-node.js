@@ -44,7 +44,7 @@ exports.onCreateNode = async ({ node, loadNodeContent, boundActionCreators: { cr
         );
     } else if (node.sourceInstanceName === "keywords") {
       parsed.forEach(keyword => {
-        keyword.id = "keywrods/" + keyword.name;
+        keyword.id = "keywords/" + keyword.name;
         keyword.slug = path.join("keywords", decodeURIComponent(keyword.name));
         transformObject(keyword, "Keywords")
       });
@@ -52,6 +52,16 @@ exports.onCreateNode = async ({ node, loadNodeContent, boundActionCreators: { cr
       throw "unknown source " + node.sourceInstanceName;
     }
   }
+};
+
+exports.onCreatePage = async ({ page, boundActionCreators: { createPage} }) => {
+  return new Promise(resolve => {
+    if (page.path === "/") {
+      page.layout = "FrontPageLayout";
+      createPage(page);
+    }
+    resolve();
+  });
 };
 
 exports.createPages = async ({ graphql, boundActionCreators: { createPage } }) => {

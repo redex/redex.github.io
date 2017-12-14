@@ -10,44 +10,58 @@ require('./reset.css')
 require('./global.css')
 ;
 
-var root = Glamor.css(/* [] */0);
-
-var header = Glamor.css(/* [] */0);
-
-var widthContainer = Glamor.css(/* :: */[
-      Glamor.margin("0 auto"),
+var keywords = Glamor.css(/* :: */[
+      Glamor.textAlign("center"),
       /* :: */[
-        Glamor.maxWidth("960px"),
+        Glamor.marginTop("3em"),
         /* :: */[
-          Glamor.padding("1.0875rem 1.45rem"),
-          /* [] */0
+          Glamor.lineHeight("1.5em"),
+          /* :: */[
+            /* Selector */Block.__(1, [
+                "& > a",
+                /* :: */[
+                  Glamor.display("inline-block"),
+                  /* :: */[
+                    Glamor.color("white"),
+                    /* :: */[
+                      Glamor.textDecoration("none"),
+                      /* :: */[
+                        Glamor.margin("0 1ex"),
+                        /* :: */[
+                          Glamor.whiteSpace("nowrap"),
+                          /* :: */[
+                            /* Selector */Block.__(1, [
+                                "& > .count",
+                                /* :: */[
+                                  Glamor.color("rgba(255, 255, 255, 0.5)"),
+                                  /* :: */[
+                                    Glamor.marginLeft(".5ex"),
+                                    /* [] */0
+                                  ]
+                                ]
+                              ]),
+                            /* :: */[
+                              /* Selector */Block.__(1, [
+                                  "&:hover > .label",
+                                  /* :: */[
+                                    Glamor.textDecoration("underline"),
+                                    /* [] */0
+                                  ]
+                                ]),
+                              /* [] */0
+                            ]
+                          ]
+                        ]
+                      ]
+                    ]
+                  ]
+                ]
+              ]),
+            /* [] */0
+          ]
         ]
       ]
     ]);
-
-var title = Glamor.css(/* :: */[
-      Glamor.margin("0"),
-      /* :: */[
-        /* Selector */Block.__(1, [
-            "& > a",
-            /* :: */[
-              Glamor.color("#DD4C39"),
-              /* :: */[
-                Glamor.textDecoration("none"),
-                /* [] */0
-              ]
-            ]
-          ]),
-        /* [] */0
-      ]
-    ]);
-
-var Layout = /* module */[
-  /* root */root,
-  /* header */header,
-  /* widthContainer */widthContainer,
-  /* title */title
-];
 
 var links = Glamor.css(/* :: */[
       Glamor.textAlign("center"),
@@ -55,25 +69,22 @@ var links = Glamor.css(/* :: */[
         /* Selector */Block.__(1, [
             "& > a",
             /* :: */[
-              Glamor.color("#DD4C39"),
+              Glamor.color("white"),
               /* :: */[
                 Glamor.fontSize(".85rem"),
                 /* :: */[
                   Glamor.textDecoration("none"),
                   /* :: */[
-                    Glamor.opacity(".5"),
+                    Glamor.margin("0 1em"),
                     /* :: */[
-                      Glamor.margin("0 1em"),
-                      /* :: */[
-                        /* Selector */Block.__(1, [
-                            "&:hover",
-                            /* :: */[
-                              Glamor.opacity("1"),
-                              /* [] */0
-                            ]
-                          ]),
-                        /* [] */0
-                      ]
+                      /* Selector */Block.__(1, [
+                          "&:hover",
+                          /* :: */[
+                            Glamor.opacity(".75"),
+                            /* [] */0
+                          ]
+                        ]),
+                      /* [] */0
                     ]
                   ]
                 ]
@@ -87,58 +98,206 @@ var links = Glamor.css(/* :: */[
 var lists = Glamor.css(/* :: */[
       Glamor.display("flex"),
       /* :: */[
-        /* Selector */Block.__(1, [
-            "& > *",
-            /* :: */[
-              Glamor.padding("0 1em"),
-              /* :: */[
-                Glamor.flex("1"),
+        Glamor.justifyContent("space-around"),
+        /* :: */[
+          Glamor.marginTop("3em"),
+          /* :: */[
+            /* Selector */Block.__(1, [
+                "& > *",
                 /* :: */[
-                  /* Selector */Block.__(1, [
-                      "& > h2",
+                  Glamor.padding("0 1em"),
+                  /* :: */[
+                    Glamor.width("40%"),
+                    /* :: */[
+                      Glamor.minWidth("300px"),
                       /* :: */[
-                        Glamor.textAlign("center"),
-                        /* :: */[
-                          Glamor.fontSize("1.1em"),
-                          /* :: */[
-                            Glamor.fontWeight("600"),
+                        /* Selector */Block.__(1, [
+                            "& > h2",
                             /* :: */[
-                              Glamor.margin("1em 0"),
-                              /* [] */0
+                              Glamor.color("white"),
+                              /* :: */[
+                                Glamor.textAlign("center"),
+                                /* :: */[
+                                  Glamor.fontSize("1.1em"),
+                                  /* :: */[
+                                    Glamor.fontWeight("600"),
+                                    /* :: */[
+                                      Glamor.margin(".5em 0"),
+                                      /* :: */[
+                                        Glamor.textTransform("lowercase"),
+                                        /* :: */[
+                                          Glamor.fontVariant("small-caps"),
+                                          /* :: */[
+                                            Glamor.paddingBottom(".5em"),
+                                            /* :: */[
+                                              Glamor.borderBottom("1px solid rgba(255, 255, 255, .5)"),
+                                              /* [] */0
+                                            ]
+                                          ]
+                                        ]
+                                      ]
+                                    ]
+                                  ]
+                                ]
+                              ]
                             ]
-                          ]
+                          ]),
+                        /* :: */[
+                          /* Selector */Block.__(1, [
+                              "& > div",
+                              /* :: */[
+                                Glamor.background("none"),
+                                /* :: */[
+                                  Glamor.border("none"),
+                                  /* :: */[
+                                    Glamor.padding("0"),
+                                    /* [] */0
+                                  ]
+                                ]
+                              ]
+                            ]),
+                          /* [] */0
                         ]
                       ]
-                    ]),
-                  /* :: */[
-                    /* Selector */Block.__(1, [
-                        "& > div",
-                        /* :: */[
-                          Glamor.background("none"),
-                          /* :: */[
-                            Glamor.border("none"),
-                            /* :: */[
-                              Glamor.padding("0"),
-                              /* [] */0
-                            ]
-                          ]
-                        ]
-                      ]),
-                    /* [] */0
+                    ]
                   ]
                 ]
-              ]
-            ]
-          ]),
-        /* [] */0
+              ]),
+            /* [] */0
+          ]
+        ]
       ]
     ]);
 
-var Index = /* module */[
-  /* links */links,
-  /* lists */lists
+var root = Glamor.css(/* :: */[
+      Glamor.display("flex"),
+      /* :: */[
+        Glamor.justifyContent("space-between"),
+        /* :: */[
+          Glamor.marginBottom(".5em"),
+          /* [] */0
+        ]
+      ]
+    ]);
+
+var name = Glamor.css(/* :: */[
+      Glamor.color("white"),
+      /* :: */[
+        Glamor.textDecoration("none"),
+        /* :: */[
+          /* Selector */Block.__(1, [
+              "&:hover",
+              /* :: */[
+                Glamor.textDecoration("underline"),
+                /* [] */0
+              ]
+            ]),
+          /* [] */0
+        ]
+      ]
+    ]);
+
+var version = Glamor.css(/* :: */[
+      Glamor.fontSize(".85em"),
+      /* :: */[
+        Glamor.fontStyle("italic"),
+        /* :: */[
+          Glamor.marginLeft(".5em"),
+          /* :: */[
+            Glamor.color("white"),
+            /* :: */[
+              Glamor.opacity(".5"),
+              /* [] */0
+            ]
+          ]
+        ]
+      ]
+    ]);
+
+var right = Glamor.css(/* :: */[
+      Glamor.textAlign("right"),
+      /* [] */0
+    ]);
+
+var updated = Glamor.css(/* :: */[
+      Glamor.opacity(".5"),
+      /* :: */[
+        Glamor.fontSize(".85em"),
+        /* :: */[
+          Glamor.whiteSpace("nowrap"),
+          /* :: */[
+            Glamor.color("white"),
+            /* :: */[
+              Glamor.opacity(".75"),
+              /* [] */0
+            ]
+          ]
+        ]
+      ]
+    ]);
+
+var stars = Glamor.css(/* :: */[
+      Glamor.opacity(".5"),
+      /* :: */[
+        Glamor.fontSize(".85em"),
+        /* :: */[
+          Glamor.whiteSpace("nowrap"),
+          /* :: */[
+            Glamor.color("white"),
+            /* :: */[
+              Glamor.opacity(".75"),
+              /* [] */0
+            ]
+          ]
+        ]
+      ]
+    ]);
+
+var starIcon = Glamor.css(/* :: */[
+      Glamor.marginLeft(".25em"),
+      /* :: */[
+        Glamor.transform("translateY(-1px)"),
+        /* :: */[
+          Glamor.fill("white"),
+          /* :: */[
+            Glamor.opacity(".5"),
+            /* [] */0
+          ]
+        ]
+      ]
+    ]);
+
+var count = Glamor.css(/* :: */[
+      Glamor.opacity(".5"),
+      /* :: */[
+        Glamor.fontSize(".85em"),
+        /* :: */[
+          Glamor.color("white"),
+          /* :: */[
+            Glamor.opacity(".75"),
+            /* [] */0
+          ]
+        ]
+      ]
+    ]);
+
+var ListItem = /* module */[
+  /* root */root,
+  /* name */name,
+  /* version */version,
+  /* right */right,
+  /* updated */updated,
+  /* stars */stars,
+  /* starIcon */starIcon,
+  /* count */count
 ];
 
-exports.Layout = Layout;
-exports.Index  = Index;
+var Index = /* module */[
+  /* keywords */keywords,
+  /* links */links,
+  /* lists */lists,
+  /* ListItem */ListItem
+];
+
+exports.Index = Index;
 /*  Not a pure module */

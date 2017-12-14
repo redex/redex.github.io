@@ -4,14 +4,29 @@ let root = css [
   position "relative";
 ]
 
+let fakeInput = css [
+  display "flex";
+  background "white";
+  fontSize "1.2em";
+  width "100%";
+  color "#dd4c39";
+  alignItems "center";
+  padding "0 .5em";
+]
+
+let searchIcon = css [
+  fill "#dd4c39";
+  opacity ".75"; 
+  margin ".5em";
+]
+
 let input = css [
   display "block";
   background "white";
-  border "1px solid #eee";
-  padding ".25em .5em";
-  width "50vw";
-  margin "0 auto";
-  color "#666";
+  border "none";
+  padding ".75em .25em";
+  width "100%";
+  color "#dd4c39";
 ]
 
 let results = css [
@@ -19,4 +34,9 @@ let results = css [
   zIndex "10";
   width "100%";
   boxShadow "1px 1px 0 1px rgba(0, 0, 0, .05)";
+
+  Selector("& > div", [
+    margin "0";
+    borderTop "1px solid #eee";
+  ])
 ]

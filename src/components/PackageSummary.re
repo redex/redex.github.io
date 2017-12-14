@@ -7,7 +7,7 @@ let make = (~package, _children) => {
 	...component,
 
 	render: _self =>
-		<div className={package##_type === "published" ? Styles.published : Styles.unpublished}>
+		<div className={package##_type === "unpublished" ? Styles.unpublished : Styles.published}>
 			<div className=Styles.left>
 				<Link to_=package##slug> {package##name |> text} </Link>
 				<span className=Styles.version> {package##version |> text} </span>

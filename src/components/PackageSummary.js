@@ -16,7 +16,7 @@ var component = ReasonReact.statelessComponent("PackageSummary");
 function make($$package, _) {
   var newrecord = component.slice();
   newrecord[/* render */9] = (function () {
-      var match = +($$package.type === "published");
+      var match = +($$package.type === "unpublished");
       var match$1 = $$package.type;
       var tmp = match$1 === "unpublished" ? React.createElement("span", {
               className: PackageSummaryStyles.unpublishedLabel
@@ -25,10 +25,10 @@ function make($$package, _) {
       var match$2 = $$package.license;
       var match$3 = $$package.stars;
       return React.createElement("div", {
-                  className: match !== 0 ? PackageSummaryStyles.published : PackageSummaryStyles.unpublished
+                  className: match !== 0 ? PackageSummaryStyles.unpublished : PackageSummaryStyles.published
                 }, React.createElement("div", {
                       className: PackageSummaryStyles.left
-                    }, ReasonReact.element(/* None */0, /* None */0, Link.make($$package.slug, /* None */0, /* array */[Helpers.text($$package.name)])), React.createElement("span", {
+                    }, ReasonReact.element(/* None */0, /* None */0, Link.make($$package.slug, /* None */0, /* None */0, /* array */[Helpers.text($$package.name)])), React.createElement("span", {
                           className: PackageSummaryStyles.version
                         }, Helpers.text($$package.version)), tmp, React.createElement("div", {
                           className: PackageSummaryStyles.description

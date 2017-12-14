@@ -9,10 +9,18 @@ module Icon(Ext: { let reactClass : ReasonReact.reactClass }) = {
     );
 };
 
-module Tags = Icon({
-  [@bs.module "react-icons/lib/fa"] external reactClass: ReasonReact.reactClass = "FaTags";
+module Book = Icon({
+  [@bs.module "react-icons/lib/md"] external reactClass: ReasonReact.reactClass = "MdBook";
+});
+
+module Search = Icon({
+  [@bs.module "react-icons/lib/fa"] external reactClass: ReasonReact.reactClass = "FaSearch";
 });
 
 module Star = Icon({
   [@bs.module "react-icons/lib/go"] external reactClass: ReasonReact.reactClass = "GoStar";
+});
+
+module Tags = Icon({
+  [@bs.module "react-icons/lib/fa"] external reactClass: ReasonReact.reactClass = "FaTags";
 });

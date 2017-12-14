@@ -7,31 +7,39 @@ let make = (~data, _children) => {
   render: _self =>
     <div>
       <PackageSearchBox />
-      <div className=Styles.Index.links>
-        <Link to_="/packages"> ("Packages" |> text) </Link>
-        <Link to_="/keywords"> ("Keywords" |> text) </Link>
-        <Link to_="/packages/unpublished"> ("Unpublished" |> text) </Link>
-        /*
-        <Link to_="/docs"> ("Documentation" |> text) </Link>
-        <Link to_="/about"> ("About" |> text) </Link>
-        <Link to_="/about/#submit"> ("Submit" |> text) </Link>
-        */
+
+      <div className=Styles.Index.keywords>
+        {
+          data##keywords##edges
+          |> Array.map(edge => edge##node)
+          |> Array.map(keyword =>
+              <Link to_=keyword##slug>
+                <span className="label"> {keyword##name |> text} </span>
+                <span className="count"> {keyword##count |> text} </span>
+              </Link>
+              )
+          |> ReasonReact.arrayToElement
+        }
       </div>
-      
+
       <div className=Styles.Index.lists>
         <div>
           <h2> {"Recent releases" |> text} </h2>
           {
+            module Styles = Styles.Index.ListItem;
+
             data##recentPackages##edges
             |> Array.map(edge => edge##node)
             |> Array.map(package =>
-                <div key=package##name className=PackageSummaryStyles.published>
-                  <div className=PackageSummaryStyles.left>
-                    <Link to_=package##slug> {package##name |> text} </Link>
-                    <span className=PackageSummaryStyles.version> {package##version |> text} </span>
+                <div key=package##name className=Styles.root>
+                  <div>
+                    <Link to_=package##slug className=Styles.name>
+                      {package##name |> text}
+                    </Link>
+                    <span className=Styles.version> {package##version |> text} </span>
                   </div>
-                  <div className=PackageSummaryStyles.right>
-                    <div className=PackageSummaryStyles.updated> <TimeAgo date=package##updated /> </div>
+                  <div className=Styles.right>
+                    <div className=Styles.updated> <TimeAgo date=package##updated /> </div>
                   </div>
                 </div>
                )
@@ -42,40 +50,25 @@ let make = (~data, _children) => {
         <div>
           <h2> {"Most popular" |> text} </h2>
           {
+            module Styles = Styles.Index.ListItem;
+
             data##popularPackages##edges
             |> Array.map(edge => edge##node)
             |> Array.map(package =>
-                <div key=package##name className=PackageSummaryStyles.published>
-                  <div className=PackageSummaryStyles.left>
-                    <Link to_=package##slug> {package##name |> text} </Link>
-                    <span className=PackageSummaryStyles.version> {package##version |> text} </span>
+                <div key=package##name className=Styles.root>
+                  <div>
+                    <Link to_=package##slug className=Styles.name>
+                      {package##name |> text}
+                    </Link>
+                    <span className=Styles.version> {package##version |> text} </span>
                   </div>
-                  <div className=PackageSummaryStyles.right>
+                  <div className=Styles.right>
                     {
                       switch (package##stars |> Js.toOption) {
-                      | Some(stars) => <div className=PackageSummaryStyles.stars> {stars |> text} <Icon.Star className=PackageSummaryStyles.starIcon/> </div>
+                      | Some(stars) => <div className=Styles.stars> {stars |> text} <Icon.Star className=Styles.starIcon/> </div>
                       | None 				=> ReasonReact.nullElement
                       }
                     }
-                  </div>
-                </div>
-               )
-            |> ReasonReact.arrayToElement
-          }
-        </div>
-
-        <div>
-          <h2> {"Keywords" |> text} </h2>
-          {
-            data##keywords##edges
-            |> Array.map(edge => edge##node)
-            |> Array.map(keyword =>
-                <div key=keyword##name className=PackageSummaryStyles.published>
-                  <div className=PackageSummaryStyles.left>
-                    <Link to_=keyword##slug> {keyword##name |> text} </Link>
-                  </div>
-                  <div className=PackageSummaryStyles.right>
-                    <div> {keyword##count |> text} </div>
                   </div>
                 </div>
                )
@@ -107,7 +100,7 @@ let default = ReasonReact.wrapReasonForJs(~component, jsProps => make(~data=jsPr
         }
       }
 
-      keywords: allKeywords(limit: 10, sort: { fields: [count], order: DESC } ) {
+      keywords: allKeywords(sort: { fields: [count], order: DESC } ) {
         edges {
           node {
             name

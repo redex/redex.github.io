@@ -5,9 +5,10 @@ var ReasonReact       = require("reason-react/src/ReasonReact.js");
 var GatsbyLink        = require("gatsby-link");
 var Js_null_undefined = require("bs-platform/lib/js/js_null_undefined.js");
 
-function make(to_, style, children) {
+function make(to_, className, style, children) {
   return ReasonReact.wrapJsForReason(GatsbyLink.default, {
               to: to_,
+              className: Js_null_undefined.from_opt(className),
               style: Js_null_undefined.from_opt(style)
             }, children);
 }
