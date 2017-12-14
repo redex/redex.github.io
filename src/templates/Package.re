@@ -4,10 +4,10 @@ let make = (~data, _children) => {
   ...component,
   render: _self =>
     <div>
-      <h1> (data##packagesJson##name |> text) </h1>
-      <span> ("(" ++ data##packagesJson##version ++ ")" |> text) </span>
-      <div> (data##packagesJson##description |> text) </div>
-      <div dangerouslySetInnerHTML={ "__html": data##packagesJson##fields##html } />
+      <h1> (data##package##name |> text) </h1>
+      <span> ("(" ++ data##package##version ++ ")" |> text) </span>
+      <div> (data##package##description |> text) </div>
+      <div dangerouslySetInnerHTML={ "__html": data##package##readme } />
     </div>
 };
 
@@ -15,15 +15,12 @@ let default = ReasonReact.wrapReasonForJs(~component=component, jsProps => make(
 
 [%%raw {|
   export const query = graphql`
-    query PackageQuery($slug: String = "bs-json") {
-      packagesJson(fields: { slug: { eq: $slug }}) {
+    query PackageQuery($slug: String!) {
+      package: packages(slug: { eq: $slug }) {
         name
         version
         description
-
-        fields {
-          html
-        }
+        readme
       }
     }
   `

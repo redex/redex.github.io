@@ -1,3 +1,4 @@
+open Rebase;
 open Helpers;
 
 let component = ReasonReact.statelessComponent("Keywords");
@@ -12,7 +13,8 @@ let make = (~data, _children) => {
         |> Array.map(keyword => 
           <div key=keyword##name>
             <h2> {keyword##name |> text} </h2>
-            <PackageList packages=keyword##packages />
+            <PackageList packages={keyword##packages |> Array.filter(p => p !== Obj.magic(Js.null)) /* TODO: warn about missing packages instead of just fitlering them out*/
+                                                     |> Js.Array.sortInPlaceWith((a, b) => compare(a##name, b##name)) } /> 
           </div>
         )
         |> ReasonReact.arrayToElement
@@ -25,12 +27,13 @@ let default = ReasonReact.wrapReasonForJs(~component=component, jsProps => make(
 [%%raw {|
   export const query = graphql`
     query KeywordsQuery {
-      keywords: allKeywordsJson(sort: { fields: [name] }) {
+      keywords: allKeywords(sort: { fields: [name] }) {
         edges {
           node {
             name
 
             packages {
+              type
               id
               name
               version
@@ -39,10 +42,7 @@ let default = ReasonReact.wrapReasonForJs(~component=component, jsProps => make(
               license
               updated
               stars
-
-              fields {
-                slug
-              }
+              slug
             }
           }
         }

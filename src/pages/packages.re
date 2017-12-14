@@ -13,9 +13,10 @@ let default = ReasonReact.wrapReasonForJs(~component=component, jsProps => make(
 [%%raw {|
   export const query = graphql`
     query PackagesQuery {
-      packages: allPackagesJson {
+      packages: allPackages {
         edges {
           node {
+            type
             id
             name
             version
@@ -24,10 +25,7 @@ let default = ReasonReact.wrapReasonForJs(~component=component, jsProps => make(
             license
             updated
             stars
-
-            fields {
-              slug
-            }
+            slug
           }
         }
       }

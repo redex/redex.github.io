@@ -10,9 +10,9 @@ var component = ReasonReact.statelessComponent("Package");
 function make(data, _) {
   var newrecord = component.slice();
   newrecord[/* render */9] = (function () {
-      return React.createElement("div", undefined, React.createElement("h1", undefined, Helpers.text(data.packagesJson.name)), React.createElement("span", undefined, Helpers.text("(" + (data.packagesJson.version + ")"))), React.createElement("div", undefined, Helpers.text(data.packagesJson.description)), React.createElement("div", {
+      return React.createElement("div", undefined, React.createElement("h1", undefined, Helpers.text(data.package.name)), React.createElement("span", undefined, Helpers.text("(" + (data.package.version + ")"))), React.createElement("div", undefined, Helpers.text(data.package.description)), React.createElement("div", {
                       dangerouslySetInnerHTML: {
-                        __html: data.packagesJson.fields.html
+                        __html: data.package.readme
                       }
                     }));
     });
@@ -25,15 +25,12 @@ var $$default = ReasonReact.wrapReasonForJs(component, (function (jsProps) {
 
 
   export const query = graphql`
-    query PackageQuery($slug: String = "bs-json") {
-      packagesJson(fields: { slug: { eq: $slug }}) {
+    query PackageQuery($slug: String!) {
+      package: packages(slug: { eq: $slug }) {
         name
         version
         description
-
-        fields {
-          html
-        }
+        readme
       }
     }
   `

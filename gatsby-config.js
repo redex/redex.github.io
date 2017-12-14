@@ -3,7 +3,7 @@ module.exports = {
     title: `re:index`,
   },
   mapping: {
-    "KeywordsJson.packages": "PackagesJson"
+    "Keywords.packages": "Packages"
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -19,7 +19,6 @@ module.exports = {
         name: "keywords",
         path: `${__dirname}/data/generated/keywords.json`
       }
-    },
-    "gatsby-transformer-json"
+    }
   ],
 }

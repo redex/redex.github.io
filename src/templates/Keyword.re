@@ -20,7 +20,7 @@ let default = ReasonReact.wrapReasonForJs(
 [%%raw {|
   export const query = graphql`
     query KeywordQuery($keyword: String!) {
-      packages: allPackagesJson(filter: { keywords: { in: [$keyword] }}) {
+      packages: allPackages(filter: { keywords: { in: [$keyword] }}) {
         edges {
           node {
             id
@@ -31,10 +31,7 @@ let default = ReasonReact.wrapReasonForJs(
             license
             updated
             stars
-
-            fields {
-              slug
-            }
+            slug
           }
         }
       }

@@ -19,15 +19,15 @@ function make(data, _) {
   newrecord[/* render */9] = (function () {
       return React.createElement("div", undefined, ReasonReact.element(/* None */0, /* None */0, PackageSearchBox.make(/* array */[])), React.createElement("div", {
                       className: Styles.Index[/* links */0]
-                    }, ReasonReact.element(/* None */0, /* None */0, Link.make("/packages", /* None */0, /* array */[Helpers.text("Packages")])), ReasonReact.element(/* None */0, /* None */0, Link.make("/keywords", /* None */0, /* array */[Helpers.text("Keywords")])), ReasonReact.element(/* None */0, /* None */0, Link.make("/docs", /* None */0, /* array */[Helpers.text("Documentation")])), ReasonReact.element(/* None */0, /* None */0, Link.make("/about", /* None */0, /* array */[Helpers.text("About")])), ReasonReact.element(/* None */0, /* None */0, Link.make("/about/#submit", /* None */0, /* array */[Helpers.text("Submit")]))), React.createElement("div", {
+                    }, ReasonReact.element(/* None */0, /* None */0, Link.make("/packages", /* None */0, /* array */[Helpers.text("Packages")])), ReasonReact.element(/* None */0, /* None */0, Link.make("/keywords", /* None */0, /* array */[Helpers.text("Keywords")])), ReasonReact.element(/* None */0, /* None */0, Link.make("/packages/unpublished", /* None */0, /* array */[Helpers.text("Unpublished")]))), React.createElement("div", {
                       className: Styles.Index[/* lists */1]
                     }, React.createElement("div", undefined, React.createElement("h2", undefined, Helpers.text("Recent releases")), $$Array.map((function ($$package) {
                                 return React.createElement("div", {
                                             key: $$package.name,
-                                            className: PackageSummaryStyles.root
+                                            className: PackageSummaryStyles.published
                                           }, React.createElement("div", {
                                                 className: PackageSummaryStyles.left
-                                              }, ReasonReact.element(/* None */0, /* None */0, Link.make($$package.fields.slug, /* None */0, /* array */[Helpers.text($$package.name)])), React.createElement("span", {
+                                              }, ReasonReact.element(/* None */0, /* None */0, Link.make($$package.slug, /* None */0, /* array */[Helpers.text($$package.name)])), React.createElement("span", {
                                                     className: PackageSummaryStyles.version
                                                   }, Helpers.text($$package.version))), React.createElement("div", {
                                                 className: PackageSummaryStyles.right
@@ -40,10 +40,10 @@ function make(data, _) {
                                 var match = $$package.stars;
                                 return React.createElement("div", {
                                             key: $$package.name,
-                                            className: PackageSummaryStyles.root
+                                            className: PackageSummaryStyles.published
                                           }, React.createElement("div", {
                                                 className: PackageSummaryStyles.left
-                                              }, ReasonReact.element(/* None */0, /* None */0, Link.make($$package.fields.slug, /* None */0, /* array */[Helpers.text($$package.name)])), React.createElement("span", {
+                                              }, ReasonReact.element(/* None */0, /* None */0, Link.make($$package.slug, /* None */0, /* array */[Helpers.text($$package.name)])), React.createElement("span", {
                                                     className: PackageSummaryStyles.version
                                                   }, Helpers.text($$package.version))), React.createElement("div", {
                                                 className: PackageSummaryStyles.right
@@ -55,10 +55,10 @@ function make(data, _) {
                                   }), data.popularPackages.edges))), React.createElement("div", undefined, React.createElement("h2", undefined, Helpers.text("Keywords")), $$Array.map((function (keyword) {
                                 return React.createElement("div", {
                                             key: keyword.name,
-                                            className: PackageSummaryStyles.root
+                                            className: PackageSummaryStyles.published
                                           }, React.createElement("div", {
                                                 className: PackageSummaryStyles.left
-                                              }, ReasonReact.element(/* None */0, /* None */0, Link.make(keyword.fields.slug, /* None */0, /* array */[Helpers.text(keyword.name)]))), React.createElement("div", {
+                                              }, ReasonReact.element(/* None */0, /* None */0, Link.make(keyword.slug, /* None */0, /* array */[Helpers.text(keyword.name)]))), React.createElement("div", {
                                                 className: PackageSummaryStyles.right
                                               }, React.createElement("div", undefined, Helpers.text(keyword.count))));
                               }), $$Array.map((function (edge) {
@@ -75,7 +75,7 @@ var $$default = ReasonReact.wrapReasonForJs(component, (function (jsProps) {
 
   export const query = graphql`
     query IndexQuery {
-      recentPackages: allPackagesJson(limit: 10, sort: { fields: [updated], order: DESC } ) {
+      recentPackages: allPackages(filter: { type: { eq: "published" } }, limit: 10, sort: { fields: [updated], order: DESC } ) {
         edges {
           node {
             ...package
@@ -83,7 +83,7 @@ var $$default = ReasonReact.wrapReasonForJs(component, (function (jsProps) {
         }
       }
 
-      popularPackages: allPackagesJson(limit: 10, sort: { fields: [popularity], order: DESC } ) {
+      popularPackages: allPackages(limit: 10, sort: { fields: [popularity], order: DESC } ) {
         edges {
           node {
             ...package
@@ -91,20 +91,18 @@ var $$default = ReasonReact.wrapReasonForJs(component, (function (jsProps) {
         }
       }
 
-      keywords: allKeywordsJson(limit: 10, sort: { fields: [count], order: DESC } ) {
+      keywords: allKeywords(limit: 10, sort: { fields: [count], order: DESC } ) {
         edges {
           node {
             name
             count
-            fields {
-              slug
-            }
+            slug
           }
         }
       }
     }
 
-    fragment package on PackagesJson {
+    fragment package on Packages {
       name
       version
       description
@@ -112,10 +110,7 @@ var $$default = ReasonReact.wrapReasonForJs(component, (function (jsProps) {
       license
       updated
       stars
-
-      fields {
-        slug
-      }
+      slug
     }
   `
 

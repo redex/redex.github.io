@@ -10,9 +10,12 @@ let make = (~data, _children) => {
       <div className=Styles.Index.links>
         <Link to_="/packages"> ("Packages" |> text) </Link>
         <Link to_="/keywords"> ("Keywords" |> text) </Link>
+        <Link to_="/packages/unpublished"> ("Unpublished" |> text) </Link>
+        /*
         <Link to_="/docs"> ("Documentation" |> text) </Link>
         <Link to_="/about"> ("About" |> text) </Link>
         <Link to_="/about/#submit"> ("Submit" |> text) </Link>
+        */
       </div>
       
       <div className=Styles.Index.lists>
@@ -22,9 +25,9 @@ let make = (~data, _children) => {
             data##recentPackages##edges
             |> Array.map(edge => edge##node)
             |> Array.map(package =>
-                <div key=package##name className=PackageSummaryStyles.root>
+                <div key=package##name className=PackageSummaryStyles.published>
                   <div className=PackageSummaryStyles.left>
-                    <Link to_=package##fields##slug> {package##name |> text} </Link>
+                    <Link to_=package##slug> {package##name |> text} </Link>
                     <span className=PackageSummaryStyles.version> {package##version |> text} </span>
                   </div>
                   <div className=PackageSummaryStyles.right>
@@ -42,9 +45,9 @@ let make = (~data, _children) => {
             data##popularPackages##edges
             |> Array.map(edge => edge##node)
             |> Array.map(package =>
-                <div key=package##name className=PackageSummaryStyles.root>
+                <div key=package##name className=PackageSummaryStyles.published>
                   <div className=PackageSummaryStyles.left>
-                    <Link to_=package##fields##slug> {package##name |> text} </Link>
+                    <Link to_=package##slug> {package##name |> text} </Link>
                     <span className=PackageSummaryStyles.version> {package##version |> text} </span>
                   </div>
                   <div className=PackageSummaryStyles.right>
@@ -67,9 +70,9 @@ let make = (~data, _children) => {
             data##keywords##edges
             |> Array.map(edge => edge##node)
             |> Array.map(keyword =>
-                <div key=keyword##name className=PackageSummaryStyles.root>
+                <div key=keyword##name className=PackageSummaryStyles.published>
                   <div className=PackageSummaryStyles.left>
-                    <Link to_=keyword##fields##slug> {keyword##name |> text} </Link>
+                    <Link to_=keyword##slug> {keyword##name |> text} </Link>
                   </div>
                   <div className=PackageSummaryStyles.right>
                     <div> {keyword##count |> text} </div>
@@ -88,7 +91,7 @@ let default = ReasonReact.wrapReasonForJs(~component, jsProps => make(~data=jsPr
 [%%raw {|
   export const query = graphql`
     query IndexQuery {
-      recentPackages: allPackagesJson(limit: 10, sort: { fields: [updated], order: DESC } ) {
+      recentPackages: allPackages(filter: { type: { eq: "published" } }, limit: 10, sort: { fields: [updated], order: DESC } ) {
         edges {
           node {
             ...package
@@ -96,7 +99,7 @@ let default = ReasonReact.wrapReasonForJs(~component, jsProps => make(~data=jsPr
         }
       }
 
-      popularPackages: allPackagesJson(limit: 10, sort: { fields: [popularity], order: DESC } ) {
+      popularPackages: allPackages(limit: 10, sort: { fields: [popularity], order: DESC } ) {
         edges {
           node {
             ...package
@@ -104,20 +107,18 @@ let default = ReasonReact.wrapReasonForJs(~component, jsProps => make(~data=jsPr
         }
       }
 
-      keywords: allKeywordsJson(limit: 10, sort: { fields: [count], order: DESC } ) {
+      keywords: allKeywords(limit: 10, sort: { fields: [count], order: DESC } ) {
         edges {
           node {
             name
             count
-            fields {
-              slug
-            }
+            slug
           }
         }
       }
     }
 
-    fragment package on PackagesJson {
+    fragment package on Packages {
       name
       version
       description
@@ -125,10 +126,7 @@ let default = ReasonReact.wrapReasonForJs(~component, jsProps => make(~data=jsPr
       license
       updated
       stars
-
-      fields {
-        slug
-      }
+      slug
     }
   `
 |}];
