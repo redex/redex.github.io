@@ -53,7 +53,7 @@ let make = (~data, _children) => {
                   <div className=PackageSummaryStyles.right>
                     {
                       switch (package##stars |> Js.toOption) {
-                      | Some(stars) => <div className=PackageSummaryStyles.stars> {stars |> text} <FaStar className=PackageSummaryStyles.starIcon/> </div>
+                      | Some(stars) => <div className=PackageSummaryStyles.stars> {stars |> text} <Icon.Star className=PackageSummaryStyles.starIcon/> </div>
                       | None 				=> ReasonReact.nullElement
                       }
                     }

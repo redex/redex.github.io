@@ -7,12 +7,19 @@ let make = (~package, _children) => {
 	...component,
 
 	render: _self =>
-		<div className=Styles.root>
+		<div className={package##_type === "published" ? Styles.published : Styles.unpublished}>
 			<div className=Styles.left>
-				<Link to_=package##fields##slug> {package##name |> text} </Link>
+				<Link to_=package##slug> {package##name |> text} </Link>
 				<span className=Styles.version> {package##version |> text} </span>
+				{
+					switch (package##_type) {
+					| "unpublished" =>
+						<span className=Styles.unpublishedLabel> {"unpublished" |> text} </span>
+					| _ => ReasonReact.nullElement
+					}
+				}
 
-				<div>
+				<div className=Styles.description>	
 					{package##description |> text}
 				</div>
 
@@ -21,7 +28,7 @@ let make = (~package, _children) => {
 					| [||] => ReasonReact.nullElement
 					| keywords =>
 						<div>
-							<FaTags color="#ccc"/>
+							<Icon.Tags className=Styles.tagsIcon />
 							{
 								keywords |> Array.map(keyword => <Tag key=keyword name=keyword />)
 											   |> ReasonReact.arrayToElement
@@ -41,7 +48,7 @@ let make = (~package, _children) => {
 				}
 				{
 					switch (package##stars |> Js.toOption) {
-					| Some(stars) => <div className=Styles.stars> {stars |> text} <FaStar className=Styles.starIcon/> </div>
+					| Some(stars) => <div className=Styles.stars> {stars |> text} <Icon.Star className=Styles.starIcon/> </div>
 					| None 				=> ReasonReact.nullElement
 					}
 				}

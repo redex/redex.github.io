@@ -2,11 +2,10 @@
 'use strict';
 
 var Tag                  = require("./Tag.js");
+var Icon                 = require("../vendor/icons/Icon.js");
 var Link                 = require("../../bindings/gatsby/link.js");
 var $$Array              = require("bs-platform/lib/js/array.js");
 var React                = require("react");
-var FaStar               = require("../vendor/icons/FaStar.js");
-var FaTags               = require("../vendor/icons/FaTags.js");
 var Helpers              = require("../utils/Helpers.js");
 var TimeAgo              = require("../vendor/TimeAgo.js");
 var ReasonReact          = require("reason-react/src/ReasonReact.js");
@@ -17,28 +16,35 @@ var component = ReasonReact.statelessComponent("PackageSummary");
 function make($$package, _) {
   var newrecord = component.slice();
   newrecord[/* render */9] = (function () {
+      var match = +($$package.type === "published");
+      var match$1 = $$package.type;
+      var tmp = match$1 === "unpublished" ? React.createElement("span", {
+              className: PackageSummaryStyles.unpublishedLabel
+            }, Helpers.text("unpublished")) : null;
       var keywords = $$package.keywords;
-      var match = $$package.license;
-      var match$1 = $$package.stars;
+      var match$2 = $$package.license;
+      var match$3 = $$package.stars;
       return React.createElement("div", {
-                  className: PackageSummaryStyles.root
+                  className: match !== 0 ? PackageSummaryStyles.published : PackageSummaryStyles.unpublished
                 }, React.createElement("div", {
                       className: PackageSummaryStyles.left
-                    }, ReasonReact.element(/* None */0, /* None */0, Link.make($$package.fields.slug, /* None */0, /* array */[Helpers.text($$package.name)])), React.createElement("span", {
+                    }, ReasonReact.element(/* None */0, /* None */0, Link.make($$package.slug, /* None */0, /* array */[Helpers.text($$package.name)])), React.createElement("span", {
                           className: PackageSummaryStyles.version
-                        }, Helpers.text($$package.version)), React.createElement("div", undefined, Helpers.text($$package.description)), keywords.length !== 0 ? React.createElement("div", undefined, ReasonReact.element(/* None */0, /* None */0, FaTags.make(/* Some */["#ccc"], /* array */[])), $$Array.map((function (keyword) {
+                        }, Helpers.text($$package.version)), tmp, React.createElement("div", {
+                          className: PackageSummaryStyles.description
+                        }, Helpers.text($$package.description)), keywords.length !== 0 ? React.createElement("div", undefined, ReasonReact.element(/* None */0, /* None */0, Icon.Tags[/* make */0](/* Some */[PackageSummaryStyles.tagsIcon], /* array */[])), $$Array.map((function (keyword) {
                                   return ReasonReact.element(/* Some */[keyword], /* None */0, Tag.make(keyword, /* array */[]));
                                 }), keywords)) : null), React.createElement("div", {
                       className: PackageSummaryStyles.right
                     }, React.createElement("div", {
                           className: PackageSummaryStyles.updated
-                        }, ReasonReact.element(/* None */0, /* None */0, TimeAgo.make($$package.updated, /* array */[]))), (match == null) ? React.createElement("div", {
+                        }, ReasonReact.element(/* None */0, /* None */0, TimeAgo.make($$package.updated, /* array */[]))), (match$2 == null) ? React.createElement("div", {
                             className: PackageSummaryStyles.nolicense
                           }, Helpers.text("No license")) : React.createElement("div", {
                             className: PackageSummaryStyles.license
-                          }, Helpers.text(match)), (match$1 == null) ? null : React.createElement("div", {
+                          }, Helpers.text(match$2)), (match$3 == null) ? null : React.createElement("div", {
                             className: PackageSummaryStyles.stars
-                          }, Helpers.text(match$1), ReasonReact.element(/* None */0, /* None */0, FaStar.make(/* Some */[PackageSummaryStyles.starIcon], /* None */0, /* array */[])))));
+                          }, Helpers.text(match$3), ReasonReact.element(/* None */0, /* None */0, Icon.Star[/* make */0](/* Some */[PackageSummaryStyles.starIcon], /* array */[])))));
     });
   return newrecord;
 }
