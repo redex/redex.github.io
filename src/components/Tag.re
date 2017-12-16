@@ -27,7 +27,7 @@ let make = (~name, _children) => {
 
   render: _self =>
     <span className=style
-          style={ReactDOMRe.Style.make(~color=Utils.selectColor(colors, name), ())}>
+          style={ReactDOMRe.Style.make(~borderLeftColor=Utils.selectColor(colors, name), ())}>
       {name |> text}
     </span>
 }

@@ -6,7 +6,10 @@ var Glamor = require("bs-glamor/src/glamor.js");
 
 var root = Glamor.css(/* :: */[
       Glamor.position("relative"),
-      /* [] */0
+      /* :: */[
+        Glamor.flex("1"),
+        /* [] */0
+      ]
     ]);
 
 var fakeInput = Glamor.css(/* :: */[

@@ -2,6 +2,7 @@ open Glamor
 
 let root = css [
   position "relative";
+  flex "1";
 ]
 
 let fakeInput = css [

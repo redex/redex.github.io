@@ -111,7 +111,7 @@ function make(name, _) {
       return React.createElement("span", {
                   className: style,
                   style: {
-                    color: Utils.selectColor(colors, name)
+                    borderLeftColor: Utils.selectColor(colors, name)
                   }
                 }, Helpers.text(name));
     });

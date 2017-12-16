@@ -1,14 +1,80 @@
 open Helpers;
+
+module Styles = PackageStyles;
+
 let component = ReasonReact.statelessComponent("Package");
 let make = (~data, _children) => {
   ...component,
-  render: _self =>
+  render: _self => {
+    let package = data##package;
+
     <div>
-      <h1> (data##package##name |> text) </h1>
-      <span> ("(" ++ data##package##version ++ ")" |> text) </span>
-      <div> (data##package##description |> text) </div>
-      <div dangerouslySetInnerHTML={ "__html": data##package##readme } />
+      <header className=(Styles.header ++ (package##_type === "unpublished" ? (" " ++ Styles.unpublished) : ""))>
+        <div className=Styles.props>
+          {
+            switch (package##stars |> Js.toOption) {
+            | Some(stars) => <div className=Styles.stars> {stars |> text} <Icon.Star className=Styles.starIcon/> </div>
+            | None 				=> ReasonReact.nullElement
+            }
+          }
+          {
+            switch (package##license |> Js.toOption) {
+            | Some(license) => <div className=Styles.license> {license |> text} </div>
+            | None					=> <div className=Styles.nolicense> {"No license" |> text} </div>
+            }
+          }
+          <div className=Styles.updated> <TimeAgo date=package##updated /> </div>
+        </div>
+
+        <div className=Styles.title>
+          /*<span className=Styles.owner> {"package" |> text} </span>*/
+          <Link to_=package##slug className=Styles.name>
+            {package##name |> text}
+          </Link>
+          <span className=Styles.version> {package##version |> text} </span>
+          {
+            switch (package##_type) {
+            | "unpublished" =>
+              <span className=Styles.unpublishedLabel> {"unpublished" |> text} </span>
+            | _ => ReasonReact.nullElement
+            }
+          }
+        </div>
+
+        <div className=Styles.fields>
+          <div className=Styles.description>	
+            {package##description |> text}
+          </div>
+
+          {
+            switch package##keywords {
+            | [||] => ReasonReact.nullElement
+            | keywords =>
+              <div className=Styles.tags>
+                <Icon.Tags className=Styles.tagsIcon />
+                {
+                  keywords |> Array.map(keyword => <Tag key=keyword name=keyword />)
+                          |> ReasonReact.arrayToElement
+                }
+              </div>
+            }
+          }
+        </div>
+
+        <div className=Styles.links>
+          <a> {"homepage" |> text} </a>
+          <a href="https://github.com/something/something"> {"repository" |> text} </a>
+          <a href={"https://www.npmjs.com" ++ package##name}> {"npm" |> text} </a>
+          <a href={"https://github.com/something/something/issues" ++ package##name}> {"issues" |> text} </a>
+          <a> {"documentation" |> text} </a>
+        </div>
+
+      </header>
+
+      <div className=Styles.readme
+           dangerouslySetInnerHTML={ "__html": package##readme } />
     </div>
+  }
 };
 
 let default = ReasonReact.wrapReasonForJs(~component=component, jsProps => make(~data=jsProps##data, [||]));
@@ -17,10 +83,18 @@ let default = ReasonReact.wrapReasonForJs(~component=component, jsProps => make(
   export const query = graphql`
     query PackageQuery($slug: String!) {
       package: packages(slug: { eq: $slug }) {
+        type
+        id
         name
         version
         description
+        keywords
+        license
+        updated
+        stars
         readme
+
+        slug
       }
     }
   `
