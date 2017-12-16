@@ -16,7 +16,7 @@ type action =
 
 let decodeResult = json =>
   json |> Obj.magic /* TODO: very naughty */
-       |> r => Js.Obj.assign({ "fields": { "slug": "/packages/" ++ r##name }}, r);
+       |> r => Js.Obj.assign({ "slug": "/packages/" ++ r##id }, r);
 
 let component = ReasonReact.reducerComponent("PackageSearchBox");
 let make = _children => {
@@ -57,8 +57,8 @@ let make = _children => {
       <div className=Styles.fakeInput>
         <Icon.Search className=Styles.searchIcon />
         <input className   = Styles.input
-              placeholder = "Search packages"
-              onChange    = reduce(e => QueryChanged(Obj.magic(e)##target##value)) />
+               placeholder = "Search packages"
+               onChange    = reduce(e => QueryChanged(Obj.magic(e)##target##value)) />
       </div>
 
       {

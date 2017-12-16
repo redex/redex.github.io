@@ -18,9 +18,7 @@ var apiKey = "c7a3475a8567971cb7510b422d9f37ad";
 
 function decodeResult(json) {
   return Object.assign({
-              fields: {
-                slug: "/packages/" + json.name
-              }
+              slug: "/packages/" + json.id
             }, json);
 }
 
