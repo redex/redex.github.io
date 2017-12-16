@@ -9,6 +9,7 @@ var React         = require("react");
 var Helpers       = require("../utils/Helpers.js");
 var TimeAgo       = require("../vendor/TimeAgo.js");
 var ReasonReact   = require("reason-react/src/ReasonReact.js");
+var Js_primitive  = require("bs-platform/lib/js/js_primitive.js");
 var PackageStyles = require("../styles/PackageStyles.js");
 
 var component = ReasonReact.statelessComponent("Package");
@@ -25,6 +26,31 @@ function make(data, _) {
               className: PackageStyles.unpublishedLabel
             }, Helpers.text("unpublished")) : null;
       var keywords = $$package.keywords;
+      var tmp$1 = { };
+      var tmp$2 = Js_primitive.null_undefined_to_opt($$package.homepageUrl);
+      if (tmp$2) {
+        tmp$1.href = tmp$2[0];
+      }
+      var tmp$3 = { };
+      var tmp$4 = Js_primitive.null_undefined_to_opt($$package.repositoryUrl);
+      if (tmp$4) {
+        tmp$3.href = tmp$4[0];
+      }
+      var tmp$5 = { };
+      var tmp$6 = Js_primitive.null_undefined_to_opt($$package.npmUrl);
+      if (tmp$6) {
+        tmp$5.href = tmp$6[0];
+      }
+      var tmp$7 = { };
+      var tmp$8 = Js_primitive.null_undefined_to_opt($$package.issuesUrl);
+      if (tmp$8) {
+        tmp$7.href = tmp$8[0];
+      }
+      var tmp$9 = { };
+      var tmp$10 = Js_primitive.null_undefined_to_opt($$package.docsUrl);
+      if (tmp$10) {
+        tmp$9.href = tmp$10[0];
+      }
       return React.createElement("div", undefined, React.createElement("header", {
                       className: PackageStyles.header + (
                         match !== 0 ? " " + PackageStyles.unpublished : ""
@@ -53,13 +79,7 @@ function make(data, _) {
                                       return ReasonReact.element(/* Some */[keyword], /* None */0, Tag.make(keyword, /* array */[]));
                                     }), keywords)) : null), React.createElement("div", {
                           className: PackageStyles.links
-                        }, React.createElement("a", undefined, Helpers.text("homepage")), React.createElement("a", {
-                              href: "https://github.com/something/something"
-                            }, Helpers.text("repository")), React.createElement("a", {
-                              href: "https://www.npmjs.com" + $$package.name
-                            }, Helpers.text("npm")), React.createElement("a", {
-                              href: "https://github.com/something/something/issues" + $$package.name
-                            }, Helpers.text("issues")), React.createElement("a", undefined, Helpers.text("documentation")))), React.createElement("div", {
+                        }, React.createElement("a", tmp$1, Helpers.text("homepage")), React.createElement("a", tmp$3, Helpers.text("repository")), React.createElement("a", tmp$5, Helpers.text("npm")), React.createElement("a", tmp$7, Helpers.text("issues")), React.createElement("a", tmp$9, Helpers.text("documentation")))), React.createElement("div", {
                       className: PackageStyles.readme,
                       dangerouslySetInnerHTML: {
                         __html: $$package.readme
@@ -87,6 +107,10 @@ var $$default = ReasonReact.wrapReasonForJs(component, (function (jsProps) {
         updated
         stars
         readme
+        homepageUrl
+        repositoryUrl
+        npmUrl
+        issuesUrl
 
         slug
       }

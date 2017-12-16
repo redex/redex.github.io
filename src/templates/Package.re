@@ -62,11 +62,11 @@ let make = (~data, _children) => {
         </div>
 
         <div className=Styles.links>
-          <a> {"homepage" |> text} </a>
-          <a href="https://github.com/something/something"> {"repository" |> text} </a>
-          <a href={"https://www.npmjs.com" ++ package##name}> {"npm" |> text} </a>
-          <a href={"https://github.com/something/something/issues" ++ package##name}> {"issues" |> text} </a>
-          <a> {"documentation" |> text} </a>
+          <a href=?Js.toOption(package##homepageUrl)> {"homepage" |> text} </a>
+          <a href=?Js.toOption(package##repositoryUrl)> {"repository" |> text} </a>
+          <a href=?Js.toOption(package##npmUrl)> {"npm" |> text} </a>
+          <a href=?Js.toOption(package##issuesUrl)> {"issues" |> text} </a>
+          <a href=?Js.toOption(package##docsUrl)> {"documentation" |> text} </a>
         </div>
 
       </header>
@@ -93,6 +93,10 @@ let default = ReasonReact.wrapReasonForJs(~component=component, jsProps => make(
         updated
         stars
         readme
+        homepageUrl
+        repositoryUrl
+        npmUrl
+        issuesUrl
 
         slug
       }
