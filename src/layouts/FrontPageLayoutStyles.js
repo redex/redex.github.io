@@ -2,6 +2,7 @@
 'use strict';
 
 var Block  = require("bs-platform/lib/js/block.js");
+var Colors = require("../styles/Colors.js");
 var Glamor = require("bs-glamor/src/glamor.js");
 
 var root = Glamor.css(/* :: */[
@@ -9,10 +10,13 @@ var root = Glamor.css(/* :: */[
       /* :: */[
         Glamor.flexDirection("column"),
         /* :: */[
-          Glamor.background("#dd4c39"),
+          Glamor.background(Colors.Inverted[/* background */0]),
           /* :: */[
             Glamor.minHeight("100vh"),
-            /* [] */0
+            /* :: */[
+              Glamor.color(Colors.Inverted[/* text */1]),
+              /* [] */0
+            ]
           ]
         ]
       ]
@@ -28,27 +32,24 @@ var links = Glamor.css(/* :: */[
           /* Selector */Block.__(1, [
               "& > a",
               /* :: */[
-                Glamor.color("white"),
+                Glamor.fontVariant("small-caps"),
                 /* :: */[
-                  Glamor.fontVariant("small-caps"),
+                  Glamor.textDecoration("none"),
                   /* :: */[
-                    Glamor.textDecoration("none"),
+                    Glamor.textTransform("lowercase"),
                     /* :: */[
-                      Glamor.textTransform("lowercase"),
+                      Glamor.margin("0 1em"),
                       /* :: */[
-                        Glamor.margin("0 1em"),
+                        Glamor.opacity(".75"),
                         /* :: */[
-                          Glamor.opacity(".75"),
-                          /* :: */[
-                            /* Selector */Block.__(1, [
-                                "&:hover",
-                                /* :: */[
-                                  Glamor.opacity("1"),
-                                  /* [] */0
-                                ]
-                              ]),
-                            /* [] */0
-                          ]
+                          /* Selector */Block.__(1, [
+                              "&:hover",
+                              /* :: */[
+                                Glamor.opacity("1"),
+                                /* [] */0
+                              ]
+                            ]),
+                          /* [] */0
                         ]
                       ]
                     ]
@@ -58,6 +59,14 @@ var links = Glamor.css(/* :: */[
             ]),
           /* [] */0
         ]
+      ]
+    ]);
+
+var inactiveLink = Glamor.css(/* :: */[
+      Glamor.opacity(".25 !important"),
+      /* :: */[
+        Glamor.cursor("default"),
+        /* [] */0
       ]
     ]);
 
@@ -79,13 +88,10 @@ var title = Glamor.css(/* :: */[
         /* :: */[
           Glamor.fontVariant("small-caps"),
           /* :: */[
-            Glamor.color("white"),
+            Glamor.fontSize("2.5rem"),
             /* :: */[
-              Glamor.fontSize("2.5rem"),
-              /* :: */[
-                Glamor.lineHeight("1.1"),
-                /* [] */0
-              ]
+              Glamor.lineHeight("1.1"),
+              /* [] */0
             ]
           ]
         ]
@@ -99,7 +105,7 @@ var logo = Glamor.css(/* :: */[
         /* :: */[
           Glamor.height("3em"),
           /* :: */[
-            Glamor.fill("white"),
+            Glamor.fill(Colors.Inverted[/* text */1]),
             /* [] */0
           ]
         ]
@@ -107,7 +113,7 @@ var logo = Glamor.css(/* :: */[
     ]);
 
 var footer = Glamor.css(/* :: */[
-      Glamor.background("rgba(0, 0, 0, 0.25)"),
+      Glamor.background(Colors.darkPrimary),
       /* :: */[
         Glamor.marginTop("auto"),
         /* :: */[
@@ -119,7 +125,7 @@ var footer = Glamor.css(/* :: */[
                   /* Selector */Block.__(1, [
                       "& > section",
                       /* :: */[
-                        Glamor.opacity(".5"),
+                        Glamor.opacity(".65"),
                         /* :: */[
                           Glamor.transition("opacity .5s"),
                           /* :: */[
@@ -133,7 +139,10 @@ var footer = Glamor.css(/* :: */[
                                       Glamor.marginLeft("auto"),
                                       /* :: */[
                                         Glamor.alignSelf("end"),
-                                        /* [] */0
+                                        /* :: */[
+                                          Glamor.textAlign("right"),
+                                          /* [] */0
+                                        ]
                                       ]
                                     ]
                                   ]
@@ -152,11 +161,11 @@ var footer = Glamor.css(/* :: */[
                                       /* :: */[
                                         Glamor.fontSize(".85em"),
                                         /* :: */[
-                                          Glamor.color("rgba(255, 255, 255, .65)"),
+                                          Glamor.textTransform("lowercase"),
                                           /* :: */[
-                                            Glamor.textTransform("lowercase"),
+                                            Glamor.fontVariant("small-caps"),
                                             /* :: */[
-                                              Glamor.fontVariant("small-caps"),
+                                              Glamor.opacity(".5"),
                                               /* :: */[
                                                 Glamor.marginBottom(".35em"),
                                                 /* [] */0
@@ -170,16 +179,16 @@ var footer = Glamor.css(/* :: */[
                                     /* Selector */Block.__(1, [
                                         "& a",
                                         /* :: */[
-                                          Glamor.color("white"),
+                                          Glamor.textDecoration("none"),
                                           /* :: */[
-                                            Glamor.textDecoration("none"),
+                                            Glamor.fontSize(".85rem"),
                                             /* :: */[
-                                              Glamor.fontSize(".85rem"),
+                                              Glamor.opacity(".75"),
                                               /* :: */[
                                                 /* Selector */Block.__(1, [
                                                     "&:hover",
                                                     /* :: */[
-                                                      Glamor.color("white"),
+                                                      Glamor.opacity("1"),
                                                       /* [] */0
                                                     ]
                                                   ]),
@@ -209,12 +218,16 @@ var footer = Glamor.css(/* :: */[
 
 var algoliaLogo = Glamor.css(/* :: */[
       Glamor.height("1em"),
-      /* [] */0
+      /* :: */[
+        Glamor.opacity(".75"),
+        /* [] */0
+      ]
     ]);
 
 exports.root           = root;
 exports.header         = header;
 exports.links          = links;
+exports.inactiveLink   = inactiveLink;
 exports.widthContainer = widthContainer;
 exports.title          = title;
 exports.logo           = logo;

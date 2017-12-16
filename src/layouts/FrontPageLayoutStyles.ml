@@ -3,8 +3,9 @@ open Glamor
 let root = css [
   display "flex";
   flexDirection "column";
-  background "#dd4c39";
+  background Colors.Inverted.background;
   minHeight "100vh";
+  color Colors.Inverted.text;
 ]
 
 let header = css [
@@ -15,7 +16,6 @@ let links = css [
   paddingTop ".5em";
 
   Selector("& > a", [
-    color "white";
     fontVariant "small-caps";
     textDecoration "none";
     textTransform "lowercase";
@@ -28,6 +28,11 @@ let links = css [
   ])
 ]
 
+let inactiveLink = css [
+  opacity ".25 !important";
+  cursor "default";
+]
+
 let widthContainer = css [
   margin "0 auto";
   maxWidth "960px";
@@ -38,7 +43,6 @@ let title = css [
   margin "1em 0 0";
   textAlign "center";
   fontVariant "small-caps";
-  color "white";
   fontSize "2.5rem";
   lineHeight "1.1";
 ]
@@ -47,18 +51,18 @@ let logo = css [
   display "block";
   margin "0 auto";
   height "3em";
-  fill "white";
+  fill Colors.Inverted.text;
 ]
 
 let footer = css [
-  background "rgba(0, 0, 0, 0.25)";
+  background Colors.darkPrimary;
   marginTop "auto";
 
   Selector("& > div", [ (* matches the inner width container *)
     display "flex";
 
     Selector("& > section", [
-      opacity ".5";
+      opacity ".65";
       transition "opacity .5s";
       width "20%";
 
@@ -66,6 +70,7 @@ let footer = css [
         opacity ".75";
         marginLeft "auto";
         alignSelf "end";
+        textAlign "right";
       ]);
 
       Selector("&:hover", [
@@ -74,19 +79,19 @@ let footer = css [
 
       Selector("& h1", [
         fontSize ".85em";
-        color "rgba(255, 255, 255, .65)";
         textTransform "lowercase";
         fontVariant "small-caps";
+        opacity ".5";
         marginBottom ".35em";
       ]);
 
       Selector("& a", [
-        color "white";
         textDecoration "none";
         fontSize ".85rem";
+        opacity ".75";
 
         Selector ("&:hover", [
-          color "white";
+          opacity "1";
         ]);
       ]);
     ]);
@@ -95,4 +100,5 @@ let footer = css [
 
 let algoliaLogo = css [
   height "1em";
+  opacity ".75";
 ]

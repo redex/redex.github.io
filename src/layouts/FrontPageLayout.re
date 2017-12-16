@@ -13,6 +13,7 @@ let make = (~children: unit => ReasonReact.reactElement, _children) => {
         <Link to_="/packages"> ("Packages" |> text) </Link>
         <Link to_="/keywords"> ("Keywords" |> text) </Link>
         <Link to_="/packages/unpublished"> ("Unpublished" |> text) </Link>
+        <Link className=Styles.inactiveLink to_="/"> ("Documentation" |> text) </Link>
         /*
         <Link to_="/docs"> ("Documentation" |> text) </Link>
         <Link to_="/about"> ("About" |> text) </Link>
@@ -44,12 +45,14 @@ let make = (~children: unit => ReasonReact.reactElement, _children) => {
             <ul>
               <li> <a href="https://github.com/rebench/rebench.github.io"> ("Source Code Repository" |> text) </a> </li>
               <li> <a href="https://github.com/rebench/rebench.github.io/issues"> ("Support / Bug Tracker" |> text) </a> </li>
+              <li> <a href="https://github.com/rebench/rebench.github.io/issues"> ("Publish a package" |> text) </a> </li>
             </ul>
           </section>
 
           <section>
             <h1> ("Made with" |> text) </h1>
             <ul>
+              <li> <a href="https://npms.io/"> ("npms.io" |> text) </a> </li>
               <li> <a href="https://www.gatsbyjs.org/"> ("Gatsby" |> text) </a> </li>
               <li> <a href="https://reasonml.github.io/reason-react/"> ("ReasonReact" |> text) </a> </li>
               <li> <a href="https://github.com/bucklescript/bucklescript"> ("BuckleScript" |> text) </a> </li>

@@ -18,7 +18,7 @@ function make(children, _) {
                   className: FrontPageLayoutStyles.root
                 }, React.createElement("div", {
                       className: FrontPageLayoutStyles.links
-                    }, ReasonReact.element(/* None */0, /* None */0, Link.make("/packages", /* None */0, /* None */0, /* array */[Helpers.text("Packages")])), ReasonReact.element(/* None */0, /* None */0, Link.make("/keywords", /* None */0, /* None */0, /* array */[Helpers.text("Keywords")])), ReasonReact.element(/* None */0, /* None */0, Link.make("/packages/unpublished", /* None */0, /* None */0, /* array */[Helpers.text("Unpublished")]))), ReasonReact.element(/* None */0, /* None */0, Helmet.make(/* Some */["REDEX"], /* None */0, /* array */[])), React.createElement("div", {
+                    }, ReasonReact.element(/* None */0, /* None */0, Link.make("/packages", /* None */0, /* None */0, /* array */[Helpers.text("Packages")])), ReasonReact.element(/* None */0, /* None */0, Link.make("/keywords", /* None */0, /* None */0, /* array */[Helpers.text("Keywords")])), ReasonReact.element(/* None */0, /* None */0, Link.make("/packages/unpublished", /* None */0, /* None */0, /* array */[Helpers.text("Unpublished")])), ReasonReact.element(/* None */0, /* None */0, Link.make("/", /* Some */[FrontPageLayoutStyles.inactiveLink], /* None */0, /* array */[Helpers.text("Documentation")]))), ReasonReact.element(/* None */0, /* None */0, Helmet.make(/* Some */["REDEX"], /* None */0, /* array */[])), React.createElement("div", {
                       className: FrontPageLayoutStyles.header
                     }, React.createElement("div", {
                           className: FrontPageLayoutStyles.widthContainer
@@ -39,7 +39,11 @@ function make(children, _) {
                                           href: "https://github.com/rebench/rebench.github.io"
                                         }, Helpers.text("Source Code Repository"))), React.createElement("li", undefined, React.createElement("a", {
                                           href: "https://github.com/rebench/rebench.github.io/issues"
-                                        }, Helpers.text("Support / Bug Tracker"))))), React.createElement("section", undefined, React.createElement("h1", undefined, Helpers.text("Made with")), React.createElement("ul", undefined, React.createElement("li", undefined, React.createElement("a", {
+                                        }, Helpers.text("Support / Bug Tracker"))), React.createElement("li", undefined, React.createElement("a", {
+                                          href: "https://github.com/rebench/rebench.github.io/issues"
+                                        }, Helpers.text("Publish a package"))))), React.createElement("section", undefined, React.createElement("h1", undefined, Helpers.text("Made with")), React.createElement("ul", undefined, React.createElement("li", undefined, React.createElement("a", {
+                                          href: "https://npms.io/"
+                                        }, Helpers.text("npms.io"))), React.createElement("li", undefined, React.createElement("a", {
                                           href: "https://www.gatsbyjs.org/"
                                         }, Helpers.text("Gatsby"))), React.createElement("li", undefined, React.createElement("a", {
                                           href: "https://reasonml.github.io/reason-react/"
