@@ -16,7 +16,7 @@ let title = css [
   margin "0";
 
   Selector("& > a", [
-    color "#DD4C39";
+    color Colors.link;
     textDecoration "none";
   ])
 ]

@@ -1,20 +1,14 @@
 open Glamor
 
 let header = css [
-  background "#dd4c39";
+  background Colors.Inverted.background;
   (*background "linear-gradient(to bottom right, hsl(6.9, 70.7%, 52%), hsl(6.9, 70.7%, 58%))";*)
-  color "white";
+  color Colors.Inverted.text;
   padding "2em 4em";
 ]
 
 let unpublished = css [
-  background "repeating-linear-gradient(
-    -45deg,
-    hsl(6.9, 70.7%, 54%),
-    hsl(6.9, 70.7%, 54%) 10px,
-    hsl(6.9, 70.7%, 58%) 10px,
-    hsl(6.9, 70.7%, 58%) 12px
-  )";
+  background Colors.Inverted.crosshatchBackground;
 ]
 
 let props = css [
@@ -43,7 +37,6 @@ let owner = css [
 let name = css [
   fontSize "1.5rem";
   fontWeight "bold";
-  color "white";
   textDecoration "none";
   lineHeight "1.45";
 
@@ -66,8 +59,7 @@ let unpublishedLabel = css [
   fontSize ".85em";
   fontStyle "italic";
   marginLeft ".5em";
-  color "hsl(0, 100%, 50%)";
-  color "#dd4d39";
+  color Colors.bad;
   background "white";
   padding ".2ex 1ex";
   borderRadius "1.4ex";
@@ -85,21 +77,19 @@ let description = css [
 let tags = css [
   Selector("& span", [
     fontSize ".85em";
-    background "rgba(255, 255, 255, .1)";
-    color "white !important";
+    background Colors.Inverted.block;
     padding "0 1ex";
     opacity "1";
-    borderLeft "2px solid white";
 
     Selector("&:hover", [
-      background "rgba(255, 255, 255, .2)";
+      background Colors.Inverted.highlightedBlock;
       cursor "pointer";
     ]);
   ]);
 ]
 
 let tagsIcon = css [
-  fill "rgba(255, 255, 255, .25)"; 
+  opacity ".25";
 ]
 
 let right = css [
@@ -114,16 +104,16 @@ let updated = css [
 let license = css [
   fontSize ".85em";
   whiteSpace "nowrap";
-  border "1px solid white";
+  border ("1px solid " ^ Colors.Inverted.text);
   padding "0 1ex";
 ]
 
 let nolicense = css [
-  color "rgba(255, 0, 0, .75)";
+  color Colors.bad;
   fontSize ".85em";
   whiteSpace "nowrap";
   fontWeight "bold";
-  background "white";
+  background Colors.Inverted.text;
   padding "0 1ex";
   borderRadius "1.4ex";
 ]
@@ -136,7 +126,7 @@ let stars = css [
 let starIcon = css [
   marginLeft ".25em";
   transform "translateY(-1px)";
-  fill "rgba(255, 255, 255, .5)"; 
+  opacity ".5";
 ]
 
 let links = css [

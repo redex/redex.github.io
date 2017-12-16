@@ -1,4 +1,5 @@
-open Helpers;
+open! Helpers;
+
 let colors = [|
   "#323299","#3f3fbf","#324c99","#3f59bf","#326599","#3f72bf","#327f99",
   "#3f8cbf","#329932","#32994c","#329966","#32997f","#329999","#3fa5bf",
@@ -27,7 +28,7 @@ let make = (~name, _children) => {
 
   render: _self =>
     <span className=style
-          style={ReactDOMRe.Style.make(~borderLeftColor=Utils.selectColor(colors, name), ())}>
+          style={ReactDOMRe.Style.make(~borderColor=Utils.selectColor(colors, name), ())}>
       {name |> text}
     </span>
 }

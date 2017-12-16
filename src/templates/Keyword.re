@@ -1,4 +1,5 @@
-open Helpers;
+open! Helpers;
+
 let component = ReasonReact.statelessComponent("Package");
 let make = (~data, ~pathContext, _children) => {
   ...component,

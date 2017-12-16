@@ -1,4 +1,4 @@
-open Helpers;
+open! Helpers;
 
 module Styles = PackageSearchBoxStyles;
 let appId ="B1AVN0IGTU";

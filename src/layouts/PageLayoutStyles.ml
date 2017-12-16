@@ -32,7 +32,7 @@ let widthContainer = css [
 ]
 
 let title = css [
-  color "#DD4C39";
+  color Colors.primary;
   margin "0";
   fontVariant "small-caps";
   fontSize "1.5em";
@@ -48,7 +48,7 @@ let title = css [
 
 let logo = css [
   height "1.5em";
-  fill "#DD4C39";
+  fill Colors.primary;
   margin "0 1em";
-  transition "transform 500ms";
+  transition "transform 100ms ease-in-out";
 ]

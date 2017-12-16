@@ -1,4 +1,4 @@
-open Helpers;
+open! Helpers;
 
 module Styles = PackageStyles;
 
@@ -46,19 +46,17 @@ let make = (~data, _children) => {
             {package##description |> text}
           </div>
 
-          {
-            switch package##keywords {
-            | [||] => ReasonReact.nullElement
-            | keywords =>
-              <div className=Styles.tags>
-                <Icon.Tags className=Styles.tagsIcon />
-                {
+          <div className=Styles.tags>
+            <Icon.Tags className=Styles.tagsIcon />
+            {
+              switch package##keywords {
+              | [||] => " - " |> text
+              | keywords =>
                   keywords |> Array.map(keyword => <Tag key=keyword name=keyword />)
-                          |> ReasonReact.arrayToElement
-                }
-              </div>
+                           |> ReasonReact.arrayToElement
+              }
             }
-          }
+          </div>
         </div>
 
         <div className=Styles.links>

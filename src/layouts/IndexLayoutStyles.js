@@ -2,6 +2,7 @@
 'use strict';
 
 var Block  = require("bs-platform/lib/js/block.js");
+var Colors = require("../styles/Colors.js");
 var Glamor = require("bs-glamor/src/glamor.js");
 
 var root = Glamor.css(/* [] */0);
@@ -25,7 +26,7 @@ var title = Glamor.css(/* :: */[
         /* Selector */Block.__(1, [
             "& > a",
             /* :: */[
-              Glamor.color("#DD4C39"),
+              Glamor.color(Colors.link),
               /* :: */[
                 Glamor.textDecoration("none"),
                 /* [] */0

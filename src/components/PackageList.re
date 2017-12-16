@@ -1,3 +1,4 @@
+open! Helpers;
 
 let component = ReasonReact.statelessComponent("PackageList");
 let make = (~packages, _children) => {

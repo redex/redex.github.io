@@ -14,7 +14,7 @@ var root = Glamor.css(/* :: */[
           /* :: */[
             Glamor.minHeight("100vh"),
             /* :: */[
-              Glamor.color(Colors.Inverted[/* text */1]),
+              Glamor.color(Colors.Inverted[/* text */2]),
               /* [] */0
             ]
           ]
@@ -105,7 +105,7 @@ var logo = Glamor.css(/* :: */[
         /* :: */[
           Glamor.height("3em"),
           /* :: */[
-            Glamor.fill(Colors.Inverted[/* text */1]),
+            Glamor.fill(Colors.Inverted[/* text */2]),
             /* [] */0
           ]
         ]

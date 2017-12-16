@@ -2,6 +2,7 @@
 'use strict';
 
 var Block  = require("bs-platform/lib/js/block.js");
+var Colors = require("../styles/Colors.js");
 var Glamor = require("bs-glamor/src/glamor.js");
 
 var root = Glamor.css(/* :: */[
@@ -21,13 +22,10 @@ var fakeInput = Glamor.css(/* :: */[
           /* :: */[
             Glamor.width("100%"),
             /* :: */[
-              Glamor.color("#dd4c39"),
+              Glamor.alignItems("center"),
               /* :: */[
-                Glamor.alignItems("center"),
-                /* :: */[
-                  Glamor.padding("0 .5em"),
-                  /* [] */0
-                ]
+                Glamor.padding("0 .5em"),
+                /* [] */0
               ]
             ]
           ]
@@ -36,7 +34,7 @@ var fakeInput = Glamor.css(/* :: */[
     ]);
 
 var searchIcon = Glamor.css(/* :: */[
-      Glamor.fill("#dd4c39"),
+      Glamor.fill(Colors.primary),
       /* :: */[
         Glamor.opacity(".75"),
         /* :: */[
@@ -47,21 +45,12 @@ var searchIcon = Glamor.css(/* :: */[
     ]);
 
 var input = Glamor.css(/* :: */[
-      Glamor.display("block"),
+      Glamor.padding(".75em .25em"),
       /* :: */[
-        Glamor.background("white"),
+        Glamor.width("100%"),
         /* :: */[
-          Glamor.border("none"),
-          /* :: */[
-            Glamor.padding(".75em .25em"),
-            /* :: */[
-              Glamor.width("100%"),
-              /* :: */[
-                Glamor.color("#dd4c39"),
-                /* [] */0
-              ]
-            ]
-          ]
+          Glamor.color(Colors.primary),
+          /* [] */0
         ]
       ]
     ]);
@@ -71,21 +60,27 @@ var results = Glamor.css(/* :: */[
       /* :: */[
         Glamor.zIndex("10"),
         /* :: */[
-          Glamor.width("100%"),
+          Glamor.marginTop(".5ex"),
           /* :: */[
-            Glamor.boxShadow("1px 1px 0 1px rgba(0, 0, 0, .05)"),
+            Glamor.width("100%"),
             /* :: */[
-              /* Selector */Block.__(1, [
-                  "& > div",
-                  /* :: */[
-                    Glamor.margin("0"),
-                    /* :: */[
-                      Glamor.borderTop("1px solid #eee"),
-                      /* [] */0
-                    ]
-                  ]
-                ]),
-              /* [] */0
+              Glamor.boxShadow(Colors.Shadow[/* overlay */0]),
+              /* :: */[
+                Glamor.color(Colors.text),
+                /* :: */[
+                  /* Selector */Block.__(1, [
+                      "& > div",
+                      /* :: */[
+                        Glamor.margin("0"),
+                        /* :: */[
+                          Glamor.borderTop("1px solid " + Colors.subtleBorder),
+                          /* [] */0
+                        ]
+                      ]
+                    ]),
+                  /* [] */0
+                ]
+              ]
             ]
           ]
         ]

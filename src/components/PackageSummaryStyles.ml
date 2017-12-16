@@ -5,27 +5,21 @@ let root = [
   justifyContent "space-between";
   padding ".5em 1em";
   marginBottom ".5em";
-  boxShadow "1px 1px 0 1px rgba(0, 0, 0, .05)";
+  boxShadow Colors.Shadow.panel;
 
   Selector("& a", [
-    color "#DD4C39";
+    color Colors.link;
     fontSize "1.1em";
     textDecoration "none";
   ]);
 ]
 
 let published = css (root @ [
-  background "white";
+  background Colors.Panel.background;
 ])
 
 let unpublished = css (root @ [
-  background "repeating-linear-gradient(
-    -45deg,
-    white,
-    white 10px,
-    whiteSmoke 10px,
-    whiteSmoke 12px
-  )";
+  background Colors.Panel.crosshatchBackground;
 ])
 
 let left = css [
@@ -42,7 +36,7 @@ let unpublishedLabel = css [
   fontSize ".85em";
   fontStyle "italic";
   marginLeft ".5em";
-  color "rgba(255, 0, 0, .75)";
+  color Colors.bad;
 ]
 
 let description = css [
@@ -52,7 +46,7 @@ let description = css [
 ]
 
 let tagsIcon = css [
-  fill "#aaa"; 
+  opacity ".25";
 ]
 
 let right = css [
@@ -72,7 +66,7 @@ let license = css [
 ]
 
 let nolicense = css [
-  color "rgba(255, 0, 0, .75)";
+  color Colors.bad;
   fontSize ".85em";
   whiteSpace "nowrap";
 ]
@@ -86,5 +80,5 @@ let stars = css [
 let starIcon = css [
   marginLeft ".25em";
   transform "translateY(-1px)";
-  fill "#888"; 
+  opacity ".5";
 ]

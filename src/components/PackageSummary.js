@@ -32,9 +32,9 @@ function make($$package, _) {
                           className: PackageSummaryStyles.version
                         }, Helpers.text($$package.version)), tmp, React.createElement("div", {
                           className: PackageSummaryStyles.description
-                        }, Helpers.text($$package.description)), keywords.length !== 0 ? React.createElement("div", undefined, ReasonReact.element(/* None */0, /* None */0, Icon.Tags[/* make */0](/* Some */[PackageSummaryStyles.tagsIcon], /* array */[])), $$Array.map((function (keyword) {
+                        }, Helpers.text($$package.description)), React.createElement("div", undefined, ReasonReact.element(/* None */0, /* None */0, Icon.Tags[/* make */0](/* Some */[PackageSummaryStyles.tagsIcon], /* array */[])), keywords.length !== 0 ? $$Array.map((function (keyword) {
                                   return ReasonReact.element(/* Some */[keyword], /* None */0, Tag.make(keyword, /* array */[]));
-                                }), keywords)) : null), React.createElement("div", {
+                                }), keywords) : null)), React.createElement("div", {
                       className: PackageSummaryStyles.right
                     }, React.createElement("div", {
                           className: PackageSummaryStyles.updated

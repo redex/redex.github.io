@@ -2,6 +2,7 @@
 'use strict';
 
 var Block  = require("bs-platform/lib/js/block.js");
+var Colors = require("../styles/Colors.js");
 var Glamor = require("bs-glamor/src/glamor.js");
 
 var root = Glamor.css(/* [] */0);
@@ -32,7 +33,7 @@ var widthContainer = Glamor.css(/* :: */[
     ]);
 
 var title = Glamor.css(/* :: */[
-      Glamor.color("#DD4C39"),
+      Glamor.color(Colors.primary),
       /* :: */[
         Glamor.margin("0"),
         /* :: */[
@@ -69,11 +70,11 @@ var title = Glamor.css(/* :: */[
 var logo = Glamor.css(/* :: */[
       Glamor.height("1.5em"),
       /* :: */[
-        Glamor.fill("#DD4C39"),
+        Glamor.fill(Colors.primary),
         /* :: */[
           Glamor.margin("0 1em"),
           /* :: */[
-            Glamor.transition("transform 500ms"),
+            Glamor.transition("transform 100ms ease-in-out"),
             /* [] */0
           ]
         ]

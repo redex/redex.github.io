@@ -1,4 +1,4 @@
-open Helpers;
+open! Helpers;
 
 module Styles = FrontPageLayoutStyles;
 

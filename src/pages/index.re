@@ -1,4 +1,4 @@
-open Helpers;
+open! Helpers;
 
 let component = ReasonReact.statelessComponent("Index");
 let make = (~data, _children) => {

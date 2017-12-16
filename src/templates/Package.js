@@ -73,11 +73,11 @@ function make(data, _) {
                           className: PackageStyles.fields
                         }, React.createElement("div", {
                               className: PackageStyles.description
-                            }, Helpers.text($$package.description)), keywords.length !== 0 ? React.createElement("div", {
-                                className: PackageStyles.tags
-                              }, ReasonReact.element(/* None */0, /* None */0, Icon.Tags[/* make */0](/* Some */[PackageStyles.tagsIcon], /* array */[])), $$Array.map((function (keyword) {
+                            }, Helpers.text($$package.description)), React.createElement("div", {
+                              className: PackageStyles.tags
+                            }, ReasonReact.element(/* None */0, /* None */0, Icon.Tags[/* make */0](/* Some */[PackageStyles.tagsIcon], /* array */[])), keywords.length !== 0 ? $$Array.map((function (keyword) {
                                       return ReasonReact.element(/* Some */[keyword], /* None */0, Tag.make(keyword, /* array */[]));
-                                    }), keywords)) : null), React.createElement("div", {
+                                    }), keywords) : Helpers.text(" - "))), React.createElement("div", {
                           className: PackageStyles.links
                         }, React.createElement("a", tmp$1, Helpers.text("homepage")), React.createElement("a", tmp$3, Helpers.text("repository")), React.createElement("a", tmp$5, Helpers.text("npm")), React.createElement("a", tmp$7, Helpers.text("issues")), React.createElement("a", tmp$9, Helpers.text("documentation")))), React.createElement("div", {
                       className: PackageStyles.readme,

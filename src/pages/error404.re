@@ -1,4 +1,4 @@
-open Helpers;
+open! Helpers;
 
 let component = ReasonReact.statelessComponent("NotFoundPage");
 let make = _children => {

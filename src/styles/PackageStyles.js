@@ -2,12 +2,13 @@
 'use strict';
 
 var Block  = require("bs-platform/lib/js/block.js");
+var Colors = require("./Colors.js");
 var Glamor = require("bs-glamor/src/glamor.js");
 
 var header = Glamor.css(/* :: */[
-      Glamor.background("#dd4c39"),
+      Glamor.background(Colors.Inverted[/* background */0]),
       /* :: */[
-        Glamor.color("white"),
+        Glamor.color(Colors.Inverted[/* text */2]),
         /* :: */[
           Glamor.padding("2em 4em"),
           /* [] */0
@@ -16,7 +17,7 @@ var header = Glamor.css(/* :: */[
     ]);
 
 var unpublished = Glamor.css(/* :: */[
-      Glamor.background("repeating-linear-gradient(\n    -45deg,\n    hsl(6.9, 70.7%, 54%),\n    hsl(6.9, 70.7%, 54%) 10px,\n    hsl(6.9, 70.7%, 58%) 10px,\n    hsl(6.9, 70.7%, 58%) 12px\n  )"),
+      Glamor.background(Colors.Inverted[/* crosshatchBackground */1]),
       /* [] */0
     ]);
 
@@ -70,21 +71,18 @@ var name = Glamor.css(/* :: */[
       /* :: */[
         Glamor.fontWeight("bold"),
         /* :: */[
-          Glamor.color("white"),
+          Glamor.textDecoration("none"),
           /* :: */[
-            Glamor.textDecoration("none"),
+            Glamor.lineHeight("1.45"),
             /* :: */[
-              Glamor.lineHeight("1.45"),
-              /* :: */[
-                /* Selector */Block.__(1, [
-                    "&:hover",
-                    /* :: */[
-                      Glamor.textDecoration("underline"),
-                      /* [] */0
-                    ]
-                  ]),
-                /* [] */0
-              ]
+              /* Selector */Block.__(1, [
+                  "&:hover",
+                  /* :: */[
+                    Glamor.textDecoration("underline"),
+                    /* [] */0
+                  ]
+                ]),
+              /* [] */0
             ]
           ]
         ]
@@ -114,19 +112,16 @@ var unpublishedLabel = Glamor.css(/* :: */[
         /* :: */[
           Glamor.marginLeft(".5em"),
           /* :: */[
-            Glamor.color("hsl(0, 100%, 50%)"),
+            Glamor.color(Colors.bad),
             /* :: */[
-              Glamor.color("#dd4d39"),
+              Glamor.background("white"),
               /* :: */[
-                Glamor.background("white"),
+                Glamor.padding(".2ex 1ex"),
                 /* :: */[
-                  Glamor.padding(".2ex 1ex"),
+                  Glamor.borderRadius("1.4ex"),
                   /* :: */[
-                    Glamor.borderRadius("1.4ex"),
-                    /* :: */[
-                      Glamor.alignSelf("center"),
-                      /* [] */0
-                    ]
+                    Glamor.alignSelf("center"),
+                    /* [] */0
                   ]
                 ]
               ]
@@ -156,29 +151,23 @@ var tags = Glamor.css(/* :: */[
           /* :: */[
             Glamor.fontSize(".85em"),
             /* :: */[
-              Glamor.background("rgba(255, 255, 255, .1)"),
+              Glamor.background(Colors.Inverted[/* block */3]),
               /* :: */[
-                Glamor.color("white !important"),
+                Glamor.padding("0 1ex"),
                 /* :: */[
-                  Glamor.padding("0 1ex"),
+                  Glamor.opacity("1"),
                   /* :: */[
-                    Glamor.opacity("1"),
-                    /* :: */[
-                      Glamor.borderLeft("2px solid white"),
-                      /* :: */[
-                        /* Selector */Block.__(1, [
-                            "&:hover",
-                            /* :: */[
-                              Glamor.background("rgba(255, 255, 255, .2)"),
-                              /* :: */[
-                                Glamor.cursor("pointer"),
-                                /* [] */0
-                              ]
-                            ]
-                          ]),
-                        /* [] */0
-                      ]
-                    ]
+                    /* Selector */Block.__(1, [
+                        "&:hover",
+                        /* :: */[
+                          Glamor.background(Colors.Inverted[/* highlightedBlock */4]),
+                          /* :: */[
+                            Glamor.cursor("pointer"),
+                            /* [] */0
+                          ]
+                        ]
+                      ]),
+                    /* [] */0
                   ]
                 ]
               ]
@@ -189,7 +178,7 @@ var tags = Glamor.css(/* :: */[
     ]);
 
 var tagsIcon = Glamor.css(/* :: */[
-      Glamor.fill("rgba(255, 255, 255, .25)"),
+      Glamor.opacity(".25"),
       /* [] */0
     ]);
 
@@ -211,7 +200,7 @@ var license = Glamor.css(/* :: */[
       /* :: */[
         Glamor.whiteSpace("nowrap"),
         /* :: */[
-          Glamor.border("1px solid white"),
+          Glamor.border("1px solid " + Colors.Inverted[/* text */2]),
           /* :: */[
             Glamor.padding("0 1ex"),
             /* [] */0
@@ -221,7 +210,7 @@ var license = Glamor.css(/* :: */[
     ]);
 
 var nolicense = Glamor.css(/* :: */[
-      Glamor.color("rgba(255, 0, 0, .75)"),
+      Glamor.color(Colors.bad),
       /* :: */[
         Glamor.fontSize(".85em"),
         /* :: */[
@@ -229,7 +218,7 @@ var nolicense = Glamor.css(/* :: */[
           /* :: */[
             Glamor.fontWeight("bold"),
             /* :: */[
-              Glamor.background("white"),
+              Glamor.background(Colors.Inverted[/* text */2]),
               /* :: */[
                 Glamor.padding("0 1ex"),
                 /* :: */[
@@ -256,7 +245,7 @@ var starIcon = Glamor.css(/* :: */[
       /* :: */[
         Glamor.transform("translateY(-1px)"),
         /* :: */[
-          Glamor.fill("rgba(255, 255, 255, .5)"),
+          Glamor.opacity(".5"),
           /* [] */0
         ]
       ]

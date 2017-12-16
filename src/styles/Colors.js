@@ -4,9 +4,22 @@
 
 var primary = "#dd4c39";
 
+var Panel = /* module */[
+  /* background */"white",
+  /* crosshatchBackground */"repeating-linear-gradient(\n    -45deg,\n    white,\n    white 10px,\n    whiteSmoke 10px,\n    whiteSmoke 12px\n  )"
+];
+
 var Inverted = /* module */[
   /* background */primary,
-  /* text */"white"
+  /* crosshatchBackground */"repeating-linear-gradient(\n    -45deg,\n    hsl(6.9, 70.7%, 54%),\n    hsl(6.9, 70.7%, 54%) 10px,\n    hsl(6.9, 70.7%, 58%) 10px,\n    hsl(6.9, 70.7%, 58%) 12px\n  )",
+  /* text */"white",
+  /* block */"rgba(255, 255, 255, .1)",
+  /* highlightedBlock */"rgba(255, 255, 255, .2)"
+];
+
+var Shadow = /* module */[
+  /* overlay */"1ex 1ex 1em 0 rgba(0, 0, 0, .1)",
+  /* panel */"1px 1px 0 1px rgba(0, 0, 0, .05)"
 ];
 
 var darkPrimary = "hsl(6.9, 65%, 50%)";
@@ -15,9 +28,20 @@ var background = "whiteSmoke";
 
 var text = "#444";
 
-exports.primary     = primary;
-exports.darkPrimary = darkPrimary;
-exports.background  = background;
-exports.text        = text;
-exports.Inverted    = Inverted;
+var link = primary;
+
+var subtleBorder = "#eee";
+
+var bad = "rgba(255, 0, 0, .75)";
+
+exports.primary      = primary;
+exports.darkPrimary  = darkPrimary;
+exports.background   = background;
+exports.text         = text;
+exports.link         = link;
+exports.subtleBorder = subtleBorder;
+exports.bad          = bad;
+exports.Panel        = Panel;
+exports.Inverted     = Inverted;
+exports.Shadow       = Shadow;
 /* No side effect */

@@ -1,5 +1,5 @@
-open Rebase;
-open Helpers;
+open! Rebase;
+open! Helpers;
 
 let component = ReasonReact.statelessComponent("Keywords");
 let make = (~data, _children) => {

@@ -10,34 +10,32 @@ let fakeInput = css [
   background "white";
   fontSize "1.2em";
   width "100%";
-  color "#dd4c39";
   alignItems "center";
   padding "0 .5em";
 ]
 
 let searchIcon = css [
-  fill "#dd4c39";
+  fill Colors.primary;
   opacity ".75"; 
   margin ".5em";
 ]
 
 let input = css [
-  display "block";
-  background "white";
-  border "none";
   padding ".75em .25em";
   width "100%";
-  color "#dd4c39";
+  color Colors.primary;
 ]
 
 let results = css [
   position "absolute";
   zIndex "10";
+  marginTop ".5ex";
   width "100%";
-  boxShadow "1px 1px 0 1px rgba(0, 0, 0, .05)";
+  boxShadow Colors.Shadow.overlay;
+  color Colors.text;
 
   Selector("& > div", [
     margin "0";
-    borderTop "1px solid #eee";
+    borderTop ("1px solid " ^ Colors.subtleBorder);
   ])
 ]

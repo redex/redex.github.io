@@ -2,6 +2,7 @@
 'use strict';
 
 var Block      = require("bs-platform/lib/js/block.js");
+var Colors     = require("../styles/Colors.js");
 var Glamor     = require("bs-glamor/src/glamor.js");
 var Pervasives = require("bs-platform/lib/js/pervasives.js");
 
@@ -14,12 +15,12 @@ var root_001 = /* :: */[
     /* :: */[
       Glamor.marginBottom(".5em"),
       /* :: */[
-        Glamor.boxShadow("1px 1px 0 1px rgba(0, 0, 0, .05)"),
+        Glamor.boxShadow(Colors.Shadow[/* panel */1]),
         /* :: */[
           /* Selector */Block.__(1, [
               "& a",
               /* :: */[
-                Glamor.color("#DD4C39"),
+                Glamor.color(Colors.link),
                 /* :: */[
                   Glamor.fontSize("1.1em"),
                   /* :: */[
@@ -42,12 +43,12 @@ var root = /* :: */[
 ];
 
 var published = Glamor.css(Pervasives.$at(root, /* :: */[
-          Glamor.background("white"),
+          Glamor.background(Colors.Panel[/* background */0]),
           /* [] */0
         ]));
 
 var unpublished = Glamor.css(Pervasives.$at(root, /* :: */[
-          Glamor.background("repeating-linear-gradient(\n    -45deg,\n    white,\n    white 10px,\n    whiteSmoke 10px,\n    whiteSmoke 12px\n  )"),
+          Glamor.background(Colors.Panel[/* crosshatchBackground */1]),
           /* [] */0
         ]));
 
@@ -71,7 +72,7 @@ var unpublishedLabel = Glamor.css(/* :: */[
         /* :: */[
           Glamor.marginLeft(".5em"),
           /* :: */[
-            Glamor.color("rgba(255, 0, 0, .75)"),
+            Glamor.color(Colors.bad),
             /* [] */0
           ]
         ]
@@ -87,7 +88,7 @@ var description = Glamor.css(/* :: */[
     ]);
 
 var tagsIcon = Glamor.css(/* :: */[
-      Glamor.fill("#aaa"),
+      Glamor.opacity(".25"),
       /* [] */0
     ]);
 
@@ -119,7 +120,7 @@ var license = Glamor.css(/* :: */[
     ]);
 
 var nolicense = Glamor.css(/* :: */[
-      Glamor.color("rgba(255, 0, 0, .75)"),
+      Glamor.color(Colors.bad),
       /* :: */[
         Glamor.fontSize(".85em"),
         /* :: */[
@@ -145,7 +146,7 @@ var starIcon = Glamor.css(/* :: */[
       /* :: */[
         Glamor.transform("translateY(-1px)"),
         /* :: */[
-          Glamor.fill("#888"),
+          Glamor.opacity(".5"),
           /* [] */0
         ]
       ]
