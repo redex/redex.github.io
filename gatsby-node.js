@@ -31,7 +31,6 @@ exports.onCreateNode = async ({ node, loadNodeContent, boundActionCreators: { cr
     if (node.sourceInstanceName === "packages") {
       const package = parsed;
       package.slug = path.join("packages", decodeURIComponent(package.id))
-            package.readme = "";
 
       await new Promise(resolve => 
         remark()
@@ -81,6 +80,7 @@ exports.createPages = async ({ graphql, boundActionCreators: { createPage } }) =
       createPage({
         path: node.slug,
         component: path.resolve(`./src/templates/Package.js`),
+        layout: "PageLayout",
         context: {
           slug: node.slug,
         },
@@ -105,6 +105,7 @@ exports.createPages = async ({ graphql, boundActionCreators: { createPage } }) =
       createPage({
         path: node.slug,
         component: path.resolve(`./src/templates/Keyword.js`),
+        layout: "PageLayout",
         context: {
           keyword: node.name,
         },
