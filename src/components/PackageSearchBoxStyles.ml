@@ -1,41 +1,42 @@
-open Glamor
+open Css
 
-let root = css [
-  position "relative";
-  flex "1";
+let root = style [
+  position Relative;
+  flex 1;
 ]
 
-let fakeInput = css [
-  display "flex";
-  background "white";
-  fontSize "1.2em";
-  width "100%";
-  alignItems "center";
-  padding "0 .5em";
+let fakeInput = style [
+  display Flex;
+  backgroundColor Theme.Panel.Color.background;
+  fontSize (em 1.2);
+  width (pct 100.);
+  alignItems Center;
+  unsafe "padding" "0 .5em";
 ]
 
-let searchIcon = css [
-  fill Colors.primary;
-  opacity ".75"; 
-  margin ".5em";
+let searchIcon = style [
+  unsafe "fill" (Theme.Color.primary |> Obj.magic);
+  opacity 0.75; 
+  margin (em 0.5);
 ]
 
-let input = css [
-  padding ".75em .25em";
-  width "100%";
-  color Colors.primary;
+let input = style [
+  unsafe "padding" ".75em .25em";
+  width (pct 100.);
+  color Theme.Color.primary;
 ]
 
-let results = css [
-  position "absolute";
-  zIndex "10";
-  marginTop ".5ex";
-  width "100%";
-  boxShadow Colors.Shadow.overlay;
-  color Colors.text;
+let results = style [
+  position Absolute;
+  zIndex 10;
+  unsafe "marginTop" ".5ex";
+  width (pct 100.);
+  boxShadow Theme.Shadow.overlay;
+  color Theme.Color.text;
 
-  Selector("& > div", [
-    margin "0";
-    borderTop ("1px solid " ^ Colors.subtleBorder);
-  ])
+  selector "& > div" [
+    margin zero;
+    borderTop (px 1) Solid Theme.Color.subtleBorder;
+
+  ]
 ]

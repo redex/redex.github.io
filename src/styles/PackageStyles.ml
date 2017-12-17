@@ -1,152 +1,152 @@
-open Glamor
+open Css
 
-let header = css [
-  background Colors.Inverted.background;
+let header = style [
+  unsafe "label" "header";
+  backgroundColor Theme.Inverted.Color.background;
   (*background "linear-gradient(to bottom right, hsl(6.9, 70.7%, 52%), hsl(6.9, 70.7%, 58%))";*)
-  color Colors.Inverted.text;
-  padding "2em 4em";
+  color Theme.Inverted.Color.text;
+  unsafe "padding" "2em 4em";
 ]
 
-let unpublished = css [
-  background Colors.Inverted.crosshatchBackground;
+let unpublished = style [
+  unsafe "background" Theme.Inverted.crosshatchBackground;
 ]
 
-let props = css [
-  display "flex";
-  justifyContent "flex-end";
-  alignItems "baseline";
+let props = style [
+  display Flex;
+  justifyContent FlexEnd;
+  alignItems Baseline;
 
-  Selector("& > *", [
-    marginLeft "1em";
-  ])
+  selector "& > *" [
+    marginLeft (em 1.);
+  ];
 ]
 
-let title = css [
-  padding "1em 0 0";
-  display "flex";
-  alignItems "baseline";
+let title = style [
+  unsafe "padding" "1em 0 0";
+  display Flex;
+  alignItems Baseline;
 ]
 
-let owner = css [
-  display "block";
-  opacity ".75";
-  fontSize ".85em";
-  fontVariant "small-caps";
+let owner = style [
+  display Block;
+  opacity 0.75;
+  fontSize (em 0.85);
+  unsafe "fontVariant" "small-caps";
 ]
 
-let name = css [
-  fontSize "1.5rem";
-  fontWeight "bold";
-  textDecoration "none";
-  lineHeight "1.45";
+let name = style [
+  fontSize (rem 1.5);
+  fontWeight Bold;
+  textDecoration None;
+  lineHeight (em 1.45);
 
-  Selector("&:hover", [
-    textDecoration "underline"
-  ]);
+  selector "&:hover" [
+    unsafe "textDecoration" "underline"
+  ];
 ]
 
-let fields = css [
+let fields = style [
 ]
 
-let version = css [
-  fontSize ".85em";
-  fontStyle "italic";
-  marginLeft ".5em";
-  opacity ".75";
+let version = style [
+  fontSize (em 0.85);
+  fontStyle Italic;
+  marginLeft (em 0.5);
+  opacity 0.75;
 ]
 
-let unpublishedLabel = css [
-  fontSize ".85em";
-  fontStyle "italic";
-  marginLeft ".5em";
-  color Colors.bad;
-  background "white";
-  padding ".2ex 1ex";
-  borderRadius "1.4ex";
-  alignSelf "center";
+let unpublishedLabel = style [
+  fontSize (em 0.85);
+  fontStyle Italic;
+  marginLeft (em 0.5);
+  color Theme.Color.bad;
+  backgroundColor Theme.Inverted.Color.text;
+  unsafe "padding" ".2ex 1ex";
+  unsafe "borderRadius" "1.4ex";
+  alignSelf Center;
 ]
 
-let description = css [
+let description = style [
   (*whiteSpace "nowrap";*)
-  marginBottom ".5em";
-  textOverflow "ellipsis";
-  overflow "hidden";
-  opacity ".75";
+  marginBottom (em 0.5);
+  unsafe "textOverflow" "ellipsis";
+  overflow Hidden;
+  opacity 0.75;
 ]
 
-let tags = css [
-  Selector("& span", [
-    fontSize ".85em";
-    background Colors.Inverted.block;
-    padding "0 1ex";
-    opacity "1";
+let tags = style [
+  selector "& span" [
+    fontSize (em 0.85);
+    backgroundColor Theme.Inverted.Color.block;
+    unsafe "padding" "0 1ex";
+    opacity 1.;
 
-    Selector("&:hover", [
-      background Colors.Inverted.highlightedBlock;
-      cursor "pointer";
-    ]);
-  ]);
+    selector "&:hover" [
+      backgroundColor Theme.Inverted.Color.highlightedBlock;
+      cursor Pointer;
+    ];
+  ];
 ]
 
-let tagsIcon = css [
-  opacity ".25";
+let tagsIcon = style [
+  opacity 0.25;
 ]
 
-let right = css [
-  textAlign "right";
+let right = style [
+  textAlign Right;
 ]
 
-let updated = css [
-  fontSize ".85em";
-  whiteSpace "nowrap";
+let updated = style [
+  fontSize (em 0.85);
+  unsafe "whiteSpace" "nowrap";
 ]
 
-let license = css [
-  fontSize ".85em";
-  whiteSpace "nowrap";
-  border ("1px solid " ^ Colors.Inverted.text);
-  padding "0 1ex";
+let license = style [
+  fontSize (em 0.85);
+  unsafe "whiteSpace" "nowrap";
+  border (px 1) Solid Theme.Inverted.Color.text;
+  unsafe "padding" "0 1ex";
 ]
 
-let nolicense = css [
-  color Colors.bad;
-  fontSize ".85em";
-  whiteSpace "nowrap";
-  fontWeight "bold";
-  background Colors.Inverted.text;
-  padding "0 1ex";
-  borderRadius "1.4ex";
+let nolicense = style [
+  color Theme.Color.bad;
+  fontSize (em 0.85);
+  unsafe "whiteSpace" "nowrap";
+  fontWeight Bold;
+  backgroundColor Theme.Inverted.Color.text;
+  unsafe "padding" "0 1ex";
+  unsafe "borderRadius" "1.4ex";
 ]
 
-let stars = css [
-  fontSize ".85em";
-  whiteSpace "nowrap";
+let stars = style [
+  fontSize (em 0.85);
+  unsafe "whiteSpace" "nowrap";
 ]
 
-let starIcon = css [
-  marginLeft ".25em";
-  transform "translateY(-1px)";
-  opacity ".5";
+let starIcon = style [
+  marginLeft (em 0.25);
+  transform (translateY (px (-1)));
+  opacity 0.5;
 ]
 
-let links = css [
-  marginTop "3em";
+let links = style [
+  marginTop (em 3.);
 
-  Selector("& > a", [
-    color "white";
-    textDecoration "none";
-    marginRight "2em";
-    fontVariant "small-caps";
+  selector "& > a" [
+    textDecoration None;
+    marginRight (em 2.);
+    unsafe "fontVariant" "small-caps";
 
-    Selector("&:hover", [
-      textDecoration "underline";
-    ]);
+    selector "&:hover" [
+      unsafe "textDecoration" "underline";
+    ];
 
-    Selector("&:not([href])", [
-      textDecoration "none";
-      opacity ".25";
-    ]);
-  ]);
+    selector "&:not([href])" [
+      textDecoration None;
+      opacity 0.25;
+    ];
+  ];
 ]
 
 
@@ -154,120 +154,120 @@ let links = css [
 
 
 
-let readme = css [
-  background "white";
-  padding "2em 4em";
+let readme = style [
+  backgroundColor Theme.Panel.Color.background;
+  unsafe "padding" "2em 4em";
 
-  Selector("& h1", [
-    fontSize "2.25rem";
-    fontWeight "bold";
-    lineHeight "1.1";
-    marginBottom "1.45rem";
-  ]);
+  selector "& h1" [
+    fontSize (rem 2.25);
+    fontWeight Bold;
+    lineHeight (em 1.1);
+    marginBottom (rem 1.45);
+  ];
 
-  Selector("& h2", [
-    fontSize "1.62671rem";
-    fontWeight "bold";
-    lineHeight "1.1";
-    marginBottom "1.45rem";
-  ]);
+  selector "& h2" [
+    fontSize (rem 1.62671);
+    fontWeight Bold;
+    lineHeight (em 1.1);
+    marginBottom (rem 1.45);
+  ];
 
-  Selector("& h3", [
-    fontSize "1.38316rem";
-    fontWeight "bold";
-    lineHeight "1.1";
-    marginBottom "1.45rem";
-  ]);
+  selector "& h3" [
+    fontSize (rem 1.38316);
+    fontWeight Bold;
+    lineHeight (em 1.1);
+    marginBottom (rem 1.45);
+  ];
 
-  Selector("& p", [
-    marginBottom "1.45rem";
+  selector "& p" [
+    marginBottom (rem 1.45);
 
-    Selector("& *:last-child", [
-      marginBottom "0";
-    ]);
-  ]);
+    selector "& *:last-child" [
+      marginBottom zero;
+    ];
+  ];
 
-  Selector("& b, & strong", [
-    fontWeight "bold";
-  ]);
+  selector "& b, & strong" [
+    fontWeight Bold;
+  ];
 
-  Selector("& i, & em", [
-    fontStyle "italic";
-  ]);
+  selector "& i, & em" [
+    fontStyle Italic;
+  ];
 
-  Selector("& ol, & ul", [
-    margin "0";
-    marginLeft "1.45rem";
-    marginBottom "1.45rem";
-    listStylePosition "outside";
-    listStyleImage "none";
-  ]);
+  selector "& ol, & ul" [
+    margin zero;
+    marginLeft (rem 1.45);
+    marginBottom (rem 1.45);
+    unsafe "listStylePosition" "outside";
+    unsafe "listStyleImage" "none";
+  ];
 
-  Selector("& li", [
-    marginBottom "calc(1.45rem / 2)";
+  selector "& li" [
+    marginBottom (rem (1.45 /. 2.));
 
-    Selector("& > ol, & > ul", [
-      marginLeft "1.45rem";
-      marginBottom "calc(1.45rem / 2)";
-      marginTop "calc(1.45rem / 2)";
-    ]);
+    selector "& > ol, & > ul" [
+      marginLeft (rem 1.45);
+      marginBottom (rem (1.45 /. 2.));
+      marginTop (rem (1.45 /. 2.));
+    ];
 
-    Selector("& *:last-child", [
-      marginBottom "0";
-    ]);
+    selector "& *:last-child" [
+      marginBottom zero;
+    ];
 
-    Selector("& > p", [
-      marginBottom "calc(1.45rem / 2)";
-    ]);
-  ]);
+    selector "& > p" [
+      marginBottom (rem (1.45 /. 2.));
+    ];
+  ];
 
-  Selector("& ol", [
-    listStyleType "decimal";
+  selector "& ol" [
+    unsafe "listStyleType" "decimal";
 
-    Selector("& li", [
-      paddingLeft "0";
-    ]);
-  ]);
+    selector "& li" [
+      paddingLeft zero;
+    ];
+  ];
 
-  Selector("& ul", [
-    listStyleType "disc";
+  selector "& ul" [
+    unsafe "listStyleType" "disc";
 
-    Selector("& li", [
-      paddingLeft "0";
-    ]);
-  ]);
+    selector "& li" [
+      paddingLeft zero;
+    ];
+  ];
 
-  Selector("& code", [
-    background "hsla(0, 0%, 0%, 0.04)";
-    fontFamily "'SFMono-Regular', Consolas, 'Roboto Mono', 'Droid Sans Mono', 'Liberation Mono', Menlo, Courier, monospace;";
-    fontSize "0.85rem";
-    lineHeight "1.45rem";
-    padding ".2em 0";
-  ]);
+  selector "& code" [
+    unsafe "background" "hsla(0, 0%, 0%, 0.04)";
+    fontFamily "'SFMono-Regular', Consolas, 'Roboto Mono', 'Droid Sans Mono', 'Liberation Mono', Menlo, Courier, monospace";
+    fontSize (rem 0.85);
+    lineHeight (rem 1.45);
+    unsafe "padding" ".2em 0";
+  ];
 
-  Selector("& pre", [
-    marginBottom "1.45rem";
-    fontSize "0.85rem";
-    lineHeight "1.42";
-    background "hsla(0, 0%, 0%, 0.04)";
-    borderRadius "3px";
-    overflow "auto";
-    wordWrap "normal";
-    padding "1.45rem";
+  selector "& pre" [
+    marginBottom (rem 1.45);
+    fontSize (rem 0.85);
+    lineHeight (rem 1.42);
+    unsafe "background" "hsla(0, 0%, 0%, 0.04)";
+    borderRadius (px 3);
+    overflow Auto;
+    unsafe "wordWrap" "normal";
+    padding (rem 1.45);
 
-    Selector("& code", [
-      background "none";
-      lineHeight "1.42";
-    ]);
-  ]);
+    selector "& code" [
+      background None;
+      lineHeight (em 1.42);
+    ];
+  ];
 
-  Selector("& a", [
-    color "#dd4c39";
-    textDecoration "none";
+  selector "& a" [
+    color Theme.Color.link;
+    textDecoration None;
 
-    Selector("&:hover", [
-      textDecoration "underline";
-    ]);
-  ]);
+    selector "&:hover" [
+      unsafe "textDecoration" "underline";
+    ];
+  ];
 
 ]

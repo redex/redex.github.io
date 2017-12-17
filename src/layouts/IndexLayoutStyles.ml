@@ -1,13 +1,13 @@
-open Glamor
+open Css
 
-let root = css [
+let root = style [
 ]
 
-let header = css [
-  margin "1.45rem";
+let header = style [
+  margin (rem 1.45);
 
-  Selector("& > div", [ (* matches width container *)
-    display "flex";
+  selector "& > div" [ (* matches width container *)
+    display Flex;
 
     (*
     Selector("& > *", [
@@ -22,33 +22,33 @@ let header = css [
       ]);
     ]);
     *)
-  ]);
+  ]
 ]
 
-let widthContainer = css [
-  margin "0 auto";
-  maxWidth "960px";
-  padding "0 1.45rem";
+let widthContainer = style [
+  unsafe "margin" "0 auto";
+  maxWidth (px 960);
+  unsafe "padding" "0 1.45rem";
 ]
 
-let title = css [
-  color Colors.primary;
-  margin "0";
-  fontVariant "small-caps";
-  fontSize "1.5em";
-  lineHeight "1.1";
-  display "flex";
-  alignItems "center";
+let title = style [
+  display Flex;
+  alignItems Center;
+  color Theme.Color.primary;
+  margin zero;
+  unsafe "fontVariant" "small-caps";
+  fontSize (em 1.5);
+  lineHeight (em 1.1);
 
-  Selector("&:hover > svg", [
-    transform "rotateZ(15deg)";
-    cursor "pointer";
-  ])
+  selector "&:hover > svg" [
+    transform (rotateZ (deg 15.));
+    cursor Pointer;
+  ]
 ]
 
-let logo = css [
-  height "1.5em";
-  fill Colors.primary;
-  margin "0 1em";
+let logo = style [
+  height (em 1.5);
+  unsafe "fill" (Theme.Color.primary |> Obj.magic);
+  unsafe "margin" "0 1em";
   transition "transform 100ms ease-in-out";
 ]

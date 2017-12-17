@@ -1,133 +1,170 @@
-open Glamor
-[%%raw "require('./reset.css')"]
-[%%raw "require('./global.css')"]
+open! Css
 
+[%%raw "require('glamor-reset')"]
+
+let _reset = begin
+  global "*" [
+    boxSizing BorderBox;
+  ];
+
+  global "body" [
+    unsafe "lineHeight" "inherit";
+    color Theme.Color.text;
+  ];
+
+  global "h1, h2, h3" [
+    lineHeight (em 1.1);
+    fontWeight Normal;
+  ];
+
+  global "a" [
+    unsafe "color" "inherit";
+  ];
+
+  global "button, input, select" [
+    unsafe "background" "none";
+    unsafe "border" "none";
+    unsafe "font" "inherit";
+  ];
+
+  global "ol, ul" [
+    unsafe "listStyle" "none";
+    margin zero;
+    padding zero;
+  ];
+end
+
+let _global = begin
+  global "html" [
+    fontSize (px 15);
+    lineHeight (em 1.25);
+    fontFamily "-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif";
+    boxSizing BorderBox;
+    overflowY Scroll;
+  ];
+
+  global "html, body, #___gatsby" [
+    backgroundColor Theme.Color.background;
+    minHeight (pct 100.);
+  ];
+end
 module Index = struct
 
-  let keywords = css [
-    textAlign "center";
-    marginTop "3em";
-    lineHeight "1.5em";
+  let keywords = style [
+    textAlign Center;
+    marginTop (em 3.);
+    lineHeight (em 1.5);
 
-    Selector("& > a", [
-      display "inline-block";
-      color "white";
-      textDecoration "none";
-      margin "0 1ex";
-      whiteSpace "nowrap";
+    selector "& > a" [
+      display InlineBlock;
+      unsafe "textDecoration" "none";
+      unsafe "margin" "0 1ex";
+      unsafe "whiteSpace" "nowrap";
 
-      Selector("& > .count", [
-        color "rgba(255, 255, 255, 0.5)";
-        marginLeft ".5ex";
-      ]);
+      selector "& > .count" [
+        unsafe "marginLeft" ".5ex";
+        opacity 0.5;
+      ];
 
-      Selector("&:hover > .label", [
-        textDecoration "underline";
-      ])
-    ])
+      selector "&:hover > .label" [
+        unsafe "textDecoration" "underline";
+      ];
+    ];
   ]
 
-  let links = css [
-    textAlign "center";
+  let links = style [
+    textAlign Center;
 
-    Selector("& > a", [
-      color "white";
-      fontSize ".85rem";
-      textDecoration "none";
-      margin "0 1em";
+    selector "& > a" [
+      fontSize (rem 0.85);
+      textDecoration None;
+      unsafe "margin" "0 1em";
 
-      Selector("&:hover", [
-        opacity ".75";
-      ])
-    ])
+      selector "&:hover" [
+        opacity 0.75;
+      ];
+    ];
   ]
 
-  let lists = css [
-    display "flex";
-    justifyContent "space-around";
-    marginTop "3em";
+  let lists = style [
+    display Flex;
+    justifyContent SpaceAround;
+    marginTop (em 3.);
 
-    Selector("& > *", [
-      padding "0 1em";
-      width "40%";
-      minWidth "300px";
+    selector "& > *" [
+      unsafe "padding" "0 1em";
+      width (pct 40.);
+      minWidth (px 300);
 
-      Selector("& > h2", [
-        color "white";
-        textAlign "center";
-        fontSize "1.1em";
-        fontWeight "600";
-        margin ".5em 0";
-        textTransform "lowercase";
-        fontVariant "small-caps";
-        paddingBottom ".5em";
-        borderBottom "1px solid rgba(255, 255, 255, .5)";
-      ]);
+      selector "& > h2" [
+        textAlign Center;
+        fontSize (em 1.1);
+        fontWeight Bold;
+        unsafe "margin" ".5em 0";
+        textTransform Lowercase;
+        unsafe "fontVariant" "small-caps";
+        paddingBottom (em 0.5);
+        borderBottom (px 1) Solid (rgba 255 255 255 0.5);
+      ];
 
-      Selector("& > div", [
-        background "none";
-        border "none";
-        padding "0";
-      ])
-    ])
+      selector "& > div" [
+        background None;
+        unsafe "border" "none";
+        padding zero;
+      ];
+    ];
   ]
 
   module ListItem = struct
-    let root = css [
-      display "flex";
-      justifyContent "space-between";
-      marginBottom ".5em";
+    let root = style [
+      display Flex;
+      justifyContent SpaceBetween;
+      marginBottom (em 0.5);
     ]
 
-    let name = css [
-      color "white";
-      textDecoration "none";
+    let name = style [
+      textDecoration None;
 
-      Selector("&:hover", [
-        textDecoration "underline";
-      ])
+      selector "&:hover" [
+        unsafe "textDecoration" "underline";
+      ];
     ]
 
-    let version = css [
-      fontSize ".85em";
-      fontStyle "italic";
-      marginLeft ".5em";
-      color "white";
-      opacity ".5";
+    let version = style [
+      fontSize (em 0.85);
+      fontStyle Italic;
+      marginLeft (em 0.5);
+      opacity 0.5;
     ]
 
-    let right = css [
-      textAlign "right"
+    let right = style [
+      textAlign Right
     ]
 
-    let updated = css [
-      opacity ".5";
-      fontSize ".85em";
-      whiteSpace "nowrap";
-      color "white";
-      opacity ".75";
+    let updated = style [
+      opacity 0.5;
+      fontSize (em 0.85);
+      unsafe "whiteSpace" "nowrap";
+      opacity 0.75;
     ]
 
-    let stars = css [
-      opacity ".5";
-      fontSize ".85em";
-      whiteSpace "nowrap";
-      color "white";
-      opacity ".75";
+    let stars = style [
+      opacity 0.5;
+      fontSize (em 0.85);
+      unsafe "whiteSpace" "nowrap";
+      opacity 0.75;
     ]
 
-    let starIcon = css [
-      marginLeft ".25em";
-      transform "translateY(-1px)";
-      fill "white"; 
-      opacity ".5";
+    let starIcon = style [
+      marginLeft (em 0.25);
+      transform (translateY (px (-1)));
+      unsafe "fill" (Theme.Inverted.Color.text |> Obj.magic); 
+      opacity 0.5;
     ]
 
-    let count = css [
-      opacity ".5";
-      fontSize ".85em";
-      color "white";
-      opacity ".75";
+    let count = style [
+      fontSize (em 0.85);
+      opacity 0.75;
     ]
 
   end

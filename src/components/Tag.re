@@ -14,12 +14,12 @@ let colors = [|
   "#bf723f","#cc7f65","#bf8c3f","#cc9965","#bfa53f","#ccb265"
 |];
 
-let style = Glamor.(css([
-  display("inline-block"),
-  opacity(".75"),
-  fontSize(".85em"),
-  marginLeft(".5em"),
-  whiteSpace("nowrap"),
+let style = Css.(style([
+  display(InlineBlock),
+  opacity(0.75),
+  fontSize(em(0.85)),
+  marginLeft(em(0.5)),
+  unsafe("whiteSpace", "nowrap"),
 ]));
 
 let component = ReasonReact.statelessComponent("Tag");

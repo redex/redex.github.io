@@ -1,104 +1,104 @@
-open Glamor
+open! Css
 
-let root = css [
-  display "flex";
-  flexDirection "column";
-  background Colors.Inverted.background;
-  minHeight "100vh";
-  color Colors.Inverted.text;
+let root = style [
+  display Flex;
+  flexDirection Column;
+  backgroundColor Theme.Inverted.Color.background;
+  minHeight (vh 100.);
+  color Theme.Inverted.Color.text;
 ]
 
-let header = css [
+let header = style [
 ]
 
-let links = css [
-  textAlign "center";
-  paddingTop ".5em";
+let links = style [
+  textAlign Center;
+  paddingTop (em 0.5);
 
-  Selector("& > a", [
-    fontVariant "small-caps";
-    textDecoration "none";
-    textTransform "lowercase";
-    margin "0 1em";
-    opacity ".75";
+  selector "& > a" [
+    unsafe "fontVariant" "small-caps";
+    textDecoration None;
+    textTransform Lowercase;
+    unsafe "margin" "0 1em";
+    opacity 0.75;
 
-    Selector("&:hover", [
-      opacity "1";
-    ])
-  ])
+    selector "&:hover" [
+      opacity 1.;
+    ];
+  ];
 ]
 
-let inactiveLink = css [
-  opacity ".25 !important";
-  cursor "default";
+let inactiveLink = style [
+  unsafe "opacity" ".25 !important";
+  cursor (Custom "default");
 ]
 
-let widthContainer = css [
-  margin "0 auto";
-  maxWidth "960px";
-  padding "1.0875rem 1.45rem";
+let widthContainer = style [
+  unsafe "margin" "0 auto";
+  maxWidth (px 960);
+  unsafe "padding" "1.0875rem 1.45rem";
 ]
 
-let title = css [
-  margin "1em 0 0";
-  textAlign "center";
-  fontVariant "small-caps";
-  fontSize "2.5rem";
-  lineHeight "1.1";
+let title = style [
+  unsafe "margin" "1em 0 0";
+  textAlign Center;
+  unsafe "fontVariant" "small-caps";
+  fontSize (rem 2.5);
+  lineHeight (em 1.1);
 ]
 
-let logo = css [
-  display "block";
-  margin "0 auto";
-  height "3em";
-  fill Colors.Inverted.text;
+let logo = style [
+  display Block;
+  unsafe "margin" "0 auto";
+  height (em 3.);
+  unsafe "fill" (Theme.Inverted.Color.text |> Obj.magic);
 ]
 
-let footer = css [
-  background Colors.darkPrimary;
-  marginTop "auto";
+let footer = style [
+  backgroundColor Theme.Color.darkPrimary;
+  unsafe "marginTop" "auto";
 
-  Selector("& > div", [ (* matches the inner width container *)
-    display "flex";
+  selector "& > div" [ (* matches the inner width container *)
+    display Flex;
 
-    Selector("& > section", [
-      opacity ".65";
-      transition "opacity .5s";
-      width "20%";
+    selector "& > section" [
+      opacity 0.65;
+      transition "opacity" ~duration:500;
+      width (pct 20.);
 
-      Selector("&:last-child", [
-        opacity ".75";
-        marginLeft "auto";
-        alignSelf "end";
-        textAlign "right";
-      ]);
+      selector "&:last-child" [
+        opacity 0.75;
+        unsafe "marginLeft" "auto";
+        alignSelf FlexEnd;
+        textAlign Right;
+      ];
 
-      Selector("&:hover", [
-        opacity "1";
-      ]);
+      selector "&:hover" [
+        opacity 1.;
+      ];
 
-      Selector("& h1", [
-        fontSize ".85em";
-        textTransform "lowercase";
-        fontVariant "small-caps";
-        opacity ".5";
-        marginBottom ".35em";
-      ]);
+      selector "& h1" [
+        fontSize (em 0.85);
+        textTransform Lowercase;
+        unsafe "fontVariant" "small-caps";
+        opacity 0.5;
+        marginBottom (em 0.35);
+      ];
 
-      Selector("& a", [
-        textDecoration "none";
-        fontSize ".85rem";
-        opacity ".75";
+      selector "& a" [
+        textDecoration None;
+        fontSize (rem 0.85);
+        opacity 0.75;
 
-        Selector ("&:hover", [
-          opacity "1";
-        ]);
-      ]);
-    ]);
-]);
+        selector "&:hover" [
+          opacity 1.;
+        ];
+      ];
+    ];
+];
 ]
 
-let algoliaLogo = css [
-  height "1em";
-  opacity ".75";
+let algoliaLogo = style [
+  height (em 1.);
+  opacity 0.75;
 ]
