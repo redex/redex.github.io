@@ -1,4 +1,4 @@
-open Helpers;
+open! Helpers;
 
 let component = ReasonReact.statelessComponent("Packages");
 let make = (~data, _children) => {
@@ -16,6 +16,7 @@ let default = ReasonReact.wrapReasonForJs(~component=component, jsProps => make(
       packages: allPackages(filter: { type: { eq: "unpublished" }}) {
         edges {
           node {
+            type
             id
             name
             version

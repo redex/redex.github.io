@@ -27,6 +27,7 @@ var $$default = ReasonReact.wrapReasonForJs(component, (function (jsProps) {
       packages: allPackages(filter: { type: { eq: "unpublished" }}) {
         edges {
           node {
+            type
             id
             name
             version

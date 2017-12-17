@@ -79,8 +79,8 @@ let default = ReasonReact.wrapReasonForJs(~component=component, jsProps => make(
 
 [%%raw {|
   export const query = graphql`
-    query PackageQuery($slug: String!) {
-      package: packages(slug: { eq: $slug }) {
+    query PackageQuery($id: String!) {
+      package: packages(id: { eq: $id }) {
         type
         id
         name

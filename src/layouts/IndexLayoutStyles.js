@@ -7,33 +7,77 @@ var Glamor = require("bs-glamor/src/glamor.js");
 
 var root = Glamor.css(/* [] */0);
 
-var header = Glamor.css(/* [] */0);
+var header = Glamor.css(/* :: */[
+      Glamor.margin("1.45rem"),
+      /* :: */[
+        /* Selector */Block.__(1, [
+            "& > div",
+            /* :: */[
+              Glamor.display("flex"),
+              /* [] */0
+            ]
+          ]),
+        /* [] */0
+      ]
+    ]);
 
 var widthContainer = Glamor.css(/* :: */[
       Glamor.margin("0 auto"),
       /* :: */[
         Glamor.maxWidth("960px"),
         /* :: */[
-          Glamor.padding("1.0875rem 1.45rem"),
+          Glamor.padding("0 1.45rem"),
           /* [] */0
         ]
       ]
     ]);
 
 var title = Glamor.css(/* :: */[
-      Glamor.margin("0"),
+      Glamor.color(Colors.primary),
       /* :: */[
-        /* Selector */Block.__(1, [
-            "& > a",
+        Glamor.margin("0"),
+        /* :: */[
+          Glamor.fontVariant("small-caps"),
+          /* :: */[
+            Glamor.fontSize("1.5em"),
             /* :: */[
-              Glamor.color(Colors.link),
+              Glamor.lineHeight("1.1"),
               /* :: */[
-                Glamor.textDecoration("none"),
-                /* [] */0
+                Glamor.display("flex"),
+                /* :: */[
+                  Glamor.alignItems("center"),
+                  /* :: */[
+                    /* Selector */Block.__(1, [
+                        "&:hover > svg",
+                        /* :: */[
+                          Glamor.transform("rotateZ(15deg)"),
+                          /* :: */[
+                            Glamor.cursor("pointer"),
+                            /* [] */0
+                          ]
+                        ]
+                      ]),
+                    /* [] */0
+                  ]
+                ]
               ]
             ]
-          ]),
-        /* [] */0
+          ]
+        ]
+      ]
+    ]);
+
+var logo = Glamor.css(/* :: */[
+      Glamor.height("1.5em"),
+      /* :: */[
+        Glamor.fill(Colors.primary),
+        /* :: */[
+          Glamor.margin("0 1em"),
+          /* :: */[
+            Glamor.transition("transform 100ms ease-in-out"),
+            /* [] */0
+          ]
+        ]
       ]
     ]);
 
@@ -41,4 +85,5 @@ exports.root           = root;
 exports.header         = header;
 exports.widthContainer = widthContainer;
 exports.title          = title;
+exports.logo           = logo;
 /* root Not a pure module */

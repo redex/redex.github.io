@@ -5,11 +5,11 @@ var Link              = require("../../bindings/gatsby/link.js");
 var Curry             = require("bs-platform/lib/js/curry.js");
 var React             = require("react");
 var Helmet            = require("../../bindings/gatsby/helmet.js");
-var Helpers           = require("../utils/Helpers.js");
 var ReasonReact       = require("reason-react/src/ReasonReact.js");
+var PackageSearchBox  = require("../components/PackageSearchBox.js");
 var IndexLayoutStyles = require("./IndexLayoutStyles.js");
 
-var component = ReasonReact.statelessComponent("IndexLayout");
+var component = ReasonReact.statelessComponent("PageLayout");
 
 function make(children, _) {
   var newrecord = component.slice();
@@ -20,9 +20,12 @@ function make(children, _) {
                       className: IndexLayoutStyles.header
                     }, React.createElement("div", {
                           className: IndexLayoutStyles.widthContainer
-                        }, React.createElement("h1", {
-                              className: IndexLayoutStyles.title
-                            }, ReasonReact.element(/* None */0, /* None */0, Link.make("/", /* None */0, /* None */0, /* array */[Helpers.text("re:libs PAGE")]))))), React.createElement("div", {
+                        }, ReasonReact.element(/* None */0, /* None */0, PackageSearchBox.make(/* array */[])), ReasonReact.element(/* None */0, /* None */0, Link.make("/", /* Some */[IndexLayoutStyles.title], /* None */0, /* array */[React.createElement("svg", {
+                                        className: IndexLayoutStyles.logo,
+                                        viewBox: "0 0 24 24"
+                                      }, React.createElement("path", {
+                                            d: "M19,2L14,6.5V17.5L19,13V2M6.5,5C4.55,5 2.45,5.4 1,6.5V21.16C1,21.41 1.25,21.66 1.5,21.66C1.6,21.66 1.65,21.59 1.75,21.59C3.1,20.94 5.05,20.5 6.5,20.5C8.45,20.5 10.55,20.9 12,22C13.35,21.15 15.8,20.5 17.5,20.5C19.15,20.5 20.85,20.81 22.25,21.56C22.35,21.61 22.4,21.59 22.5,21.59C22.75,21.59 23,21.34 23,21.09V6.5C22.4,6.05 21.75,5.75 21,5.5V7.5L21,13V19C19.9,18.65 18.7,18.5 17.5,18.5C15.8,18.5 13.35,19.15 12,20V13L12,8.5V6.5C10.55,5.4 8.45,5 6.5,5V5Z"
+                                          }))])))), React.createElement("div", {
                       className: IndexLayoutStyles.widthContainer
                     }, Curry._1(children, /* () */0)));
     });

@@ -70,6 +70,7 @@ exports.createPages = async ({ graphql, boundActionCreators: { createPage } }) =
         allPackages {
           edges {
             node {
+              id
               slug
             }
           }
@@ -80,9 +81,8 @@ exports.createPages = async ({ graphql, boundActionCreators: { createPage } }) =
       createPage({
         path: node.slug,
         component: path.resolve(`./src/templates/Package.js`),
-        layout: "PageLayout",
         context: {
-          slug: node.slug,
+          id: node.id,
         },
       })
     })
@@ -105,7 +105,6 @@ exports.createPages = async ({ graphql, boundActionCreators: { createPage } }) =
       createPage({
         path: node.slug,
         component: path.resolve(`./src/templates/Keyword.js`),
-        layout: "PageLayout",
         context: {
           keyword: node.name,
         },

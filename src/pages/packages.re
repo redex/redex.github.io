@@ -1,4 +1,4 @@
-open Helpers;
+open! Helpers;
 
 let component = ReasonReact.statelessComponent("Packages");
 let make = (~data, _children) => {
@@ -13,7 +13,7 @@ let default = ReasonReact.wrapReasonForJs(~component=component, jsProps => make(
 [%%raw {|
   export const query = graphql`
     query PackagesQuery {
-      packages: allPackages {
+      packages: allPackages(sort: { fields: [name] }) {
         edges {
           node {
             type

@@ -24,7 +24,7 @@ var $$default = ReasonReact.wrapReasonForJs(component, (function (jsProps) {
 
   export const query = graphql`
     query PackagesQuery {
-      packages: allPackages {
+      packages: allPackages(sort: { fields: [name] }) {
         edges {
           node {
             type
