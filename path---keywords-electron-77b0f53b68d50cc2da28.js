@@ -1,0 +1,2 @@
+webpackJsonp([0xa0709c2106d3],{897:function(e,c){e.exports={data:{packages:{edges:[{node:{id:"unpublished/bucklescript-electron",name:"bucklescript-electron",version:"0.0.0",description:"Electron API for Bucklescript",keywords:["bucklescript","electron","ocaml"],license:"ISC",updated:"2017-12-16T15:20:04.815Z",stars:16,slug:"packages/unpublished/bucklescript-electron"}}]}},pathContext:{keyword:"electron"}}}});
+//# sourceMappingURL=path---keywords-electron-77b0f53b68d50cc2da28.js.map

@@ -1,0 +1,2 @@
+webpackJsonp([22229843628336],{879:function(e,s){e.exports={data:{packages:{edges:[{node:{id:"bs-batteries",name:"bs-batteries",version:"0.0.14",description:"Ocaml batteries for bucklescript",keywords:["batteries-included","bucklescript","bsb","reason","reason","ocaml","bs-batteries","bs-platform"],license:"MIT",updated:"2017-12-05T17:20:33.512Z",stars:6,slug:"packages/bs-batteries"}}]}},pathContext:{keyword:"batteries-included"}}}});
+//# sourceMappingURL=path---keywords-batteries-included-195fe4b0d4373bb0c0f0.js.map

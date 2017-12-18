@@ -1,0 +1,2 @@
+webpackJsonp([94023960179678],{907:function(e,a){e.exports={data:{packages:{edges:[{node:{id:"immutable-re",name:"immutable-re",version:"0.0.15",description:"Persistent immutable collections for Reason",keywords:["reason","reason","ocaml","immutable"],license:"BSD-3-Clause",updated:"2017-12-06T04:14:34.452Z",stars:170,slug:"packages/immutable-re"}}]}},pathContext:{keyword:"immutable"}}}});
+//# sourceMappingURL=path---keywords-immutable-22dc361660048fe971c2.js.map
