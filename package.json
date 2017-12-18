@@ -9,6 +9,7 @@
     "bs-css": "^5.0.0",
     "gatsby": "^1.9.17",
     "gatsby-link": "^1.6.15",
+    "gatsby-plugin-favicon": "^2.1.1",
     "gatsby-plugin-react-helmet": "^1.0.5",
     "gatsby-source-filesystem": "^1.5.9",
     "gatsby-transformer-json": "^1.0.13",

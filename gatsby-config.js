@@ -8,6 +8,23 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
+      resolve: `gatsby-plugin-favicon`,
+      options: {
+        logo: "./static/favicon.png",
+        injectHTML: true,
+        icons: {
+          android: true,
+          appleIcon: true,
+          appleStartup: true,
+          coast: true,
+          favicons: true,
+          firefox: true,
+          twitter: true,
+          yandex: true,
+          windows: true
+        }
+      }
+    }, {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "packages",
