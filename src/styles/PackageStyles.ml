@@ -1,16 +1,17 @@
 open Css
 
-let header = style [
-  unsafe "label" "header";
-  backgroundColor Theme.Inverted.Color.background;
-  (*background "linear-gradient(to bottom right, hsl(6.9, 70.7%, 52%), hsl(6.9, 70.7%, 58%))";*)
-  color Theme.Inverted.Color.text;
-  unsafe "padding" "2em 4em";
-]
-
-let unpublished = style [
-  unsafe "background" Theme.Inverted.crosshatchBackground;
-]
+let header = 
+  let common = [
+    unsafe "label" "header";
+    backgroundColor Theme.Inverted.Color.background;
+    (*background "linear-gradient(to bottom right, hsl(6.9, 70.7%, 52%), hsl(6.9, 70.7%, 58%))";*)
+    color Theme.Inverted.Color.text;
+    unsafe "padding" "2em 4em";
+  ] in function
+  | "unpublished" -> style (common @ [
+      unsafe "background" Theme.Inverted.crosshatchBackground;
+    ])
+  | _ -> style common
 
 let props = style [
   display Flex;

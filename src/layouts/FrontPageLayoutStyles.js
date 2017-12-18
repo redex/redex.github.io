@@ -56,7 +56,7 @@ var links = Css.style(/* :: */[
     ]);
 
 var inactiveLink = Css.style(/* :: */[
-      Css.unsafe("opacity", ".25 !important"),
+      Css.important(Css.opacity(0.25)),
       /* :: */[
         Css.cursor(/* Custom */["default"]),
         /* [] */0

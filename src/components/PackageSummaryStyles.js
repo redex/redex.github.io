@@ -5,9 +5,9 @@ var Css        = require("bs-css/src/Css.js");
 var Theme      = require("../styles/Theme.js");
 var Pervasives = require("bs-platform/lib/js/pervasives.js");
 
-var root_000 = Css.display(/* Flex */3);
+var common_000 = Css.display(/* Flex */3);
 
-var root_001 = /* :: */[
+var common_001 = /* :: */[
   Css.justifyContent(/* SpaceBetween */5),
   /* :: */[
     Css.unsafe("padding", ".5em 1em"),
@@ -33,20 +33,24 @@ var root_001 = /* :: */[
   ]
 ];
 
-var root = /* :: */[
-  root_000,
-  root_001
+var common = /* :: */[
+  common_000,
+  common_001
 ];
 
-var published = Css.style(Pervasives.$at(root, /* :: */[
-          Css.backgroundColor(Theme.Panel[/* Color */0][/* background */0]),
-          /* [] */0
-        ]));
-
-var unpublished = Css.style(Pervasives.$at(root, /* :: */[
-          Css.unsafe("background", Theme.Panel[/* crosshatchBackground */1]),
-          /* [] */0
-        ]));
+function root(param) {
+  if (param === "unpublished") {
+    return Css.style(Pervasives.$at(common, /* :: */[
+                    Css.unsafe("background", Theme.Panel[/* crosshatchBackground */1]),
+                    /* [] */0
+                  ]));
+  } else {
+    return Css.style(Pervasives.$at(common, /* :: */[
+                    Css.backgroundColor(Theme.Panel[/* Color */0][/* background */0]),
+                    /* [] */0
+                  ]));
+  }
+}
 
 var left = Css.style(/* [] */0);
 
@@ -61,19 +65,28 @@ var version = Css.style(/* :: */[
       ]
     ]);
 
-var unpublishedLabel = Css.style(/* :: */[
-      Css.fontSize(Css.em(0.85)),
-      /* :: */[
-        Css.fontStyle(/* Italic */1),
-        /* :: */[
-          Css.marginLeft(Css.em(0.5)),
-          /* :: */[
-            Css.color(Theme.Color[/* bad */6]),
-            /* [] */0
-          ]
-        ]
-      ]
-    ]);
+function unpublishedLabel(param) {
+  if (param === "unpublished") {
+    return Css.style(/* :: */[
+                Css.fontSize(Css.em(0.85)),
+                /* :: */[
+                  Css.fontStyle(/* Italic */1),
+                  /* :: */[
+                    Css.marginLeft(Css.em(0.5)),
+                    /* :: */[
+                      Css.color(Theme.Color[/* bad */6]),
+                      /* [] */0
+                    ]
+                  ]
+                ]
+              ]);
+  } else {
+    return Css.style(/* :: */[
+                Css.display(/* None */1),
+                /* [] */0
+              ]);
+  }
+}
 
 var description = Css.style(/* :: */[
       Css.unsafe("textOverflow", "ellipsis"),
@@ -149,8 +162,6 @@ var starIcon = Css.style(/* :: */[
     ]);
 
 exports.root             = root;
-exports.published        = published;
-exports.unpublished      = unpublished;
 exports.left             = left;
 exports.version          = version;
 exports.unpublishedLabel = unpublishedLabel;
@@ -162,4 +173,4 @@ exports.license          = license;
 exports.nolicense        = nolicense;
 exports.stars            = stars;
 exports.starIcon         = starIcon;
-/* root Not a pure module */
+/* common Not a pure module */

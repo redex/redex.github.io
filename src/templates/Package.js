@@ -18,11 +18,10 @@ function make(data, _) {
   var newrecord = component.slice();
   newrecord[/* render */9] = (function () {
       var $$package = data.package;
-      var match = +($$package.type === "unpublished");
-      var match$1 = $$package.stars;
-      var match$2 = $$package.license;
-      var match$3 = $$package.type;
-      var tmp = match$3 === "unpublished" ? React.createElement("span", {
+      var match = $$package.stars;
+      var match$1 = $$package.license;
+      var match$2 = $$package.type;
+      var tmp = match$2 === "unpublished" ? React.createElement("span", {
               className: PackageStyles.unpublishedLabel
             }, Helpers.text("unpublished")) : null;
       var keywords = $$package.keywords;
@@ -52,18 +51,16 @@ function make(data, _) {
         tmp$9.href = tmp$10[0];
       }
       return React.createElement("div", undefined, React.createElement("header", {
-                      className: PackageStyles.header + (
-                        match !== 0 ? " " + PackageStyles.unpublished : ""
-                      )
+                      className: PackageStyles.header($$package.type)
                     }, React.createElement("div", {
                           className: PackageStyles.props
-                        }, (match$1 == null) ? null : React.createElement("div", {
+                        }, (match == null) ? null : React.createElement("div", {
                                 className: PackageStyles.stars
-                              }, Helpers.text(match$1), ReasonReact.element(/* None */0, /* None */0, Icon.Star[/* make */0](/* Some */[PackageStyles.starIcon], /* array */[]))), (match$2 == null) ? React.createElement("div", {
+                              }, Helpers.text(match), ReasonReact.element(/* None */0, /* None */0, Icon.Star[/* make */0](/* Some */[PackageStyles.starIcon], /* array */[]))), (match$1 == null) ? React.createElement("div", {
                                 className: PackageStyles.nolicense
                               }, Helpers.text("No license")) : React.createElement("div", {
                                 className: PackageStyles.license
-                              }, Helpers.text(match$2)), React.createElement("div", {
+                              }, Helpers.text(match$1)), React.createElement("div", {
                               className: PackageStyles.updated
                             }, ReasonReact.element(/* None */0, /* None */0, TimeAgo.make($$package.updated, /* array */[])))), React.createElement("div", {
                           className: PackageStyles.title

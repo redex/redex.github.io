@@ -29,7 +29,7 @@ let links = style [
 ]
 
 let inactiveLink = style [
-  unsafe "opacity" ".25 !important";
+  opacity 0.25 |> important;
   cursor (Custom "default");
 ]
 

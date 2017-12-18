@@ -9,7 +9,7 @@ let make = (~data, _children) => {
     let package = data##package;
 
     <div>
-      <header className=(Styles.header ++ (package##_type === "unpublished" ? (" " ++ Styles.unpublished) : ""))>
+      <header className=Styles.header(package##_type)>
         <div className=Styles.props>
           {
             switch (package##stars |> Js.toOption) {

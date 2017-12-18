@@ -16,21 +16,18 @@ var component = ReasonReact.statelessComponent("PackageSummary");
 function make($$package, _) {
   var newrecord = component.slice();
   newrecord[/* render */9] = (function () {
-      var match = +($$package.type === "unpublished");
-      var match$1 = $$package.type;
-      var tmp = match$1 === "unpublished" ? React.createElement("span", {
-              className: PackageSummaryStyles.unpublishedLabel
-            }, Helpers.text("unpublished")) : null;
       var keywords = $$package.keywords;
-      var match$2 = $$package.license;
-      var match$3 = $$package.stars;
+      var match = $$package.license;
+      var match$1 = $$package.stars;
       return React.createElement("div", {
-                  className: match !== 0 ? PackageSummaryStyles.unpublished : PackageSummaryStyles.published
+                  className: PackageSummaryStyles.root($$package.type)
                 }, React.createElement("div", {
                       className: PackageSummaryStyles.left
                     }, ReasonReact.element(/* None */0, /* None */0, Link.make($$package.slug, /* None */0, /* None */0, /* array */[Helpers.text($$package.name)])), React.createElement("span", {
                           className: PackageSummaryStyles.version
-                        }, Helpers.text($$package.version)), tmp, React.createElement("div", {
+                        }, Helpers.text($$package.version)), React.createElement("span", {
+                          className: PackageSummaryStyles.unpublishedLabel($$package.type)
+                        }, Helpers.text("unpublished")), React.createElement("div", {
                           className: PackageSummaryStyles.description
                         }, Helpers.text($$package.description)), React.createElement("div", undefined, ReasonReact.element(/* None */0, /* None */0, Icon.Tags[/* make */0](/* Some */[PackageSummaryStyles.tagsIcon], /* array */[])), keywords.length !== 0 ? $$Array.map((function (keyword) {
                                   return ReasonReact.element(/* Some */[keyword], /* None */0, Tag.make(keyword, /* array */[]));
@@ -38,13 +35,13 @@ function make($$package, _) {
                       className: PackageSummaryStyles.right
                     }, React.createElement("div", {
                           className: PackageSummaryStyles.updated
-                        }, ReasonReact.element(/* None */0, /* None */0, TimeAgo.make($$package.updated, /* array */[]))), (match$2 == null) ? React.createElement("div", {
+                        }, ReasonReact.element(/* None */0, /* None */0, TimeAgo.make($$package.updated, /* array */[]))), (match == null) ? React.createElement("div", {
                             className: PackageSummaryStyles.nolicense
                           }, Helpers.text("No license")) : React.createElement("div", {
                             className: PackageSummaryStyles.license
-                          }, Helpers.text(match$2)), (match$3 == null) ? null : React.createElement("div", {
+                          }, Helpers.text(match)), (match$1 == null) ? null : React.createElement("div", {
                             className: PackageSummaryStyles.stars
-                          }, Helpers.text(match$3), ReasonReact.element(/* None */0, /* None */0, Icon.Star[/* make */0](/* Some */[PackageSummaryStyles.starIcon], /* array */[])))));
+                          }, Helpers.text(match$1), ReasonReact.element(/* None */0, /* None */0, Icon.Star[/* make */0](/* Some */[PackageSummaryStyles.starIcon], /* array */[])))));
     });
   return newrecord;
 }

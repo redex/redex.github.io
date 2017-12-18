@@ -7,17 +7,11 @@ let make = (~package, _children) => {
 	...component,
 
 	render: _self =>
-		<div className={package##_type === "unpublished" ? Styles.unpublished : Styles.published}>
+		<div className=Styles.root(package##_type)>
 			<div className=Styles.left>
 				<Link to_=package##slug> {package##name |> text} </Link>
 				<span className=Styles.version> {package##version |> text} </span>
-				{
-					switch (package##_type) {
-					| "unpublished" =>
-						<span className=Styles.unpublishedLabel> {"unpublished" |> text} </span>
-					| _ => ReasonReact.nullElement
-					}
-				}
+				<span className=Styles.unpublishedLabel(package##_type)> {"unpublished" |> text} </span>
 
 				<div className=Styles.description>	
 					{package##description |> text}
@@ -31,7 +25,7 @@ let make = (~package, _children) => {
 						| [||] => ReasonReact.nullElement
 						| keywords =>
 								keywords |> Array.map(keyword => <Tag key=keyword name=keyword />)
-													|> ReasonReact.arrayToElement
+								 				 |> ReasonReact.arrayToElement
 						}
 					}
 				</div>
