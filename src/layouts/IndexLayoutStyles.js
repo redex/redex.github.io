@@ -63,12 +63,15 @@ var title = Css.style(/* :: */[
 var logo = Css.style(/* :: */[
       Css.height(Css.em(1.5)),
       /* :: */[
-        Css.unsafe("fill", Theme.Color[/* primary */0]),
+        Css.width(Css.em(1.5)),
         /* :: */[
-          Css.unsafe("margin", "0 1em"),
+          Css.unsafe("fill", Theme.Color[/* primary */0]),
           /* :: */[
-            Css.transition(/* None */0, /* None */0, /* None */0, "transform 100ms ease-in-out"),
-            /* [] */0
+            Css.unsafe("margin", "0 1em"),
+            /* :: */[
+              Css.transition(/* None */0, /* None */0, /* None */0, "transform 100ms ease-in-out"),
+              /* [] */0
+            ]
           ]
         ]
       ]

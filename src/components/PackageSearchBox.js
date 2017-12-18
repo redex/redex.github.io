@@ -16,6 +16,8 @@ var appId = "B1AVN0IGTU";
 
 var apiKey = "c7a3475a8567971cb7510b422d9f37ad";
 
+var index = "re:libs";
+
 function decodeResult(json) {
   return Object.assign({
               slug: "/packages/" + json.id
@@ -56,7 +58,7 @@ function make() {
     });
   newrecord[/* initialState */10] = (function () {
       return /* record */[
-              /* searchClient */AlgoliasearchHelper(Algoliasearch(appId, apiKey), "re:libs"),
+              /* searchClient */AlgoliasearchHelper(Algoliasearch(appId, apiKey), index),
               /* results : array */[]
             ];
     });
@@ -95,6 +97,7 @@ var Styles = 0;
 exports.Styles       = Styles;
 exports.appId        = appId;
 exports.apiKey       = apiKey;
+exports.index        = index;
 exports.decodeResult = decodeResult;
 exports.component    = component;
 exports.make         = make;

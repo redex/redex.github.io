@@ -48,6 +48,7 @@ let title = style [
 
 let logo = style [
   height (em 1.5);
+  width (em 1.5);
   unsafe "fill" (Theme.Color.primary |> Obj.magic);
   unsafe "margin" "0 1em";
   transition "transform 100ms ease-in-out";

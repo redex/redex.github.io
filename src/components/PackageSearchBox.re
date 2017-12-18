@@ -3,6 +3,7 @@ open! Helpers;
 module Styles = PackageSearchBoxStyles;
 let appId ="B1AVN0IGTU";
 let apiKey = "c7a3475a8567971cb7510b422d9f37ad";
+let index = "re:libs";
 
 type state = {
   searchClient: Algolia.Helper.t,
@@ -23,7 +24,7 @@ let make = _children => {
   ...component,
 
   initialState: () => {
-    searchClient: Algolia.Helper.make(Algolia.makeClient(appId, apiKey), "re:libs"),
+    searchClient: Algolia.Helper.make(Algolia.makeClient(appId, apiKey), index),
     results: [||]
   },
   reducer: (action, state) =>
