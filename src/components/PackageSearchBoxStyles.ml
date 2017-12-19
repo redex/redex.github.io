@@ -24,6 +24,10 @@ let input = style [
   unsafe "padding" ".75em .25em";
   width (pct 100.);
   color Theme.Color.primary;
+
+  selector "::placeholder" [
+    color Theme.Color.primary;
+  ];
 ]
 
 let results = style [

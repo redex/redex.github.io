@@ -12,6 +12,11 @@ Css.$$global("*", /* :: */[
       /* [] */0
     ]);
 
+Css.$$global("*:focus", /* :: */[
+      Css.outlineStyle(/* None */0),
+      /* [] */0
+    ]);
+
 Css.$$global("body", /* :: */[
       Css.unsafe("lineHeight", "inherit"),
       /* :: */[

@@ -49,7 +49,13 @@ var input = Css.style(/* :: */[
         Css.width(Css.pct(100)),
         /* :: */[
           Css.color(Theme.Color[/* primary */0]),
-          /* [] */0
+          /* :: */[
+            Css.selector("::placeholder", /* :: */[
+                  Css.color(Theme.Color[/* primary */0]),
+                  /* [] */0
+                ]),
+            /* [] */0
+          ]
         ]
       ]
     ]);

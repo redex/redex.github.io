@@ -7,6 +7,10 @@ let _reset = begin
     boxSizing BorderBox;
   ];
 
+  global "*:focus" [
+    outlineStyle None
+  ];
+
   global "body" [
     unsafe "lineHeight" "inherit";
     color Theme.Color.text;
