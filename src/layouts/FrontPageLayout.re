@@ -44,9 +44,9 @@ let make = (~children: unit => ReasonReact.reactElement, _children) => {
           <section>
             <h1> ("Project" |> text) </h1>
             <ul>
-              <li> <a href="https://github.com/rebench/rebench.github.io"> ("Source Code Repository" |> text) </a> </li>
-              <li> <a href="https://github.com/rebench/rebench.github.io/issues"> ("Support / Bug Tracker" |> text) </a> </li>
-              <li> <a href="https://github.com/rebench/rebench.github.io/issues"> ("Publish a package" |> text) </a> </li>
+              <li> <a href="https://github.com/redex/redex.github.io"> ("Source Code Repository" |> text) </a> </li>
+              <li> <a href="https://github.com/redex/redex.github.io/issues"> ("Support / Bug Tracker" |> text) </a> </li>
+              <li> <Link to_="/publish"> ("Publish a package" |> text) </Link> </li>
             </ul>
           </section>
 
