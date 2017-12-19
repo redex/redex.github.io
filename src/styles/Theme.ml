@@ -18,8 +18,9 @@ module Panel = struct
     let background: color = "white" |> Obj.magic
   end
 
+  (* NOTE: Safari is INSANELY particular about the angle, test thoroughly if changed *)
   let crosshatchBackground = "repeating-linear-gradient(
-    -45deg,
+    340deg,
     white,
     white 10px,
     whiteSmoke 10px,
@@ -37,8 +38,9 @@ module Inverted = struct
     let highlightedBlock = hex "rgba(255, 255, 255, .2)"
   end
 
+  (* NOTE: Safari is INSANELY particular about the angle, test thoroughly if changed *)
   let crosshatchBackground = "repeating-linear-gradient(
-    -45deg,
+    340deg,
     hsl(6.9, 70.7%, 54%),
     hsl(6.9, 70.7%, 54%) 10px,
     hsl(6.9, 70.7%, 58%) 10px,

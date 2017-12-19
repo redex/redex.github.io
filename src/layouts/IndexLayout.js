@@ -23,7 +23,9 @@ function make(children, _) {
                         }, ReasonReact.element(/* None */0, /* None */0, PackageSearchBox.make(/* array */[])), ReasonReact.element(/* None */0, /* None */0, Link.make("/", /* Some */[IndexLayoutStyles.title], /* None */0, /* array */[React.createElement("svg", {
                                         className: IndexLayoutStyles.logo
                                       }, React.createElement("use", {
-                                            href: "/logo.svg#logo"
+                                            href: "/logo.svg#logo",
+                                            xlinkHref: "/logo.svg#logo",
+                                            xmlnsXlink: "http://www.w3.org/1999/xlink"
                                           }))])))), React.createElement("div", {
                       className: IndexLayoutStyles.widthContainer
                     }, Curry._1(children, /* () */0)));

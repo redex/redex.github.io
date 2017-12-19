@@ -15,7 +15,8 @@ let make = (~children, _children) => {
           <PackageSearchBox />
           <Link to_="/" className=Styles.title>
             <svg className=Styles.logo>
-              <use href="/logo.svg#logo" />
+              /* NOTE: xlink stuff needed for safari */
+              <use href="/logo.svg#logo" xmlnsXlink="http://www.w3.org/1999/xlink" xlinkHref="/logo.svg#logo"/>
             </svg>
           </Link>
         </div>

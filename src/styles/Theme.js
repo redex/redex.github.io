@@ -25,7 +25,7 @@ var Color$1 = /* module */[/* background */"white"];
 
 var Panel = /* module */[
   /* Color */Color$1,
-  /* crosshatchBackground */"repeating-linear-gradient(\n    -45deg,\n    white,\n    white 10px,\n    whiteSmoke 10px,\n    whiteSmoke 12px\n  )"
+  /* crosshatchBackground */"repeating-linear-gradient(\n    340deg,\n    white,\n    white 10px,\n    whiteSmoke 10px,\n    whiteSmoke 12px\n  )"
 ];
 
 var block = Css.hex("rgba(255, 255, 255, .1)");
@@ -41,7 +41,7 @@ var Color$2 = /* module */[
 
 var Inverted = /* module */[
   /* Color */Color$2,
-  /* crosshatchBackground */"repeating-linear-gradient(\n    -45deg,\n    hsl(6.9, 70.7%, 54%),\n    hsl(6.9, 70.7%, 54%) 10px,\n    hsl(6.9, 70.7%, 58%) 10px,\n    hsl(6.9, 70.7%, 58%) 12px\n  )"
+  /* crosshatchBackground */"repeating-linear-gradient(\n    340deg,\n    hsl(6.9, 70.7%, 54%),\n    hsl(6.9, 70.7%, 54%) 10px,\n    hsl(6.9, 70.7%, 58%) 10px,\n    hsl(6.9, 70.7%, 58%) 12px\n  )"
 ];
 
 var Shadow = /* module */[

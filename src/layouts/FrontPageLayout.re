@@ -27,7 +27,8 @@ let make = (~children: unit => ReasonReact.reactElement, _children) => {
         <div className=Styles.widthContainer>
           <h1 className=Styles.title>
             <svg className=Styles.logo>
-              <use href="/logo.svg#logo" />
+              /* NOTE: xlink stuff needed for safari */
+              <use href="/logo.svg#logo" xmlnsXlink="http://www.w3.org/1999/xlink" xlinkHref="/logo.svg#logo"/>
             </svg>
             ("redex" |> text)
           </h1>

@@ -27,7 +27,9 @@ function make(children, _) {
                             }, React.createElement("svg", {
                                   className: FrontPageLayoutStyles.logo
                                 }, React.createElement("use", {
-                                      href: "/logo.svg#logo"
+                                      href: "/logo.svg#logo",
+                                      xlinkHref: "/logo.svg#logo",
+                                      xmlnsXlink: "http://www.w3.org/1999/xlink"
                                     })), Helpers.text("redex")))), React.createElement("div", {
                       className: FrontPageLayoutStyles.widthContainer
                     }, Curry._1(children, /* () */0)), React.createElement("div", {
