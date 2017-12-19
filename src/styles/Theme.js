@@ -7,7 +7,7 @@ var primary = Css.hex("dd4c39");
 
 var text = Css.hex("444");
 
-var subtleBorder = Css.hex("#eee");
+var subtleBorder = Css.hex("eee");
 
 var bad = Css.rgba(255, 0, 0, 0.75);
 

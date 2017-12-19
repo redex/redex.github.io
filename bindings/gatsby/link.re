@@ -1,10 +1,9 @@
 [@bs.module "gatsby-link"] external reactClass : ReasonReact.reactClass = "default";
 
-let make = (
-  ~to_: string,
-  ~className: option(string)=?,
-  ~style: option(ReactDOMRe.Style.t)=?,
-  children) =>
+let make = (~to_: string,
+            ~className: option(string)=?,
+            ~style: option(ReactDOMRe.Style.t)=?,
+            children) =>
   ReasonReact.wrapJsForReason(
     ~reactClass,
     ~props={
@@ -14,3 +13,5 @@ let make = (
     },
     children
   );
+
+[@bs.module "gatsby-link"] external navigateTo : string => unit = "";

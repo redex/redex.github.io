@@ -8,7 +8,7 @@ module Color = struct
   let text = hex "444"
   let link = primary
 
-  let subtleBorder = hex "#eee"
+  let subtleBorder = hex "eee"
 
   let bad = rgba 255 0 0 0.75
 end

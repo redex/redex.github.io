@@ -12,7 +12,7 @@ let make = (~children, _children) => {
 
       <div className=Styles.header>
         <div className=Styles.widthContainer>
-          <PackageSearchBox />
+          <SearchBox />
           <Link to_="/" className=Styles.title>
             <svg className=Styles.logo>
               /* NOTE: xlink stuff needed for safari */

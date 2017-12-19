@@ -5,8 +5,8 @@ var Link              = require("../../bindings/gatsby/link.js");
 var Curry             = require("bs-platform/lib/js/curry.js");
 var React             = require("react");
 var Helmet            = require("../../bindings/gatsby/helmet.js");
+var SearchBox         = require("../components/SearchBox.js");
 var ReasonReact       = require("reason-react/src/ReasonReact.js");
-var PackageSearchBox  = require("../components/PackageSearchBox.js");
 var IndexLayoutStyles = require("./IndexLayoutStyles.js");
 
 var component = ReasonReact.statelessComponent("PageLayout");
@@ -20,7 +20,7 @@ function make(children, _) {
                       className: IndexLayoutStyles.header
                     }, React.createElement("div", {
                           className: IndexLayoutStyles.widthContainer
-                        }, ReasonReact.element(/* None */0, /* None */0, PackageSearchBox.make(/* array */[])), ReasonReact.element(/* None */0, /* None */0, Link.make("/", /* Some */[IndexLayoutStyles.title], /* None */0, /* array */[React.createElement("svg", {
+                        }, ReasonReact.element(/* None */0, /* None */0, SearchBox.make(/* array */[])), ReasonReact.element(/* None */0, /* None */0, Link.make("/", /* Some */[IndexLayoutStyles.title], /* None */0, /* array */[React.createElement("svg", {
                                         className: IndexLayoutStyles.logo
                                       }, React.createElement("use", {
                                             href: "/logo.svg#logo",

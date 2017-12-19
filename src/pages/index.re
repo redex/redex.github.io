@@ -6,7 +6,8 @@ let make = (~data, _children) => {
 
   render: _self =>
     <div>
-      <PackageSearchBox />
+
+      <SearchBox />
 
       <div className=Styles.Index.keywords>
         {
@@ -23,6 +24,7 @@ let make = (~data, _children) => {
       </div>
 
       <div className=Styles.Index.lists>
+
         <div>
           <h2> {"Recent releases" |> text} </h2>
           {
@@ -75,7 +77,9 @@ let make = (~data, _children) => {
             |> ReasonReact.arrayToElement
           }
         </div>
+
       </div>
+
     </div>
 };
 
