@@ -58,10 +58,12 @@ function make(children, _) {
                                           href: "https://reasonml.github.io/guide"
                                         }, Helpers.text("Reason Guide"))), React.createElement("li", undefined, React.createElement("a", {
                                           href: "https://reasonml.github.io/try"
-                                        }, Helpers.text("Reason Playground"))))), React.createElement("section", undefined, React.createElement("img", {
-                                  className: FrontPageLayoutStyles.algoliaLogo,
-                                  src: "/search-by-algolia-white.svg"
-                                })))));
+                                        }, Helpers.text("Reason Playground"))))), React.createElement("section", undefined, React.createElement("a", {
+                                  href: "https://www.algolia.com"
+                                }, React.createElement("img", {
+                                      className: FrontPageLayoutStyles.algoliaLogo,
+                                      src: "/search-by-algolia-white.svg"
+                                    }))))));
     });
   return newrecord;
 }

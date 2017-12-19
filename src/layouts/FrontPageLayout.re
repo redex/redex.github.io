@@ -71,7 +71,9 @@ let make = (~children: unit => ReasonReact.reactElement, _children) => {
           </section>
 
           <section>
-            <img className=Styles.algoliaLogo src="/search-by-algolia-white.svg" />
+            <a href="https://www.algolia.com">
+              <img className=Styles.algoliaLogo src="/search-by-algolia-white.svg" />
+            </a>
           </section>
         </div>
       </div>
