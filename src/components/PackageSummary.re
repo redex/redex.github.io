@@ -17,34 +17,25 @@ let make = (~package, _children) => {
 					{package##description |> text}
 				</div>
 
-
 				<div>
 					<Icon.Tags className=Styles.tagsIcon />
-					{
-						switch package##keywords {
-						| [||] => ReasonReact.nullElement
-						| keywords =>
-								keywords |> Array.map(keyword => <Tag key=keyword name=keyword />)
-								 				 |> ReasonReact.arrayToElement
-						}
-					}
+					<Control.Map items=package##keywords>
+						...(keyword => <Tag key=keyword name=keyword />)
+					</Control.Map>
 				</div>
 			</div>
 
 			<div className=Styles.right>
 				<div className=Styles.updated> <TimeAgo date=package##updated /> </div>
-				{
-					switch (package##license |> Js.toOption) {
-					| Some(license) => <div className=Styles.license> {license |> text} </div>
-					| None					=> <div className=Styles.nolicense> {"No license" |> text} </div>
-					}
-				}
-				{
-					switch (package##stars |> Js.toOption) {
-					| Some(stars) => <div className=Styles.stars> {stars |> text} <Icon.Star className=Styles.starIcon/> </div>
-					| None 				=> ReasonReact.nullElement
-					}
-				}
+
+				(package##license |> Js.toOption |>
+					fun | Some(license) => <div className=Styles.license> {license |> text} </div>
+							| None					=> <div className=Styles.nolicense> {"No license" |> text} </div>
+				)
+
+				<Control.IfSome option=(package##stars |> Js.toOption)>
+					...(stars => <div className=Styles.stars> {stars |> text} <Icon.Star className=Styles.starIcon/> </div>)
+				</Control.IfSome>
 			</div>
 		</div>
 };

@@ -7,18 +7,15 @@ let make = (~data, _children) => {
 
   render: _self =>
     <div>
-      {
-        data##keywords##edges
-        |> Array.map(edge => edge##node)
-        |> Array.map(keyword => 
+      <Control.Map items=(data##keywords##edges |> Array.map(edge => edge##node))>
+        ...(keyword => 
           <div key=keyword##name>
             <h2> {keyword##name |> text} </h2>
             <PackageList packages={keyword##packages |> Array.filter(p => p !== Obj.magic(Js.null)) /* TODO: warn about missing packages instead of just fitlering them out*/
                                                      |> Js.Array.sortInPlaceWith((a, b) => compare(a##name, b##name)) } /> 
           </div>
         )
-        |> ReasonReact.arrayToElement
-      }
+       </Control.Map>
     </div>
 };
 

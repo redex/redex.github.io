@@ -5,10 +5,7 @@ let make = (~packages, _children) => {
   ...component,
 
   render: _self =>
-    <div>
-      {
-        packages |> Array.map(package => <PackageSummary key=package##id package />)
-                 |> ReasonReact.arrayToElement
-      }
-    </div>
+    <Control.Map items=packages>
+      ...(package => <PackageSummary key=package##id package />)
+    </Control.Map>
 }

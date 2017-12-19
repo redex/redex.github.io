@@ -6,6 +6,7 @@ var Block               = require("bs-platform/lib/js/block.js");
 var Curry               = require("bs-platform/lib/js/curry.js");
 var React               = require("react");
 var Rebase              = require("reason-rebase/src/rebase.js");
+var Control             = require("./helpers/Control.js");
 var ReasonReact         = require("reason-react/src/ReasonReact.js");
 var GatsbyLink          = require("gatsby-link");
 var Algoliasearch       = require("algoliasearch");
@@ -47,7 +48,6 @@ function make() {
   newrecord[/* render */9] = (function (param) {
       var state = param[/* state */2];
       var reduce = param[/* reduce */1];
-      var match = Rebase.$$Array[/* length */12](state[/* results */2]);
       return React.createElement("div", {
                   className: SearchBoxStyles.root
                 }, React.createElement("div", {
@@ -62,15 +62,15 @@ function make() {
                           onChange: Curry._1(reduce, (function (e) {
                                   return /* QueryChanged */Block.__(0, [e.target.value]);
                                 }))
-                        })), match !== 0 ? React.createElement("div", {
-                        className: SearchBoxStyles.results
-                      }, Rebase.$$Array[/* map */2]((function ($$package) {
-                              return ReasonReact.element(/* Some */[$$package.name], /* None */0, SearchResultItem.make($$package, Rebase.Option[/* exists */9]((function ($$this) {
-                                                    return +($$this.name === $$package.name);
-                                                  }), state[/* focused */3]), Curry._1(reduce, (function (p) {
-                                                    return /* SelectItem */Block.__(2, [p]);
-                                                  })), /* array */[]));
-                            }), state[/* results */2])) : null);
+                        })), React.createElement("div", {
+                      className: SearchBoxStyles.results
+                    }, ReasonReact.element(/* None */0, /* None */0, Control.$$Map[/* make */1](state[/* results */2], (function ($$package) {
+                                return ReasonReact.element(/* Some */[$$package.name], /* None */0, SearchResultItem.make($$package, Rebase.Option[/* exists */9]((function ($$this) {
+                                                      return +($$this.name === $$package.name);
+                                                    }), state[/* focused */3]), Curry._1(reduce, (function (p) {
+                                                      return /* SelectItem */Block.__(2, [p]);
+                                                    })), /* array */[]));
+                              })))));
     });
   newrecord[/* initialState */10] = (function () {
       return /* record */[

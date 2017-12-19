@@ -4,9 +4,11 @@
 var Icon                   = require("../vendor/icons/Icon.js");
 var Curry                  = require("bs-platform/lib/js/curry.js");
 var React                  = require("react");
+var Control                = require("./helpers/Control.js");
 var Helpers                = require("../utils/Helpers.js");
 var TimeAgo                = require("../vendor/TimeAgo.js");
 var ReasonReact            = require("reason-react/src/ReasonReact.js");
+var Js_primitive           = require("bs-platform/lib/js/js_primitive.js");
 var SearchResultItemStyles = require("./SearchResultItemStyles.js");
 
 var component = ReasonReact.statelessComponent("SearchResultItem");
@@ -14,7 +16,6 @@ var component = ReasonReact.statelessComponent("SearchResultItem");
 function make($$package, isFocused, onClick, _) {
   var newrecord = component.slice();
   newrecord[/* render */9] = (function () {
-      var match = $$package.stars;
       return React.createElement("div", {
                   className: SearchResultItemStyles.root($$package.type, isFocused),
                   onClick: (function () {
@@ -30,9 +31,11 @@ function make($$package, isFocused, onClick, _) {
                           className: SearchResultItemStyles.description
                         }, Helpers.text($$package.description))), React.createElement("div", undefined, React.createElement("div", {
                           className: SearchResultItemStyles.updated
-                        }, ReasonReact.element(/* None */0, /* None */0, TimeAgo.make($$package.updated, /* array */[]))), (match == null) ? null : React.createElement("div", {
-                            className: SearchResultItemStyles.stars
-                          }, Helpers.text(match), ReasonReact.element(/* None */0, /* None */0, Icon.Star[/* make */0](/* Some */[SearchResultItemStyles.starIcon], /* array */[])))));
+                        }, ReasonReact.element(/* None */0, /* None */0, TimeAgo.make($$package.updated, /* array */[]))), ReasonReact.element(/* None */0, /* None */0, Control.IfSome[/* make */1](Js_primitive.null_undefined_to_opt($$package.stars), (function (stars) {
+                                return React.createElement("div", {
+                                            className: SearchResultItemStyles.stars
+                                          }, Helpers.text(stars), ReasonReact.element(/* None */0, /* None */0, Icon.Star[/* make */0](/* Some */[SearchResultItemStyles.starIcon], /* array */[])));
+                              })))));
     });
   return newrecord;
 }

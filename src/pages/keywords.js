@@ -3,6 +3,7 @@
 
 var React       = require("react");
 var Rebase      = require("reason-rebase/src/rebase.js");
+var Control     = require("../components/helpers/Control.js");
 var Helpers     = require("../utils/Helpers.js");
 var Caml_string = require("bs-platform/lib/js/caml_string.js");
 var PackageList = require("../components/PackageList.js");
@@ -13,17 +14,17 @@ var component = ReasonReact.statelessComponent("Keywords");
 function make(data, _) {
   var newrecord = component.slice();
   newrecord[/* render */9] = (function () {
-      return React.createElement("div", undefined, Rebase.$$Array[/* map */2]((function (keyword) {
-                        return React.createElement("div", {
-                                    key: keyword.name
-                                  }, React.createElement("h2", undefined, Helpers.text(keyword.name)), ReasonReact.element(/* None */0, /* None */0, PackageList.make(Rebase.$$Array[/* filter */10]((function (p) {
-                                                    return +(p !== null);
-                                                  }), keyword.packages).sort((function (a, b) {
-                                                  return Caml_string.caml_string_compare(a.name, b.name);
-                                                })), /* array */[])));
-                      }), Rebase.$$Array[/* map */2]((function (edge) {
-                            return edge.node;
-                          }), data.keywords.edges)));
+      return React.createElement("div", undefined, ReasonReact.element(/* None */0, /* None */0, Control.$$Map[/* make */1](Rebase.$$Array[/* map */2]((function (edge) {
+                                return edge.node;
+                              }), data.keywords.edges), (function (keyword) {
+                            return React.createElement("div", {
+                                        key: keyword.name
+                                      }, React.createElement("h2", undefined, Helpers.text(keyword.name)), ReasonReact.element(/* None */0, /* None */0, PackageList.make(Rebase.$$Array[/* filter */10]((function (p) {
+                                                        return +(p !== null);
+                                                      }), keyword.packages).sort((function (a, b) {
+                                                      return Caml_string.caml_string_compare(a.name, b.name);
+                                                    })), /* array */[])));
+                          }))));
     });
   return newrecord;
 }

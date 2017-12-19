@@ -122,23 +122,16 @@ let make = _children => {
                onKeyDown   = reduce(e => KeyDown(Obj.magic(e)##keyCode)) />
       </div>
 
-      {
-        switch (state.results |> Array.length) {
-        | 0 => ReasonReact.nullElement
-        | _ =>
-          <div className=Styles.results>
-            {
-              state.results 
-                            |> Array.map(package =>
-                                <SearchResultItem package
-                                                  isFocused = Option.exists(this => this##name === package##name, state.focused)
-                                                  key       = package##name
-                                                  onClick   = reduce(p => SelectItem(p)) />)
-                            |> ReasonReact.arrayToElement
-            }
-          </div>
-        }
-      }
+      <div className=Styles.results>
+        <Control.Map items=state.results>
+          ...(package =>
+            <SearchResultItem package
+                              isFocused = Option.exists(this => this##name === package##name, state.focused)
+                              key       = package##name
+                              onClick   = reduce(p => SelectItem(p)) />
+          )
+        </Control.Map>
+      </div>
 
     </div>
 };
