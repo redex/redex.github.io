@@ -1,3 +1,4 @@
+open Rebase;
 open! Helpers;
 
 module Styles = SearchBoxStyles;
@@ -6,16 +7,25 @@ let appId ="B1AVN0IGTU";
 let apiKey = "c7a3475a8567971cb7510b422d9f37ad";
 let index = "re:libs";
 
+
+module Key = {
+  let down = 40;
+  let up = 38;
+  let enter = 13;
+};
+
 type state = {
   searchClient: Algolia.Helper.t,
   query: string,
-  results: array(Js.Json.t)
+  results: array(SearchResultItem.t),
+  focused: option(SearchResultItem.t)
 };
 
 type action =
   | QueryChanged(string)
   | ResultsChanged(array(Js.Json.t))
   | SelectItem(SearchResultItem.t)
+  | KeyDown(int)
 ;
 
 let decodeResult = json =>
@@ -29,14 +39,15 @@ let make = _children => {
   initialState: () => {
     searchClient: Algolia.Helper.make(Algolia.makeClient(appId, apiKey), index),
     query: "",
-    results: [||]
+    results: [||],
+    focused: None
   },
   reducer: (action, state) =>
     switch action {
 
     | QueryChanged(query) =>
       switch query {
-      | "" => ReasonReact.Update({ ...state, query, results: [||] })
+      | "" => ReasonReact.Update({ ...state, query, results: [||], focused: None })
       | _ =>
         ReasonReact.UpdateWithSideEffects(
           { ...state, query },
@@ -47,14 +58,49 @@ let make = _children => {
         )
       }
 
-    | ResultsChanged(results) =>
-      ReasonReact.Update({ ...state, results })
+    | ResultsChanged(results) => {
+      let results = results |> Array.map(decodeResult);
+      ReasonReact.Update({
+        ...state,
+        results,
+        focused: Array.get(0, results)
+      })
+    }
 
     | SelectItem(package) =>
       ReasonReact.UpdateWithSideEffects(
-        { ...state, query: "", results: [||] },
+        { ...state, query: "", results: [||], focused: None },
         _self => Link.navigateTo(package##slug)
       )
+
+    | KeyDown(key) =>
+      if (key === Key.down) {
+        ReasonReact.Update({
+          ...state,
+          focused: switch state.focused {
+                   | None =>
+                     Array.get(0, state.results)
+                   | Some(p) =>
+                     Array.get(Js.Array.findIndex(this => this === p, state.results) + 1, state.results)
+                   }
+        })
+      } else if (key === Key.up) {
+        ReasonReact.Update({
+          ...state,
+          focused: switch state.focused {
+                   | None =>
+                     Array.get(Array.length(state.results) - 1, state.results)
+                   | Some(p) =>
+                     Array.get(Js.Array.findIndex(this => this === p, state.results) - 1, state.results)
+                   }
+        })
+      } else if (key === Key.enter) {
+        ReasonReact.SideEffects(
+          self => self.state.focused |> Option.forEach(this => self.reduce(() => SelectItem(this))())
+        )
+      } else {
+        ReasonReact.NoUpdate
+      }
     },
 
   didMount: ({ state, reduce }) => {
@@ -72,7 +118,8 @@ let make = _children => {
         <input className   = Styles.input
                placeholder = "Search packages"
                value       = state.query
-               onChange    = reduce(e => QueryChanged(Obj.magic(e)##target##value)) />
+               onChange    = reduce(e => QueryChanged(Obj.magic(e)##target##value))
+               onKeyDown   = reduce(e => KeyDown(Obj.magic(e)##keyCode)) />
       </div>
 
       {
@@ -81,11 +128,12 @@ let make = _children => {
         | _ =>
           <div className=Styles.results>
             {
-              state.results |> Array.map(decodeResult)
+              state.results 
                             |> Array.map(package =>
-                                <SearchResultItem key=package##name
-                                                  package
-                                                  onClick=reduce(p => SelectItem(p)) />)
+                                <SearchResultItem package
+                                                  isFocused = Option.exists(this => this##name === package##name, state.focused)
+                                                  key       = package##name
+                                                  onClick   = reduce(p => SelectItem(p)) />)
                             |> ReasonReact.arrayToElement
             }
           </div>

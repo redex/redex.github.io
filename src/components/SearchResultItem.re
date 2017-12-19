@@ -13,11 +13,11 @@ type t = {.
 };
 
 let component = ReasonReact.statelessComponent("SearchResultItem");
-let make = (~package, ~onClick, _children) => {
+let make = (~package, ~isFocused, ~onClick, _children) => {
 	...component,
 
 	render: _self =>
-		<div className=Styles.root(package##_type) onClick=(_e => onClick(package))>
+		<div className=Styles.root(package##_type, isFocused) onClick=(_e => onClick(package))>
 			<div>
 				<span className=Styles.name> {package##name |> text} </span>
 				<span className=Styles.version> {package##version |> text} </span>

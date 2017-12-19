@@ -21,10 +21,10 @@ module Panel = struct
   (* NOTE: Safari is INSANELY particular about the angle, test thoroughly if changed *)
   let crosshatchBackground = "repeating-linear-gradient(
     340deg,
-    white,
-    white 10px,
-    whiteSmoke 10px,
-    whiteSmoke 12px
+    transparent,
+    transparent 10px,
+    hsl(6.9, 70.7%, 54%, .1) 10px,
+    hsl(6.9, 70.7%, 54%, .1) 12px
   )"
 end
 

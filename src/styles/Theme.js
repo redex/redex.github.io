@@ -25,7 +25,7 @@ var Color$1 = /* module */[/* background */"white"];
 
 var Panel = /* module */[
   /* Color */Color$1,
-  /* crosshatchBackground */"repeating-linear-gradient(\n    340deg,\n    white,\n    white 10px,\n    whiteSmoke 10px,\n    whiteSmoke 12px\n  )"
+  /* crosshatchBackground */"repeating-linear-gradient(\n    340deg,\n    transparent,\n    transparent 10px,\n    hsl(6.9, 70.7%, 54%, .1) 10px,\n    hsl(6.9, 70.7%, 54%, .1) 12px\n  )"
 ];
 
 var block = Css.hex("rgba(255, 255, 255, .1)");

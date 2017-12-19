@@ -1,7 +1,10 @@
 open! Css
 
-let root = 
-  let common = [
+let if_ predicate value = if predicate then value else Obj.magic Js.null
+let else_ b a = if (Obj.magic a) == Js.null then b else a
+
+let root = fun type_ isFocused ->
+  style [
     unsafe "label" "search-result-item";
     display Flex;
     justifyContent SpaceBetween;
@@ -9,21 +12,21 @@ let root =
     borderTop (px 1) Solid Theme.Color.subtleBorder;
     cursor Pointer;
 
+    backgroundColor
+      (if_ isFocused 
+        ((Obj.magic "hsl(6.9, 90%, 90%)"): Css.color)
+      |> else_ Theme.Panel.Color.background);
+
+    unsafe "backgroundImage" (if_ (type_ == "unpublished") Theme.Panel.crosshatchBackground);
+
     hover [
-      unsafe "background" "hsl(6.9, 90%, 90%)";
+      unsafe "backgroundColor" "hsl(6.9, 90%, 90%)";
     ];
 
     selector "> *:last-child" [
       textAlign Right;
     ];
-  ] in function
-  | "unpublished" -> style (common @ [
-      unsafe "background" Theme.Panel.crosshatchBackground;
-    ])
-  | _ -> style (common @ [
-      backgroundColor Theme.Panel.Color.background;
-    ])
-
+  ]
 
 let name = style [
   color Theme.Color.link;

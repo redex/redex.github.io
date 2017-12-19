@@ -11,12 +11,12 @@ var SearchResultItemStyles = require("./SearchResultItemStyles.js");
 
 var component = ReasonReact.statelessComponent("SearchResultItem");
 
-function make($$package, onClick, _) {
+function make($$package, isFocused, onClick, _) {
   var newrecord = component.slice();
   newrecord[/* render */9] = (function () {
       var match = $$package.stars;
       return React.createElement("div", {
-                  className: SearchResultItemStyles.root($$package.type),
+                  className: SearchResultItemStyles.root($$package.type, isFocused),
                   onClick: (function () {
                       return Curry._1(onClick, $$package);
                     })

@@ -16,17 +16,20 @@ var common_001 = /* :: */[
       /* :: */[
         Css.boxShadow(Theme.Shadow[/* panel */1]),
         /* :: */[
-          Css.selector("& a", /* :: */[
-                Css.color(Theme.Color[/* link */4]),
-                /* :: */[
-                  Css.fontSize(Css.em(1.1)),
+          Css.backgroundColor(Theme.Panel[/* Color */0][/* background */0]),
+          /* :: */[
+            Css.selector("& a", /* :: */[
+                  Css.color(Theme.Color[/* link */4]),
                   /* :: */[
-                    Css.textDecoration(/* None */0),
-                    /* [] */0
+                    Css.fontSize(Css.em(1.1)),
+                    /* :: */[
+                      Css.textDecoration(/* None */0),
+                      /* [] */0
+                    ]
                   ]
-                ]
-              ]),
-          /* [] */0
+                ]),
+            /* [] */0
+          ]
         ]
       ]
     ]
@@ -41,14 +44,11 @@ var common = /* :: */[
 function root(param) {
   if (param === "unpublished") {
     return Css.style(Pervasives.$at(common, /* :: */[
-                    Css.unsafe("background", Theme.Panel[/* crosshatchBackground */1]),
+                    Css.unsafe("backgroundImage", Theme.Panel[/* crosshatchBackground */1]),
                     /* [] */0
                   ]));
   } else {
-    return Css.style(Pervasives.$at(common, /* :: */[
-                    Css.backgroundColor(Theme.Panel[/* Color */0][/* background */0]),
-                    /* [] */0
-                  ]));
+    return Css.style(common);
   }
 }
 

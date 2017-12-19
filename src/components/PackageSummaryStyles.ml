@@ -7,6 +7,7 @@ let root =
     unsafe "padding" ".5em 1em";
     marginBottom (em 0.5);
     boxShadow Theme.Shadow.panel;
+    backgroundColor Theme.Panel.Color.background;
 
     selector "& a" [
       color Theme.Color.link;
@@ -15,11 +16,9 @@ let root =
     ];
   ] in function
   | "unpublished" -> style (common @ [
-      unsafe "background" Theme.Panel.crosshatchBackground;
+      unsafe "backgroundImage" Theme.Panel.crosshatchBackground;
     ])
-  | _ -> style (common @ [
-      backgroundColor Theme.Panel.Color.background;
-    ])
+  | _ -> style common
 
 
 let left = style [
