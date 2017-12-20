@@ -1,6 +1,17 @@
 open! Rebase;
 open! Helpers;
 
+let getPackages = keyword =>
+  keyword##packages |> Array.map(Js.toOption)
+                    |> Array.filter(
+                       fun | Some(value) => true
+                           | None => {
+                             Js.log("missing package on keyword: " ++ keyword##name);
+                             false
+                           })
+                    |> Array.map(Option.getOrRaise)
+                    |> Js.Array.sortInPlaceWith((a, b) => compare(a##name, b##name));
+
 let component = ReasonReact.statelessComponent("Keywords");
 let make = (~data, _children) => {
   ...component,
@@ -11,8 +22,7 @@ let make = (~data, _children) => {
         ...(keyword => 
           <div key=keyword##name>
             <h2> {keyword##name |> text} </h2>
-            <Control.Map items=(keyword##packages |> Array.filter(p => p !== Obj.magic(Js.null)) /* TODO: warn about missing packages instead of just fitlering them out*/
-                                                     |> Js.Array.sortInPlaceWith((a, b) => compare(a##name, b##name)))>
+            <Control.Map items=getPackages(keyword)>
               ...(package => <PackageSummary key=package##id package />)
             </Control.Map>
           </div>

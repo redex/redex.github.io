@@ -6,9 +6,28 @@ var Rebase         = require("reason-rebase/src/rebase.js");
 var Control        = require("../components/helpers/Control.js");
 var Graphql        = require("../utils/Graphql.js");
 var Helpers        = require("../utils/Helpers.js");
-var Caml_string    = require("bs-platform/lib/js/caml_string.js");
+var Caml_obj       = require("bs-platform/lib/js/caml_obj.js");
 var ReasonReact    = require("reason-react/src/ReasonReact.js");
 var PackageSummary = require("../components/PackageSummary.js");
+
+function getPackages(keyword) {
+  return Rebase.$$Array[/* map */2](Rebase.Option[/* getOrRaise */15], Rebase.$$Array[/* filter */10]((function (param) {
+                      if (param) {
+                        return /* true */1;
+                      } else {
+                        console.log("missing package on keyword: " + keyword.name);
+                        return /* false */0;
+                      }
+                    }), Rebase.$$Array[/* map */2]((function (prim) {
+                          if (prim == null) {
+                            return /* None */0;
+                          } else {
+                            return [prim];
+                          }
+                        }), keyword.packages))).sort((function (a, b) {
+                return Caml_obj.caml_compare(a.name, b.name);
+              }));
+}
 
 var component = ReasonReact.statelessComponent("Keywords");
 
@@ -18,11 +37,7 @@ function make(data, _) {
       return React.createElement("div", undefined, ReasonReact.element(/* None */0, /* None */0, Control.$$Map[/* make */1](Graphql.getNodes(data.keywords), (function (keyword) {
                             return React.createElement("div", {
                                         key: keyword.name
-                                      }, React.createElement("h2", undefined, Helpers.text(keyword.name)), ReasonReact.element(/* None */0, /* None */0, Control.$$Map[/* make */1](Rebase.$$Array[/* filter */10]((function (p) {
-                                                        return +(p !== null);
-                                                      }), keyword.packages).sort((function (a, b) {
-                                                      return Caml_string.caml_string_compare(a.name, b.name);
-                                                    })), (function ($$package) {
+                                      }, React.createElement("h2", undefined, Helpers.text(keyword.name)), ReasonReact.element(/* None */0, /* None */0, Control.$$Map[/* make */1](getPackages(keyword), (function ($$package) {
                                                   return ReasonReact.element(/* Some */[$$package.id], /* None */0, PackageSummary.make($$package, /* array */[]));
                                                 }))));
                           }))));
@@ -62,9 +77,10 @@ var $$default = ReasonReact.wrapReasonForJs(component, (function (jsProps) {
 
 ;
 
-exports.component = component;
-exports.make      = make;
-exports.$$default = $$default;
-exports.default   = $$default;
-exports.__esModule= true;
+exports.getPackages = getPackages;
+exports.component   = component;
+exports.make        = make;
+exports.$$default   = $$default;
+exports.default     = $$default;
+exports.__esModule  = true;
 /* component Not a pure module */
