@@ -12,7 +12,7 @@ let make = (~data, _children) => {
       <div className=Styles.Index.keywords>
         <Control.Map items=(data##keywords |> Graphql.getNodes)>
           ...(keyword =>
-            <Link to_=keyword##slug>
+            <Link key=keyword##slug to_=keyword##slug>
               <span className="label"> {keyword##name |> text} </span>
               <span className="count"> {keyword##count |> text} </span>
             </Link>

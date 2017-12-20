@@ -19,7 +19,7 @@ function make(data, _) {
       return React.createElement("div", undefined, ReasonReact.element(/* None */0, /* None */0, SearchBox.make(/* array */[])), React.createElement("div", {
                       className: Styles.Index[/* keywords */0]
                     }, ReasonReact.element(/* None */0, /* None */0, Control.$$Map[/* make */1](Graphql.getNodes(data.keywords), (function (keyword) {
-                                return ReasonReact.element(/* None */0, /* None */0, Link.make(keyword.slug, /* None */0, /* None */0, /* array */[
+                                return ReasonReact.element(/* Some */[keyword.slug], /* None */0, Link.make(keyword.slug, /* None */0, /* None */0, /* array */[
                                                 React.createElement("span", {
                                                       className: "label"
                                                     }, Helpers.text(keyword.name)),
