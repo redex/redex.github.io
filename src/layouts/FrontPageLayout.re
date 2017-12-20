@@ -14,11 +14,6 @@ let make = (~children: unit => ReasonReact.reactElement, _children) => {
         <Link to_="/keywords"> ("Keywords" |> text) </Link>
         <Link to_="/packages/unpublished"> ("Unpublished" |> text) </Link>
         <Link className=Styles.inactiveLink to_="/"> ("Documentation" |> text) </Link>
-        /*
-        <Link to_="/docs"> ("Documentation" |> text) </Link>
-        <Link to_="/about"> ("About" |> text) </Link>
-        <Link to_="/about/#submit"> ("Submit" |> text) </Link>
-        */
       </div>
       
       <Helmet title="redex" />
@@ -46,7 +41,7 @@ let make = (~children: unit => ReasonReact.reactElement, _children) => {
             <ul>
               <li> <a href="https://github.com/redex/redex.github.io"> ("Source Code Repository" |> text) </a> </li>
               <li> <a href="https://github.com/redex/redex.github.io/issues"> ("Support / Bug Tracker" |> text) </a> </li>
-              <li> <Link to_="/publish"> ("Publish a package" |> text) </Link> </li>
+              <li> <Link to_="/publish"> ("Publishing Guide" |> text) </Link> </li>
             </ul>
           </section>
 
@@ -82,7 +77,7 @@ let make = (~children: unit => ReasonReact.reactElement, _children) => {
 
 let default =
   ReasonReact.wrapReasonForJs(
-    ~component=component,
+    ~component,
     jsProps => make(~children=jsProps##children, [||])
   );
 

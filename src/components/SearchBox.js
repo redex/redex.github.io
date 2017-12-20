@@ -64,7 +64,7 @@ function make() {
                                 }))
                         })), React.createElement("div", {
                       className: SearchBoxStyles.results
-                    }, ReasonReact.element(/* None */0, /* None */0, Control.$$Map[/* make */1](state[/* results */2], (function ($$package) {
+                    }, ReasonReact.element(/* None */0, /* None */0, Control.$$Map[/* make */1](state[/* results */2], /* None */0, (function ($$package) {
                                 return ReasonReact.element(/* Some */[$$package.name], /* None */0, SearchResultItem.make($$package, Rebase.Option[/* exists */9]((function ($$this) {
                                                       return +($$this.name === $$package.name);
                                                     }), state[/* focused */3]), Curry._1(reduce, (function (p) {
@@ -182,10 +182,6 @@ function make() {
   return newrecord;
 }
 
-var $$default = ReasonReact.wrapReasonForJs(component, (function () {
-        return make(/* array */[]);
-      }));
-
 var Styles = 0;
 
 exports.Styles       = Styles;
@@ -196,7 +192,4 @@ exports.Key          = Key;
 exports.decodeResult = decodeResult;
 exports.component    = component;
 exports.make         = make;
-exports.$$default    = $$default;
-exports.default      = $$default;
-exports.__esModule   = true;
 /* component Not a pure module */

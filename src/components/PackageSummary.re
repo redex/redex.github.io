@@ -28,13 +28,17 @@ let make = (~package, _children) => {
 			<div className=Styles.right>
 				<div className=Styles.updated> <TimeAgo date=package##updated /> </div>
 
-				(package##license |> Js.toOption |>
-					fun | Some(license) => <div className=Styles.license> {license |> text} </div>
-							| None					=> <div className=Styles.nolicense> {"No license" |> text} </div>
-				)
+				{switch (package##license |> Js.toOption) {
+				| Some(license) => <div className=Styles.license> {license |> text} </div>
+				| None					=> <div className=Styles.nolicense> {"No license" |> text} </div>
+				}}
 
 				<Control.IfSome option=(package##stars |> Js.toOption)>
-					...(stars => <div className=Styles.stars> {stars |> text} <Icon.Star className=Styles.starIcon/> </div>)
+					...(stars =>
+						<div className=Styles.stars>
+							{stars |> text} <Icon.Star className=Styles.starIcon/>
+						</div>
+					)
 				</Control.IfSome>
 			</div>
 		</div>

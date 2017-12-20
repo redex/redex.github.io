@@ -12,7 +12,7 @@ var component = ReasonReact.statelessComponent("Package");
 function make(data, pathContext, _) {
   var newrecord = component.slice();
   newrecord[/* render */9] = (function () {
-      return React.createElement("div", undefined, React.createElement("h1", undefined, pathContext.keyword), ReasonReact.element(/* None */0, /* None */0, Control.$$Map[/* make */1](Graphql.getNodes(data.packages), (function ($$package) {
+      return React.createElement("div", undefined, React.createElement("h1", undefined, pathContext.keyword), ReasonReact.element(/* None */0, /* None */0, Control.$$Map[/* make */1](Graphql.getNodes(data.packages), /* None */0, (function ($$package) {
                             return ReasonReact.element(/* Some */[$$package.id], /* None */0, PackageSummary.make($$package, /* array */[]));
                           }))));
     });

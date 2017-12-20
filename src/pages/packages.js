@@ -11,7 +11,7 @@ var component = ReasonReact.statelessComponent("Packages");
 function make(data, _) {
   var newrecord = component.slice();
   newrecord[/* render */9] = (function () {
-      return ReasonReact.element(/* None */0, /* None */0, Control.$$Map[/* make */1](Graphql.getNodes(data.packages), (function ($$package) {
+      return ReasonReact.element(/* None */0, /* None */0, Control.$$Map[/* make */1](Graphql.getNodes(data.packages), /* None */0, (function ($$package) {
                         return ReasonReact.element(/* Some */[$$package.id], /* None */0, PackageSummary.make($$package, /* array */[]));
                       })));
     });

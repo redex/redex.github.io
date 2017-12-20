@@ -125,15 +125,15 @@ let make = _children => {
       <div className=Styles.results>
         <Control.Map items=state.results>
           ...(package =>
-            <SearchResultItem package
-                              isFocused = Option.exists(this => this##name === package##name, state.focused)
-                              key       = package##name
-                              onClick   = reduce(p => SelectItem(p)) />
+            <SearchResultItem
+              package
+              isFocused = Option.exists(this => this##name === package##name, state.focused)
+              key       = package##name
+              onClick   = reduce(p => SelectItem(p))
+            />
           )
         </Control.Map>
       </div>
 
     </div>
 };
-
-let default = ReasonReact.wrapReasonForJs(~component, _jsProps => make([||]))

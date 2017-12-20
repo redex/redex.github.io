@@ -103,6 +103,12 @@ var style = Css.style(/* :: */[
       ]
     ]);
 
+function makeStyle(name) {
+  return {
+          borderColor: Utils.selectColor(colors, name)
+        };
+}
+
 var component = ReasonReact.statelessComponent("Tag");
 
 function make(name, _) {
@@ -110,9 +116,7 @@ function make(name, _) {
   newrecord[/* render */9] = (function () {
       return React.createElement("span", {
                   className: style,
-                  style: {
-                    borderColor: Utils.selectColor(colors, name)
-                  }
+                  style: makeStyle(name)
                 }, Helpers.text(name));
     });
   return newrecord;
@@ -120,6 +124,7 @@ function make(name, _) {
 
 exports.colors    = colors;
 exports.style     = style;
+exports.makeStyle = makeStyle;
 exports.component = component;
 exports.make      = make;
 /* style Not a pure module */

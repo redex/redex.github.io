@@ -4,13 +4,14 @@ open! Helpers;
 let getPackages = keyword =>
   keyword##packages |> Array.map(Js.toOption)
                     |> Array.filter(
-                       fun | Some(value) => true
+                       fun | Some(_) => true
                            | None => {
                              Js.log("missing package on keyword: " ++ keyword##name);
                              false
                            })
                     |> Array.map(Option.getOrRaise)
-                    |> Js.Array.sortInPlaceWith((a, b) => compare(a##name, b##name));
+                    |> Js.Array.sortInPlaceWith(
+                        (a, b) => compare(a##name: string, b##name));
 
 let component = ReasonReact.statelessComponent("Keywords");
 let make = (~data, _children) => {
@@ -31,7 +32,11 @@ let make = (~data, _children) => {
     </div>
 };
 
-let default = ReasonReact.wrapReasonForJs(~component=component, jsProps => make(~data=jsProps##data, [||]));
+let default =
+  ReasonReact.wrapReasonForJs(
+    ~component,
+    jsProps => make(~data=jsProps##data, [||])
+  );
 
 [%%raw {|
   export const query = graphql`

@@ -8,10 +8,11 @@ var ReasonReact = require("reason-react/src/ReasonReact.js");
 
 var component = ReasonReact.statelessComponent("Control.Map");
 
-function make(items, render) {
+function make(items, $staropt$star, render) {
+  var empty = $staropt$star ? $staropt$star[0] : null;
   var newrecord = component.slice();
   newrecord[/* render */9] = (function () {
-      return ReasonReact.element(/* None */0, /* None */0, Fragment.make(/* array */[items.length !== 0 ? $$Array.map(render, items) : null]));
+      return ReasonReact.element(/* None */0, /* None */0, Fragment.make(/* array */[items.length !== 0 ? $$Array.map(render, items) : empty]));
     });
   return newrecord;
 }

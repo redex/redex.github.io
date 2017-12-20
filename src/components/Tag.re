@@ -22,13 +22,17 @@ let style = Css.(style([
   unsafe("whiteSpace", "nowrap"),
 ]));
 
+let makeStyle = name =>
+  ReactDOMRe.Style.make(
+    ~borderColor=Utils.selectColor(colors, name),
+  ());
+
 let component = ReasonReact.statelessComponent("Tag");
 let make = (~name, _children) => {
   ...component,
 
   render: _self =>
-    <span className=style
-          style={ReactDOMRe.Style.make(~borderColor=Utils.selectColor(colors, name), ())}>
+    <span className=style style=makeStyle(name)>
       {name |> text}
     </span>
 }

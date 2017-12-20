@@ -6,7 +6,7 @@ var Rebase         = require("reason-rebase/src/rebase.js");
 var Control        = require("../components/helpers/Control.js");
 var Graphql        = require("../utils/Graphql.js");
 var Helpers        = require("../utils/Helpers.js");
-var Caml_obj       = require("bs-platform/lib/js/caml_obj.js");
+var Caml_string    = require("bs-platform/lib/js/caml_string.js");
 var ReasonReact    = require("reason-react/src/ReasonReact.js");
 var PackageSummary = require("../components/PackageSummary.js");
 
@@ -25,7 +25,7 @@ function getPackages(keyword) {
                             return [prim];
                           }
                         }), keyword.packages))).sort((function (a, b) {
-                return Caml_obj.caml_compare(a.name, b.name);
+                return Caml_string.caml_string_compare(a.name, b.name);
               }));
 }
 
@@ -34,10 +34,10 @@ var component = ReasonReact.statelessComponent("Keywords");
 function make(data, _) {
   var newrecord = component.slice();
   newrecord[/* render */9] = (function () {
-      return React.createElement("div", undefined, ReasonReact.element(/* None */0, /* None */0, Control.$$Map[/* make */1](Graphql.getNodes(data.keywords), (function (keyword) {
+      return React.createElement("div", undefined, ReasonReact.element(/* None */0, /* None */0, Control.$$Map[/* make */1](Graphql.getNodes(data.keywords), /* None */0, (function (keyword) {
                             return React.createElement("div", {
                                         key: keyword.name
-                                      }, React.createElement("h2", undefined, Helpers.text(keyword.name)), ReasonReact.element(/* None */0, /* None */0, Control.$$Map[/* make */1](getPackages(keyword), (function ($$package) {
+                                      }, React.createElement("h2", undefined, Helpers.text(keyword.name)), ReasonReact.element(/* None */0, /* None */0, Control.$$Map[/* make */1](getPackages(keyword), /* None */0, (function ($$package) {
                                                   return ReasonReact.element(/* Some */[$$package.id], /* None */0, PackageSummary.make($$package, /* array */[]));
                                                 }))));
                           }))));

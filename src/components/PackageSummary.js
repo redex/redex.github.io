@@ -17,7 +17,7 @@ var component = ReasonReact.statelessComponent("PackageSummary");
 function make($$package, _) {
   var newrecord = component.slice();
   newrecord[/* render */9] = (function () {
-      var param = $$package.license;
+      var match = $$package.license;
       return React.createElement("div", {
                   className: PackageSummaryStyles.root($$package.type)
                 }, React.createElement("div", {
@@ -28,17 +28,17 @@ function make($$package, _) {
                           className: PackageSummaryStyles.unpublishedLabel($$package.type)
                         }, Helpers.text("unpublished")), React.createElement("div", {
                           className: PackageSummaryStyles.description
-                        }, Helpers.text($$package.description)), React.createElement("div", undefined, ReasonReact.element(/* None */0, /* None */0, Icon.Tags[/* make */0](/* Some */[PackageSummaryStyles.tagsIcon], /* array */[])), ReasonReact.element(/* None */0, /* None */0, Control.$$Map[/* make */1]($$package.keywords, (function (keyword) {
+                        }, Helpers.text($$package.description)), React.createElement("div", undefined, ReasonReact.element(/* None */0, /* None */0, Icon.Tags[/* make */0](/* Some */[PackageSummaryStyles.tagsIcon], /* array */[])), ReasonReact.element(/* None */0, /* None */0, Control.$$Map[/* make */1]($$package.keywords, /* None */0, (function (keyword) {
                                     return ReasonReact.element(/* Some */[keyword], /* None */0, Tag.make(keyword, /* array */[]));
                                   }))))), React.createElement("div", {
                       className: PackageSummaryStyles.right
                     }, React.createElement("div", {
                           className: PackageSummaryStyles.updated
-                        }, ReasonReact.element(/* None */0, /* None */0, TimeAgo.make($$package.updated, /* array */[]))), (param == null) ? React.createElement("div", {
+                        }, ReasonReact.element(/* None */0, /* None */0, TimeAgo.make($$package.updated, /* array */[]))), (match == null) ? React.createElement("div", {
                             className: PackageSummaryStyles.nolicense
                           }, Helpers.text("No license")) : React.createElement("div", {
                             className: PackageSummaryStyles.license
-                          }, Helpers.text(param)), ReasonReact.element(/* None */0, /* None */0, Control.IfSome[/* make */1](Js_primitive.null_undefined_to_opt($$package.stars), (function (stars) {
+                          }, Helpers.text(match)), ReasonReact.element(/* None */0, /* None */0, Control.IfSome[/* make */1](Js_primitive.null_undefined_to_opt($$package.stars), (function (stars) {
                                 return React.createElement("div", {
                                             className: PackageSummaryStyles.stars
                                           }, Helpers.text(stars), ReasonReact.element(/* None */0, /* None */0, Icon.Star[/* make */0](/* Some */[PackageSummaryStyles.starIcon], /* array */[])));

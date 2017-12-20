@@ -4,8 +4,8 @@
 var Tag           = require("../components/Tag.js");
 var Icon          = require("../vendor/icons/Icon.js");
 var Link          = require("../../bindings/gatsby/link.js");
-var $$Array       = require("bs-platform/lib/js/array.js");
 var React         = require("react");
+var Control       = require("../components/helpers/Control.js");
 var Helpers       = require("../utils/Helpers.js");
 var TimeAgo       = require("../vendor/TimeAgo.js");
 var ReasonReact   = require("reason-react/src/ReasonReact.js");
@@ -18,13 +18,11 @@ function make(data, _) {
   var newrecord = component.slice();
   newrecord[/* render */9] = (function () {
       var $$package = data.package;
-      var match = $$package.stars;
-      var match$1 = $$package.license;
-      var match$2 = $$package.type;
-      var tmp = match$2 === "unpublished" ? React.createElement("span", {
+      var match = $$package.license;
+      var match$1 = $$package.type;
+      var tmp = match$1 === "unpublished" ? React.createElement("span", {
               className: PackageStyles.unpublishedLabel
             }, Helpers.text("unpublished")) : null;
-      var keywords = $$package.keywords;
       var tmp$1 = { };
       var tmp$2 = Js_primitive.null_undefined_to_opt($$package.homepageUrl);
       if (tmp$2) {
@@ -54,13 +52,15 @@ function make(data, _) {
                       className: PackageStyles.header($$package.type)
                     }, React.createElement("div", {
                           className: PackageStyles.props
-                        }, (match == null) ? null : React.createElement("div", {
-                                className: PackageStyles.stars
-                              }, Helpers.text(match), ReasonReact.element(/* None */0, /* None */0, Icon.Star[/* make */0](/* Some */[PackageStyles.starIcon], /* array */[]))), (match$1 == null) ? React.createElement("div", {
+                        }, ReasonReact.element(/* None */0, /* None */0, Control.IfSome[/* make */1](Js_primitive.null_undefined_to_opt($$package.stars), (function (stars) {
+                                    return React.createElement("div", {
+                                                className: PackageStyles.stars
+                                              }, Helpers.text(stars), ReasonReact.element(/* None */0, /* None */0, Icon.Star[/* make */0](/* Some */[PackageStyles.starIcon], /* array */[])));
+                                  }))), (match == null) ? React.createElement("div", {
                                 className: PackageStyles.nolicense
                               }, Helpers.text("No license")) : React.createElement("div", {
                                 className: PackageStyles.license
-                              }, Helpers.text(match$1)), React.createElement("div", {
+                              }, Helpers.text(match)), React.createElement("div", {
                               className: PackageStyles.updated
                             }, ReasonReact.element(/* None */0, /* None */0, TimeAgo.make($$package.updated, /* array */[])))), React.createElement("div", {
                           className: PackageStyles.title
@@ -72,9 +72,9 @@ function make(data, _) {
                               className: PackageStyles.description
                             }, Helpers.text($$package.description)), React.createElement("div", {
                               className: PackageStyles.tags
-                            }, ReasonReact.element(/* None */0, /* None */0, Icon.Tags[/* make */0](/* Some */[PackageStyles.tagsIcon], /* array */[])), keywords.length !== 0 ? $$Array.map((function (keyword) {
-                                      return ReasonReact.element(/* Some */[keyword], /* None */0, Tag.make(keyword, /* array */[]));
-                                    }), keywords) : Helpers.text(" - "))), React.createElement("div", {
+                            }, ReasonReact.element(/* None */0, /* None */0, Icon.Tags[/* make */0](/* Some */[PackageStyles.tagsIcon], /* array */[])), ReasonReact.element(/* None */0, /* None */0, Control.$$Map[/* make */1]($$package.keywords, /* Some */[Helpers.text(" - ")], (function (keyword) {
+                                        return ReasonReact.element(/* Some */[keyword], /* None */0, Tag.make(keyword, /* array */[]));
+                                      }))))), React.createElement("div", {
                           className: PackageStyles.links
                         }, React.createElement("a", tmp$1, Helpers.text("homepage")), React.createElement("a", tmp$3, Helpers.text("repository")), React.createElement("a", tmp$5, Helpers.text("npm")), React.createElement("a", tmp$7, Helpers.text("issues")), React.createElement("a", tmp$9, Helpers.text("documentation")))), React.createElement("div", {
                       className: PackageStyles.readme,

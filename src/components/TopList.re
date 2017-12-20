@@ -25,8 +25,7 @@ let make = (~packages, ~value, _children) => {
               <Control.IfSome option=(package##stars |> Js.toOption)>
                 ...(stars =>
                   <div className=Styles.stars>
-                    {stars |> text}
-                    <Icon.Star className=Styles.starIcon/>
+                    {stars |> text} <Icon.Star className=Styles.starIcon/>
                   </div>
                 )
               </Control.IfSome>

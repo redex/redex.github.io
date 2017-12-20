@@ -10,7 +10,11 @@ let make = (~data, _children) => {
     </Control.Map>
 };
 
-let default = ReasonReact.wrapReasonForJs(~component=component, jsProps => make(~data=jsProps##data, [||]));
+let default =
+  ReasonReact.wrapReasonForJs(
+    ~component,
+    jsProps => make(~data=jsProps##data, [||])
+  );
 
 [%%raw {|
   export const query = graphql`

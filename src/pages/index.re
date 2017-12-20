@@ -39,7 +39,11 @@ let make = (~data, _children) => {
     </div>
 };
 
-let default = ReasonReact.wrapReasonForJs(~component, jsProps => make(~data=jsProps##data, [||]));
+let default =
+  ReasonReact.wrapReasonForJs(
+    ~component,
+    jsProps => make(~data=jsProps##data, [||])
+  );
 
 [%%raw {|
   export const query = graphql`

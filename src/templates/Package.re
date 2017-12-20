@@ -11,18 +11,19 @@ let make = (~data, _children) => {
     <div>
       <header className=Styles.header(package##_type)>
         <div className=Styles.props>
-          {
-            switch (package##stars |> Js.toOption) {
-            | Some(stars) => <div className=Styles.stars> {stars |> text} <Icon.Star className=Styles.starIcon/> </div>
-            | None 				=> ReasonReact.nullElement
-            }
-          }
-          {
-            switch (package##license |> Js.toOption) {
-            | Some(license) => <div className=Styles.license> {license |> text} </div>
-            | None					=> <div className=Styles.nolicense> {"No license" |> text} </div>
-            }
-          }
+          <Control.IfSome option=(package##stars |> Js.toOption)>
+            ...(stars =>
+              <div className=Styles.stars>
+                {stars |> text} <Icon.Star className=Styles.starIcon/>
+              </div>
+            )
+          </Control.IfSome>
+
+          {switch (package##license |> Js.toOption) {
+          | Some(license) => <div className=Styles.license> {license |> text} </div>
+          | None					=> <div className=Styles.nolicense> {"No license" |> text} </div>
+          }}
+
           <div className=Styles.updated> <TimeAgo date=package##updated /> </div>
         </div>
 
@@ -31,14 +32,14 @@ let make = (~data, _children) => {
           <Link to_=package##slug className=Styles.name>
             {package##name |> text}
           </Link>
+
           <span className=Styles.version> {package##version |> text} </span>
-          {
-            switch (package##_type) {
-            | "unpublished" =>
-              <span className=Styles.unpublishedLabel> {"unpublished" |> text} </span>
-            | _ => ReasonReact.nullElement
-            }
-          }
+
+          {switch (package##_type) {
+          | "unpublished" =>
+            <span className=Styles.unpublishedLabel> {"unpublished" |> text} </span>
+          | _ => ReasonReact.nullElement
+          }}
         </div>
 
         <div className=Styles.fields>
@@ -48,14 +49,10 @@ let make = (~data, _children) => {
 
           <div className=Styles.tags>
             <Icon.Tags className=Styles.tagsIcon />
-            {
-              switch package##keywords {
-              | [||] => " - " |> text
-              | keywords =>
-                  keywords |> Array.map(keyword => <Tag key=keyword name=keyword />)
-                           |> ReasonReact.arrayToElement
-              }
-            }
+            <Control.Map items = package##keywords
+                         empty = (" - " |> text) >
+              ...(keyword => <Tag key=keyword name=keyword />)
+            </Control.Map>
           </div>
         </div>
 
@@ -75,7 +72,11 @@ let make = (~data, _children) => {
   }
 };
 
-let default = ReasonReact.wrapReasonForJs(~component=component, jsProps => make(~data=jsProps##data, [||]));
+let default =
+  ReasonReact.wrapReasonForJs(
+    ~component,
+    jsProps => make(~data=jsProps##data, [||])
+  );
 
 [%%raw {|
   export const query = graphql`

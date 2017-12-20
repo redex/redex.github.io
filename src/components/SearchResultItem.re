@@ -3,13 +3,13 @@ open! Helpers;
 module Styles = SearchResultItemStyles;
 
 type t = {.
-  "_type": string,
-  "slug": string,
-  "name": string,
-  "description": string,
-  "stars": Js.nullable(string),
-  "updated": Js.Date.t,
-  "version": string
+  "_type":        string,
+  "slug":         string,
+  "name":         string,
+  "description":  string,
+  "stars":        Js.nullable(string),
+  "updated":      Js.Date.t,
+  "version":      string
 };
 
 let component = ReasonReact.statelessComponent("SearchResultItem");
@@ -31,7 +31,11 @@ let make = (~package, ~isFocused, ~onClick, _children) => {
 			<div>
         <div className=Styles.updated> <TimeAgo date=package##updated /> </div>
         <Control.IfSome option=(package##stars |> Js.toOption)>
-					...(stars => <div className=Styles.stars> {stars |> text} <Icon.Star className=Styles.starIcon/> </div>)
+          ...(stars =>
+            <div className=Styles.stars>
+              {stars |> text} <Icon.Star className=Styles.starIcon/>
+            </div>
+          )
 				</Control.IfSome>
 			</div>
 		</div>

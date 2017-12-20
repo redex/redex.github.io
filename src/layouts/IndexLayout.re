@@ -30,11 +30,8 @@ let make = (~children, _children) => {
 
 let default =
   ReasonReact.wrapReasonForJs(
-    ~component=component,
-    jsProps => make(
-      ~children=jsProps##children,
-      [||]
-    )
+    ~component,
+    jsProps => make(~children=jsProps##children, [||])
   );
 
 let __esModule = true;

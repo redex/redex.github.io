@@ -16,7 +16,7 @@ var component = ReasonReact.statelessComponent("TopList");
 function make(packages, value, _) {
   var newrecord = component.slice();
   newrecord[/* render */9] = (function () {
-      return ReasonReact.element(/* None */0, /* None */0, Control.$$Map[/* make */1](packages, (function ($$package) {
+      return ReasonReact.element(/* None */0, /* None */0, Control.$$Map[/* make */1](packages, /* None */0, (function ($$package) {
                         return React.createElement("div", {
                                     key: $$package.name,
                                     className: TopListStyles.root
