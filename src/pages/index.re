@@ -24,44 +24,14 @@ let make = (~data, _children) => {
 
         <div>
           <h2> {"Recent releases" |> text} </h2>
-          <Control.Map items=(data##recentPackages##edges |> Array.map(edge => edge##node))>
-            ...(package => {
-              module Styles = Styles.Index.ListItem;
-              <div key=package##name className=Styles.root>
-                <div>
-                  <Link to_=package##slug className=Styles.name>
-                    {package##name |> text}
-                  </Link>
-                  <span className=Styles.version> {package##version |> text} </span>
-                </div>
-                <div className=Styles.right>
-                  <div className=Styles.updated> <TimeAgo date=package##updated /> </div>
-                </div>
-              </div>
-            })
-          </Control.Map>
+          <TopList packages = (data##recentPackages##edges |> Array.map(edge => edge##node))
+                   value    = `updated />
         </div>
 
         <div>
           <h2> {"Most popular" |> text} </h2>
-          <Control.Map items=(data##popularPackages##edges |> Array.map(edge => edge##node))>
-            ...(package => {
-              module Styles = Styles.Index.ListItem;
-              <div key=package##name className=Styles.root>
-                <div>
-                  <Link to_=package##slug className=Styles.name>
-                    {package##name |> text}
-                  </Link>
-                  <span className=Styles.version> {package##version |> text} </span>
-                </div>
-                <div className=Styles.right>
-                  <Control.IfSome option=(package##stars |> Js.toOption)>
-                    ...(stars => <div className=Styles.stars> {stars |> text} <Icon.Star className=Styles.starIcon/> </div>)
-                   </Control.IfSome>
-                </div>
-              </div>
-            })
-          </Control.Map>
+          <TopList packages = (data##popularPackages##edges |> Array.map(edge => edge##node))
+                   value    = `stars />  
         </div>
 
       </div>
