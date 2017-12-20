@@ -11,8 +11,10 @@ let make = (~data, _children) => {
         ...(keyword => 
           <div key=keyword##name>
             <h2> {keyword##name |> text} </h2>
-            <PackageList packages={keyword##packages |> Array.filter(p => p !== Obj.magic(Js.null)) /* TODO: warn about missing packages instead of just fitlering them out*/
-                                                     |> Js.Array.sortInPlaceWith((a, b) => compare(a##name, b##name)) } /> 
+            <Control.Map items=(keyword##packages |> Array.filter(p => p !== Obj.magic(Js.null)) /* TODO: warn about missing packages instead of just fitlering them out*/
+                                                     |> Js.Array.sortInPlaceWith((a, b) => compare(a##name, b##name)))>
+              ...(package => <PackageSummary key=package##id package />)
+            </Control.Map>
           </div>
         )
        </Control.Map>

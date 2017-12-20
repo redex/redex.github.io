@@ -6,7 +6,9 @@ let make = (~data, ~pathContext, _children) => {
   render: _self =>
     <div>
       <h1> {pathContext##keyword} </h1>
-      <PackageList packages=(data##packages |> Graphql.getNodes) />
+      <Control.Map items=(data##packages |> Graphql.getNodes)>
+        ...(package => <PackageSummary key=package##id package />)
+      </Control.Map>
     </div>
 };
 

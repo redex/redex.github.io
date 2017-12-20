@@ -5,7 +5,9 @@ let make = (~data, _children) => {
   ...component,
 
   render: _self =>
-    <PackageList packages=(data##packages |> Graphql.getNodes) />
+    <Control.Map items=(data##packages |> Graphql.getNodes)>
+      ...(package => <PackageSummary key=package##id package />)
+    </Control.Map>
 };
 
 let default = ReasonReact.wrapReasonForJs(~component=component, jsProps => make(~data=jsProps##data, [||]));
