@@ -2,10 +2,10 @@
 'use strict';
 
 var Link        = require("../../bindings/gatsby/link.js");
-var $$Array     = require("bs-platform/lib/js/array.js");
 var React       = require("react");
 var Styles      = require("../styles/Styles.js");
 var Control     = require("../components/helpers/Control.js");
+var Graphql     = require("../utils/Graphql.js");
 var Helpers     = require("../utils/Helpers.js");
 var TopList     = require("../components/TopList.js");
 var SearchBox   = require("../components/SearchBox.js");
@@ -18,9 +18,7 @@ function make(data, _) {
   newrecord[/* render */9] = (function () {
       return React.createElement("div", undefined, ReasonReact.element(/* None */0, /* None */0, SearchBox.make(/* array */[])), React.createElement("div", {
                       className: Styles.Index[/* keywords */0]
-                    }, ReasonReact.element(/* None */0, /* None */0, Control.$$Map[/* make */1]($$Array.map((function (edge) {
-                                    return edge.node;
-                                  }), data.keywords.edges), (function (keyword) {
+                    }, ReasonReact.element(/* None */0, /* None */0, Control.$$Map[/* make */1](Graphql.getNodes(data.keywords), (function (keyword) {
                                 return ReasonReact.element(/* None */0, /* None */0, Link.make(keyword.slug, /* None */0, /* None */0, /* array */[
                                                 React.createElement("span", {
                                                       className: "label"
@@ -31,11 +29,7 @@ function make(data, _) {
                                               ]));
                               })))), React.createElement("div", {
                       className: Styles.Index[/* lists */2]
-                    }, React.createElement("div", undefined, React.createElement("h2", undefined, Helpers.text("Recent releases")), ReasonReact.element(/* None */0, /* None */0, TopList.make($$Array.map((function (edge) {
-                                        return edge.node;
-                                      }), data.recentPackages.edges), /* updated */500154939, /* array */[]))), React.createElement("div", undefined, React.createElement("h2", undefined, Helpers.text("Most popular")), ReasonReact.element(/* None */0, /* None */0, TopList.make($$Array.map((function (edge) {
-                                        return edge.node;
-                                      }), data.popularPackages.edges), /* stars */67859553, /* array */[])))));
+                    }, React.createElement("div", undefined, React.createElement("h2", undefined, Helpers.text("Recent releases")), ReasonReact.element(/* None */0, /* None */0, TopList.make(Graphql.getNodes(data.recentPackages), /* updated */500154939, /* array */[]))), React.createElement("div", undefined, React.createElement("h2", undefined, Helpers.text("Most popular")), ReasonReact.element(/* None */0, /* None */0, TopList.make(Graphql.getNodes(data.popularPackages), /* stars */67859553, /* array */[])))));
     });
   return newrecord;
 }

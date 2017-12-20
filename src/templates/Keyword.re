@@ -6,7 +6,7 @@ let make = (~data, ~pathContext, _children) => {
   render: _self =>
     <div>
       <h1> {pathContext##keyword} </h1>
-      <PackageList packages={data##packages##edges |> Array.map(edge => edge##node)} />
+      <PackageList packages=(data##packages |> Graphql.getNodes) />
     </div>
 };
 

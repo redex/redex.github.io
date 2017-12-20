@@ -10,7 +10,7 @@ let make = (~data, _children) => {
       <SearchBox />
 
       <div className=Styles.Index.keywords>
-        <Control.Map items=(data##keywords##edges |> Array.map(edge => edge##node))>
+        <Control.Map items=(data##keywords |> Graphql.getNodes)>
           ...(keyword =>
             <Link to_=keyword##slug>
               <span className="label"> {keyword##name |> text} </span>
@@ -24,13 +24,13 @@ let make = (~data, _children) => {
 
         <div>
           <h2> {"Recent releases" |> text} </h2>
-          <TopList packages = (data##recentPackages##edges |> Array.map(edge => edge##node))
+          <TopList packages = (data##recentPackages |> Graphql.getNodes)
                    value    = `updated />
         </div>
 
         <div>
           <h2> {"Most popular" |> text} </h2>
-          <TopList packages = (data##popularPackages##edges |> Array.map(edge => edge##node))
+          <TopList packages = (data##popularPackages |> Graphql.getNodes)
                    value    = `stars />  
         </div>
 

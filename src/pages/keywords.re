@@ -7,7 +7,7 @@ let make = (~data, _children) => {
 
   render: _self =>
     <div>
-      <Control.Map items=(data##keywords##edges |> Array.map(edge => edge##node))>
+      <Control.Map items=(data##keywords |> Graphql.getNodes)>
         ...(keyword => 
           <div key=keyword##name>
             <h2> {keyword##name |> text} </h2>
