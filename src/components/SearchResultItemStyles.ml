@@ -1,7 +1,5 @@
 open! Css
-
-let if_ predicate value = if predicate then value else Obj.magic Js.null
-let else_ b a = if (Obj.magic a) == Js.null then b else a
+open CssEx
 
 let root = fun type_ isFocused ->
   style [

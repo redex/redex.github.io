@@ -20,9 +20,7 @@ function make($$package, _) {
       var match = $$package.license;
       return React.createElement("div", {
                   className: PackageSummaryStyles.root($$package.type)
-                }, React.createElement("div", {
-                      className: PackageSummaryStyles.left
-                    }, ReasonReact.element(/* None */0, /* None */0, Link.make($$package.slug, /* None */0, /* None */0, /* array */[Helpers.text($$package.name)])), React.createElement("span", {
+                }, React.createElement("div", undefined, ReasonReact.element(/* None */0, /* None */0, Link.make($$package.slug, /* None */0, /* None */0, /* array */[Helpers.text($$package.name)])), React.createElement("span", {
                           className: PackageSummaryStyles.version
                         }, Helpers.text($$package.version)), React.createElement("span", {
                           className: PackageSummaryStyles.unpublishedLabel($$package.type)
@@ -30,9 +28,7 @@ function make($$package, _) {
                           className: PackageSummaryStyles.description
                         }, Helpers.text($$package.description)), React.createElement("div", undefined, ReasonReact.element(/* None */0, /* None */0, Icon.Tags[/* make */0](/* Some */[PackageSummaryStyles.tagsIcon], /* array */[])), ReasonReact.element(/* None */0, /* None */0, Control.$$Map[/* make */1]($$package.keywords, /* None */0, (function (keyword) {
                                     return ReasonReact.element(/* Some */[keyword], /* None */0, Tag.make(keyword, /* array */[]));
-                                  }))))), React.createElement("div", {
-                      className: PackageSummaryStyles.right
-                    }, React.createElement("div", {
+                                  }))))), React.createElement("div", undefined, React.createElement("div", {
                           className: PackageSummaryStyles.updated
                         }, ReasonReact.element(/* None */0, /* None */0, TimeAgo.make($$package.updated, /* array */[]))), (match == null) ? React.createElement("div", {
                             className: PackageSummaryStyles.nolicense

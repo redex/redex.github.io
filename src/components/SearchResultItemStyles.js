@@ -2,23 +2,8 @@
 'use strict';
 
 var Css   = require("bs-css/src/Css.js");
+var CssEx = require("../utils/CssEx.js");
 var Theme = require("../styles/Theme.js");
-
-function if_(predicate, value) {
-  if (predicate) {
-    return value;
-  } else {
-    return null;
-  }
-}
-
-function else_(b, a) {
-  if (a === null) {
-    return b;
-  } else {
-    return a;
-  }
-}
 
 function root(type_, isFocused) {
   return Css.style(/* :: */[
@@ -34,9 +19,9 @@ function root(type_, isFocused) {
                       /* :: */[
                         Css.cursor(/* Pointer */1),
                         /* :: */[
-                          Css.backgroundColor(else_(Theme.Panel[/* Color */0][/* background */0], isFocused ? "hsl(6.9, 90%, 90%)" : null)),
+                          Css.backgroundColor(CssEx.else_(Theme.Panel[/* Color */0][/* background */0], CssEx.if_(isFocused, "hsl(6.9, 90%, 90%)"))),
                           /* :: */[
-                            Css.unsafe("backgroundImage", type_ === "unpublished" ? Theme.Panel[/* crosshatchBackground */1] : null),
+                            Css.unsafe("backgroundImage", CssEx.if_(+(type_ === "unpublished"), Theme.Panel[/* crosshatchBackground */1])),
                             /* :: */[
                               Css.hover(/* :: */[
                                     Css.unsafe("backgroundColor", "hsl(6.9, 90%, 90%)"),
@@ -140,8 +125,6 @@ var starIcon = Css.style(/* :: */[
       ]
     ]);
 
-exports.if_              = if_;
-exports.else_            = else_;
 exports.root             = root;
 exports.name             = name;
 exports.version          = version;

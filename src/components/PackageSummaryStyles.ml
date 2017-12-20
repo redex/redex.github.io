@@ -1,7 +1,8 @@
 open! Css
+open CssEx
 
-let root = 
-  let common = [
+let root = fun type_ ->
+  style [
     display Flex;
     justifyContent SpaceBetween;
     unsafe "padding" ".5em 1em";
@@ -9,21 +10,17 @@ let root =
     boxShadow Theme.Shadow.panel;
     backgroundColor Theme.Panel.Color.background;
 
+    unsafe "backgroundImage" (if_ (type_ == "unpublished") Theme.Panel.crosshatchBackground);
+
+    selector "> *:last-child" [
+      textAlign Right;
+    ];
     selector "& a" [
       color Theme.Color.link;
       fontSize (em 1.1);
       textDecoration None;
     ];
-  ] in function
-  | "unpublished" -> style (common @ [
-      unsafe "backgroundImage" Theme.Panel.crosshatchBackground;
-    ])
-  | _ -> style common
-
-
-let left = style [
-
-]
+  ]
 
 let version = style [
   fontSize (em 0.85);
@@ -50,10 +47,6 @@ let description = style [
 
 let tagsIcon = style [
   opacity 0.25;
-]
-
-let right = style [
-  textAlign Right;
 ]
 
 let updated = style [

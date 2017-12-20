@@ -8,7 +8,7 @@ let make = (~package, _children) => {
 
 	render: _self =>
 		<div className=Styles.root(package##_type)>
-			<div className=Styles.left>
+			<div>
 				<Link to_=package##slug> {package##name |> text} </Link>
 				<span className=Styles.version> {package##version |> text} </span>
 				<span className=Styles.unpublishedLabel(package##_type)> {"unpublished" |> text} </span>
@@ -25,7 +25,7 @@ let make = (~package, _children) => {
 				</div>
 			</div>
 
-			<div className=Styles.right>
+			<div>
 				<div className=Styles.updated> <TimeAgo date=package##updated /> </div>
 
 				{switch (package##license |> Js.toOption) {
