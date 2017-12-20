@@ -9,7 +9,7 @@ let make = (~package, _children) => {
 	render: _self =>
 		<div className=Styles.root(package##_type)>
 			<div>
-				<Link to_=package##slug> {package##name |> text} </Link>
+				<Link className=Styles.name to_=package##slug> {package##name |> text} </Link>
 				<span className=Styles.version> {package##version |> text} </span>
 				<span className=Styles.unpublishedLabel(package##_type)> {"unpublished" |> text} </span>
 
@@ -17,7 +17,7 @@ let make = (~package, _children) => {
 					{package##description |> text}
 				</div>
 
-				<div>
+				<div className=Styles.tags>
 					<Icon.Tags className=Styles.tagsIcon />
 					<Control.Map items=package##keywords>
 						...(keyword => <Tag key=keyword name=keyword />)

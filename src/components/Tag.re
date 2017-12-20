@@ -20,6 +20,14 @@ let style = Css.(style([
   fontSize(em(0.85)),
   marginLeft(em(0.5)),
   unsafe("whiteSpace", "nowrap"),
+  backgroundColor(hex("fff3")),
+  unsafe("padding", "0 1ex"),
+  textDecoration(None),
+
+  hover([
+    opacity(1.),
+    unsafe("textDecoration", "underline"),
+  ])
 ]));
 
 let makeStyle = name =>
@@ -32,7 +40,7 @@ let make = (~name, _children) => {
   ...component,
 
   render: _self =>
-    <span className=style style=makeStyle(name)>
+    <Link to_=("/keywords/" ++ name) className=style>
       {name |> text}
-    </span>
+    </Link>
 }

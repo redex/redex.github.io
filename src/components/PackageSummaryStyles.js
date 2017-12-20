@@ -25,19 +25,7 @@ function root(type_) {
                                   Css.textAlign(/* Right */2),
                                   /* [] */0
                                 ]),
-                            /* :: */[
-                              Css.selector("& a", /* :: */[
-                                    Css.color(Theme.Color[/* link */4]),
-                                    /* :: */[
-                                      Css.fontSize(Css.em(1.1)),
-                                      /* :: */[
-                                        Css.textDecoration(/* None */0),
-                                        /* [] */0
-                                      ]
-                                    ]
-                                  ]),
-                              /* [] */0
-                            ]
+                            /* [] */0
                           ]
                         ]
                       ]
@@ -47,6 +35,17 @@ function root(type_) {
               ]
             ]);
 }
+
+var name = Css.style(/* :: */[
+      Css.color(Theme.Color[/* link */4]),
+      /* :: */[
+        Css.fontSize(Css.em(1.1)),
+        /* :: */[
+          Css.textDecoration(/* None */0),
+          /* [] */0
+        ]
+      ]
+    ]);
 
 var version = Css.style(/* :: */[
       Css.fontSize(Css.em(0.85)),
@@ -86,6 +85,17 @@ var description = Css.style(/* :: */[
       Css.unsafe("textOverflow", "ellipsis"),
       /* :: */[
         Css.overflow(/* Hidden */1),
+        /* [] */0
+      ]
+    ]);
+
+var tags = Css.style(/* :: */[
+      Css.color(Theme.Color[/* link */4]),
+      /* :: */[
+        Css.selector("& a", /* :: */[
+              Css.unsafe("backgroundColor", "hsla(6.9, 90%, 90%, .4)"),
+              /* [] */0
+            ]),
         /* [] */0
       ]
     ]);
@@ -151,13 +161,15 @@ var starIcon = Css.style(/* :: */[
     ]);
 
 exports.root             = root;
+exports.name             = name;
 exports.version          = version;
 exports.unpublishedLabel = unpublishedLabel;
 exports.description      = description;
+exports.tags             = tags;
 exports.tagsIcon         = tagsIcon;
 exports.updated          = updated;
 exports.license          = license;
 exports.nolicense        = nolicense;
 exports.stars            = stars;
 exports.starIcon         = starIcon;
-/* version Not a pure module */
+/* name Not a pure module */

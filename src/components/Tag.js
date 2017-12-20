@@ -2,8 +2,8 @@
 'use strict';
 
 var Css         = require("bs-css/src/Css.js");
+var Link        = require("../../bindings/gatsby/link.js");
 var Utils       = require("../utils/Utils.js");
-var React       = require("react");
 var Helpers     = require("../utils/Helpers.js");
 var ReasonReact = require("reason-react/src/ReasonReact.js");
 
@@ -96,7 +96,25 @@ var style = Css.style(/* :: */[
             Css.marginLeft(Css.em(0.5)),
             /* :: */[
               Css.unsafe("whiteSpace", "nowrap"),
-              /* [] */0
+              /* :: */[
+                Css.backgroundColor(Css.hex("fff3")),
+                /* :: */[
+                  Css.unsafe("padding", "0 1ex"),
+                  /* :: */[
+                    Css.textDecoration(/* None */0),
+                    /* :: */[
+                      Css.hover(/* :: */[
+                            Css.opacity(1),
+                            /* :: */[
+                              Css.unsafe("textDecoration", "underline"),
+                              /* [] */0
+                            ]
+                          ]),
+                      /* [] */0
+                    ]
+                  ]
+                ]
+              ]
             ]
           ]
         ]
@@ -114,10 +132,7 @@ var component = ReasonReact.statelessComponent("Tag");
 function make(name, _) {
   var newrecord = component.slice();
   newrecord[/* render */9] = (function () {
-      return React.createElement("span", {
-                  className: style,
-                  style: makeStyle(name)
-                }, Helpers.text(name));
+      return ReasonReact.element(/* None */0, /* None */0, Link.make("/keywords/" + name, /* Some */[style], /* None */0, /* array */[Helpers.text(name)]));
     });
   return newrecord;
 }

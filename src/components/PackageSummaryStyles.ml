@@ -15,12 +15,13 @@ let root = fun type_ ->
     selector "> *:last-child" [
       textAlign Right;
     ];
-    selector "& a" [
-      color Theme.Color.link;
-      fontSize (em 1.1);
-      textDecoration None;
-    ];
   ]
+
+let name = style [
+  color Theme.Color.link;
+  fontSize (em 1.1);
+  textDecoration None;
+]
 
 let version = style [
   fontSize (em 0.85);
@@ -43,6 +44,14 @@ let description = style [
   (*whiteSpace "nowrap";*)
   unsafe "textOverflow" "ellipsis";
   overflow Hidden;
+]
+
+let tags = style [
+  color Theme.Color.link;
+
+  selector "& a" [
+    unsafe "backgroundColor" "hsla(6.9, 90%, 90%, .4)";
+  ];
 ]
 
 let tagsIcon = style [
