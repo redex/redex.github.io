@@ -45,6 +45,12 @@ let title = style [
   unsafe "fontVariant" "small-caps";
   fontSize (rem 2.5);
   lineHeight (em 1.1);
+  color (hex "fff6");
+
+  selector "& > em" [
+    fontStyle Normal;
+    color white;
+  ]
 ]
 
 let logo = style [

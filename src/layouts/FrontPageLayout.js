@@ -30,7 +30,7 @@ function make(children, _) {
                                       href: "/logo.svg#logo",
                                       xlinkHref: "/logo.svg#logo",
                                       xmlnsXlink: "http://www.w3.org/1999/xlink"
-                                    })), Helpers.text("redex")))), React.createElement("div", {
+                                    })), React.createElement("em", undefined, Helpers.text("re")), Helpers.text("ason package in"), React.createElement("em", undefined, Helpers.text("dex"))))), React.createElement("div", {
                       className: FrontPageLayoutStyles.widthContainer
                     }, Curry._1(children, /* () */0)), React.createElement("div", {
                       className: FrontPageLayoutStyles.footer

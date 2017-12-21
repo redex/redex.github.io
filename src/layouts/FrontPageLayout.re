@@ -25,7 +25,7 @@ let make = (~children: unit => ReasonReact.reactElement, _children) => {
               /* NOTE: xlink stuff needed for safari */
               <use href="/logo.svg#logo" xmlnsXlink="http://www.w3.org/1999/xlink" xlinkHref="/logo.svg#logo"/>
             </svg>
-            ("redex" |> text)
+            <em> {"re" |> text} </em> {"ason package in" |> text} <em>{"dex" |> text} </em>
           </h1>
         </div>
       </div>

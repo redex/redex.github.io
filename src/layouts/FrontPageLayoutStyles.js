@@ -84,7 +84,19 @@ var title = Css.style(/* :: */[
             Css.fontSize(Css.rem(2.5)),
             /* :: */[
               Css.lineHeight(Css.em(1.1)),
-              /* [] */0
+              /* :: */[
+                Css.color(Css.hex("fff6")),
+                /* :: */[
+                  Css.selector("& > em", /* :: */[
+                        Css.fontStyle(/* Normal */0),
+                        /* :: */[
+                          Css.color(Css.white),
+                          /* [] */0
+                        ]
+                      ]),
+                  /* [] */0
+                ]
+              ]
             ]
           ]
         ]
