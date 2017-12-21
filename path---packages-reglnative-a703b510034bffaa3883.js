@@ -1,0 +1,2 @@
+webpackJsonp([70403208681976],{944:function(e,n){e.exports={data:{package:{id:"reglnative",updated:"2017-12-17T10:10:00.229Z",name:"reglnative",version:"0.1.19",description:"Reason bindings to OpenGL",keywords:[],license:null,type:"published",stars:null,readme:"\n",homepageUrl:null,repositoryUrl:null,npmUrl:"https://www.npmjs.com/package/reglnative",issuesUrl:null,slug:"packages/reglnative"}},pathContext:{id:"reglnative"}}}});
+//# sourceMappingURL=path---packages-reglnative-a703b510034bffaa3883.js.map

@@ -1,0 +1,2 @@
+webpackJsonp([78714062828637],{889:function(e,t){e.exports={data:{packages:{edges:[{node:{id:"re-respect",name:"re-respect",version:"0.4.3",description:"[![Build Status](https://travis-ci.org/PeteProgrammer/respect.svg?branch=master)](https://travis-ci.org/PeteProgrammer/respect)",keywords:["test","bucklescript","testing","tdd","reason","bdd"],license:"MIT",updated:"2017-12-04T17:01:54.558Z",stars:11,slug:"packages/re-respect"}}]}},pathContext:{keyword:"tdd"}}}});
+//# sourceMappingURL=path---keywords-tdd-aa8653fbd25d4ce220a0.js.map

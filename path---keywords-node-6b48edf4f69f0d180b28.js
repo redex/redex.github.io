@@ -1,0 +1,2 @@
+webpackJsonp([0xf5a09ce1e1ea],{868:function(e,s){e.exports={data:{packages:{edges:[{node:{id:"unpublished/bs-node",name:"bs-node",version:"0.0.1",description:"BuckleScript bindings to the Node.js API",keywords:["node","bucklescript"],license:"MIT",updated:"2017-12-20T12:35:01.295Z",stars:18,slug:"packages/unpublished/bs-node"}}]}},pathContext:{keyword:"node"}}}});
+//# sourceMappingURL=path---keywords-node-6b48edf4f69f0d180b28.js.map
