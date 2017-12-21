@@ -6,5 +6,8 @@ function text(prim) {
   return prim;
 }
 
+var nbsp = ('\u00a0');
+
 exports.text = text;
-/* No side effect */
+exports.nbsp = nbsp;
+/* nbsp Not a pure module */

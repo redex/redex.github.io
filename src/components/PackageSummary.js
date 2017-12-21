@@ -9,7 +9,6 @@ var Control              = require("./helpers/Control.js");
 var Helpers              = require("../utils/Helpers.js");
 var TimeAgo              = require("../vendor/TimeAgo.js");
 var ReasonReact          = require("reason-react/src/ReasonReact.js");
-var Js_primitive         = require("bs-platform/lib/js/js_primitive.js");
 var PackageSummaryStyles = require("./PackageSummaryStyles.js");
 
 var component = ReasonReact.statelessComponent("PackageSummary");
@@ -17,7 +16,10 @@ var component = ReasonReact.statelessComponent("PackageSummary");
 function make($$package, _) {
   var newrecord = component.slice();
   newrecord[/* render */9] = (function () {
-      var match = $$package.license;
+      var description = $$package.description;
+      var tmp = description === "" ? Helpers.nbsp : Helpers.text(description);
+      var match = $$package.stars;
+      var match$1 = $$package.license;
       return React.createElement("div", {
                   className: PackageSummaryStyles.root($$package.type)
                 }, React.createElement("div", undefined, ReasonReact.element(/* None */0, /* None */0, Link.make($$package.slug, /* Some */[PackageSummaryStyles.name], /* None */0, /* array */[Helpers.text($$package.name)])), React.createElement("span", {
@@ -26,21 +28,21 @@ function make($$package, _) {
                           className: PackageSummaryStyles.unpublishedLabel($$package.type)
                         }, Helpers.text("unpublished")), React.createElement("div", {
                           className: PackageSummaryStyles.description
-                        }, Helpers.text($$package.description)), React.createElement("div", {
+                        }, tmp), React.createElement("div", {
                           className: PackageSummaryStyles.tags
                         }, ReasonReact.element(/* None */0, /* None */0, Icon.Tags[/* make */0](/* Some */[PackageSummaryStyles.tagsIcon], /* array */[])), ReasonReact.element(/* None */0, /* None */0, Control.$$Map[/* make */1]($$package.keywords, /* None */0, (function (keyword) {
                                     return ReasonReact.element(/* Some */[keyword], /* None */0, Tag.make(keyword, /* array */[]));
-                                  }))))), React.createElement("div", undefined, React.createElement("div", {
+                                  }))))), React.createElement("div", {
+                      className: PackageSummaryStyles.props
+                    }, React.createElement("div", {
+                          className: PackageSummaryStyles.stars
+                        }, (match == null) ? Helpers.text("-") : Helpers.text(match), ReasonReact.element(/* None */0, /* None */0, Icon.Star[/* make */0](/* Some */[PackageSummaryStyles.starIcon], /* array */[]))), React.createElement("div", {
                           className: PackageSummaryStyles.updated
-                        }, ReasonReact.element(/* None */0, /* None */0, TimeAgo.make($$package.updated, /* array */[]))), (match == null) ? React.createElement("div", {
+                        }, ReasonReact.element(/* None */0, /* None */0, TimeAgo.make($$package.updated, /* array */[]))), (match$1 == null) ? React.createElement("div", {
                             className: PackageSummaryStyles.nolicense
                           }, Helpers.text("No license")) : React.createElement("div", {
                             className: PackageSummaryStyles.license
-                          }, Helpers.text(match)), ReasonReact.element(/* None */0, /* None */0, Control.IfSome[/* make */1](Js_primitive.null_undefined_to_opt($$package.stars), (function (stars) {
-                                return React.createElement("div", {
-                                            className: PackageSummaryStyles.stars
-                                          }, Helpers.text(stars), ReasonReact.element(/* None */0, /* None */0, Icon.Star[/* make */0](/* Some */[PackageSummaryStyles.starIcon], /* array */[])));
-                              })))));
+                          }, Helpers.text(match$1))));
     });
   return newrecord;
 }

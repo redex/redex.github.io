@@ -14,7 +14,10 @@ let make = (~package, _children) => {
 				<span className=Styles.unpublishedLabel(package##_type)> {"unpublished" |> text} </span>
 
 				<div className=Styles.description>	
-					{package##description |> text}
+					{switch package##description {
+					| "" 					=> nbsp
+					| description => description |> text
+					}}
 				</div>
 
 				<div className=Styles.tags>
@@ -25,21 +28,21 @@ let make = (~package, _children) => {
 				</div>
 			</div>
 
-			<div>
+			<div className=Styles.props>
+				<div className=Styles.stars>
+					{switch (package##stars |> Js.toOption) {
+					| Some(stars) => stars |> text
+					| None 				=> "-" |> text
+					}}
+					<Icon.Star className=Styles.starIcon/>
+				</div>
+
 				<div className=Styles.updated> <TimeAgo date=package##updated /> </div>
 
 				{switch (package##license |> Js.toOption) {
 				| Some(license) => <div className=Styles.license> {license |> text} </div>
 				| None					=> <div className=Styles.nolicense> {"No license" |> text} </div>
 				}}
-
-				<Control.IfSome option=(package##stars |> Js.toOption)>
-					...(stars =>
-						<div className=Styles.stars>
-							{stars |> text} <Icon.Star className=Styles.starIcon/>
-						</div>
-					)
-				</Control.IfSome>
 			</div>
 		</div>
 };
