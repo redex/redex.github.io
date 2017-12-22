@@ -1,7 +1,7 @@
 {
-  "name": "reindex",
-  "description": "re:index",
-  "version": "0.0.1",
+  "name": "redex",
+  "description": "redex - Reason package index",
+  "version": "1.0.0",
   "author": "glennsl",
   "dependencies": {
     "algoliasearch": "^3.24.7",
@@ -25,7 +25,9 @@
   },
   "keywords": [
     "reason",
-    "reasonml"
+    "reasonml",
+    "package index",
+    "repository"
   ],
   "license": "MIT",
   "main": "n/a",

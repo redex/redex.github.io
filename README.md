@@ -1,1 +1,3 @@
-# re:index
+# redex - Reason package index
+
+https://redex.github.io
