@@ -13,3 +13,8 @@ let selectColor = (colors, string) => {
 
   colors[index]
 };
+
+let tap = f => x => {
+  f(x);
+  x
+};
