@@ -5,6 +5,7 @@ var Icon                = require("../bindings/Icon.js");
 var Block               = require("bs-platform/lib/js/block.js");
 var Curry               = require("bs-platform/lib/js/curry.js");
 var React               = require("react");
+var Config              = require("../Config.js");
 var Rebase              = require("reason-rebase/src/rebase.js");
 var Control             = require("./helpers/Control.js");
 var ReasonReact         = require("reason-react/src/ReasonReact.js");
@@ -13,12 +14,6 @@ var Algoliasearch       = require("algoliasearch");
 var SearchBoxStyles     = require("./SearchBoxStyles.js");
 var SearchResultItem    = require("./SearchResultItem.js");
 var AlgoliasearchHelper = require("algoliasearch-helper");
-
-var appId = "B1AVN0IGTU";
-
-var apiKey = "c7a3475a8567971cb7510b422d9f37ad";
-
-var index = "re:libs";
 
 var Key = /* module */[
   /* down */40,
@@ -74,7 +69,7 @@ function make() {
     });
   newrecord[/* initialState */10] = (function () {
       return /* record */[
-              /* searchClient */AlgoliasearchHelper(Algoliasearch(appId, apiKey), index),
+              /* searchClient */AlgoliasearchHelper(Algoliasearch(Config.Search[/* appId */0], Config.Search[/* apiKey */1]), Config.Search[/* packageIndex */2]),
               /* query */"",
               /* results : array */[],
               /* focused : None */0
@@ -184,10 +179,10 @@ function make() {
 
 var Styles = 0;
 
+var Config$1 = 0;
+
 exports.Styles       = Styles;
-exports.appId        = appId;
-exports.apiKey       = apiKey;
-exports.index        = index;
+exports.Config       = Config$1;
 exports.Key          = Key;
 exports.decodeResult = decodeResult;
 exports.component    = component;

@@ -2,11 +2,7 @@ open Rebase;
 open! Helpers;
 
 module Styles = SearchBoxStyles;
-
-let appId ="B1AVN0IGTU";
-let apiKey = "c7a3475a8567971cb7510b422d9f37ad";
-let index = "re:libs";
-
+module Config = Config.Search;
 
 module Key = {
   let down = 40;
@@ -37,7 +33,7 @@ let make = _children => {
   ...component,
 
   initialState: () => {
-    searchClient: Algolia.Helper.make(Algolia.makeClient(appId, apiKey), index),
+    searchClient: Algolia.Helper.make(Algolia.makeClient(Config.appId, Config.apiKey), Config.packageIndex),
     query: "",
     results: [||],
     focused: None
