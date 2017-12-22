@@ -29,14 +29,18 @@ let make = (~package, ~isFocused, ~onClick, _children) => {
 			</div>
 
 			<div>
-        <div className=Styles.updated> <TimeAgo date=package##updated /> </div>
-        <Control.IfSome option=(package##stars |> Js.toOption)>
-          ...(stars =>
-            <div className=Styles.stars>
-              {stars |> text} <Icon.Star className=Styles.starIcon/>
-            </div>
-          )
-				</Control.IfSome>
+				<div>
+					<span className=Styles.stars>
+						{switch (package##stars |> Js.toOption) {
+						| Some(stars) => stars |> text
+						| None 				=> "-" |> text
+						}}
+						<Icon.Star className=Styles.starIcon/>
+					</span>
+
+					<Score package />
+				</div>
+			 	<div className=Styles.updated> <TimeAgo date=package##updated /> </div>	
 			</div>
 		</div>
 };
