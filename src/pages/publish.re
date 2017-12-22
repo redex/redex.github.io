@@ -6,7 +6,7 @@ let html = {|
 
   <h4>Readme</h4>
   <p>
-    Add a file named <code>README.md</code> at the root of your project. A good
+    Add a file named <code>README.md</code> to the root of your project. A good
     readme should at the very least answer the following questions:
     <ul>
       <li>What is it?
@@ -15,7 +15,7 @@ let html = {|
       <li>How do I use it?
     </ul>
     Furthermore, providing an example, a change log and explaining how to contribute is a bonus.
-  </p>
+
   <p>
     NOTE: The readme and other metadata together must total less than 10k bytes
     in order to be indexed by the search engine. To avoid going over that limit, 
@@ -23,7 +23,6 @@ let html = {|
     extensive documentation and such in a separate markdown file linked to from
     the readme. This also has the added benefit of improving search relevance.,
     making it easier to find your package when searching for relevant terms.
-  </p>
 
   <h4>Metadata</h4>
   <p>
@@ -36,19 +35,31 @@ let html = {|
       <li><em>repository</em> - The URL of the source code repository
       <li><em>bugs</em> - The URL of the bug tracker
     </ul>
-  </p>
 
-  <h2>Step 2: Publish to NPM</h2>
+  <h2>Step 2: Publish to NPM (optional)</h2>
   <p>
     Follow the documentation on <a href="https://docs.npmjs.com/getting-started/publishing-npm-packages">NPM</a>
-  </p>
+  <p>
+    Publishing to NPM is not a requirement. If your project is incomplete, experimental or otherwise... challenged, it
+    might be easier to just depend on the master branch of the source code repository. You can still submit your
+    package to redex, where it'll then be marked as unpublished. This is not only intended as a warning, but also to
+    highlight opportunities to contribute. 
 
   <h2>Step 3: Submit to redex</h2>
   <p>
-    Add the name of the published npm package to <a href="https://github.com/redex/redex.github.io/blob/source/data/sources.json">sources.json</a>
-    and submit a PR. Submissions are checked manually (with a little help from a linter script), and any deficiencies
-    or other remarks will be ntoed in the PR.
-  </p
+    Submitting published and unpublished packages both follow roughly the same process: Add the package to the appropriate
+    collection in <a href="https://github.com/redex/redex.github.io/blob/source/data/sources.json">sources.json</a> and
+    submit a PR.
+
+    <ul>
+      <li>To submit a published package you should enter the npm name of the package into the published collection.
+      <li>To submit an unpublished package hosted on GitHub you should enter the owner/repository pair into the unpublished collection.
+      <li>To submit an unpublished package hosted elsewhere, please <a href="https://github.com/redex/redex.github.io/issues">make an issue</a>,
+          so we can add support for the host first.
+    </ul>
+
+    Submissions are checked manually (with a little help from a linter script). Any remarks will be noted in the PR.
+
 |};
 
 let style = Css.(merge([
