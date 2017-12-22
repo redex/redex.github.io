@@ -3,7 +3,7 @@
 
 var $$Array     = require("bs-platform/lib/js/array.js");
 var Curry       = require("bs-platform/lib/js/curry.js");
-var Fragment    = require("../../../bindings/react/Fragment.js");
+var Fragment    = require("../../bindings/react/Fragment.js");
 var ReasonReact = require("reason-react/src/ReasonReact.js");
 
 var component = ReasonReact.statelessComponent("Control.Map");

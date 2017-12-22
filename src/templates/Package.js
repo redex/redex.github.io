@@ -2,12 +2,12 @@
 'use strict';
 
 var Tag           = require("../components/Tag.js");
-var Icon          = require("../vendor/icons/Icon.js");
-var Link          = require("../../bindings/gatsby/link.js");
+var Icon          = require("../bindings/Icon.js");
+var Link          = require("../bindings/gatsby/link.js");
 var React         = require("react");
 var Control       = require("../components/helpers/Control.js");
 var Helpers       = require("../utils/Helpers.js");
-var TimeAgo       = require("../vendor/TimeAgo.js");
+var TimeAgo       = require("../bindings/TimeAgo.js");
 var ReasonReact   = require("reason-react/src/ReasonReact.js");
 var Js_primitive  = require("bs-platform/lib/js/js_primitive.js");
 var PackageStyles = require("../styles/PackageStyles.js");

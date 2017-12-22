@@ -2,13 +2,13 @@
 'use strict';
 
 var Tag                  = require("./Tag.js");
-var Icon                 = require("../vendor/icons/Icon.js");
-var Link                 = require("../../bindings/gatsby/link.js");
+var Icon                 = require("../bindings/Icon.js");
+var Link                 = require("../bindings/gatsby/link.js");
 var Score                = require("./Score.js");
 var React                = require("react");
 var Control              = require("./helpers/Control.js");
 var Helpers              = require("../utils/Helpers.js");
-var TimeAgo              = require("../vendor/TimeAgo.js");
+var TimeAgo              = require("../bindings/TimeAgo.js");
 var ReasonReact          = require("reason-react/src/ReasonReact.js");
 var PackageSummaryStyles = require("./PackageSummaryStyles.js");
 

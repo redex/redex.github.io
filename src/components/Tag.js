@@ -2,7 +2,7 @@
 'use strict';
 
 var Css         = require("bs-css/src/Css.js");
-var Link        = require("../../bindings/gatsby/link.js");
+var Link        = require("../bindings/gatsby/link.js");
 var Utils       = require("../utils/Utils.js");
 var Helpers     = require("../utils/Helpers.js");
 var ReasonReact = require("reason-react/src/ReasonReact.js");

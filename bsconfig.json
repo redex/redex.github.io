@@ -7,9 +7,6 @@
   "sources": [{
     "dir": "src",
     "subdirs": true
-  }, {
-    "dir": "bindings",
-    "subdirs": true
   }],
   "bs-dependencies": ["reason-react", "bs-css", "reason-rebase"],
   "reason": {"react-jsx": 2},
