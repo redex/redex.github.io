@@ -3,13 +3,18 @@ open! Helpers;
 module Styles = SearchResultItemStyles;
 
 type t = {.
-  "_type":        string,
-  "slug":         string,
-  "name":         string,
-  "description":  string,
-  "stars":        Js.nullable(string),
-  "updated":      Js.Date.t,
-  "version":      string
+	"id"					: string,
+  "_type"				: string,
+  "slug"				: string,
+  "name"				: string,
+  "description"	: string,
+  "stars"				: Js.nullable(string),
+  "updated"			: Js.Date.t,
+	"version"			: string,
+	"score"				: float,
+	"quality"			: float,
+	"popularity"	: float,
+	"maintenance"	: float,
 };
 
 let component = ReasonReact.statelessComponent("SearchResultItem");

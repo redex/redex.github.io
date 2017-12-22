@@ -65,7 +65,7 @@ function make() {
                         })), React.createElement("div", {
                       className: SearchBoxStyles.results
                     }, ReasonReact.element(/* None */0, /* None */0, Control.$$Map[/* make */1](state[/* results */2], /* None */0, (function ($$package) {
-                                return ReasonReact.element(/* Some */[$$package.name], /* None */0, SearchResultItem.make($$package, Rebase.Option[/* exists */9]((function ($$this) {
+                                return ReasonReact.element(/* Some */[$$package.id], /* None */0, SearchResultItem.make($$package, Rebase.Option[/* exists */9]((function ($$this) {
                                                       return +($$this.name === $$package.name);
                                                     }), state[/* focused */3]), Curry._1(reduce, (function (p) {
                                                       return /* SelectItem */Block.__(2, [p]);

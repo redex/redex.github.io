@@ -128,7 +128,7 @@ let make = _children => {
             <SearchResultItem
               package
               isFocused = Option.exists(this => this##name === package##name, state.focused)
-              key       = package##name
+              key       = package##id
               onClick   = reduce(p => SelectItem(p))
             />
           )
