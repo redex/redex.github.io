@@ -26,6 +26,7 @@ let default = ReasonReact.wrapReasonForJs(
       packages: allPackages(filter: { keywords: { in: [$keyword] }}) {
         edges {
           node {
+            type
             id
             name
             version

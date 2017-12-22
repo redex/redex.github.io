@@ -29,6 +29,7 @@ var $$default = ReasonReact.wrapReasonForJs(component, (function (jsProps) {
       packages: allPackages(filter: { keywords: { in: [$keyword] }}) {
         edges {
           node {
+            type
             id
             name
             version
