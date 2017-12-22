@@ -10,16 +10,16 @@ let root = fun type_ isFocused ->
     borderTop (px 1) Solid Theme.Color.subtleBorder;
     cursor Pointer;
 
+    hover [
+      unsafe "backgroundColor" "hsl(6.9, 0%, 90%)";
+    ];
+
     backgroundColor
       (if_ isFocused 
         ((Obj.magic "hsl(6.9, 90%, 90%)"): Css.color)
       |> else_ Theme.Panel.Color.background);
 
     unsafe "backgroundImage" (if_ (type_ == "unpublished") Theme.Panel.crosshatchBackground);
-
-    hover [
-      unsafe "backgroundColor" "hsl(6.9, 90%, 90%)";
-    ];
 
     selector "> *:last-child" [
       textAlign Right;

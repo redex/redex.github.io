@@ -19,14 +19,14 @@ function root(type_, isFocused) {
                       /* :: */[
                         Css.cursor(/* Pointer */1),
                         /* :: */[
-                          Css.backgroundColor(CssEx.else_(Theme.Panel[/* Color */0][/* background */0], CssEx.if_(isFocused, "hsl(6.9, 90%, 90%)"))),
+                          Css.hover(/* :: */[
+                                Css.unsafe("backgroundColor", "hsl(6.9, 0%, 90%)"),
+                                /* [] */0
+                              ]),
                           /* :: */[
-                            Css.unsafe("backgroundImage", CssEx.if_(+(type_ === "unpublished"), Theme.Panel[/* crosshatchBackground */1])),
+                            Css.backgroundColor(CssEx.else_(Theme.Panel[/* Color */0][/* background */0], CssEx.if_(isFocused, "hsl(6.9, 90%, 90%)"))),
                             /* :: */[
-                              Css.hover(/* :: */[
-                                    Css.unsafe("backgroundColor", "hsl(6.9, 90%, 90%)"),
-                                    /* [] */0
-                                  ]),
+                              Css.unsafe("backgroundImage", CssEx.if_(+(type_ === "unpublished"), Theme.Panel[/* crosshatchBackground */1])),
                               /* :: */[
                                 Css.selector("> *:last-child", /* :: */[
                                       Css.textAlign(/* Right */2),
