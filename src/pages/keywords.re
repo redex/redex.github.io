@@ -55,6 +55,10 @@ let default =
               keywords
               license
               updated
+              score
+              quality
+              popularity
+              maintenance
               stars
               slug
             }

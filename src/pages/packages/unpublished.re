@@ -31,6 +31,10 @@ let default =
             license
             updated
             stars
+            score
+            quality
+            popularity
+            maintenance
             slug
           }
         }

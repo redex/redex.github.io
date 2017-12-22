@@ -126,32 +126,26 @@ var props = Css.style(/* :: */[
     ]);
 
 var updated = Css.style(/* :: */[
-      Css.opacity(0.75),
+      Css.fontSize(Css.em(0.85)),
       /* :: */[
-        Css.fontSize(Css.em(0.85)),
-        /* :: */[
-          Css.unsafe("whiteSpace", "nowrap"),
-          /* [] */0
-        ]
+        Css.unsafe("whiteSpace", "nowrap"),
+        /* [] */0
       ]
     ]);
 
 var license = Css.style(/* :: */[
       Css.display(/* InlineBlock */11),
       /* :: */[
-        Css.opacity(0.75),
+        Css.fontSize(Css.em(0.85)),
         /* :: */[
-          Css.fontSize(Css.em(0.85)),
+          Css.unsafe("whiteSpace", "nowrap"),
           /* :: */[
-            Css.unsafe("whiteSpace", "nowrap"),
+            Css.border(Css.px(1), /* Solid */2, Theme.Color[/* text */3]),
             /* :: */[
-              Css.border(Css.px(1), /* Solid */2, Theme.Color[/* text */3]),
+              Css.unsafe("padding", "0 1ex"),
               /* :: */[
-                Css.unsafe("padding", "0 1ex"),
-                /* :: */[
-                  Css.unsafe("marginTop", "1ex"),
-                  /* [] */0
-                ]
+                Css.unsafe("marginTop", "1ex"),
+                /* [] */0
               ]
             ]
           ]
@@ -177,13 +171,10 @@ var nolicense = Css.style(/* :: */[
     ]);
 
 var stars = Css.style(/* :: */[
-      Css.opacity(0.75),
+      Css.fontSize(Css.em(0.85)),
       /* :: */[
-        Css.fontSize(Css.em(0.85)),
-        /* :: */[
-          Css.unsafe("whiteSpace", "nowrap"),
-          /* [] */0
-        ]
+        Css.unsafe("whiteSpace", "nowrap"),
+        /* [] */0
       ]
     ]);
 
@@ -191,10 +182,7 @@ var starIcon = Css.style(/* :: */[
       Css.marginLeft(Css.em(0.25)),
       /* :: */[
         Css.transform(Css.translateY(Css.px(-1))),
-        /* :: */[
-          Css.opacity(0.75),
-          /* [] */0
-        ]
+        /* [] */0
       ]
     ]);
 

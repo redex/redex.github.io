@@ -4,6 +4,7 @@
 var ReasonReact = require("reason-react/src/ReasonReact.js");
 var Fa          = require("react-icons/lib/fa");
 var Go          = require("react-icons/lib/go");
+var Io          = require("react-icons/lib/io");
 var Md          = require("react-icons/lib/md");
 
 function Icon(Ext) {
@@ -25,7 +26,7 @@ function make(className, children) {
 
 var Book = /* module */[/* make */make];
 
-var Ext$1 = /* module */[/* FaSearch */Fa.FaSearch];
+var Ext$1 = /* module */[/* FaCertificate */Fa.FaCertificate];
 
 function make$1(className, children) {
   return ReasonReact.wrapJsForReason(Ext$1[/* reactClass */0], {
@@ -33,9 +34,9 @@ function make$1(className, children) {
             }, children);
 }
 
-var Search = /* module */[/* make */make$1];
+var Certificate = /* module */[/* make */make$1];
 
-var Ext$2 = /* module */[/* GoStar */Go.GoStar];
+var Ext$2 = /* module */[/* IoRibbonB */Io.IoRibbonB];
 
 function make$2(className, children) {
   return ReasonReact.wrapJsForReason(Ext$2[/* reactClass */0], {
@@ -43,9 +44,9 @@ function make$2(className, children) {
             }, children);
 }
 
-var Star = /* module */[/* make */make$2];
+var Ribbon = /* module */[/* make */make$2];
 
-var Ext$3 = /* module */[/* FaTags */Fa.FaTags];
+var Ext$3 = /* module */[/* FaSearch */Fa.FaSearch];
 
 function make$3(className, children) {
   return ReasonReact.wrapJsForReason(Ext$3[/* reactClass */0], {
@@ -53,11 +54,55 @@ function make$3(className, children) {
             }, children);
 }
 
-var Tags = /* module */[/* make */make$3];
+var Search = /* module */[/* make */make$3];
 
-exports.Icon   = Icon;
-exports.Book   = Book;
-exports.Search = Search;
-exports.Star   = Star;
-exports.Tags   = Tags;
+var Ext$4 = /* module */[/* GoStar */Go.GoStar];
+
+function make$4(className, children) {
+  return ReasonReact.wrapJsForReason(Ext$4[/* reactClass */0], {
+              className: className
+            }, children);
+}
+
+var Star = /* module */[/* make */make$4];
+
+var Ext$5 = /* module */[/* FaTags */Fa.FaTags];
+
+function make$5(className, children) {
+  return ReasonReact.wrapJsForReason(Ext$5[/* reactClass */0], {
+              className: className
+            }, children);
+}
+
+var Tags = /* module */[/* make */make$5];
+
+var Ext$6 = /* module */[/* MdVerifiedUser */Md.MdVerifiedUser];
+
+function make$6(className, children) {
+  return ReasonReact.wrapJsForReason(Ext$6[/* reactClass */0], {
+              className: className
+            }, children);
+}
+
+var Verified = /* module */[/* make */make$6];
+
+var Ext$7 = /* module */[/* GoLaw */Go.GoLaw];
+
+function make$7(className, children) {
+  return ReasonReact.wrapJsForReason(Ext$7[/* reactClass */0], {
+              className: className
+            }, children);
+}
+
+var Scale = /* module */[/* make */make$7];
+
+exports.Icon        = Icon;
+exports.Book        = Book;
+exports.Certificate = Certificate;
+exports.Ribbon      = Ribbon;
+exports.Search      = Search;
+exports.Star        = Star;
+exports.Tags        = Tags;
+exports.Verified    = Verified;
+exports.Scale       = Scale;
 /* Ext Not a pure module */

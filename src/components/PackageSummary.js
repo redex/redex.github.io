@@ -4,6 +4,7 @@
 var Tag                  = require("./Tag.js");
 var Icon                 = require("../vendor/icons/Icon.js");
 var Link                 = require("../../bindings/gatsby/link.js");
+var Score                = require("./Score.js");
 var React                = require("react");
 var Control              = require("./helpers/Control.js");
 var Helpers              = require("../utils/Helpers.js");
@@ -34,9 +35,9 @@ function make($$package, _) {
                                     return ReasonReact.element(/* Some */[keyword], /* None */0, Tag.make(keyword, /* array */[]));
                                   }))))), React.createElement("div", {
                       className: PackageSummaryStyles.props
-                    }, React.createElement("div", {
-                          className: PackageSummaryStyles.stars
-                        }, (match == null) ? Helpers.text("-") : Helpers.text(match), ReasonReact.element(/* None */0, /* None */0, Icon.Star[/* make */0](/* Some */[PackageSummaryStyles.starIcon], /* array */[]))), React.createElement("div", {
+                    }, React.createElement("div", undefined, React.createElement("span", {
+                              className: PackageSummaryStyles.stars
+                            }, (match == null) ? Helpers.text("-") : Helpers.text(match), ReasonReact.element(/* None */0, /* None */0, Icon.Star[/* make */0](/* Some */[PackageSummaryStyles.starIcon], /* array */[]))), ReasonReact.element(/* None */0, /* None */0, Score.make($$package, /* array */[]))), React.createElement("div", {
                           className: PackageSummaryStyles.updated
                         }, ReasonReact.element(/* None */0, /* None */0, TimeAgo.make($$package.updated, /* array */[]))), (match$1 == null) ? React.createElement("div", {
                             className: PackageSummaryStyles.nolicense

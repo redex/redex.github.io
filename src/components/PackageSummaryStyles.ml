@@ -68,14 +68,12 @@ let props = style [
 ]
 
 let updated = style [
-  opacity 0.75;
   fontSize (em 0.85);
   unsafe "whiteSpace" "nowrap";
 ]
 
 let license = style [
   display InlineBlock;
-  opacity 0.75;
   fontSize (em 0.85);
   unsafe "whiteSpace" "nowrap";
   border (px 1) Solid Theme.Color.text;
@@ -92,7 +90,6 @@ let nolicense = style [
 ]
 
 let stars = style [
-  opacity 0.75;
   fontSize (em 0.85);
   unsafe "whiteSpace" "nowrap";
 ]
@@ -100,5 +97,4 @@ let stars = style [
 let starIcon = style [
   marginLeft (em 0.25);
   transform (translateY (px (-1)));
-  opacity 0.75;
 ]

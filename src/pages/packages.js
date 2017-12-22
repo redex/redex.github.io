@@ -37,6 +37,10 @@ var $$default = ReasonReact.wrapReasonForJs(component, (function (jsProps) {
             license
             updated
             stars
+            score
+            quality
+            popularity
+            maintenance
             slug
           }
         }

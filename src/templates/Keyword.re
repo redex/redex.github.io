@@ -34,6 +34,10 @@ let default = ReasonReact.wrapReasonForJs(
             license
             updated
             stars
+            score
+            quality
+            popularity
+            maintenance
             slug
           }
         }

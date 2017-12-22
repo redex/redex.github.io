@@ -29,12 +29,16 @@ let make = (~package, _children) => {
 			</div>
 
 			<div className=Styles.props>
-				<div className=Styles.stars>
-					{switch (package##stars |> Js.toOption) {
-					| Some(stars) => stars |> text
-					| None 				=> "-" |> text
-					}}
-					<Icon.Star className=Styles.starIcon/>
+				<div>
+					<span className=Styles.stars>
+						{switch (package##stars |> Js.toOption) {
+						| Some(stars) => stars |> text
+						| None 				=> "-" |> text
+						}}
+						<Icon.Star className=Styles.starIcon/>
+					</span>
+
+					<Score package />
 				</div>
 
 				<div className=Styles.updated> <TimeAgo date=package##updated /> </div>
