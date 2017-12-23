@@ -19,6 +19,7 @@ let make = (~data, _children) => {
 
   render: _self =>
     <div>
+      <Helmet title=Config.titleTemplate("Keywords") />
       <Control.Map items=(data##keywords |> Graphql.getNodes)>
         ...(keyword => 
           <div key=keyword##name>

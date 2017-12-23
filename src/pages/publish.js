@@ -5,6 +5,8 @@ var Css         = require("bs-css/src/Css.js");
 var Curry       = require("bs-platform/lib/js/curry.js");
 var Theme       = require("../styles/Theme.js");
 var React       = require("react");
+var Config      = require("../Config.js");
+var Helmet      = require("../bindings/gatsby/helmet.js");
 var Styles      = require("../styles/Styles.js");
 var ReasonReact = require("reason-react/src/ReasonReact.js");
 
@@ -29,12 +31,12 @@ var component = ReasonReact.statelessComponent("Publish");
 function make() {
   var newrecord = component.slice();
   newrecord[/* render */9] = (function () {
-      return React.createElement("div", {
-                  className: style,
-                  dangerouslySetInnerHTML: {
-                    __html: html
-                  }
-                });
+      return React.createElement("div", undefined, ReasonReact.element(/* None */0, /* None */0, Helmet.make(/* Some */[Config.titleTemplate("Publishing Guide")], /* None */0, /* None */0, /* None */0, /* array */[])), React.createElement("div", {
+                      className: style,
+                      dangerouslySetInnerHTML: {
+                        __html: html
+                      }
+                    }));
     });
   return newrecord;
 }

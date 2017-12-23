@@ -18,7 +18,15 @@ function make(children, _) {
   newrecord[/* render */9] = (function () {
       return React.createElement("div", {
                   className: FrontPageLayoutStyles.root
-                }, ReasonReact.element(/* None */0, /* None */0, Helmet.make(/* Some */["redex"], /* None */0, /* array */[])), React.createElement("div", {
+                }, ReasonReact.element(/* None */0, /* None */0, Helmet.make(/* Some */["redex | Reason Package Index"], /* None */0, /* None */0, /* None */0, /* array */[
+                          React.createElement("html", {
+                                lang: "en"
+                              }),
+                          React.createElement("meta", {
+                                content: "Package index for the ReasonML/BuckleScript ecosystem",
+                                name: "description"
+                              })
+                        ])), React.createElement("div", {
                       className: FrontPageLayoutStyles.links
                     }, ReasonReact.element(/* None */0, /* None */0, Link.make("/packages", /* None */0, /* None */0, /* array */[Helpers.text("Packages")])), ReasonReact.element(/* None */0, /* None */0, Link.make("/keywords", /* None */0, /* None */0, /* array */[Helpers.text("Keywords")])), ReasonReact.element(/* None */0, /* None */0, Link.make("/packages/unpublished", /* None */0, /* None */0, /* array */[Helpers.text("Unpublished")])), ReasonReact.element(/* None */0, /* None */0, Link.make("/", /* Some */[FrontPageLayoutStyles.inactiveLink], /* None */0, /* array */[Helpers.text("Documentation")]))), React.createElement("div", {
                       className: FrontPageLayoutStyles.header

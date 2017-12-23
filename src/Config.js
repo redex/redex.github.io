@@ -8,5 +8,10 @@ var Search = /* module */[
   /* packageIndex */"redex-packages"
 ];
 
-exports.Search = Search;
+function titleTemplate(title) {
+  return "" + (String(title) + " | redex");
+}
+
+exports.Search        = Search;
+exports.titleTemplate = titleTemplate;
 /* No side effect */

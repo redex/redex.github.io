@@ -5,7 +5,8 @@ let make = (~data, ~pathContext, _children) => {
   ...component,
   render: _self =>
     <div>
-      <h1> {pathContext##keyword} </h1>
+      <Helmet title=Config.titleTemplate(pathContext##keyword ++ " (keyword)") />
+      <h1> {pathContext##keyword |> text} </h1>
       <Control.Map items=(data##packages |> Graphql.getNodes)>
         ...(package => <PackageSummary key=package##id package />)
       </Control.Map>

@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `re:index`,
+    title: `redex`,
   },
   mapping: {
     "Keywords.packages": "Packages"

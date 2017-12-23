@@ -5,9 +5,12 @@ let make = (~data, _children) => {
   ...component,
 
   render: _self =>
-    <Control.Map items=(data##packages |> Graphql.getNodes)>
-      ...(package => <PackageSummary key=package##id package />)
-    </Control.Map>
+    <div>
+      <Helmet title=Config.titleTemplate("Packages") />
+      <Control.Map items=(data##packages |> Graphql.getNodes)>
+        ...(package => <PackageSummary key=package##id package />)
+      </Control.Map>
+    </div>
 };
 
 let default =

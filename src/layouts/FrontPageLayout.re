@@ -9,7 +9,10 @@ let make = (~children: unit => ReasonReact.reactElement, _children) => {
   render: _self =>
     <div className=Styles.root>
       
-      <Helmet title="redex" />
+      <Helmet title="redex | Reason Package Index">
+        <html lang="en" />
+        <meta name="description" content="Package index for the ReasonML/BuckleScript ecosystem" />
+      </Helmet>
 
       <div className=Styles.links>
         <Link to_="/packages"> ("Packages" |> text) </Link>

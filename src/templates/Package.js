@@ -5,6 +5,8 @@ var Tag           = require("../components/Tag.js");
 var Icon          = require("../bindings/Icon.js");
 var Link          = require("../bindings/gatsby/link.js");
 var React         = require("react");
+var Config        = require("../Config.js");
+var Helmet        = require("../bindings/gatsby/helmet.js");
 var Control       = require("../components/helpers/Control.js");
 var Helpers       = require("../utils/Helpers.js");
 var TimeAgo       = require("../bindings/TimeAgo.js");
@@ -48,7 +50,7 @@ function make(data, _) {
       if (tmp$10) {
         tmp$9.href = tmp$10[0];
       }
-      return React.createElement("div", undefined, React.createElement("header", {
+      return React.createElement("div", undefined, ReasonReact.element(/* None */0, /* None */0, Helmet.make(/* Some */[Config.titleTemplate($$package.name)], /* None */0, /* None */0, /* None */0, /* array */[])), React.createElement("header", {
                       className: PackageStyles.header($$package.type)
                     }, React.createElement("div", {
                           className: PackageStyles.props

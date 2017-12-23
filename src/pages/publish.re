@@ -85,7 +85,10 @@ let make = _children => {
   ...component,
 
   render: _self =>
-    <div className=style dangerouslySetInnerHTML={ "__html": html }/>
+    <div>
+      <Helmet title=Config.titleTemplate("Publishing Guide") />
+      <div className=style dangerouslySetInnerHTML={ "__html": html } />
+    </div>
 };
 
 let default =

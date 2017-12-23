@@ -5,9 +5,11 @@ var ReasonReact       = require("reason-react/src/ReasonReact.js");
 var ReactHelmet       = require("react-helmet");
 var Js_null_undefined = require("bs-platform/lib/js/js_null_undefined.js");
 
-function make(title, meta, children) {
+function make(title, titleTemplate, defaultTitle, meta, children) {
   return ReasonReact.wrapJsForReason(ReactHelmet.default, {
               title: Js_null_undefined.from_opt(title),
+              titleTemplate: Js_null_undefined.from_opt(titleTemplate),
+              defaultTitle: Js_null_undefined.from_opt(defaultTitle),
               meta: Js_null_undefined.from_opt(meta)
             }, children);
 }

@@ -2,6 +2,8 @@
 'use strict';
 
 var React          = require("react");
+var Config         = require("../../Config.js");
+var Helmet         = require("../../bindings/gatsby/helmet.js");
 var Control        = require("../../components/helpers/Control.js");
 var Graphql        = require("../../utils/Graphql.js");
 var Helpers        = require("../../utils/Helpers.js");
@@ -15,7 +17,7 @@ var component = ReasonReact.statelessComponent("Packages");
 function make(data, _) {
   var newrecord = component.slice();
   newrecord[/* render */9] = (function () {
-      return React.createElement("div", undefined, React.createElement("h1", undefined, Helpers.text("Unpublished packages")), React.createElement("p", {
+      return React.createElement("div", undefined, ReasonReact.element(/* None */0, /* None */0, Helmet.make(/* Some */[Config.titleTemplate("Unpublished Packages")], /* None */0, /* None */0, /* None */0, /* array */[])), React.createElement("h1", undefined, Helpers.text("Unpublished packages")), React.createElement("p", {
                       dangerouslySetInnerHTML: {
                         __html: introduction
                       }

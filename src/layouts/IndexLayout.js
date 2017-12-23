@@ -18,7 +18,15 @@ function make(children, _) {
   newrecord[/* render */9] = (function () {
       return React.createElement("div", {
                   className: IndexLayoutStyles.root
-                }, ReasonReact.element(/* None */0, /* None */0, Helmet.make(/* Some */["redex"], /* None */0, /* array */[])), React.createElement("div", {
+                }, ReasonReact.element(/* None */0, /* None */0, Helmet.make(/* None */0, /* None */0, /* Some */["redex"], /* None */0, /* array */[
+                          React.createElement("html", {
+                                lang: "en"
+                              }),
+                          React.createElement("meta", {
+                                content: "Package index for the ReasonML/BuckleScript ecosystem",
+                                name: "description"
+                              })
+                        ])), React.createElement("div", {
                       className: IndexLayoutStyles.header
                     }, React.createElement("div", {
                           className: CommonStyles.widthContainer

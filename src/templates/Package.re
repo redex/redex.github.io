@@ -9,6 +9,7 @@ let make = (~data, _children) => {
     let package = data##package;
 
     <div>
+      <Helmet title=Config.titleTemplate(package##name) />
       <header className=Styles.header(package##_type)>
         <div className=Styles.props>
           <Control.IfSome option=(package##stars |> Js.toOption)>

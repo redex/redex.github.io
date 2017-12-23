@@ -9,7 +9,10 @@ let make = (~children, _children) => {
   render: _self =>
     <div className=Styles.root>
 
-      <Helmet title="redex" />
+      <Helmet defaultTitle="redex">
+        <html lang="en" />
+        <meta name="description" content="Package index for the ReasonML/BuckleScript ecosystem" />
+      </Helmet>
 
       <div className=Styles.header>
         <div className=CommonStyles.widthContainer>
