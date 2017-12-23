@@ -76,7 +76,10 @@
     "re-formality",
     "bs-chalk",
     "bs-spectacle",
-		"bs-css"
+    "bs-css",
+    
+    "bs-humps",
+    "reason-these"
   ],
 
   "unpublished": [
@@ -108,7 +111,11 @@
     "Astrocoders/bs-reason-apollo",
     "Astrocoders/reform",
     "state-machine-systems/JsonCodec",
-    "glennsl/quickiecheck"
+    "glennsl/quickiecheck",
+
+    "viebel/MetaTagsReRe",
+    "Astrocoders/bs-react-native-router-flux",
+    "threepointone/bs-nice"
   ],
 
   "not-even-package.json": [
@@ -127,6 +134,7 @@
     "bs-analytics-node",
     "re-elm-app",
     "re-localforage",
+    "bs-sentia-http",
     "bs-sentia-promise",
     "bs-sentia-remote",
     "bs-sentia-std",
@@ -143,7 +151,6 @@
     "reason-commons",
     "bs-gcloud",
     "bs-jsverify",
-    "bs-wonder-jest",
     "bs-async",
     "re-business",
     "redataloader",
@@ -152,12 +159,19 @@
     "breytt",
     "bs-react-art",
     "wonder-bs-sinon",
+    "wonder-bs-jest",
     "reason-process",
     "reason-path",
     "reason-https",
     "reason-http",
     "reason-fs",
-    "reason-node"
+    "reason-node",
+
+    "bs-fizzbuzz"
+  ],
+
+  "unpublished-prematurely": [
+    "Astrocoders/bs-react-native-vector-icons"
   ],
 
   "rejected": [
