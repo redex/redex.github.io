@@ -1,5 +1,8 @@
 open! Css
 
+(* This needs be referred to in somthing that's actually used to be included in the css bundle *)
+include GlobalStyles 
+
 let widthContainer = style [
   unsafe "label" "width-container";
   unsafe "margin" "0 auto";
