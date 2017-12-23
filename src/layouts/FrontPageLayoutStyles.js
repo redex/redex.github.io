@@ -27,35 +27,56 @@ var header = Css.style(/* :: */[
     ]);
 
 var links = Css.style(/* :: */[
-      Css.textAlign(/* Center */3),
-      /* :: */[
-        Css.paddingTop(Css.em(0.5)),
-        /* :: */[
-          Css.selector("& > a", /* :: */[
-                Css.unsafe("fontVariant", "small-caps"),
+      Css.selector("& > div", /* :: */[
+            Css.display(/* Flex */3),
+            /* :: */[
+              Css.textAlign(/* Center */3),
+              /* :: */[
+                Css.unsafe("padding", "0.5em 1.45em"),
                 /* :: */[
-                  Css.textDecoration(/* None */0),
+                  Css.selector("& > .left", /* :: */[
+                        Css.flex(1),
+                        /* [] */0
+                      ]),
                   /* :: */[
-                    Css.textTransform(/* Lowercase */2),
+                    Css.selector("& > .right", /* :: */[
+                          Css.flex(1),
+                          /* :: */[
+                            Css.textAlign(/* Right */2),
+                            /* [] */0
+                          ]
+                        ]),
                     /* :: */[
-                      Css.unsafe("margin", "0 1em"),
-                      /* :: */[
-                        Css.opacity(0.75),
-                        /* :: */[
-                          Css.selector("&:hover", /* :: */[
-                                Css.opacity(1),
-                                /* [] */0
-                              ]),
-                          /* [] */0
-                        ]
-                      ]
+                      Css.selector("& a", /* :: */[
+                            Css.unsafe("fontVariant", "small-caps"),
+                            /* :: */[
+                              Css.textDecoration(/* None */0),
+                              /* :: */[
+                                Css.textTransform(/* Lowercase */2),
+                                /* :: */[
+                                  Css.unsafe("margin", "0 1em"),
+                                  /* :: */[
+                                    Css.opacity(0.75),
+                                    /* :: */[
+                                      Css.selector("&:hover", /* :: */[
+                                            Css.opacity(1),
+                                            /* [] */0
+                                          ]),
+                                      /* [] */0
+                                    ]
+                                  ]
+                                ]
+                              ]
+                            ]
+                          ]),
+                      /* [] */0
                     ]
                   ]
                 ]
-              ]),
-          /* [] */0
-        ]
-      ]
+              ]
+            ]
+          ]),
+      /* [] */0
     ]);
 
 var inactiveLink = Css.style(/* :: */[
@@ -63,6 +84,29 @@ var inactiveLink = Css.style(/* :: */[
       /* :: */[
         Css.cursor(/* Custom */["default"]),
         /* [] */0
+      ]
+    ]);
+
+var publishLink = Css.style(/* :: */[
+      Css.flex(1),
+      /* :: */[
+        Css.fontSize(Css.em(0.85)),
+        /* :: */[
+          Css.unsafe("whiteSpace", "nowrap"),
+          /* :: */[
+            Css.outline(Css.px(1), /* Solid */2, Theme.Inverted[/* Color */0][/* text */1]),
+            /* :: */[
+              Css.unsafe("padding", ".5ex 1.5ex"),
+              /* :: */[
+                Css.selector("&:hover", /* :: */[
+                      Css.outline(Css.px(1), /* Solid */2, Theme.Inverted[/* Color */0][/* text */1]),
+                      /* [] */0
+                    ]),
+                /* [] */0
+              ]
+            ]
+          ]
+        ]
       ]
     ]);
 
@@ -113,6 +157,7 @@ exports.root         = root;
 exports.header       = header;
 exports.links        = links;
 exports.inactiveLink = inactiveLink;
+exports.publishLink  = publishLink;
 exports.title        = title;
 exports.logo         = logo;
 /* root Not a pure module */

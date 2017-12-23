@@ -15,10 +15,16 @@ let make = (~children: unit => ReasonReact.reactElement, _children) => {
       </Helmet>
 
       <div className=Styles.links>
-        <Link to_="/packages"> ("Packages" |> text) </Link>
-        <Link to_="/keywords"> ("Keywords" |> text) </Link>
-        <Link to_="/packages/unpublished"> ("Unpublished" |> text) </Link>
-        <Link className=Styles.inactiveLink to_="/"> ("Documentation" |> text) </Link>
+        <div className=CommonStyles.widthContainer>
+          <soan className="left" />
+          <Link to_="/packages"> ("Packages" |> text) </Link>
+          <Link to_="/keywords"> ("Keywords" |> text) </Link>
+          <Link to_="/packages/unpublished"> ("Unpublished" |> text) </Link>
+          <Link className=Styles.inactiveLink to_="/"> ("Documentation" |> text) </Link>
+          <span className="right">
+            <Link className=Styles.publishLink to_="/publish"> ("Get Published" |> text) </Link>
+          </span>
+        </div>
       </div>
 
       <div className=Styles.header>

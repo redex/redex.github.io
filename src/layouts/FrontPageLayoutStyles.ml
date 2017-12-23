@@ -13,18 +13,30 @@ let header = style [
 ]
 
 let links = style [
-  textAlign Center;
-  paddingTop (em 0.5);
+  selector "& > div" [ (* selects width container *)
+    display Flex;
+    textAlign Center;
+    unsafe "padding" "0.5em 1.45em";
 
-  selector "& > a" [
-    unsafe "fontVariant" "small-caps";
-    textDecoration None;
-    textTransform Lowercase;
-    unsafe "margin" "0 1em";
-    opacity 0.75;
+    selector "& > .left" [
+      flex 1;
+    ];
 
-    selector "&:hover" [
-      opacity 1.;
+    selector "& > .right" [
+      flex 1;
+      textAlign Right;
+    ];
+
+    selector "& a" [
+      unsafe "fontVariant" "small-caps";
+      textDecoration None;
+      textTransform Lowercase;
+      unsafe "margin" "0 1em";
+      opacity 0.75;
+
+      selector "&:hover" [
+        opacity 1.;
+      ];
     ];
   ];
 ]
@@ -32,6 +44,18 @@ let links = style [
 let inactiveLink = style [
   opacity 0.25 |> important;
   cursor (Custom "default");
+]
+
+let publishLink = style [
+  flex 1;
+  fontSize (em 0.85);
+  unsafe "whiteSpace" "nowrap";
+  outline (px 1) Solid Theme.Inverted.Color.text;
+  unsafe "padding" ".5ex 1.5ex";
+
+  selector "&:hover" [
+    outline (px 1) Solid Theme.Inverted.Color.text;
+  ];
 ]
 
 let title = style [
