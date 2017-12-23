@@ -51,7 +51,9 @@ function make(data, _) {
       if (tmp$10) {
         tmp$9.href = tmp$10[0];
       }
-      return React.createElement("div", undefined, ReasonReact.element(/* None */0, /* None */0, Helmet.make(/* Some */[Config.titleTemplate($$package.name)], /* None */0, /* None */0, /* None */0, /* array */[])), React.createElement("header", {
+      return React.createElement("div", {
+                  className: PackageStyles.root
+                }, ReasonReact.element(/* None */0, /* None */0, Helmet.make(/* Some */[Config.titleTemplate($$package.name)], /* None */0, /* None */0, /* None */0, /* array */[])), React.createElement("header", {
                       className: PackageStyles.header($$package.type)
                     }, React.createElement("div", {
                           className: PackageStyles.props

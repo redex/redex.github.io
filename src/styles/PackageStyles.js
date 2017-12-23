@@ -7,6 +7,11 @@ var Theme      = require("./Theme.js");
 var Styles     = require("./Styles.js");
 var Pervasives = require("bs-platform/lib/js/pervasives.js");
 
+var root = Css.style(/* :: */[
+      Css.marginBottom(Css.em(1.45)),
+      /* [] */0
+    ]);
+
 var common_000 = Css.unsafe("label", "header");
 
 var common_001 = /* :: */[
@@ -300,6 +305,7 @@ var readme = Curry._1(Css.merge, /* :: */[
       ]
     ]);
 
+exports.root             = root;
 exports.header           = header;
 exports.props            = props;
 exports.title            = title;
@@ -319,4 +325,4 @@ exports.stars            = stars;
 exports.starIcon         = starIcon;
 exports.links            = links;
 exports.readme           = readme;
-/* common Not a pure module */
+/* root Not a pure module */

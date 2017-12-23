@@ -16,8 +16,10 @@ var component = ReasonReact.statelessComponent("Index");
 function make(data, _) {
   var newrecord = component.slice();
   newrecord[/* render */9] = (function () {
-      return React.createElement("div", undefined, ReasonReact.element(/* None */0, /* None */0, SearchBox.make(/* array */[])), React.createElement("div", {
-                      className: Styles.Index[/* keywords */0]
+      return React.createElement("div", {
+                  className: Styles.Index[/* root */0]
+                }, ReasonReact.element(/* None */0, /* None */0, SearchBox.make(/* array */[])), React.createElement("div", {
+                      className: Styles.Index[/* keywords */1]
                     }, ReasonReact.element(/* None */0, /* None */0, Control.$$Map[/* make */1](Graphql.getNodes(data.keywords), /* None */0, (function (keyword) {
                                 return ReasonReact.element(/* Some */[keyword.slug], /* None */0, Link.make(keyword.slug, /* None */0, /* None */0, /* array */[
                                                 React.createElement("span", {
@@ -28,7 +30,7 @@ function make(data, _) {
                                                     }, Helpers.text(keyword.count))
                                               ]));
                               })))), React.createElement("div", {
-                      className: Styles.Index[/* lists */2]
+                      className: Styles.Index[/* lists */3]
                     }, React.createElement("div", undefined, React.createElement("h2", undefined, Helpers.text("Recent releases")), ReasonReact.element(/* None */0, /* None */0, TopList.make(Graphql.getNodes(data.recentPackages), /* updated */500154939, /* array */[]))), React.createElement("div", undefined, React.createElement("h2", undefined, Helpers.text("Most popular")), ReasonReact.element(/* None */0, /* None */0, TopList.make(Graphql.getNodes(data.popularPackages), /* stars */67859553, /* array */[])))));
     });
   return newrecord;

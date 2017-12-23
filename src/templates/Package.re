@@ -8,7 +8,7 @@ let make = (~data, _children) => {
   render: _self => {
     let package = data##package;
 
-    <div>
+    <div className=Styles.root>
       <Helmet title=Config.titleTemplate(package##name) />
       <header className=Styles.header(package##_type)>
         <div className=Styles.props>

@@ -13,74 +13,80 @@ function root(context) {
                   Css.selector("& > div", /* :: */[
                         Css.display(/* Flex */3),
                         /* :: */[
-                          Css.selector("& > section", /* :: */[
-                                Css.opacity(0.65),
-                                /* :: */[
-                                  Css.transition(/* None */0, /* Some */[500], /* None */0, "opacity"),
-                                  /* :: */[
-                                    Css.width(Css.pct(20)),
+                          Css.padding(Css.em(1.45)),
+                          /* :: */[
+                            Css.paddingTop(Css.em(1)),
+                            /* :: */[
+                              Css.selector("& > section", /* :: */[
+                                    Css.opacity(0.65),
                                     /* :: */[
-                                      Css.selector("&:last-child", /* :: */[
-                                            Css.opacity(0.75),
-                                            /* :: */[
-                                              Css.unsafe("marginLeft", "auto"),
-                                              /* :: */[
-                                                Css.alignSelf(/* FlexEnd */1),
-                                                /* :: */[
-                                                  Css.textAlign(/* Right */2),
-                                                  /* [] */0
-                                                ]
-                                              ]
-                                            ]
-                                          ]),
+                                      Css.transition(/* None */0, /* Some */[500], /* None */0, "opacity"),
                                       /* :: */[
-                                        Css.selector("&:hover", /* :: */[
-                                              Css.opacity(1),
-                                              /* [] */0
-                                            ]),
+                                        Css.width(Css.pct(20)),
                                         /* :: */[
-                                          Css.selector("& h1", /* :: */[
-                                                Css.fontSize(Css.em(0.85)),
+                                          Css.selector("&:last-child", /* :: */[
+                                                Css.opacity(0.75),
                                                 /* :: */[
-                                                  Css.textTransform(/* Lowercase */2),
+                                                  Css.unsafe("marginLeft", "auto"),
                                                   /* :: */[
-                                                    Css.unsafe("fontVariant", "small-caps"),
+                                                    Css.alignSelf(/* FlexEnd */1),
                                                     /* :: */[
-                                                      Css.opacity(0.5),
-                                                      /* :: */[
-                                                        Css.marginBottom(Css.em(0.35)),
-                                                        /* [] */0
-                                                      ]
+                                                      Css.textAlign(/* Right */2),
+                                                      /* [] */0
                                                     ]
                                                   ]
                                                 ]
                                               ]),
                                           /* :: */[
-                                            Css.selector("& a", /* :: */[
-                                                  Css.textDecoration(/* None */0),
-                                                  /* :: */[
-                                                    Css.fontSize(Css.rem(0.85)),
+                                            Css.selector("&:hover", /* :: */[
+                                                  Css.opacity(1),
+                                                  /* [] */0
+                                                ]),
+                                            /* :: */[
+                                              Css.selector("& h1", /* :: */[
+                                                    Css.fontSize(Css.em(0.85)),
                                                     /* :: */[
-                                                      Css.opacity(0.75),
+                                                      Css.textTransform(/* Lowercase */2),
                                                       /* :: */[
-                                                        Css.selector("&:hover", /* :: */[
-                                                              Css.opacity(1),
-                                                              /* [] */0
-                                                            ]),
-                                                        /* [] */0
+                                                        Css.unsafe("fontVariant", "small-caps"),
+                                                        /* :: */[
+                                                          Css.opacity(0.5),
+                                                          /* :: */[
+                                                            Css.marginBottom(Css.em(0.35)),
+                                                            /* [] */0
+                                                          ]
+                                                        ]
                                                       ]
                                                     ]
-                                                  ]
-                                                ]),
-                                            /* [] */0
+                                                  ]),
+                                              /* :: */[
+                                                Css.selector("& a", /* :: */[
+                                                      Css.textDecoration(/* None */0),
+                                                      /* :: */[
+                                                        Css.fontSize(Css.rem(0.85)),
+                                                        /* :: */[
+                                                          Css.opacity(0.75),
+                                                          /* :: */[
+                                                            Css.selector("&:hover", /* :: */[
+                                                                  Css.opacity(1),
+                                                                  /* [] */0
+                                                                ]),
+                                                            /* [] */0
+                                                          ]
+                                                        ]
+                                                      ]
+                                                    ]),
+                                                /* [] */0
+                                              ]
+                                            ]
                                           ]
                                         ]
                                       ]
                                     ]
-                                  ]
-                                ]
-                              ]),
-                          /* [] */0
+                                  ]),
+                              /* [] */0
+                            ]
+                          ]
                         ]
                       ]),
                   /* [] */0

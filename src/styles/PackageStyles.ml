@@ -1,5 +1,9 @@
 open! Css
 
+let root = style [
+  marginBottom (em 1.45);
+]
+
 let header = 
   let common = [
     unsafe "label" "header";

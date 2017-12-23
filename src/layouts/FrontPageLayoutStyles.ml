@@ -9,6 +9,7 @@ let root = style [
 ]
 
 let header = style [
+  margin (em 1.45);
 ]
 
 let links = style [

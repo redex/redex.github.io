@@ -85,6 +85,11 @@ var _global = Css.$$global("html, body, #___gatsby", /* :: */[
       ]
     ]);
 
+var root = Css.style(/* :: */[
+      Css.margin(Css.em(1.45)),
+      /* [] */0
+    ]);
+
 var keywords = Css.style(/* :: */[
       Css.textAlign(/* Center */3),
       /* :: */[
@@ -212,6 +217,7 @@ var lists = Css.style(/* :: */[
     ]);
 
 var Index = /* module */[
+  /* root */root,
   /* keywords */keywords,
   /* links */links,
   /* lists */lists

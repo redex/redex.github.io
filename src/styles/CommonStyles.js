@@ -4,13 +4,13 @@
 var Css = require("bs-css/src/Css.js");
 
 var widthContainer = Css.style(/* :: */[
-      Css.unsafe("margin", "0 auto"),
+      Css.unsafe("label", "width-container"),
       /* :: */[
-        Css.maxWidth(Css.px(960)),
+        Css.unsafe("margin", "0 auto"),
         /* :: */[
-          Css.width(Css.pct(100)),
+          Css.maxWidth(Css.px(960)),
           /* :: */[
-            Css.unsafe("padding", "1.0875rem 1.45rem"),
+            Css.width(Css.pct(100)),
             /* [] */0
           ]
         ]

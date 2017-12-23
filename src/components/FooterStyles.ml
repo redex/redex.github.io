@@ -11,6 +11,8 @@ let root context = style [
 
   selector "& > div" [ (* matches the inner width container *)
     display Flex;
+    padding (em 1.45);
+    paddingTop (em 1.);
 
     selector "& > section" [
       opacity 0.65;

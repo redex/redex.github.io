@@ -54,6 +54,10 @@ let _global = begin
 end
 module Index = struct
 
+  let root = style [
+    margin (em 1.45);
+  ]
+
   let keywords = style [
     textAlign Center;
     marginTop (em 3.);
@@ -118,9 +122,6 @@ module Index = struct
       ];
     ];
   ]
-
-
-
 end
 
 let html = style [

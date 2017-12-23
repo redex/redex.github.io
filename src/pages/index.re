@@ -5,7 +5,7 @@ let make = (~data, _children) => {
   ...component,
 
   render: _self =>
-    <div>
+    <div className=Styles.Index.root>
 
       <SearchBox />
 

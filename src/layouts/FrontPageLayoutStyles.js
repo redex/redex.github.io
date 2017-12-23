@@ -21,7 +21,10 @@ var root = Css.style(/* :: */[
       ]
     ]);
 
-var header = Css.style(/* [] */0);
+var header = Css.style(/* :: */[
+      Css.margin(Css.em(1.45)),
+      /* [] */0
+    ]);
 
 var links = Css.style(/* :: */[
       Css.textAlign(/* Center */3),
