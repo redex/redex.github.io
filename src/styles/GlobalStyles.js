@@ -85,9 +85,6 @@ var _global = Css.$$global("html, body, #___gatsby", /* :: */[
       ]
     ]);
 
-var Index = /* module */[];
-
 exports._reset  = _reset;
 exports._global = _global;
-exports.Index   = Index;
 /*  Not a pure module */

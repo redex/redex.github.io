@@ -73,7 +73,7 @@ let html = {|
 |};
 
 let style = Css.(merge([
-  Styles.html,
+  CommonStyles.html,
   style([
     backgroundColor(Theme.Panel.Color.background),
     unsafe("padding", "2em 4em")

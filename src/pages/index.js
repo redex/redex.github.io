@@ -3,12 +3,12 @@
 
 var Link        = require("../bindings/gatsby/link.js");
 var React       = require("react");
-var Styles      = require("../styles/Styles.js");
 var Control     = require("../components/helpers/Control.js");
 var Graphql     = require("../utils/Graphql.js");
 var Helpers     = require("../utils/Helpers.js");
 var TopList     = require("../components/TopList.js");
 var SearchBox   = require("../components/SearchBox.js");
+var IndexStyles = require("../styles/IndexStyles.js");
 var ReasonReact = require("reason-react/src/ReasonReact.js");
 
 var component = ReasonReact.statelessComponent("Index");
@@ -17,9 +17,9 @@ function make(data, _) {
   var newrecord = component.slice();
   newrecord[/* render */9] = (function () {
       return React.createElement("div", {
-                  className: Styles.Index[/* root */0]
+                  className: IndexStyles.root
                 }, ReasonReact.element(/* None */0, /* None */0, SearchBox.make(/* array */[])), React.createElement("div", {
-                      className: Styles.Index[/* keywords */1]
+                      className: IndexStyles.keywords
                     }, ReasonReact.element(/* None */0, /* None */0, Control.$$Map[/* make */1](Graphql.getNodes(data.keywords), /* None */0, (function (keyword) {
                                 return ReasonReact.element(/* Some */[keyword.slug], /* None */0, Link.make(keyword.slug, /* None */0, /* None */0, /* array */[
                                                 React.createElement("span", {
@@ -30,7 +30,7 @@ function make(data, _) {
                                                     }, Helpers.text(keyword.count))
                                               ]));
                               })))), React.createElement("div", {
-                      className: Styles.Index[/* lists */3]
+                      className: IndexStyles.lists
                     }, React.createElement("div", undefined, React.createElement("h2", undefined, Helpers.text("Recent releases")), ReasonReact.element(/* None */0, /* None */0, TopList.make(Graphql.getNodes(data.recentPackages), /* updated */500154939, /* array */[]))), React.createElement("div", undefined, React.createElement("h2", undefined, Helpers.text("Most popular")), ReasonReact.element(/* None */0, /* None */0, TopList.make(Graphql.getNodes(data.popularPackages), /* stars */67859553, /* array */[])))));
     });
   return newrecord;
@@ -84,6 +84,9 @@ var $$default = ReasonReact.wrapReasonForJs(component, (function (jsProps) {
 
 ;
 
+var Styles = 0;
+
+exports.Styles    = Styles;
 exports.component = component;
 exports.make      = make;
 exports.$$default = $$default;

@@ -1,15 +1,17 @@
 open! Helpers;
 
+module Styles = IndexStyles;
+
 let component = ReasonReact.statelessComponent("Index");
 let make = (~data, _children) => {
   ...component,
 
   render: _self =>
-    <div className=Styles.Index.root>
+    <div className=Styles.root>
 
       <SearchBox />
 
-      <div className=Styles.Index.keywords>
+      <div className=Styles.keywords>
         <Control.Map items=(data##keywords |> Graphql.getNodes)>
           ...(keyword =>
             <Link key=keyword##slug to_=keyword##slug>
@@ -20,7 +22,7 @@ let make = (~data, _children) => {
         </Control.Map>
       </div>
 
-      <div className=Styles.Index.lists>
+      <div className=Styles.lists>
 
         <div>
           <h2> {"Recent releases" |> text} </h2>
