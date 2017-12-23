@@ -12,6 +12,7 @@ let tooltip = let size = 0.5 in style [
   bottom (pct 100.);
   left (pct 50.);
   transform (translate (pct (-50.)) (em (-.size)));
+  color Theme.Color.text;
 
   selector "&::before" [
     position Absolute;
@@ -20,6 +21,7 @@ let tooltip = let size = 0.5 in style [
     bottom (em (-.size));
     left (pct 50.);
     marginLeft (em (-.size));
+    transform (translateY (px (-1)));
     borderLeft (em size) Solid (Obj.magic "transparent");
     borderRight (em size) Solid (Obj.magic "transparent");
     borderTop (em size) Solid (hex "eee");
