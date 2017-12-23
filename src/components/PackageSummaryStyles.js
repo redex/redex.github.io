@@ -7,24 +7,18 @@ var Theme = require("../styles/Theme.js");
 
 function root(type_) {
   return Css.style(/* :: */[
-              Css.display(/* Flex */3),
+              Css.unsafe("padding", ".75em 1.5em"),
               /* :: */[
-                Css.justifyContent(/* SpaceBetween */5),
+                Css.marginBottom(Css.em(0.5)),
                 /* :: */[
-                  Css.unsafe("padding", ".75em 1.5em"),
+                  Css.boxShadow(Theme.Shadow[/* panel */1]),
                   /* :: */[
-                    Css.marginBottom(Css.em(0.5)),
+                    Css.backgroundColor(Theme.Panel[/* Color */0][/* background */0]),
                     /* :: */[
-                      Css.boxShadow(Theme.Shadow[/* panel */1]),
+                      Css.lineHeight(Css.em(1.45)),
                       /* :: */[
-                        Css.backgroundColor(Theme.Panel[/* Color */0][/* background */0]),
-                        /* :: */[
-                          Css.lineHeight(Css.em(1.45)),
-                          /* :: */[
-                            Css.unsafe("backgroundImage", CssEx.if_(+(type_ === "unpublished"), Theme.Panel[/* crosshatchBackground */1])),
-                            /* [] */0
-                          ]
-                        ]
+                        Css.unsafe("backgroundImage", CssEx.if_(+(type_ === "unpublished"), Theme.Panel[/* crosshatchBackground */1])),
+                        /* [] */0
                       ]
                     ]
                   ]
@@ -32,6 +26,14 @@ function root(type_) {
               ]
             ]);
 }
+
+var header = Css.style(/* :: */[
+      Css.display(/* Flex */3),
+      /* :: */[
+        Css.alignItems(/* Baseline */4),
+        /* [] */0
+      ]
+    ]);
 
 var name = Css.style(/* :: */[
       Css.color(Theme.Color[/* link */5]),
@@ -84,42 +86,21 @@ function unpublishedLabel(param) {
   }
 }
 
-var description = Css.style(/* :: */[
-      Css.unsafe("textOverflow", "ellipsis"),
-      /* :: */[
-        Css.overflow(/* Hidden */1),
-        /* :: */[
-          Css.unsafe("margin", ".5ex 0 1ex"),
-          /* [] */0
-        ]
-      ]
-    ]);
-
-var tags = Css.style(/* :: */[
-      Css.color(Theme.Color[/* link */5]),
-      /* :: */[
-        Css.selector("& a", /* :: */[
-              Css.unsafe("backgroundColor", "hsla(6.9, 90%, 90%, .4)"),
-              /* [] */0
-            ]),
-        /* [] */0
-      ]
-    ]);
-
-var tagsIcon = Css.style(/* :: */[
-      Css.opacity(0.25),
-      /* [] */0
-    ]);
-
 var props = Css.style(/* :: */[
       Css.display(/* Flex */3),
       /* :: */[
-        Css.flexDirection(/* Column */2),
+        Css.justifyContent(/* FlexEnd */1),
         /* :: */[
-          Css.justifyContent(/* SpaceBetween */5),
+          Css.alignItems(/* Baseline */4),
           /* :: */[
-            Css.alignItems(/* FlexEnd */1),
-            /* [] */0
+            Css.unsafe("marginLeft", "auto"),
+            /* :: */[
+              Css.selector("& > *", /* :: */[
+                    Css.marginLeft(Css.em(1)),
+                    /* [] */0
+                  ]),
+              /* [] */0
+            ]
           ]
         ]
       ]
@@ -143,10 +124,7 @@ var license = Css.style(/* :: */[
             Css.border(Css.px(1), /* Solid */2, Theme.Color[/* text */4]),
             /* :: */[
               Css.unsafe("padding", "0 1ex"),
-              /* :: */[
-                Css.unsafe("marginTop", "1ex"),
-                /* [] */0
-              ]
+              /* [] */0
             ]
           ]
         ]
@@ -186,17 +164,45 @@ var starIcon = Css.style(/* :: */[
       ]
     ]);
 
+var description = Css.style(/* :: */[
+      Css.unsafe("textOverflow", "ellipsis"),
+      /* :: */[
+        Css.overflow(/* Hidden */1),
+        /* :: */[
+          Css.unsafe("margin", ".5ex 0 1ex"),
+          /* [] */0
+        ]
+      ]
+    ]);
+
+var tags = Css.style(/* :: */[
+      Css.color(Theme.Color[/* link */5]),
+      /* :: */[
+        Css.selector("& a", /* :: */[
+              Css.unsafe("backgroundColor", "hsla(6.9, 90%, 90%, .4)"),
+              /* [] */0
+            ]),
+        /* [] */0
+      ]
+    ]);
+
+var tagsIcon = Css.style(/* :: */[
+      Css.opacity(0.25),
+      /* [] */0
+    ]);
+
 exports.root             = root;
+exports.header           = header;
 exports.name             = name;
 exports.version          = version;
 exports.unpublishedLabel = unpublishedLabel;
-exports.description      = description;
-exports.tags             = tags;
-exports.tagsIcon         = tagsIcon;
 exports.props            = props;
 exports.updated          = updated;
 exports.license          = license;
 exports.nolicense        = nolicense;
 exports.stars            = stars;
 exports.starIcon         = starIcon;
-/* name Not a pure module */
+exports.description      = description;
+exports.tags             = tags;
+exports.tagsIcon         = tagsIcon;
+/* header Not a pure module */

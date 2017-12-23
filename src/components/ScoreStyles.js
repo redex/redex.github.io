@@ -10,36 +10,33 @@ var root = Css.style(/* :: */[
         /* :: */[
           Css.unsafe("whiteSpace", "nowrap"),
           /* :: */[
-            Css.marginLeft(Css.em(0.5)),
+            Css.unsafe("cursor", "help"),
             /* :: */[
-              Css.unsafe("cursor", "help"),
-              /* :: */[
-                Css.selector("& > .popover", /* :: */[
-                      Css.display(/* Block */0),
+              Css.selector("& > .popover", /* :: */[
+                    Css.display(/* Block */0),
+                    /* :: */[
+                      Css.position(/* Absolute */2),
                       /* :: */[
-                        Css.position(/* Absolute */2),
+                        Css.bottom(Css.pct(100)),
                         /* :: */[
-                          Css.bottom(Css.pct(100)),
+                          Css.zIndex(10),
                           /* :: */[
-                            Css.zIndex(10),
+                            Css.backgroundColor(Css.white),
                             /* :: */[
-                              Css.backgroundColor(Css.white),
-                              /* :: */[
-                                Css.boxShadow(Css.shadow(/* Some */[1], /* Some */[1], /* None */0, /* None */0, Css.rgba(0, 0, 0, 0.1))),
-                                /* [] */0
-                              ]
+                              Css.boxShadow(Css.shadow(/* Some */[1], /* Some */[1], /* None */0, /* None */0, Css.rgba(0, 0, 0, 0.1))),
+                              /* [] */0
                             ]
                           ]
                         ]
                       ]
+                    ]
+                  ]),
+              /* :: */[
+                Css.selector("&:hover > .popover", /* :: */[
+                      Css.display(/* Block */0),
+                      /* [] */0
                     ]),
-                /* :: */[
-                  Css.selector("&:hover > .popover", /* :: */[
-                        Css.display(/* Block */0),
-                        /* [] */0
-                      ]),
-                  /* [] */0
-                ]
+                /* [] */0
               ]
             ]
           ]

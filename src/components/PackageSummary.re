@@ -8,28 +8,12 @@ let make = (~package, _children) => {
 
 	render: _self =>
 		<div className=Styles.root(package##_type)>
-			<div>
+			<header className=Styles.header>
 				<Link className=Styles.name to_=package##slug> {package##name |> text} </Link>
 				<span className=Styles.version> {package##version |> text} </span>
 				<span className=Styles.unpublishedLabel(package##_type)> {"unpublished" |> text} </span>
 
-				<div className=Styles.description>	
-					{switch package##description {
-					| "" 					=> nbsp
-					| description => description |> text
-					}}
-				</div>
-
-				<div className=Styles.tags>
-					<Icon.Tags className=Styles.tagsIcon />
-					<Control.Map items=package##keywords>
-						...(keyword => <Tag key=keyword name=keyword />)
-					</Control.Map>
-				</div>
-			</div>
-
-			<div className=Styles.props>
-				<div>
+				<div className=Styles.props>
 					<span className=Styles.stars>
 						{switch (package##stars |> Js.toOption) {
 						| Some(stars) => stars |> text
@@ -39,14 +23,28 @@ let make = (~package, _children) => {
 					</span>
 
 					<Score package />
+
+					{switch (package##license |> Js.toOption) {
+					| Some(license) => <span className=Styles.license> {license |> text} </span>
+					| None					=> <span className=Styles.nolicense> {"No license" |> text} </span>
+					}}
+
+					<span className=Styles.updated> <TimeAgo date=package##updated /> </span>
 				</div>
+			</header>
 
-				<div className=Styles.updated> <TimeAgo date=package##updated /> </div>
-
-				{switch (package##license |> Js.toOption) {
-				| Some(license) => <div className=Styles.license> {license |> text} </div>
-				| None					=> <div className=Styles.nolicense> {"No license" |> text} </div>
+			<div className=Styles.description>	
+				{switch package##description {
+				| "" 					=> nbsp
+				| description => description |> text
 				}}
+			</div>
+
+			<div className=Styles.tags>
+				<Icon.Tags className=Styles.tagsIcon />
+				<Control.Map items=package##keywords>
+					...(keyword => <Tag key=keyword name=keyword />)
+				</Control.Map>
 			</div>
 		</div>
 };

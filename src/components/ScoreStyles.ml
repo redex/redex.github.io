@@ -4,7 +4,6 @@ let root = style [
   position Relative;
   fontSize (em 0.85);
   unsafe "whiteSpace" "nowrap";
-  marginLeft (em 0.5);
   unsafe "cursor" "help";
 
   selector "& > .popover" [
