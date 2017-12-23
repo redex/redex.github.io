@@ -8,12 +8,15 @@ let html = {|
   <p>
     Add a file named <code>README.md</code> to the root of your project. A good
     readme should at the very least answer the following questions:
-    <ul>
-      <li>What is it?
-      <li>What state is it in?
-      <li>How do I install it?
-      <li>How do I use it?
-    </ul>
+
+  <ul>
+    <li>What is it?
+    <li>What state is it in?
+    <li>How do I install it?
+    <li>How do I use it?
+  </ul>
+
+  <p>
     Furthermore, providing an example, a change log and explaining how to contribute is a bonus.
 
   <p>
@@ -36,12 +39,20 @@ let html = {|
       <li><em>bugs</em> - The URL of the bug tracker
     </ul>
 
+  <p>
+    Additionally, a number of other factors are taken into account when calculating
+    a score for the package, which primarily is used as part of search result
+    ranking. This data is blatantly stolen from <a href="https://npms.io">npms.io</a>,
+    who are nice enough to detail the factors taken into account
+    <a href="https://github.com/npms-io/npms-analyzer/blob/master/docs/architecture.md#evaluators">here</a>.
+
+
   <h2>Step 2: Publish to NPM (optional)</h2>
   <p>
     Follow the documentation on <a href="https://docs.npmjs.com/getting-started/publishing-npm-packages">NPM</a>
   <p>
-    Publishing to NPM is not a requirement. If your project is incomplete, experimental or otherwise... challenged, it
-    might be easier to just depend on the master branch of the source code repository. You can still submit your
+    Publishing to NPM is not a requirement. If your project is incomplete, experimental or otherwise not yet ready for primetime,
+    it might be easier to just depend on the master branch of the source code repository. You can still submit your
     package to redex, where it'll then be marked as unpublished. This is not only intended as a warning, but also to
     highlight opportunities to contribute. 
 
@@ -59,7 +70,6 @@ let html = {|
     </ul>
 
     Submissions are checked manually (with a little help from a linter script). Any remarks will be noted in the PR.
-
 |};
 
 let style = Css.(merge([
