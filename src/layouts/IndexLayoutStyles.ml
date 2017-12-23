@@ -1,6 +1,13 @@
 open Css
 
 let root = style [
+  display Flex;
+  flexDirection Column;
+  minHeight (vh 100.);
+
+  selector "& p" [
+    marginBottom (rem 1.45);
+  ];
 ]
 
 let header = style [
@@ -22,13 +29,8 @@ let header = style [
       ]);
     ]);
     *)
-  ]
-]
+  ];
 
-let widthContainer = style [
-  unsafe "margin" "0 auto";
-  maxWidth (px 960);
-  unsafe "padding" "0 1.45rem";
 ]
 
 let title = style [

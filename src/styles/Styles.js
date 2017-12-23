@@ -20,7 +20,7 @@ Css.$$global("*:focus", /* :: */[
 Css.$$global("body", /* :: */[
       Css.unsafe("lineHeight", "inherit"),
       /* :: */[
-        Css.color(Theme.Color[/* text */3]),
+        Css.color(Theme.Color[/* text */4]),
         /* [] */0
       ]
     ]);
@@ -402,7 +402,7 @@ var html = Css.style(/* :: */[
                                 ]),
                             /* :: */[
                               Css.selector("& a", /* :: */[
-                                    Css.color(Theme.Color[/* link */4]),
+                                    Css.color(Theme.Color[/* link */5]),
                                     /* :: */[
                                       Css.textDecoration(/* None */0),
                                       /* :: */[

@@ -34,7 +34,7 @@ function root(type_) {
 }
 
 var name = Css.style(/* :: */[
-      Css.color(Theme.Color[/* link */4]),
+      Css.color(Theme.Color[/* link */5]),
       /* :: */[
         Css.fontSize(Css.em(1.1)),
         /* :: */[
@@ -70,7 +70,7 @@ function unpublishedLabel(param) {
                   /* :: */[
                     Css.marginLeft(Css.em(0.5)),
                     /* :: */[
-                      Css.color(Theme.Color[/* bad */6]),
+                      Css.color(Theme.Color[/* bad */7]),
                       /* [] */0
                     ]
                   ]
@@ -96,7 +96,7 @@ var description = Css.style(/* :: */[
     ]);
 
 var tags = Css.style(/* :: */[
-      Css.color(Theme.Color[/* link */4]),
+      Css.color(Theme.Color[/* link */5]),
       /* :: */[
         Css.selector("& a", /* :: */[
               Css.unsafe("backgroundColor", "hsla(6.9, 90%, 90%, .4)"),
@@ -140,7 +140,7 @@ var license = Css.style(/* :: */[
         /* :: */[
           Css.unsafe("whiteSpace", "nowrap"),
           /* :: */[
-            Css.border(Css.px(1), /* Solid */2, Theme.Color[/* text */3]),
+            Css.border(Css.px(1), /* Solid */2, Theme.Color[/* text */4]),
             /* :: */[
               Css.unsafe("padding", "0 1ex"),
               /* :: */[
@@ -154,13 +154,13 @@ var license = Css.style(/* :: */[
     ]);
 
 var nolicense = Css.style(/* :: */[
-      Css.color(Theme.Color[/* bad */6]),
+      Css.color(Theme.Color[/* bad */7]),
       /* :: */[
         Css.fontSize(Css.em(0.85)),
         /* :: */[
           Css.unsafe("whiteSpace", "nowrap"),
           /* :: */[
-            Css.border(Css.px(1), /* Solid */2, Theme.Color[/* bad */6]),
+            Css.border(Css.px(1), /* Solid */2, Theme.Color[/* bad */7]),
             /* :: */[
               Css.unsafe("padding", "0 1ex"),
               /* [] */0

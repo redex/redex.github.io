@@ -15,7 +15,7 @@ function root(type_, isFocused) {
                   /* :: */[
                     Css.unsafe("padding", "1.1em 2em"),
                     /* :: */[
-                      Css.borderTop(Css.px(1), /* Solid */2, Theme.Color[/* subtleBorder */5]),
+                      Css.borderTop(Css.px(1), /* Solid */2, Theme.Color[/* subtleBorder */6]),
                       /* :: */[
                         Css.cursor(/* Pointer */1),
                         /* :: */[
@@ -46,7 +46,7 @@ function root(type_, isFocused) {
 }
 
 var name = Css.style(/* :: */[
-      Css.color(Theme.Color[/* link */4]),
+      Css.color(Theme.Color[/* link */5]),
       /* [] */0
     ]);
 
@@ -70,7 +70,7 @@ function unpublishedLabel(param) {
                   /* :: */[
                     Css.marginLeft(Css.em(0.5)),
                     /* :: */[
-                      Css.color(Theme.Color[/* bad */6]),
+                      Css.color(Theme.Color[/* bad */7]),
                       /* [] */0
                     ]
                   ]

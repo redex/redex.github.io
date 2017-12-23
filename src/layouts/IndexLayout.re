@@ -8,10 +8,11 @@ let make = (~children, _children) => {
 
   render: _self =>
     <div className=Styles.root>
+
       <Helmet title="redex" />
 
       <div className=Styles.header>
-        <div className=Styles.widthContainer>
+        <div className=CommonStyles.widthContainer>
           <SearchBox />
           <Link to_="/" className=Styles.title>
             <svg className=Styles.logo>
@@ -22,9 +23,12 @@ let make = (~children, _children) => {
         </div>
       </div>
 
-      <div className=Styles.widthContainer>
+      <div className=CommonStyles.widthContainer>
         (children())
       </div>
+
+      <Footer context=`Index />
+
     </div>
 };
 

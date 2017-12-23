@@ -5,6 +5,8 @@ module Color = struct
   let darkPrimary: color = "hsl(6.9, 65%, 50%)" |> Obj.magic
 
   let background: color = "whiteSmoke" |> Obj.magic
+  let darkBackground = (hex "ececec")
+
   let text = hex "444"
   let link = primary
 
@@ -23,8 +25,8 @@ module Panel = struct
     340deg,
     transparent,
     transparent 10px,
-    hsl(6.9, 70.7%, 54%, .1) 10px,
-    hsl(6.9, 70.7%, 54%, .1) 12px
+    hsl(6.9, 70.7%, 54%, .075) 10px,
+    hsl(6.9, 70.7%, 54%, .075) 12px
   )"
 end
 

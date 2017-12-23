@@ -121,7 +121,7 @@ var unpublishedLabel = Css.style(/* :: */[
         /* :: */[
           Css.marginLeft(Css.em(0.5)),
           /* :: */[
-            Css.color(Theme.Color[/* bad */6]),
+            Css.color(Theme.Color[/* bad */7]),
             /* :: */[
               Css.backgroundColor(Theme.Inverted[/* Color */0][/* text */1]),
               /* :: */[
@@ -213,7 +213,7 @@ var license = Css.style(/* :: */[
     ]);
 
 var nolicense = Css.style(/* :: */[
-      Css.color(Theme.Color[/* bad */6]),
+      Css.color(Theme.Color[/* bad */7]),
       /* :: */[
         Css.fontSize(Css.em(0.85)),
         /* :: */[

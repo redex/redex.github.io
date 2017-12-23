@@ -4,7 +4,22 @@
 var Css   = require("bs-css/src/Css.js");
 var Theme = require("../styles/Theme.js");
 
-var root = Css.style(/* [] */0);
+var root = Css.style(/* :: */[
+      Css.display(/* Flex */3),
+      /* :: */[
+        Css.flexDirection(/* Column */2),
+        /* :: */[
+          Css.minHeight(Css.vh(100)),
+          /* :: */[
+            Css.selector("& p", /* :: */[
+                  Css.marginBottom(Css.rem(1.45)),
+                  /* [] */0
+                ]),
+            /* [] */0
+          ]
+        ]
+      ]
+    ]);
 
 var header = Css.style(/* :: */[
       Css.margin(Css.rem(1.45)),
@@ -14,17 +29,6 @@ var header = Css.style(/* :: */[
               /* [] */0
             ]),
         /* [] */0
-      ]
-    ]);
-
-var widthContainer = Css.style(/* :: */[
-      Css.unsafe("margin", "0 auto"),
-      /* :: */[
-        Css.maxWidth(Css.px(960)),
-        /* :: */[
-          Css.unsafe("padding", "0 1.45rem"),
-          /* [] */0
-        ]
       ]
     ]);
 
@@ -77,9 +81,8 @@ var logo = Css.style(/* :: */[
       ]
     ]);
 
-exports.root           = root;
-exports.header         = header;
-exports.widthContainer = widthContainer;
-exports.title          = title;
-exports.logo           = logo;
+exports.root   = root;
+exports.header = header;
+exports.title  = title;
+exports.logo   = logo;
 /* root Not a pure module */

@@ -4,9 +4,11 @@
 var Link              = require("../bindings/gatsby/link.js");
 var Curry             = require("bs-platform/lib/js/curry.js");
 var React             = require("react");
+var Footer            = require("../components/Footer.js");
 var Helmet            = require("../bindings/gatsby/helmet.js");
 var SearchBox         = require("../components/SearchBox.js");
 var ReasonReact       = require("reason-react/src/ReasonReact.js");
+var CommonStyles      = require("../styles/CommonStyles.js");
 var IndexLayoutStyles = require("./IndexLayoutStyles.js");
 
 var component = ReasonReact.statelessComponent("PageLayout");
@@ -19,7 +21,7 @@ function make(children, _) {
                 }, ReasonReact.element(/* None */0, /* None */0, Helmet.make(/* Some */["redex"], /* None */0, /* array */[])), React.createElement("div", {
                       className: IndexLayoutStyles.header
                     }, React.createElement("div", {
-                          className: IndexLayoutStyles.widthContainer
+                          className: CommonStyles.widthContainer
                         }, ReasonReact.element(/* None */0, /* None */0, SearchBox.make(/* array */[])), ReasonReact.element(/* None */0, /* None */0, Link.make("/", /* Some */[IndexLayoutStyles.title], /* None */0, /* array */[React.createElement("svg", {
                                         className: IndexLayoutStyles.logo
                                       }, React.createElement("use", {
@@ -27,8 +29,8 @@ function make(children, _) {
                                             xlinkHref: "/logo.svg#logo",
                                             xmlnsXlink: "http://www.w3.org/1999/xlink"
                                           }))])))), React.createElement("div", {
-                      className: IndexLayoutStyles.widthContainer
-                    }, Curry._1(children, /* () */0)));
+                      className: CommonStyles.widthContainer
+                    }, Curry._1(children, /* () */0)), ReasonReact.element(/* None */0, /* None */0, Footer.make(/* Index */-784200974, /* array */[])));
     });
   return newrecord;
 }

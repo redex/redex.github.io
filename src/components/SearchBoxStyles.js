@@ -71,12 +71,12 @@ var results = Css.style(/* :: */[
             /* :: */[
               Css.boxShadow(Theme.Shadow[/* overlay */0]),
               /* :: */[
-                Css.color(Theme.Color[/* text */3]),
+                Css.color(Theme.Color[/* text */4]),
                 /* :: */[
                   Css.selector("& > div", /* :: */[
                         Css.margin(Css.zero),
                         /* :: */[
-                          Css.borderTop(Css.px(1), /* Solid */2, Theme.Color[/* subtleBorder */5]),
+                          Css.borderTop(Css.px(1), /* Solid */2, Theme.Color[/* subtleBorder */6]),
                           /* [] */0
                         ]
                       ]),
