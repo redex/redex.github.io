@@ -4,6 +4,7 @@
 var Tag           = require("../components/Tag.js");
 var Icon          = require("../bindings/Icon.js");
 var Link          = require("../bindings/gatsby/link.js");
+var Score         = require("../components/Score.js");
 var React         = require("react");
 var Config        = require("../Config.js");
 var Helmet        = require("../bindings/gatsby/helmet.js");
@@ -58,7 +59,7 @@ function make(data, _) {
                                     return React.createElement("div", {
                                                 className: PackageStyles.stars
                                               }, Helpers.text(stars), ReasonReact.element(/* None */0, /* None */0, Icon.Star[/* make */0](/* Some */[PackageStyles.starIcon], /* array */[])));
-                                  }))), (match == null) ? React.createElement("div", {
+                                  }))), ReasonReact.element(/* None */0, /* None */0, Score.make($$package, /* array */[])), (match == null) ? React.createElement("div", {
                                 className: PackageStyles.nolicense
                               }, Helpers.text("No license")) : React.createElement("div", {
                                 className: PackageStyles.license
@@ -105,6 +106,10 @@ var $$default = ReasonReact.wrapReasonForJs(component, (function (jsProps) {
         license
         updated
         stars
+        score
+        quality
+        popularity
+        maintenance
         readme
         homepageUrl
         repositoryUrl

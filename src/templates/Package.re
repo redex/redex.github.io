@@ -20,6 +20,8 @@ let make = (~data, _children) => {
             )
           </Control.IfSome>
 
+          <Score package />
+
           {switch (package##license |> Js.toOption) {
           | Some(license) => <div className=Styles.license> {license |> text} </div>
           | None					=> <div className=Styles.nolicense> {"No license" |> text} </div>
@@ -92,6 +94,10 @@ let default =
         license
         updated
         stars
+        score
+        quality
+        popularity
+        maintenance
         readme
         homepageUrl
         repositoryUrl
