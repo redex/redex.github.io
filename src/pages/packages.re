@@ -7,6 +7,9 @@ let make = (~data, _children) => {
   render: _self =>
     <div>
       <Helmet title=Config.titleTemplate("Packages") />
+
+      <h1> {"Packages" |> text} </h1>
+
       <Control.Map items=(data##packages |> Graphql.getNodes)>
         ...(package => <PackageSummary key=package##id package />)
       </Control.Map>

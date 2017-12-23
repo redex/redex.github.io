@@ -18,8 +18,8 @@ let make = (~data, _children) => {
   render: _self =>
     <div>
       <Helmet title=Config.titleTemplate("Unpublished Packages") />
-      <h1> {"Unpublished packages" |> text} </h1>
 
+      <h1> {"Unpublished packages" |> text} </h1>
       <p dangerouslySetInnerHTML={ "__html": introduction } />
 
       <Control.Map items=(data##packages |> Graphql.getNodes)>

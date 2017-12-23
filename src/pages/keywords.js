@@ -36,7 +36,7 @@ var component = ReasonReact.statelessComponent("Keywords");
 function make(data, _) {
   var newrecord = component.slice();
   newrecord[/* render */9] = (function () {
-      return React.createElement("div", undefined, ReasonReact.element(/* None */0, /* None */0, Helmet.make(/* Some */[Config.titleTemplate("Keywords")], /* None */0, /* None */0, /* None */0, /* array */[])), ReasonReact.element(/* None */0, /* None */0, Control.$$Map[/* make */1](Graphql.getNodes(data.keywords), /* None */0, (function (keyword) {
+      return React.createElement("div", undefined, ReasonReact.element(/* None */0, /* None */0, Helmet.make(/* Some */[Config.titleTemplate("Keywords")], /* None */0, /* None */0, /* None */0, /* array */[])), React.createElement("h1", undefined, Helpers.text("Keywords")), ReasonReact.element(/* None */0, /* None */0, Control.$$Map[/* make */1](Graphql.getNodes(data.keywords), /* None */0, (function (keyword) {
                             return React.createElement("div", {
                                         key: keyword.name
                                       }, React.createElement("h2", undefined, Helpers.text(keyword.name)), ReasonReact.element(/* None */0, /* None */0, Control.$$Map[/* make */1](getPackages(keyword), /* None */0, (function ($$package) {
