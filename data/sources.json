@@ -81,9 +81,9 @@
     "bs-humps",
     "reason-these",
     
-    "Astrocoders/restyled",
-    "Astrocoders/bs-reason-apollo",
-    "Astrocoders/reform"
+    "bs-restyled",
+    "bs-reason-apollo",
+    "bs-reform"
   ],
 
   "unpublished": [
