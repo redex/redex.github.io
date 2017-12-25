@@ -16,7 +16,7 @@ let make = (~children: unit => ReasonReact.reactElement, _children) => {
 
       <div className=Styles.links>
         <div className=CommonStyles.widthContainer>
-          <soan className="left" />
+          <span className="left" />
           <Link to_="/packages"> ("Packages" |> text) </Link>
           <Link to_="/keywords"> ("Keywords" |> text) </Link>
           <Link to_="/packages/unpublished"> ("Unpublished" |> text) </Link>
