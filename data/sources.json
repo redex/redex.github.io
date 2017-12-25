@@ -79,7 +79,11 @@
     "bs-css",
     
     "bs-humps",
-    "reason-these"
+    "reason-these",
+    
+    "bs-restyled",
+    "bs-reason-apollo",
+    "bs-reform"
   ],
 
   "unpublished": [
@@ -107,9 +111,6 @@
     "wokalski/vow",
     "glennsl/infinite-jest",
     "jchavarri/bs-bn.js",
-    "Astrocoders/restyled",
-    "Astrocoders/bs-reason-apollo",
-    "Astrocoders/reform",
     "state-machine-systems/JsonCodec",
     "glennsl/quickiecheck",
 
