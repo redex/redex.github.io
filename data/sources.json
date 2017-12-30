@@ -79,7 +79,8 @@
     "bs-css",
     
     "bs-humps",
-    "reason-these"
+    "reason-these",
+    "bs-react-notification-system"
   ],
 
   "unpublished": [
@@ -93,7 +94,6 @@
     "reasonml-community/bs-discord.js",
     "reasonml-community/bs-socket.io",
     "reasonml-community/bs-glob",
-    "AndrewKvalheim/bs-chalk",
     "zploskey/bs-puppeteer",
     "freebroccolo/bucklescript-electron",
     "reasonml-community/bs-immutablejs",
@@ -115,7 +115,9 @@
 
     "viebel/MetaTagsReRe",
     "Astrocoders/bs-react-native-router-flux",
-    "threepointone/bs-nice"
+    "threepointone/bs-nice",
+    "Risto-Stevcev/bs-abstract",
+    "TomLingham/bs-node-http"
   ],
 
   "not-even-package.json": [
@@ -171,13 +173,17 @@
   ],
 
   "unpublished-prematurely": [
-    "Astrocoders/bs-react-native-vector-icons"
+    "Astrocoders/bs-react-native-vector-icons",
+    "AlexSchwabauer/bs-raven"
   ],
 
   "rejected": [
     "bs-node-fetch",
     "bs-antd",
     "bs-string",
-    "bs-readline-example"
+    "bs-readline-example",
+    "AndrewKvalheim/bs-chalk",
+    "glennsl/bs-debug",
+    "reasonml-community/bs-containers"
   ]
 }
