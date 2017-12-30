@@ -59,7 +59,7 @@ let make = _children => {
       ReasonReact.Update({
         ...state,
         results,
-        focused: Array.get(0, results)
+        focused: results[0]
       })
     }
 
@@ -75,9 +75,9 @@ let make = _children => {
           ...state,
           focused: switch state.focused {
                    | None =>
-                     Array.get(0, state.results)
+                     state.results[0]
                    | Some(p) =>
-                     Array.get(Js.Array.findIndex(this => this === p, state.results) + 1, state.results)
+                     state.results[Js.Array.findIndex(this => this === p, state.results) + 1]
                    }
         })
       } else if (key === Key.up) {
@@ -85,9 +85,9 @@ let make = _children => {
           ...state,
           focused: switch state.focused {
                    | None =>
-                     Array.get(Array.length(state.results) - 1, state.results)
+                     state.results[Array.length(state.results) - 1]
                    | Some(p) =>
-                     Array.get(Js.Array.findIndex(this => this === p, state.results) - 1, state.results)
+                     state.results[Js.Array.findIndex(this => this === p, state.results)]
                    }
         })
       } else if (key === Key.enter) {

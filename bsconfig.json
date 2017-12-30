@@ -8,7 +8,7 @@
     "dir": "src",
     "subdirs": true
   }],
-  "bs-dependencies": ["reason-react", "bs-css", "reason-rebase"],
+  "bs-dependencies": ["reason-react", "bs-css", "@glennsl/rebase"],
   "reason": {"react-jsx": 2},
   "refmt": 3,
   "bsc-flags": ["-bs-super-errors"]

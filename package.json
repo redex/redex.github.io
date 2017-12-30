@@ -19,7 +19,7 @@
     "react-dom": "^16.2.0",
     "react-icons": "^2.2.7",
     "react-timeago": "^3.4.3",
-    "reason-rebase": "^0.1.2",
+    "@glennsl/rebase":"^0.1.4",
     "remark": "^8.0.0",
     "remark-html": "^7.0.0"
   },

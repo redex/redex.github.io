@@ -6,7 +6,7 @@ var Block               = require("bs-platform/lib/js/block.js");
 var Curry               = require("bs-platform/lib/js/curry.js");
 var React               = require("react");
 var Config              = require("../Config.js");
-var Rebase              = require("reason-rebase/src/rebase.js");
+var Rebase              = require("@glennsl/rebase/src/rebase.bs.js");
 var Control             = require("./helpers/Control.js");
 var ReasonReact         = require("reason-react/src/ReasonReact.js");
 var GatsbyLink          = require("gatsby-link");
@@ -107,7 +107,7 @@ function make() {
                         /* searchClient */state[/* searchClient */0],
                         /* query */state[/* query */1],
                         /* results */results,
-                        /* focused */Rebase.$$Array[/* get */13](0, results)
+                        /* focused */Rebase.$$Array[/* get */13](results, 0)
                       ]]);
         case 2 : 
             var $$package = action[0];
@@ -130,11 +130,11 @@ function make() {
               var tmp;
               if (match) {
                 var p = match[0];
-                tmp = Rebase.$$Array[/* get */13](state[/* results */2].findIndex((function ($$this) {
+                tmp = Rebase.$$Array[/* get */13](state[/* results */2], state[/* results */2].findIndex((function ($$this) {
                             return +($$this === p);
-                          })) + 1 | 0, state[/* results */2]);
+                          })) + 1 | 0);
               } else {
-                tmp = Rebase.$$Array[/* get */13](0, state[/* results */2]);
+                tmp = Rebase.$$Array[/* get */13](state[/* results */2], 0);
               }
               return /* Update */Block.__(0, [/* record */[
                           /* searchClient */state[/* searchClient */0],
@@ -147,11 +147,11 @@ function make() {
               var tmp$1;
               if (match$1) {
                 var p$1 = match$1[0];
-                tmp$1 = Rebase.$$Array[/* get */13](state[/* results */2].findIndex((function ($$this) {
+                tmp$1 = Rebase.$$Array[/* get */13](state[/* results */2], state[/* results */2].findIndex((function ($$this) {
                             return +($$this === p$1);
-                          })) - 1 | 0, state[/* results */2]);
+                          })));
               } else {
-                tmp$1 = Rebase.$$Array[/* get */13](Rebase.$$Array[/* length */12](state[/* results */2]) - 1 | 0, state[/* results */2]);
+                tmp$1 = Rebase.$$Array[/* get */13](state[/* results */2], Rebase.$$Array[/* length */12](state[/* results */2]) - 1 | 0);
               }
               return /* Update */Block.__(0, [/* record */[
                           /* searchClient */state[/* searchClient */0],
