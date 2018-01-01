@@ -37,11 +37,14 @@
     "develop": "gatsby develop",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js'",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy": "gatsby build && gh-pages -d public -b master"
+    "deploy": "gatsby build && gh-pages -d public -b master",
+    "fetch": "fetch_packages && fetch_unpublished && index_keywords",
+    "everything": "npm run fetch && npm run deploy"
   },
   "devDependencies": {
     "bs-platform": "^2.0.0",
     "gh-pages": "^1.1.0",
-    "reason-react": "^0.3.0"
+    "reason-react": "^0.3.0",
+    "redex-scripts": "glennsl/redex-scripts"
   }
 }
