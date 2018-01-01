@@ -1,0 +1,2 @@
+webpackJsonp([57269949779662],{1008:function(e,t){e.exports={data:{packages:{edges:[{node:{id:"bs-svg-attachment",updated:"2017-12-28T13:27:09.909Z",name:"bs-svg-attachment",version:"0.3.0",description:"Tiny SVG utilities",keywords:["svg","bucklescript"],license:"MIT",type:"published",stars:0,score:.543822579565986,quality:.6272671527454243,popularity:.022175805208455728,maintenance:.9939454340554263,slug:"packages/bs-svg-attachment"}}]}},pathContext:{keyword:"svg"}}}});
+//# sourceMappingURL=path---keywords-svg-9ebaa09b9ffd8e9c7e4c.js.map
