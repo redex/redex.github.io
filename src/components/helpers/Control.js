@@ -22,7 +22,7 @@ var $$Map = /* module */[
   /* make */make
 ];
 
-var component$1 = ReasonReact.statelessComponent("Control.Map");
+var component$1 = ReasonReact.statelessComponent("Control.IfSome");
 
 function make$1(option, render) {
   var newrecord = component$1.slice();

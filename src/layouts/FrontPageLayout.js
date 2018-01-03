@@ -30,7 +30,7 @@ function make(children, _) {
                       className: FrontPageLayoutStyles.links
                     }, React.createElement("div", {
                           className: CommonStyles.widthContainer
-                        }, React.createElement("soan", {
+                        }, React.createElement("span", {
                               className: "left"
                             }), ReasonReact.element(/* None */0, /* None */0, Link.make("/packages", /* None */0, /* None */0, /* array */[Helpers.text("Packages")])), ReasonReact.element(/* None */0, /* None */0, Link.make("/keywords", /* None */0, /* None */0, /* array */[Helpers.text("Keywords")])), ReasonReact.element(/* None */0, /* None */0, Link.make("/packages/unpublished", /* None */0, /* None */0, /* array */[Helpers.text("Unpublished")])), ReasonReact.element(/* None */0, /* None */0, Link.make("/", /* Some */[FrontPageLayoutStyles.inactiveLink], /* None */0, /* array */[Helpers.text("Documentation")])), React.createElement("span", {
                               className: "right"

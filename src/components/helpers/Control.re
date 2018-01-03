@@ -18,7 +18,7 @@ module Map = {
 };
 
 module IfSome = {
-  let component = ReasonReact.statelessComponent("Control.Map");
+  let component = ReasonReact.statelessComponent("Control.IfSome");
   let make = (~option: option('a),
               render: 'a => ReasonReact.reactElement) => {
     ...component,
