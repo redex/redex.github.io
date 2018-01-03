@@ -1,0 +1,2 @@
+webpackJsonp([0xf9f3dd2617e2],{1023:function(e,s){e.exports={data:{packages:{edges:[{node:{id:"bs-fetch",updated:"2017-12-22T23:43:18.645Z",name:"bs-fetch",version:"0.2.0",description:"Fetch bindings for BuckleScript",keywords:["browser","fetch","bucklescript","xhr"],license:"MIT",type:"published",stars:41,score:.5118027477087299,quality:.41157699648462687,popularity:.11832310463222792,maintenance:.9911901775487488,slug:"packages/bs-fetch"}}]}},pathContext:{keyword:"xhr"}}}});
+//# sourceMappingURL=path---keywords-xhr-3f9775da464d0d4ba2a1.js.map
