@@ -80,7 +80,8 @@
     
     "bs-humps",
     "reason-these",
-    "bs-react-notification-system"
+    "bs-react-notification-system",
+    "bs-downshift"
   ],
 
   "unpublished": [
