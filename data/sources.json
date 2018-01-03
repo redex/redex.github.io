@@ -1,5 +1,12 @@
 {
   "published": [
+    "@bs-blueprintjs/core",
+    "@bs-blueprintjs/table",
+    "@bs-blueprintjs/datetime",
+    "@bs-blueprintjs/labs",
+    "@glennsl/bs-jest",
+    "@glennsl/bs-json",
+    "@glennsl/rebase",
     "bs-webapi",
     "bs-director",
     "bs-fetch",
@@ -14,10 +21,6 @@
     "bs-rebass",
     "bs-glamor",
     "bs-snabbdom",
-    "@bs-blueprintjs/core",
-    "@bs-blueprintjs/table",
-    "@bs-blueprintjs/datetime",
-    "@bs-blueprintjs/labs",
     "reason-react-toolbox",
     "bs-react-pdf",
     "bs-react-intl",
@@ -35,11 +38,9 @@
 
     "bs-moment",
     "bs-axios",
-    "bs-json",
     "bs-numeral",
     "bs-most",
 
-    "bs-jest",
     "bs-react-test-renderer",
     "bs-enzyme",
 
@@ -54,7 +55,6 @@
     "reductive",
     "bs-ocaml-protoc-json",
     "bs-rebug",
-    "reason-rebase",
 
     "re-respect",
 
