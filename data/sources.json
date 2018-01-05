@@ -1,7 +1,4 @@
 {
-  "not-even-package.json": [
-    "IwanKaramazow/transducers.re"
-  ],
   "published": [
     "@bs-blueprintjs/core",
     "@bs-blueprintjs/datetime",
@@ -77,11 +74,46 @@
     "regql",
     "tween.re"
   ],
-  "published-prematurely": [
+  "unpublished": [
+    "af/bs-d3",
+    "AndrewKvalheim/bs-geofire",
+    "Astrocoders/bs-react-native-router-flux",
+    "Astrocoders/bs-reason-apollo",
+    "Astrocoders/reform",
+    "Astrocoders/restyled",
+    "aweary/reason-vue",
+    "bsansouci/rewebrtc",
+    "freebroccolo/bucklescript-electron",
+    "glennsl/bs-benchmarkjs",
+    "glennsl/infinite-jest",
+    "glennsl/quickiecheck",
+    "glennsl/refetch",
+    "reasonml-community/bs-discord.js",
+    "reasonml-community/bs-glob",
+    "reasonml-community/bs-history",
+    "reasonml-community/bs-immutablejs",
+    "reasonml-community/bs-leaflet",
+    "reasonml-community/bs-node",
+    "reasonml-community/bs-socket.io",
+    "reasonml-community/bs-transit-js",
+    "Risto-Stevcev/bs-abstract",
+    "Schmavery/reprocessing",
+    "splish-me/bs-storybook",
+    "state-machine-systems/JsonCodec",
+    "szymonzmyslony/reason-react-native-navigation",
+    "threepointone/bs-nice",
+    "TomLingham/bs-node-http",
+    "viebel/MetaTagsReRe",
+    "wokalski/vow",
+    "zploskey/bs-puppeteer"
+  ],
+  "prematurely-published": [
     "breytt",
     "bs-aeson",
     "bs-amplitude",
     "bs-analytics-node",
+    "bs-antd",
+    "bs-antd-design",
     "bs-apollo-server-express",
     "bs-async",
     "bs-css-core",
@@ -123,50 +155,22 @@
     "wonder-bs-jest",
     "wonder-bs-sinon"
   ],
-  "rejected": [
+  "prematurely-unpublished": [
+    "AlexSchwabauer/bs-raven",
+    "Astrocoders/bs-react-native-vector-icons"
+  ]
+  "obsolete": [
     "AndrewKvalheim/bs-chalk",
-    "bs-antd",
+    "bs-jest",
+    "bs-json",
     "bs-node-fetch",
-    "bs-readline-example",
     "bs-string",
     "glennsl/bs-debug",
     "reasonml-community/bs-containers"
+    "reason-rebase"
   ],
-  "unpublished": [
-    "af/bs-d3",
-    "AndrewKvalheim/bs-geofire",
-    "Astrocoders/bs-react-native-router-flux",
-    "Astrocoders/bs-reason-apollo",
-    "Astrocoders/reform",
-    "Astrocoders/restyled",
-    "aweary/reason-vue",
-    "bsansouci/rewebrtc",
-    "freebroccolo/bucklescript-electron",
-    "glennsl/bs-benchmarkjs",
-    "glennsl/infinite-jest",
-    "glennsl/quickiecheck",
-    "glennsl/refetch",
-    "reasonml-community/bs-discord.js",
-    "reasonml-community/bs-glob",
-    "reasonml-community/bs-history",
-    "reasonml-community/bs-immutablejs",
-    "reasonml-community/bs-leaflet",
-    "reasonml-community/bs-node",
-    "reasonml-community/bs-socket.io",
-    "reasonml-community/bs-transit-js",
-    "Risto-Stevcev/bs-abstract",
-    "Schmavery/reprocessing",
-    "splish-me/bs-storybook",
-    "state-machine-systems/JsonCodec",
-    "szymonzmyslony/reason-react-native-navigation",
-    "threepointone/bs-nice",
-    "TomLingham/bs-node-http",
-    "viebel/MetaTagsReRe",
-    "wokalski/vow",
-    "zploskey/bs-puppeteer"
-  ],
-  "unpublished-prematurely": [
-    "AlexSchwabauer/bs-raven",
-    "Astrocoders/bs-react-native-vector-icons"
+  "rejected": [
+    "bs-readline-example",
+    "IwanKaramazow/transducers.re"
   ]
 }
