@@ -52,7 +52,7 @@
     "bs-vscode",
     "bs-webapi",
     "bs-websockets",
-    "bs-webworkers"
+    "bs-webworkers",
     "bucklescript-phx",
     "bucklescript-tea",
     "clj-collection-apis-reasonml",
