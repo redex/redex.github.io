@@ -27,6 +27,7 @@
     "bs-humps",
     "bs-knex",
     "bs-little-parser",
+    "bs-luxon",
     "bs-material-ui",
     "bs-material-ui-icons",
     "bs-moment",
