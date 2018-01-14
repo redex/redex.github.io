@@ -1,0 +1,2 @@
+webpackJsonp([0x9c35875e59ef],{1015:function(e,a){e.exports={data:{packages:{edges:[{node:{id:"reductive",updated:"2018-01-12T07:25:52.391Z",name:"reductive",version:"0.2.0",description:"Redux in Reason",keywords:["redux","ocaml"],license:"MIT",type:"published",stars:null,score:.3374674601400127,quality:.7204545595064469,popularity:.01486776868275913,maintenance:.3317924949974656,slug:"packages/reductive"}}]}},pathContext:{keyword:"redux"}}}});
+//# sourceMappingURL=path---keywords-redux-534007e5125707f1f393.js.map
