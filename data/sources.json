@@ -30,6 +30,7 @@
     "bs-luxon",
     "bs-material-ui",
     "bs-material-ui-icons",
+    "bs-mysql",
     "bs-moment",
     "bs-mongodb",
     "bs-most",
