@@ -18,7 +18,7 @@ function make(data, _) {
   newrecord[/* render */9] = (function () {
       return React.createElement("div", {
                   className: IndexStyles.root
-                }, ReasonReact.element(/* None */0, /* None */0, SearchBox.make(/* array */[])), React.createElement("div", {
+                }, ReasonReact.element(/* None */0, /* None */0, SearchBox.make(/* Some */[/* true */1], /* array */[])), React.createElement("div", {
                       className: IndexStyles.keywords
                     }, ReasonReact.element(/* None */0, /* None */0, Curry._3(Vrroom.Control[/* Map */0][/* make */1], Graphql.getNodes(data.keywords), /* None */0, (function (keyword) {
                                 return ReasonReact.element(/* Some */[keyword.slug], /* None */0, Link.make(keyword.slug, /* None */0, /* None */0, /* array */[

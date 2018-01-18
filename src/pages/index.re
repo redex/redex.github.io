@@ -9,7 +9,7 @@ let make = (~data, _children) => {
   render: _self =>
     <div className=Styles.root>
 
-      <SearchBox />
+      <SearchBox focusOnMount=true />
 
       <div className=Styles.keywords>
         <Control.Map items=(data##keywords |> Graphql.getNodes)>

@@ -29,15 +29,23 @@ function decodeResult(json) {
 
 var component = ReasonReact.reducerComponent("PackageSearchBox");
 
-function make() {
+function make($staropt$star, _) {
+  var focusOnMount = $staropt$star ? $staropt$star[0] : /* false */0;
   var newrecord = component.slice();
   newrecord[/* didMount */4] = (function (param) {
+      var state = param[/* state */2];
       var reduce = param[/* reduce */1];
-      param[/* state */2][/* searchClient */0].on("result", (function (results, _) {
+      state[/* searchClient */0].on("result", (function (results, _) {
               return Curry._2(reduce, (function () {
                             return /* ResultsChanged */Block.__(1, [results.hits]);
                           }), /* () */0);
             }));
+      if (focusOnMount) {
+        Rebase.Option[/* forEach */8]((function (prim) {
+                prim.focus();
+                return /* () */0;
+              }), state[/* inputRef */4][0]);
+      }
       return /* NoUpdate */0;
     });
   newrecord[/* render */9] = (function (param) {
@@ -48,6 +56,10 @@ function make() {
                 }, React.createElement("div", {
                       className: SearchBoxStyles.fakeInput
                     }, ReasonReact.element(/* None */0, /* None */0, Icon.Search[/* make */0](/* Some */[SearchBoxStyles.searchIcon], /* array */[])), React.createElement("input", {
+                          ref: Curry._1(param[/* handle */0], (function (r, param) {
+                                  param[/* state */2][/* inputRef */4][0] = (r == null) ? /* None */0 : [r];
+                                  return /* () */0;
+                                })),
                           className: SearchBoxStyles.input,
                           placeholder: "Search packages",
                           value: state[/* query */1],
@@ -72,7 +84,8 @@ function make() {
               /* searchClient */AlgoliasearchHelper(Algoliasearch(Config.Search[/* appId */0], Config.Search[/* apiKey */1]), Config.Search[/* packageIndex */2]),
               /* query */"",
               /* results : array */[],
-              /* focused : None */0
+              /* focused : None */0,
+              /* inputRef */[/* None */0]
             ];
     });
   newrecord[/* reducer */12] = (function (action, state) {
@@ -84,7 +97,8 @@ function make() {
                           /* searchClient */state[/* searchClient */0],
                           /* query */query,
                           /* results : array */[],
-                          /* focused : None */0
+                          /* focused : None */0,
+                          /* inputRef */state[/* inputRef */4]
                         ]]);
             } else {
               return /* UpdateWithSideEffects */Block.__(3, [
@@ -92,7 +106,8 @@ function make() {
                           /* searchClient */state[/* searchClient */0],
                           /* query */query,
                           /* results */state[/* results */2],
-                          /* focused */state[/* focused */3]
+                          /* focused */state[/* focused */3],
+                          /* inputRef */state[/* inputRef */4]
                         ],
                         (function (param) {
                             param[/* state */2][/* searchClient */0].setQuery(query).search();
@@ -107,7 +122,8 @@ function make() {
                         /* searchClient */state[/* searchClient */0],
                         /* query */state[/* query */1],
                         /* results */results,
-                        /* focused */Rebase.$$Array[/* get */17](results, 0)
+                        /* focused */Rebase.$$Array[/* get */17](results, 0),
+                        /* inputRef */state[/* inputRef */4]
                       ]]);
         case 2 : 
             var $$package = action[0];
@@ -116,7 +132,8 @@ function make() {
                         /* searchClient */state[/* searchClient */0],
                         /* query */"",
                         /* results : array */[],
-                        /* focused : None */0
+                        /* focused : None */0,
+                        /* inputRef */state[/* inputRef */4]
                       ],
                       (function () {
                           GatsbyLink.navigateTo($$package.slug);
@@ -136,7 +153,8 @@ function make() {
                                               return Rebase.$$Array[/* findIndex */29]((function ($$this) {
                                                             return +($$this === p);
                                                           }), state[/* results */2]);
-                                            }), state[/* focused */3]))))
+                                            }), state[/* focused */3])))),
+                          /* inputRef */state[/* inputRef */4]
                         ]]);
             } else if (key === 38) {
               return /* Update */Block.__(0, [/* record */[
@@ -149,7 +167,8 @@ function make() {
                                               return Rebase.$$Array[/* findIndex */29]((function ($$this) {
                                                             return +($$this === p);
                                                           }), state[/* results */2]);
-                                            }), state[/* focused */3]))))
+                                            }), state[/* focused */3])))),
+                          /* inputRef */state[/* inputRef */4]
                         ]]);
             } else if (key === 13) {
               return /* SideEffects */Block.__(2, [(function (self) {

@@ -4,6 +4,8 @@ module Control = Vrroom.Control;
 module Styles = SearchBoxStyles;
 module Config = Config.Search;
 
+[@bs.send] external focus : Dom.element => unit = "";
+
 module Key = {
   let down = 40;
   let up = 38;
@@ -14,7 +16,8 @@ type state = {
   searchClient: Algolia.Helper.t,
   query: string,
   results: array(SearchResultItem.t),
-  focused: option(SearchResultItem.t)
+  focused: option(SearchResultItem.t),
+  inputRef: ref(option(Dom.element))
 };
 
 type action =
@@ -29,14 +32,15 @@ let decodeResult = json =>
        |> r => Js.Obj.assign({ "slug": "/packages/" ++ r##id }, r);
 
 let component = ReasonReact.reducerComponent("PackageSearchBox");
-let make = _children => {
+let make = (~focusOnMount=false, _children) => {
   ...component,
 
   initialState: () => {
     searchClient: Algolia.Helper.make(Algolia.makeClient(Config.appId, Config.apiKey), Config.packageIndex),
     query: "",
     results: [||],
-    focused: None
+    focused: None,
+    inputRef: ref(None)
   },
   reducer: (action, state) =>
     switch action {
@@ -101,10 +105,15 @@ let make = _children => {
     state.searchClient |> Algolia.Helper.on(`result(
       (results, _) => reduce(() => ResultsChanged(results##hits))()
     )) |> ignore;
+
+    if (focusOnMount) {
+      state.inputRef^ |> Option.forEach(focus);
+    };
+
     ReasonReact.NoUpdate
   },
 
-  render: ({ state, reduce }) =>
+  render: ({ state, reduce, handle }) =>
     <div className=Styles.root>
 
       <div className=Styles.fakeInput>
@@ -113,7 +122,8 @@ let make = _children => {
                placeholder = "Search packages"
                value       = state.query
                onChange    = reduce(e => QueryChanged(Obj.magic(e)##target##value))
-               onKeyDown   = reduce(e => KeyDown(Obj.magic(e)##keyCode)) />
+               onKeyDown   = reduce(e => KeyDown(Obj.magic(e)##keyCode))
+               ref         = handle((r, { state }) => state.inputRef := Js.toOption(r)) />
       </div>
 
       <div className=Styles.results>

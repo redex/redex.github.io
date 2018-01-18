@@ -30,7 +30,7 @@ function make(children, _) {
                       className: IndexLayoutStyles.header
                     }, React.createElement("div", {
                           className: CommonStyles.widthContainer
-                        }, ReasonReact.element(/* None */0, /* None */0, SearchBox.make(/* array */[])), ReasonReact.element(/* None */0, /* None */0, Link.make("/", /* Some */[IndexLayoutStyles.title], /* None */0, /* array */[React.createElement("svg", {
+                        }, ReasonReact.element(/* None */0, /* None */0, SearchBox.make(/* None */0, /* array */[])), ReasonReact.element(/* None */0, /* None */0, Link.make("/", /* Some */[IndexLayoutStyles.title], /* None */0, /* array */[React.createElement("svg", {
                                         className: IndexLayoutStyles.logo
                                       }, React.createElement("use", {
                                             href: "/logo.svg#logo",
