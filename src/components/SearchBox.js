@@ -126,38 +126,30 @@ function make() {
         case 3 : 
             var key = action[0];
             if (key === 40) {
-              var match = state[/* focused */3];
-              var tmp;
-              if (match) {
-                var p = match[0];
-                tmp = Rebase.$$Array[/* get */17](state[/* results */2], state[/* results */2].findIndex((function ($$this) {
-                            return +($$this === p);
-                          })) + 1 | 0);
-              } else {
-                tmp = Rebase.$$Array[/* get */17](state[/* results */2], 0);
-              }
               return /* Update */Block.__(0, [/* record */[
                           /* searchClient */state[/* searchClient */0],
                           /* query */state[/* query */1],
                           /* results */state[/* results */2],
-                          /* focused */tmp
+                          /* focused */Rebase.$$Array[/* get */17](state[/* results */2], Rebase.Option[/* getOr */16](0, Rebase.Option[/* map */0]((function (param) {
+                                          return param[0] + 1 | 0;
+                                        }), Rebase.Option[/* flatMap */5]((function (p) {
+                                              return Rebase.$$Array[/* findIndex */29]((function ($$this) {
+                                                            return +($$this === p);
+                                                          }), state[/* results */2]);
+                                            }), state[/* focused */3]))))
                         ]]);
             } else if (key === 38) {
-              var match$1 = state[/* focused */3];
-              var tmp$1;
-              if (match$1) {
-                var p$1 = match$1[0];
-                tmp$1 = Rebase.$$Array[/* get */17](state[/* results */2], state[/* results */2].findIndex((function ($$this) {
-                            return +($$this === p$1);
-                          })));
-              } else {
-                tmp$1 = Rebase.$$Array[/* get */17](state[/* results */2], Rebase.$$Array[/* length */16](state[/* results */2]) - 1 | 0);
-              }
               return /* Update */Block.__(0, [/* record */[
                           /* searchClient */state[/* searchClient */0],
                           /* query */state[/* query */1],
                           /* results */state[/* results */2],
-                          /* focused */tmp$1
+                          /* focused */Rebase.$$Array[/* get */17](state[/* results */2], Rebase.Option[/* getOr */16](Rebase.$$Array[/* length */16](state[/* results */2]) - 1 | 0, Rebase.Option[/* map */0]((function (param) {
+                                          return param[0] - 1 | 0;
+                                        }), Rebase.Option[/* flatMap */5]((function (p) {
+                                              return Rebase.$$Array[/* findIndex */29]((function ($$this) {
+                                                            return +($$this === p);
+                                                          }), state[/* results */2]);
+                                            }), state[/* focused */3]))))
                         ]]);
             } else if (key === 13) {
               return /* SideEffects */Block.__(2, [(function (self) {
@@ -170,7 +162,6 @@ function make() {
             } else {
               return /* NoUpdate */0;
             }
-            break;
         
       }
     });

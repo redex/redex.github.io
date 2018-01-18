@@ -1,5 +1,5 @@
-open Rebase;
-open Vrroom.Helpers;
+open! Rebase;
+open! Vrroom.Helpers;
 module Control = Vrroom.Control;
 module Styles = SearchBoxStyles;
 module Config = Config.Search;
@@ -73,22 +73,20 @@ let make = _children => {
       if (key === Key.down) {
         ReasonReact.Update({
           ...state,
-          focused: switch state.focused {
-                   | None =>
-                     state.results[0]
-                   | Some(p) =>
-                     state.results[Js.Array.findIndex(this => this === p, state.results) + 1]
-                   }
+          focused:
+            state.focused |> Option.flatMap(p => Array.findIndex(this => this === p, state.results))
+                          |> Option.map(((i, _)) => i + 1)
+                          |> Option.getOr(0)
+                          |> Array.get(state.results)
         })
       } else if (key === Key.up) {
         ReasonReact.Update({
           ...state,
-          focused: switch state.focused {
-                   | None =>
-                     state.results[Array.length(state.results) - 1]
-                   | Some(p) =>
-                     state.results[Js.Array.findIndex(this => this === p, state.results)]
-                   }
+          focused:
+            state.focused |> Option.flatMap(p => Array.findIndex(this => this === p, state.results))
+                          |> Option.map(((i, _)) => i - 1)
+                          |> Option.getOr(Array.length(state.results) - 1)
+                          |> Array.get(state.results)
         })
       } else if (key === Key.enter) {
         ReasonReact.SideEffects(

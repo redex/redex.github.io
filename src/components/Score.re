@@ -1,5 +1,4 @@
 open! Vrroom.Helpers;
-
 module Styles = ScoreStyles;
 
 let formatPercentage = number =>

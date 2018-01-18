@@ -1,5 +1,4 @@
 open! Vrroom.Helpers;
-
 module Styles = FooterStyles;
 
 let component = ReasonReact.statelessComponent("Footer");
