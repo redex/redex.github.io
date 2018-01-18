@@ -15,6 +15,8 @@ var ReasonReact   = require("reason-react/src/ReasonReact.js");
 var Js_primitive  = require("bs-platform/lib/js/js_primitive.js");
 var PackageStyles = require("../styles/PackageStyles.js");
 
+((require('../../static/hljs.css')));
+
 var component = ReasonReact.statelessComponent("Package");
 
 function make(data, _) {
@@ -136,4 +138,4 @@ exports.make      = make;
 exports.$$default = $$default;
 exports.default   = $$default;
 exports.__esModule= true;
-/* component Not a pure module */
+/*  Not a pure module */

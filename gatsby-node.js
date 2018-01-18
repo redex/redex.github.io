@@ -1,7 +1,9 @@
 const path = require(`path`);
 const crypto = require(`crypto`)
-var remark = require('remark');
-var html = require('remark-html');
+const remark = require('remark');
+const html = require('remark-html');
+const visit = require(`unist-util-visit`);
+const hljs = require('./hljs');
     
 exports.onCreateNode = async ({ node, loadNodeContent, boundActionCreators: { createNode, createParentChildLink } }) => {
   function transformObject(obj, type) {
@@ -34,6 +36,23 @@ exports.onCreateNode = async ({ node, loadNodeContent, boundActionCreators: { cr
 
       await new Promise(resolve => 
         remark()
+          .use(() => ast => {
+            visit(ast, 'code', node => {
+              const language = node.lang && node.lang.toLowerCase();
+
+              const html =
+                hljs.getLanguage(language) ?
+                  hljs.highlight(language, node.value).value :
+                  hljs.highlightAuto(node.value).value;
+
+              node.type = 'html'
+              node.value = `<div class="gatsby-highlight">
+                <pre class="hljs lang-${language || 'none'}"><code>${html}</code></pre>
+                </div>`
+            });
+
+            return ast;
+          })
           .use(html)
           .process(package.readme, function (err, file) {
             package.readme = file.contents;

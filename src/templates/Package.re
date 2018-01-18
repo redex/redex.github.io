@@ -2,6 +2,8 @@ open Vrroom.Helpers;
 module Control = Vrroom.Control;
 module Styles = PackageStyles;
 
+[%raw "require('../../static/hljs.css')"];
+
 let component = ReasonReact.statelessComponent("Package");
 let make = (~data, _children) => {
   ...component,
