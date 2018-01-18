@@ -32,6 +32,23 @@ let html = style [
     marginBottom (rem 1.45);
   ];
 
+  selector "& h1, & h2, & h3, & h4, & h5" [
+    selector "& > a.anchor" [
+      marginLeft (px (-20));
+      paddingRight (px 4);
+
+      selector "& > svg" [
+        visibility Hidden;
+      ]
+    ];
+
+    hover [
+      selector "& > a.anchor > svg" [
+        visibility Visible;
+      ];
+    ]
+  ];
+
   selector "& p" [
     marginBottom (rem 1.45);
 
