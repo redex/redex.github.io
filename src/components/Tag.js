@@ -101,12 +101,15 @@ var style = Css.style(/* :: */[
                 /* :: */[
                   Css.unsafe("padding", "0 1ex"),
                   /* :: */[
-                    Css.textDecoration(/* None */0),
+                    Css.textDecorationLine(/* None */0),
                     /* :: */[
                       Css.hover(/* :: */[
                             Css.opacity(1),
                             /* :: */[
-                              Css.unsafe("textDecoration", "underline"),
+                              Css.textDecorationLine(/* Values */[/* :: */[
+                                      /* Underline */0,
+                                      /* [] */0
+                                    ]]),
                               /* [] */0
                             ]
                           ]),

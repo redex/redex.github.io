@@ -17,7 +17,7 @@ function root(type_, isFocused) {
                     /* :: */[
                       Css.borderTop(Css.px(1), /* Solid */2, Theme.Color[/* subtleBorder */6]),
                       /* :: */[
-                        Css.cursor(/* Pointer */1),
+                        Css.cursor(/* Pointer */5),
                         /* :: */[
                           Css.hover(/* :: */[
                                 Css.unsafe("backgroundColor", "hsl(6.9, 0%, 90%)"),

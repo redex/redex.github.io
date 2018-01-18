@@ -7,10 +7,10 @@ let root = style [
 ]
 
 let name = style [
-  textDecoration None;
+  textDecorationLine None;
 
   hover [
-    unsafe "textDecoration" "underline";
+    textDecorationLine (Values [Underline])
   ];
 ]
 

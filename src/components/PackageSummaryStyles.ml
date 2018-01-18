@@ -19,10 +19,10 @@ let header = style [
 let name = style [
   color Theme.Color.link;
   fontSize (em 1.1);
-  textDecoration None;
+  textDecorationLine None;
 
   hover [
-    unsafe "textDecoration" "underline";
+    textDecorationLine (Values [Underline]);
   ];
 ]
 

@@ -116,10 +116,10 @@ let html = style [
 
   selector "& a" [
     color Theme.Color.link;
-    textDecoration None;
+    textDecorationLine None;
 
     selector "&:hover" [
-      unsafe "textDecoration" "underline";
+      textDecorationLine (Values [Underline])
     ];
   ];
 ]

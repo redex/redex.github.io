@@ -4,7 +4,7 @@
 var React          = require("react");
 var Config         = require("../Config.js");
 var Helmet         = require("../bindings/gatsby/helmet.js");
-var Rebase         = require("@glennsl/rebase/src/rebase.bs.js");
+var Rebase         = require("@glennsl/rebase/src/Rebase.bs.js");
 var Control        = require("../components/helpers/Control.js");
 var Graphql        = require("../utils/Graphql.js");
 var Helpers        = require("../utils/Helpers.js");
@@ -13,14 +13,14 @@ var ReasonReact    = require("reason-react/src/ReasonReact.js");
 var PackageSummary = require("../components/PackageSummary.js");
 
 function getPackages(keyword) {
-  return Rebase.$$Array[/* map */2](Rebase.Option[/* getOrRaise */15], Rebase.$$Array[/* filter */10]((function (param) {
+  return Rebase.$$Array[/* map */0](Rebase.Option[/* getOrRaise */17], Rebase.$$Array[/* filter */10]((function (param) {
                       if (param) {
                         return /* true */1;
                       } else {
                         console.log("missing package on keyword: " + keyword.name);
                         return /* false */0;
                       }
-                    }), Rebase.$$Array[/* map */2]((function (prim) {
+                    }), Rebase.$$Array[/* map */0]((function (prim) {
                           if (prim == null) {
                             return /* None */0;
                           } else {

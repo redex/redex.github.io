@@ -16,10 +16,13 @@ var root = Css.style(/* :: */[
     ]);
 
 var name = Css.style(/* :: */[
-      Css.textDecoration(/* None */0),
+      Css.textDecorationLine(/* None */0),
       /* :: */[
         Css.hover(/* :: */[
-              Css.unsafe("textDecoration", "underline"),
+              Css.textDecorationLine(/* Values */[/* :: */[
+                      /* Underline */0,
+                      /* [] */0
+                    ]]),
               /* [] */0
             ]),
         /* [] */0

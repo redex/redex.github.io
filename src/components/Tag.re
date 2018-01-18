@@ -14,21 +14,25 @@ let colors = [|
   "#bf723f","#cc7f65","#bf8c3f","#cc9965","#bfa53f","#ccb265"
 |];
 
-let style = Css.(style([
-  display(InlineBlock),
-  opacity(0.75),
-  fontSize(em(0.85)),
-  marginLeft(em(0.5)),
-  unsafe("whiteSpace", "nowrap"),
-  backgroundColor(hex("fff3")),
-  unsafe("padding", "0 1ex"),
-  textDecoration(None),
+let style = {
+  open! Css;
+  
+  style([
+    display(InlineBlock),
+    opacity(0.75),
+    fontSize(em(0.85)),
+    marginLeft(em(0.5)),
+    unsafe("whiteSpace", "nowrap"),
+    backgroundColor(hex("fff3")),
+    unsafe("padding", "0 1ex"),
+    textDecorationLine(None),
 
-  hover([
-    opacity(1.),
-    unsafe("textDecoration", "underline"),
+    hover([
+      opacity(1.),
+      textDecorationLine(Values([Underline])),
+    ])
   ])
-]));
+};
 
 let makeStyle = name =>
   ReactDOMRe.Style.make(

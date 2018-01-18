@@ -43,11 +43,11 @@ let owner = style [
 let name = style [
   fontSize (rem 1.5);
   fontWeight Bold;
-  textDecoration None;
+  textDecorationLine None;
   lineHeight (em 1.45);
 
   selector "&:hover" [
-    unsafe "textDecoration" "underline"
+    textDecorationLine (Values [Underline])
   ];
 ]
 
@@ -139,16 +139,16 @@ let links = style [
   marginTop (em 3.);
 
   selector "& > a" [
-    textDecoration None;
+    textDecorationLine None;
     marginRight (em 2.);
     unsafe "fontVariant" "small-caps";
 
     selector "&:hover" [
-      unsafe "textDecoration" "underline";
+      textDecorationLine (Values [Underline])
     ];
 
     selector "&:not([href])" [
-      textDecoration None;
+      textDecorationLine None;
       opacity 0.25;
     ];
   ];

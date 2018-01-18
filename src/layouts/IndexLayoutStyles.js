@@ -50,7 +50,7 @@ var title = Css.style(/* :: */[
                     Css.selector("&:hover > svg", /* :: */[
                           Css.transform(Css.rotateZ(Css.deg(15))),
                           /* :: */[
-                            Css.cursor(/* Pointer */1),
+                            Css.cursor(/* Pointer */5),
                             /* [] */0
                           ]
                         ]),

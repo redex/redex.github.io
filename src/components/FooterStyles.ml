@@ -39,7 +39,7 @@ let root context = style [
       ];
 
       selector "& a" [
-        textDecoration None;
+        textDecorationLine None;
         fontSize (rem 0.85);
         opacity 0.75;
 

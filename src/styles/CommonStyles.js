@@ -206,10 +206,13 @@ var html = Css.style(/* :: */[
                               Css.selector("& a", /* :: */[
                                     Css.color(Theme.Color[/* link */5]),
                                     /* :: */[
-                                      Css.textDecoration(/* None */0),
+                                      Css.textDecorationLine(/* None */0),
                                       /* :: */[
                                         Css.selector("&:hover", /* :: */[
-                                              Css.unsafe("textDecoration", "underline"),
+                                              Css.textDecorationLine(/* Values */[/* :: */[
+                                                      /* Underline */0,
+                                                      /* [] */0
+                                                    ]]),
                                               /* [] */0
                                             ]),
                                         /* [] */0

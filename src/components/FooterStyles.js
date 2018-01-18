@@ -61,7 +61,7 @@ function root(context) {
                                                   ]),
                                               /* :: */[
                                                 Css.selector("& a", /* :: */[
-                                                      Css.textDecoration(/* None */0),
+                                                      Css.textDecorationLine(/* None */0),
                                                       /* :: */[
                                                         Css.fontSize(Css.rem(0.85)),
                                                         /* :: */[

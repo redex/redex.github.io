@@ -3,7 +3,7 @@
 
 var Block       = require("bs-platform/lib/js/block.js");
 var Curry       = require("bs-platform/lib/js/curry.js");
-var Rebase      = require("@glennsl/rebase/src/rebase.bs.js");
+var Rebase      = require("@glennsl/rebase/src/Rebase.bs.js");
 var ReactDom    = require("react-dom");
 var RefCatcher  = require("./RefCatcher.js");
 var ReasonReact = require("reason-react/src/ReasonReact.js");

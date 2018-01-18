@@ -50,7 +50,7 @@ var links = Css.style(/* :: */[
                       Css.selector("& a", /* :: */[
                             Css.unsafe("fontVariant", "small-caps"),
                             /* :: */[
-                              Css.textDecoration(/* None */0),
+                              Css.textDecorationLine(/* None */0),
                               /* :: */[
                                 Css.textTransform(/* Lowercase */2),
                                 /* :: */[

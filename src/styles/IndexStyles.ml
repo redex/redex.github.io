@@ -11,7 +11,7 @@ open! Css
 
     selector "& > a" [
       display InlineBlock;
-      unsafe "textDecoration" "none";
+      textDecorationLine None;
       unsafe "margin" "0 1ex";
       unsafe "whiteSpace" "nowrap";
 
@@ -21,7 +21,7 @@ open! Css
       ];
 
       selector "&:hover > .label" [
-        unsafe "textDecoration" "underline";
+        textDecorationLine (Values [Underline])
       ];
     ];
   ]
@@ -31,7 +31,7 @@ open! Css
 
     selector "& > a" [
       fontSize (rem 0.85);
-      textDecoration None;
+      textDecorationLine None;
       unsafe "margin" "0 1em";
 
       selector "&:hover" [

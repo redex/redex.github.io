@@ -29,7 +29,7 @@ let links = style [
 
     selector "& a" [
       unsafe "fontVariant" "small-caps";
-      textDecoration None;
+      textDecorationLine None;
       textTransform Lowercase;
       unsafe "margin" "0 1em";
       opacity 0.75;

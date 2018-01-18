@@ -40,10 +40,13 @@ var name = Css.style(/* :: */[
       /* :: */[
         Css.fontSize(Css.em(1.1)),
         /* :: */[
-          Css.textDecoration(/* None */0),
+          Css.textDecorationLine(/* None */0),
           /* :: */[
             Css.hover(/* :: */[
-                  Css.unsafe("textDecoration", "underline"),
+                  Css.textDecorationLine(/* Values */[/* :: */[
+                          /* Underline */0,
+                          /* [] */0
+                        ]]),
                   /* [] */0
                 ]),
             /* [] */0

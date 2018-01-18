@@ -4,22 +4,23 @@
   "version": "1.0.0",
   "author": "glennsl",
   "dependencies": {
-    "algoliasearch": "^3.24.7",
-    "algoliasearch-helper": "^2.23.0",
-    "bs-css": "^5.0.0",
-    "gatsby": "^1.9.17",
-    "gatsby-link": "^1.6.15",
+    "@glennsl/rebase": "^0.2.0",
+    "algoliasearch": "^3.24.9",
+    "algoliasearch-helper": "^2.23.2",
+    "bs-css": "^5.4.0",
+    "gatsby": "^1.9.158",
+    "gatsby-link": "^1.6.34",
     "gatsby-plugin-favicon": "^2.1.1",
     "gatsby-plugin-glamor": "^1.6.10",
-    "gatsby-plugin-react-helmet": "^1.0.5",
-    "gatsby-source-filesystem": "^1.5.9",
-    "gatsby-transformer-json": "^1.0.13",
+    "gatsby-plugin-react-helmet": "^2.0.3",
+    "gatsby-source-filesystem": "^1.5.11",
+    "gatsby-transformer-json": "^1.0.14",
     "glamor-reset": "^3.0.0-3",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-icons": "^2.2.7",
     "react-timeago": "^3.4.3",
-    "@glennsl/rebase":"^0.1.4",
+    "react-helmet": "^5.2.0",
     "remark": "^8.0.0",
     "remark-html": "^7.0.0"
   },
@@ -45,7 +46,7 @@
   "devDependencies": {
     "bs-platform": "^2.0.0",
     "gh-pages": "^1.1.0",
-    "reason-react": "^0.3.0",
+    "reason-react": "^0.3.1",
     "redex-scripts": "redex/redex-scripts"
   }
 }

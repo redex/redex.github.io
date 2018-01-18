@@ -18,7 +18,7 @@ var keywords = Css.style(/* :: */[
             Css.selector("& > a", /* :: */[
                   Css.display(/* InlineBlock */11),
                   /* :: */[
-                    Css.unsafe("textDecoration", "none"),
+                    Css.textDecorationLine(/* None */0),
                     /* :: */[
                       Css.unsafe("margin", "0 1ex"),
                       /* :: */[
@@ -33,7 +33,10 @@ var keywords = Css.style(/* :: */[
                               ]),
                           /* :: */[
                             Css.selector("&:hover > .label", /* :: */[
-                                  Css.unsafe("textDecoration", "underline"),
+                                  Css.textDecorationLine(/* Values */[/* :: */[
+                                          /* Underline */0,
+                                          /* [] */0
+                                        ]]),
                                   /* [] */0
                                 ]),
                             /* [] */0
@@ -55,7 +58,7 @@ var links = Css.style(/* :: */[
         Css.selector("& > a", /* :: */[
               Css.fontSize(Css.rem(0.85)),
               /* :: */[
-                Css.textDecoration(/* None */0),
+                Css.textDecorationLine(/* None */0),
                 /* :: */[
                   Css.unsafe("margin", "0 1em"),
                   /* :: */[

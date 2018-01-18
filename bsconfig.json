@@ -1,5 +1,5 @@
 {
-  "name": "reindex-web",
+  "name": "redex",
   "package-specs": [{
     "module": "commonjs",
     "in-source": true

@@ -88,12 +88,15 @@ var name = Css.style(/* :: */[
       /* :: */[
         Css.fontWeight(/* Bold */1),
         /* :: */[
-          Css.textDecoration(/* None */0),
+          Css.textDecorationLine(/* None */0),
           /* :: */[
             Css.lineHeight(Css.em(1.45)),
             /* :: */[
               Css.selector("&:hover", /* :: */[
-                    Css.unsafe("textDecoration", "underline"),
+                    Css.textDecorationLine(/* Values */[/* :: */[
+                            /* Underline */0,
+                            /* [] */0
+                          ]]),
                     /* [] */0
                   ]),
               /* [] */0
@@ -172,7 +175,7 @@ var tags = Css.style(/* :: */[
                     Css.selector("&:hover", /* :: */[
                           Css.backgroundColor(Theme.Inverted[/* Color */0][/* highlightedBlock */3]),
                           /* :: */[
-                            Css.cursor(/* Pointer */1),
+                            Css.cursor(/* Pointer */5),
                             /* [] */0
                           ]
                         ]),
@@ -263,19 +266,22 @@ var links = Css.style(/* :: */[
       Css.marginTop(Css.em(3)),
       /* :: */[
         Css.selector("& > a", /* :: */[
-              Css.textDecoration(/* None */0),
+              Css.textDecorationLine(/* None */0),
               /* :: */[
                 Css.marginRight(Css.em(2)),
                 /* :: */[
                   Css.unsafe("fontVariant", "small-caps"),
                   /* :: */[
                     Css.selector("&:hover", /* :: */[
-                          Css.unsafe("textDecoration", "underline"),
+                          Css.textDecorationLine(/* Values */[/* :: */[
+                                  /* Underline */0,
+                                  /* [] */0
+                                ]]),
                           /* [] */0
                         ]),
                     /* :: */[
                       Css.selector("&:not([href])", /* :: */[
-                            Css.textDecoration(/* None */0),
+                            Css.textDecorationLine(/* None */0),
                             /* :: */[
                               Css.opacity(0.25),
                               /* [] */0
