@@ -1,4 +1,5 @@
-open! Helpers;
+open Vrroom.Helpers;
+module Control = Vrroom.Control;
 
 let component = ReasonReact.statelessComponent("Package");
 let make = (~data, ~pathContext, _children) => {

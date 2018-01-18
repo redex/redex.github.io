@@ -4,7 +4,7 @@
 var Css         = require("bs-css/src/Css.js");
 var Link        = require("../bindings/gatsby/link.js");
 var Utils       = require("../utils/Utils.js");
-var Helpers     = require("../utils/Helpers.js");
+var Vrroom      = require("vrroom/src/Vrroom.bs.js");
 var ReasonReact = require("reason-react/src/ReasonReact.js");
 
 var colors = /* array */[
@@ -135,7 +135,7 @@ var component = ReasonReact.statelessComponent("Tag");
 function make(name, _) {
   var newrecord = component.slice();
   newrecord[/* render */9] = (function () {
-      return ReasonReact.element(/* None */0, /* None */0, Link.make("/keywords/" + name, /* Some */[style], /* None */0, /* array */[Helpers.text(name)]));
+      return ReasonReact.element(/* None */0, /* None */0, Link.make("/keywords/" + name, /* Some */[style], /* None */0, /* array */[Vrroom.Helpers[/* text */0](name)]));
     });
   return newrecord;
 }

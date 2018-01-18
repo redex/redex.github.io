@@ -1,5 +1,4 @@
-open! Helpers;
-
+open! Vrroom.Helpers;
 module Styles = TooltipStyles;
 
 let component = ReasonReact.reducerComponent("Tooltip");

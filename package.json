@@ -18,11 +18,12 @@
     "glamor-reset": "^3.0.0-3",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
+    "react-helmet": "^5.2.0",
     "react-icons": "^2.2.7",
     "react-timeago": "^3.4.3",
-    "react-helmet": "^5.2.0",
     "remark": "^8.0.0",
-    "remark-html": "^7.0.0"
+    "remark-html": "^7.0.0",
+    "vrroom": "github:glennsl/vrroom"
   },
   "keywords": [
     "reason",

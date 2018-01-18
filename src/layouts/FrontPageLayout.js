@@ -6,7 +6,7 @@ var Curry                 = require("bs-platform/lib/js/curry.js");
 var React                 = require("react");
 var Footer                = require("../components/Footer.js");
 var Helmet                = require("../bindings/gatsby/helmet.js");
-var Helpers               = require("../utils/Helpers.js");
+var Vrroom                = require("vrroom/src/Vrroom.bs.js");
 var ReasonReact           = require("reason-react/src/ReasonReact.js");
 var CommonStyles          = require("../styles/CommonStyles.js");
 var FrontPageLayoutStyles = require("./FrontPageLayoutStyles.js");
@@ -32,9 +32,9 @@ function make(children, _) {
                           className: CommonStyles.widthContainer
                         }, React.createElement("span", {
                               className: "left"
-                            }), ReasonReact.element(/* None */0, /* None */0, Link.make("/packages", /* None */0, /* None */0, /* array */[Helpers.text("Packages")])), ReasonReact.element(/* None */0, /* None */0, Link.make("/keywords", /* None */0, /* None */0, /* array */[Helpers.text("Keywords")])), ReasonReact.element(/* None */0, /* None */0, Link.make("/packages/unpublished", /* None */0, /* None */0, /* array */[Helpers.text("Unpublished")])), ReasonReact.element(/* None */0, /* None */0, Link.make("/", /* Some */[FrontPageLayoutStyles.inactiveLink], /* None */0, /* array */[Helpers.text("Documentation")])), React.createElement("span", {
+                            }), ReasonReact.element(/* None */0, /* None */0, Link.make("/packages", /* None */0, /* None */0, /* array */[Vrroom.Helpers[/* text */0]("Packages")])), ReasonReact.element(/* None */0, /* None */0, Link.make("/keywords", /* None */0, /* None */0, /* array */[Vrroom.Helpers[/* text */0]("Keywords")])), ReasonReact.element(/* None */0, /* None */0, Link.make("/packages/unpublished", /* None */0, /* None */0, /* array */[Vrroom.Helpers[/* text */0]("Unpublished")])), ReasonReact.element(/* None */0, /* None */0, Link.make("/", /* Some */[FrontPageLayoutStyles.inactiveLink], /* None */0, /* array */[Vrroom.Helpers[/* text */0]("Documentation")])), React.createElement("span", {
                               className: "right"
-                            }, ReasonReact.element(/* None */0, /* None */0, Link.make("/publish", /* Some */[FrontPageLayoutStyles.publishLink], /* None */0, /* array */[Helpers.text("Get Published")]))))), React.createElement("div", {
+                            }, ReasonReact.element(/* None */0, /* None */0, Link.make("/publish", /* Some */[FrontPageLayoutStyles.publishLink], /* None */0, /* array */[Vrroom.Helpers[/* text */0]("Get Published")]))))), React.createElement("div", {
                       className: FrontPageLayoutStyles.header
                     }, React.createElement("div", {
                           className: CommonStyles.widthContainer
@@ -46,7 +46,7 @@ function make(children, _) {
                                       href: "/logo.svg#logo",
                                       xlinkHref: "/logo.svg#logo",
                                       xmlnsXlink: "http://www.w3.org/1999/xlink"
-                                    })), React.createElement("em", undefined, Helpers.text("re")), Helpers.text("ason package in"), React.createElement("em", undefined, Helpers.text("dex"))))), React.createElement("div", {
+                                    })), React.createElement("em", undefined, Vrroom.Helpers[/* text */0]("re")), Vrroom.Helpers[/* text */0]("ason package in"), React.createElement("em", undefined, Vrroom.Helpers[/* text */0]("dex"))))), React.createElement("div", {
                       className: CommonStyles.widthContainer
                     }, Curry._1(children, /* () */0)), ReasonReact.element(/* None */0, /* None */0, Footer.make(/* Front */431720585, /* array */[])));
     });

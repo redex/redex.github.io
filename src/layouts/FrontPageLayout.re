@@ -1,5 +1,4 @@
-open! Helpers;
-
+open! Vrroom.Helpers;
 module Styles = FrontPageLayoutStyles;
 
 let component = ReasonReact.statelessComponent("FrontPageLayout");

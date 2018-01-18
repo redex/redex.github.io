@@ -1,5 +1,5 @@
-open! Helpers;
-
+open Vrroom.Helpers;
+module Control = Vrroom.Control;
 module Styles = PackageStyles;
 
 let component = ReasonReact.statelessComponent("Package");

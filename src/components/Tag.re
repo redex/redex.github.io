@@ -1,4 +1,4 @@
-open! Helpers;
+open! Vrroom.Helpers;
 
 let colors = [|
   "#323299","#3f3fbf","#324c99","#3f59bf","#326599","#3f72bf","#327f99",

@@ -3,9 +3,9 @@
 
 var Icon          = require("../bindings/Icon.js");
 var Link          = require("../bindings/gatsby/link.js");
+var Curry         = require("bs-platform/lib/js/curry.js");
 var React         = require("react");
-var Control       = require("./helpers/Control.js");
-var Helpers       = require("../utils/Helpers.js");
+var Vrroom        = require("vrroom/src/Vrroom.bs.js");
 var TimeAgo       = require("../bindings/TimeAgo.js");
 var ReasonReact   = require("reason-react/src/ReasonReact.js");
 var Js_primitive  = require("bs-platform/lib/js/js_primitive.js");
@@ -16,26 +16,29 @@ var component = ReasonReact.statelessComponent("TopList");
 function make(packages, value, _) {
   var newrecord = component.slice();
   newrecord[/* render */9] = (function () {
-      return ReasonReact.element(/* None */0, /* None */0, Control.$$Map[/* make */1](packages, /* None */0, (function ($$package) {
+      return ReasonReact.element(/* None */0, /* None */0, Curry._3(Vrroom.Control[/* Map */0][/* make */1], packages, /* None */0, (function ($$package) {
                         return React.createElement("div", {
                                     key: $$package.name,
                                     className: TopListStyles.root
-                                  }, React.createElement("div", undefined, ReasonReact.element(/* None */0, /* None */0, Link.make($$package.slug, /* Some */[TopListStyles.name], /* None */0, /* array */[Helpers.text($$package.name)])), React.createElement("span", {
+                                  }, React.createElement("div", undefined, ReasonReact.element(/* None */0, /* None */0, Link.make($$package.slug, /* Some */[TopListStyles.name], /* None */0, /* array */[Vrroom.Helpers[/* text */0]($$package.name)])), React.createElement("span", {
                                             className: TopListStyles.version
-                                          }, Helpers.text($$package.version))), React.createElement("div", undefined, value >= 500154939 ? React.createElement("div", {
+                                          }, Vrroom.Helpers[/* text */0]($$package.version))), React.createElement("div", undefined, value >= 500154939 ? React.createElement("div", {
                                               className: TopListStyles.updated
-                                            }, ReasonReact.element(/* None */0, /* None */0, TimeAgo.make($$package.updated, /* array */[]))) : ReasonReact.element(/* None */0, /* None */0, Control.IfSome[/* make */1](Js_primitive.null_undefined_to_opt($$package.stars), (function (stars) {
+                                            }, ReasonReact.element(/* None */0, /* None */0, TimeAgo.make($$package.updated, /* array */[]))) : ReasonReact.element(/* None */0, /* None */0, Curry._2(Vrroom.Control[/* IfSome */3][/* make */1], Js_primitive.null_undefined_to_opt($$package.stars), (function (stars) {
                                                     return React.createElement("div", {
                                                                 className: TopListStyles.stars
-                                                              }, Helpers.text(stars), ReasonReact.element(/* None */0, /* None */0, Icon.Star[/* make */0](/* Some */[TopListStyles.starIcon], /* array */[])));
+                                                              }, Vrroom.Helpers[/* text */0](stars), ReasonReact.element(/* None */0, /* None */0, Icon.Star[/* make */0](/* Some */[TopListStyles.starIcon], /* array */[])));
                                                   })))));
                       })));
     });
   return newrecord;
 }
 
+var Control = 0;
+
 var Styles = 0;
 
+exports.Control   = Control;
 exports.Styles    = Styles;
 exports.component = component;
 exports.make      = make;

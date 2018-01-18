@@ -3,7 +3,7 @@
 
 var Link         = require("../bindings/gatsby/link.js");
 var React        = require("react");
-var Helpers      = require("../utils/Helpers.js");
+var Vrroom       = require("vrroom/src/Vrroom.bs.js");
 var ReasonReact  = require("reason-react/src/ReasonReact.js");
 var CommonStyles = require("../styles/CommonStyles.js");
 var FooterStyles = require("./FooterStyles.js");
@@ -17,27 +17,27 @@ function make(context, _) {
                   className: FooterStyles.root(context)
                 }, React.createElement("div", {
                       className: CommonStyles.widthContainer
-                    }, React.createElement("section", undefined, React.createElement("h1", undefined, Helpers.text("Project")), React.createElement("ul", undefined, React.createElement("li", undefined, React.createElement("a", {
+                    }, React.createElement("section", undefined, React.createElement("h1", undefined, Vrroom.Helpers[/* text */0]("Project")), React.createElement("ul", undefined, React.createElement("li", undefined, React.createElement("a", {
                                       href: "https://github.com/redex/redex.github.io"
-                                    }, Helpers.text("Source Code Repository"))), React.createElement("li", undefined, React.createElement("a", {
+                                    }, Vrroom.Helpers[/* text */0]("Source Code Repository"))), React.createElement("li", undefined, React.createElement("a", {
                                       href: "https://github.com/redex/redex.github.io/issues"
-                                    }, Helpers.text("Support / Bug Tracker"))), React.createElement("li", undefined, ReasonReact.element(/* None */0, /* None */0, Link.make("/publish", /* None */0, /* None */0, /* array */[Helpers.text("Get Published")]))))), React.createElement("section", undefined, React.createElement("h1", undefined, Helpers.text("Made with")), React.createElement("ul", undefined, React.createElement("li", undefined, React.createElement("a", {
+                                    }, Vrroom.Helpers[/* text */0]("Support / Bug Tracker"))), React.createElement("li", undefined, ReasonReact.element(/* None */0, /* None */0, Link.make("/publish", /* None */0, /* None */0, /* array */[Vrroom.Helpers[/* text */0]("Get Published")]))))), React.createElement("section", undefined, React.createElement("h1", undefined, Vrroom.Helpers[/* text */0]("Made with")), React.createElement("ul", undefined, React.createElement("li", undefined, React.createElement("a", {
                                       href: "https://npms.io/"
-                                    }, Helpers.text("npms.io"))), React.createElement("li", undefined, React.createElement("a", {
+                                    }, Vrroom.Helpers[/* text */0]("npms.io"))), React.createElement("li", undefined, React.createElement("a", {
                                       href: "https://www.gatsbyjs.org/"
-                                    }, Helpers.text("Gatsby"))), React.createElement("li", undefined, React.createElement("a", {
+                                    }, Vrroom.Helpers[/* text */0]("Gatsby"))), React.createElement("li", undefined, React.createElement("a", {
                                       href: "https://reasonml.github.io/reason-react/"
-                                    }, Helpers.text("ReasonReact"))), React.createElement("li", undefined, React.createElement("a", {
+                                    }, Vrroom.Helpers[/* text */0]("ReasonReact"))), React.createElement("li", undefined, React.createElement("a", {
                                       href: "https://github.com/bucklescript/bucklescript"
-                                    }, Helpers.text("BuckleScript"))), React.createElement("li", undefined, React.createElement("a", {
+                                    }, Vrroom.Helpers[/* text */0]("BuckleScript"))), React.createElement("li", undefined, React.createElement("a", {
                                       href: "https://github.com/threepointone/glamor"
-                                    }, Helpers.text("glamor"))))), React.createElement("section", undefined, React.createElement("h1", undefined, Helpers.text("Reason")), React.createElement("ul", undefined, React.createElement("li", undefined, React.createElement("a", {
+                                    }, Vrroom.Helpers[/* text */0]("glamor"))))), React.createElement("section", undefined, React.createElement("h1", undefined, Vrroom.Helpers[/* text */0]("Reason")), React.createElement("ul", undefined, React.createElement("li", undefined, React.createElement("a", {
                                       href: "https://reasonml.github.io/"
-                                    }, Helpers.text("Reason Homepage"))), React.createElement("li", undefined, React.createElement("a", {
+                                    }, Vrroom.Helpers[/* text */0]("Reason Homepage"))), React.createElement("li", undefined, React.createElement("a", {
                                       href: "https://reasonml.github.io/guide"
-                                    }, Helpers.text("Reason Guide"))), React.createElement("li", undefined, React.createElement("a", {
+                                    }, Vrroom.Helpers[/* text */0]("Reason Guide"))), React.createElement("li", undefined, React.createElement("a", {
                                       href: "https://reasonml.github.io/try"
-                                    }, Helpers.text("Reason Playground"))))), React.createElement("section", undefined, React.createElement("a", {
+                                    }, Vrroom.Helpers[/* text */0]("Reason Playground"))))), React.createElement("section", undefined, React.createElement("a", {
                               href: "https://www.algolia.com"
                             }, context >= 431720585 ? React.createElement("img", {
                                     className: FooterStyles.algoliaLogo,

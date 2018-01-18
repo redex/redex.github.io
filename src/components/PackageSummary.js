@@ -4,10 +4,10 @@
 var Tag                  = require("./Tag.js");
 var Icon                 = require("../bindings/Icon.js");
 var Link                 = require("../bindings/gatsby/link.js");
+var Curry                = require("bs-platform/lib/js/curry.js");
 var Score                = require("./Score.js");
 var React                = require("react");
-var Control              = require("./helpers/Control.js");
-var Helpers              = require("../utils/Helpers.js");
+var Vrroom               = require("vrroom/src/Vrroom.bs.js");
 var TimeAgo              = require("../bindings/TimeAgo.js");
 var ReasonReact          = require("reason-react/src/ReasonReact.js");
 var PackageSummaryStyles = require("./PackageSummaryStyles.js");
@@ -20,38 +20,41 @@ function make($$package, _) {
       var match = $$package.stars;
       var match$1 = $$package.license;
       var description = $$package.description;
-      var tmp = description === "" ? Helpers.nbsp : Helpers.text(description);
+      var tmp = description === "" ? Vrroom.Helpers[/* nbsp */2] : Vrroom.Helpers[/* text */0](description);
       return React.createElement("div", {
                   className: PackageSummaryStyles.root($$package.type)
                 }, React.createElement("header", {
                       className: PackageSummaryStyles.header
-                    }, ReasonReact.element(/* None */0, /* None */0, Link.make($$package.slug, /* Some */[PackageSummaryStyles.name], /* None */0, /* array */[Helpers.text($$package.name)])), React.createElement("span", {
+                    }, ReasonReact.element(/* None */0, /* None */0, Link.make($$package.slug, /* Some */[PackageSummaryStyles.name], /* None */0, /* array */[Vrroom.Helpers[/* text */0]($$package.name)])), React.createElement("span", {
                           className: PackageSummaryStyles.version
-                        }, Helpers.text($$package.version)), React.createElement("span", {
+                        }, Vrroom.Helpers[/* text */0]($$package.version)), React.createElement("span", {
                           className: PackageSummaryStyles.unpublishedLabel($$package.type)
-                        }, Helpers.text("unpublished")), React.createElement("div", {
+                        }, Vrroom.Helpers[/* text */0]("unpublished")), React.createElement("div", {
                           className: PackageSummaryStyles.props
                         }, React.createElement("span", {
                               className: PackageSummaryStyles.stars
-                            }, (match == null) ? Helpers.text("-") : Helpers.text(match), ReasonReact.element(/* None */0, /* None */0, Icon.Star[/* make */0](/* Some */[PackageSummaryStyles.starIcon], /* array */[]))), ReasonReact.element(/* None */0, /* None */0, Score.make($$package, /* array */[])), (match$1 == null) ? React.createElement("span", {
+                            }, (match == null) ? Vrroom.Helpers[/* text */0]("-") : Vrroom.Helpers[/* text */0](match), ReasonReact.element(/* None */0, /* None */0, Icon.Star[/* make */0](/* Some */[PackageSummaryStyles.starIcon], /* array */[]))), ReasonReact.element(/* None */0, /* None */0, Score.make($$package, /* array */[])), (match$1 == null) ? React.createElement("span", {
                                 className: PackageSummaryStyles.nolicense
-                              }, Helpers.text("No license")) : React.createElement("span", {
+                              }, Vrroom.Helpers[/* text */0]("No license")) : React.createElement("span", {
                                 className: PackageSummaryStyles.license
-                              }, Helpers.text(match$1)), React.createElement("span", {
+                              }, Vrroom.Helpers[/* text */0](match$1)), React.createElement("span", {
                               className: PackageSummaryStyles.updated
                             }, ReasonReact.element(/* None */0, /* None */0, TimeAgo.make($$package.updated, /* array */[]))))), React.createElement("div", {
                       className: PackageSummaryStyles.description
                     }, tmp), React.createElement("div", {
                       className: PackageSummaryStyles.tags
-                    }, ReasonReact.element(/* None */0, /* None */0, Icon.Tags[/* make */0](/* Some */[PackageSummaryStyles.tagsIcon], /* array */[])), ReasonReact.element(/* None */0, /* None */0, Control.$$Map[/* make */1]($$package.keywords, /* None */0, (function (keyword) {
+                    }, ReasonReact.element(/* None */0, /* None */0, Icon.Tags[/* make */0](/* Some */[PackageSummaryStyles.tagsIcon], /* array */[])), ReasonReact.element(/* None */0, /* None */0, Curry._3(Vrroom.Control[/* Map */0][/* make */1], $$package.keywords, /* None */0, (function (keyword) {
                                 return ReasonReact.element(/* Some */[keyword], /* None */0, Tag.make(keyword, /* array */[]));
                               })))));
     });
   return newrecord;
 }
 
+var Control = 0;
+
 var Styles = 0;
 
+exports.Control   = Control;
 exports.Styles    = Styles;
 exports.component = component;
 exports.make      = make;

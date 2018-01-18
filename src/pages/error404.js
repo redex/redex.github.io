@@ -4,7 +4,7 @@
 var React       = require("react");
 var Config      = require("../Config.js");
 var Helmet      = require("../bindings/gatsby/helmet.js");
-var Helpers     = require("../utils/Helpers.js");
+var Vrroom      = require("vrroom/src/Vrroom.bs.js");
 var ReasonReact = require("reason-react/src/ReasonReact.js");
 
 var component = ReasonReact.statelessComponent("NotFoundPage");
@@ -12,7 +12,7 @@ var component = ReasonReact.statelessComponent("NotFoundPage");
 function make() {
   var newrecord = component.slice();
   newrecord[/* render */9] = (function () {
-      return React.createElement("div", undefined, ReasonReact.element(/* None */0, /* None */0, Helmet.make(/* Some */[Config.titleTemplate("404: Not Found")], /* None */0, /* None */0, /* None */0, /* array */[])), React.createElement("h1", undefined, Helpers.text("NOT FOUND")), React.createElement("p", undefined, Helpers.text("You just hit a route that doesn't exist... the sadness.")));
+      return React.createElement("div", undefined, ReasonReact.element(/* None */0, /* None */0, Helmet.make(/* Some */[Config.titleTemplate("404: Not Found")], /* None */0, /* None */0, /* None */0, /* array */[])), React.createElement("h1", undefined, Vrroom.Helpers[/* text */0]("NOT FOUND")), React.createElement("p", undefined, Vrroom.Helpers[/* text */0]("You just hit a route that doesn't exist... the sadness.")));
     });
   return newrecord;
 }

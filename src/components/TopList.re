@@ -1,5 +1,5 @@
-open Helpers;
-
+open Vrroom.Helpers;
+module Control = Vrroom.Control;
 module Styles = TopListStyles;
 
 let component = ReasonReact.statelessComponent("TopList");

@@ -1,4 +1,5 @@
-open! Helpers;
+open Vrroom.Helpers;
+module Control = Vrroom.Control;
 
 let introduction = {|
   <em>

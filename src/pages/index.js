@@ -2,10 +2,10 @@
 'use strict';
 
 var Link        = require("../bindings/gatsby/link.js");
+var Curry       = require("bs-platform/lib/js/curry.js");
 var React       = require("react");
-var Control     = require("../components/helpers/Control.js");
+var Vrroom      = require("vrroom/src/Vrroom.bs.js");
 var Graphql     = require("../utils/Graphql.js");
-var Helpers     = require("../utils/Helpers.js");
 var TopList     = require("../components/TopList.js");
 var SearchBox   = require("../components/SearchBox.js");
 var IndexStyles = require("../styles/IndexStyles.js");
@@ -20,18 +20,18 @@ function make(data, _) {
                   className: IndexStyles.root
                 }, ReasonReact.element(/* None */0, /* None */0, SearchBox.make(/* array */[])), React.createElement("div", {
                       className: IndexStyles.keywords
-                    }, ReasonReact.element(/* None */0, /* None */0, Control.$$Map[/* make */1](Graphql.getNodes(data.keywords), /* None */0, (function (keyword) {
+                    }, ReasonReact.element(/* None */0, /* None */0, Curry._3(Vrroom.Control[/* Map */0][/* make */1], Graphql.getNodes(data.keywords), /* None */0, (function (keyword) {
                                 return ReasonReact.element(/* Some */[keyword.slug], /* None */0, Link.make(keyword.slug, /* None */0, /* None */0, /* array */[
                                                 React.createElement("span", {
                                                       className: "label"
-                                                    }, Helpers.text(keyword.name)),
+                                                    }, Vrroom.Helpers[/* text */0](keyword.name)),
                                                 React.createElement("span", {
                                                       className: "count"
-                                                    }, Helpers.text(keyword.count))
+                                                    }, Vrroom.Helpers[/* text */0](keyword.count))
                                               ]));
                               })))), React.createElement("div", {
                       className: IndexStyles.lists
-                    }, React.createElement("div", undefined, React.createElement("h2", undefined, Helpers.text("Recent releases")), ReasonReact.element(/* None */0, /* None */0, TopList.make(Graphql.getNodes(data.recentPackages), /* updated */500154939, /* array */[]))), React.createElement("div", undefined, React.createElement("h2", undefined, Helpers.text("Most popular")), ReasonReact.element(/* None */0, /* None */0, TopList.make(Graphql.getNodes(data.popularPackages), /* stars */67859553, /* array */[])))));
+                    }, React.createElement("div", undefined, React.createElement("h2", undefined, Vrroom.Helpers[/* text */0]("Recent releases")), ReasonReact.element(/* None */0, /* None */0, TopList.make(Graphql.getNodes(data.recentPackages), /* updated */500154939, /* array */[]))), React.createElement("div", undefined, React.createElement("h2", undefined, Vrroom.Helpers[/* text */0]("Most popular")), ReasonReact.element(/* None */0, /* None */0, TopList.make(Graphql.getNodes(data.popularPackages), /* stars */67859553, /* array */[])))));
     });
   return newrecord;
 }
@@ -84,8 +84,11 @@ var $$default = ReasonReact.wrapReasonForJs(component, (function (jsProps) {
 
 ;
 
+var Control = 0;
+
 var Styles = 0;
 
+exports.Control   = Control;
 exports.Styles    = Styles;
 exports.component = component;
 exports.make      = make;

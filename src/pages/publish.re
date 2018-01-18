@@ -1,4 +1,4 @@
-open! Helpers;
+open! Vrroom.Helpers;
 
 let html = {|
   <h1>Getting Published</h1>

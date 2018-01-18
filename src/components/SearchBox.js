@@ -7,7 +7,7 @@ var Curry               = require("bs-platform/lib/js/curry.js");
 var React               = require("react");
 var Config              = require("../Config.js");
 var Rebase              = require("@glennsl/rebase/src/Rebase.bs.js");
-var Control             = require("./helpers/Control.js");
+var Vrroom              = require("vrroom/src/Vrroom.bs.js");
 var ReasonReact         = require("reason-react/src/ReasonReact.js");
 var GatsbyLink          = require("gatsby-link");
 var Algoliasearch       = require("algoliasearch");
@@ -59,7 +59,7 @@ function make() {
                                 }))
                         })), React.createElement("div", {
                       className: SearchBoxStyles.results
-                    }, ReasonReact.element(/* None */0, /* None */0, Control.$$Map[/* make */1](state[/* results */2], /* None */0, (function ($$package) {
+                    }, ReasonReact.element(/* None */0, /* None */0, Curry._3(Vrroom.Control[/* Map */0][/* make */1], state[/* results */2], /* None */0, (function ($$package) {
                                 return ReasonReact.element(/* Some */[$$package.id], /* None */0, SearchResultItem.make($$package, Rebase.Option[/* exists */9]((function ($$this) {
                                                       return +($$this.name === $$package.name);
                                                     }), state[/* focused */3]), Curry._1(reduce, (function (p) {
@@ -177,10 +177,13 @@ function make() {
   return newrecord;
 }
 
+var Control = 0;
+
 var Styles = 0;
 
 var Config$1 = 0;
 
+exports.Control      = Control;
 exports.Styles       = Styles;
 exports.Config       = Config$1;
 exports.Key          = Key;

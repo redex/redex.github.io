@@ -1,5 +1,4 @@
-open! Helpers;
-
+open! Vrroom.Helpers;
 module Styles = IndexLayoutStyles;
 
 let component = ReasonReact.statelessComponent("PageLayout");

@@ -1,5 +1,6 @@
 open! Rebase;
-open! Helpers;
+open Vrroom.Helpers;
+module Control = Vrroom.Control;
 
 let getPackages = keyword =>
   keyword##packages |> Array.map(Js.toOption)

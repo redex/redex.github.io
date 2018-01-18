@@ -1,6 +1,6 @@
 open Rebase;
-open! Helpers;
-
+open Vrroom.Helpers;
+module Control = Vrroom.Control;
 module Styles = SearchBoxStyles;
 module Config = Config.Search;
 
