@@ -12,6 +12,7 @@ let make = (~package, _children) => {
 				<Link className=Styles.name to_=package##slug> {package##name |> text} </Link>
 				<span className=Styles.version> {package##version |> text} </span>
 				<span className=Styles.unpublishedLabel(package##_type)> {"unpublished" |> text} </span>
+				<Platforms platforms=package##platforms />
 
 				<div className=Styles.props>
 					<span className=Styles.stars>

@@ -45,6 +45,8 @@ let make = (~data, _children) => {
             <span className=Styles.unpublishedLabel> {"unpublished" |> text} </span>
           | _ => ReasonReact.nullElement
           }}
+
+          <Platforms platforms=package##platforms />
         </div>
 
         <div className=Styles.fields>
@@ -91,6 +93,9 @@ let default =
         id
         name
         version
+        packageType
+        condition
+        platforms
         description
         keywords
         license

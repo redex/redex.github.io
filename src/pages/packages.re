@@ -33,6 +33,9 @@ let default =
             id
             name
             version
+            packageType
+            condition
+            platforms
             description
             keywords
             license

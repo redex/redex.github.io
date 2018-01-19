@@ -7,7 +7,7 @@ var Theme = require("../styles/Theme.js");
 var container = Css.style(/* :: */[
       Css.position(/* Relative */1),
       /* :: */[
-        Css.display(/* InlineBlock */11),
+        Css.display(/* InlineFlex */13),
         /* :: */[
           Css.zIndex(50),
           /* [] */0

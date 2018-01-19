@@ -11,6 +11,7 @@ var Config        = require("../Config.js");
 var Helmet        = require("../bindings/gatsby/helmet.js");
 var Vrroom        = require("vrroom/src/Vrroom.bs.js");
 var TimeAgo       = require("../bindings/TimeAgo.js");
+var Platforms     = require("../components/Platforms.js");
 var ReasonReact   = require("reason-react/src/ReasonReact.js");
 var Js_primitive  = require("bs-platform/lib/js/js_primitive.js");
 var PackageStyles = require("../styles/PackageStyles.js");
@@ -73,7 +74,7 @@ function make(data, _) {
                           className: PackageStyles.title
                         }, ReasonReact.element(/* None */0, /* None */0, Link.make($$package.slug, /* Some */[PackageStyles.name], /* None */0, /* array */[Vrroom.Helpers[/* text */0]($$package.name)])), React.createElement("span", {
                               className: PackageStyles.version
-                            }, Vrroom.Helpers[/* text */0]($$package.version)), tmp), React.createElement("div", {
+                            }, Vrroom.Helpers[/* text */0]($$package.version)), tmp, ReasonReact.element(/* None */0, /* None */0, Platforms.make($$package.platforms, /* array */[]))), React.createElement("div", {
                           className: PackageStyles.fields
                         }, React.createElement("div", {
                               className: PackageStyles.description
@@ -105,6 +106,9 @@ var $$default = ReasonReact.wrapReasonForJs(component, (function (jsProps) {
         id
         name
         version
+        packageType
+        condition
+        platforms
         description
         keywords
         license

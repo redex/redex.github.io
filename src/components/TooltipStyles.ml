@@ -2,7 +2,7 @@ open Css
 
 let container = style [
   position Relative;
-  display InlineBlock;
+  display InlineFlex;
   zIndex 50;
 ]
 

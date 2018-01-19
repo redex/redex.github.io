@@ -9,6 +9,7 @@ var Score                = require("./Score.js");
 var React                = require("react");
 var Vrroom               = require("vrroom/src/Vrroom.bs.js");
 var TimeAgo              = require("../bindings/TimeAgo.js");
+var Platforms            = require("./Platforms.js");
 var ReasonReact          = require("reason-react/src/ReasonReact.js");
 var PackageSummaryStyles = require("./PackageSummaryStyles.js");
 
@@ -29,7 +30,7 @@ function make($$package, _) {
                           className: PackageSummaryStyles.version
                         }, Vrroom.Helpers[/* text */0]($$package.version)), React.createElement("span", {
                           className: PackageSummaryStyles.unpublishedLabel($$package.type)
-                        }, Vrroom.Helpers[/* text */0]("unpublished")), React.createElement("div", {
+                        }, Vrroom.Helpers[/* text */0]("unpublished")), ReasonReact.element(/* None */0, /* None */0, Platforms.make($$package.platforms, /* array */[])), React.createElement("div", {
                           className: PackageSummaryStyles.props
                         }, React.createElement("span", {
                               className: PackageSummaryStyles.stars
