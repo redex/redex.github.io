@@ -150,6 +150,7 @@
     "reason-http",
     "reason-https",
     "reason-nact-postgres",
+    "reason-nconf",
     "reason-node",
     "reason-path",
     "reason-process",
