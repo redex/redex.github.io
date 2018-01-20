@@ -55,40 +55,6 @@ var name = Css.style(/* :: */[
       ]
     ]);
 
-var version = Css.style(/* :: */[
-      Css.fontSize(Css.em(0.85)),
-      /* :: */[
-        Css.fontStyle(/* Italic */1),
-        /* :: */[
-          Css.marginLeft(Css.em(0.5)),
-          /* [] */0
-        ]
-      ]
-    ]);
-
-function unpublishedLabel(param) {
-  if (param === "unpublished") {
-    return Css.style(/* :: */[
-                Css.fontSize(Css.em(0.85)),
-                /* :: */[
-                  Css.fontStyle(/* Italic */1),
-                  /* :: */[
-                    Css.marginLeft(Css.em(0.5)),
-                    /* :: */[
-                      Css.color(Theme.Color[/* bad */7]),
-                      /* [] */0
-                    ]
-                  ]
-                ]
-              ]);
-  } else {
-    return Css.style(/* :: */[
-                Css.display(/* None */1),
-                /* [] */0
-              ]);
-  }
-}
-
 var props = Css.style(/* :: */[
       Css.display(/* Flex */3),
       /* :: */[
@@ -194,18 +160,16 @@ var tagsIcon = Css.style(/* :: */[
       /* [] */0
     ]);
 
-exports.root             = root;
-exports.header           = header;
-exports.name             = name;
-exports.version          = version;
-exports.unpublishedLabel = unpublishedLabel;
-exports.props            = props;
-exports.updated          = updated;
-exports.license          = license;
-exports.nolicense        = nolicense;
-exports.stars            = stars;
-exports.starIcon         = starIcon;
-exports.description      = description;
-exports.tags             = tags;
-exports.tagsIcon         = tagsIcon;
+exports.root        = root;
+exports.header      = header;
+exports.name        = name;
+exports.props       = props;
+exports.updated     = updated;
+exports.license     = license;
+exports.nolicense   = nolicense;
+exports.stars       = stars;
+exports.starIcon    = starIcon;
+exports.description = description;
+exports.tags        = tags;
+exports.tagsIcon    = tagsIcon;
 /* header Not a pure module */

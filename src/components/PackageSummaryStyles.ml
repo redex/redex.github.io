@@ -25,24 +25,6 @@ let name = style [
     textDecorationLine (Values [Underline]);
   ];
 ]
-
-let version = style [
-  fontSize (em 0.85);
-  fontStyle Italic;
-  marginLeft (em 0.5);
-]
-
-let unpublishedLabel = function
-| "unpublished" -> style [
-    fontSize (em 0.85);
-    fontStyle Italic;
-    marginLeft (em 0.5);
-    color Theme.Color.bad;
-  ]
-| _ -> style [
-    display None;
-  ]
-
 let props = style [
   display Flex;
   justifyContent FlexEnd;

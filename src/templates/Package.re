@@ -38,13 +38,7 @@ let make = (~data, _children) => {
             {package##name |> text}
           </Link>
 
-          <span className=Styles.version> {package##version |> text} </span>
-
-          {switch (package##_type) {
-          | "unpublished" =>
-            <span className=Styles.unpublishedLabel> {"unpublished" |> text} </span>
-          | _ => ReasonReact.nullElement
-          }}
+				  <Version version=package##version isPublished=(package##_type == "published") />
 
           <Platforms platforms=package##platforms />
         </div>

@@ -108,46 +108,6 @@ var name = Css.style(/* :: */[
 
 var fields = Css.style(/* [] */0);
 
-var version = Css.style(/* :: */[
-      Css.fontSize(Css.em(0.85)),
-      /* :: */[
-        Css.fontStyle(/* Italic */1),
-        /* :: */[
-          Css.marginLeft(Css.em(0.5)),
-          /* :: */[
-            Css.opacity(0.75),
-            /* [] */0
-          ]
-        ]
-      ]
-    ]);
-
-var unpublishedLabel = Css.style(/* :: */[
-      Css.fontSize(Css.em(0.85)),
-      /* :: */[
-        Css.fontStyle(/* Italic */1),
-        /* :: */[
-          Css.marginLeft(Css.em(0.5)),
-          /* :: */[
-            Css.color(Theme.Color[/* bad */7]),
-            /* :: */[
-              Css.backgroundColor(Theme.Inverted[/* Color */0][/* text */1]),
-              /* :: */[
-                Css.unsafe("padding", ".2ex 1ex"),
-                /* :: */[
-                  Css.unsafe("borderRadius", "1.4ex"),
-                  /* :: */[
-                    Css.alignSelf(/* Center */2),
-                    /* [] */0
-                  ]
-                ]
-              ]
-            ]
-          ]
-        ]
-      ]
-    ]);
-
 var description = Css.style(/* :: */[
       Css.marginBottom(Css.em(0.5)),
       /* :: */[
@@ -311,24 +271,22 @@ var readme = Curry._1(Css.merge, /* :: */[
       ]
     ]);
 
-exports.root             = root;
-exports.header           = header;
-exports.props            = props;
-exports.title            = title;
-exports.owner            = owner;
-exports.name             = name;
-exports.fields           = fields;
-exports.version          = version;
-exports.unpublishedLabel = unpublishedLabel;
-exports.description      = description;
-exports.tags             = tags;
-exports.tagsIcon         = tagsIcon;
-exports.right            = right;
-exports.updated          = updated;
-exports.license          = license;
-exports.nolicense        = nolicense;
-exports.stars            = stars;
-exports.starIcon         = starIcon;
-exports.links            = links;
-exports.readme           = readme;
+exports.root        = root;
+exports.header      = header;
+exports.props       = props;
+exports.title       = title;
+exports.owner       = owner;
+exports.name        = name;
+exports.fields      = fields;
+exports.description = description;
+exports.tags        = tags;
+exports.tagsIcon    = tagsIcon;
+exports.right       = right;
+exports.updated     = updated;
+exports.license     = license;
+exports.nolicense   = nolicense;
+exports.stars       = stars;
+exports.starIcon    = starIcon;
+exports.links       = links;
+exports.readme      = readme;
 /* root Not a pure module */

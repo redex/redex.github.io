@@ -54,24 +54,6 @@ let name = style [
 let fields = style [
 ]
 
-let version = style [
-  fontSize (em 0.85);
-  fontStyle Italic;
-  marginLeft (em 0.5);
-  opacity 0.75;
-]
-
-let unpublishedLabel = style [
-  fontSize (em 0.85);
-  fontStyle Italic;
-  marginLeft (em 0.5);
-  color Theme.Color.bad;
-  backgroundColor Theme.Inverted.Color.text;
-  unsafe "padding" ".2ex 1ex";
-  unsafe "borderRadius" "1.4ex";
-  alignSelf Center;
-]
-
 let description = style [
   (*whiteSpace "nowrap";*)
   marginBottom (em 0.5);

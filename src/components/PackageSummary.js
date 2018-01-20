@@ -9,6 +9,7 @@ var Score                = require("./Score.js");
 var React                = require("react");
 var Vrroom               = require("vrroom/src/Vrroom.bs.js");
 var TimeAgo              = require("../bindings/TimeAgo.js");
+var Version              = require("./Version.js");
 var Platforms            = require("./Platforms.js");
 var ReasonReact          = require("reason-react/src/ReasonReact.js");
 var PackageSummaryStyles = require("./PackageSummaryStyles.js");
@@ -26,11 +27,7 @@ function make($$package, _) {
                   className: PackageSummaryStyles.root($$package.type)
                 }, React.createElement("header", {
                       className: PackageSummaryStyles.header
-                    }, ReasonReact.element(/* None */0, /* None */0, Link.make($$package.slug, /* Some */[PackageSummaryStyles.name], /* None */0, /* array */[Vrroom.Helpers[/* text */0]($$package.name)])), React.createElement("span", {
-                          className: PackageSummaryStyles.version
-                        }, Vrroom.Helpers[/* text */0]($$package.version)), React.createElement("span", {
-                          className: PackageSummaryStyles.unpublishedLabel($$package.type)
-                        }, Vrroom.Helpers[/* text */0]("unpublished")), ReasonReact.element(/* None */0, /* None */0, Platforms.make($$package.platforms, /* array */[])), React.createElement("div", {
+                    }, ReasonReact.element(/* None */0, /* None */0, Link.make($$package.slug, /* Some */[PackageSummaryStyles.name], /* None */0, /* array */[Vrroom.Helpers[/* text */0]($$package.name)])), ReasonReact.element(/* None */0, /* None */0, Version.make($$package.version, +($$package.type === "published"), /* array */[])), ReasonReact.element(/* None */0, /* None */0, Platforms.make($$package.platforms, /* array */[])), React.createElement("div", {
                           className: PackageSummaryStyles.props
                         }, React.createElement("span", {
                               className: PackageSummaryStyles.stars

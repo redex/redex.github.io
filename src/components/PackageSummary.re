@@ -10,8 +10,7 @@ let make = (~package, _children) => {
 		<div className=Styles.root(package##_type)>
 			<header className=Styles.header>
 				<Link className=Styles.name to_=package##slug> {package##name |> text} </Link>
-				<span className=Styles.version> {package##version |> text} </span>
-				<span className=Styles.unpublishedLabel(package##_type)> {"unpublished" |> text} </span>
+				<Version version=package##version isPublished=(package##_type == "published") />
 				<Platforms platforms=package##platforms />
 
 				<div className=Styles.props>
