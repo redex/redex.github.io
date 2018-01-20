@@ -54,7 +54,7 @@ function make(data, _) {
       return React.createElement("div", {
                   className: PackageStyles.root
                 }, ReasonReact.element(/* None */0, /* None */0, Helmet.make(/* Some */[Config.titleTemplate($$package.name)], /* None */0, /* None */0, /* None */0, /* array */[])), React.createElement("header", {
-                      className: PackageStyles.header($$package.type)
+                      className: PackageStyles.header($$package.type, $$package.condition)
                     }, React.createElement("div", {
                           className: PackageStyles.props
                         }, ReasonReact.element(/* None */0, /* None */0, Curry._2(Vrroom.Control[/* IfSome */3][/* make */1], Js_primitive.null_undefined_to_opt($$package.stars), (function (stars) {

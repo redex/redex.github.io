@@ -24,7 +24,7 @@ function make($$package, _) {
       var description = $$package.description;
       var tmp = description === "" ? Vrroom.Helpers[/* nbsp */2] : Vrroom.Helpers[/* text */0](description);
       return React.createElement("div", {
-                  className: PackageSummaryStyles.root($$package.type)
+                  className: PackageSummaryStyles.root($$package.type, $$package.condition)
                 }, React.createElement("header", {
                       className: PackageSummaryStyles.header
                     }, ReasonReact.element(/* None */0, /* None */0, Link.make($$package.slug, /* Some */[PackageSummaryStyles.name], /* None */0, /* array */[Vrroom.Helpers[/* text */0]($$package.name)])), ReasonReact.element(/* None */0, /* None */0, Version.make($$package.version, +($$package.type === "published"), /* array */[])), ReasonReact.element(/* None */0, /* None */0, Platforms.make($$package.platforms, /* array */[])), React.createElement("div", {

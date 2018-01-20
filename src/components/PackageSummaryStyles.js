@@ -2,10 +2,9 @@
 'use strict';
 
 var Css   = require("bs-css/src/Css.js");
-var CssEx = require("../utils/CssEx.js");
 var Theme = require("../styles/Theme.js");
 
-function root(type_) {
+function root(type_, condition) {
   return Css.style(/* :: */[
               Css.unsafe("padding", ".75em 1.5em"),
               /* :: */[
@@ -17,8 +16,23 @@ function root(type_) {
                     /* :: */[
                       Css.lineHeight(Css.em(1.45)),
                       /* :: */[
-                        Css.unsafe("backgroundImage", CssEx.if_(+(type_ === "unpublished"), Theme.Panel[/* crosshatchBackground */1])),
-                        /* [] */0
+                        Css.selector("> *", /* :: */[
+                              Css.opacity(condition === "maintained" ? 1 : 0.5),
+                              /* [] */0
+                            ]),
+                        /* :: */[
+                          Css.hover(/* :: */[
+                                Css.selector("> *", /* :: */[
+                                      Css.opacity(1),
+                                      /* [] */0
+                                    ]),
+                                /* [] */0
+                              ]),
+                          /* :: */[
+                            Css.unsafe("backgroundImage", type_ === "unpublished" ? Theme.Panel[/* crosshatchBackground */1] : "none"),
+                            /* [] */0
+                          ]
+                        ]
                       ]
                     ]
                   ]
