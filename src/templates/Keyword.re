@@ -32,6 +32,9 @@ let default = ReasonReact.wrapReasonForJs(
             id
             name
             version
+            category
+            condition
+            platforms
             description
             keywords
             license

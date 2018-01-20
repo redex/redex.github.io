@@ -64,6 +64,9 @@ var $$default = ReasonReact.wrapReasonForJs(component, (function (jsProps) {
               id
               name
               version
+              category
+              condition
+              platforms
               description
               keywords
               license
