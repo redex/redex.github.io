@@ -43,8 +43,9 @@ let make = (~package, _children) => {
 
 			<div className=Styles.tags>
 				<Icon.Tags className=Styles.tagsIcon />
+        <Tag.Category name=package##category />
 				<Control.Map items=package##keywords>
-					...(keyword => <Tag key=keyword name=keyword />)
+					...(keyword => <Tag.Keyword key=keyword name=keyword />)
 				</Control.Map>
 			</div>
 		</div>

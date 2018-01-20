@@ -80,8 +80,8 @@ function make(data, _) {
                               className: PackageStyles.description
                             }, Vrroom.Helpers[/* text */0]($$package.description)), React.createElement("div", {
                               className: PackageStyles.tags
-                            }, ReasonReact.element(/* None */0, /* None */0, Icon.Tags[/* make */0](/* Some */[PackageStyles.tagsIcon], /* array */[])), ReasonReact.element(/* None */0, /* None */0, Curry._3(Vrroom.Control[/* Map */0][/* make */1], $$package.keywords, /* Some */[Vrroom.Helpers[/* text */0](" - ")], (function (keyword) {
-                                        return ReasonReact.element(/* Some */[keyword], /* None */0, Tag.make(keyword, /* array */[]));
+                            }, ReasonReact.element(/* None */0, /* None */0, Icon.Tags[/* make */0](/* Some */[PackageStyles.tagsIcon], /* array */[])), ReasonReact.element(/* None */0, /* None */0, Tag.Category[/* make */2]($$package.category, /* array */[])), ReasonReact.element(/* None */0, /* None */0, Curry._3(Vrroom.Control[/* Map */0][/* make */1], $$package.keywords, /* None */0, (function (keyword) {
+                                        return ReasonReact.element(/* Some */[keyword], /* None */0, Tag.Keyword[/* make */1](keyword, /* array */[]));
                                       }))))), React.createElement("div", {
                           className: PackageStyles.links
                         }, React.createElement("a", tmp$1, Vrroom.Helpers[/* text */0]("homepage")), React.createElement("a", tmp$3, Vrroom.Helpers[/* text */0]("repository")), React.createElement("a", tmp$5, Vrroom.Helpers[/* text */0]("npm")), React.createElement("a", tmp$7, Vrroom.Helpers[/* text */0]("issues")), React.createElement("a", tmp$9, Vrroom.Helpers[/* text */0]("documentation")))), React.createElement("div", {
@@ -106,7 +106,7 @@ var $$default = ReasonReact.wrapReasonForJs(component, (function (jsProps) {
         id
         name
         version
-        packageType
+        category
         condition
         platforms
         description

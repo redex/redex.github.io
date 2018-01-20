@@ -36,7 +36,7 @@ var $$default = ReasonReact.wrapReasonForJs(component, (function (jsProps) {
             id
             name
             version
-            packageType
+            category
             condition
             platforms
             description

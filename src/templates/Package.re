@@ -56,9 +56,9 @@ let make = (~data, _children) => {
 
           <div className=Styles.tags>
             <Icon.Tags className=Styles.tagsIcon />
-            <Control.Map items = package##keywords
-                         empty = (" - " |> text) >
-              ...(keyword => <Tag key=keyword name=keyword />)
+            <Tag.Category name=package##category />
+            <Control.Map items=package##keywords>
+              ...(keyword => <Tag.Keyword key=keyword name=keyword />)
             </Control.Map>
           </div>
         </div>
@@ -93,7 +93,7 @@ let default =
         id
         name
         version
-        packageType
+        category
         condition
         platforms
         description

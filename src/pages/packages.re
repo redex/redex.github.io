@@ -33,7 +33,7 @@ let default =
             id
             name
             version
-            packageType
+            category
             condition
             platforms
             description
