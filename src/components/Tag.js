@@ -11,31 +11,34 @@ var style = Css.style(/* :: */[
       /* :: */[
         Css.opacity(0.75),
         /* :: */[
-          Css.fontSize(Css.em(0.85)),
+          Css.fontSize(Css.em(0.75)),
           /* :: */[
-            Css.marginLeft(Css.em(0.5)),
+            Css.lineHeight(Css.em(1.6)),
             /* :: */[
-              Css.unsafe("whiteSpace", "nowrap"),
+              Css.marginLeft(Css.em(0.5)),
               /* :: */[
-                Css.backgroundColor(Css.hex("fff3")),
+                Css.unsafe("whiteSpace", "nowrap"),
                 /* :: */[
-                  Css.unsafe("padding", "0 1ex"),
+                  Css.backgroundColor(Css.hex("fff3")),
                   /* :: */[
-                    Css.textDecorationLine(/* None */0),
+                    Css.unsafe("padding", "0 1ex"),
                     /* :: */[
-                      Css.borderRadius(Css.ex(0.5)),
+                      Css.textDecorationLine(/* None */0),
                       /* :: */[
-                        Css.hover(/* :: */[
-                              Css.opacity(1),
-                              /* :: */[
-                                Css.textDecorationLine(/* Values */[/* :: */[
-                                        /* Underline */0,
-                                        /* [] */0
-                                      ]]),
-                                /* [] */0
-                              ]
-                            ]),
-                        /* [] */0
+                        Css.borderRadius(Css.ex(0.5)),
+                        /* :: */[
+                          Css.hover(/* :: */[
+                                Css.opacity(1),
+                                /* :: */[
+                                  Css.textDecorationLine(/* Values */[/* :: */[
+                                          /* Underline */0,
+                                          /* [] */0
+                                        ]]),
+                                  /* [] */0
+                                ]
+                              ]),
+                          /* [] */0
+                        ]
                       ]
                     ]
                   ]

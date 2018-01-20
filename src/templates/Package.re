@@ -12,7 +12,7 @@ let make = (~data, _children) => {
 
     <div className=Styles.root>
       <Helmet title=Config.titleTemplate(package##name) />
-      <header className=Styles.header(package##_type, package##condition)>
+      <header className=Styles.header(package##_type, package##flags)>
         <div className=Styles.props>
           <Control.IfSome option=(package##stars |> Js.toOption)>
             ...(stars =>
@@ -45,6 +45,7 @@ let make = (~data, _children) => {
 
         <div className=Styles.fields>
           <div className=Styles.description>	
+				    <Flags package invert=true />
             {package##description |> text}
           </div>
 
@@ -88,7 +89,7 @@ let default =
         name
         version
         category
-        condition
+        flags
         platforms
         description
         keywords

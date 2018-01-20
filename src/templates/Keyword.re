@@ -33,7 +33,7 @@ let default = ReasonReact.wrapReasonForJs(
             name
             version
             category
-            condition
+            flags
             platforms
             description
             keywords

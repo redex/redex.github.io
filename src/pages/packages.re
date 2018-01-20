@@ -34,7 +34,7 @@ let default =
             name
             version
             category
-            condition
+            flags
             platforms
             description
             keywords

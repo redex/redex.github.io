@@ -11,11 +11,11 @@ var root = Css.style(/* :: */[
       /* [] */0
     ]);
 
-function header(type_, condition) {
+function header(type_, _) {
   return Css.style(/* :: */[
               Css.unsafe("label", "header"),
               /* :: */[
-                Css.backgroundColor(condition === "maintained" ? Theme.Inverted[/* Color */0][/* background */0] : Css.hex("aaa")),
+                Css.backgroundColor(Theme.Inverted[/* Color */0][/* background */0]),
                 /* :: */[
                   Css.color(Theme.Inverted[/* Color */0][/* text */1]),
                   /* :: */[

@@ -5,6 +5,7 @@ var Tag           = require("../components/Tag.js");
 var Icon          = require("../bindings/Icon.js");
 var Link          = require("../bindings/gatsby/link.js");
 var Curry         = require("bs-platform/lib/js/curry.js");
+var Flags         = require("../components/Flags.js");
 var Score         = require("../components/Score.js");
 var React         = require("react");
 var Config        = require("../Config.js");
@@ -54,7 +55,7 @@ function make(data, _) {
       return React.createElement("div", {
                   className: PackageStyles.root
                 }, ReasonReact.element(/* None */0, /* None */0, Helmet.make(/* Some */[Config.titleTemplate($$package.name)], /* None */0, /* None */0, /* None */0, /* array */[])), React.createElement("header", {
-                      className: PackageStyles.header($$package.type, $$package.condition)
+                      className: PackageStyles.header($$package.type, $$package.flags)
                     }, React.createElement("div", {
                           className: PackageStyles.props
                         }, ReasonReact.element(/* None */0, /* None */0, Curry._2(Vrroom.Control[/* IfSome */3][/* make */1], Js_primitive.null_undefined_to_opt($$package.stars), (function (stars) {
@@ -73,7 +74,7 @@ function make(data, _) {
                           className: PackageStyles.fields
                         }, React.createElement("div", {
                               className: PackageStyles.description
-                            }, Vrroom.Helpers[/* text */0]($$package.description)), React.createElement("div", {
+                            }, ReasonReact.element(/* None */0, /* None */0, Flags.make($$package, /* Some */[/* true */1], /* array */[])), Vrroom.Helpers[/* text */0]($$package.description)), React.createElement("div", {
                               className: PackageStyles.tags
                             }, ReasonReact.element(/* None */0, /* None */0, Icon.Tags[/* make */0](/* Some */[PackageStyles.tagsIcon], /* array */[])), ReasonReact.element(/* None */0, /* None */0, Tag.Category[/* make */2]($$package.category, /* array */[])), ReasonReact.element(/* None */0, /* None */0, Curry._3(Vrroom.Control[/* Map */0][/* make */1], $$package.keywords, /* None */0, (function (keyword) {
                                         return ReasonReact.element(/* Some */[keyword], /* None */0, Tag.Keyword[/* make */1](keyword, /* array */[]));
@@ -102,7 +103,7 @@ var $$default = ReasonReact.wrapReasonForJs(component, (function (jsProps) {
         name
         version
         category
-        condition
+        flags
         platforms
         description
         keywords

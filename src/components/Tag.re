@@ -8,7 +8,8 @@ module Tag = {
     style([
       display(InlineBlock),
       opacity(0.75),
-      fontSize(em(0.85)),
+      fontSize(em(0.75)),
+      lineHeight(em(1.6)),
       marginLeft(em(0.5)),
       unsafe("whiteSpace", "nowrap"),
       backgroundColor(hex("fff3")),

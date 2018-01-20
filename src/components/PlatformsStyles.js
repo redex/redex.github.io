@@ -57,7 +57,7 @@ var tooltip = Css.style(/* :: */[
                               /* :: */[
                                 Css.marginRight(Css.em(0.5)),
                                 /* :: */[
-                                  Css.unsafe("vertical-align", "middle"),
+                                  Css.unsafe("verticalAlign", "middle"),
                                   /* :: */[
                                     Css.transform(Css.translateY(Css.px(-1))),
                                     /* [] */0

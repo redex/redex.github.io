@@ -1,6 +1,6 @@
 open! Css
 
-let root = fun type_ condition -> style [
+let root = fun type_ flags -> style [
   unsafe "padding" ".75em 1.5em";
   marginBottom (em 0.5);
   boxShadow Theme.Shadow.panel;
@@ -8,7 +8,7 @@ let root = fun type_ condition -> style [
   lineHeight (em 1.45);
 
   selector "> *" [
-    opacity (if condition == "maintained" then 1. else 0.5);
+    opacity (if flags = [||] then 1. else 0.5);
   ];
 
   hover [

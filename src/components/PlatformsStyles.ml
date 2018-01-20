@@ -31,7 +31,7 @@ let tooltip = style [
       height (em 1.);
       width (em 1.);
       marginRight (em 0.5);
-      unsafe "vertical-align" "middle";
+      unsafe "verticalAlign" "middle";
       transform (translateY (px (-1)));
     ];
   ]

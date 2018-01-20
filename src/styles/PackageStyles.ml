@@ -4,9 +4,10 @@ let root = style [
   marginBottom (em 1.45);
 ]
 
-let header type_ condition = style [
+let header type_ flags = style [
   unsafe "label" "header";
-  backgroundColor (if condition == "maintained" then Theme.Inverted.Color.background else (hex "aaa"));
+  (*backgroundColor (if flags = [||] then Theme.Inverted.Color.background else (hex "aaa"));*)
+  backgroundColor Theme.Inverted.Color.background;
   (*background "linear-gradient(to bottom right, hsl(6.9, 70.7%, 52%), hsl(6.9, 70.7%, 58%))";*)
   color Theme.Inverted.Color.text;
   unsafe "padding" "2em 4em";

@@ -7,7 +7,7 @@ let make = (~package, _children) => {
 	...component,
 
 	render: _self =>
-		<div className=Styles.root(package##_type, package##condition)>
+		<div className=Styles.root(package##_type, package##flags)>
 			<header className=Styles.header>
 				<Link className=Styles.name to_=package##slug> {package##name |> text} </Link>
 				<Version version=package##version isPublished=(package##_type == "published") />
@@ -34,6 +34,7 @@ let make = (~package, _children) => {
 			</header>
 
 			<div className=Styles.description>	
+				<Flags package />
 				{switch package##description {
 				| "" 					=> nbsp
 				| description => description |> text
