@@ -1,116 +1,659 @@
 {
-  "published": [
-    "@bs-blueprintjs/core",
-    "@bs-blueprintjs/datetime",
-    "@bs-blueprintjs/labs",
-    "@bs-blueprintjs/table",
-    "@glennsl/bs-jest",
-    "@glennsl/bs-json",
-    "@glennsl/bs-revamp",
-    "@glennsl/rebase",
-    "@nebuta/bs-jquery",
-    "bs-atom",
-    "bs-axios",
-    "bs-batteries",
-    "bs-bn.js",
-    "bs-chalk",
-    "bs-css",
-    "bs-dataloader",
-    "bs-date-fns",
-    "bs-director",
-    "bs-dom",
-    "bs-downshift",
-    "bs-enzyme",
-    "bs-express",
-    "bs-fetch",
-    "bs-glamor",
-    "bs-humps",
-    "bs-knex",
-    "bs-little-parser",
-    "bs-luxon",
-    "bs-material-ui",
-    "bs-material-ui-icons",
-    "bs-mysql",
-    "bs-moment",
-    "bs-mongodb",
-    "bs-most",
-    "bs-next",
-    "bs-nprogress",
-    "bs-numeral",
-    "bs-ocaml-protoc-json",
-    "bs-promise-router",
-    "bs-react-fela",
-    "bs-react-intl",
-    "bs-react-native",
-    "bs-react-notification-system",
-    "bs-react-pdf",
-    "bs-react-test-renderer",
-    "bs-rebass",
-    "bs-rebug",
-    "bs-snabbdom",
-    "bs-spectacle",
-    "bs-spotify-web-api",
-    "bs-svg-attachment",
-    "bs-vscode",
-    "bs-webapi",
-    "bs-websockets",
-    "bs-webworkers",
-    "bucklescript-phx",
-    "bucklescript-tea",
-    "clj-collection-apis-reasonml",
-    "immutable-re",
-    "json-r",
-    "rationale",
-    "re-classnames",
-    "re-formality",
-    "re-respect",
-    "reason-apollo",
-    "reason-nact",
-    "reason-react",
-    "reason-react-toolbox",
-    "reason-these",
-    "reductive",
-    "reglinterface",
-    "reglios",
-    "reglnative",
-    "reglweb",
-    "regql",
-    "tween.re"
-  ],
-  "unpublished": [
-    "af/bs-d3",
-    "AndrewKvalheim/bs-geofire",
-    "Astrocoders/bs-react-native-router-flux",
-    "Astrocoders/bs-reason-apollo",
-    "Astrocoders/reform",
-    "Astrocoders/restyled",
-    "aweary/reason-vue",
-    "bsansouci/rewebrtc",
-    "freebroccolo/bucklescript-electron",
-    "glennsl/bs-benchmarkjs",
-    "glennsl/infinite-jest",
-    "glennsl/quickiecheck",
-    "glennsl/refetch",
-    "reasonml-community/bs-discord.js",
-    "reasonml-community/bs-glob",
-    "reasonml-community/bs-history",
-    "reasonml-community/bs-immutablejs",
-    "reasonml-community/bs-leaflet",
-    "reasonml-community/bs-node",
-    "reasonml-community/bs-socket.io",
-    "reasonml-community/bs-transit-js",
-    "Risto-Stevcev/bs-abstract",
-    "Schmavery/reprocessing",
-    "splish-me/bs-storybook",
-    "state-machine-systems/JsonCodec",
-    "szymonzmyslony/reason-react-native-navigation",
-    "threepointone/bs-nice",
-    "TomLingham/bs-node-http",
-    "viebel/MetaTagsReRe",
-    "wokalski/vow",
-    "zploskey/bs-puppeteer"
-  ],
+  "published": {
+    "@astrada/bs-react-fela": {
+      "category": "binding",
+      "platforms": ["browser"],
+      "keywords": ["react", "css"]
+    },
+    "@astrada/reason-react-toolbox": {
+      "category": "binding",
+      "platforms": ["browser"],
+      "keywords": ["react", "ui toolkit"]
+    },
+    "@bs-blueprintjs/core": {
+      "category": "binding",
+      "flags": ["neglected"],
+      "platforms": ["browser"],
+      "keywords": ["react", "ui-library"],
+      "comment": "missing readme, keywords"
+    },
+    "@bs-blueprintjs/datetime": {
+      "category": "binding",
+      "flags": ["neglected"],
+      "platforms": ["browser"],
+      "comment": "missing readme, keywords"
+    },
+    "@bs-blueprintjs/labs": {
+      "category": "binding",
+      "flags": ["neglected"],
+      "platforms": ["browser"],
+      "comment": "missing readme, keywords"
+    },
+    "@bs-blueprintjs/table": {
+      "category": "binding",
+      "flags": ["neglected"],
+      "platforms": ["browser"],
+      "comment": "missing readme, keywords"
+    },
+    "@glennsl/bs-jest": {
+      "category": "binding",
+      "platforms": ["node"],
+      "keywords": ["testing"]
+    },
+    "@glennsl/bs-json": {
+      "category": "library",
+      "platforms": ["browser", "node"],
+      "keywords": ["json", "data serialization"]
+    },
+    "@glennsl/bs-revamp": {
+      "category": "library",
+      "platforms": ["browser", "node"],
+      "keywords": ["regular expressions", "string manipulation", "utilities"]
+    },
+    "@glennsl/rebase": {
+      "category": "library",
+      "platforms": ["browser", "node"],
+      "keywords": ["standard library", "collections", "utilities"]
+    },
+    "@nebuta/bs-jquery": {
+      "category": "binding",
+      "platforms": ["browser"],
+      "keywords": ["jquery", "utilities", "dom"]
+    },
+    "bs-atom": {
+      "category": "binding",
+      "flags": ["neglected"],
+      "platforms": ["node"],
+      "keywords": ["uncategorized"],
+      "comment": "Short readme"
+    },
+    "bs-axios": {
+      "category": "binding",
+      "platforms": ["browser", "node"],
+      "keywords": ["http-client"]
+    },
+    "bs-batteries": {
+      "category": "library",
+      "flags": ["neglected"],
+      "platforms": ["any"],
+      "keywords": ["standard library", "collections", "utilities"],
+      "comment": "Short readme"
+    },
+    "bs-bn.js": {
+      "category": "binding",
+      "platforms": ["browser", "node"],
+      "keywords": ["math", "utilities"]
+    },
+    "bs-chalk": {
+      "category": "binding",
+      "flags": ["neglected"],
+      "platforms": ["node"],
+      "keywords": ["cli"],
+      "comment": "Short readme"
+    },
+    "bs-css": {
+      "category": "binding",
+      "platforms": ["browser"],
+      "keywords": ["css"]
+    },
+    "bs-dataloader": {
+      "category": "binding",
+      "platforms": ["browser"],
+      "keywords": ["data fetching"]
+    },
+    "bs-date-fns": {
+      "category": "binding",
+      "platforms": ["browser", "node"],
+      "keywords": ["date/time manipulation"]
+    },
+    "bs-director": {
+      "category": "binding",
+      "flags": ["neglected"],
+      "platforms": ["browser"],
+      "keywords": ["routing"],
+      "comment": "Missing reporitory url"
+    },
+    "bs-dom": {
+      "category": "binding",
+      "flags": ["neglected"],
+      "platforms": ["browser"],
+      "keywords": ["dom"],
+      "comment": "Short readme"
+    },
+    "bs-downshift": {
+      "category": "binding",
+      "platforms": ["browser"],
+      "keywords": ["react", "ui toolkit"]
+    },
+    "bs-enzyme": {
+      "category": "binding",
+      "platforms": ["node"],
+      "keywords": ["react", "testing"]
+    },
+    "bs-express": {
+      "category": "binding",
+      "flags": ["neglected"],
+      "platforms": ["node"],
+      "keywords": ["express", "web framework"],
+      "comment": "Short readme, missing keywords"
+    },
+    "bs-fetch": {
+      "category": "binding",
+      "platforms": ["browser", "node"],
+      "keywords": ["http-client"]
+    },
+    "bs-glamor": {
+      "category": "binding",
+      "flags": ["neglected"],
+      "platforms": ["browser"],
+      "keywords": ["css"],
+      "comment": "Unmaintained"
+    },
+    "bs-humps": {
+      "category": "binding",
+      "platforms": ["browser", "node"],
+      "keywords": ["string manipulation", "utilities"]
+    },
+    "bs-knex": {
+      "category": "binding",
+      "platforms": ["browser", "node"],
+      "keywords": ["sql"]
+    },
+    "bs-little-parser": {
+      "category": "library",
+      "flags": ["neglected"],
+      "platforms": ["any"],
+      "keywords": ["parsing"],
+      "comment": "Missing installation section in readme"
+    },
+    "bs-luxon": {
+      "category": "binding",
+      "platforms": ["browser", "node"],
+      "keywords": ["date/time manipulation"]
+    },
+    "bs-material-ui": {
+      "category": "binding",
+      "platforms": ["browser"],
+      "keywords": ["react", "ui toolkit"]
+    },
+    "bs-material-ui-icons": {
+      "category": "binding",
+      "platforms": ["browser"],
+      "keywords": ["react", "ui toolkit"]
+    },
+    "bs-mysql": {
+      "category": "binding",
+      "platforms": ["node"],
+      "keywords": ["sql", "database"]
+    },
+    "bs-moment": {
+      "category": "binding",
+      "platforms": ["browser", "node"],
+      "keywords": ["date/time manipulation"]
+    },
+    "bs-mongodb": {
+      "category": "binding",
+      "flags": ["neglected"],
+      "platforms": ["node"],
+      "keywords": ["nosql", "database"],
+      "comment": "Missing repository url"
+    },
+    "bs-most": {
+      "category": "binding",
+      "platforms": ["browser", "node"],
+      "keywords": ["reactive programming", "state management?"]
+    },
+    "bs-next": {
+      "category": "binding",
+      "platforms": ["node"],
+      "keywords": ["react", "ssr"]
+    },
+    "bs-nprogress": {
+      "category": "binding",
+      "platforms": ["browser"],
+      "keywords": ["ui toolkit"]
+    },
+    "bs-numeral": {
+      "category": "binding",
+      "platforms": ["browser", "node"],
+      "keywords": ["utilities"]
+    },
+    "bs-ocaml-protoc": {
+      "category": "tool",
+      "platforms": ["any"],
+      "keywords": ["data serialization"]
+    },
+    "bs-ocaml-protoc-json": {
+      "category": "library",
+      "platforms": ["browser", "node"],
+      "keywords": ["data serialization"]
+    },
+    "bs-promise-router": {
+      "category": "binding",
+      "platforms": ["browser", "node"],
+      "keywords": ["express", "routing"]
+    },
+    "bs-react-intl": {
+      "category": "binding",
+      "flags": ["neglected"],
+      "platforms": ["browser"],
+      "keywords": ["react", "i18n"],
+      "comment": "Short readme"
+    },
+    "bs-react-native": {
+      "category": "binding",
+      "platforms": ["node"],
+      "keywords": ["react", "ui toolkit"]
+    },
+    "bs-react-notification-system": {
+      "category": "binding",
+      "platforms": ["browser"],
+      "keywords": ["react", "ui toolkit"]
+    },
+    "bs-react-pdf": {
+      "category": "binding",
+      "platforms": ["browser", "node"],
+      "keywords": ["react"]
+    },
+    "bs-react-test-renderer": {
+      "category": "binding",
+      "platforms": ["browser", "node"],
+      "keywords": ["react", "testing"]
+    },
+    "bs-reason-apollo": {
+      "category": "binding",
+      "flags": ["neglected"],
+      "platforms": ["browser"],
+      "keywords": ["react", "graphql", "data fetching"],
+      "comment": "Bad description"
+    },
+    "bs-rebass": {
+      "category": "binding",
+      "flags": ["neglected"],
+      "platforms": ["browser"],
+      "keywords": ["react", "ui toolkit"],
+      "comment": "Short readme"
+    },
+    "bs-rebug": {
+      "category": "library",
+      "flags": ["neglected"],
+      "platforms": ["browser", "node"],
+      "keywords": ["logging", "utilities"],
+      "comment": "Missing repository url"
+    },
+    "bs-reform": {
+      "category": "library",
+      "flags": ["neglected"],
+      "platforms": ["browser"],
+      "keywords": ["react", "form validation"],
+      "comment": "Missing installation section"
+    },
+    "bs-snabbdom": {
+      "category": "binding",
+      "flags": ["neglected"],
+      "platforms": ["browser"],
+      "keywords": ["virtual dom"],
+      "comment": "Missing repository url"
+    },
+    "bs-spectacle": {
+      "category": "binding",
+      "platforms": ["browser"],
+      "keywords": ["react", "presentation"]
+    },
+    "bs-spotify-web-api": {
+      "category": "binding",
+      "flags": ["neglected"],
+      "platforms": ["node"],
+      "keywords": ["uncategorized"],
+      "comment": "Short readme"
+    },
+    "bs-svg-attachment": {
+      "category": "binding",
+      "platforms": ["browser"],
+      "keywords": ["svg", "graphics"]
+    },
+    "bs-vscode": {
+      "category": "binding",
+      "flags": ["neglected"],
+      "platforms": ["node"],
+      "keywords": ["uncategorized"],
+      "comment": "Short readme"
+    },
+    "bs-webapi": {
+      "category": "binding",
+      "platforms": ["browser"],
+      "keywords": ["dom"]
+    },
+    "bs-websockets": {
+      "category": "binding",
+      "flags": ["neglected"],
+      "platforms": ["browser"],
+      "keywords": ["real-time communication"],
+      "comment": "Missing installation section in readme"
+    },
+    "bs-webworkers": {
+      "category": "binding",
+      "platforms": ["browser"],
+      "keywords": ["utilities"]
+    },
+    "bucklescript-phx": {
+      "category": "binding",
+      "platforms": ["browser"],
+      "keywords": ["utilities"]
+    },
+    "bucklescript-tea": {
+      "category": "library",
+      "platforms": ["browser"],
+      "keywords": ["virtual dom", "state management"]
+    },
+    "clj-collection-apis-reasonml": {
+      "category": "library",
+      "platforms": ["any"],
+      "keywords": ["collections"]
+    },
+    "immutable-re": {
+      "category": "library",
+      "platforms": ["any"],
+      "keywords": ["collections"]
+    },
+    "json-r": {
+      "category": "library",
+      "platforms": ["browser", "node"],
+      "keywords": ["json", "data serialization"]
+    },
+    "rationale": {
+      "category": "library",
+      "platforms": ["any"],
+      "keywords": ["utilities"]
+    },
+    "re-classnames": {
+      "category": "library",
+      "platforms": ["any"],
+      "keywords": ["utilities"]
+    },
+    "re-formality": {
+      "category": "library",
+      "platforms": ["browser"],
+      "keywords": ["react", "form validation"]
+    },
+    "re-respect": {
+      "category": "library",
+      "platforms": ["node"],
+      "keywords": ["testing"]
+    },
+    "reason-apollo": {
+      "category": "binding",
+      "platforms": ["node"],
+      "keywords": ["react", "graphql", "data fetching"]
+    },
+    "reason-nact": {
+      "category": "binding",
+      "platforms": ["node"],
+      "keywords": ["actor system"]
+    },
+    "reason-react": {
+      "category": "binding",
+      "platforms": ["browser", "node"],
+      "keywords": ["react", "virtual dom", "state management"]
+    },
+    "reason-these": {
+      "category": "library",
+      "flags": ["neglected"],
+      "platforms": ["any"],
+      "keywords": ["utilities"],
+      "comment": "Short readme"
+    },
+    "reductive": {
+      "category": "library",
+      "flags": ["neglected"],
+      "platforms": ["browser", "node"],
+      "keywords": ["react", "state management"],
+      "comment": "Missijng repository url"
+    },
+    "reglinterface": {
+      "category": "library",
+      "flags": ["neglected"],
+      "platforms": ["any"],
+      "keywords": ["opengl", "graphics"],
+      "comment": "Missijng readme, license, repository url"
+    },
+    "reglios": {
+      "category": "library",
+      "flags": ["neglected"],
+      "platforms": ["native"],
+      "keywords": ["opengl", "graphics"],
+      "comment": "Missijng readme, license, repository url"
+    },
+    "reglnative": {
+      "category": "library",
+      "flags": ["neglected"],
+      "platforms": ["native"],
+      "keywords": ["opengl", "graphics"],
+      "comment": "Missijng readme, license, repository url"
+    },
+    "reglweb": {
+      "category": "library",
+      "flags": ["neglected"],
+      "platforms": ["browser"],
+      "keywords": ["opengl", "graphics"],
+      "comment": "Missijng readme, license, repository url"
+    },
+    "regql": {
+      "category": "library",
+      "platforms": ["browser"],
+      "keywords": ["graphql", "data fetching"]
+    },
+    "tween.re": {
+      "category": "library",
+      "flags": ["neglected"],
+      "platforms": ["browser"],
+      "keywords": ["utilities", "animation"],
+      "comment": "Missijng readme, repository url"
+    }
+  },
+
+  "unpublished": {
+    "af/bs-d3": {
+      "repository": "github:af/bs-d3",
+      "category": "binding",
+      "platforms": ["browser"],
+      "keywords": ["svg", "graphics"]
+    },
+    "AndrewKvalheim/bs-geofire": {
+      "repository": "github:AndrewKvalheim/bs-geofire",
+      "category": "binding",
+      "platforms": ["browser"],
+      "keywords": ["geolocation", "database"]
+    },
+    "aweary/reason-vue": {
+      "repository": "github:aweary/reason-vue",
+      "category": "binding",
+      "flags": ["neglected"],
+      "platforms": ["browser"],
+      "keywords": ["virtual-dom"],
+      "comment": "Short readme"
+    },
+    "bsansouci/rewebrtc": {
+      "repository": "github:bsansouci/rewebrtc",
+      "category": "binding",
+      "flags": ["neglected"],
+      "platforms": ["browser"],
+      "keywords": ["real-time communication"],
+      "comment": "Short readme, missing license, homepage url, issues url"
+    },
+    "freebroccolo/bucklescript-electron": {
+      "repository": "github:freebroccolo/bucklescript-electron",
+      "category": "binding",
+      "flags": ["neglected"],
+      "platforms": ["node"],
+      "keywords": ["uncategorized"],
+      "comment": "Short readme"
+    },
+    "glennsl/bs-benchmarkjs": {
+      "repository": "github:glennsl/bs-benchmarkjs",
+      "category": "binding",
+      "flags": ["neglected"],
+      "platforms": ["browser", "node"],
+      "keywords": ["testing?"],
+      "comment": "Short readme"
+    },
+    "glennsl/infinite-jest": {
+      "repository": "github:glennsl/infinite-jest",
+      "category": "library",
+      "platforms": ["browser", "node", "native"],
+      "keywords": ["testing"]
+    },
+    "glennsl/quickiecheck": {
+      "repository": "github:glennsl/quickiecheck",
+      "category": "library",
+      "flags": ["neglected"],
+      "platforms": ["browser", "node"],
+      "keywords": ["testing"],
+      "comment": "Short readme"
+    },
+    "glennsl/refetch": {
+      "repository": "github:glennsl/refetch",
+      "category": "library",
+      "platforms": ["browser", "node"],
+      "keywords": ["http-client"]
+    },
+    "reasonml-community/bs-discord.js": {
+      "repository": "github:reasonml-community/bs-discord.js",
+      "category": "binding",
+      "flags": ["neglected"],
+      "platforms": ["node"],
+      "keywords": ["uncategorized"],
+      "comment": "Short readme"
+    },
+    "reasonml-community/bs-glob": {
+      "repository": "github:reasonml-community/bs-glob",
+      "category": "binding",
+      "platforms": ["node"],
+      "keywords": ["filesystem", "utilities"]
+    },
+    "reasonml-community/bs-history": {
+      "repository": "github:reasonml-community/bs-history",
+      "category": "binding",
+      "flags": ["neglected"],
+      "platforms": ["browser", "node"],
+      "keywords": ["uncategorized"],
+      "comment": "Short readme"
+    },
+    "reasonml-community/bs-immutablejs": {
+      "repository": "github:reasonml-community/bs-immutablejs",
+      "category": "binding",
+      "platforms": ["browser", "node"],
+      "keywords": ["collections"]
+    },
+    "reasonml-community/bs-leaflet": {
+      "repository": "github:reasonml-community/bs-leaflet",
+      "category": "binding",
+      "flags": ["neglected"],
+      "platforms": ["browser"],
+      "keywords": ["maps"],
+      "comment": "Short readme"
+    },
+    "reasonml-community/bs-node": {
+      "repository": "github:reasonml-community/bs-node",
+      "category": "binding",
+      "flags": ["neglected"],
+      "platforms": ["node"],
+      "keywords": ["standard library", "utilities"],
+      "comment": "Short readme"
+    },
+    "reasonml-community/bs-socket.io": {
+      "repository": "github:reasonml-community/bs-socket.io",
+      "category": "binding",
+      "flags": ["neglected"],
+      "platforms": ["browser", "node"],
+      "keywords": ["real-time communication"],
+      "comment": "Missing license, homepage url, issues url"
+    },
+    "reasonml-community/bs-transit-js": {
+      "repository": "github:reasonml-community/bs-transit-js",
+      "category": "binding",
+      "flags": ["neglected"],
+      "platforms": ["browser", "node"],
+      "keywords": ["data serialization"],
+      "comment": "Short readme, missing license, issues url"
+    },
+    "Risto-Stevcev/bs-abstract": {
+      "repository": "github:Risto-Stevcev/bs-abstract",
+      "category": "library",
+      "platforms": ["any"],
+      "keywords": ["utilities"]
+    },
+    "Schmavery/reprocessing": {
+      "repository": "github:Schmavery/reprocessing",
+      "category": "library",
+      "platforms": ["browser", "native"],
+      "keywords": ["opengl", "graphics"]
+    },
+    "splish-me/bs-storybook": {
+      "repository": "github:splish-me/bs-storybook",
+      "category": "binding",
+      "flags": ["neglected"],
+      "platforms": ["browser", "node"],
+      "keywords": ["react", "dev tools"],
+      "comment": "Short readme, missing description, license, homepage url, issues url"
+    },
+    "state-machine-systems/JsonCodec": {
+      "repository": "github:state-machine-systems/JsonCodec",
+      "category": "library",
+      "platforms": ["browser", "node"],
+      "keywords": ["json", "data serialization"]
+    },
+    "szymonzmyslony/reason-react-native-navigation": {
+      "repository": "github:szymonzmyslony/reason-react-native-navigation",
+      "category": "library",
+      "platforms": ["node"],
+      "keywords": ["react", "routing"]
+    },
+    "threepointone/bs-nice": {
+      "repository": "github:threepointone/bs-nice",
+      "category": "library",
+      "platforms": ["browser"],
+      "keywords": ["css"]
+    },
+    "TomLingham/bs-node-http": {
+      "repository": "github:threepointone/bs-nice",
+      "category": "binding",
+      "platforms": ["node"],
+      "keywords": ["http client", "http server"]
+    },
+    "viebel/MetaTagsReRe": {
+      "repository": "github:viebel/MetaTagsReRe",
+      "category": "library",
+      "flags": ["neglected"],
+      "platforms": ["browser", "node"],
+      "keywords": ["react"],
+      "comment": "Missing description, homepage url, issues url"
+    },
+    "wokalski/vow": {
+      "repository": "github:wokalski/vow",
+      "category": "library",
+      "platforms": ["browser", "node"],
+      "keywords": ["async", "promise?", "utilities"]
+    },
+    "zploskey/bs-puppeteer": {
+      "repository": "github:zploskey/bs-puppeteer",
+      "category": "binding",
+      "flags": ["neglected"],
+      "platforms": ["node"],
+      "keywords": ["uncategorized"],
+      "comment": "Missing description, homepage url"
+    }
+  },
+
   "prematurely-published": [
+    "bs-react-native-router-flux",
+    {"bs-restyled": {
+      "category": "binding",
+      "flags": ["neglected", "not usable"],
+      "platforms": ["browser"],
+      "keywords": ["react", "css"],
+      "comment": "Bad description, incorrect install instructions, incorrect example"
+    }},
     "breytt",
     "bs-aeson",
     "bs-amplitude",
