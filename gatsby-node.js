@@ -145,7 +145,7 @@ exports.onCreateNode = async ({ node, loadNodeContent, boundActionCreators: { cr
     
     if (node.sourceInstanceName === "packages") {
       const package = parsed;
-      package.slug = path.join("packages", decodeURIComponent(package.id))
+      package.slug = path.join("/packages", decodeURIComponent(package.id))
 
       await new Promise(resolve => 
         remark()
@@ -161,7 +161,7 @@ exports.onCreateNode = async ({ node, loadNodeContent, boundActionCreators: { cr
     } else if (node.sourceInstanceName === "keywords") {
       parsed.forEach(keyword => {
         keyword.id = "keywords/" + keyword.name;
-        keyword.slug = path.join("keywords", decodeURIComponent(keyword.name));
+        keyword.slug = path.join("/keywords", decodeURIComponent(keyword.name));
         transformObject(keyword, "Keywords")
       });
     } else {
