@@ -13,6 +13,10 @@ module Color = struct
   let subtleBorder = hex "eee"
 
   let bad = rgba 255 0 0 0.75
+
+  let reason = hex "DD4C39"
+  let ocaml = hex "C87A27"
+  let javascript = hex "F7E018"
 end
 
 module Panel = struct

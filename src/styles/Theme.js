@@ -13,6 +13,12 @@ var subtleBorder = Css.hex("eee");
 
 var bad = Css.rgba(255, 0, 0, 0.75);
 
+var reason = Css.hex("DD4C39");
+
+var ocaml = Css.hex("C87A27");
+
+var javascript = Css.hex("F7E018");
+
 var Color = /* module */[
   /* primary */primary,
   /* darkPrimary */"hsl(6.9, 65%, 50%)",
@@ -21,7 +27,10 @@ var Color = /* module */[
   /* text */text,
   /* link */primary,
   /* subtleBorder */subtleBorder,
-  /* bad */bad
+  /* bad */bad,
+  /* reason */reason,
+  /* ocaml */ocaml,
+  /* javascript */javascript
 ];
 
 var Color$1 = /* module */[/* background */"white"];

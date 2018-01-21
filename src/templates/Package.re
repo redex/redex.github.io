@@ -7,6 +7,25 @@ module Styles = PackageStyles;
 let component = ReasonReact.statelessComponent("Package");
 let make = (~data, _children) => {
   ...component,
+
+  didMount: _self => {
+    let _ = [%bs.raw {|
+      document.querySelectorAll('.redex-codeblock.m-tabbed')
+      .forEach(el => {
+        el.querySelector('li.reason').addEventListener('click', () => {
+          el.querySelectorAll('.reason').forEach(_ => _.classList.add('s-selected'));
+          el.querySelectorAll('.ml').forEach(_ => _.classList.remove('s-selected'));
+        });
+
+        el.querySelector('li.ml').addEventListener('click', () => {
+          el.querySelectorAll('.reason').forEach(_ => _.classList.remove('s-selected'));
+          el.querySelectorAll('.ml').forEach(_ => _.classList.add('s-selected'));
+        });
+      })
+    |}];
+    ReasonReact.NoUpdate
+  },
+
   render: _self => {
     let package = data##package;
 

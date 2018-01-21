@@ -41,7 +41,7 @@
     "test": "validate_sources",
     "deploy": "gatsby build && gh-pages -d public -b master",
     "clean": "rm -rf data/generated",
-    "update-sources": "git submodule update --remote data && validate_sources",
+    "update-sources": "git submodule update --remote && validate_sources",
     "fetch": "npm run clean && npm run update-sources && fetch_published && fetch_unpublished && index_keywords && update_search_index",
     "everything": "npm run fetch && npm run deploy"
   },
@@ -50,6 +50,7 @@
     "gh-pages": "^1.1.0",
     "github-slugger": "^1.2.0",
     "mdast-util-to-string": "^1.0.4",
+    "reason": "^3.0.2",
     "reason-react": "^0.3.1",
     "redex-scripts": "redex/redex-scripts"
   }

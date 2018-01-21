@@ -120,7 +120,6 @@ let html = style [
     fontSize (rem 0.85);
     lineHeight (rem 1.42);
     unsafe "background" "hsla(0, 0%, 0%, 0.04)";
-    borderRadius (px 3);
     overflow Auto;
     unsafe "wordWrap" "normal";
     padding (rem 1.45);
@@ -139,4 +138,56 @@ let html = style [
       textDecorationLine (Values [Underline])
     ];
   ];
+
+  selector "& .redex-codeblock.m-tabbed" [
+    selector "& > ul" [
+      margin zero;
+
+      selector "& > li" [
+        cursor Pointer;
+        margin zero;
+        display InlineBlock;
+        padding2 ~v:(em 0.35) ~h:(em 0.75);
+        color white;
+        textTransform Lowercase;
+        fontVariant SmallCaps;
+
+        selector "&:not(.s-selected)" [
+          opacity 0.5;
+          unsafe "boxShadow" "inset 0 -4px 2px -2px rgba(0, 0, 0, 0.1)" ;
+
+          hover [
+            opacity 1.;
+          ]
+        ];
+
+        selector "&.reason" [
+          backgroundColor Theme.Color.reason;
+        ];
+        selector "&.ml" [
+          backgroundColor Theme.Color.ocaml;
+        ];
+      ];
+    ];
+
+    selector "& > .codeblock" [
+      display None;
+
+      selector "&.s-selected" [
+        display Block;
+      ];
+
+      selector "& > pre" [
+        marginTop zero;
+
+        selector "&.lang-reason" [
+          borderTop (px 2) Solid Theme.Color.reason
+        ];
+
+        selector "&.lang-ml" [
+          borderTop (px 2) Solid Theme.Color.ocaml
+        ];
+      ];
+    ]
+  ]
 ]

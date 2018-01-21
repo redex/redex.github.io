@@ -24,6 +24,23 @@ var component = ReasonReact.statelessComponent("Package");
 
 function make(data, _) {
   var newrecord = component.slice();
+  newrecord[/* didMount */4] = (function () {
+      ((
+      document.querySelectorAll('.redex-codeblock.m-tabbed')
+      .forEach(el => {
+        el.querySelector('li.reason').addEventListener('click', () => {
+          el.querySelectorAll('.reason').forEach(_ => _.classList.add('s-selected'));
+          el.querySelectorAll('.ml').forEach(_ => _.classList.remove('s-selected'));
+        });
+
+        el.querySelector('li.ml').addEventListener('click', () => {
+          el.querySelectorAll('.reason').forEach(_ => _.classList.remove('s-selected'));
+          el.querySelectorAll('.ml').forEach(_ => _.classList.add('s-selected'));
+        });
+      })
+    ));
+      return /* NoUpdate */0;
+    });
   newrecord[/* render */9] = (function () {
       var $$package = data.package;
       var match = $$package.license;
