@@ -41,7 +41,8 @@
     "test": "validate_sources",
     "deploy": "gatsby build && gh-pages -d public -b master",
     "clean": "rm -rf data/generated",
-    "fetch": "npm run clean && fetch_packages && fetch_unpublished && index_keywords && update_search_index",
+    "update-sources": "git submodule update --remote data && validate_sources",
+    "fetch": "npm run clean && npm run update-sources && fetch_published && fetch_unpublished && index_keywords && update_search_index",
     "everything": "npm run fetch && npm run deploy"
   },
   "devDependencies": {
