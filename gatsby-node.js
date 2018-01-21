@@ -12,7 +12,7 @@ const reToML = code => {
   try {
     return refmt.printML(refmt.parseRE(code));
   } catch (e) {
-    return e.message;
+    return e.message || "unknown refmt error";
   }
 };
 
@@ -20,7 +20,7 @@ const mlToRE = code => {
   try {
     return refmt.printRE(refmt.parseML(code));
   } catch (e) {
-    return e.message;
+    return e.message || "unknown refmt error";
   }
 };
 
@@ -147,15 +147,19 @@ exports.onCreateNode = async ({ node, loadNodeContent, boundActionCreators: { cr
       const package = parsed;
       package.slug = path.join("/packages", decodeURIComponent(package.id))
 
-      await new Promise(resolve => 
+      await new Promise((resolve, reject) => 
         remark()
           .use(codeBlocks)
           .use(headingAnchors)
           .use(html)
           .process(package.readme, function (err, file) {
-            package.readme = file.contents;
-            transformObject(package, "Packages");
-            resolve();
+            if (err) {
+              reject(err);
+            } else {
+              package.readme = file.contents;
+              transformObject(package, "Packages");
+              resolve();
+            }
           })
         );
     } else if (node.sourceInstanceName === "keywords") {
