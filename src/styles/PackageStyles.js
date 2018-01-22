@@ -4,7 +4,6 @@
 var Css          = require("bs-css/src/Css.js");
 var Curry        = require("bs-platform/lib/js/curry.js");
 var Theme        = require("./Theme.js");
-var Pervasives   = require("bs-platform/lib/js/pervasives.js");
 var CommonStyles = require("./CommonStyles.js");
 
 var root = Css.style(/* :: */[
@@ -12,33 +11,23 @@ var root = Css.style(/* :: */[
       /* [] */0
     ]);
 
-var common_000 = Css.unsafe("label", "header");
-
-var common_001 = /* :: */[
-  Css.backgroundColor(Theme.Inverted[/* Color */0][/* background */0]),
-  /* :: */[
-    Css.color(Theme.Inverted[/* Color */0][/* text */1]),
-    /* :: */[
-      Css.unsafe("padding", "2em 4em"),
-      /* [] */0
-    ]
-  ]
-];
-
-var common = /* :: */[
-  common_000,
-  common_001
-];
-
-function header(param) {
-  if (param === "unpublished") {
-    return Css.style(Pervasives.$at(common, /* :: */[
-                    Css.unsafe("background", Theme.Inverted[/* crosshatchBackground */1]),
-                    /* [] */0
-                  ]));
-  } else {
-    return Css.style(common);
-  }
+function header(type_, _) {
+  return Css.style(/* :: */[
+              Css.unsafe("label", "header"),
+              /* :: */[
+                Css.backgroundColor(Theme.Inverted[/* Color */0][/* background */0]),
+                /* :: */[
+                  Css.color(Theme.Inverted[/* Color */0][/* text */1]),
+                  /* :: */[
+                    Css.unsafe("padding", "2em 4em"),
+                    /* :: */[
+                      Css.unsafe("backgroundImage", type_ === "unpublished" ? Theme.Inverted[/* crosshatchBackground */1] : "none"),
+                      /* [] */0
+                    ]
+                  ]
+                ]
+              ]
+            ]);
 }
 
 var props = Css.style(/* :: */[
@@ -107,46 +96,6 @@ var name = Css.style(/* :: */[
     ]);
 
 var fields = Css.style(/* [] */0);
-
-var version = Css.style(/* :: */[
-      Css.fontSize(Css.em(0.85)),
-      /* :: */[
-        Css.fontStyle(/* Italic */1),
-        /* :: */[
-          Css.marginLeft(Css.em(0.5)),
-          /* :: */[
-            Css.opacity(0.75),
-            /* [] */0
-          ]
-        ]
-      ]
-    ]);
-
-var unpublishedLabel = Css.style(/* :: */[
-      Css.fontSize(Css.em(0.85)),
-      /* :: */[
-        Css.fontStyle(/* Italic */1),
-        /* :: */[
-          Css.marginLeft(Css.em(0.5)),
-          /* :: */[
-            Css.color(Theme.Color[/* bad */7]),
-            /* :: */[
-              Css.backgroundColor(Theme.Inverted[/* Color */0][/* text */1]),
-              /* :: */[
-                Css.unsafe("padding", ".2ex 1ex"),
-                /* :: */[
-                  Css.unsafe("borderRadius", "1.4ex"),
-                  /* :: */[
-                    Css.alignSelf(/* Center */2),
-                    /* [] */0
-                  ]
-                ]
-              ]
-            ]
-          ]
-        ]
-      ]
-    ]);
 
 var description = Css.style(/* :: */[
       Css.marginBottom(Css.em(0.5)),
@@ -311,24 +260,22 @@ var readme = Curry._1(Css.merge, /* :: */[
       ]
     ]);
 
-exports.root             = root;
-exports.header           = header;
-exports.props            = props;
-exports.title            = title;
-exports.owner            = owner;
-exports.name             = name;
-exports.fields           = fields;
-exports.version          = version;
-exports.unpublishedLabel = unpublishedLabel;
-exports.description      = description;
-exports.tags             = tags;
-exports.tagsIcon         = tagsIcon;
-exports.right            = right;
-exports.updated          = updated;
-exports.license          = license;
-exports.nolicense        = nolicense;
-exports.stars            = stars;
-exports.starIcon         = starIcon;
-exports.links            = links;
-exports.readme           = readme;
+exports.root        = root;
+exports.header      = header;
+exports.props       = props;
+exports.title       = title;
+exports.owner       = owner;
+exports.name        = name;
+exports.fields      = fields;
+exports.description = description;
+exports.tags        = tags;
+exports.tagsIcon    = tagsIcon;
+exports.right       = right;
+exports.updated     = updated;
+exports.license     = license;
+exports.nolicense   = nolicense;
+exports.stars       = stars;
+exports.starIcon    = starIcon;
+exports.links       = links;
+exports.readme      = readme;
 /* root Not a pure module */

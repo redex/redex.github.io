@@ -56,6 +56,9 @@ let default =
               id
               name
               version
+              category
+              flags
+              platforms
               description
               keywords
               license

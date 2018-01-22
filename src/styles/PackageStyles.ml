@@ -4,18 +4,16 @@ let root = style [
   marginBottom (em 1.45);
 ]
 
-let header = 
-  let common = [
-    unsafe "label" "header";
-    backgroundColor Theme.Inverted.Color.background;
-    (*background "linear-gradient(to bottom right, hsl(6.9, 70.7%, 52%), hsl(6.9, 70.7%, 58%))";*)
-    color Theme.Inverted.Color.text;
-    unsafe "padding" "2em 4em";
-  ] in function
-  | "unpublished" -> style (common @ [
-      unsafe "background" Theme.Inverted.crosshatchBackground;
-    ])
-  | _ -> style common
+let header type_ flags = style [
+  unsafe "label" "header";
+  (*backgroundColor (if flags = [||] then Theme.Inverted.Color.background else (hex "aaa"));*)
+  backgroundColor Theme.Inverted.Color.background;
+  (*background "linear-gradient(to bottom right, hsl(6.9, 70.7%, 52%), hsl(6.9, 70.7%, 58%))";*)
+  color Theme.Inverted.Color.text;
+  unsafe "padding" "2em 4em";
+
+  unsafe "backgroundImage" (if type_ == "unpublished" then Theme.Inverted.crosshatchBackground else "none");
+]
 
 let props = style [
   display Flex;
@@ -52,24 +50,6 @@ let name = style [
 ]
 
 let fields = style [
-]
-
-let version = style [
-  fontSize (em 0.85);
-  fontStyle Italic;
-  marginLeft (em 0.5);
-  opacity 0.75;
-]
-
-let unpublishedLabel = style [
-  fontSize (em 0.85);
-  fontStyle Italic;
-  marginLeft (em 0.5);
-  color Theme.Color.bad;
-  backgroundColor Theme.Inverted.Color.text;
-  unsafe "padding" ".2ex 1ex";
-  unsafe "borderRadius" "1.4ex";
-  alignSelf Center;
 ]
 
 let description = style [

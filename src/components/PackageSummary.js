@@ -5,10 +5,13 @@ var Tag                  = require("./Tag.js");
 var Icon                 = require("../bindings/Icon.js");
 var Link                 = require("../bindings/gatsby/link.js");
 var Curry                = require("bs-platform/lib/js/curry.js");
+var Flags                = require("./Flags.js");
 var Score                = require("./Score.js");
 var React                = require("react");
 var Vrroom               = require("vrroom/src/Vrroom.bs.js");
 var TimeAgo              = require("../bindings/TimeAgo.js");
+var Version              = require("./Version.js");
+var Platforms            = require("./Platforms.js");
 var ReasonReact          = require("reason-react/src/ReasonReact.js");
 var PackageSummaryStyles = require("./PackageSummaryStyles.js");
 
@@ -22,14 +25,10 @@ function make($$package, _) {
       var description = $$package.description;
       var tmp = description === "" ? Vrroom.Helpers[/* nbsp */2] : Vrroom.Helpers[/* text */0](description);
       return React.createElement("div", {
-                  className: PackageSummaryStyles.root($$package.type)
+                  className: PackageSummaryStyles.root($$package.type, $$package.flags)
                 }, React.createElement("header", {
                       className: PackageSummaryStyles.header
-                    }, ReasonReact.element(/* None */0, /* None */0, Link.make($$package.slug, /* Some */[PackageSummaryStyles.name], /* None */0, /* array */[Vrroom.Helpers[/* text */0]($$package.name)])), React.createElement("span", {
-                          className: PackageSummaryStyles.version
-                        }, Vrroom.Helpers[/* text */0]($$package.version)), React.createElement("span", {
-                          className: PackageSummaryStyles.unpublishedLabel($$package.type)
-                        }, Vrroom.Helpers[/* text */0]("unpublished")), React.createElement("div", {
+                    }, ReasonReact.element(/* None */0, /* None */0, Link.make($$package.slug, /* Some */[PackageSummaryStyles.name], /* None */0, /* array */[Vrroom.Helpers[/* text */0]($$package.name)])), ReasonReact.element(/* None */0, /* None */0, Version.make($$package.version, +($$package.type === "published"), /* array */[])), ReasonReact.element(/* None */0, /* None */0, Platforms.make($$package.platforms, /* array */[])), React.createElement("div", {
                           className: PackageSummaryStyles.props
                         }, React.createElement("span", {
                               className: PackageSummaryStyles.stars
@@ -41,10 +40,10 @@ function make($$package, _) {
                               className: PackageSummaryStyles.updated
                             }, ReasonReact.element(/* None */0, /* None */0, TimeAgo.make($$package.updated, /* array */[]))))), React.createElement("div", {
                       className: PackageSummaryStyles.description
-                    }, tmp), React.createElement("div", {
+                    }, ReasonReact.element(/* None */0, /* None */0, Flags.make($$package, /* None */0, /* array */[])), tmp), React.createElement("div", {
                       className: PackageSummaryStyles.tags
-                    }, ReasonReact.element(/* None */0, /* None */0, Icon.Tags[/* make */0](/* Some */[PackageSummaryStyles.tagsIcon], /* array */[])), ReasonReact.element(/* None */0, /* None */0, Curry._3(Vrroom.Control[/* Map */0][/* make */1], $$package.keywords, /* None */0, (function (keyword) {
-                                return ReasonReact.element(/* Some */[keyword], /* None */0, Tag.make(keyword, /* array */[]));
+                    }, ReasonReact.element(/* None */0, /* None */0, Icon.Tags[/* make */0](/* Some */[PackageSummaryStyles.tagsIcon], /* array */[])), ReasonReact.element(/* None */0, /* None */0, Tag.Category[/* make */2]($$package.category, /* array */[])), ReasonReact.element(/* None */0, /* None */0, Curry._3(Vrroom.Control[/* Map */0][/* make */1], $$package.keywords, /* None */0, (function (keyword) {
+                                return ReasonReact.element(/* Some */[keyword], /* None */0, Tag.Keyword[/* make */1](keyword, /* array */[]));
                               })))));
     });
   return newrecord;

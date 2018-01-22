@@ -7,12 +7,31 @@ module Styles = PackageStyles;
 let component = ReasonReact.statelessComponent("Package");
 let make = (~data, _children) => {
   ...component,
+
+  didMount: _self => {
+    let _ = [%bs.raw {|
+      document.querySelectorAll('.redex-codeblock.m-tabbed')
+      .forEach(el => {
+        el.querySelector('li.reason').addEventListener('click', () => {
+          el.querySelectorAll('.reason').forEach(_ => _.classList.add('s-selected'));
+          el.querySelectorAll('.ml').forEach(_ => _.classList.remove('s-selected'));
+        });
+
+        el.querySelector('li.ml').addEventListener('click', () => {
+          el.querySelectorAll('.reason').forEach(_ => _.classList.remove('s-selected'));
+          el.querySelectorAll('.ml').forEach(_ => _.classList.add('s-selected'));
+        });
+      })
+    |}];
+    ReasonReact.NoUpdate
+  },
+
   render: _self => {
     let package = data##package;
 
     <div className=Styles.root>
       <Helmet title=Config.titleTemplate(package##name) />
-      <header className=Styles.header(package##_type)>
+      <header className=Styles.header(package##_type, package##flags)>
         <div className=Styles.props>
           <Control.IfSome option=(package##stars |> Js.toOption)>
             ...(stars =>
@@ -38,25 +57,22 @@ let make = (~data, _children) => {
             {package##name |> text}
           </Link>
 
-          <span className=Styles.version> {package##version |> text} </span>
+				  <Version version=package##version isPublished=(package##_type == "published") />
 
-          {switch (package##_type) {
-          | "unpublished" =>
-            <span className=Styles.unpublishedLabel> {"unpublished" |> text} </span>
-          | _ => ReasonReact.nullElement
-          }}
+          <Platforms platforms=package##platforms />
         </div>
 
         <div className=Styles.fields>
           <div className=Styles.description>	
+				    <Flags package invert=true />
             {package##description |> text}
           </div>
 
           <div className=Styles.tags>
             <Icon.Tags className=Styles.tagsIcon />
-            <Control.Map items = package##keywords
-                         empty = (" - " |> text) >
-              ...(keyword => <Tag key=keyword name=keyword />)
+            <Tag.Category name=package##category />
+            <Control.Map items=package##keywords>
+              ...(keyword => <Tag.Keyword key=keyword name=keyword />)
             </Control.Map>
           </div>
         </div>
@@ -91,6 +107,9 @@ let default =
         id
         name
         version
+        category
+        flags
+        platforms
         description
         keywords
         license

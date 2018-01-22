@@ -1,14 +1,23 @@
 open! Css
-open CssEx
 
-let root = fun type_ -> style [
+let root = fun type_ flags -> style [
   unsafe "padding" ".75em 1.5em";
   marginBottom (em 0.5);
   boxShadow Theme.Shadow.panel;
   backgroundColor Theme.Panel.Color.background;
   lineHeight (em 1.45);
 
-  unsafe "backgroundImage" (if_ (type_ == "unpublished") Theme.Panel.crosshatchBackground);
+  selector "> *" [
+    opacity (if flags = [||] then 1. else 0.5);
+  ];
+
+  hover [
+    selector "> *" [
+      opacity 1.;
+    ]
+  ];
+
+  unsafe "backgroundImage" (if type_ == "unpublished" then Theme.Panel.crosshatchBackground else "none");
 ]
 
 let header = style [
@@ -25,23 +34,6 @@ let name = style [
     textDecorationLine (Values [Underline]);
   ];
 ]
-
-let version = style [
-  fontSize (em 0.85);
-  fontStyle Italic;
-  marginLeft (em 0.5);
-]
-
-let unpublishedLabel = function
-| "unpublished" -> style [
-    fontSize (em 0.85);
-    fontStyle Italic;
-    marginLeft (em 0.5);
-    color Theme.Color.bad;
-  ]
-| _ -> style [
-    display None;
-  ]
 
 let props = style [
   display Flex;

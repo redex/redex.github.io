@@ -7,11 +7,11 @@ let make = (~package, _children) => {
 	...component,
 
 	render: _self =>
-		<div className=Styles.root(package##_type)>
+		<div className=Styles.root(package##_type, package##flags)>
 			<header className=Styles.header>
 				<Link className=Styles.name to_=package##slug> {package##name |> text} </Link>
-				<span className=Styles.version> {package##version |> text} </span>
-				<span className=Styles.unpublishedLabel(package##_type)> {"unpublished" |> text} </span>
+				<Version version=package##version isPublished=(package##_type == "published") />
+				<Platforms platforms=package##platforms />
 
 				<div className=Styles.props>
 					<span className=Styles.stars>
@@ -34,6 +34,7 @@ let make = (~package, _children) => {
 			</header>
 
 			<div className=Styles.description>	
+				<Flags package />
 				{switch package##description {
 				| "" 					=> nbsp
 				| description => description |> text
@@ -42,8 +43,9 @@ let make = (~package, _children) => {
 
 			<div className=Styles.tags>
 				<Icon.Tags className=Styles.tagsIcon />
+        <Tag.Category name=package##category />
 				<Control.Map items=package##keywords>
-					...(keyword => <Tag key=keyword name=keyword />)
+					...(keyword => <Tag.Keyword key=keyword name=keyword />)
 				</Control.Map>
 			</div>
 		</div>

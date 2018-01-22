@@ -5,12 +5,15 @@ var Tag           = require("../components/Tag.js");
 var Icon          = require("../bindings/Icon.js");
 var Link          = require("../bindings/gatsby/link.js");
 var Curry         = require("bs-platform/lib/js/curry.js");
+var Flags         = require("../components/Flags.js");
 var Score         = require("../components/Score.js");
 var React         = require("react");
 var Config        = require("../Config.js");
 var Helmet        = require("../bindings/gatsby/helmet.js");
 var Vrroom        = require("vrroom/src/Vrroom.bs.js");
 var TimeAgo       = require("../bindings/TimeAgo.js");
+var Version       = require("../components/Version.js");
+var Platforms     = require("../components/Platforms.js");
 var ReasonReact   = require("reason-react/src/ReasonReact.js");
 var Js_primitive  = require("bs-platform/lib/js/js_primitive.js");
 var PackageStyles = require("../styles/PackageStyles.js");
@@ -21,42 +24,55 @@ var component = ReasonReact.statelessComponent("Package");
 
 function make(data, _) {
   var newrecord = component.slice();
+  newrecord[/* didMount */4] = (function () {
+      ((
+      document.querySelectorAll('.redex-codeblock.m-tabbed')
+      .forEach(el => {
+        el.querySelector('li.reason').addEventListener('click', () => {
+          el.querySelectorAll('.reason').forEach(_ => _.classList.add('s-selected'));
+          el.querySelectorAll('.ml').forEach(_ => _.classList.remove('s-selected'));
+        });
+
+        el.querySelector('li.ml').addEventListener('click', () => {
+          el.querySelectorAll('.reason').forEach(_ => _.classList.remove('s-selected'));
+          el.querySelectorAll('.ml').forEach(_ => _.classList.add('s-selected'));
+        });
+      })
+    ));
+      return /* NoUpdate */0;
+    });
   newrecord[/* render */9] = (function () {
       var $$package = data.package;
       var match = $$package.license;
-      var match$1 = $$package.type;
-      var tmp = match$1 === "unpublished" ? React.createElement("span", {
-              className: PackageStyles.unpublishedLabel
-            }, Vrroom.Helpers[/* text */0]("unpublished")) : null;
-      var tmp$1 = { };
-      var tmp$2 = Js_primitive.null_undefined_to_opt($$package.homepageUrl);
-      if (tmp$2) {
-        tmp$1.href = tmp$2[0];
+      var tmp = { };
+      var tmp$1 = Js_primitive.null_undefined_to_opt($$package.homepageUrl);
+      if (tmp$1) {
+        tmp.href = tmp$1[0];
       }
-      var tmp$3 = { };
-      var tmp$4 = Js_primitive.null_undefined_to_opt($$package.repositoryUrl);
-      if (tmp$4) {
-        tmp$3.href = tmp$4[0];
+      var tmp$2 = { };
+      var tmp$3 = Js_primitive.null_undefined_to_opt($$package.repositoryUrl);
+      if (tmp$3) {
+        tmp$2.href = tmp$3[0];
       }
-      var tmp$5 = { };
-      var tmp$6 = Js_primitive.null_undefined_to_opt($$package.npmUrl);
-      if (tmp$6) {
-        tmp$5.href = tmp$6[0];
+      var tmp$4 = { };
+      var tmp$5 = Js_primitive.null_undefined_to_opt($$package.npmUrl);
+      if (tmp$5) {
+        tmp$4.href = tmp$5[0];
       }
-      var tmp$7 = { };
-      var tmp$8 = Js_primitive.null_undefined_to_opt($$package.issuesUrl);
-      if (tmp$8) {
-        tmp$7.href = tmp$8[0];
+      var tmp$6 = { };
+      var tmp$7 = Js_primitive.null_undefined_to_opt($$package.issuesUrl);
+      if (tmp$7) {
+        tmp$6.href = tmp$7[0];
       }
-      var tmp$9 = { };
-      var tmp$10 = Js_primitive.null_undefined_to_opt($$package.docsUrl);
-      if (tmp$10) {
-        tmp$9.href = tmp$10[0];
+      var tmp$8 = { };
+      var tmp$9 = Js_primitive.null_undefined_to_opt($$package.docsUrl);
+      if (tmp$9) {
+        tmp$8.href = tmp$9[0];
       }
       return React.createElement("div", {
                   className: PackageStyles.root
                 }, ReasonReact.element(/* None */0, /* None */0, Helmet.make(/* Some */[Config.titleTemplate($$package.name)], /* None */0, /* None */0, /* None */0, /* array */[])), React.createElement("header", {
-                      className: PackageStyles.header($$package.type)
+                      className: PackageStyles.header($$package.type, $$package.flags)
                     }, React.createElement("div", {
                           className: PackageStyles.props
                         }, ReasonReact.element(/* None */0, /* None */0, Curry._2(Vrroom.Control[/* IfSome */3][/* make */1], Js_primitive.null_undefined_to_opt($$package.stars), (function (stars) {
@@ -71,19 +87,17 @@ function make(data, _) {
                               className: PackageStyles.updated
                             }, ReasonReact.element(/* None */0, /* None */0, TimeAgo.make($$package.updated, /* array */[])))), React.createElement("div", {
                           className: PackageStyles.title
-                        }, ReasonReact.element(/* None */0, /* None */0, Link.make($$package.slug, /* Some */[PackageStyles.name], /* None */0, /* array */[Vrroom.Helpers[/* text */0]($$package.name)])), React.createElement("span", {
-                              className: PackageStyles.version
-                            }, Vrroom.Helpers[/* text */0]($$package.version)), tmp), React.createElement("div", {
+                        }, ReasonReact.element(/* None */0, /* None */0, Link.make($$package.slug, /* Some */[PackageStyles.name], /* None */0, /* array */[Vrroom.Helpers[/* text */0]($$package.name)])), ReasonReact.element(/* None */0, /* None */0, Version.make($$package.version, +($$package.type === "published"), /* array */[])), ReasonReact.element(/* None */0, /* None */0, Platforms.make($$package.platforms, /* array */[]))), React.createElement("div", {
                           className: PackageStyles.fields
                         }, React.createElement("div", {
                               className: PackageStyles.description
-                            }, Vrroom.Helpers[/* text */0]($$package.description)), React.createElement("div", {
+                            }, ReasonReact.element(/* None */0, /* None */0, Flags.make($$package, /* Some */[/* true */1], /* array */[])), Vrroom.Helpers[/* text */0]($$package.description)), React.createElement("div", {
                               className: PackageStyles.tags
-                            }, ReasonReact.element(/* None */0, /* None */0, Icon.Tags[/* make */0](/* Some */[PackageStyles.tagsIcon], /* array */[])), ReasonReact.element(/* None */0, /* None */0, Curry._3(Vrroom.Control[/* Map */0][/* make */1], $$package.keywords, /* Some */[Vrroom.Helpers[/* text */0](" - ")], (function (keyword) {
-                                        return ReasonReact.element(/* Some */[keyword], /* None */0, Tag.make(keyword, /* array */[]));
+                            }, ReasonReact.element(/* None */0, /* None */0, Icon.Tags[/* make */0](/* Some */[PackageStyles.tagsIcon], /* array */[])), ReasonReact.element(/* None */0, /* None */0, Tag.Category[/* make */2]($$package.category, /* array */[])), ReasonReact.element(/* None */0, /* None */0, Curry._3(Vrroom.Control[/* Map */0][/* make */1], $$package.keywords, /* None */0, (function (keyword) {
+                                        return ReasonReact.element(/* Some */[keyword], /* None */0, Tag.Keyword[/* make */1](keyword, /* array */[]));
                                       }))))), React.createElement("div", {
                           className: PackageStyles.links
-                        }, React.createElement("a", tmp$1, Vrroom.Helpers[/* text */0]("homepage")), React.createElement("a", tmp$3, Vrroom.Helpers[/* text */0]("repository")), React.createElement("a", tmp$5, Vrroom.Helpers[/* text */0]("npm")), React.createElement("a", tmp$7, Vrroom.Helpers[/* text */0]("issues")), React.createElement("a", tmp$9, Vrroom.Helpers[/* text */0]("documentation")))), React.createElement("div", {
+                        }, React.createElement("a", tmp, Vrroom.Helpers[/* text */0]("homepage")), React.createElement("a", tmp$2, Vrroom.Helpers[/* text */0]("repository")), React.createElement("a", tmp$4, Vrroom.Helpers[/* text */0]("npm")), React.createElement("a", tmp$6, Vrroom.Helpers[/* text */0]("issues")), React.createElement("a", tmp$8, Vrroom.Helpers[/* text */0]("documentation")))), React.createElement("div", {
                       className: PackageStyles.readme,
                       dangerouslySetInnerHTML: {
                         __html: $$package.readme
@@ -105,6 +119,9 @@ var $$default = ReasonReact.wrapReasonForJs(component, (function (jsProps) {
         id
         name
         version
+        category
+        flags
+        platforms
         description
         keywords
         license
