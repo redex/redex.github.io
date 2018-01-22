@@ -145,7 +145,7 @@ exports.onCreateNode = async ({ node, loadNodeContent, boundActionCreators: { cr
     
     if (node.sourceInstanceName === "packages") {
       const package = parsed;
-      package.slug = path.join("/packages", decodeURIComponent(package.id))
+      package.slug = path.join("/package", decodeURIComponent(package.id))
 
       await new Promise((resolve, reject) => 
         remark()
@@ -165,7 +165,7 @@ exports.onCreateNode = async ({ node, loadNodeContent, boundActionCreators: { cr
     } else if (node.sourceInstanceName === "keywords") {
       parsed.forEach(keyword => {
         keyword.id = "keywords/" + keyword.name;
-        keyword.slug = path.join("/keywords", decodeURIComponent(keyword.name));
+        keyword.slug = path.join("/keyword", decodeURIComponent(keyword.name));
         transformObject(keyword, "Keywords")
       });
     } else {
@@ -186,7 +186,7 @@ exports.onCreatePage = async ({ page, boundActionCreators: { createPage} }) => {
 
 exports.createPages = async ({ graphql, boundActionCreators: { createPage } }) => {
   {
-    let result = await graphql(`
+    const packages = await graphql(`
       {
         allPackages {
           edges {
@@ -198,7 +198,7 @@ exports.createPages = async ({ graphql, boundActionCreators: { createPage } }) =
         }
       }
     `);
-    result.data.allPackages.edges.map(({ node }) => {
+    packages.data.allPackages.edges.map(({ node }) => {
       createPage({
         path: node.slug,
         component: path.resolve(`./src/templates/Package.js`),
@@ -210,7 +210,7 @@ exports.createPages = async ({ graphql, boundActionCreators: { createPage } }) =
   }
 
   {
-    let result = await graphql(`
+    const keywords = await graphql(`
       {
         allKeywords {
           edges {
@@ -222,12 +222,31 @@ exports.createPages = async ({ graphql, boundActionCreators: { createPage } }) =
         }
       }
     `)
-    result.data.allKeywords.edges.map(({ node }) => {
+    keywords.data.allKeywords.edges.map(({ node }) => {
       createPage({
         path: node.slug,
         component: path.resolve(`./src/templates/Keyword.js`),
         context: {
           keyword: node.name,
+        },
+      })
+    })
+  }
+
+  {
+    const categories = await graphql(`
+      {
+        categories: allPackages {
+          distinct(field: category)
+        }
+      }
+    `)
+    categories.data.categories.distinct.map(category => {
+      createPage({
+        path: '/category/' + category,
+        component: path.resolve(`./src/templates/Category.js`),
+        context: {
+          category,
         },
       })
     })
