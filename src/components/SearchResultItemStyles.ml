@@ -1,7 +1,7 @@
 open! Css
 open CssEx
 
-let root = fun type_ flags isFocused -> style [
+let root = fun type_ (flags: string array) isFocused -> style [
   unsafe "label" "search-result-item";
   display Flex;
   justifyContent SpaceBetween;
@@ -10,11 +10,15 @@ let root = fun type_ flags isFocused -> style [
   cursor Pointer;
 
   selector "> *" [
-    opacity (if flags = [||] then 1. else 0.5);
+    opacity (if flags = [||] || isFocused then 1. else 0.25);
   ];
 
   hover [
     unsafe "backgroundColor" "hsl(6.9, 0%, 90%)";
+
+    selector "> *" [
+      opacity 1.;
+    ]
   ];
 
   backgroundColor

@@ -21,13 +21,19 @@ function root(type_, flags, isFocused) {
                         Css.cursor(/* Pointer */5),
                         /* :: */[
                           Css.selector("> *", /* :: */[
-                                Css.opacity(Caml_obj.caml_equal(flags, /* array */[]) ? 1 : 0.5),
+                                Css.opacity(Caml_obj.caml_equal(flags, /* array */[]) || isFocused ? 1 : 0.25),
                                 /* [] */0
                               ]),
                           /* :: */[
                             Css.hover(/* :: */[
                                   Css.unsafe("backgroundColor", "hsl(6.9, 0%, 90%)"),
-                                  /* [] */0
+                                  /* :: */[
+                                    Css.selector("> *", /* :: */[
+                                          Css.opacity(1),
+                                          /* [] */0
+                                        ]),
+                                    /* [] */0
+                                  ]
                                 ]),
                             /* :: */[
                               Css.backgroundColor(CssEx.else_(Theme.Panel[/* Color */0][/* background */0], CssEx.if_(isFocused, "hsl(6.9, 90%, 90%)"))),

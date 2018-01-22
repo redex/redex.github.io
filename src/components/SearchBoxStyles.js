@@ -63,7 +63,7 @@ var input = Css.style(/* :: */[
 var results = Css.style(/* :: */[
       Css.position(/* Absolute */2),
       /* :: */[
-        Css.zIndex(10),
+        Css.zIndex(100),
         /* :: */[
           Css.unsafe("marginTop", ".5ex"),
           /* :: */[
@@ -95,10 +95,10 @@ var footer = Css.style(/* :: */[
         Css.textAlign(/* Right */2),
         /* :: */[
           Css.selector("> a", /* :: */[
-                Css.opacity(0.5),
+                Css.opacity(0.75),
                 /* :: */[
                   Css.hover(/* :: */[
-                        Css.opacity(0.75),
+                        Css.opacity(1),
                         /* [] */0
                       ]),
                   /* [] */0

@@ -18,7 +18,7 @@ function root(type_, flags) {
                       Css.lineHeight(Css.em(1.45)),
                       /* :: */[
                         Css.selector("> *", /* :: */[
-                              Css.opacity(Caml_obj.caml_equal(flags, /* array */[]) ? 1 : 0.5),
+                              Css.opacity(Caml_obj.caml_equal(flags, /* array */[]) ? 1 : 0.25),
                               /* [] */0
                             ]),
                         /* :: */[

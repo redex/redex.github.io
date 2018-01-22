@@ -32,7 +32,7 @@ let input = style [
 
 let results = style [
   position Absolute;
-  zIndex 10;
+  zIndex 100;
   unsafe "marginTop" ".5ex";
   width (pct 100.);
   boxShadow Theme.Shadow.overlay;
@@ -50,10 +50,10 @@ let footer = style [
   textAlign Right;
 
   selector "> a" [
-    opacity 0.5;
+    opacity 0.75;
 
     hover [
-      opacity 0.75;
+      opacity 1.;
     ]
   ]
 ]
