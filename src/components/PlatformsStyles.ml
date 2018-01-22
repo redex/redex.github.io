@@ -1,7 +1,7 @@
 open! Css
 
 let root = style [
-  display Flex;
+  display InlineFlex;
   alignSelf Baseline;
   transform (translateY (px 2));
   marginLeft (em 0.5);

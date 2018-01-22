@@ -4,7 +4,7 @@
 var Css = require("bs-css/src/Css.js");
 
 var root = Css.style(/* :: */[
-      Css.display(/* Flex */3),
+      Css.display(/* InlineFlex */13),
       /* :: */[
         Css.alignSelf(/* Baseline */4),
         /* :: */[

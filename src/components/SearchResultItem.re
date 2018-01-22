@@ -15,6 +15,7 @@ type t = {.
 	"quality"			: float,
 	"popularity"	: float,
 	"maintenance"	: float,
+	"platforms"		: array(string),
 	"flags"				: array(string)
 };
 
@@ -27,6 +28,7 @@ let make = (~package, ~isFocused, ~onClick, _children) => {
 			<div>
 				<span className=Styles.name> {package##name |> text} </span>
 				<span className=Styles.version> {package##version |> text} </span>
+				<Platforms platforms=package##platforms />
 
 				<div className=Styles.description>	
 					<Flags package />

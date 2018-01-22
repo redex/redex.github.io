@@ -8,6 +8,7 @@ var Score                  = require("./Score.js");
 var React                  = require("react");
 var Vrroom                 = require("vrroom/src/Vrroom.bs.js");
 var TimeAgo                = require("../bindings/TimeAgo.js");
+var Platforms              = require("./Platforms.js");
 var ReasonReact            = require("reason-react/src/ReasonReact.js");
 var SearchResultItemStyles = require("./SearchResultItemStyles.js");
 
@@ -26,7 +27,7 @@ function make($$package, isFocused, onClick, _) {
                           className: SearchResultItemStyles.name
                         }, Vrroom.Helpers[/* text */0]($$package.name)), React.createElement("span", {
                           className: SearchResultItemStyles.version
-                        }, Vrroom.Helpers[/* text */0]($$package.version)), React.createElement("div", {
+                        }, Vrroom.Helpers[/* text */0]($$package.version)), ReasonReact.element(/* None */0, /* None */0, Platforms.make($$package.platforms, /* array */[])), React.createElement("div", {
                           className: SearchResultItemStyles.description
                         }, ReasonReact.element(/* None */0, /* None */0, Flags.make($$package, /* None */0, /* array */[])), Vrroom.Helpers[/* text */0]($$package.description))), React.createElement("div", undefined, React.createElement("div", undefined, React.createElement("span", {
                               className: SearchResultItemStyles.stars
