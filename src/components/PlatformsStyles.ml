@@ -26,6 +26,14 @@ let tooltip = style [
   selector "& div" [
     unsafe "whiteSpace" "nowrap";
 
+    selector "& a" [
+      textDecorationLine None;
+
+      hover [
+        textDecorationLine (Values [Underline]);
+      ]
+    ];
+
     selector "& svg" [
       unsafe "fill" "currentColor";
       height (em 1.);

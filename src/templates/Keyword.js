@@ -5,7 +5,7 @@ var Graphql        = require("../utils/Graphql.js");
 var ReasonReact    = require("reason-react/src/ReasonReact.js");
 var CollectionPage = require("../components/CollectionPage.js");
 
-var component = ReasonReact.statelessComponent("Package");
+var component = ReasonReact.statelessComponent("Keyword");
 
 function make(data, pathContext, _) {
   var newrecord = component.slice();

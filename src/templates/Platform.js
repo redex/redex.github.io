@@ -5,12 +5,12 @@ var Graphql        = require("../utils/Graphql.js");
 var ReasonReact    = require("reason-react/src/ReasonReact.js");
 var CollectionPage = require("../components/CollectionPage.js");
 
-var component = ReasonReact.statelessComponent("Category");
+var component = ReasonReact.statelessComponent("Platform");
 
 function make(data, pathContext, _) {
   var newrecord = component.slice();
   newrecord[/* render */9] = (function () {
-      return ReasonReact.element(/* None */0, /* None */0, CollectionPage.make(pathContext.category, Graphql.getNodes(data.packages), /* array */[]));
+      return ReasonReact.element(/* None */0, /* None */0, CollectionPage.make(pathContext.platform, Graphql.getNodes(data.packages), /* array */[]));
     });
   return newrecord;
 }
@@ -21,8 +21,8 @@ var $$default = ReasonReact.wrapReasonForJs(component, (function (jsProps) {
 
 
   export const query = graphql`
-    query CategoryQuery($category: String!) {
-      packages: allPackages(filter: { category: { eq: $category }}) {
+    query PlatformQuery($platform: String!) {
+      packages: allPackages(filter: { platforms: { in: [$platform] }}) {
         edges {
           node {
             type

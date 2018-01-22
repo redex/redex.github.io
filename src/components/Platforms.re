@@ -2,19 +2,19 @@ open! Vrroom.Helpers;
 module Control = Vrroom.Control;
 module Styles = PlatformsStyles;
 
-let platform = (icon, label) =>
-  <div key=label> icon {label |> text} </div>;
+let platform = (icon, name, label) =>
+  <div>
+    icon
+    <a href=("/platform/" ++ name)> {label |> text} </a>
+  </div>;
 
 let tooltip = platforms =>
   <div className=Styles.tooltip>
     {"Platforms:" |> text}
-    <Control.Map items=platforms>
-      ...(fun | "browser" => platform(<Icon.Html5 />, "Browser")
-              | "node"    => platform(<Icon.Nodejs />, "Node.js")
-              | "native"  => platform(<Icon.Matrix />, "Native")
-              | "any"     => platform(<Icon.Infinity />, "Any")
-              | other     => <div> {"Unknown: " ++ other |> text} </div>)
-    </Control.Map>
+    {platforms |> Js.Array.includes("browser")  ? platform(<Icon.Html5 />,    "browser",  "Browser") : null}
+    {platforms |> Js.Array.includes("node")     ? platform(<Icon.Nodejs />,   "node",     "Node.js") : null}
+    {platforms |> Js.Array.includes("native")   ? platform(<Icon.Matrix />,   "native",   "Native") : null}
+    {platforms |> Js.Array.includes("any")      ? platform(<Icon.Infinity />, "any",      "Any") : null}
   </div>;
 
 let component = ReasonReact.statelessComponent("Platforms");

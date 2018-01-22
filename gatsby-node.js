@@ -203,7 +203,7 @@ exports.createPages = async ({ graphql, boundActionCreators: { createPage } }) =
         path: node.slug,
         component: path.resolve(`./src/templates/Package.js`),
         context: {
-          id: node.id,
+          id: node.id
         },
       })
     })
@@ -227,7 +227,7 @@ exports.createPages = async ({ graphql, boundActionCreators: { createPage } }) =
         path: node.slug,
         component: path.resolve(`./src/templates/Keyword.js`),
         context: {
-          keyword: node.name,
+          keyword: node.name
         },
       })
     })
@@ -246,7 +246,26 @@ exports.createPages = async ({ graphql, boundActionCreators: { createPage } }) =
         path: '/category/' + category,
         component: path.resolve(`./src/templates/Category.js`),
         context: {
-          category,
+          category
+        },
+      })
+    })
+  }
+
+  {
+    const platforms = await graphql(`
+      {
+        platforms: allPackages {
+          distinct(field: platforms)
+        }
+      }
+    `)
+    platforms.data.platforms.distinct.map(platform => {
+      createPage({
+        path: '/platform/' + platform,
+        component: path.resolve(`./src/templates/Platform.js`),
+        context: {
+          platform
         },
       })
     })

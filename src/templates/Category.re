@@ -1,7 +1,7 @@
 open! Vrroom.Helpers;
 module Control = Vrroom.Control;
 
-let component = ReasonReact.statelessComponent("Package");
+let component = ReasonReact.statelessComponent("Category");
 let make = (~data, ~pathContext, _children) => {
   ...component,
   render: _self =>

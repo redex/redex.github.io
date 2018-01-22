@@ -48,26 +48,41 @@ var tooltip = Css.style(/* :: */[
             Css.selector("& div", /* :: */[
                   Css.unsafe("whiteSpace", "nowrap"),
                   /* :: */[
-                    Css.selector("& svg", /* :: */[
-                          Css.unsafe("fill", "currentColor"),
+                    Css.selector("& a", /* :: */[
+                          Css.textDecorationLine(/* None */0),
                           /* :: */[
-                            Css.height(Css.em(1)),
+                            Css.hover(/* :: */[
+                                  Css.textDecorationLine(/* Values */[/* :: */[
+                                          /* Underline */0,
+                                          /* [] */0
+                                        ]]),
+                                  /* [] */0
+                                ]),
+                            /* [] */0
+                          ]
+                        ]),
+                    /* :: */[
+                      Css.selector("& svg", /* :: */[
+                            Css.unsafe("fill", "currentColor"),
                             /* :: */[
-                              Css.width(Css.em(1)),
+                              Css.height(Css.em(1)),
                               /* :: */[
-                                Css.marginRight(Css.em(0.5)),
+                                Css.width(Css.em(1)),
                                 /* :: */[
-                                  Css.unsafe("verticalAlign", "middle"),
+                                  Css.marginRight(Css.em(0.5)),
                                   /* :: */[
-                                    Css.transform(Css.translateY(Css.px(-1))),
-                                    /* [] */0
+                                    Css.unsafe("verticalAlign", "middle"),
+                                    /* :: */[
+                                      Css.transform(Css.translateY(Css.px(-1))),
+                                      /* [] */0
+                                    ]
                                   ]
                                 ]
                               ]
                             ]
-                          ]
-                        ]),
-                    /* [] */0
+                          ]),
+                      /* [] */0
+                    ]
                   ]
                 ]),
             /* [] */0

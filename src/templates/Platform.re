@@ -1,11 +1,11 @@
 open! Vrroom.Helpers;
 module Control = Vrroom.Control;
 
-let component = ReasonReact.statelessComponent("Keyword");
+let component = ReasonReact.statelessComponent("Platform");
 let make = (~data, ~pathContext, _children) => {
   ...component,
   render: _self =>
-    <CollectionPage title=pathContext##keyword packages=(data##packages |> Graphql.getNodes) />
+    <CollectionPage title=pathContext##platform packages=(data##packages |> Graphql.getNodes) />
 };
 
 let default = ReasonReact.wrapReasonForJs(
@@ -18,8 +18,8 @@ let default = ReasonReact.wrapReasonForJs(
 
 [%%raw {|
   export const query = graphql`
-    query KeywordQuery($keyword: String!) {
-      packages: allPackages(filter: { keywords: { in: [$keyword] }}) {
+    query PlatformQuery($platform: String!) {
+      packages: allPackages(filter: { platforms: { in: [$platform] }}) {
         edges {
           node {
             type

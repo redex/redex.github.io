@@ -2,7 +2,6 @@
 'use strict';
 
 var Icon            = require("../bindings/Icon.js");
-var Curry           = require("bs-platform/lib/js/curry.js");
 var React           = require("react");
 var Vrroom          = require("vrroom/src/Vrroom.bs.js");
 var Tooltip         = require("./Tooltip.js");
@@ -10,29 +9,20 @@ var Fragment        = require("../bindings/react/Fragment.js");
 var ReasonReact     = require("reason-react/src/ReasonReact.js");
 var PlatformsStyles = require("./PlatformsStyles.js");
 
-function platform(icon, label) {
-  return React.createElement("div", {
-              key: label
-            }, icon, Vrroom.Helpers[/* text */0](label));
+function platform(icon, name, label) {
+  return React.createElement("div", undefined, icon, React.createElement("a", {
+                  href: "/platform/" + name
+                }, Vrroom.Helpers[/* text */0](label)));
 }
 
 function tooltip(platforms) {
+  var match = +platforms.includes("browser");
+  var match$1 = +platforms.includes("node");
+  var match$2 = +platforms.includes("native");
+  var match$3 = +platforms.includes("any");
   return React.createElement("div", {
               className: PlatformsStyles.tooltip
-            }, Vrroom.Helpers[/* text */0]("Platforms:"), ReasonReact.element(/* None */0, /* None */0, Curry._3(Vrroom.Control[/* Map */0][/* make */1], platforms, /* None */0, (function (other) {
-                        switch (other) {
-                          case "any" : 
-                              return platform(ReasonReact.element(/* None */0, /* None */0, Icon.$$Infinity[/* make */1](/* int array */[])), "Any");
-                          case "browser" : 
-                              return platform(ReasonReact.element(/* None */0, /* None */0, Icon.Html5[/* make */1](/* int array */[])), "Browser");
-                          case "native" : 
-                              return platform(ReasonReact.element(/* None */0, /* None */0, Icon.Matrix[/* make */1](/* int array */[])), "Native");
-                          case "node" : 
-                              return platform(ReasonReact.element(/* None */0, /* None */0, Icon.Nodejs[/* make */1](/* int array */[])), "Node.js");
-                          default:
-                            return React.createElement("div", undefined, Vrroom.Helpers[/* text */0]("Unknown: " + other));
-                        }
-                      }))));
+            }, Vrroom.Helpers[/* text */0]("Platforms:"), match !== 0 ? platform(ReasonReact.element(/* None */0, /* None */0, Icon.Html5[/* make */1](/* int array */[])), "browser", "Browser") : Vrroom.Helpers[/* null */1], match$1 !== 0 ? platform(ReasonReact.element(/* None */0, /* None */0, Icon.Nodejs[/* make */1](/* int array */[])), "node", "Node.js") : Vrroom.Helpers[/* null */1], match$2 !== 0 ? platform(ReasonReact.element(/* None */0, /* None */0, Icon.Matrix[/* make */1](/* int array */[])), "native", "Native") : Vrroom.Helpers[/* null */1], match$3 !== 0 ? platform(ReasonReact.element(/* None */0, /* None */0, Icon.$$Infinity[/* make */1](/* int array */[])), "any", "Any") : Vrroom.Helpers[/* null */1]);
 }
 
 var component = ReasonReact.statelessComponent("Platforms");
