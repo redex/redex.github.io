@@ -15,6 +15,7 @@ type t = {.
 	"quality"			: float,
 	"popularity"	: float,
 	"maintenance"	: float,
+	"flags"				: array(string)
 };
 
 let component = ReasonReact.statelessComponent("SearchResultItem");
@@ -22,13 +23,13 @@ let make = (~package, ~isFocused, ~onClick, _children) => {
 	...component,
 
 	render: _self =>
-		<div className=Styles.root(package##_type, isFocused) onClick=(_e => onClick(package))>
+		<div className=Styles.root(package##_type, package##flags, isFocused) onClick=(_e => onClick(package))>
 			<div>
 				<span className=Styles.name> {package##name |> text} </span>
 				<span className=Styles.version> {package##version |> text} </span>
-				<span className=Styles.unpublishedLabel(package##_type)> {"unpublished" |> text} </span>
 
 				<div className=Styles.description>	
+					<Flags package />
 					{package##description |> text}
 				</div>
 			</div>

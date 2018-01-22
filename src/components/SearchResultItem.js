@@ -3,6 +3,7 @@
 
 var Icon                   = require("../bindings/Icon.js");
 var Curry                  = require("bs-platform/lib/js/curry.js");
+var Flags                  = require("./Flags.js");
 var Score                  = require("./Score.js");
 var React                  = require("react");
 var Vrroom                 = require("vrroom/src/Vrroom.bs.js");
@@ -17,7 +18,7 @@ function make($$package, isFocused, onClick, _) {
   newrecord[/* render */9] = (function () {
       var match = $$package.stars;
       return React.createElement("div", {
-                  className: SearchResultItemStyles.root($$package.type, isFocused),
+                  className: SearchResultItemStyles.root($$package.type, $$package.flags, isFocused),
                   onClick: (function () {
                       return Curry._1(onClick, $$package);
                     })
@@ -25,11 +26,9 @@ function make($$package, isFocused, onClick, _) {
                           className: SearchResultItemStyles.name
                         }, Vrroom.Helpers[/* text */0]($$package.name)), React.createElement("span", {
                           className: SearchResultItemStyles.version
-                        }, Vrroom.Helpers[/* text */0]($$package.version)), React.createElement("span", {
-                          className: SearchResultItemStyles.unpublishedLabel($$package.type)
-                        }, Vrroom.Helpers[/* text */0]("unpublished")), React.createElement("div", {
+                        }, Vrroom.Helpers[/* text */0]($$package.version)), React.createElement("div", {
                           className: SearchResultItemStyles.description
-                        }, Vrroom.Helpers[/* text */0]($$package.description))), React.createElement("div", undefined, React.createElement("div", undefined, React.createElement("span", {
+                        }, ReasonReact.element(/* None */0, /* None */0, Flags.make($$package, /* None */0, /* array */[])), Vrroom.Helpers[/* text */0]($$package.description))), React.createElement("div", undefined, React.createElement("div", undefined, React.createElement("span", {
                               className: SearchResultItemStyles.stars
                             }, (match == null) ? Vrroom.Helpers[/* text */0]("-") : Vrroom.Helpers[/* text */0](match), ReasonReact.element(/* None */0, /* None */0, Icon.Star[/* make */0](/* Some */[SearchResultItemStyles.starIcon], /* array */[]))), ReasonReact.element(/* None */0, /* None */0, Score.make($$package, /* array */[]))), React.createElement("div", {
                           className: SearchResultItemStyles.updated
