@@ -42,7 +42,7 @@
     "deploy": "gatsby build && update_search_index && gh-pages -d public -b master",
     "clean": "rm -rf data/generated",
     "update-sources": "git submodule update --remote && validate_sources",
-    "fetch": "npm run clean && npm run update-sources && fetch_published && fetch_unpublished && index_keywords",
+    "fetch": "npm run clean && npm run update-sources && fetch_published && fetch_unpublished",
     "everything": "npm run fetch &&  && npm run deploy"
   },
   "devDependencies": {

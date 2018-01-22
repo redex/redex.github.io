@@ -12,11 +12,11 @@ let make = (~data, _children) => {
       <SearchBox focusOnMount=true />
 
       <div className=Styles.keywords>
-        <Control.Map items=(data##keywords |> Graphql.getNodes)>
+        <Control.Map items=(data##keywords##group |> Js.Array.sortInPlaceWith((a, b) => b##count - a##count))>
           ...(keyword =>
-            <Link key=keyword##slug to_=keyword##slug>
+            <Link key=keyword##name to_=("/keyword/" ++ keyword##name)>
               <span className="label"> {keyword##name |> text} </span>
-              <span className="count"> {keyword##count |> text} </span>
+              <span className="count"> {string_of_int(keyword##count) |> text} </span>
             </Link>
           )
         </Control.Map>
@@ -66,13 +66,10 @@ let default =
         }
       }
 
-      keywords: allKeywords(sort: { fields: [count], order: DESC } ) {
-        edges {
-          node {
-            name
-            count
-            slug
-          }
+      keywords: allPackages {
+        group(field: keywords) {
+          name: fieldValue,
+          count: totalCount
         }
       }
     }

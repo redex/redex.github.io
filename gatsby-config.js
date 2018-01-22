@@ -31,12 +31,6 @@ module.exports = {
         name: "packages",
         path: `${__dirname}/data/generated/packages`
       }
-    }, {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        name: "keywords",
-        path: `${__dirname}/data/generated/keywords.json`
-      }
     }
   ],
 }

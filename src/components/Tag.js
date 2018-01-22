@@ -72,7 +72,7 @@ var component$1 = ReasonReact.statelessComponent("Tag");
 function make$1(name, _) {
   var newrecord = component$1.slice();
   newrecord[/* render */9] = (function () {
-      return ReasonReact.element(/* None */0, /* None */0, make(name, "/keywords/" + name, /* None */0, /* None */0, /* array */[]));
+      return ReasonReact.element(/* None */0, /* None */0, make(name, "/keyword/" + name, /* None */0, /* None */0, /* array */[]));
     });
   return newrecord;
 }

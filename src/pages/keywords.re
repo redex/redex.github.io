@@ -2,33 +2,35 @@ open! Rebase;
 open Vrroom.Helpers;
 module Control = Vrroom.Control;
 
-let getPackages = keyword =>
-  keyword##packages |> Array.map(Js.toOption)
-                    |> Array.filter(
-                       fun | Some(_) => true
-                           | None => {
-                             Js.log("missing package on keyword: " ++ keyword##name);
-                             false
-                           })
-                    |> Array.map(Option.getOrRaise)
-                    |> Js.Array.sortInPlaceWith(
-                        (a, b) => compare(a##name: string, b##name));
+module Styles = {
+  open Css;
+
+  let root = style([
+    selector("& h2 > a", [
+      textDecorationLine(None),
+
+      hover([
+        textDecorationLine(Values([Underline]))
+      ])
+    ])
+  ]);
+};
 
 let component = ReasonReact.statelessComponent("Keywords");
 let make = (~data, _children) => {
   ...component,
 
   render: _self =>
-    <div>
+    <div className =Styles.root>
       <Helmet title=Config.titleTemplate("Keywords") />
 
       <h1> {"Keywords" |> text} </h1>
 
-      <Control.Map items=(data##keywords |> Graphql.getNodes)>
+      <Control.Map items=data##keywords##group>
         ...(keyword => 
           <div key=keyword##name>
-            <h2> {keyword##name |> text} </h2>
-            <Control.Map items=getPackages(keyword)>
+            <h2> <a href=("/keyword/" ++ keyword##name)> {keyword##name |> text} </a> </h2>
+            <Control.Map items=Graphql.getNodes(keyword)>
               ...(package => <PackageSummary key=package##id package />)
             </Control.Map>
           </div>
@@ -46,12 +48,11 @@ let default =
 [%%raw {|
   export const query = graphql`
     query KeywordsQuery {
-      keywords: allKeywords(sort: { fields: [name] }) {
-        edges {
-          node {
-            name
-
-            packages {
+      keywords: allPackages {
+        group(field: keywords) {
+          name: fieldValue
+          edges {
+            node {
               type
               id
               name

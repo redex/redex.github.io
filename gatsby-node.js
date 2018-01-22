@@ -162,12 +162,6 @@ exports.onCreateNode = async ({ node, loadNodeContent, boundActionCreators: { cr
             }
           })
         );
-    } else if (node.sourceInstanceName === "keywords") {
-      parsed.forEach(keyword => {
-        keyword.id = "keywords/" + keyword.name;
-        keyword.slug = path.join("/keyword", decodeURIComponent(keyword.name));
-        transformObject(keyword, "Keywords")
-      });
     } else {
       throw "unknown source " + node.sourceInstanceName;
     }
@@ -212,22 +206,17 @@ exports.createPages = async ({ graphql, boundActionCreators: { createPage } }) =
   {
     const keywords = await graphql(`
       {
-        allKeywords {
-          edges {
-            node {
-              name
-              slug
-            }
-          }
+        keywords: allPackages {
+          distinct(field: keywords)
         }
       }
     `)
-    keywords.data.allKeywords.edges.map(({ node }) => {
+    keywords.data.keywords.distinct.map(keyword => {
       createPage({
-        path: node.slug,
+        path: "/keyword/" + keyword,
         component: path.resolve(`./src/templates/Keyword.js`),
         context: {
-          keyword: node.name
+          keyword
         },
       })
     })

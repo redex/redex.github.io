@@ -8,6 +8,7 @@ var Vrroom      = require("vrroom/src/Vrroom.bs.js");
 var Graphql     = require("../utils/Graphql.js");
 var TopList     = require("../components/TopList.js");
 var SearchBox   = require("../components/SearchBox.js");
+var Pervasives  = require("bs-platform/lib/js/pervasives.js");
 var IndexStyles = require("../styles/IndexStyles.js");
 var ReasonReact = require("reason-react/src/ReasonReact.js");
 
@@ -20,14 +21,16 @@ function make(data, _) {
                   className: IndexStyles.root
                 }, ReasonReact.element(/* None */0, /* None */0, SearchBox.make(/* Some */[/* true */1], /* array */[])), React.createElement("div", {
                       className: IndexStyles.keywords
-                    }, ReasonReact.element(/* None */0, /* None */0, Curry._3(Vrroom.Control[/* Map */0][/* make */1], Graphql.getNodes(data.keywords), /* None */0, (function (keyword) {
-                                return ReasonReact.element(/* Some */[keyword.slug], /* None */0, Link.make(keyword.slug, /* None */0, /* None */0, /* array */[
+                    }, ReasonReact.element(/* None */0, /* None */0, Curry._3(Vrroom.Control[/* Map */0][/* make */1], data.keywords.group.sort((function (a, b) {
+                                    return b.count - a.count | 0;
+                                  })), /* None */0, (function (keyword) {
+                                return ReasonReact.element(/* Some */[keyword.name], /* None */0, Link.make("/keyword/" + keyword.name, /* None */0, /* None */0, /* array */[
                                                 React.createElement("span", {
                                                       className: "label"
                                                     }, Vrroom.Helpers[/* text */0](keyword.name)),
                                                 React.createElement("span", {
                                                       className: "count"
-                                                    }, Vrroom.Helpers[/* text */0](keyword.count))
+                                                    }, Vrroom.Helpers[/* text */0](Pervasives.string_of_int(keyword.count)))
                                               ]));
                               })))), React.createElement("div", {
                       className: IndexStyles.lists
@@ -59,13 +62,10 @@ var $$default = ReasonReact.wrapReasonForJs(component, (function (jsProps) {
         }
       }
 
-      keywords: allKeywords(sort: { fields: [count], order: DESC } ) {
-        edges {
-          node {
-            name
-            count
-            slug
-          }
+      keywords: allPackages {
+        group(field: keywords) {
+          name: fieldValue,
+          count: totalCount
         }
       }
     }

@@ -41,7 +41,7 @@ module Keyword = {
     ...component,
 
     render: _self =>
-      <Tag name url=("/keywords/" ++ name) />
+      <Tag name url=("/keyword/" ++ name) />
   }
 };
 
