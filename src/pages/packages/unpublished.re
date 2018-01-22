@@ -1,4 +1,4 @@
-open Vrroom.Helpers;
+open! Vrroom.Helpers;
 module Control = Vrroom.Control;
 
 let introduction = {|
@@ -17,16 +17,7 @@ let make = (~data, _children) => {
   ...component,
 
   render: _self =>
-    <div>
-      <Helmet title=Config.titleTemplate("Unpublished Packages") />
-
-      <h1> {"Unpublished packages" |> text} </h1>
-      <p dangerouslySetInnerHTML={ "__html": introduction } />
-
-      <Control.Map items=(data##packages |> Graphql.getNodes)>
-        ...(package => <PackageSummary key=package##id package />)
-      </Control.Map>
-    </div>
+    <CollectionPage title="Unpublished Packages" packages=(data##packages |> Graphql.getNodes) />
 };
 
 let default =

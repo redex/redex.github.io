@@ -1,4 +1,4 @@
-open Vrroom.Helpers;
+open! Vrroom.Helpers;
 module Control = Vrroom.Control;
 
 let component = ReasonReact.statelessComponent("Packages");
@@ -6,15 +6,7 @@ let make = (~data, _children) => {
   ...component,
 
   render: _self =>
-    <div>
-      <Helmet title=Config.titleTemplate("Packages") />
-
-      <h1> {"Packages" |> text} </h1>
-
-      <Control.Map items=(data##packages |> Graphql.getNodes)>
-        ...(package => <PackageSummary key=package##id package />)
-      </Control.Map>
-    </div>
+    <CollectionPage title="Packages" packages=(data##packages |> Graphql.getNodes) />
 };
 
 let default =

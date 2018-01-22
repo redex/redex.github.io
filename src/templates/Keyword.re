@@ -1,17 +1,11 @@
-open Vrroom.Helpers;
+open! Vrroom.Helpers;
 module Control = Vrroom.Control;
 
 let component = ReasonReact.statelessComponent("Package");
 let make = (~data, ~pathContext, _children) => {
   ...component,
   render: _self =>
-    <div>
-      <Helmet title=Config.titleTemplate(pathContext##keyword ++ " (keyword)") />
-      <h1> {pathContext##keyword |> text} </h1>
-      <Control.Map items=(data##packages |> Graphql.getNodes)>
-        ...(package => <PackageSummary key=package##id package />)
-      </Control.Map>
-    </div>
+    <CollectionPage title=pathContext##keyword packages=(data##packages |> Graphql.getNodes) />
 };
 
 let default = ReasonReact.wrapReasonForJs(
