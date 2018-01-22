@@ -69,15 +69,24 @@ function make($staropt$star, _) {
                           onChange: Curry._1(reduce, (function (e) {
                                   return /* QueryChanged */Block.__(0, [e.target.value]);
                                 }))
-                        })), React.createElement("div", {
-                      className: SearchBoxStyles.results
-                    }, ReasonReact.element(/* None */0, /* None */0, Curry._3(Vrroom.Control[/* Map */0][/* make */1], state[/* results */2], /* None */0, (function ($$package) {
-                                return ReasonReact.element(/* Some */[$$package.id], /* None */0, SearchResultItem.make($$package, Rebase.Option[/* exists */9]((function ($$this) {
-                                                      return +($$this.name === $$package.name);
-                                                    }), state[/* focused */3]), Curry._1(reduce, (function (p) {
-                                                      return /* SelectItem */Block.__(2, [p]);
-                                                    })), /* array */[]));
-                              })))));
+                        })), ReasonReact.element(/* None */0, /* None */0, Curry._2(Vrroom.Control[/* If */2][/* make */1], +(Rebase.$$Array[/* length */16](state[/* results */2]) > 0), (function () {
+                            return React.createElement("div", {
+                                        className: SearchBoxStyles.results
+                                      }, ReasonReact.element(/* None */0, /* None */0, Curry._3(Vrroom.Control[/* Map */0][/* make */1], state[/* results */2], /* None */0, (function ($$package) {
+                                                  return ReasonReact.element(/* Some */[$$package.id], /* None */0, SearchResultItem.make($$package, Rebase.Option[/* exists */9]((function ($$this) {
+                                                                        return +($$this.name === $$package.name);
+                                                                      }), state[/* focused */3]), Curry._1(reduce, (function (p) {
+                                                                        return /* SelectItem */Block.__(2, [p]);
+                                                                      })), /* array */[]));
+                                                }))), React.createElement("div", {
+                                            className: SearchBoxStyles.footer
+                                          }, React.createElement("a", {
+                                                href: "https://www.algolia.com"
+                                              }, React.createElement("img", {
+                                                    className: SearchBoxStyles.algoliaLogo,
+                                                    src: "/search-by-algolia.svg"
+                                                  }))));
+                          }))));
     });
   newrecord[/* initialState */10] = (function () {
       return /* record */[

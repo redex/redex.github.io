@@ -126,18 +126,27 @@ let make = (~focusOnMount=false, _children) => {
                ref         = handle((r, { state }) => state.inputRef := Js.toOption(r)) />
       </div>
 
-      <div className=Styles.results>
-        <Control.Map items=state.results>
-          ...(package =>
-            <SearchResultItem
-              package
-              isFocused = Option.exists(this => this##name === package##name, state.focused)
-              key       = package##id
-              onClick   = reduce(p => SelectItem(p))
-            />
-          )
-        </Control.Map>
-      </div>
+      <Control.If cond=(Array.length(state.results) > 0)>
+        ...(() => 
+          <div className=Styles.results>
+            <Control.Map items=state.results>
+              ...(package =>
+                <SearchResultItem
+                  package
+                  isFocused = Option.exists(this => this##name === package##name, state.focused)
+                  key       = package##id
+                  onClick   = reduce(p => SelectItem(p))
+                />
+              )
+            </Control.Map>
+            <div className=Styles.footer>
+              <a href="https://www.algolia.com">
+                <img className=Styles.algoliaLogo src="/search-by-algolia.svg" />
+              </a>
+            </div>
+          </div>
+        )
+      </Control.If>
 
     </div>
 };

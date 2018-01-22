@@ -89,9 +89,39 @@ var results = Css.style(/* :: */[
       ]
     ]);
 
-exports.root       = root;
-exports.fakeInput  = fakeInput;
-exports.searchIcon = searchIcon;
-exports.input      = input;
-exports.results    = results;
+var footer = Css.style(/* :: */[
+      Css.backgroundColor(Css.white),
+      /* :: */[
+        Css.textAlign(/* Right */2),
+        /* :: */[
+          Css.selector("> a", /* :: */[
+                Css.opacity(0.5),
+                /* :: */[
+                  Css.hover(/* :: */[
+                        Css.opacity(0.75),
+                        /* [] */0
+                      ]),
+                  /* [] */0
+                ]
+              ]),
+          /* [] */0
+        ]
+      ]
+    ]);
+
+var algoliaLogo = Css.style(/* :: */[
+      Css.height(Css.em(0.85)),
+      /* :: */[
+        Css.margin3(Css.em(0.5), Css.em(2), Css.em(0.1)),
+        /* [] */0
+      ]
+    ]);
+
+exports.root        = root;
+exports.fakeInput   = fakeInput;
+exports.searchIcon  = searchIcon;
+exports.input       = input;
+exports.results     = results;
+exports.footer      = footer;
+exports.algoliaLogo = algoliaLogo;
 /* root Not a pure module */

@@ -44,3 +44,21 @@ let results = style [
 
   ]
 ]
+
+let footer = style [
+  backgroundColor white;
+  textAlign Right;
+
+  selector "> a" [
+    opacity 0.5;
+
+    hover [
+      opacity 0.75;
+    ]
+  ]
+]
+
+let algoliaLogo = style [
+  height (em 0.85);
+  margin3 ~top:(em 0.5) ~h:(em 2.) ~bottom:(em 0.1);
+]
