@@ -178,7 +178,7 @@ exports.onCreatePage = async ({ page, boundActionCreators: { createPage} }) => {
   });
 };
 
-exports.createPages = async ({ graphql, boundActionCreators: { createPage } }) => {
+exports.createPages = async ({ graphql, boundActionCreators: { createPage, createRedirect } }) => {
   {
     const packages = await graphql(`
       {
@@ -199,7 +199,13 @@ exports.createPages = async ({ graphql, boundActionCreators: { createPage } }) =
         context: {
           id: node.id
         },
-      })
+      });
+      createRedirect({
+        fromPath: path.join("/package", decodeURIComponent(node.id)),
+        toPath: node.slug,
+        isPermananet: true,
+        redirectInbrowser: true
+      });
     })
   }
 
@@ -218,7 +224,13 @@ exports.createPages = async ({ graphql, boundActionCreators: { createPage } }) =
         context: {
           keyword
         },
-      })
+      });
+      createRedirect({
+        fromPath: "/keywords/" + keyword,
+        toPath: "/keyword/" + keyword,
+        isPermananet: true,
+        redirectInbrowser: true
+      });
     })
   }
 
