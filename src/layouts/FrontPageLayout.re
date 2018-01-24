@@ -16,10 +16,11 @@ let make = (~children: unit => ReasonReact.reactElement, _children) => {
       <div className=Styles.links>
         <div className=CommonStyles.widthContainer>
           <span className="left" />
-          <Link to_="/packages"> ("Packages" |> text) </Link>
-          <Link to_="/keywords"> ("Keywords" |> text) </Link>
-          <Link to_="/packages/unpublished"> ("Unpublished" |> text) </Link>
-          <Link className=Styles.inactiveLink to_="/"> ("Documentation" |> text) </Link>
+          <Link to_="/all"> ("All" |> text) </Link>
+          <Link to_="/category/binding"> ("Bindings" |> text) </Link>
+          <Link to_="/category/library"> ("Libraries" |> text) </Link>
+          <Link to_="/category/tool"> ("Tools" |> text) </Link>
+          <Link to_="/category/boilerplate"> ("Boilerplate" |> text) </Link>
           <span className="right">
             <Link className=Styles.publishLink to_="/publish"> ("Get Published" |> text) </Link>
           </span>
