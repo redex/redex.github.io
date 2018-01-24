@@ -44,7 +44,7 @@
     "clean": "rm -rf data/generated",
     "update-sources": "git submodule update --remote && validate_sources",
     "fetch": "npm run clean && npm run update-sources && fetch_published && fetch_unpublished",
-    "everything": "npm run fetch &&  && npm run deploy"
+    "everything": "npm run fetch && npm run deploy"
   },
   "devDependencies": {
     "bs-platform": "^2.0.0",
