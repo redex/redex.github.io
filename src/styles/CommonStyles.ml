@@ -139,6 +139,10 @@ let html = style [
     ];
   ];
 
+  selector "& img" [
+    maxWidth (pct 100.);
+  ];
+
   selector "& .redex-codeblock.m-tabbed" [
     selector "& > ul" [
       margin zero;
