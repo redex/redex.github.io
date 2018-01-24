@@ -3,7 +3,6 @@ module Styles = TooltipStyles;
 
 let component = ReasonReact.reducerComponent("Tooltip");
 let make = (~content: ReasonReact.reactElement,
-            ~className=?,
             child: ReasonReact.reactElement) => {
   ...component,
   initialState: () => false,

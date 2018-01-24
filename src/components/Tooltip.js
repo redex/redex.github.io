@@ -9,7 +9,7 @@ var TooltipStyles = require("./TooltipStyles.js");
 
 var component = ReasonReact.reducerComponent("Tooltip");
 
-function make(content, _, child) {
+function make(content, child) {
   var newrecord = component.slice();
   newrecord[/* render */9] = (function (param) {
       var reduce = param[/* reduce */1];

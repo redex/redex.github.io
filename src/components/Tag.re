@@ -25,7 +25,7 @@ module Tag = {
   };
 
   let component = ReasonReact.statelessComponent("Tag");
-  let make = (~name, ~url, ~icon=?,  ~customStyle="", _children) => {
+  let make = (~name, ~url, ~customStyle="", _children) => {
     ...component,
 
     render: _self =>

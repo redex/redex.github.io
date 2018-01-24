@@ -8,7 +8,7 @@ let root = fun type_ flags -> style [
   lineHeight (em 1.45);
 
   selector "> *" [
-    opacity (if flags = [||] then 1. else 0.25);
+    opacity (if Array.length(flags) == 0 then 1. else 0.25);
   ];
 
   hover [

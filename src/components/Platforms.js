@@ -36,7 +36,7 @@ function make(platforms, _) {
       var match$3 = +platforms.includes("any");
       return React.createElement("div", {
                   className: PlatformsStyles.root
-                }, ReasonReact.element(/* None */0, /* None */0, Tooltip.make(tooltip(platforms), /* None */0, ReasonReact.element(/* None */0, /* None */0, Fragment.make(/* array */[
+                }, ReasonReact.element(/* None */0, /* None */0, Tooltip.make(tooltip(platforms), ReasonReact.element(/* None */0, /* None */0, Fragment.make(/* array */[
                                   match !== 0 ? ReasonReact.element(/* None */0, /* None */0, Icon.Html5[/* make */1](/* int array */[])) : Vrroom.Helpers[/* null */1],
                                   match$1 !== 0 ? ReasonReact.element(/* None */0, /* None */0, Icon.Nodejs[/* make */1](/* int array */[])) : Vrroom.Helpers[/* null */1],
                                   match$2 !== 0 ? ReasonReact.element(/* None */0, /* None */0, Icon.Matrix[/* make */1](/* int array */[])) : Vrroom.Helpers[/* null */1],

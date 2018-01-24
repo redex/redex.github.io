@@ -52,7 +52,7 @@ var style = Css.style(/* :: */[
 
 var component = ReasonReact.statelessComponent("Tag");
 
-function make(name, url, _, $staropt$star, _$1) {
+function make(name, url, $staropt$star, _) {
   var customStyle = $staropt$star ? $staropt$star[0] : "";
   var newrecord = component.slice();
   newrecord[/* render */9] = (function () {
@@ -72,7 +72,7 @@ var component$1 = ReasonReact.statelessComponent("Tag");
 function make$1(name, _) {
   var newrecord = component$1.slice();
   newrecord[/* render */9] = (function () {
-      return ReasonReact.element(/* None */0, /* None */0, make(name, "/keyword/" + name, /* None */0, /* None */0, /* array */[]));
+      return ReasonReact.element(/* None */0, /* None */0, make(name, "/keyword/" + name, /* None */0, /* array */[]));
     });
   return newrecord;
 }
@@ -92,7 +92,7 @@ var component$2 = ReasonReact.statelessComponent("Tag");
 function make$2(name, _) {
   var newrecord = component$2.slice();
   newrecord[/* render */9] = (function () {
-      return ReasonReact.element(/* None */0, /* None */0, make(name, "/category/" + name, /* None */0, /* Some */[customStyle], /* array */[]));
+      return ReasonReact.element(/* None */0, /* None */0, make(name, "/category/" + name, /* Some */[customStyle], /* array */[]));
     });
   return newrecord;
 }

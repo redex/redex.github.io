@@ -4,7 +4,7 @@ let root = style [
   marginBottom (em 1.45);
 ]
 
-let header type_ flags = style [
+let header type_ _flags = style [
   unsafe "label" "header";
   (*backgroundColor (if flags = [||] then Theme.Inverted.Color.background else (hex "aaa"));*)
   backgroundColor Theme.Inverted.Color.background;

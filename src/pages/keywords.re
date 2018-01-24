@@ -3,7 +3,7 @@ open Vrroom.Helpers;
 module Control = Vrroom.Control;
 
 module Styles = {
-  open Css;
+  open! Css;
 
   let root = style([
     selector("& h2 > a", [

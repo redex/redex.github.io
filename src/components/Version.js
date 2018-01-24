@@ -16,7 +16,7 @@ function make(version, isPublished, _) {
                   className: VersionStyles.root(isPublished)
                 }, isPublished ? Vrroom.Helpers[/* text */0](version) : ReasonReact.element(/* None */0, /* None */0, Tooltip.make(React.createElement("div", {
                                 className: VersionStyles.tooltip
-                              }, Vrroom.Helpers[/* text */0]("Unpublished")), /* None */0, Vrroom.Helpers[/* text */0](version))));
+                              }, Vrroom.Helpers[/* text */0]("Unpublished")), Vrroom.Helpers[/* text */0](version))));
     });
   return newrecord;
 }

@@ -25,7 +25,7 @@ function make($$package, _) {
   newrecord[/* render */9] = (function () {
       return ReasonReact.element(/* None */0, /* None */0, Tooltip.make(React.createElement("div", {
                           className: ScoreStyles.tooltip
-                        }, factor("Quality", $$package.quality), factor("Popularity", $$package.popularity), factor("Maintenance", $$package.maintenance)), /* None */0, React.createElement("span", {
+                        }, factor("Quality", $$package.quality), factor("Popularity", $$package.popularity), factor("Maintenance", $$package.maintenance)), React.createElement("span", {
                           className: ScoreStyles.root
                         }, Vrroom.Helpers[/* text */0](formatPercentage($$package.score)), ReasonReact.element(/* None */0, /* None */0, Icon.Verified[/* make */0](/* Some */[ScoreStyles.icon], /* array */[])))));
     });
