@@ -6,11 +6,48 @@ var Curry                  = require("bs-platform/lib/js/curry.js");
 var Flags                  = require("./Flags.js");
 var Score                  = require("./Score.js");
 var React                  = require("react");
+var Rebase                 = require("@glennsl/rebase/src/Rebase.bs.js");
 var Vrroom                 = require("vrroom/src/Vrroom.bs.js");
 var TimeAgo                = require("../bindings/TimeAgo.js");
 var Platforms              = require("./Platforms.js");
+var Pervasives             = require("bs-platform/lib/js/pervasives.js");
+var Json_decode            = require("@glennsl/bs-json/src/Json_decode.bs.js");
 var ReasonReact            = require("reason-react/src/ReasonReact.js");
+var Js_null_undefined      = require("bs-platform/lib/js/js_null_undefined.js");
 var SearchResultItemStyles = require("./SearchResultItemStyles.js");
+
+function decode(json) {
+  return {
+          id: Json_decode.field("id", Json_decode.string, json),
+          type: Json_decode.field("type", Json_decode.string, json),
+          slug: Json_decode.map((function (id) {
+                  return "/package/" + id;
+                }), (function (param) {
+                  return Json_decode.field("id", Json_decode.string, param);
+                }), json),
+          name: Json_decode.field("name", Json_decode.string, json),
+          description: Json_decode.field("description", Json_decode.string, json),
+          stars: Js_null_undefined.from_opt(Rebase.Option[/* map */0](Pervasives.string_of_int, Json_decode.optional((function (param) {
+                          return Json_decode.field("stars", Json_decode.$$int, param);
+                        }), json))),
+          updated: Json_decode.field("updated", Json_decode.date, json),
+          version: Json_decode.field("version", Json_decode.string, json),
+          score: Json_decode.field("score", Json_decode.$$float, json),
+          quality: Json_decode.field("quality", Json_decode.$$float, json),
+          popularity: Json_decode.field("popularity", Json_decode.$$float, json),
+          maintenance: Json_decode.field("maintenance", Json_decode.$$float, json),
+          platforms: Rebase.Option[/* getOr */16](/* array */[], Json_decode.optional((function (param) {
+                      return Json_decode.field("platforms", (function (param) {
+                                    return Json_decode.array(Json_decode.string, param);
+                                  }), param);
+                    }), json)),
+          flags: Rebase.Option[/* getOr */16](/* array */["stale"], Json_decode.optional((function (param) {
+                      return Json_decode.field("flags", (function (param) {
+                                    return Json_decode.array(Json_decode.string, param);
+                                  }), param);
+                    }), json))
+        };
+}
 
 var component = ReasonReact.statelessComponent("SearchResultItem");
 
@@ -41,6 +78,7 @@ function make($$package, isFocused, onClick, _) {
 var Styles = 0;
 
 exports.Styles    = Styles;
+exports.decode    = decode;
 exports.component = component;
 exports.make      = make;
 /* component Not a pure module */

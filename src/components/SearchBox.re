@@ -27,10 +27,6 @@ type action =
   | KeyDown(int)
 ;
 
-let decodeResult = json =>
-  json |> Obj.magic /* TODO: very naughty */
-       |> r => Js.Obj.assign({ "slug": "/packages/" ++ r##id }, r);
-
 let component = ReasonReact.reducerComponent("PackageSearchBox");
 let make = (~focusOnMount=false, _children) => {
   ...component,
@@ -59,7 +55,7 @@ let make = (~focusOnMount=false, _children) => {
       }
 
     | ResultsChanged(results) => {
-      let results = results |> Array.map(decodeResult);
+      let results = results |> Array.map(SearchResultItem.decode);
       ReasonReact.Update({
         ...state,
         results,

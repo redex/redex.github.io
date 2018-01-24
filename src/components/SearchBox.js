@@ -21,12 +21,6 @@ var Key = /* module */[
   /* enter */13
 ];
 
-function decodeResult(json) {
-  return Object.assign({
-              slug: "/packages/" + json.id
-            }, json);
-}
-
 var component = ReasonReact.reducerComponent("PackageSearchBox");
 
 function make($staropt$star, _) {
@@ -126,7 +120,7 @@ function make($staropt$star, _) {
             }
             break;
         case 1 : 
-            var results = Rebase.$$Array[/* map */0](decodeResult, action[0]);
+            var results = Rebase.$$Array[/* map */0](SearchResultItem.decode, action[0]);
             return /* Update */Block.__(0, [/* record */[
                         /* searchClient */state[/* searchClient */0],
                         /* query */state[/* query */1],
@@ -202,11 +196,10 @@ var Styles = 0;
 
 var Config$1 = 0;
 
-exports.Control      = Control;
-exports.Styles       = Styles;
-exports.Config       = Config$1;
-exports.Key          = Key;
-exports.decodeResult = decodeResult;
-exports.component    = component;
-exports.make         = make;
+exports.Control   = Control;
+exports.Styles    = Styles;
+exports.Config    = Config$1;
+exports.Key       = Key;
+exports.component = component;
+exports.make      = make;
 /* component Not a pure module */
