@@ -39,8 +39,8 @@ const tabbedCodeBlock = (reason, ml) => {
   return `
     <div class="redex-codeblock m-tabbed">
       <ul>
-        <li class="reason s-selected"> Reason
-        <li class="ml"> OCaml
+        <li class="reason s-selected"> RE
+        <li class="ml"> ML
       </ul>
       <div class="codeblock reason s-selected">
         ${highlight('reason', reason)}

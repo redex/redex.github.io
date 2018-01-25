@@ -249,91 +249,130 @@ var html = Css.style(/* :: */[
                                       ]),
                                   /* :: */[
                                     Css.selector("& .redex-codeblock.m-tabbed", /* :: */[
-                                          Css.selector("& > ul", /* :: */[
-                                                Css.margin(Css.zero),
-                                                /* :: */[
-                                                  Css.selector("& > li", /* :: */[
-                                                        Css.cursor(/* Pointer */5),
+                                          Css.display(/* Flex */3),
+                                          /* :: */[
+                                            Css.position(/* Relative */1),
+                                            /* :: */[
+                                              Css.selector("& > ul", /* :: */[
+                                                    Css.display(/* Flex */3),
+                                                    /* :: */[
+                                                      Css.position(/* Absolute */2),
+                                                      /* :: */[
+                                                        Css.flexDirection(/* Column */2),
                                                         /* :: */[
                                                           Css.margin(Css.zero),
                                                           /* :: */[
-                                                            Css.display(/* InlineBlock */11),
+                                                            Css.opacity(0),
                                                             /* :: */[
-                                                              Css.padding2(Css.em(0.35), Css.em(0.75)),
+                                                              Css.transition(/* Some */[200], /* Some */[400], /* None */0, "opacity"),
                                                               /* :: */[
-                                                                Css.color(Css.white),
+                                                                Css.transform(Css.translateX(Css.pct(-100))),
                                                                 /* :: */[
-                                                                  Css.textTransform(/* Lowercase */2),
+                                                                  Css.height(Css.pct(100)),
                                                                   /* :: */[
-                                                                    Css.fontVariant(/* SmallCaps */1),
-                                                                    /* :: */[
-                                                                      Css.selector("&:not(.s-selected)", /* :: */[
-                                                                            Css.opacity(0.5),
+                                                                    Css.selector("& > li", /* :: */[
+                                                                          Css.cursor(/* Pointer */5),
+                                                                          /* :: */[
+                                                                            Css.margin(Css.zero),
                                                                             /* :: */[
-                                                                              Css.unsafe("boxShadow", "inset 0 -4px 2px -2px rgba(0, 0, 0, 0.1)"),
+                                                                              Css.display(/* InlineBlock */11),
                                                                               /* :: */[
-                                                                                Css.hover(/* :: */[
-                                                                                      Css.opacity(1),
-                                                                                      /* [] */0
-                                                                                    ]),
-                                                                                /* [] */0
+                                                                                Css.padding2(Css.em(0.35), Css.em(0.75)),
+                                                                                /* :: */[
+                                                                                  Css.color(Css.white),
+                                                                                  /* :: */[
+                                                                                    Css.textTransform(/* Lowercase */2),
+                                                                                    /* :: */[
+                                                                                      Css.fontVariant(/* SmallCaps */1),
+                                                                                      /* :: */[
+                                                                                        Css.selector("&:not(.s-selected)", /* :: */[
+                                                                                              Css.opacity(0.5),
+                                                                                              /* :: */[
+                                                                                                Css.unsafe("boxShadow", "inset 0 -4px 2px -2px rgba(0, 0, 0, 0.1)"),
+                                                                                                /* :: */[
+                                                                                                  Css.hover(/* :: */[
+                                                                                                        Css.opacity(1),
+                                                                                                        /* [] */0
+                                                                                                      ]),
+                                                                                                  /* [] */0
+                                                                                                ]
+                                                                                              ]
+                                                                                            ]),
+                                                                                        /* :: */[
+                                                                                          Css.selector("&.reason", /* :: */[
+                                                                                                Css.backgroundColor(Theme.Color[/* reason */8]),
+                                                                                                /* [] */0
+                                                                                              ]),
+                                                                                          /* :: */[
+                                                                                            Css.selector("&.ml", /* :: */[
+                                                                                                  Css.backgroundColor(Theme.Color[/* ocaml */9]),
+                                                                                                  /* [] */0
+                                                                                                ]),
+                                                                                            /* [] */0
+                                                                                          ]
+                                                                                        ]
+                                                                                      ]
+                                                                                    ]
+                                                                                  ]
+                                                                                ]
                                                                               ]
                                                                             ]
-                                                                          ]),
-                                                                      /* :: */[
-                                                                        Css.selector("&.reason", /* :: */[
-                                                                              Css.backgroundColor(Theme.Color[/* reason */8]),
-                                                                              /* [] */0
-                                                                            ]),
-                                                                        /* :: */[
-                                                                          Css.selector("&.ml", /* :: */[
-                                                                                Css.backgroundColor(Theme.Color[/* ocaml */9]),
-                                                                                /* [] */0
-                                                                              ]),
-                                                                          /* [] */0
-                                                                        ]
-                                                                      ]
-                                                                    ]
+                                                                          ]
+                                                                        ]),
+                                                                    /* [] */0
                                                                   ]
                                                                 ]
                                                               ]
                                                             ]
                                                           ]
                                                         ]
+                                                      ]
+                                                    ]
+                                                  ]),
+                                              /* :: */[
+                                                Css.hover(/* :: */[
+                                                      Css.selector("& > ul", /* :: */[
+                                                            Css.opacity(1),
+                                                            /* [] */0
+                                                          ]),
+                                                      /* [] */0
+                                                    ]),
+                                                /* :: */[
+                                                  Css.selector("& > .codeblock", /* :: */[
+                                                        Css.display(/* None */1),
+                                                        /* :: */[
+                                                          Css.flex(1),
+                                                          /* :: */[
+                                                            Css.selector("&.s-selected", /* :: */[
+                                                                  Css.display(/* Block */0),
+                                                                  /* [] */0
+                                                                ]),
+                                                            /* :: */[
+                                                              Css.selector("& > pre", /* :: */[
+                                                                    Css.marginTop(Css.zero),
+                                                                    /* :: */[
+                                                                      Css.selector("&.lang-reason", /* :: */[
+                                                                            Css.borderLeft(Css.px(2), /* Solid */2, Theme.Color[/* reason */8]),
+                                                                            /* [] */0
+                                                                          ]),
+                                                                      /* :: */[
+                                                                        Css.selector("&.lang-ml", /* :: */[
+                                                                              Css.borderLeft(Css.px(2), /* Solid */2, Theme.Color[/* ocaml */9]),
+                                                                              /* [] */0
+                                                                            ]),
+                                                                        /* [] */0
+                                                                      ]
+                                                                    ]
+                                                                  ]),
+                                                              /* [] */0
+                                                            ]
+                                                          ]
+                                                        ]
                                                       ]),
                                                   /* [] */0
                                                 ]
-                                              ]),
-                                          /* :: */[
-                                            Css.selector("& > .codeblock", /* :: */[
-                                                  Css.display(/* None */1),
-                                                  /* :: */[
-                                                    Css.selector("&.s-selected", /* :: */[
-                                                          Css.display(/* Block */0),
-                                                          /* [] */0
-                                                        ]),
-                                                    /* :: */[
-                                                      Css.selector("& > pre", /* :: */[
-                                                            Css.marginTop(Css.zero),
-                                                            /* :: */[
-                                                              Css.selector("&.lang-reason", /* :: */[
-                                                                    Css.borderTop(Css.px(2), /* Solid */2, Theme.Color[/* reason */8]),
-                                                                    /* [] */0
-                                                                  ]),
-                                                              /* :: */[
-                                                                Css.selector("&.lang-ml", /* :: */[
-                                                                      Css.borderTop(Css.px(2), /* Solid */2, Theme.Color[/* ocaml */9]),
-                                                                      /* [] */0
-                                                                    ]),
-                                                                /* [] */0
-                                                              ]
-                                                            ]
-                                                          ]),
-                                                      /* [] */0
-                                                    ]
-                                                  ]
-                                                ]),
-                                            /* [] */0
+                                              ]
+                                            ]
                                           ]
                                         ]),
                                     /* [] */0

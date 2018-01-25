@@ -144,8 +144,18 @@ let html = style [
   ];
 
   selector "& .redex-codeblock.m-tabbed" [
+    display Flex;
+    position Relative;
+
     selector "& > ul" [
+      display Flex;
+      position Absolute;
+      flexDirection Column;
       margin zero;
+      opacity 0.;
+      transition ~delay:200 ~duration:400 "opacity";
+      transform (translateX (pct (-100.)));
+      height (pct 100.);
 
       selector "& > li" [
         cursor Pointer;
@@ -174,8 +184,16 @@ let html = style [
       ];
     ];
 
+    hover [
+      selector "& > ul" [
+        opacity 1.;
+      ]
+    ];
+
+
     selector "& > .codeblock" [
       display None;
+      flex 1;
 
       selector "&.s-selected" [
         display Block;
@@ -185,11 +203,11 @@ let html = style [
         marginTop zero;
 
         selector "&.lang-reason" [
-          borderTop (px 2) Solid Theme.Color.reason
+          borderLeft (px 2) Solid Theme.Color.reason
         ];
 
         selector "&.lang-ml" [
-          borderTop (px 2) Solid Theme.Color.ocaml
+          borderLeft (px 2) Solid Theme.Color.ocaml
         ];
       ];
     ]
