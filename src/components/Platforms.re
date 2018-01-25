@@ -22,7 +22,7 @@ let make = (~platforms, _children) => {
   ...component,
 
   render: _self =>
-    <div className=Styles.root>
+    <div className=("platforms " ++ Styles.root)>
       <Tooltip content=tooltip(platforms)>
         ...(
           <Fragment>

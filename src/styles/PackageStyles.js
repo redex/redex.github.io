@@ -22,7 +22,13 @@ function header(type_, _) {
                     Css.unsafe("padding", "2em 4em"),
                     /* :: */[
                       Css.unsafe("backgroundImage", type_ === "unpublished" ? Theme.Inverted[/* crosshatchBackground */1] : "none"),
-                      /* [] */0
+                      /* :: */[
+                        Css.media("(max-width: 900px)", /* :: */[
+                              Css.unsafe("padding", "1em 2em"),
+                              /* [] */0
+                            ]),
+                        /* [] */0
+                      ]
                     ]
                   ]
                 ]
@@ -212,37 +218,49 @@ var starIcon = Css.style(/* :: */[
     ]);
 
 var links = Css.style(/* :: */[
-      Css.marginTop(Css.em(3)),
+      Css.label("links"),
       /* :: */[
-        Css.selector("& > a", /* :: */[
-              Css.textDecorationLine(/* None */0),
-              /* :: */[
-                Css.marginRight(Css.em(2)),
+        Css.marginTop(Css.em(3)),
+        /* :: */[
+          Css.selector("& > a", /* :: */[
+                Css.display(/* InlineBlock */11),
                 /* :: */[
-                  Css.unsafe("fontVariant", "small-caps"),
+                  Css.textDecorationLine(/* None */0),
                   /* :: */[
-                    Css.selector("&:hover", /* :: */[
-                          Css.textDecorationLine(/* Values */[/* :: */[
-                                  /* Underline */0,
-                                  /* [] */0
-                                ]]),
-                          /* [] */0
-                        ]),
+                    Css.marginRight(Css.em(2)),
                     /* :: */[
-                      Css.selector("&:not([href])", /* :: */[
-                            Css.textDecorationLine(/* None */0),
-                            /* :: */[
-                              Css.opacity(0.25),
+                      Css.unsafe("fontVariant", "small-caps"),
+                      /* :: */[
+                        Css.media("(max-width: 450px)", /* :: */[
+                              Css.marginRight(Css.em(1)),
                               /* [] */0
-                            ]
-                          ]),
-                      /* [] */0
+                            ]),
+                        /* :: */[
+                          Css.selector("&:hover", /* :: */[
+                                Css.textDecorationLine(/* Values */[/* :: */[
+                                        /* Underline */0,
+                                        /* [] */0
+                                      ]]),
+                                /* [] */0
+                              ]),
+                          /* :: */[
+                            Css.selector("&:not([href])", /* :: */[
+                                  Css.textDecorationLine(/* None */0),
+                                  /* :: */[
+                                    Css.opacity(0.25),
+                                    /* [] */0
+                                  ]
+                                ]),
+                            /* [] */0
+                          ]
+                        ]
+                      ]
                     ]
                   ]
                 ]
-              ]
-            ]),
-        /* [] */0
+              ]),
+          /* [] */0
+        ]
       ]
     ]);
 
@@ -253,7 +271,13 @@ var readme = Curry._1(Css.merge, /* :: */[
               Css.backgroundColor(Theme.Panel[/* Color */0][/* background */0]),
               /* :: */[
                 Css.unsafe("padding", "2em 4em"),
-                /* [] */0
+                /* :: */[
+                  Css.media("(max-width: 900px)", /* :: */[
+                        Css.unsafe("padding", "1em 2em"),
+                        /* [] */0
+                      ]),
+                  /* [] */0
+                ]
               ]
             ]),
         /* [] */0

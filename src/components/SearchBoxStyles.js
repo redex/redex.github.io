@@ -38,7 +38,10 @@ var searchIcon = Css.style(/* :: */[
         Css.opacity(0.75),
         /* :: */[
           Css.margin(Css.em(0.5)),
-          /* [] */0
+          /* :: */[
+            Css.minWidth(Css.em(1)),
+            /* [] */0
+          ]
         ]
       ]
     ]);

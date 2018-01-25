@@ -52,7 +52,7 @@ function make$1(className, children) {
 
 var Certificate = /* module */[/* make */make$1];
 
-var Ext$2 = /* module */[/* IoRibbonB */Io.IoRibbonB];
+var Ext$2 = /* module */[/* MdMenu */Md.MdMenu];
 
 function make$2(className, children) {
   return ReasonReact.wrapJsForReason(Ext$2[/* reactClass */0], {
@@ -60,9 +60,9 @@ function make$2(className, children) {
             }, children);
 }
 
-var Ribbon = /* module */[/* make */make$2];
+var Menu = /* module */[/* make */make$2];
 
-var Ext$3 = /* module */[/* FaSearch */Fa.FaSearch];
+var Ext$3 = /* module */[/* IoRibbonB */Io.IoRibbonB];
 
 function make$3(className, children) {
   return ReasonReact.wrapJsForReason(Ext$3[/* reactClass */0], {
@@ -70,9 +70,9 @@ function make$3(className, children) {
             }, children);
 }
 
-var Search = /* module */[/* make */make$3];
+var Ribbon = /* module */[/* make */make$3];
 
-var Ext$4 = /* module */[/* GoStar */Go.GoStar];
+var Ext$4 = /* module */[/* FaSearch */Fa.FaSearch];
 
 function make$4(className, children) {
   return ReasonReact.wrapJsForReason(Ext$4[/* reactClass */0], {
@@ -80,9 +80,9 @@ function make$4(className, children) {
             }, children);
 }
 
-var Star = /* module */[/* make */make$4];
+var Search = /* module */[/* make */make$4];
 
-var Ext$5 = /* module */[/* FaTags */Fa.FaTags];
+var Ext$5 = /* module */[/* GoStar */Go.GoStar];
 
 function make$5(className, children) {
   return ReasonReact.wrapJsForReason(Ext$5[/* reactClass */0], {
@@ -90,9 +90,9 @@ function make$5(className, children) {
             }, children);
 }
 
-var Tags = /* module */[/* make */make$5];
+var Star = /* module */[/* make */make$5];
 
-var Ext$6 = /* module */[/* MdVerifiedUser */Md.MdVerifiedUser];
+var Ext$6 = /* module */[/* FaTags */Fa.FaTags];
 
 function make$6(className, children) {
   return ReasonReact.wrapJsForReason(Ext$6[/* reactClass */0], {
@@ -100,9 +100,9 @@ function make$6(className, children) {
             }, children);
 }
 
-var Verified = /* module */[/* make */make$6];
+var Tags = /* module */[/* make */make$6];
 
-var Ext$7 = /* module */[/* GoLaw */Go.GoLaw];
+var Ext$7 = /* module */[/* MdVerifiedUser */Md.MdVerifiedUser];
 
 function make$7(className, children) {
   return ReasonReact.wrapJsForReason(Ext$7[/* reactClass */0], {
@@ -110,7 +110,17 @@ function make$7(className, children) {
             }, children);
 }
 
-var Scale = /* module */[/* make */make$7];
+var Verified = /* module */[/* make */make$7];
+
+var Ext$8 = /* module */[/* GoLaw */Go.GoLaw];
+
+function make$8(className, children) {
+  return ReasonReact.wrapJsForReason(Ext$8[/* reactClass */0], {
+              className: className
+            }, children);
+}
+
+var Scale = /* module */[/* make */make$8];
 
 var element = React.createElement("svg", {
       viewBox: "0 0 24 24"
@@ -120,7 +130,7 @@ var element = React.createElement("svg", {
 
 var component = ReasonReact.statelessComponent("SvgIcon");
 
-function make$8() {
+function make$9() {
   var newrecord = component.slice();
   newrecord[/* render */9] = (function () {
       return element;
@@ -130,7 +140,7 @@ function make$8() {
 
 var Chip = /* module */[
   /* component */component,
-  /* make */make$8
+  /* make */make$9
 ];
 
 var element$1 = React.createElement("svg", {
@@ -141,7 +151,7 @@ var element$1 = React.createElement("svg", {
 
 var component$1 = ReasonReact.statelessComponent("SvgIcon");
 
-function make$9() {
+function make$10() {
   var newrecord = component$1.slice();
   newrecord[/* render */9] = (function () {
       return element$1;
@@ -151,7 +161,7 @@ function make$9() {
 
 var Nodejs = /* module */[
   /* component */component$1,
-  /* make */make$9
+  /* make */make$10
 ];
 
 var element$2 = React.createElement("svg", {
@@ -162,7 +172,7 @@ var element$2 = React.createElement("svg", {
 
 var component$2 = ReasonReact.statelessComponent("SvgIcon");
 
-function make$10() {
+function make$11() {
   var newrecord = component$2.slice();
   newrecord[/* render */9] = (function () {
       return element$2;
@@ -172,7 +182,7 @@ function make$10() {
 
 var Html5 = /* module */[
   /* component */component$2,
-  /* make */make$10
+  /* make */make$11
 ];
 
 var element$3 = React.createElement("svg", {
@@ -183,7 +193,7 @@ var element$3 = React.createElement("svg", {
 
 var component$3 = ReasonReact.statelessComponent("SvgIcon");
 
-function make$11() {
+function make$12() {
   var newrecord = component$3.slice();
   newrecord[/* render */9] = (function () {
       return element$3;
@@ -193,7 +203,7 @@ function make$11() {
 
 var AllInclusive = /* module */[
   /* component */component$3,
-  /* make */make$11
+  /* make */make$12
 ];
 
 var element$4 = React.createElement("svg", {
@@ -204,7 +214,7 @@ var element$4 = React.createElement("svg", {
 
 var component$4 = ReasonReact.statelessComponent("SvgIcon");
 
-function make$12() {
+function make$13() {
   var newrecord = component$4.slice();
   newrecord[/* render */9] = (function () {
       return element$4;
@@ -214,7 +224,7 @@ function make$12() {
 
 var $$Infinity = /* module */[
   /* component */component$4,
-  /* make */make$12
+  /* make */make$13
 ];
 
 var element$5 = React.createElement("svg", {
@@ -225,7 +235,7 @@ var element$5 = React.createElement("svg", {
 
 var component$5 = ReasonReact.statelessComponent("SvgIcon");
 
-function make$13() {
+function make$14() {
   var newrecord = component$5.slice();
   newrecord[/* render */9] = (function () {
       return element$5;
@@ -235,7 +245,7 @@ function make$13() {
 
 var Matrix = /* module */[
   /* component */component$5,
-  /* make */make$13
+  /* make */make$14
 ];
 
 var element$6 = React.createElement("svg", {
@@ -246,7 +256,7 @@ var element$6 = React.createElement("svg", {
 
 var component$6 = ReasonReact.statelessComponent("SvgIcon");
 
-function make$14() {
+function make$15() {
   var newrecord = component$6.slice();
   newrecord[/* render */9] = (function () {
       return element$6;
@@ -256,13 +266,14 @@ function make$14() {
 
 var Laptop = /* module */[
   /* component */component$6,
-  /* make */make$14
+  /* make */make$15
 ];
 
 exports.Icon         = Icon;
 exports.SvgIcon      = SvgIcon;
 exports.Book         = Book;
 exports.Certificate  = Certificate;
+exports.Menu         = Menu;
 exports.Ribbon       = Ribbon;
 exports.Search       = Search;
 exports.Star         = Star;

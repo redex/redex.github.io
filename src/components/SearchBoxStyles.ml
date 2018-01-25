@@ -18,6 +18,7 @@ let searchIcon = style [
   unsafe "fill" (Theme.Color.primary |> Obj.magic);
   opacity 0.75; 
   margin (em 0.5);
+  minWidth (em 1.);
 ]
 
 let input = style [

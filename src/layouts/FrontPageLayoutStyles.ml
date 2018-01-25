@@ -8,11 +8,9 @@ let root = style [
   color Theme.Inverted.Color.text;
 ]
 
-let header = style [
-  margin (em 1.45);
-]
+let topNav showWhenBurger = style [
+  label "topNav";
 
-let links = style [
   selector "& > div" [ (* selects width container *)
     display Flex;
     textAlign Center;
@@ -38,7 +36,50 @@ let links = style [
         opacity 1.;
       ];
     ];
+
+    media "(max-width: 600px)" [
+      if showWhenBurger then
+        transform (translateY zero)
+      else
+        transform (translateY (pct (-100.)));
+
+      position Absolute;
+      zIndex 150;
+      paddingRight (em 3.5);
+      transition ~duration:250 "transform";
+
+      flexDirection Column;
+      backgroundColor Theme.Color.darkPrimary;
+
+      selector "& > .left" [
+        display None;
+      ];
+
+      selector "& > *" [
+        textAlign Right;
+        fontSize (em 1.25);
+        lineHeight (em 1.5);
+      ];
+
+      selector "& > .right" [
+        marginTop (em 0.75);
+        marginBottom (em 0.75);
+      ];
+    ];
   ];
+]
+
+let burger = style [
+  position Absolute;
+  right zero;
+  zIndex 200;
+  display None;
+  unsafe "padding" ".5em .75em";
+  fontSize (em 1.5);
+
+  media "(max-width: 600px)" [
+    display Block;
+  ]
 ]
 
 let inactiveLink = style [
@@ -58,6 +99,10 @@ let publishLink = style [
   ];
 ]
 
+let header = style [
+  margin (em 1.45);
+]
+
 let title = style [
   unsafe "margin" "1em 0 0";
   textAlign Center;
@@ -69,7 +114,15 @@ let title = style [
   selector "& > em" [
     fontStyle Normal;
     color white;
-  ]
+  ];
+
+  media "(max-width: 600px)" [
+    fontSize (rem 2.);
+  ];
+
+ media "(max-width: 450px)" [
+    fontSize (rem 1.5);
+  ];
 ]
 
 let logo = style [

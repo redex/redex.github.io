@@ -7,6 +7,7 @@ let widthContainer = style [
   unsafe "label" "width-container";
   unsafe "margin" "0 auto";
   maxWidth (px 960);
+  minWidth (px 359);
   width (pct 100.);
 ]
 
@@ -190,10 +191,10 @@ let html = style [
       ]
     ];
 
-
     selector "& > .codeblock" [
       display None;
       flex 1;
+      maxWidth (pct 100.);
 
       selector "&.s-selected" [
         display Block;

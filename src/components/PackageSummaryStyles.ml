@@ -18,6 +18,16 @@ let root = fun type_ flags -> style [
   ];
 
   unsafe "backgroundImage" (if type_ == "unpublished" then Theme.Panel.crosshatchBackground else "none");
+
+  media "(max-width: 600px)" [
+    selector "& .version" [
+      display None;
+    ];
+
+    selector "& .platforms" [
+      display None;
+    ];
+  ];
 ]
 
 let header = style [
@@ -49,6 +59,10 @@ let props = style [
 let updated = style [
   fontSize (em 0.85);
   unsafe "whiteSpace" "nowrap";
+
+  media "(max-width: 600px)" [
+    display None;
+  ];
 ]
 
 let license = style [
@@ -57,6 +71,10 @@ let license = style [
   unsafe "whiteSpace" "nowrap";
   border (px 1) Solid Theme.Color.text;
   unsafe "padding" "0 1ex";
+
+  media "(max-width: 600px)" [
+    display None;
+  ];
 ]
 
 let nolicense = style [
@@ -65,11 +83,19 @@ let nolicense = style [
   unsafe "whiteSpace" "nowrap";
   border (px 1) Solid Theme.Color.bad;
   unsafe "padding" "0 1ex";
+
+  media "(max-width: 600px)" [
+    display None;
+  ];
 ]
 
 let stars = style [
   fontSize (em 0.85);
   unsafe "whiteSpace" "nowrap";
+
+  media "(max-width: 450px)" [
+    display None;
+  ];
 ]
 
 let starIcon = style [

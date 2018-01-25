@@ -31,6 +31,12 @@ let root = fun type_ flags isFocused -> style [
   selector "> *:last-child" [
     textAlign Right;
   ];
+
+  media "(max-width: 600px)" [
+    selector "& .platforms" [
+      display None;
+    ];
+  ];
 ]
 
 let name = style [
@@ -41,6 +47,10 @@ let version = style [
   fontSize (em 0.85);
   fontStyle Italic;
   marginLeft (em 0.5);
+
+  media "(max-width: 600px)" [
+    display None;
+  ];
 ]
 
 let description = style [
@@ -53,6 +63,10 @@ let updated = style [
   opacity 0.5;
   fontSize (em 0.85);
   unsafe "whiteSpace" "nowrap";
+
+  media "(max-width: 450px)" [
+    display None;
+  ];
 ]
 
 let stars = style [

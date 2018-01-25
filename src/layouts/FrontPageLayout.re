@@ -1,11 +1,22 @@
 open! Vrroom.Helpers;
 module Styles = FrontPageLayoutStyles;
 
-let component = ReasonReact.statelessComponent("FrontPageLayout");
+type state = {
+  showBurgerMenu: bool
+};
+
+let component = ReasonReact.reducerComponent("FrontPageLayout");
 let make = (~children: unit => ReasonReact.reactElement, _children) => {
   ...component,
 
-  render: _self =>
+  initialState: () => {
+    showBurgerMenu: false
+  },
+  reducer: (`ToggleBurgerMenu, state) => ReasonReact.Update({
+    showBurgerMenu: !state.showBurgerMenu
+  }),
+
+  render: ({ send, state }) =>
     <div className=Styles.root>
       
       <Helmet title="redex | Reason Package Index">
@@ -13,7 +24,10 @@ let make = (~children: unit => ReasonReact.reactElement, _children) => {
         <meta name="description" content="Package index for the ReasonML/BuckleScript ecosystem" />
       </Helmet>
 
-      <div className=Styles.links>
+      <nav className=Styles.topNav(state.showBurgerMenu) >
+        <button className=Styles.burger onClick=(_e => send(`ToggleBurgerMenu))>
+          <Icon.Menu />
+        </button>
         <div className=CommonStyles.widthContainer>
           <span className="left" />
           <Link to_="/all"> ("All" |> text) </Link>
@@ -25,7 +39,7 @@ let make = (~children: unit => ReasonReact.reactElement, _children) => {
             <Link className=Styles.publishLink to_="/publish"> ("Get Published" |> text) </Link>
           </span>
         </div>
-      </div>
+      </nav>
 
       <div className=Styles.header>
         <div className=CommonStyles.widthContainer>

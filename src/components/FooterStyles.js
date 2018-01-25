@@ -67,11 +67,14 @@ function root(context) {
                                                         /* :: */[
                                                           Css.opacity(0.75),
                                                           /* :: */[
-                                                            Css.selector("&:hover", /* :: */[
-                                                                  Css.opacity(1),
-                                                                  /* [] */0
-                                                                ]),
-                                                            /* [] */0
+                                                            Css.paddingRight(Css.em(0.5)),
+                                                            /* :: */[
+                                                              Css.selector("&:hover", /* :: */[
+                                                                    Css.opacity(1),
+                                                                    /* [] */0
+                                                                  ]),
+                                                              /* [] */0
+                                                            ]
                                                           ]
                                                         ]
                                                       ]
@@ -84,7 +87,28 @@ function root(context) {
                                       ]
                                     ]
                                   ]),
-                              /* [] */0
+                              /* :: */[
+                                Css.media("(max-width: 600px)", /* :: */[
+                                      Css.selector("& > section", /* :: */[
+                                            Css.width(Css.pct(25)),
+                                            /* [] */0
+                                          ]),
+                                      /* [] */0
+                                    ]),
+                                /* :: */[
+                                  Css.media("(max-width: 450px)", /* :: */[
+                                        Css.flexDirection(/* Column */2),
+                                        /* :: */[
+                                          Css.selector("& > section", /* :: */[
+                                                Css.width(Css.auto),
+                                                /* [] */0
+                                              ]),
+                                          /* [] */0
+                                        ]
+                                      ]),
+                                  /* [] */0
+                                ]
+                              ]
                             ]
                           ]
                         ]

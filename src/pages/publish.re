@@ -132,7 +132,10 @@ let style = Css.(merge([
   CommonStyles.html,
   style([
     backgroundColor(Theme.Panel.Color.background),
-    unsafe("padding", "2em 4em")
+    unsafe("padding", "2em 4em"),
+    media("(max-width: 900px)", [
+      unsafe("padding", "1em 2em")
+    ])
   ])
 ]));
 

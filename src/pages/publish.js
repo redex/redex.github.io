@@ -19,7 +19,13 @@ var style = Curry._1(Css.merge, /* :: */[
               Css.backgroundColor(Theme.Panel[/* Color */0][/* background */0]),
               /* :: */[
                 Css.unsafe("padding", "2em 4em"),
-                /* [] */0
+                /* :: */[
+                  Css.media("(max-width: 900px)", /* :: */[
+                        Css.unsafe("padding", "1em 2em"),
+                        /* [] */0
+                      ]),
+                  /* [] */0
+                ]
               ]
             ]),
         /* [] */0

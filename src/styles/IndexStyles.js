@@ -9,129 +9,130 @@ var root = Css.style(/* :: */[
     ]);
 
 var keywords = Css.style(/* :: */[
-      Css.textAlign(/* Center */3),
+      Css.label("keywords"),
       /* :: */[
-        Css.marginTop(Css.em(3)),
+        Css.textAlign(/* Center */3),
         /* :: */[
-          Css.lineHeight(Css.em(1.5)),
+          Css.marginTop(Css.em(3)),
           /* :: */[
-            Css.selector("& > a", /* :: */[
-                  Css.display(/* InlineBlock */11),
-                  /* :: */[
-                    Css.textDecorationLine(/* None */0),
+            Css.lineHeight(Css.em(1.5)),
+            /* :: */[
+              Css.selector("& > a", /* :: */[
+                    Css.display(/* InlineBlock */11),
                     /* :: */[
-                      Css.unsafe("margin", "0 1ex"),
+                      Css.textDecorationLine(/* None */0),
                       /* :: */[
-                        Css.unsafe("whiteSpace", "nowrap"),
+                        Css.unsafe("margin", "0 1ex"),
                         /* :: */[
-                          Css.selector("& > .count", /* :: */[
-                                Css.unsafe("marginLeft", ".5ex"),
-                                /* :: */[
-                                  Css.opacity(0.5),
-                                  /* [] */0
-                                ]
-                              ]),
+                          Css.unsafe("whiteSpace", "nowrap"),
                           /* :: */[
-                            Css.selector("&:hover > .label", /* :: */[
-                                  Css.textDecorationLine(/* Values */[/* :: */[
-                                          /* Underline */0,
-                                          /* [] */0
-                                        ]]),
-                                  /* [] */0
+                            Css.selector("& > .count", /* :: */[
+                                  Css.unsafe("marginLeft", ".5ex"),
+                                  /* :: */[
+                                    Css.opacity(0.5),
+                                    /* [] */0
+                                  ]
                                 ]),
-                            /* [] */0
+                            /* :: */[
+                              Css.selector("&:hover > .label", /* :: */[
+                                    Css.textDecorationLine(/* Values */[/* :: */[
+                                            /* Underline */0,
+                                            /* [] */0
+                                          ]]),
+                                    /* [] */0
+                                  ]),
+                              /* [] */0
+                            ]
                           ]
                         ]
                       ]
                     ]
-                  ]
-                ]),
-            /* [] */0
+                  ]),
+              /* [] */0
+            ]
           ]
         ]
       ]
     ]);
 
-var links = Css.style(/* :: */[
-      Css.textAlign(/* Center */3),
-      /* :: */[
-        Css.selector("& > a", /* :: */[
-              Css.fontSize(Css.rem(0.85)),
-              /* :: */[
-                Css.textDecorationLine(/* None */0),
-                /* :: */[
-                  Css.unsafe("margin", "0 1em"),
-                  /* :: */[
-                    Css.selector("&:hover", /* :: */[
-                          Css.opacity(0.75),
-                          /* [] */0
-                        ]),
-                    /* [] */0
-                  ]
-                ]
-              ]
-            ]),
-        /* [] */0
-      ]
-    ]);
-
 var lists = Css.style(/* :: */[
-      Css.display(/* Flex */3),
+      Css.label("lists"),
       /* :: */[
-        Css.justifyContent(/* SpaceAround */4),
+        Css.display(/* Flex */3),
         /* :: */[
-          Css.marginTop(Css.em(3)),
+          Css.justifyContent(/* SpaceAround */4),
           /* :: */[
-            Css.selector("& > *", /* :: */[
-                  Css.unsafe("padding", "0 1em"),
-                  /* :: */[
-                    Css.width(Css.pct(40)),
+            Css.marginTop(Css.em(3)),
+            /* :: */[
+              Css.selector("& > *", /* :: */[
+                    Css.unsafe("padding", "0 1em"),
                     /* :: */[
-                      Css.minWidth(Css.px(300)),
+                      Css.width(Css.pct(40)),
                       /* :: */[
-                        Css.selector("& > h2", /* :: */[
-                              Css.textAlign(/* Center */3),
-                              /* :: */[
-                                Css.fontSize(Css.em(1.1)),
+                        Css.minWidth(Css.px(300)),
+                        /* :: */[
+                          Css.selector("& > h2", /* :: */[
+                                Css.textAlign(/* Center */3),
                                 /* :: */[
-                                  Css.fontWeight(/* Bold */1),
+                                  Css.fontSize(Css.em(1.1)),
                                   /* :: */[
-                                    Css.unsafe("margin", ".5em 0"),
+                                    Css.fontWeight(/* Bold */1),
                                     /* :: */[
-                                      Css.textTransform(/* Lowercase */2),
+                                      Css.unsafe("margin", ".5em 0"),
                                       /* :: */[
-                                        Css.unsafe("fontVariant", "small-caps"),
+                                        Css.textTransform(/* Lowercase */2),
                                         /* :: */[
-                                          Css.paddingBottom(Css.em(0.5)),
+                                          Css.unsafe("fontVariant", "small-caps"),
                                           /* :: */[
-                                            Css.borderBottom(Css.px(1), /* Solid */2, Css.rgba(255, 255, 255, 0.5)),
-                                            /* [] */0
+                                            Css.paddingBottom(Css.em(0.5)),
+                                            /* :: */[
+                                              Css.borderBottom(Css.px(1), /* Solid */2, Css.rgba(255, 255, 255, 0.5)),
+                                              /* [] */0
+                                            ]
                                           ]
                                         ]
                                       ]
                                     ]
                                   ]
                                 ]
-                              ]
-                            ]),
-                        /* :: */[
-                          Css.selector("& > div", /* :: */[
-                                Css.background(/* None */0),
-                                /* :: */[
-                                  Css.unsafe("border", "none"),
+                              ]),
+                          /* :: */[
+                            Css.selector("& > div", /* :: */[
+                                  Css.background(/* None */0),
                                   /* :: */[
-                                    Css.padding(Css.zero),
-                                    /* [] */0
+                                    Css.unsafe("border", "none"),
+                                    /* :: */[
+                                      Css.padding(Css.zero),
+                                      /* [] */0
+                                    ]
                                   ]
+                                ]),
+                            /* [] */0
+                          ]
+                        ]
+                      ]
+                    ]
+                  ]),
+              /* :: */[
+                Css.media("(max-width: 600px)", /* :: */[
+                      Css.flexDirection(/* Column */2),
+                      /* :: */[
+                        Css.alignItems(/* Center */2),
+                        /* :: */[
+                          Css.selector("& > *", /* :: */[
+                                Css.width(Css.pct(100)),
+                                /* :: */[
+                                  Css.maxWidth(Css.px(450)),
+                                  /* [] */0
                                 ]
                               ]),
                           /* [] */0
                         ]
                       ]
-                    ]
-                  ]
-                ]),
-            /* [] */0
+                    ]),
+                /* [] */0
+              ]
+            ]
           ]
         ]
       ]
@@ -139,6 +140,5 @@ var lists = Css.style(/* :: */[
 
 exports.root     = root;
 exports.keywords = keywords;
-exports.links    = links;
 exports.lists    = lists;
 /* root Not a pure module */

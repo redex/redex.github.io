@@ -42,13 +42,28 @@ let root context = style [
         textDecorationLine None;
         fontSize (rem 0.85);
         opacity 0.75;
+        paddingRight (em 0.5);
 
         selector "&:hover" [
           opacity 1.;
         ];
       ];
     ];
-];
+
+    media "(max-width: 600px)" [
+      selector "& > section" [
+        width (pct 25.);
+      ]
+    ];
+
+    media "(max-width: 450px)" [
+      flexDirection Column;
+      selector "& > section" [
+        width auto;
+      ]
+    ];
+
+  ];
 ]
 
 let algoliaLogo = style [

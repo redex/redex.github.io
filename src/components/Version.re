@@ -6,7 +6,7 @@ let make = (~version, ~isPublished, _children) => {
   ...component,
 
   render: _self =>
-    <div className=Styles.root(isPublished)>
+    <div className=("version " ++ Styles.root(isPublished))>
       {
         if (isPublished) {
           {version |> text}

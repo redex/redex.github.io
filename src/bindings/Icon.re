@@ -25,6 +25,10 @@ module Certificate = Icon({
   [@bs.module "react-icons/lib/fa"] external reactClass: ReasonReact.reactClass = "FaCertificate";
 });
 
+module Menu = Icon({
+  [@bs.module "react-icons/lib/md"] external reactClass: ReasonReact.reactClass = "MdMenu";
+});
+
 module Ribbon = Icon({
   [@bs.module "react-icons/lib/io"] external reactClass: ReasonReact.reactClass = "IoRibbonB";
 });

@@ -43,7 +43,16 @@ function root(type_, flags, isFocused) {
                                         Css.textAlign(/* Right */2),
                                         /* [] */0
                                       ]),
-                                  /* [] */0
+                                  /* :: */[
+                                    Css.media("(max-width: 600px)", /* :: */[
+                                          Css.selector("& .platforms", /* :: */[
+                                                Css.display(/* None */1),
+                                                /* [] */0
+                                              ]),
+                                          /* [] */0
+                                        ]),
+                                    /* [] */0
+                                  ]
                                 ]
                               ]
                             ]
@@ -68,7 +77,13 @@ var version = Css.style(/* :: */[
         Css.fontStyle(/* Italic */1),
         /* :: */[
           Css.marginLeft(Css.em(0.5)),
-          /* [] */0
+          /* :: */[
+            Css.media("(max-width: 600px)", /* :: */[
+                  Css.display(/* None */1),
+                  /* [] */0
+                ]),
+            /* [] */0
+          ]
         ]
       ]
     ]);
@@ -87,7 +102,13 @@ var updated = Css.style(/* :: */[
         Css.fontSize(Css.em(0.85)),
         /* :: */[
           Css.unsafe("whiteSpace", "nowrap"),
-          /* [] */0
+          /* :: */[
+            Css.media("(max-width: 450px)", /* :: */[
+                  Css.display(/* None */1),
+                  /* [] */0
+                ]),
+            /* [] */0
+          ]
         ]
       ]
     ]);

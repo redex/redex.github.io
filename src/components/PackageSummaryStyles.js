@@ -30,7 +30,22 @@ function root(type_, flags) {
                               ]),
                           /* :: */[
                             Css.unsafe("backgroundImage", type_ === "unpublished" ? Theme.Panel[/* crosshatchBackground */1] : "none"),
-                            /* [] */0
+                            /* :: */[
+                              Css.media("(max-width: 600px)", /* :: */[
+                                    Css.selector("& .version", /* :: */[
+                                          Css.display(/* None */1),
+                                          /* [] */0
+                                        ]),
+                                    /* :: */[
+                                      Css.selector("& .platforms", /* :: */[
+                                            Css.display(/* None */1),
+                                            /* [] */0
+                                          ]),
+                                      /* [] */0
+                                    ]
+                                  ]),
+                              /* [] */0
+                            ]
                           ]
                         ]
                       ]
@@ -93,7 +108,13 @@ var updated = Css.style(/* :: */[
       Css.fontSize(Css.em(0.85)),
       /* :: */[
         Css.unsafe("whiteSpace", "nowrap"),
-        /* [] */0
+        /* :: */[
+          Css.media("(max-width: 600px)", /* :: */[
+                Css.display(/* None */1),
+                /* [] */0
+              ]),
+          /* [] */0
+        ]
       ]
     ]);
 
@@ -107,7 +128,13 @@ var license = Css.style(/* :: */[
             Css.border(Css.px(1), /* Solid */2, Theme.Color[/* text */4]),
             /* :: */[
               Css.unsafe("padding", "0 1ex"),
-              /* [] */0
+              /* :: */[
+                Css.media("(max-width: 600px)", /* :: */[
+                      Css.display(/* None */1),
+                      /* [] */0
+                    ]),
+                /* [] */0
+              ]
             ]
           ]
         ]
@@ -124,7 +151,13 @@ var nolicense = Css.style(/* :: */[
             Css.border(Css.px(1), /* Solid */2, Theme.Color[/* bad */7]),
             /* :: */[
               Css.unsafe("padding", "0 1ex"),
-              /* [] */0
+              /* :: */[
+                Css.media("(max-width: 600px)", /* :: */[
+                      Css.display(/* None */1),
+                      /* [] */0
+                    ]),
+                /* [] */0
+              ]
             ]
           ]
         ]
@@ -135,7 +168,13 @@ var stars = Css.style(/* :: */[
       Css.fontSize(Css.em(0.85)),
       /* :: */[
         Css.unsafe("whiteSpace", "nowrap"),
-        /* [] */0
+        /* :: */[
+          Css.media("(max-width: 450px)", /* :: */[
+                Css.display(/* None */1),
+                /* [] */0
+              ]),
+          /* [] */0
+        ]
       ]
     ]);
 

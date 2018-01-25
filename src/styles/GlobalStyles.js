@@ -49,6 +49,11 @@ Css.$$global("button, input, select", /* :: */[
       ]
     ]);
 
+Css.$$global("button::-moz-focus-inner", /* :: */[
+      Css.unsafe("outline", "none"),
+      /* [] */0
+    ]);
+
 var _reset = Css.$$global("ol, ul", /* :: */[
       Css.unsafe("listStyle", "none"),
       /* :: */[

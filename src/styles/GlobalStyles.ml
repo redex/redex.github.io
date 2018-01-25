@@ -31,6 +31,10 @@ let _reset = begin
     unsafe "font" "inherit";
   ];
 
+  global "button::-moz-focus-inner" [
+    unsafe "outline" "none";
+  ];
+
   global "ol, ul" [
     unsafe "listStyle" "none";
     margin zero;

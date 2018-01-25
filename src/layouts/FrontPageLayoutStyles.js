@@ -21,62 +21,139 @@ var root = Css.style(/* :: */[
       ]
     ]);
 
-var header = Css.style(/* :: */[
-      Css.margin(Css.em(1.45)),
-      /* [] */0
-    ]);
-
-var links = Css.style(/* :: */[
-      Css.selector("& > div", /* :: */[
-            Css.display(/* Flex */3),
-            /* :: */[
-              Css.textAlign(/* Center */3),
+function topNav(showWhenBurger) {
+  return Css.style(/* :: */[
+              Css.label("topNav"),
               /* :: */[
-                Css.unsafe("padding", "0.5em 1.45em"),
-                /* :: */[
-                  Css.selector("& > .left", /* :: */[
-                        Css.flex(1),
-                        /* [] */0
-                      ]),
-                  /* :: */[
-                    Css.selector("& > .right", /* :: */[
-                          Css.flex(1),
+                Css.selector("& > div", /* :: */[
+                      Css.display(/* Flex */3),
+                      /* :: */[
+                        Css.textAlign(/* Center */3),
+                        /* :: */[
+                          Css.unsafe("padding", "0.5em 1.45em"),
                           /* :: */[
-                            Css.textAlign(/* Right */2),
-                            /* [] */0
-                          ]
-                        ]),
-                    /* :: */[
-                      Css.selector("& a", /* :: */[
-                            Css.unsafe("fontVariant", "small-caps"),
+                            Css.selector("& > .left", /* :: */[
+                                  Css.flex(1),
+                                  /* [] */0
+                                ]),
                             /* :: */[
-                              Css.textDecorationLine(/* None */0),
-                              /* :: */[
-                                Css.textTransform(/* Lowercase */2),
-                                /* :: */[
-                                  Css.unsafe("margin", "0 1em"),
-                                  /* :: */[
-                                    Css.opacity(0.75),
+                              Css.selector("& > .right", /* :: */[
+                                    Css.flex(1),
                                     /* :: */[
-                                      Css.selector("&:hover", /* :: */[
-                                            Css.opacity(1),
-                                            /* [] */0
-                                          ]),
+                                      Css.textAlign(/* Right */2),
                                       /* [] */0
                                     ]
-                                  ]
+                                  ]),
+                              /* :: */[
+                                Css.selector("& a", /* :: */[
+                                      Css.unsafe("fontVariant", "small-caps"),
+                                      /* :: */[
+                                        Css.textDecorationLine(/* None */0),
+                                        /* :: */[
+                                          Css.textTransform(/* Lowercase */2),
+                                          /* :: */[
+                                            Css.unsafe("margin", "0 1em"),
+                                            /* :: */[
+                                              Css.opacity(0.75),
+                                              /* :: */[
+                                                Css.selector("&:hover", /* :: */[
+                                                      Css.opacity(1),
+                                                      /* [] */0
+                                                    ]),
+                                                /* [] */0
+                                              ]
+                                            ]
+                                          ]
+                                        ]
+                                      ]
+                                    ]),
+                                /* :: */[
+                                  Css.media("(max-width: 600px)", /* :: */[
+                                        showWhenBurger ? Css.transform(Css.translateY(Css.zero)) : Css.transform(Css.translateY(Css.pct(-100))),
+                                        /* :: */[
+                                          Css.position(/* Absolute */2),
+                                          /* :: */[
+                                            Css.zIndex(150),
+                                            /* :: */[
+                                              Css.paddingRight(Css.em(3.5)),
+                                              /* :: */[
+                                                Css.transition(/* None */0, /* Some */[250], /* None */0, "transform"),
+                                                /* :: */[
+                                                  Css.flexDirection(/* Column */2),
+                                                  /* :: */[
+                                                    Css.backgroundColor(Theme.Color[/* darkPrimary */1]),
+                                                    /* :: */[
+                                                      Css.selector("& > .left", /* :: */[
+                                                            Css.display(/* None */1),
+                                                            /* [] */0
+                                                          ]),
+                                                      /* :: */[
+                                                        Css.selector("& > *", /* :: */[
+                                                              Css.textAlign(/* Right */2),
+                                                              /* :: */[
+                                                                Css.fontSize(Css.em(1.25)),
+                                                                /* :: */[
+                                                                  Css.lineHeight(Css.em(1.5)),
+                                                                  /* [] */0
+                                                                ]
+                                                              ]
+                                                            ]),
+                                                        /* :: */[
+                                                          Css.selector("& > .right", /* :: */[
+                                                                Css.marginTop(Css.em(0.75)),
+                                                                /* :: */[
+                                                                  Css.marginBottom(Css.em(0.75)),
+                                                                  /* [] */0
+                                                                ]
+                                                              ]),
+                                                          /* [] */0
+                                                        ]
+                                                      ]
+                                                    ]
+                                                  ]
+                                                ]
+                                              ]
+                                            ]
+                                          ]
+                                        ]
+                                      ]),
+                                  /* [] */0
                                 ]
                               ]
                             ]
-                          ]),
-                      /* [] */0
-                    ]
-                  ]
+                          ]
+                        ]
+                      ]
+                    ]),
+                /* [] */0
+              ]
+            ]);
+}
+
+var burger = Css.style(/* :: */[
+      Css.position(/* Absolute */2),
+      /* :: */[
+        Css.right(Css.zero),
+        /* :: */[
+          Css.zIndex(200),
+          /* :: */[
+            Css.display(/* None */1),
+            /* :: */[
+              Css.unsafe("padding", ".5em .75em"),
+              /* :: */[
+                Css.fontSize(Css.em(1.5)),
+                /* :: */[
+                  Css.media("(max-width: 600px)", /* :: */[
+                        Css.display(/* Block */0),
+                        /* [] */0
+                      ]),
+                  /* [] */0
                 ]
               ]
             ]
-          ]),
-      /* [] */0
+          ]
+        ]
+      ]
     ]);
 
 var inactiveLink = Css.style(/* :: */[
@@ -110,6 +187,11 @@ var publishLink = Css.style(/* :: */[
       ]
     ]);
 
+var header = Css.style(/* :: */[
+      Css.margin(Css.em(1.45)),
+      /* [] */0
+    ]);
+
 var title = Css.style(/* :: */[
       Css.unsafe("margin", "1em 0 0"),
       /* :: */[
@@ -130,7 +212,19 @@ var title = Css.style(/* :: */[
                           /* [] */0
                         ]
                       ]),
-                  /* [] */0
+                  /* :: */[
+                    Css.media("(max-width: 600px)", /* :: */[
+                          Css.fontSize(Css.rem(2)),
+                          /* [] */0
+                        ]),
+                    /* :: */[
+                      Css.media("(max-width: 450px)", /* :: */[
+                            Css.fontSize(Css.rem(1.5)),
+                            /* [] */0
+                          ]),
+                      /* [] */0
+                    ]
+                  ]
                 ]
               ]
             ]
@@ -154,10 +248,11 @@ var logo = Css.style(/* :: */[
     ]);
 
 exports.root         = root;
-exports.header       = header;
-exports.links        = links;
+exports.topNav       = topNav;
+exports.burger       = burger;
 exports.inactiveLink = inactiveLink;
 exports.publishLink  = publishLink;
+exports.header       = header;
 exports.title        = title;
 exports.logo         = logo;
 /* root Not a pure module */

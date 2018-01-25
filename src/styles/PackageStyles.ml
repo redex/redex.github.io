@@ -13,6 +13,10 @@ let header type_ _flags = style [
   unsafe "padding" "2em 4em";
 
   unsafe "backgroundImage" (if type_ == "unpublished" then Theme.Inverted.crosshatchBackground else "none");
+
+  media "(max-width: 900px)" [
+    unsafe "padding" "1em 2em";
+  ]
 ]
 
 let props = style [
@@ -116,12 +120,19 @@ let starIcon = style [
 ]
 
 let links = style [
+  label "links";
+  
   marginTop (em 3.);
 
   selector "& > a" [
+    display InlineBlock;
     textDecorationLine None;
     marginRight (em 2.);
     unsafe "fontVariant" "small-caps";
+
+    media "(max-width: 450px)" [
+      marginRight (em 1.);
+    ];
 
     selector "&:hover" [
       textDecorationLine (Values [Underline])
@@ -140,5 +151,9 @@ let readme = merge [
   style [
     backgroundColor Theme.Panel.Color.background;
     unsafe "padding" "2em 4em";
+
+    media "(max-width: 900px)" [
+      unsafe "padding" "1em 2em";
+    ]
   ]
 ]

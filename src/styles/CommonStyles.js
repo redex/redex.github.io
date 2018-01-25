@@ -12,8 +12,11 @@ var widthContainer = Css.style(/* :: */[
         /* :: */[
           Css.maxWidth(Css.px(960)),
           /* :: */[
-            Css.width(Css.pct(100)),
-            /* [] */0
+            Css.minWidth(Css.px(359)),
+            /* :: */[
+              Css.width(Css.pct(100)),
+              /* [] */0
+            ]
           ]
         ]
       ]
@@ -343,28 +346,31 @@ var html = Css.style(/* :: */[
                                                         /* :: */[
                                                           Css.flex(1),
                                                           /* :: */[
-                                                            Css.selector("&.s-selected", /* :: */[
-                                                                  Css.display(/* Block */0),
-                                                                  /* [] */0
-                                                                ]),
+                                                            Css.maxWidth(Css.pct(100)),
                                                             /* :: */[
-                                                              Css.selector("& > pre", /* :: */[
-                                                                    Css.marginTop(Css.zero),
-                                                                    /* :: */[
-                                                                      Css.selector("&.lang-reason", /* :: */[
-                                                                            Css.borderLeft(Css.px(2), /* Solid */2, Theme.Color[/* reason */8]),
-                                                                            /* [] */0
-                                                                          ]),
+                                                              Css.selector("&.s-selected", /* :: */[
+                                                                    Css.display(/* Block */0),
+                                                                    /* [] */0
+                                                                  ]),
+                                                              /* :: */[
+                                                                Css.selector("& > pre", /* :: */[
+                                                                      Css.marginTop(Css.zero),
                                                                       /* :: */[
-                                                                        Css.selector("&.lang-ml", /* :: */[
-                                                                              Css.borderLeft(Css.px(2), /* Solid */2, Theme.Color[/* ocaml */9]),
+                                                                        Css.selector("&.lang-reason", /* :: */[
+                                                                              Css.borderLeft(Css.px(2), /* Solid */2, Theme.Color[/* reason */8]),
                                                                               /* [] */0
                                                                             ]),
-                                                                        /* [] */0
+                                                                        /* :: */[
+                                                                          Css.selector("&.lang-ml", /* :: */[
+                                                                                Css.borderLeft(Css.px(2), /* Solid */2, Theme.Color[/* ocaml */9]),
+                                                                                /* [] */0
+                                                                              ]),
+                                                                          /* [] */0
+                                                                        ]
                                                                       ]
-                                                                    ]
-                                                                  ]),
-                                                              /* [] */0
+                                                                    ]),
+                                                                /* [] */0
+                                                              ]
                                                             ]
                                                           ]
                                                         ]
