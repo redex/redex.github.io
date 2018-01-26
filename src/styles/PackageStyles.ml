@@ -51,12 +51,12 @@ let name = style [
   ];
 ]
 
-let fields = style [
+let descLine = style [
+  marginBottom (em 0.5);
 ]
 
 let description = style [
   (*whiteSpace "nowrap";*)
-  marginBottom (em 0.5);
   unsafe "textOverflow" "ellipsis";
   overflow Hidden;
   opacity 0.75;

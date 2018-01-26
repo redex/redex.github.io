@@ -8,29 +8,30 @@ function flag(style_, invert) {
   return Css.style(/* :: */[
               Css.display(/* InlineBlock */11),
               /* :: */[
-                Css.opacity(0.75),
+                Css.fontSize(Css.em(0.75)),
                 /* :: */[
-                  Css.fontSize(Css.em(0.75)),
+                  Css.lineHeight(Css.em(1.6)),
                   /* :: */[
-                    Css.lineHeight(Css.em(1.6)),
+                    Css.marginRight(Css.em(1)),
                     /* :: */[
-                      Css.marginRight(Css.em(1)),
+                      Css.unsafe("whiteSpace", "nowrap"),
                       /* :: */[
-                        Css.unsafe("whiteSpace", "nowrap"),
+                        Css.unsafe("padding", "0 1ex"),
                         /* :: */[
-                          Css.unsafe("padding", "0 1ex"),
+                          style_ !== 136970422 ? (
+                              style_ >= 937841383 ? Css.backgroundColor(invert ? Css.hex("fffc") : Theme.Color[/* primary */0]) : Css.backgroundColor(invert ? Css.hex("0003") : Css.hex("444e"))
+                            ) : Css.border(Css.px(1), /* Solid */2, invert ? Css.hex("fffc") : Theme.Color[/* primary */0]),
                           /* :: */[
-                            style_ >= 937841383 ? Css.backgroundColor(invert ? Css.white : Theme.Color[/* primary */0]) : Css.border(Css.px(1), /* Solid */2, invert ? Css.white : Theme.Color[/* primary */0]),
+                            Css.color(style_ !== 136970422 ? (
+                                    style_ >= 937841383 ? (
+                                        invert ? Theme.Color[/* primary */0] : Css.white
+                                      ) : Css.hex("fffd")
+                                  ) : (
+                                    invert ? Css.white : Theme.Color[/* primary */0]
+                                  )),
                             /* :: */[
-                              Css.color(style_ >= 937841383 ? (
-                                      invert ? Theme.Color[/* primary */0] : Css.white
-                                    ) : (
-                                      invert ? Css.white : Theme.Color[/* primary */0]
-                                    )),
-                              /* :: */[
-                                Css.borderRadius(Css.ex(0.5)),
-                                /* [] */0
-                              ]
+                              Css.borderRadius(Css.ex(0.5)),
+                              /* [] */0
                             ]
                           ]
                         ]

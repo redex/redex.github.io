@@ -32,8 +32,8 @@ function make$1($$package, $staropt$star, _) {
   newrecord[/* render */9] = (function () {
       var match = +($$package.type === "unpublished");
       return React.createElement("span", {
-                  className: FlagsStyles.flags
-                }, match !== 0 ? ReasonReact.element(/* None */0, /* None */0, make("unpublished", /* Light */136970422, invert, /* array */[])) : Vrroom.Helpers[/* null */1], ReasonReact.element(/* None */0, /* None */0, Curry._3(Vrroom.Control[/* Map */0][/* make */1], $$package.flags, /* None */0, (function (flag) {
+                  className: "flags" + FlagsStyles.flags
+                }, match !== 0 ? ReasonReact.element(/* None */0, /* None */0, make("unpublished", /* Black */-937474657, invert, /* array */[])) : Vrroom.Helpers[/* null */1], ReasonReact.element(/* None */0, /* None */0, Curry._3(Vrroom.Control[/* Map */0][/* make */1], $$package.flags, /* None */0, (function (flag) {
                             return ReasonReact.element(/* Some */[flag], /* None */0, make(flag, /* Heavy */937841383, invert, /* array */[]));
                           }))));
     });

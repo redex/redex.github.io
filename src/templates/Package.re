@@ -62,19 +62,19 @@ let make = (~data, _children) => {
           <Platforms platforms=package##platforms />
         </div>
 
-        <div className=Styles.fields>
-          <div className=Styles.description>	
-				    <Flags package invert=true />
+        <div className=Styles.descLine>
+          <Flags package invert=true />
+          <span className=Styles.description>	
             {package##description |> text}
-          </div>
+          </span>
+        </div>
 
-          <div className=Styles.tags>
-            <Icon.Tags className=Styles.tagsIcon />
-            <Tag.Category name=package##category />
-            <Control.Map items=package##keywords>
-              ...(keyword => <Tag.Keyword key=keyword name=keyword />)
-            </Control.Map>
-          </div>
+        <div className=Styles.tags>
+          <Icon.Tags className=Styles.tagsIcon />
+          <Tag.Category name=package##category />
+          <Control.Map items=package##keywords>
+            ...(keyword => <Tag.Keyword key=keyword name=keyword />)
+          </Control.Map>
         </div>
 
         <div className=Styles.links>

@@ -17,8 +17,8 @@ let make = (~package, ~invert=false, _children) => {
   ...component,
 
   render: _self =>
-    <span className=Styles.flags>
-      {package##_type == "unpublished" ? <Flag label="unpublished" style=`Light invert /> : null}
+    <span className=("flags" ++ Styles.flags)>
+      {package##_type == "unpublished" ? <Flag label="unpublished" style=`Black invert /> : null}
       <Control.Map items=package##flags>
         ...{flag => <Flag key=flag label=flag style=`Heavy invert />}
       </Control.Map>

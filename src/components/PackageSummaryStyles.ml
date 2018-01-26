@@ -6,10 +6,10 @@ let root = fun ~isFlagged -> style [
   lineHeight (em 1.45);
 
   if isFlagged then selector "&" [
+    opacity 0.5;
+  ] else  selector "&" [
     boxShadow Theme.Shadow.panel;
     backgroundColor Theme.Panel.Color.background;
-  ] else  selector "&" [
-    opacity 0.5;
   ];
 
   hover [

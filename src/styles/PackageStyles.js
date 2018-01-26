@@ -96,18 +96,18 @@ var name = Css.style(/* :: */[
       ]
     ]);
 
-var fields = Css.style(/* [] */0);
+var descLine = Css.style(/* :: */[
+      Css.marginBottom(Css.em(0.5)),
+      /* [] */0
+    ]);
 
 var description = Css.style(/* :: */[
-      Css.marginBottom(Css.em(0.5)),
+      Css.unsafe("textOverflow", "ellipsis"),
       /* :: */[
-        Css.unsafe("textOverflow", "ellipsis"),
+        Css.overflow(/* Hidden */1),
         /* :: */[
-          Css.overflow(/* Hidden */1),
-          /* :: */[
-            Css.opacity(0.75),
-            /* [] */0
-          ]
+          Css.opacity(0.75),
+          /* [] */0
         ]
       ]
     ]);
@@ -285,7 +285,7 @@ exports.props       = props;
 exports.title       = title;
 exports.owner       = owner;
 exports.name        = name;
-exports.fields      = fields;
+exports.descLine    = descLine;
 exports.description = description;
 exports.tags        = tags;
 exports.tagsIcon    = tagsIcon;
