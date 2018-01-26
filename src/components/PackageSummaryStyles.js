@@ -10,43 +10,40 @@ function root(type_, flags) {
               /* :: */[
                 Css.marginBottom(Css.em(0.5)),
                 /* :: */[
-                  Css.boxShadow(Theme.Shadow[/* panel */1]),
+                  Css.lineHeight(Css.em(1.45)),
                   /* :: */[
-                    Css.backgroundColor(Theme.Panel[/* Color */0][/* background */0]),
-                    /* :: */[
-                      Css.lineHeight(Css.em(1.45)),
-                      /* :: */[
-                        Css.selector("> *", /* :: */[
-                              Css.opacity(flags.length ? 0.25 : 1),
-                              /* [] */0
-                            ]),
-                        /* :: */[
-                          Css.hover(/* :: */[
-                                Css.selector("> *", /* :: */[
-                                      Css.opacity(1),
-                                      /* [] */0
-                                    ]),
-                                /* [] */0
-                              ]),
-                          /* :: */[
-                            Css.unsafe("backgroundImage", type_ === "unpublished" ? Theme.Panel[/* crosshatchBackground */1] : "none"),
+                    flags.length ? Css.selector("&", /* :: */[
+                            Css.opacity(0.5),
+                            /* [] */0
+                          ]) : Css.selector("&", /* :: */[
+                            Css.boxShadow(Theme.Shadow[/* panel */1]),
                             /* :: */[
-                              Css.media("(max-width: 600px)", /* :: */[
-                                    Css.selector("& .version", /* :: */[
-                                          Css.display(/* None */1),
-                                          /* [] */0
-                                        ]),
-                                    /* :: */[
-                                      Css.selector("& .platforms", /* :: */[
-                                            Css.display(/* None */1),
-                                            /* [] */0
-                                          ]),
-                                      /* [] */0
-                                    ]
-                                  ]),
+                              Css.backgroundColor(Theme.Panel[/* Color */0][/* background */0]),
                               /* [] */0
                             ]
-                          ]
+                          ]),
+                    /* :: */[
+                      Css.hover(/* :: */[
+                            Css.opacity(1),
+                            /* [] */0
+                          ]),
+                      /* :: */[
+                        Css.unsafe("backgroundImage", type_ === "unpublished" ? Theme.Panel[/* crosshatchBackground */1] : "none"),
+                        /* :: */[
+                          Css.media("(max-width: 600px)", /* :: */[
+                                Css.selector("& .version", /* :: */[
+                                      Css.display(/* None */1),
+                                      /* [] */0
+                                    ]),
+                                /* :: */[
+                                  Css.selector("& .platforms", /* :: */[
+                                        Css.display(/* None */1),
+                                        /* [] */0
+                                      ]),
+                                  /* [] */0
+                                ]
+                              ]),
+                          /* [] */0
                         ]
                       ]
                     ]

@@ -20,7 +20,7 @@ function root(type_, flags, isFocused) {
                         Css.cursor(/* Pointer */5),
                         /* :: */[
                           Css.selector("> *", /* :: */[
-                                Css.opacity(flags.length === 0 || isFocused ? 1 : 0.25),
+                                Css.opacity(flags.length === 0 || isFocused ? 1 : 0.5),
                                 /* [] */0
                               ]),
                           /* :: */[

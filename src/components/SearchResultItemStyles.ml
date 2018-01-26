@@ -10,7 +10,7 @@ let root = fun type_ flags isFocused -> style [
   cursor Pointer;
 
   selector "> *" [
-    opacity (if Array.length(flags) == 0 || isFocused then 1. else 0.25);
+    opacity (if Array.length(flags) == 0 || isFocused then 1. else 0.5);
   ];
 
   hover [

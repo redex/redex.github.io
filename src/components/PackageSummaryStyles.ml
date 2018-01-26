@@ -3,18 +3,17 @@ open! Css
 let root = fun type_ flags -> style [
   unsafe "padding" ".75em 1.5em";
   marginBottom (em 0.5);
-  boxShadow Theme.Shadow.panel;
-  backgroundColor Theme.Panel.Color.background;
   lineHeight (em 1.45);
 
-  selector "> *" [
-    opacity (if Array.length(flags) == 0 then 1. else 0.25);
+  if Array.length(flags) == 0 then selector "&" [
+    boxShadow Theme.Shadow.panel;
+    backgroundColor Theme.Panel.Color.background;
+  ] else  selector "&" [
+    opacity 0.5;
   ];
 
   hover [
-    selector "> *" [
-      opacity 1.;
-    ]
+    opacity 1.;
   ];
 
   unsafe "backgroundImage" (if type_ == "unpublished" then Theme.Panel.crosshatchBackground else "none");
