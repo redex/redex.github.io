@@ -171,22 +171,16 @@ var license = Css.style(/* :: */[
     ]);
 
 var nolicense = Css.style(/* :: */[
-      Css.color(Theme.Color[/* bad */7]),
+      Css.fontSize(Css.em(0.85)),
       /* :: */[
-        Css.fontSize(Css.em(0.85)),
+        Css.unsafe("whiteSpace", "nowrap"),
         /* :: */[
-          Css.unsafe("whiteSpace", "nowrap"),
+          Css.border(Css.px(1), /* Solid */2, Css.hex("0008")),
           /* :: */[
-            Css.fontWeight(/* Bold */1),
+            Css.color(Css.hex("0008")),
             /* :: */[
-              Css.backgroundColor(Theme.Inverted[/* Color */0][/* text */1]),
-              /* :: */[
-                Css.unsafe("padding", "0 1ex"),
-                /* :: */[
-                  Css.unsafe("borderRadius", "1.4ex"),
-                  /* [] */0
-                ]
-              ]
+              Css.unsafe("padding", "0 1ex"),
+              /* [] */0
             ]
           ]
         ]

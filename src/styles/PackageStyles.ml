@@ -97,13 +97,11 @@ let license = style [
 ]
 
 let nolicense = style [
-  color Theme.Color.bad;
   fontSize (em 0.85);
   unsafe "whiteSpace" "nowrap";
-  fontWeight Bold;
-  backgroundColor Theme.Inverted.Color.text;
+  border (px 1) Solid (hex "0008");
+  color (hex "0008");
   unsafe "padding" "0 1ex";
-  unsafe "borderRadius" "1.4ex";
 ]
 
 let stars = style [
