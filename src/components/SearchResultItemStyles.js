@@ -5,7 +5,7 @@ var Css   = require("bs-css/src/Css.js");
 var CssEx = require("../utils/CssEx.js");
 var Theme = require("../styles/Theme.js");
 
-function root(type_, flags, isFocused) {
+function root(isFlagged, isFocused) {
   return Css.style(/* :: */[
               Css.unsafe("label", "search-result-item"),
               /* :: */[
@@ -20,7 +20,7 @@ function root(type_, flags, isFocused) {
                         Css.cursor(/* Pointer */5),
                         /* :: */[
                           Css.selector("> *", /* :: */[
-                                Css.opacity(flags.length === 0 || isFocused ? 1 : 0.5),
+                                Css.opacity(isFlagged || isFocused ? 1 : 0.5),
                                 /* [] */0
                               ]),
                           /* :: */[
@@ -37,22 +37,19 @@ function root(type_, flags, isFocused) {
                             /* :: */[
                               Css.backgroundColor(CssEx.else_(Theme.Panel[/* Color */0][/* background */0], CssEx.if_(isFocused, "hsl(6.9, 90%, 90%)"))),
                               /* :: */[
-                                Css.unsafe("backgroundImage", CssEx.if_(+(type_ === "unpublished"), Theme.Panel[/* crosshatchBackground */1])),
+                                Css.selector("> *:last-child", /* :: */[
+                                      Css.textAlign(/* Right */2),
+                                      /* [] */0
+                                    ]),
                                 /* :: */[
-                                  Css.selector("> *:last-child", /* :: */[
-                                        Css.textAlign(/* Right */2),
+                                  Css.media("(max-width: 600px)", /* :: */[
+                                        Css.selector("& .platforms", /* :: */[
+                                              Css.display(/* None */1),
+                                              /* [] */0
+                                            ]),
                                         /* [] */0
                                       ]),
-                                  /* :: */[
-                                    Css.media("(max-width: 600px)", /* :: */[
-                                          Css.selector("& .platforms", /* :: */[
-                                                Css.display(/* None */1),
-                                                /* [] */0
-                                              ]),
-                                          /* [] */0
-                                        ]),
-                                    /* [] */0
-                                  ]
+                                  /* [] */0
                                 ]
                               ]
                             ]

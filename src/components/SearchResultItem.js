@@ -56,7 +56,7 @@ function make($$package, isFocused, onClick, _) {
   newrecord[/* render */9] = (function () {
       var match = $$package.stars;
       return React.createElement("div", {
-                  className: SearchResultItemStyles.root($$package.type, $$package.flags, isFocused),
+                  className: SearchResultItemStyles.root(+(Rebase.$$Array[/* length */16]($$package.flags) > 0), isFocused),
                   onClick: (function () {
                       return Curry._1(onClick, $$package);
                     })

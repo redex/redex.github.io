@@ -35,10 +35,7 @@ var Color = /* module */[
 
 var Color$1 = /* module */[/* background */"white"];
 
-var Panel = /* module */[
-  /* Color */Color$1,
-  /* crosshatchBackground */"repeating-linear-gradient(\n    340deg,\n    transparent,\n    transparent 10px,\n    hsl(6.9, 70.7%, 54%, .075) 10px,\n    hsl(6.9, 70.7%, 54%, .075) 12px\n  )"
-];
+var Panel = /* module */[/* Color */Color$1];
 
 var block = Css.hex("rgba(255, 255, 255, .1)");
 
@@ -51,10 +48,7 @@ var Color$2 = /* module */[
   /* highlightedBlock */highlightedBlock
 ];
 
-var Inverted = /* module */[
-  /* Color */Color$2,
-  /* crosshatchBackground */"repeating-linear-gradient(\n    340deg,\n    hsl(6.9, 70.7%, 54%),\n    hsl(6.9, 70.7%, 54%) 10px,\n    hsl(6.9, 70.7%, 58%) 10px,\n    hsl(6.9, 70.7%, 58%) 12px\n  )"
-];
+var Inverted = /* module */[/* Color */Color$2];
 
 var Shadow = /* module */[
   /* overlay */"1ex 1ex 1em 0 rgba(0, 0, 0, .1)",

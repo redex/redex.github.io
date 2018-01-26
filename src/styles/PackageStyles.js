@@ -11,30 +11,25 @@ var root = Css.style(/* :: */[
       /* [] */0
     ]);
 
-function header(type_, _) {
-  return Css.style(/* :: */[
-              Css.unsafe("label", "header"),
-              /* :: */[
-                Css.backgroundColor(Theme.Inverted[/* Color */0][/* background */0]),
-                /* :: */[
-                  Css.color(Theme.Inverted[/* Color */0][/* text */1]),
-                  /* :: */[
-                    Css.unsafe("padding", "2em 4em"),
-                    /* :: */[
-                      Css.unsafe("backgroundImage", type_ === "unpublished" ? Theme.Inverted[/* crosshatchBackground */1] : "none"),
-                      /* :: */[
-                        Css.media("(max-width: 900px)", /* :: */[
-                              Css.unsafe("padding", "1em 2em"),
-                              /* [] */0
-                            ]),
-                        /* [] */0
-                      ]
-                    ]
-                  ]
-                ]
-              ]
-            ]);
-}
+var header = Css.style(/* :: */[
+      Css.unsafe("label", "header"),
+      /* :: */[
+        Css.backgroundColor(Theme.Inverted[/* Color */0][/* background */0]),
+        /* :: */[
+          Css.color(Theme.Inverted[/* Color */0][/* text */1]),
+          /* :: */[
+            Css.unsafe("padding", "2em 4em"),
+            /* :: */[
+              Css.media("(max-width: 900px)", /* :: */[
+                    Css.unsafe("padding", "1em 2em"),
+                    /* [] */0
+                  ]),
+              /* [] */0
+            ]
+          ]
+        ]
+      ]
+    ]);
 
 var props = Css.style(/* :: */[
       Css.display(/* Flex */3),

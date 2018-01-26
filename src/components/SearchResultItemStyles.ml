@@ -1,7 +1,7 @@
 open! Css
 open CssEx
 
-let root = fun type_ flags isFocused -> style [
+let root = fun ~isFlagged ~isFocused -> style [
   unsafe "label" "search-result-item";
   display Flex;
   justifyContent SpaceBetween;
@@ -10,7 +10,7 @@ let root = fun type_ flags isFocused -> style [
   cursor Pointer;
 
   selector "> *" [
-    opacity (if Array.length(flags) == 0 || isFocused then 1. else 0.5);
+    opacity (if isFlagged || isFocused then 1. else 0.5);
   ];
 
   hover [
@@ -25,8 +25,6 @@ let root = fun type_ flags isFocused -> style [
     (if_ isFocused 
       ((Obj.magic "hsl(6.9, 90%, 90%)"): Css.color)
     |> else_ Theme.Panel.Color.background);
-
-  unsafe "backgroundImage" (if_ (type_ == "unpublished") Theme.Panel.crosshatchBackground);
 
   selector "> *:last-child" [
     textAlign Right;

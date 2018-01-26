@@ -1,11 +1,11 @@
 open! Css
 
-let root = fun type_ flags -> style [
+let root = fun ~isFlagged -> style [
   unsafe "padding" ".75em 1.5em";
   marginBottom (em 0.5);
   lineHeight (em 1.45);
 
-  if Array.length(flags) == 0 then selector "&" [
+  if isFlagged then selector "&" [
     boxShadow Theme.Shadow.panel;
     backgroundColor Theme.Panel.Color.background;
   ] else  selector "&" [
@@ -15,8 +15,6 @@ let root = fun type_ flags -> style [
   hover [
     opacity 1.;
   ];
-
-  unsafe "backgroundImage" (if type_ == "unpublished" then Theme.Panel.crosshatchBackground else "none");
 
   media "(max-width: 600px)" [
     selector "& .version" [

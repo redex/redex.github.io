@@ -31,7 +31,7 @@ let make = (~data, _children) => {
 
     <div className=Styles.root>
       <Helmet title=Config.titleTemplate(package##name) />
-      <header className=Styles.header(package##_type, package##flags)>
+      <header className=Styles.header>
         <div className=Styles.props>
           <Control.IfSome option=(package##stars |> Js.toOption)>
             ...(stars =>

@@ -4,15 +4,13 @@ let root = style [
   marginBottom (em 1.45);
 ]
 
-let header type_ _flags = style [
+let header = style [
   unsafe "label" "header";
   (*backgroundColor (if flags = [||] then Theme.Inverted.Color.background else (hex "aaa"));*)
   backgroundColor Theme.Inverted.Color.background;
   (*background "linear-gradient(to bottom right, hsl(6.9, 70.7%, 52%), hsl(6.9, 70.7%, 58%))";*)
   color Theme.Inverted.Color.text;
   unsafe "padding" "2em 4em";
-
-  unsafe "backgroundImage" (if type_ == "unpublished" then Theme.Inverted.crosshatchBackground else "none");
 
   media "(max-width: 900px)" [
     unsafe "padding" "1em 2em";

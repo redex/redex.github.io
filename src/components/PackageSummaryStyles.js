@@ -4,7 +4,7 @@
 var Css   = require("bs-css/src/Css.js");
 var Theme = require("../styles/Theme.js");
 
-function root(type_, flags) {
+function root(isFlagged) {
   return Css.style(/* :: */[
               Css.unsafe("padding", ".75em 1.5em"),
               /* :: */[
@@ -12,15 +12,15 @@ function root(type_, flags) {
                 /* :: */[
                   Css.lineHeight(Css.em(1.45)),
                   /* :: */[
-                    flags.length ? Css.selector("&", /* :: */[
-                            Css.opacity(0.5),
-                            /* [] */0
-                          ]) : Css.selector("&", /* :: */[
+                    isFlagged ? Css.selector("&", /* :: */[
                             Css.boxShadow(Theme.Shadow[/* panel */1]),
                             /* :: */[
                               Css.backgroundColor(Theme.Panel[/* Color */0][/* background */0]),
                               /* [] */0
                             ]
+                          ]) : Css.selector("&", /* :: */[
+                            Css.opacity(0.5),
+                            /* [] */0
                           ]),
                     /* :: */[
                       Css.hover(/* :: */[
@@ -28,23 +28,20 @@ function root(type_, flags) {
                             /* [] */0
                           ]),
                       /* :: */[
-                        Css.unsafe("backgroundImage", type_ === "unpublished" ? Theme.Panel[/* crosshatchBackground */1] : "none"),
-                        /* :: */[
-                          Css.media("(max-width: 600px)", /* :: */[
-                                Css.selector("& .version", /* :: */[
+                        Css.media("(max-width: 600px)", /* :: */[
+                              Css.selector("& .version", /* :: */[
+                                    Css.display(/* None */1),
+                                    /* [] */0
+                                  ]),
+                              /* :: */[
+                                Css.selector("& .platforms", /* :: */[
                                       Css.display(/* None */1),
                                       /* [] */0
                                     ]),
-                                /* :: */[
-                                  Css.selector("& .platforms", /* :: */[
-                                        Css.display(/* None */1),
-                                        /* [] */0
-                                      ]),
-                                  /* [] */0
-                                ]
-                              ]),
-                          /* [] */0
-                        ]
+                                /* [] */0
+                              ]
+                            ]),
+                        /* [] */0
                       ]
                     ]
                   ]
