@@ -10,7 +10,7 @@ let root = fun ~isFlagged ~isFocused -> style [
   cursor Pointer;
 
   selector "> *" [
-    opacity (if isFlagged || isFocused then 1. else 0.5);
+    opacity (if isFlagged && not isFocused then 0.5 else 1.);
   ];
 
   hover [
