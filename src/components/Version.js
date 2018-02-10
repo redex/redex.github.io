@@ -14,9 +14,9 @@ function make(version, isPublished, _) {
   newrecord[/* render */9] = (function () {
       return React.createElement("div", {
                   className: "version " + VersionStyles.root(isPublished)
-                }, isPublished ? Vrroom.Helpers[/* text */0](version) : ReasonReact.element(/* None */0, /* None */0, Tooltip.make(React.createElement("div", {
+                }, isPublished ? Vrroom.Helpers[/* text */1](version) : ReasonReact.element(/* None */0, /* None */0, Tooltip.make(React.createElement("div", {
                                 className: VersionStyles.tooltip
-                              }, Vrroom.Helpers[/* text */0]("Unpublished")), Vrroom.Helpers[/* text */0](version))));
+                              }, Vrroom.Helpers[/* text */1]("Unpublished")), Vrroom.Helpers[/* text */1](version))));
     });
   return newrecord;
 }

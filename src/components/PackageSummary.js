@@ -23,20 +23,20 @@ function make($$package, _) {
       var match = $$package.stars;
       var match$1 = $$package.license;
       var description = $$package.description;
-      var tmp = description === "" ? Vrroom.Helpers[/* nbsp */2] : Vrroom.Helpers[/* text */0](description);
+      var tmp = description === "" ? Vrroom.Helpers[/* nbsp */3] : Vrroom.Helpers[/* text */1](description);
       return React.createElement("div", {
                   className: PackageSummaryStyles.root(+($$package.flags.length > 0))
                 }, React.createElement("header", {
                       className: PackageSummaryStyles.header
-                    }, ReasonReact.element(/* None */0, /* None */0, Link.make($$package.slug, /* Some */[PackageSummaryStyles.name], /* None */0, /* array */[Vrroom.Helpers[/* text */0]($$package.name)])), ReasonReact.element(/* None */0, /* None */0, Version.make($$package.version, +($$package.type === "published"), /* array */[])), ReasonReact.element(/* None */0, /* None */0, Platforms.make($$package.platforms, /* array */[])), React.createElement("div", {
+                    }, ReasonReact.element(/* None */0, /* None */0, Link.make($$package.slug, /* Some */[PackageSummaryStyles.name], /* None */0, /* array */[Vrroom.Helpers[/* text */1]($$package.name)])), ReasonReact.element(/* None */0, /* None */0, Version.make($$package.version, +($$package.type === "published"), /* array */[])), ReasonReact.element(/* None */0, /* None */0, Platforms.make($$package.platforms, /* array */[])), React.createElement("div", {
                           className: PackageSummaryStyles.props
                         }, React.createElement("span", {
                               className: PackageSummaryStyles.stars
-                            }, (match == null) ? Vrroom.Helpers[/* text */0]("-") : Vrroom.Helpers[/* text */0](match), ReasonReact.element(/* None */0, /* None */0, Icon.Star[/* make */0](/* Some */[PackageSummaryStyles.starIcon], /* array */[]))), ReasonReact.element(/* None */0, /* None */0, Score.make($$package, /* array */[])), (match$1 == null) ? React.createElement("span", {
+                            }, (match == null) ? Vrroom.Helpers[/* text */1]("-") : Vrroom.Helpers[/* text */1](match), ReasonReact.element(/* None */0, /* None */0, Icon.Star[/* make */0](/* Some */[PackageSummaryStyles.starIcon], /* array */[]))), ReasonReact.element(/* None */0, /* None */0, Score.make($$package, /* array */[])), (match$1 == null) ? React.createElement("span", {
                                 className: PackageSummaryStyles.nolicense
-                              }, Vrroom.Helpers[/* text */0]("No license")) : React.createElement("span", {
+                              }, Vrroom.Helpers[/* text */1]("No license")) : React.createElement("span", {
                                 className: PackageSummaryStyles.license
-                              }, Vrroom.Helpers[/* text */0](match$1)), React.createElement("span", {
+                              }, Vrroom.Helpers[/* text */1](match$1)), React.createElement("span", {
                               className: PackageSummaryStyles.updated
                             }, ReasonReact.element(/* None */0, /* None */0, TimeAgo.make($$package.updated, /* array */[]))))), React.createElement("div", {
                       className: PackageSummaryStyles.description

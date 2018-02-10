@@ -6,15 +6,15 @@
   "dependencies": {
     "@glennsl/bs-json": "^1.1.2",
     "@glennsl/rebase": "^0.2.0",
-    "algoliasearch": "^3.24.9",
-    "algoliasearch-helper": "^2.23.2",
+    "algoliasearch": "^3.24.11",
+    "algoliasearch-helper": "^2.24.0",
     "bs-css": "^5.4.0",
-    "gatsby": "^1.9.158",
-    "gatsby-link": "^1.6.34",
+    "gatsby": "^1.9.184",
+    "gatsby-link": "^1.6.36",
     "gatsby-plugin-favicon": "^2.1.1",
-    "gatsby-plugin-glamor": "^1.6.10",
-    "gatsby-plugin-react-helmet": "^2.0.3",
-    "gatsby-source-filesystem": "^1.5.11",
+    "gatsby-plugin-glamor": "^1.6.11",
+    "gatsby-plugin-react-helmet": "^2.0.4",
+    "gatsby-source-filesystem": "^1.5.18",
     "gatsby-transformer-json": "^1.0.14",
     "glamor-reset": "^3.0.0-3",
     "react": "^16.2.0",
@@ -52,7 +52,7 @@
     "github-slugger": "^1.2.0",
     "mdast-util-to-string": "^1.0.4",
     "reason": "^3.0.2",
-    "reason-react": "^0.3.1",
+    "reason-react": "^0.3.2",
     "redex-scripts": "redex/redex-scripts"
   }
 }

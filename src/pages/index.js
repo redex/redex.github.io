@@ -27,14 +27,14 @@ function make(data, _) {
                                 return ReasonReact.element(/* Some */[keyword.name], /* None */0, Link.make("/keyword/" + keyword.name, /* None */0, /* None */0, /* array */[
                                                 React.createElement("span", {
                                                       className: "label"
-                                                    }, Vrroom.Helpers[/* text */0](keyword.name)),
+                                                    }, Vrroom.Helpers[/* text */1](keyword.name)),
                                                 React.createElement("span", {
                                                       className: "count"
-                                                    }, Vrroom.Helpers[/* text */0](Pervasives.string_of_int(keyword.count)))
+                                                    }, Vrroom.Helpers[/* text */1](Pervasives.string_of_int(keyword.count)))
                                               ]));
                               })))), React.createElement("div", {
                       className: IndexStyles.lists
-                    }, React.createElement("div", undefined, React.createElement("h2", undefined, Vrroom.Helpers[/* text */0]("Recent releases")), ReasonReact.element(/* None */0, /* None */0, TopList.make(Graphql.getNodes(data.recentPackages), /* updated */500154939, /* array */[]))), React.createElement("div", undefined, React.createElement("h2", undefined, Vrroom.Helpers[/* text */0]("Most popular")), ReasonReact.element(/* None */0, /* None */0, TopList.make(Graphql.getNodes(data.popularPackages), /* stars */67859553, /* array */[])))));
+                    }, React.createElement("div", undefined, React.createElement("h2", undefined, Vrroom.Helpers[/* text */1]("Recent releases")), ReasonReact.element(/* None */0, /* None */0, TopList.make(Graphql.getNodes(data.recentPackages), /* updated */500154939, /* array */[]))), React.createElement("div", undefined, React.createElement("h2", undefined, Vrroom.Helpers[/* text */1]("Most popular")), ReasonReact.element(/* None */0, /* None */0, TopList.make(Graphql.getNodes(data.popularPackages), /* stars */67859553, /* array */[])))));
     });
   return newrecord;
 }
