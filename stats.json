@@ -89,12 +89,12 @@
       "path---package-unpublished-glennsl-reasonable-vscode-starter-2e4669ba6cff93924354.js.map"
     ],
     "component---src-pages-unpublished-js": [
-      "component---src-pages-unpublished-js-ed558dc91c202d1d2ea4.js",
-      "component---src-pages-unpublished-js-ed558dc91c202d1d2ea4.js.map"
+      "component---src-pages-unpublished-js-eec092af377629d722ca.js",
+      "component---src-pages-unpublished-js-eec092af377629d722ca.js.map"
     ],
     "component---src-templates-platform-js": [
-      "component---src-templates-platform-js-125f76719d3f4ecff2b7.js",
-      "component---src-templates-platform-js-125f76719d3f4ecff2b7.js.map"
+      "component---src-templates-platform-js-0d1ac5eefd8a00a7ed9b.js",
+      "component---src-templates-platform-js-0d1ac5eefd8a00a7ed9b.js.map"
     ],
     "path---package-unpublished-glennsl-bs-refmt": [
       "path---package-unpublished-glennsl-bs-refmt-d9f6c636a8d87ac9f081.js",
@@ -105,8 +105,8 @@
       "path---package-unpublished-reasonml-community-bs-immutablejs-f15bc2dbcadcaaf9f192.js.map"
     ],
     "component---src-pages-index-js": [
-      "component---src-pages-index-js-e9a6a7647f445ef878a7.js",
-      "component---src-pages-index-js-e9a6a7647f445ef878a7.js.map"
+      "component---src-pages-index-js-e89d70d3e61e354336e0.js",
+      "component---src-pages-index-js-e89d70d3e61e354336e0.js.map"
     ],
     "path---package-reasonml-in-browser": [
       "path---package-reasonml-in-browser-3750c63e39322611fad0.js",
@@ -181,8 +181,8 @@
       "path---package-unpublished-jchavarri-chrome-extension-starter-reason-react-3ee63572d9fff52bcd29.js.map"
     ],
     "component---src-templates-keyword-js": [
-      "component---src-templates-keyword-js-66b9c034d437106dcc1e.js",
-      "component---src-templates-keyword-js-66b9c034d437106dcc1e.js.map"
+      "component---src-templates-keyword-js-a95435f6c68fbadf882a.js",
+      "component---src-templates-keyword-js-a95435f6c68fbadf882a.js.map"
     ],
     "path---package-unpublished-glennsl-bs-benchmarkjs": [
       "path---package-unpublished-glennsl-bs-benchmarkjs-6c8df27913c3a8725d38.js",
@@ -397,8 +397,8 @@
       "path---package-unpublished-andrew-kvalheim-bs-geofire-a08b389b4049f31c60ff.js.map"
     ],
     "component---src-layouts-index-js": [
-      "component---src-layouts-index-js-fbc0a94a0d2a93c99b65.js",
-      "component---src-layouts-index-js-fbc0a94a0d2a93c99b65.js.map"
+      "component---src-layouts-index-js-5dd2dc58bdb1690a62d3.js",
+      "component---src-layouts-index-js-5dd2dc58bdb1690a62d3.js.map"
     ],
     "path---package-astrada-bs-react-fela": [
       "path---package-astrada-bs-react-fela-199665a0db3b7f8969f6.js",
@@ -469,8 +469,8 @@
       "path---error-404-a0e39f21c11f6a62c5ab.js.map"
     ],
     "component---src-pages-all-js": [
-      "component---src-pages-all-js-ea742c4b5d6bedccf632.js",
-      "component---src-pages-all-js-ea742c4b5d6bedccf632.js.map"
+      "component---src-pages-all-js-adce340d986a350002cb.js",
+      "component---src-pages-all-js-adce340d986a350002cb.js.map"
     ],
     "path---package-generator-reason-react-class": [
       "path---package-generator-reason-react-class-34c9b7301687b7957fdb.js",
@@ -605,21 +605,21 @@
       "path---package-bs-react-notification-system-5aae73d8fc88093f0f1a.js.map"
     ],
     "component---src-templates-category-js": [
-      "component---src-templates-category-js-cc624d8e28f727c2e1b6.js",
-      "component---src-templates-category-js-cc624d8e28f727c2e1b6.js.map"
+      "component---src-templates-category-js-3d5ffcc822a4f33a640f.js",
+      "component---src-templates-category-js-3d5ffcc822a4f33a640f.js.map"
     ],
     "component---src-pages-404-js": [
-      "component---src-pages-404-js-200b7fbcb42280d29dfe.js",
-      "component---src-pages-404-js-200b7fbcb42280d29dfe.js.map"
+      "component---src-pages-404-js-2043e3911d45cc4328f5.js",
+      "component---src-pages-404-js-2043e3911d45cc4328f5.js.map"
     ],
     "path---package-bs-axios": [
       "path---package-bs-axios-89cfc1c70063f6710d26.js",
       "path---package-bs-axios-89cfc1c70063f6710d26.js.map"
     ],
     "commons": [
-      "commons-c62fe2424205f143a3dc.js",
+      "commons-300fbc4c11e29ff12ef0.js",
       "build-js-styles.css",
-      "commons-c62fe2424205f143a3dc.js.map",
+      "commons-300fbc4c11e29ff12ef0.js.map",
       "build-js-styles.css.map"
     ],
     "path---package-unpublished-glennsl-reasonable-gatsby-starter": [
@@ -695,8 +695,8 @@
       "path---all-5b617f836c0de29acabb.js.map"
     ],
     "component---src-templates-package-js": [
-      "component---src-templates-package-js-e44861303d1be8914cde.js",
-      "component---src-templates-package-js-e44861303d1be8914cde.js.map"
+      "component---src-templates-package-js-439e424b12614616e5f6.js",
+      "component---src-templates-package-js-439e424b12614616e5f6.js.map"
     ],
     "path---package-add-reason": [
       "path---package-add-reason-3dcb4cee5a6fa77f8f75.js",
@@ -803,8 +803,8 @@
       "path---package-bs-director-46e8c2c13b44e379bbf3.js.map"
     ],
     "component---src-pages-keywords-js": [
-      "component---src-pages-keywords-js-8ec485f25d84d6caa6c7.js",
-      "component---src-pages-keywords-js-8ec485f25d84d6caa6c7.js.map"
+      "component---src-pages-keywords-js-6cbfee4a58519f809d4e.js",
+      "component---src-pages-keywords-js-6cbfee4a58519f809d4e.js.map"
     ],
     "path---package-re-elm-app": [
       "path---package-re-elm-app-3f9cdbf953a133322af8.js",
@@ -855,8 +855,8 @@
       "component---src-pages-publish-js-8530a682c6f67cc008d3.js.map"
     ],
     "component---src-pages-error-404-js": [
-      "component---src-pages-error-404-js-a3b9d78dc8e0751d6f62.js",
-      "component---src-pages-error-404-js-a3b9d78dc8e0751d6f62.js.map"
+      "component---src-pages-error-404-js-18aab6f0eeac4ad5bb35.js",
+      "component---src-pages-error-404-js-18aab6f0eeac4ad5bb35.js.map"
     ],
     "path---package-reasonable-flowgen": [
       "path---package-reasonable-flowgen-878596808acdcfda928c.js",
@@ -1009,8 +1009,8 @@
       "path---package-gimme-reason-ba142427eedd2f8b667a.js.map"
     ],
     "component---src-layouts-front-page-layout-js": [
-      "component---src-layouts-front-page-layout-js-36d0cf0c71e5b143e841.js",
-      "component---src-layouts-front-page-layout-js-36d0cf0c71e5b143e841.js.map"
+      "component---src-layouts-front-page-layout-js-5f0ccd0ddc2fad8f0810.js",
+      "component---src-layouts-front-page-layout-js-5f0ccd0ddc2fad8f0810.js.map"
     ],
     "path---package-bs-errors": [
       "path---package-bs-errors-03e58f9f7c3f6f20f7e1.js",
