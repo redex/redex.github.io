@@ -20,25 +20,22 @@ function make(packages, value, _) {
                         return React.createElement("div", {
                                     key: $$package.name,
                                     className: TopListStyles.root
-                                  }, React.createElement("div", undefined, ReasonReact.element(/* None */0, /* None */0, Link.make($$package.slug, /* Some */[TopListStyles.name], /* None */0, /* array */[Vrroom.Helpers[/* text */1]($$package.name)])), React.createElement("span", {
+                                  }, React.createElement("div", undefined, ReasonReact.element(/* None */0, /* None */0, Link.make($$package.slug, /* Some */[TopListStyles.name], /* None */0, /* array */[Vrroom.text($$package.name)])), React.createElement("span", {
                                             className: TopListStyles.version
-                                          }, Vrroom.Helpers[/* text */1]($$package.version))), React.createElement("div", undefined, value >= 500154939 ? React.createElement("div", {
+                                          }, Vrroom.text($$package.version))), React.createElement("div", undefined, value >= 500154939 ? React.createElement("div", {
                                               className: TopListStyles.updated
                                             }, ReasonReact.element(/* None */0, /* None */0, TimeAgo.make($$package.updated, /* array */[]))) : ReasonReact.element(/* None */0, /* None */0, Curry._2(Vrroom.Control[/* IfSome */3][/* make */1], Js_primitive.null_undefined_to_opt($$package.stars), (function (stars) {
                                                     return React.createElement("div", {
                                                                 className: TopListStyles.stars
-                                                              }, Vrroom.Helpers[/* text */1](stars), ReasonReact.element(/* None */0, /* None */0, Icon.Star[/* make */0](/* Some */[TopListStyles.starIcon], /* array */[])));
+                                                              }, Vrroom.text(stars), ReasonReact.element(/* None */0, /* None */0, Icon.Star[/* make */0](/* Some */[TopListStyles.starIcon], /* array */[])));
                                                   })))));
                       })));
     });
   return newrecord;
 }
 
-var Control = 0;
-
 var Styles = 0;
 
-exports.Control   = Control;
 exports.Styles    = Styles;
 exports.component = component;
 exports.make      = make;

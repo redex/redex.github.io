@@ -1,8 +1,8 @@
-open! Vrroom.Helpers;
+open! Vrroom;
 module Styles = FooterStyles;
 
 let component = ReasonReact.statelessComponent("Footer");
-let make = (~context, _children) => {
+let make = (~context, _:childless) => {
   ...component,
   render: _self =>
     <div className=Styles.root(context)>

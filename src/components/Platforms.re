@@ -1,5 +1,4 @@
-open! Vrroom.Helpers;
-module Control = Vrroom.Control;
+open! Vrroom;
 module Styles = PlatformsStyles;
 
 let platform = (icon, name, label) =>
@@ -11,14 +10,14 @@ let platform = (icon, name, label) =>
 let tooltip = platforms =>
   <div className=Styles.tooltip>
     {"Platforms:" |> text}
-    {platforms |> Js.Array.includes("browser")  ? platform(<Icon.Html5 />,    "browser",  "Browser") : null}
-    {platforms |> Js.Array.includes("node")     ? platform(<Icon.Nodejs />,   "node",     "Node.js") : null}
-    {platforms |> Js.Array.includes("native")   ? platform(<Icon.Matrix />,   "native",   "Native") : null}
-    {platforms |> Js.Array.includes("any")      ? platform(<Icon.Infinity />, "any",      "Any") : null}
+    {platforms |> Js.Array.includes("browser")  ? platform(<Icon.Html5 />,    "browser",  "Browser") : nothing}
+    {platforms |> Js.Array.includes("node")     ? platform(<Icon.Nodejs />,   "node",     "Node.js") : nothing}
+    {platforms |> Js.Array.includes("native")   ? platform(<Icon.Matrix />,   "native",   "Native") : nothing}
+    {platforms |> Js.Array.includes("any")      ? platform(<Icon.Infinity />, "any",      "Any") : nothing}
   </div>;
 
 let component = ReasonReact.statelessComponent("Platforms");
-let make = (~platforms, _children) => {
+let make = (~platforms, _:childless) => {
   ...component,
 
   render: _self =>
@@ -26,10 +25,10 @@ let make = (~platforms, _children) => {
       <Tooltip content=tooltip(platforms)>
         ...(
           <Fragment>
-            {platforms |> Js.Array.includes("browser")  ? <Icon.Html5 /> : null}
-            {platforms |> Js.Array.includes("node")     ? <Icon.Nodejs /> : null}
-            {platforms |> Js.Array.includes("native")   ? <Icon.Matrix /> : null}
-            {platforms |> Js.Array.includes("any")      ? <Icon.Infinity /> : null}
+            {platforms |> Js.Array.includes("browser")  ? <Icon.Html5 /> : nothing}
+            {platforms |> Js.Array.includes("node")     ? <Icon.Nodejs /> : nothing}
+            {platforms |> Js.Array.includes("native")   ? <Icon.Matrix /> : nothing}
+            {platforms |> Js.Array.includes("any")      ? <Icon.Infinity /> : nothing}
           </Fragment>
         )
     </Tooltip>

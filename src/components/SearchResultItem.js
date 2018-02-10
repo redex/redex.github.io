@@ -62,13 +62,13 @@ function make($$package, isFocused, onClick, _) {
                     })
                 }, React.createElement("div", undefined, React.createElement("span", {
                           className: SearchResultItemStyles.name
-                        }, Vrroom.Helpers[/* text */1]($$package.name)), React.createElement("span", {
+                        }, Vrroom.text($$package.name)), React.createElement("span", {
                           className: SearchResultItemStyles.version
-                        }, Vrroom.Helpers[/* text */1]($$package.version)), ReasonReact.element(/* None */0, /* None */0, Platforms.make($$package.platforms, /* array */[])), React.createElement("div", {
+                        }, Vrroom.text($$package.version)), ReasonReact.element(/* None */0, /* None */0, Platforms.make($$package.platforms, /* array */[])), React.createElement("div", {
                           className: SearchResultItemStyles.description
-                        }, ReasonReact.element(/* None */0, /* None */0, Flags.make($$package, /* None */0, /* array */[])), Vrroom.Helpers[/* text */1]($$package.description))), React.createElement("div", undefined, React.createElement("div", undefined, React.createElement("span", {
+                        }, ReasonReact.element(/* None */0, /* None */0, Flags.make($$package, /* None */0, /* array */[])), Vrroom.text($$package.description))), React.createElement("div", undefined, React.createElement("div", undefined, React.createElement("span", {
                               className: SearchResultItemStyles.stars
-                            }, (match == null) ? Vrroom.Helpers[/* text */1]("-") : Vrroom.Helpers[/* text */1](match), ReasonReact.element(/* None */0, /* None */0, Icon.Star[/* make */0](/* Some */[SearchResultItemStyles.starIcon], /* array */[]))), ReasonReact.element(/* None */0, /* None */0, Score.make($$package, /* array */[]))), React.createElement("div", {
+                            }, (match == null) ? Vrroom.text("-") : Vrroom.text(match), ReasonReact.element(/* None */0, /* None */0, Icon.Star[/* make */0](/* Some */[SearchResultItemStyles.starIcon], /* array */[]))), ReasonReact.element(/* None */0, /* None */0, Score.make($$package, /* array */[]))), React.createElement("div", {
                           className: SearchResultItemStyles.updated
                         }, ReasonReact.element(/* None */0, /* None */0, TimeAgo.make($$package.updated, /* array */[])))));
     });

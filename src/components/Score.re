@@ -1,4 +1,4 @@
-open! Vrroom.Helpers;
+open! Vrroom;
 module Styles = ScoreStyles;
 
 let formatPercentage = number =>
@@ -8,7 +8,7 @@ let factor = (name, value) =>
   <div className=Styles.factor> <span>{name |> text}</span> <span> {value |> formatPercentage |> text} </span> </div>;
 
 let component = ReasonReact.statelessComponent("Score");
-let make = (~package, _children) => {
+let make = (~package, _:childless) => {
   ...component,
   render: _self =>
     <Tooltip content={

@@ -1,10 +1,9 @@
-open Vrroom.Helpers;
-module Control = Vrroom.Control;
+open Vrroom;
 module Styles = FlagsStyles;
 
 module Flag = {
   let component = ReasonReact.statelessComponent("Flag");
-  let make = (~label, ~style, ~invert, _children) => {
+  let make = (~label, ~style, ~invert, _:childless) => {
     ...component,
 
     render: (_self) =>
@@ -13,12 +12,12 @@ module Flag = {
 };
 
 let component = ReasonReact.statelessComponent("Flags");
-let make = (~package, ~invert=false, _children) => {
+let make = (~package, ~invert=false, _:childless) => {
   ...component,
 
   render: _self =>
     <span className=("flags" ++ Styles.flags)>
-      {package##_type == "unpublished" ? <Flag label="unpublished" style=`Black invert /> : null}
+      {package##_type == "unpublished" ? <Flag label="unpublished" style=`Black invert /> : nothing}
       <Control.Map items=package##flags>
         ...{flag => <Flag key=flag label=flag style=`Heavy invert />}
       </Control.Map>

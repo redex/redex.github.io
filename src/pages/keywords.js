@@ -37,12 +37,12 @@ function make(data, _) {
   newrecord[/* render */9] = (function () {
       return React.createElement("div", {
                   className: root
-                }, ReasonReact.element(/* None */0, /* None */0, Helmet.make(/* Some */[Config.titleTemplate("Keywords")], /* None */0, /* None */0, /* None */0, /* array */[])), React.createElement("h1", undefined, Vrroom.Helpers[/* text */1]("Keywords")), ReasonReact.element(/* None */0, /* None */0, Curry._3(Vrroom.Control[/* Map */0][/* make */1], data.keywords.group, /* None */0, (function (keyword) {
+                }, ReasonReact.element(/* None */0, /* None */0, Helmet.make(/* Some */[Config.titleTemplate("Keywords")], /* None */0, /* None */0, /* None */0, /* array */[])), React.createElement("h1", undefined, Vrroom.text("Keywords")), ReasonReact.element(/* None */0, /* None */0, Curry._3(Vrroom.Control[/* Map */0][/* make */1], data.keywords.group, /* None */0, (function (keyword) {
                             return React.createElement("div", {
                                         key: keyword.name
                                       }, React.createElement("h2", undefined, React.createElement("a", {
                                                 href: "/keyword/" + keyword.name
-                                              }, Vrroom.Helpers[/* text */1](keyword.name))), ReasonReact.element(/* None */0, /* None */0, Curry._3(Vrroom.Control[/* Map */0][/* make */1], Graphql.getNodes(keyword), /* None */0, (function ($$package) {
+                                              }, Vrroom.text(keyword.name))), ReasonReact.element(/* None */0, /* None */0, Curry._3(Vrroom.Control[/* Map */0][/* make */1], Graphql.getNodes(keyword), /* None */0, (function ($$package) {
                                                   return ReasonReact.element(/* Some */[$$package.id], /* None */0, PackageSummary.make($$package, /* array */[]));
                                                 }))));
                           }))));
@@ -88,9 +88,6 @@ var $$default = ReasonReact.wrapReasonForJs(component, (function (jsProps) {
 
 ;
 
-var Control = 0;
-
-exports.Control   = Control;
 exports.Styles    = Styles;
 exports.component = component;
 exports.make      = make;

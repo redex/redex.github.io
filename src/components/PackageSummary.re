@@ -1,9 +1,8 @@
-open Vrroom.Helpers;
-module Control = Vrroom.Control;
+open Vrroom;
 module Styles = PackageSummaryStyles;
 
 let component = ReasonReact.statelessComponent("PackageSummary");
-let make = (~package, _children) => {
+let make = (~package, _:childless) => {
 	...component,
 
 	render: _self =>

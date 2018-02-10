@@ -1,9 +1,8 @@
-open Vrroom.Helpers;
-module Control = Vrroom.Control;
+open Vrroom;
 module Styles = TopListStyles;
 
 let component = ReasonReact.statelessComponent("TopList");
-let make = (~packages, ~value, _children) => {
+let make = (~packages, ~value, _:childless) => {
   ...component,
   render: _self =>
     <Control.Map items=packages>

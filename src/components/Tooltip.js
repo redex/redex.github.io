@@ -4,6 +4,7 @@
 var Block         = require("bs-platform/lib/js/block.js");
 var Curry         = require("bs-platform/lib/js/curry.js");
 var React         = require("react");
+var Vrroom        = require("vrroom/src/Vrroom.bs.js");
 var ReasonReact   = require("reason-react/src/ReasonReact.js");
 var TooltipStyles = require("./TooltipStyles.js");
 
@@ -23,7 +24,7 @@ function make(content, child) {
                         }))
                 }, param[/* state */2] !== 0 ? React.createElement("div", {
                         className: TooltipStyles.tooltip
-                      }, content) : null, child);
+                      }, content) : Vrroom.nothing, child);
     });
   newrecord[/* initialState */10] = (function () {
       return /* false */0;

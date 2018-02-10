@@ -1,9 +1,8 @@
-open Vrroom.Helpers;
-module Control = Vrroom.Control;
+open Vrroom;
 module Styles = IndexStyles;
 
 let component = ReasonReact.statelessComponent("Index");
-let make = (~data, _children) => {
+let make = (~data, _:childless) => {
   ...component,
 
   render: _self =>

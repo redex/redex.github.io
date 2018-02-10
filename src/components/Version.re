@@ -1,8 +1,8 @@
-open Vrroom.Helpers;
+open Vrroom;
 module Styles = VersionStyles;
 
 let component = ReasonReact.statelessComponent("Version");
-let make = (~version, ~isPublished, _children) => {
+let make = (~version, ~isPublished, _:childless) => {
   ...component,
 
   render: _self =>

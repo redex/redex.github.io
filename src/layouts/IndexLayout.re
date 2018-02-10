@@ -1,8 +1,8 @@
-open! Vrroom.Helpers;
+open! Vrroom;
 module Styles = IndexLayoutStyles;
 
 let component = ReasonReact.statelessComponent("PageLayout");
-let make = (~children, _children) => {
+let make = (~children, _:childless) => {
   ...component,
 
   render: _self =>

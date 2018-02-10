@@ -50,9 +50,6 @@ var $$default = ReasonReact.wrapReasonForJs(component, (function (jsProps) {
 
 ;
 
-var Control = 0;
-
-exports.Control   = Control;
 exports.component = component;
 exports.make      = make;
 exports.$$default = $$default;

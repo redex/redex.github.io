@@ -1,7 +1,7 @@
-open! Vrroom.Helpers;
+open! Vrroom;
 
 let component = ReasonReact.statelessComponent("NotFoundPage");
-let make = _children => {
+let make = (_:childless) => {
   ...component,
   render: _self =>
     <div>

@@ -1,5 +1,4 @@
-open! Vrroom.Helpers;
-module Control = Vrroom.Control;
+open! Vrroom;
 
 let introduction = {|
   <em>
@@ -13,7 +12,7 @@ let introduction = {|
 |};
 
 let component = ReasonReact.statelessComponent("Packages");
-let make = (~data, _children) => {
+let make = (~data, _:childless) => {
   ...component,
 
   render: _self =>

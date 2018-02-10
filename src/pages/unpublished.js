@@ -50,11 +50,8 @@ var $$default = ReasonReact.wrapReasonForJs(component, (function (jsProps) {
 
 ;
 
-var Control = 0;
-
 var introduction = "\n  <em>\n  Unpublished packages are usually incomplete or experimental, often written just\n  to solve a specific need in the moment, then shared in the hopes that it'll be\n  of use to others. These packages are included in the index mostly to make it\n  easier to find a starting point or ideas for writing your own bindings and\n  libraries. They might very well be complete enough to solve your needs too,\n  however, since they've usually been written for a reason, to address a need.\n  </em>\n";
 
-exports.Control      = Control;
 exports.introduction = introduction;
 exports.component    = component;
 exports.make         = make;

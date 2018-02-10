@@ -190,13 +190,10 @@ function make($staropt$star, _) {
   return newrecord;
 }
 
-var Control = 0;
-
 var Styles = 0;
 
 var Config$1 = 0;
 
-exports.Control   = Control;
 exports.Styles    = Styles;
 exports.Config    = Config$1;
 exports.Key       = Key;

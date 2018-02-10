@@ -1,8 +1,7 @@
-open! Vrroom.Helpers;
-module Control = Vrroom.Control;
+open! Vrroom;
 
 let component = ReasonReact.statelessComponent("Category");
-let make = (~data, ~pathContext, _children) => {
+let make = (~data, ~pathContext, _:childless) => {
   ...component,
   render: _self =>
     <CollectionPage title=pathContext##category packages=(data##packages |> Graphql.getNodes) />

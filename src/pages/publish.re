@@ -1,4 +1,4 @@
-open! Vrroom.Helpers;
+open! Vrroom;
 
 let html = {|
   <h1>Getting Published</h1>
@@ -140,7 +140,7 @@ let style = Css.(merge([
 ]));
 
 let component = ReasonReact.statelessComponent("Publish");
-let make = _children => {
+let make = (_:childless) => {
   ...component,
 
   render: _self =>

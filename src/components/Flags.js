@@ -14,7 +14,7 @@ function make(label, style, invert, _) {
   newrecord[/* render */9] = (function () {
       return React.createElement("span", {
                   className: FlagsStyles.flag(style, invert)
-                }, Vrroom.Helpers[/* text */1](label));
+                }, Vrroom.text(label));
     });
   return newrecord;
 }
@@ -33,18 +33,15 @@ function make$1($$package, $staropt$star, _) {
       var match = +($$package.type === "unpublished");
       return React.createElement("span", {
                   className: "flags" + FlagsStyles.flags
-                }, match !== 0 ? ReasonReact.element(/* None */0, /* None */0, make("unpublished", /* Black */-937474657, invert, /* array */[])) : Vrroom.Helpers[/* null */4], ReasonReact.element(/* None */0, /* None */0, Curry._3(Vrroom.Control[/* Map */0][/* make */1], $$package.flags, /* None */0, (function (flag) {
+                }, match !== 0 ? ReasonReact.element(/* None */0, /* None */0, make("unpublished", /* Black */-937474657, invert, /* array */[])) : Vrroom.nothing, ReasonReact.element(/* None */0, /* None */0, Curry._3(Vrroom.Control[/* Map */0][/* make */1], $$package.flags, /* None */0, (function (flag) {
                             return ReasonReact.element(/* Some */[flag], /* None */0, make(flag, /* Heavy */937841383, invert, /* array */[]));
                           }))));
     });
   return newrecord;
 }
 
-var Control = 0;
-
 var Styles = 0;
 
-exports.Control   = Control;
 exports.Styles    = Styles;
 exports.Flag      = Flag;
 exports.component = component$1;

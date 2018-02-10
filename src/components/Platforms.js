@@ -5,14 +5,13 @@ var Icon            = require("../bindings/Icon.js");
 var React           = require("react");
 var Vrroom          = require("vrroom/src/Vrroom.bs.js");
 var Tooltip         = require("./Tooltip.js");
-var Fragment        = require("../bindings/react/Fragment.js");
 var ReasonReact     = require("reason-react/src/ReasonReact.js");
 var PlatformsStyles = require("./PlatformsStyles.js");
 
 function platform(icon, name, label) {
   return React.createElement("div", undefined, icon, React.createElement("a", {
                   href: "/platform/" + name
-                }, Vrroom.Helpers[/* text */1](label)));
+                }, Vrroom.text(label)));
 }
 
 function tooltip(platforms) {
@@ -22,7 +21,7 @@ function tooltip(platforms) {
   var match$3 = +platforms.includes("any");
   return React.createElement("div", {
               className: PlatformsStyles.tooltip
-            }, Vrroom.Helpers[/* text */1]("Platforms:"), match !== 0 ? platform(ReasonReact.element(/* None */0, /* None */0, Icon.Html5[/* make */1](/* int array */[])), "browser", "Browser") : Vrroom.Helpers[/* null */4], match$1 !== 0 ? platform(ReasonReact.element(/* None */0, /* None */0, Icon.Nodejs[/* make */1](/* int array */[])), "node", "Node.js") : Vrroom.Helpers[/* null */4], match$2 !== 0 ? platform(ReasonReact.element(/* None */0, /* None */0, Icon.Matrix[/* make */1](/* int array */[])), "native", "Native") : Vrroom.Helpers[/* null */4], match$3 !== 0 ? platform(ReasonReact.element(/* None */0, /* None */0, Icon.$$Infinity[/* make */1](/* int array */[])), "any", "Any") : Vrroom.Helpers[/* null */4]);
+            }, Vrroom.text("Platforms:"), match !== 0 ? platform(ReasonReact.element(/* None */0, /* None */0, Icon.Html5[/* make */1](/* int array */[])), "browser", "Browser") : Vrroom.nothing, match$1 !== 0 ? platform(ReasonReact.element(/* None */0, /* None */0, Icon.Nodejs[/* make */1](/* int array */[])), "node", "Node.js") : Vrroom.nothing, match$2 !== 0 ? platform(ReasonReact.element(/* None */0, /* None */0, Icon.Matrix[/* make */1](/* int array */[])), "native", "Native") : Vrroom.nothing, match$3 !== 0 ? platform(ReasonReact.element(/* None */0, /* None */0, Icon.$$Infinity[/* make */1](/* int array */[])), "any", "Any") : Vrroom.nothing);
 }
 
 var component = ReasonReact.statelessComponent("Platforms");
@@ -36,21 +35,18 @@ function make(platforms, _) {
       var match$3 = +platforms.includes("any");
       return React.createElement("div", {
                   className: "platforms " + PlatformsStyles.root
-                }, ReasonReact.element(/* None */0, /* None */0, Tooltip.make(tooltip(platforms), ReasonReact.element(/* None */0, /* None */0, Fragment.make(/* array */[
-                                  match !== 0 ? ReasonReact.element(/* None */0, /* None */0, Icon.Html5[/* make */1](/* int array */[])) : Vrroom.Helpers[/* null */4],
-                                  match$1 !== 0 ? ReasonReact.element(/* None */0, /* None */0, Icon.Nodejs[/* make */1](/* int array */[])) : Vrroom.Helpers[/* null */4],
-                                  match$2 !== 0 ? ReasonReact.element(/* None */0, /* None */0, Icon.Matrix[/* make */1](/* int array */[])) : Vrroom.Helpers[/* null */4],
-                                  match$3 !== 0 ? ReasonReact.element(/* None */0, /* None */0, Icon.$$Infinity[/* make */1](/* int array */[])) : Vrroom.Helpers[/* null */4]
+                }, ReasonReact.element(/* None */0, /* None */0, Tooltip.make(tooltip(platforms), ReasonReact.element(/* None */0, /* None */0, Vrroom.Fragment[/* make */0](/* array */[
+                                  match !== 0 ? ReasonReact.element(/* None */0, /* None */0, Icon.Html5[/* make */1](/* int array */[])) : Vrroom.nothing,
+                                  match$1 !== 0 ? ReasonReact.element(/* None */0, /* None */0, Icon.Nodejs[/* make */1](/* int array */[])) : Vrroom.nothing,
+                                  match$2 !== 0 ? ReasonReact.element(/* None */0, /* None */0, Icon.Matrix[/* make */1](/* int array */[])) : Vrroom.nothing,
+                                  match$3 !== 0 ? ReasonReact.element(/* None */0, /* None */0, Icon.$$Infinity[/* make */1](/* int array */[])) : Vrroom.nothing
                                 ])))));
     });
   return newrecord;
 }
 
-var Control = 0;
-
 var Styles = 0;
 
-exports.Control   = Control;
 exports.Styles    = Styles;
 exports.platform  = platform;
 exports.tooltip   = tooltip;

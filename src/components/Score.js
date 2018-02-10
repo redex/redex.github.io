@@ -15,7 +15,7 @@ function formatPercentage(number) {
 function factor(name, value) {
   return React.createElement("div", {
               className: ScoreStyles.factor
-            }, React.createElement("span", undefined, Vrroom.Helpers[/* text */1](name)), React.createElement("span", undefined, Vrroom.Helpers[/* text */1](formatPercentage(value))));
+            }, React.createElement("span", undefined, Vrroom.text(name)), React.createElement("span", undefined, Vrroom.text(formatPercentage(value))));
 }
 
 var component = ReasonReact.statelessComponent("Score");
@@ -27,7 +27,7 @@ function make($$package, _) {
                           className: ScoreStyles.tooltip
                         }, factor("Quality", $$package.quality), factor("Popularity", $$package.popularity), factor("Maintenance", $$package.maintenance)), React.createElement("span", {
                           className: ScoreStyles.root
-                        }, Vrroom.Helpers[/* text */1](formatPercentage($$package.score)), ReasonReact.element(/* None */0, /* None */0, Icon.Verified[/* make */0](/* Some */[ScoreStyles.icon], /* array */[])))));
+                        }, Vrroom.text(formatPercentage($$package.score)), ReasonReact.element(/* None */0, /* None */0, Icon.Verified[/* make */0](/* Some */[ScoreStyles.icon], /* array */[])))));
     });
   return newrecord;
 }

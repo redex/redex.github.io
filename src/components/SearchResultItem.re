@@ -1,5 +1,5 @@
 open Rebase;
-open! Vrroom.Helpers;
+open! Vrroom;
 
 module Styles = SearchResultItemStyles;
 
@@ -39,7 +39,7 @@ let decode = json =>
 	});
 
 let component = ReasonReact.statelessComponent("SearchResultItem");
-let make = (~package, ~isFocused, ~onClick, _children) => {
+let make = (~package, ~isFocused, ~onClick, _:childless) => {
 	...component,
 
 	render: _self =>

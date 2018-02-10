@@ -1,6 +1,5 @@
 open! Rebase;
-open! Vrroom.Helpers;
-module Control = Vrroom.Control;
+open! Vrroom;
 module Styles = SearchBoxStyles;
 module Config = Config.Search;
 
@@ -28,7 +27,7 @@ type action =
 ;
 
 let component = ReasonReact.reducerComponent("PackageSearchBox");
-let make = (~focusOnMount=false, _children) => {
+let make = (~focusOnMount=false, _:childless) => {
   ...component,
 
   initialState: () => {

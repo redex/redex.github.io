@@ -40,9 +40,9 @@ function make(children, _) {
                           className: CommonStyles.widthContainer
                         }, React.createElement("span", {
                               className: "left"
-                            }), ReasonReact.element(/* None */0, /* None */0, Link.make("/all", /* None */0, /* None */0, /* array */[Vrroom.Helpers[/* text */1]("All")])), ReasonReact.element(/* None */0, /* None */0, Link.make("/category/binding", /* None */0, /* None */0, /* array */[Vrroom.Helpers[/* text */1]("Bindings")])), ReasonReact.element(/* None */0, /* None */0, Link.make("/category/library", /* None */0, /* None */0, /* array */[Vrroom.Helpers[/* text */1]("Libraries")])), ReasonReact.element(/* None */0, /* None */0, Link.make("/category/tool", /* None */0, /* None */0, /* array */[Vrroom.Helpers[/* text */1]("Tools")])), ReasonReact.element(/* None */0, /* None */0, Link.make("/category/boilerplate", /* None */0, /* None */0, /* array */[Vrroom.Helpers[/* text */1]("Boilerplate")])), React.createElement("span", {
+                            }), ReasonReact.element(/* None */0, /* None */0, Link.make("/all", /* None */0, /* None */0, /* array */[Vrroom.text("All")])), ReasonReact.element(/* None */0, /* None */0, Link.make("/category/binding", /* None */0, /* None */0, /* array */[Vrroom.text("Bindings")])), ReasonReact.element(/* None */0, /* None */0, Link.make("/category/library", /* None */0, /* None */0, /* array */[Vrroom.text("Libraries")])), ReasonReact.element(/* None */0, /* None */0, Link.make("/category/tool", /* None */0, /* None */0, /* array */[Vrroom.text("Tools")])), ReasonReact.element(/* None */0, /* None */0, Link.make("/category/boilerplate", /* None */0, /* None */0, /* array */[Vrroom.text("Boilerplate")])), React.createElement("span", {
                               className: "right"
-                            }, ReasonReact.element(/* None */0, /* None */0, Link.make("/publish", /* Some */[FrontPageLayoutStyles.publishLink], /* None */0, /* array */[Vrroom.Helpers[/* text */1]("Get Published")]))))), React.createElement("div", {
+                            }, ReasonReact.element(/* None */0, /* None */0, Link.make("/publish", /* Some */[FrontPageLayoutStyles.publishLink], /* None */0, /* array */[Vrroom.text("Get Published")]))))), React.createElement("div", {
                       className: FrontPageLayoutStyles.header
                     }, React.createElement("div", {
                           className: CommonStyles.widthContainer
@@ -54,7 +54,7 @@ function make(children, _) {
                                       href: "/logo.svg#logo",
                                       xlinkHref: "/logo.svg#logo",
                                       xmlnsXlink: "http://www.w3.org/1999/xlink"
-                                    })), React.createElement("em", undefined, Vrroom.Helpers[/* text */1]("re")), Vrroom.Helpers[/* text */1]("ason package in"), React.createElement("em", undefined, Vrroom.Helpers[/* text */1]("dex"))))), React.createElement("div", {
+                                    })), React.createElement("em", undefined, Vrroom.text("re")), Vrroom.text("ason package in"), React.createElement("em", undefined, Vrroom.text("dex"))))), React.createElement("div", {
                       className: CommonStyles.widthContainer
                     }, Curry._1(children, /* () */0)), ReasonReact.element(/* None */0, /* None */0, Footer.make(/* Front */431720585, /* array */[])));
     });

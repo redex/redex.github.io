@@ -1,4 +1,4 @@
-open! Vrroom.Helpers;
+open! Vrroom;
 
 
 module Tag = {
@@ -25,7 +25,7 @@ module Tag = {
   };
 
   let component = ReasonReact.statelessComponent("Tag");
-  let make = (~name, ~url, ~customStyle="", _children) => {
+  let make = (~name, ~url, ~customStyle="", _:childless) => {
     ...component,
 
     render: _self =>
@@ -37,7 +37,7 @@ module Tag = {
 
 module Keyword = {
   let component = ReasonReact.statelessComponent("Tag");
-  let make = (~name, _children) => {
+  let make = (~name, _:childless) => {
     ...component,
 
     render: _self =>
@@ -55,7 +55,7 @@ module Category = {
   };
 
   let component = ReasonReact.statelessComponent("Tag");
-  let make = (~name, _children) => {
+  let make = (~name, _:childless) => {
     ...component,
 
     render: _self =>

@@ -56,7 +56,7 @@ function make(name, url, $staropt$star, _) {
   var customStyle = $staropt$star ? $staropt$star[0] : "";
   var newrecord = component.slice();
   newrecord[/* render */9] = (function () {
-      return ReasonReact.element(/* None */0, /* None */0, Link.make(url, /* Some */[style + (" " + customStyle)], /* None */0, /* array */[Vrroom.Helpers[/* text */1](name)]));
+      return ReasonReact.element(/* None */0, /* None */0, Link.make(url, /* Some */[style + (" " + customStyle)], /* None */0, /* array */[Vrroom.text(name)]));
     });
   return newrecord;
 }

@@ -1,8 +1,7 @@
-open Vrroom.Helpers;
-module Control = Vrroom.Control;
+open Vrroom;
 
 let component = ReasonReact.statelessComponent("CollectionPage");
-let make = (~title, ~packages, _children) => {
+let make = (~title, ~packages, _:childless) => {
   ...component,
   render: _self =>
     <div>

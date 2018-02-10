@@ -1,4 +1,4 @@
-open! Vrroom.Helpers;
+open! Vrroom;
 module Styles = FrontPageLayoutStyles;
 
 type state = {
@@ -6,7 +6,7 @@ type state = {
 };
 
 let component = ReasonReact.reducerComponent("FrontPageLayout");
-let make = (~children: unit => ReasonReact.reactElement, _children) => {
+let make = (~children: unit => ReasonReact.reactElement, _:childless) => {
   ...component,
 
   initialState: () => {
