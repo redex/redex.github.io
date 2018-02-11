@@ -3,7 +3,7 @@ module Styles = IndexStyles;
 
 let sort = groups => {
   let copy = groups |> Js.Array.copy;
-  copy |> Array.stable_sort((a, b) => a##count - b##count);
+  copy |> Array.stable_sort((a, b) => b##count - a##count);
   copy
 };
 

@@ -16,7 +16,7 @@ var ReasonReact = require("reason-react/src/ReasonReact.js");
 function sort(groups) {
   var copy = groups.slice();
   $$Array.stable_sort((function (a, b) {
-          return a.count - b.count | 0;
+          return b.count - a.count | 0;
         }), copy);
   return copy;
 }
