@@ -6,6 +6,7 @@ module.exports = {
     "Keywords.packages": "Packages"
   },
   plugins: [
+    'gatsby-plugin-react-next',
     `gatsby-plugin-react-helmet`,
     'gatsby-plugin-glamor',
     {
