@@ -1,6 +1,12 @@
 open Vrroom;
 module Styles = IndexStyles;
 
+let sort = groups => {
+  let copy = groups |> Js.Array.copy;
+  copy |> Array.stable_sort((a, b) => a##count - b##count);
+  copy
+};
+
 let component = ReasonReact.statelessComponent("Index");
 let make = (~data, _:childless) => {
   ...component,
@@ -11,7 +17,7 @@ let make = (~data, _:childless) => {
       <SearchBox focusOnMount=true />
 
       <div className=Styles.keywords>
-        <Control.Map items=(data##keywords##group |> Js.Array.sortInPlaceWith((a, b) => b##count - a##count))>
+        <Control.Map items=(data##keywords##group |> sort)>
           ...(keyword =>
             <Link key=keyword##name to_=("/keyword/" ++ keyword##name)>
               <span className="label"> {keyword##name |> text} </span>

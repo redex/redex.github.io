@@ -2,6 +2,7 @@
 'use strict';
 
 var Link        = require("../bindings/gatsby/link.js");
+var $$Array     = require("bs-platform/lib/js/array.js");
 var Curry       = require("bs-platform/lib/js/curry.js");
 var React       = require("react");
 var Vrroom      = require("vrroom/src/Vrroom.bs.js");
@@ -12,6 +13,14 @@ var Pervasives  = require("bs-platform/lib/js/pervasives.js");
 var IndexStyles = require("../styles/IndexStyles.js");
 var ReasonReact = require("reason-react/src/ReasonReact.js");
 
+function sort(groups) {
+  var copy = groups.slice();
+  $$Array.stable_sort((function (a, b) {
+          return a.count - b.count | 0;
+        }), copy);
+  return copy;
+}
+
 var component = ReasonReact.statelessComponent("Index");
 
 function make(data, _) {
@@ -21,9 +30,7 @@ function make(data, _) {
                   className: IndexStyles.root
                 }, ReasonReact.element(/* None */0, /* None */0, SearchBox.make(/* Some */[/* true */1], /* array */[])), React.createElement("div", {
                       className: IndexStyles.keywords
-                    }, ReasonReact.element(/* None */0, /* None */0, Curry._3(Vrroom.Control[/* Map */0][/* make */1], data.keywords.group.sort((function (a, b) {
-                                    return b.count - a.count | 0;
-                                  })), /* None */0, (function (keyword) {
+                    }, ReasonReact.element(/* None */0, /* None */0, Curry._3(Vrroom.Control[/* Map */0][/* make */1], sort(data.keywords.group), /* None */0, (function (keyword) {
                                 return ReasonReact.element(/* Some */[keyword.name], /* None */0, Link.make("/keyword/" + keyword.name, /* None */0, /* None */0, /* array */[
                                                 React.createElement("span", {
                                                       className: "label"
@@ -87,6 +94,7 @@ var $$default = ReasonReact.wrapReasonForJs(component, (function (jsProps) {
 var Styles = 0;
 
 exports.Styles    = Styles;
+exports.sort      = sort;
 exports.component = component;
 exports.make      = make;
 exports.$$default = $$default;
