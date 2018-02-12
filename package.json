@@ -41,10 +41,11 @@
     "develop": "gatsby develop",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js'",
     "test": "validate_sources",
-    "deploy": "gatsby build && update_search_index && gh-pages -d public -b master",
     "clean": "rm -rf data/generated",
     "update-sources": "git submodule update --remote && validate_sources",
     "fetch": "npm run clean && npm run update-sources && fetch_published && fetch_unpublished",
+		"update-search-index": "NODE_ENV=production update_search_index",
+    "deploy": "npm run build && npm run update-search-index && gh-pages -d public -b master",
     "everything": "npm run fetch && npm run deploy"
   },
   "devDependencies": {
