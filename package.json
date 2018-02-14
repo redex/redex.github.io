@@ -25,6 +25,7 @@
     "react-timeago": "^3.4.3",
     "remark": "^8.0.0",
     "remark-html": "^7.0.0",
+    "typed-glamor": "github:glennsl/bs-typed-css",
     "vrroom": "github:glennsl/vrroom"
   },
   "keywords": [
