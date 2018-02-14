@@ -272,3 +272,11 @@ exports.createPages = async ({ graphql, boundActionCreators: { createPage, creat
     })
   }
 }
+
+exports.modifyWebpackConfig = ({ config }) => {
+  config.loader("js", {
+    exclude: [/(node_modules|bower_components|bs-typed-css)/],
+  });
+
+  return config;
+};
