@@ -39,7 +39,6 @@
     "bsb": "bsb -make-world -w",
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js'",
     "test": "validate_sources",
     "clean": "rm -rf data/generated",
     "update-sources": "git submodule update --remote && validate_sources",
