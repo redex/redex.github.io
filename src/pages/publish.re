@@ -130,9 +130,9 @@ let html = {|
 
 let style = TypedGlamor.(css(~extend=CommonStyles.html, [
   backgroundColor(Theme.Panel.Color.background),
-  padding2(em(2.), em(4.)),
+  padding2(~v=em(2.), ~h=em(4.)),
   select("@media (max-width: 900px)", [
-    padding2(em(1.), em(2.))
+    padding2(~v=em(1.), ~h=em(2.))
   ])
 ]));
 

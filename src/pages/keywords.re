@@ -2,14 +2,14 @@ open! Rebase;
 open Vrroom;
 
 module Styles = {
-  open! Css;
+  open TypedGlamor;
 
-  let root = style([
-    selector("& h2 > a", [
-      textDecorationLine(None),
+  let root = css([
+    select("& h2 > a", [
+      textDecoration(none),
 
       hover([
-        textDecorationLine(Values([Underline]))
+        textDecoration(underline)
       ])
     ])
   ]);
@@ -20,7 +20,7 @@ let make = (~data, _:childless) => {
   ...component,
 
   render: _self =>
-    <div className =Styles.root>
+    <div className=(Styles.root |> TypedGlamor.toString)>
       <Helmet title=Config.titleTemplate("Keywords") />
 
       <h1> {"Keywords" |> text} </h1>

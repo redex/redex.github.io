@@ -8,7 +8,7 @@
     "dir": "src",
     "subdirs": true
   }],
-  "bs-dependencies": ["reason-react", "bs-css", "@glennsl/rebase", "vrroom", "@glennsl/bs-json", "typed-glamor"],
+  "bs-dependencies": ["reason-react", "@glennsl/rebase", "vrroom", "@glennsl/bs-json", "typed-glamor"],
   "reason": {"react-jsx": 2},
   "refmt": 3,
   "bsc-flags": ["-bs-super-errors"]

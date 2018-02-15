@@ -46,10 +46,10 @@ module Keyword = {
 
 module Category = {
   let customStyle = {
-    open! Css;
+    open TypedGlamor;
     
-    style([
-      border(px(1), Solid, currentColor),
+    css([
+      border3(px(1), solid, currentColor),
     ])
   };
 
@@ -58,6 +58,6 @@ module Category = {
     ...component,
 
     render: _self =>
-      <Tag name url=("/category/" ++ name) customStyle />
+      <Tag name url=("/category/" ++ name) customStyle=(customStyle |> TypedGlamor.toString) />
   }
 };
