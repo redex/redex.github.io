@@ -12,11 +12,11 @@ let make = (~data, _:childless) => {
   ...component,
 
   render: _self =>
-    <div className=Styles.root>
+    <div className=(Styles.root |> TypedGlamor.toString)>
 
       <SearchBox focusOnMount=true />
 
-      <div className=Styles.keywords>
+      <div className=(Styles.keywords |> TypedGlamor.toString)>
         <Control.Map items=(data##keywords##group |> sort)>
           ...(keyword =>
             <Link key=keyword##name to_=("/keyword/" ++ keyword##name)>
@@ -27,7 +27,7 @@ let make = (~data, _:childless) => {
         </Control.Map>
       </div>
 
-      <div className=Styles.lists>
+      <div className=(Styles.lists |> TypedGlamor.toString)>
 
         <div>
           <h2> {"Recent releases" |> text} </h2>

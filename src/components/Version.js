@@ -5,6 +5,7 @@ var React = require("react");
 var Vrroom = require("vrroom/src/Vrroom.bs.js");
 var Tooltip = require("./Tooltip.js");
 var ReasonReact = require("reason-react/src/ReasonReact.js");
+var TypedGlamor = require("typed-glamor/src/TypedGlamor.bs.js");
 var VersionStyles = require("./VersionStyles.js");
 
 var component = ReasonReact.statelessComponent("Version");
@@ -13,9 +14,9 @@ function make(version, isPublished, _) {
   var newrecord = component.slice();
   newrecord[/* render */9] = (function () {
       return React.createElement("div", {
-                  className: "version " + VersionStyles.root(isPublished)
+                  className: "version " + TypedGlamor.toString(VersionStyles.root(isPublished))
                 }, isPublished ? Vrroom.text(version) : ReasonReact.element(/* None */0, /* None */0, Tooltip.make(React.createElement("div", {
-                                className: VersionStyles.tooltip
+                                className: TypedGlamor.toString(VersionStyles.tooltip)
                               }, Vrroom.text("Unpublished")), Vrroom.text(version))));
     });
   return newrecord;

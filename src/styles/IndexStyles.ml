@@ -1,68 +1,68 @@
-open! Css
+open TypedGlamor
 
-let root = style [
+let root = css [
   margin (em 1.45);
 ]
 
-let keywords = style [
+let keywords = css [
   label "keywords";
 
-  textAlign Center;
+  textAlign center;
   marginTop (em 3.);
   lineHeight (em 1.5);
 
-  selector "& > a" [
-    display InlineBlock;
-    textDecorationLine None;
-    unsafe "margin" "0 1ex";
-    unsafe "whiteSpace" "nowrap";
+  select "& > a" [
+    display inlineBlock;
+    textDecoration none;
+    margin2 ~v:zero ~h:(ex 1.);
+    whiteSpace nowrap;
 
-    selector "& > .count" [
-      unsafe "marginLeft" ".5ex";
+    select "& > .count" [
+      marginLeft (ex 0.5);
       opacity 0.5;
     ];
 
-    selector "&:hover > .label" [
-      textDecorationLine (Values [Underline])
+    select "&:hover > .label" [
+      textDecoration underline
     ];
   ];
 ]
 
-let lists = style [
+let lists = css [
   label "lists";
 
-  display Flex;
-  justifyContent SpaceAround;
+  display flex;
+  justifyContent spaceAround;
   marginTop (em 3.);
 
-  selector "& > *" [
-    unsafe "padding" "0 1em";
+  select "& > *" [
+    padding2 ~v:zero ~h:(em 1.);
     width (pct 40.);
     minWidth (px 300);
 
-    selector "& > h2" [
-      textAlign Center;
+    select "& > h2" [
+      textAlign center;
       fontSize (em 1.1);
-      fontWeight Bold;
-      unsafe "margin" ".5em 0";
-      textTransform Lowercase;
-      unsafe "fontVariant" "small-caps";
+      fontWeight bold;
+      margin2 ~v:(em 0.5) ~h:zero;
+      textTransform lowercase;
+      fontVariant smallCaps;
       paddingBottom (em 0.5);
-      borderBottom (px 1) Solid (rgba 255 255 255 0.5);
+      borderBottom3 (px 1) solid (rgba 255 255 255 0.5);
     ];
 
-    selector "& > div" [
-      background None;
-      unsafe "border" "none";
+    select "& > div" [
+      background none;
+      border none;
       padding zero;
     ];
   ];
 
-  media "(max-width: 600px)" [
-    flexDirection Column;
-    alignItems Center;
+  select "@media (max-width: 600px)" [
+    flexDirection column;
+    alignItems center;
 
-    selector "& > *" [
+    select "& > *" [
       width (pct 100.);
       maxWidth (px 450);
     ]

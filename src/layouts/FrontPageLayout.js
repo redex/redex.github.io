@@ -10,6 +10,7 @@ var Footer = require("../components/Footer.js");
 var Helmet = require("../bindings/gatsby/helmet.js");
 var Vrroom = require("vrroom/src/Vrroom.bs.js");
 var ReasonReact = require("reason-react/src/ReasonReact.js");
+var TypedGlamor = require("typed-glamor/src/TypedGlamor.bs.js");
 var CommonStyles = require("../styles/CommonStyles.js");
 var FrontPageLayoutStyles = require("./FrontPageLayoutStyles.js");
 
@@ -20,7 +21,7 @@ function make(children, _) {
   newrecord[/* render */9] = (function (param) {
       var send = param[/* send */4];
       return React.createElement("div", {
-                  className: FrontPageLayoutStyles.root
+                  className: TypedGlamor.toString(FrontPageLayoutStyles.root)
                 }, ReasonReact.element(/* None */0, /* None */0, Helmet.make(/* Some */["redex | Reason Package Index"], /* None */0, /* None */0, /* None */0, /* array */[
                           React.createElement("html", {
                                 lang: "en"
@@ -30,32 +31,32 @@ function make(children, _) {
                                 name: "description"
                               })
                         ])), React.createElement("nav", {
-                      className: FrontPageLayoutStyles.topNav(param[/* state */2][/* showBurgerMenu */0])
+                      className: TypedGlamor.toString(FrontPageLayoutStyles.topNav(param[/* state */2][/* showBurgerMenu */0]))
                     }, React.createElement("button", {
-                          className: FrontPageLayoutStyles.burger,
+                          className: TypedGlamor.toString(FrontPageLayoutStyles.burger),
                           onClick: (function () {
                               return Curry._1(send, /* ToggleBurgerMenu */-710484024);
                             })
                         }, ReasonReact.element(/* None */0, /* None */0, Icon.Menu[/* make */0](/* None */0, /* array */[]))), React.createElement("div", {
-                          className: CommonStyles.widthContainer
+                          className: TypedGlamor.toString(CommonStyles.widthContainer)
                         }, React.createElement("span", {
                               className: "left"
                             }), ReasonReact.element(/* None */0, /* None */0, Link.make("/all", /* None */0, /* None */0, /* array */[Vrroom.text("All")])), ReasonReact.element(/* None */0, /* None */0, Link.make("/category/binding", /* None */0, /* None */0, /* array */[Vrroom.text("Bindings")])), ReasonReact.element(/* None */0, /* None */0, Link.make("/category/library", /* None */0, /* None */0, /* array */[Vrroom.text("Libraries")])), ReasonReact.element(/* None */0, /* None */0, Link.make("/category/tool", /* None */0, /* None */0, /* array */[Vrroom.text("Tools")])), ReasonReact.element(/* None */0, /* None */0, Link.make("/category/boilerplate", /* None */0, /* None */0, /* array */[Vrroom.text("Boilerplate")])), React.createElement("span", {
                               className: "right"
-                            }, ReasonReact.element(/* None */0, /* None */0, Link.make("/publish", /* Some */[FrontPageLayoutStyles.publishLink], /* None */0, /* array */[Vrroom.text("Get Published")]))))), React.createElement("div", {
-                      className: FrontPageLayoutStyles.header
+                            }, ReasonReact.element(/* None */0, /* None */0, Link.make("/publish", /* Some */[TypedGlamor.toString(FrontPageLayoutStyles.publishLink)], /* None */0, /* array */[Vrroom.text("Get Published")]))))), React.createElement("div", {
+                      className: TypedGlamor.toString(FrontPageLayoutStyles.header)
                     }, React.createElement("div", {
-                          className: CommonStyles.widthContainer
+                          className: TypedGlamor.toString(CommonStyles.widthContainer)
                         }, React.createElement("h1", {
-                              className: FrontPageLayoutStyles.title
+                              className: TypedGlamor.toString(FrontPageLayoutStyles.title)
                             }, React.createElement("svg", {
-                                  className: FrontPageLayoutStyles.logo
+                                  className: TypedGlamor.toString(FrontPageLayoutStyles.logo)
                                 }, React.createElement("use", {
                                       href: "/logo.svg#logo",
                                       xlinkHref: "/logo.svg#logo",
                                       xmlnsXlink: "http://www.w3.org/1999/xlink"
                                     })), React.createElement("em", undefined, Vrroom.text("re")), Vrroom.text("ason package in"), React.createElement("em", undefined, Vrroom.text("dex"))))), React.createElement("div", {
-                      className: CommonStyles.widthContainer
+                      className: TypedGlamor.toString(CommonStyles.widthContainer)
                     }, Curry._1(children, /* () */0)), ReasonReact.element(/* None */0, /* None */0, Footer.make(/* Front */431720585, /* array */[])));
     });
   newrecord[/* initialState */10] = (function () {

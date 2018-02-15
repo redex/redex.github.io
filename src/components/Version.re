@@ -6,12 +6,12 @@ let make = (~version, ~isPublished, _:childless) => {
   ...component,
 
   render: _self =>
-    <div className=("version " ++ Styles.root(isPublished))>
+    <div className=("version " ++ (Styles.root(isPublished) |> TypedGlamor.toString))>
       {
         if (isPublished) {
           {version |> text}
         } else {
-          <Tooltip content=(<div className=Styles.tooltip> {"Unpublished" |> text} </div>)>
+          <Tooltip content=(<div className=(Styles.tooltip |> TypedGlamor.toString)> {"Unpublished" |> text} </div>)>
             ...(version |> text)
           </Tooltip>
         }

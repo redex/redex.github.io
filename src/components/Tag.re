@@ -1,25 +1,24 @@
 open! Vrroom;
 
-
 module Tag = {
   let style = {
-    open! Css;
+    open TypedGlamor;
     
-    style([
-      display(InlineBlock),
+    css([
+      display(inlineBlock),
       opacity(0.75),
       fontSize(em(0.75)),
       lineHeight(em(1.6)),
       marginLeft(em(0.5)),
-      unsafe("whiteSpace", "nowrap"),
-      backgroundColor(hex("fff3")),
-      unsafe("padding", "0 1ex"),
-      textDecorationLine(None),
+      whiteSpace(nowrap),
+      backgroundColor(hex(0xfff3)),
+      padding2(~v=zero, ~h=ex(1.)),
+      textDecoration(none),
       borderRadius(ex(0.5)),
 
       hover([
         opacity(1.),
-        textDecorationLine(Values([Underline])),
+        textDecoration(underline),
       ])
     ])
   };
@@ -29,7 +28,7 @@ module Tag = {
     ...component,
 
     render: _self =>
-      <Link to_=url className=(style ++ " " ++ customStyle)>
+      <Link to_=url className=((style |> TypedGlamor.toString) ++ " " ++ customStyle)>
         {name |> text}
       </Link>
   }

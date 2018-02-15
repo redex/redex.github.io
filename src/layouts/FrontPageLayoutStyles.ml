@@ -1,67 +1,67 @@
-open! Css
+open TypedGlamor
 
-let root = style [
-  display Flex;
-  flexDirection Column;
+let root = css [
+  display flex;
+  flexDirection column;
   backgroundColor Theme.Inverted.Color.background;
   minHeight (vh 100.);
   color Theme.Inverted.Color.text;
 ]
 
-let topNav showWhenBurger = style [
+let topNav showWhenBurger = css [
   label "topNav";
 
-  selector "& > div" [ (* selects width container *)
-    display Flex;
-    textAlign Center;
-    unsafe "padding" "0.5em 1.45em";
+  select "& > div" [ (* selects width container *)
+    display flex;
+    textAlign center;
+    padding2 ~v:(em 0.5) ~h:(em 1.45);
 
-    selector "& > .left" [
-      flex 1;
+    select "& > .left" [
+      flex_ (int 1);
     ];
 
-    selector "& > .right" [
-      flex 1;
-      textAlign Right;
+    select "& > .right" [
+      flex_ (int 1);
+      textAlign right;
     ];
 
-    selector "& a" [
-      unsafe "fontVariant" "small-caps";
-      textDecorationLine None;
-      textTransform Lowercase;
-      unsafe "margin" "0 1em";
+    select "& a" [
+      fontVariant smallCaps;
+      textDecoration none;
+      textTransform lowercase;
+      margin2 ~v:zero ~h:(em 1.);
       opacity 0.75;
 
-      selector "&:hover" [
+      select "&:hover" [
         opacity 1.;
       ];
     ];
 
-    media "(max-width: 600px)" [
+    select "@media (max-width: 600px)" [
       if showWhenBurger then
-        transform (translateY zero)
+        transforms [translateY zero]
       else
-        transform (translateY (pct (-100.)));
+        transforms [translateY (pct (-100.))];
 
-      position Absolute;
-      zIndex 150;
+      position absolute;
+      zIndex (int 150);
       paddingRight (em 3.5);
-      transition ~duration:250 "transform";
+      transitions [(AnimatableProperty.transform, ms 250, easeInOut, ms 0)];
 
-      flexDirection Column;
+      flexDirection column;
       backgroundColor Theme.Color.darkPrimary;
 
-      selector "& > .left" [
-        display None;
+      select "& > .left" [
+        display none;
       ];
 
-      selector "& > *" [
-        textAlign Right;
+      select "& > *" [
+        textAlign right;
         fontSize (em 1.25);
         lineHeight (em 1.5);
       ];
 
-      selector "& > .right" [
+      select "& > .right" [
         marginTop (em 0.75);
         marginBottom (em 0.75);
       ];
@@ -69,65 +69,65 @@ let topNav showWhenBurger = style [
   ];
 ]
 
-let burger = style [
-  position Absolute;
-  right zero;
-  zIndex 200;
-  display None;
-  unsafe "padding" ".5em .75em";
+let burger = css [
+  position absolute;
+  offsetRight zero;
+  zIndex (int 200);
+  display none;
+  padding2 ~v:(em 0.5) ~h:(em 0.7);
   fontSize (em 1.5);
 
-  media "(max-width: 600px)" [
-    display Block;
+  select "@media (max-width: 600px)" [
+    display block;
   ]
 ]
 
-let inactiveLink = style [
-  opacity 0.25 |> important;
-  cursor (Custom "default");
+let inactiveLink = css [
+  unsafe "opacity" "0.25 !important";
+  cursor default;
 ]
 
-let publishLink = style [
-  flex 1;
+let publishLink = css [
+  flex_ (int 1);
   fontSize (em 0.85);
-  unsafe "whiteSpace" "nowrap";
-  outline (px 1) Solid Theme.Inverted.Color.text;
-  unsafe "padding" ".5ex 1.5ex";
+  whiteSpace nowrap;
+  outline3 (px 1) solid Theme.Inverted.Color.text;
+  padding2 ~v:(ex 0.5) ~h:(ex 1.5);
 
-  selector "&:hover" [
-    outline (px 1) Solid Theme.Inverted.Color.text;
+  hover [
+    outline3 (px 1) solid Theme.Inverted.Color.text;
   ];
 ]
 
-let header = style [
+let header = css [
   margin (em 1.45);
 ]
 
-let title = style [
-  unsafe "margin" "1em 0 0";
-  textAlign Center;
-  unsafe "fontVariant" "small-caps";
+let title = css [
+  margin3 ~top:(em 1.) ~h:zero ~bottom:zero;
+  textAlign center;
+  fontVariant smallCaps;
   fontSize (rem 2.5);
   lineHeight (em 1.1);
-  color (hex "fff6");
+  color (hex 0xfff6);
 
-  selector "& > em" [
-    fontStyle Normal;
+  select "& > em" [
+    fontStyle normal;
     color white;
   ];
 
-  media "(max-width: 600px)" [
+  select "@media (max-width: 600px)" [
     fontSize (rem 2.);
   ];
 
- media "(max-width: 450px)" [
+  select "@media (max-width: 450px)" [
     fontSize (rem 1.5);
   ];
 ]
 
-let logo = style [
-  display Block;
-  unsafe "margin" "0 auto";
+let logo = css [
+  display block;
+  margin2 ~v:zero ~h:auto;
   height (em 3.);
   unsafe "fill" (Theme.Inverted.Color.text |> Obj.magic);
 ]

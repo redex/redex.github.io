@@ -1,45 +1,45 @@
-open Css
+open TypedGlamor
 
-let root = style [
-  position Relative;
+let root = css [
+  position relative;
   fontSize (em 0.85);
-  unsafe "whiteSpace" "nowrap";
-  unsafe "cursor" "help";
+  whiteSpace nowrap;
+  cursor help;
 
-  selector "& > .popover" [
-    display Block;
-    position Absolute;
-    bottom (pct 100.);
-    zIndex 10;
+  select "& > .popover" [
+    display block;
+    position absolute;
+    offsetBottom (pct 100.);
+    zIndex (int 10);
     backgroundColor white;
-    boxShadow (shadow ~x:1 ~y:1 (rgba 0 0 0 0.1))
+    boxShadows [shadow ~x:(px 1) ~y:(px 1) (rgba 0 0 0 0.1)]
   ];
 
-  selector"&:hover > .popover" [
-    display Block;
+  select "&:hover > .popover" [
+    display block;
   ];
 ]
 
-let icon = style [
+let icon = css [
   marginLeft (em 0.25);
-  transform (translateY (px (-1)));
+  transforms [translateY (px (-1))];
 ]
 
-let tooltip = style [
+let tooltip = css [
   backgroundColor white;
-  boxShadow (shadow ~x:1 ~y:1 ~spread:1 ~blur:3 (rgba 0 0 0 0.1));
-  unsafe "padding" ".5em 1em";
+  boxShadows [(shadow ~x:(px 1) ~y:(px 1) ~spread:(px 1) ~blur:(px 3) (rgba 0 0 0 0.1))];
+  padding2 ~v:(em 0.5) ~h:(em 1.);
 
-  selector "& div" [
-    unsafe "whiteSpace" "nowrap";
+  select "& div" [
+    whiteSpace nowrap;
   ]
 ]
 
-let factor = style [
-  display Flex;
-  justifyContent SpaceBetween;
+let factor = css [
+  display flex;
+  justifyContent spaceBetween;
 
-  selector "& > span:last-child" [
+  select "& > span:last-child" [
     marginLeft (em 1.);
   ]
 ]

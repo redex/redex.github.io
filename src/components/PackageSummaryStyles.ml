@@ -1,14 +1,14 @@
-open! Css
+open TypedGlamor
 
-let root = fun ~isFlagged -> style [
-  unsafe "padding" ".75em 1.5em";
+let root = fun ~isFlagged -> css [
+  padding2 ~v:(em 0.75) ~h:(em 1.5);
   marginBottom (em 0.5);
   lineHeight (em 1.45);
 
-  if isFlagged then selector "&" [
+  if isFlagged then select "&" [
     opacity 0.5;
-  ] else  selector "&" [
-    boxShadow Theme.Shadow.panel;
+  ] else  select "&" [
+    boxShadows [Theme.Shadow.panel];
     backgroundColor Theme.Panel.Color.background;
   ];
 
@@ -16,105 +16,105 @@ let root = fun ~isFlagged -> style [
     opacity 1.;
   ];
 
-  media "(max-width: 600px)" [
-    selector "& .version" [
-      display None;
+  select "@media (max-width: 600px)" [
+    select "& .version" [
+      display none;
     ];
 
-    selector "& .platforms" [
-      display None;
+    select "& .platforms" [
+      display none;
     ];
   ];
 ]
 
-let header = style [
-  display Flex;
-  alignItems Baseline;
+let header = css [
+  display flex;
+  alignItems baseline;
 ]
 
-let name = style [
+let name = css [
   color Theme.Color.link;
   fontSize (em 1.1);
-  textDecorationLine None;
+  textDecoration none;
 
   hover [
-    textDecorationLine (Values [Underline]);
+    textDecoration underline;
   ];
 ]
 
-let props = style [
-  display Flex;
-  justifyContent FlexEnd;
-  alignItems Baseline;
-  unsafe "marginLeft" "auto";
+let props = css [
+  display flex;
+  justifyContent flexEnd;
+  alignItems baseline;
+  marginLeft auto;
 
-  selector "& > *" [
+  select "& > *" [
     marginLeft (em 1.);
   ];
 ]
 
-let updated = style [
+let updated = css [
   fontSize (em 0.85);
-  unsafe "whiteSpace" "nowrap";
+  whiteSpace nowrap;
 
-  media "(max-width: 600px)" [
-    display None;
+  select "@media (max-width: 600px)" [
+    display none;
   ];
 ]
 
-let license = style [
-  display InlineBlock;
+let license = css [
+  display inlineBlock;
   fontSize (em 0.85);
-  unsafe "whiteSpace" "nowrap";
-  border (px 1) Solid Theme.Color.text;
-  unsafe "padding" "0 1ex";
+  whiteSpace nowrap;
+  border3 (px 1) solid Theme.Color.text;
+  padding2 ~v:zero ~h:(ex 1.);
 
-  media "(max-width: 600px)" [
-    display None;
+  select "@media (max-width: 600px)" [
+    display none;
   ];
 ]
 
-let nolicense = style [
+let nolicense = css [
   color Theme.Color.bad;
   fontSize (em 0.85);
-  unsafe "whiteSpace" "nowrap";
-  border (px 1) Solid Theme.Color.bad;
-  unsafe "padding" "0 1ex";
+  whiteSpace nowrap;
+  border3 (px 1) solid Theme.Color.bad;
+  padding2 ~v:zero ~h:(ex 1.);
 
-  media "(max-width: 600px)" [
-    display None;
+  select "@media (max-width: 600px)" [
+    display none;
   ];
 ]
 
-let stars = style [
+let stars = css [
   fontSize (em 0.85);
-  unsafe "whiteSpace" "nowrap";
+  whiteSpace nowrap;
 
-  media "(max-width: 450px)" [
-    display None;
+  select "@media (max-width: 450px)" [
+    display none;
   ];
 ]
 
-let starIcon = style [
+let starIcon = css [
   marginLeft (em 0.25);
-  transform (translateY (px (-1)));
+  transforms [translateY (px (-1))];
 ]
 
-let description = style [
+let description = css [
   (*whiteSpace "nowrap";*)
   unsafe "textOverflow" "ellipsis";
-  overflow Hidden;
-  unsafe "margin" ".5ex 0 1ex";
+  overflow hidden;
+  margin3 ~top:(ex 0.5) ~h:zero ~bottom:(ex 1.);
 ]
 
-let tags = style [
+let tags = css [
   color Theme.Color.link;
 
-  selector "& a" [
-    unsafe "backgroundColor" "hsla(6.9, 90%, 90%, .4)";
+  select "& a" [
+    backgroundColor (hsla (deg 6.9) 90 90 0.4);
   ];
 ]
 
-let tagsIcon = style [
+let tagsIcon = css [
   opacity 0.25;
 ]

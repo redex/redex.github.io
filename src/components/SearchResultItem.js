@@ -13,6 +13,7 @@ var Platforms = require("./Platforms.js");
 var Pervasives = require("bs-platform/lib/js/pervasives.js");
 var Json_decode = require("@glennsl/bs-json/src/Json_decode.bs.js");
 var ReasonReact = require("reason-react/src/ReasonReact.js");
+var TypedGlamor = require("typed-glamor/src/TypedGlamor.bs.js");
 var Js_null_undefined = require("bs-platform/lib/js/js_null_undefined.js");
 var SearchResultItemStyles = require("./SearchResultItemStyles.js");
 
@@ -56,20 +57,20 @@ function make($$package, isFocused, onClick, _) {
   newrecord[/* render */9] = (function () {
       var match = $$package.stars;
       return React.createElement("div", {
-                  className: SearchResultItemStyles.root(+(Rebase.$$Array[/* length */16]($$package.flags) > 0), isFocused),
+                  className: TypedGlamor.toString(SearchResultItemStyles.root(+(Rebase.$$Array[/* length */16]($$package.flags) > 0), isFocused)),
                   onClick: (function () {
                       return Curry._1(onClick, $$package);
                     })
                 }, React.createElement("div", undefined, React.createElement("span", {
-                          className: SearchResultItemStyles.name
+                          className: TypedGlamor.toString(SearchResultItemStyles.name)
                         }, Vrroom.text($$package.name)), React.createElement("span", {
-                          className: SearchResultItemStyles.version
+                          className: TypedGlamor.toString(SearchResultItemStyles.version)
                         }, Vrroom.text($$package.version)), ReasonReact.element(/* None */0, /* None */0, Platforms.make($$package.platforms, /* array */[])), React.createElement("div", {
-                          className: SearchResultItemStyles.description
+                          className: TypedGlamor.toString(SearchResultItemStyles.description)
                         }, ReasonReact.element(/* None */0, /* None */0, Flags.make($$package, /* None */0, /* array */[])), Vrroom.text($$package.description))), React.createElement("div", undefined, React.createElement("div", undefined, React.createElement("span", {
-                              className: SearchResultItemStyles.stars
-                            }, (match == null) ? Vrroom.text("-") : Vrroom.text(match), ReasonReact.element(/* None */0, /* None */0, Icon.Star[/* make */0](/* Some */[SearchResultItemStyles.starIcon], /* array */[]))), ReasonReact.element(/* None */0, /* None */0, Score.make($$package, /* array */[]))), React.createElement("div", {
-                          className: SearchResultItemStyles.updated
+                              className: TypedGlamor.toString(SearchResultItemStyles.stars)
+                            }, (match == null) ? Vrroom.text("-") : Vrroom.text(match), ReasonReact.element(/* None */0, /* None */0, Icon.Star[/* make */0](/* Some */[TypedGlamor.toString(SearchResultItemStyles.starIcon)], /* array */[]))), ReasonReact.element(/* None */0, /* None */0, Score.make($$package, /* array */[]))), React.createElement("div", {
+                          className: TypedGlamor.toString(SearchResultItemStyles.updated)
                         }, ReasonReact.element(/* None */0, /* None */0, TimeAgo.make($$package.updated, /* array */[])))));
     });
   return newrecord;

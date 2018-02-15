@@ -109,11 +109,11 @@ let make = (~focusOnMount=false, _:childless) => {
   },
 
   render: ({ state, reduce, handle }) =>
-    <div className=Styles.root>
+    <div className=(Styles.root |> TypedGlamor.toString)>
 
-      <div className=Styles.fakeInput>
+      <div className=(Styles.fakeInput |> TypedGlamor.toString)>
         <Icon.Search className=Styles.searchIcon />
-        <input className   = Styles.input
+        <input className   = (Styles.input |> TypedGlamor.toString)
                placeholder = "Search packages"
                value       = state.query
                onChange    = reduce(e => QueryChanged(Obj.magic(e)##target##value))
@@ -123,7 +123,7 @@ let make = (~focusOnMount=false, _:childless) => {
 
       <Control.If cond=(Array.length(state.results) > 0)>
         ...(() => 
-          <div className=Styles.results>
+          <div className=(Styles.results |> TypedGlamor.toString)>
             <Control.Map items=state.results>
               ...(package =>
                 <SearchResultItem
@@ -134,9 +134,9 @@ let make = (~focusOnMount=false, _:childless) => {
                 />
               )
             </Control.Map>
-            <div className=Styles.footer>
+            <div className=(Styles.footer |> TypedGlamor.toString)>
               <a href="https://www.algolia.com">
-                <img className=Styles.algoliaLogo src="/search-by-algolia.svg" />
+                <img className=(Styles.algoliaLogo |> TypedGlamor.toString) src="/search-by-algolia.svg" />
               </a>
             </div>
           </div>

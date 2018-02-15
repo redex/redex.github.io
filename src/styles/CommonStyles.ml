@@ -1,72 +1,73 @@
-open! Css
+open TypedGlamor
 
 (* This needs be referred to in somthing that's actually used to be included in the css bundle *)
 include GlobalStyles 
 
-let widthContainer = style [
-  unsafe "label" "width-container";
-  unsafe "margin" "0 auto";
+let widthContainer = css [
+  label "width-container";
+
+  margin2 ~v:zero ~h:auto;
   maxWidth (px 960);
   minWidth (px 359);
   width (pct 100.);
 ]
 
-let html = style [
-  selector "& h1" [
+let html = css [
+  select "& h1" [
     fontSize (rem 2.25);
-    fontWeight Bold;
+    fontWeight bold;
     lineHeight (em 1.1);
     marginBottom (rem 1.45);
   ];
 
-  selector "& h2" [
+  select "& h2" [
     fontSize (rem 1.62671);
-    fontWeight Bold;
+    fontWeight bold;
     lineHeight (em 1.1);
     marginBottom (rem 1.45);
   ];
 
-  selector "& h3" [
+  select "& h3" [
     fontSize (rem 1.38316);
-    fontWeight Bold;
+    fontWeight bold;
     lineHeight (em 1.1);
     marginBottom (rem 1.45);
   ];
 
-  selector "& h1, & h2, & h3, & h4, & h5" [
-    selector "& > a.anchor" [
+  select "& h1, & h2, & h3, & h4, & h5" [
+    select "& > a.anchor" [
       marginLeft (px (-20));
       paddingRight (px 4);
 
-      selector "& > svg" [
-        visibility Hidden;
+      select "& > svg" [
+        visibility hidden;
       ]
     ];
 
     hover [
-      selector "& > a.anchor > svg" [
-        visibility Visible;
+      select "& > a.anchor > svg" [
+        visibility visible;
       ];
     ]
   ];
 
-  selector "& p" [
+  select "& p" [
     marginBottom (rem 1.45);
 
-    selector "& *:last-child" [
+    select "& *:last-child" [
       marginBottom zero;
     ];
   ];
 
-  selector "& b, & strong" [
-    fontWeight Bold;
+  select "& b, & strong" [
+    fontWeight bold;
   ];
 
-  selector "& i, & em" [
-    fontStyle Italic;
+  select "& i, & em" [
+    fontStyle italic;
   ];
 
-  selector "& ol, & ul" [
+  select "& ol, & ul" [
     margin zero;
     marginLeft (rem 1.45);
     marginBottom (rem 1.45);
@@ -74,141 +75,150 @@ let html = style [
     unsafe "listStyleImage" "none";
   ];
 
-  selector "& li" [
+  select "& li" [
     marginBottom (rem (1.45 /. 2.));
 
-    selector "& > ol, & > ul" [
+    select "& > ol, & > ul" [
       marginLeft (rem 1.45);
       marginBottom (rem (1.45 /. 2.));
       marginTop (rem (1.45 /. 2.));
     ];
 
-    selector "& *:last-child" [
+    select "& *:last-child" [
       marginBottom zero;
     ];
 
-    selector "& > p" [
+    select "& > p" [
       marginBottom (rem (1.45 /. 2.));
     ];
   ];
 
-  selector "& ol" [
+  select "& ol" [
     unsafe "listStyleType" "decimal";
 
-    selector "& li" [
+    select "& li" [
       paddingLeft zero;
     ];
   ];
 
-  selector "& ul" [
+  select "& ul" [
     unsafe "listStyleType" "disc";
 
-    selector "& li" [
+    select "& li" [
       paddingLeft zero;
     ];
   ];
 
-  selector "& code" [
-    unsafe "background" "hsla(0, 0%, 0%, 0.04)";
-    fontFamily "'SFMono-Regular', Consolas, 'Roboto Mono', 'Droid Sans Mono', 'Liberation Mono', Menlo, Courier, monospace";
+  select "& code" [
+    background (hsla (deg 0.) 0 0 0.04);
+    fontFamilies [
+      "'SFMono-Regular'";
+      "Consolas";
+      "'Roboto Mono'";
+      "'Droid Sans Mono'";
+      "'Liberation Mono'";
+      "Menlo";
+      "Courier";
+      "monospace"
+    ];
     fontSize (rem 0.85);
     lineHeight (rem 1.45);
-    unsafe "padding" ".2em 0";
+    padding2 ~v:(em 0.2) ~h:zero;
   ];
 
-  selector "& pre" [
+  select "& pre" [
     marginBottom (rem 1.45);
     fontSize (rem 0.85);
     lineHeight (rem 1.42);
-    unsafe "background" "hsla(0, 0%, 0%, 0.04)";
-    overflow Auto;
+    background (hsla (deg 0.) 0 0 0.04);
+    overflow auto;
     unsafe "wordWrap" "normal";
     padding (rem 1.45);
 
-    selector "& code" [
-      background None;
+    select "& code" [
+      background none;
       lineHeight (em 1.42);
     ];
   ];
 
-  selector "& a" [
+  select "& a" [
     color Theme.Color.link;
-    textDecorationLine None;
+    textDecoration none;
 
-    selector "&:hover" [
-      textDecorationLine (Values [Underline])
+    hover [
+      textDecoration underline
     ];
   ];
 
-  selector "& img" [
+  select "& img" [
     maxWidth (pct 100.);
   ];
 
-  selector "& .redex-codeblock.m-tabbed" [
-    display Flex;
-    position Relative;
+  select "& .redex-codeblock.m-tabbed" [
+    display flex;
+    position relative;
 
-    selector "& > ul" [
-      display Flex;
-      position Absolute;
-      flexDirection Column;
+    select "& > ul" [
+      display flex;
+      position absolute;
+      flexDirection column;
       margin zero;
       opacity 0.;
-      transition ~delay:200 ~duration:400 "opacity";
-      transform (translateX (pct (-100.)));
+      transitions [(AnimatableProperty.opacity, ms 400, easeInOut, ms 200)];
+      transforms [translateX (pct (-100.))];
       height (pct 100.);
 
-      selector "& > li" [
-        cursor Pointer;
+      select "& > li" [
+        cursor pointer;
         margin zero;
-        display InlineBlock;
+        display inlineBlock;
         padding2 ~v:(em 0.35) ~h:(em 0.75);
         color white;
-        textTransform Lowercase;
-        fontVariant SmallCaps;
+        textTransform lowercase;
+        fontVariant smallCaps;
 
-        selector "&:not(.s-selected)" [
+        select "&:not(.s-selected)" [
           opacity 0.5;
-          unsafe "boxShadow" "inset 0 -4px 2px -2px rgba(0, 0, 0, 0.1)" ;
+          boxShadows [shadow ~inset:true ~x:zero ~y:(px (-4)) ~blur:(px (-2)) ~spread:(px (-2)) (rgba 0 0 0 0.1)] ;
 
           hover [
             opacity 1.;
           ]
         ];
 
-        selector "&.reason" [
+        select "&.reason" [
           backgroundColor Theme.Color.reason;
         ];
-        selector "&.ml" [
+        select "&.ml" [
           backgroundColor Theme.Color.ocaml;
         ];
       ];
     ];
 
     hover [
-      selector "& > ul" [
+      select "& > ul" [
         opacity 1.;
       ]
     ];
 
-    selector "& > .codeblock" [
-      display None;
-      flex 1;
+    select "& > .codeblock" [
+      display none;
+      flex_ (int 1);
       maxWidth (pct 100.);
 
-      selector "&.s-selected" [
-        display Block;
+      select "&.s-selected" [
+        display block;
       ];
 
-      selector "& > pre" [
+      select "& > pre" [
         marginTop zero;
 
-        selector "&.lang-reason" [
-          borderLeft (px 2) Solid Theme.Color.reason
+        select "&.lang-reason" [
+          borderLeft3 (px 2) solid Theme.Color.reason
         ];
 
-        selector "&.lang-ml" [
-          borderLeft (px 2) Solid Theme.Color.ocaml
+        select "&.lang-ml" [
+          borderLeft3 (px 2) solid Theme.Color.ocaml
         ];
       ];
     ]

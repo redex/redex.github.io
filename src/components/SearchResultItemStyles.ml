@@ -1,80 +1,83 @@
-open! Css
-open CssEx
+open! TypedGlamor
 
-let root = fun ~isFlagged ~isFocused -> style [
-  unsafe "label" "search-result-item";
-  display Flex;
-  justifyContent SpaceBetween;
-  unsafe "padding" "1.1em 2em";
-  borderTop (px 1) Solid Theme.Color.subtleBorder;
-  cursor Pointer;
+let root = fun ~isFlagged ~isFocused -> css [
+  label "search-result-item";
 
-  selector "> *" [
+  display flex;
+  justifyContent spaceBetween;
+  padding2 ~v:(em 1.1) ~h:(em 2.);
+  borderTop3 (px 1) solid Theme.Color.subtleBorder;
+  cursor pointer;
+
+  select "> *" [
     opacity (if isFlagged && not isFocused then 0.5 else 1.);
   ];
 
   hover [
-    unsafe "backgroundColor" "hsl(6.9, 0%, 90%)";
+    backgroundColor (hsl (deg 6.9) 0 90);
 
-    selector "> *" [
+    select "> *" [
       opacity 1.;
     ]
   ];
 
-  backgroundColor
-    (if_ isFocused 
-      ((Obj.magic "hsl(6.9, 90%, 90%)"): Css.color)
-    |> else_ Theme.Panel.Color.background);
+  backgroundColor (
+    if isFocused then
+      hsl (deg 6.9) 90 90
+    else
+      Theme.Panel.Color.background
+  );
 
-  selector "> *:last-child" [
-    textAlign Right;
+
+  select "> *:last-child" [
+    textAlign right;
   ];
 
-  media "(max-width: 600px)" [
-    selector "& .platforms" [
-      display None;
+  select "@media (max-width: 600px)" [
+    select "& .platforms" [
+      display none;
     ];
   ];
 ]
 
-let name = style [
+let name = css [
   color Theme.Color.link;
 ]
 
-let version = style [
+let version = css [
   fontSize (em 0.85);
-  fontStyle Italic;
+  fontStyle italic;
   marginLeft (em 0.5);
 
-  media "(max-width: 600px)" [
-    display None;
+  select "@media (max-width: 600px)" [
+    display none;
   ];
 ]
 
-let description = style [
+let description = css [
   (*whiteSpace "nowrap";*)
   unsafe "textOverflow" "ellipsis";
-  overflow Hidden;
+  overflow hidden;
 ]
 
-let updated = style [
+let updated = css [
   opacity 0.5;
   fontSize (em 0.85);
-  unsafe "whiteSpace" "nowrap";
+  whiteSpace nowrap;
 
-  media "(max-width: 450px)" [
-    display None;
+  select "@media (max-width: 450px)" [
+    display none;
   ];
 ]
 
-let stars = style [
+let stars = css [
   opacity 0.5;
   fontSize (em 0.85);
-  unsafe "whiteSpace" "nowrap";
+  whiteSpace nowrap;
 ]
 
-let starIcon = style [
+let starIcon = css [
   marginLeft (em 0.25);
-  transform (translateY (px (-1)));
+  transforms [translateY (px (-1))];
   opacity 0.5;
 ]

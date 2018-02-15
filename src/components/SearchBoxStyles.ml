@@ -1,56 +1,55 @@
-open Css
+open TypedGlamor
 
-let root = style [
-  position Relative;
-  flex 1;
+let root = css [
+  position relative;
+  flex_ (int 1);
 ]
 
-let fakeInput = style [
-  display Flex;
+let fakeInput = css [
+  display flex;
   backgroundColor Theme.Panel.Color.background;
   fontSize (em 1.2);
   width (pct 100.);
-  alignItems Center;
-  unsafe "padding" "0 .5em";
+  alignItems center;
+  padding2 ~v:zero ~h:(em 0.5);
 ]
 
-let searchIcon = style [
+let searchIcon = css [
   unsafe "fill" (Theme.Color.primary |> Obj.magic);
   opacity 0.75; 
   margin (em 0.5);
   minWidth (em 1.);
 ]
 
-let input = style [
-  unsafe "padding" ".75em .25em";
+let input = css [
+  padding2 ~v:(em 0.75) ~h:(em 0.25);
   width (pct 100.);
   color Theme.Color.primary;
 
-  selector "::placeholder" [
+  select "::placeholder" [
     color Theme.Color.primary;
   ];
 ]
 
-let results = style [
-  position Absolute;
-  zIndex 100;
-  unsafe "marginTop" ".5ex";
+let results = css [
+  position absolute;
+  zIndex (int 100);
+  marginTop (ex 0.5);
   width (pct 100.);
-  boxShadow Theme.Shadow.overlay;
+  boxShadows [Theme.Shadow.overlay];
   color Theme.Color.text;
 
-  selector "& > div" [
+  select "& > div" [
     margin zero;
-    borderTop (px 1) Solid Theme.Color.subtleBorder;
-
+    borderTop3 (px 1) solid Theme.Color.subtleBorder;
   ]
 ]
 
-let footer = style [
+let footer = css [
   backgroundColor white;
-  textAlign Right;
+  textAlign right;
 
-  selector "> a" [
+  select "> a" [
     opacity 0.75;
 
     hover [
@@ -59,7 +58,7 @@ let footer = style [
   ]
 ]
 
-let algoliaLogo = style [
+let algoliaLogo = css [
   height (em 0.85);
   margin3 ~top:(em 0.5) ~h:(em 2.) ~bottom:(em 0.1);
 ]

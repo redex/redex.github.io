@@ -1,13 +1,13 @@
-open! Css
+open TypedGlamor
 
-let root = style [
-  display InlineFlex;
-  alignSelf Baseline;
-  transform (translateY (px 2));
+let root = css [
+  display inlineFlex;
+  alignSelf baseline;
+  transforms [translateY (px 2)];
   marginLeft (em 0.5);
   opacity 0.5;
 
-  selector "& svg" [
+  select "& svg" [
     unsafe "fill" "currentColor";
     height (em 1.);
     width (em 1.)
@@ -18,29 +18,29 @@ let root = style [
   ];
 ]
 
-let tooltip = style [
+let tooltip = css [
   backgroundColor white;
-  boxShadow (shadow ~x:1 ~y:1 ~spread:1 ~blur:3 (rgba 0 0 0 0.1));
-  unsafe "padding" ".5em 1em";
+  boxShadows [(shadow ~x:(px 1) ~y:(px 1) ~spread:(px 1) ~blur:(px 3) (rgba 0 0 0 0.1))];
+  padding2 ~v:(em 0.5) ~h:(em 1.);
 
-  selector "& div" [
-    unsafe "whiteSpace" "nowrap";
+  select "& div" [
+    whiteSpace nowrap;
 
-    selector "& a" [
-      textDecorationLine None;
+    select "& a" [
+      textDecoration none;
 
       hover [
-        textDecorationLine (Values [Underline]);
+        textDecoration underline;
       ]
     ];
 
-    selector "& svg" [
+    select "& svg" [
       unsafe "fill" "currentColor";
       height (em 1.);
       width (em 1.);
       marginRight (em 0.5);
-      unsafe "verticalAlign" "middle";
-      transform (translateY (px (-1)));
+      verticalAlign middle;
+      transforms [translateY (px (-1))];
     ];
   ]
 ]

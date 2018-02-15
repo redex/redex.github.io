@@ -5,8 +5,8 @@ let component = ReasonReact.statelessComponent("Footer");
 let make = (~context, _:childless) => {
   ...component,
   render: _self =>
-    <div className=Styles.root(context)>
-      <div className=CommonStyles.widthContainer>
+    <div className=(Styles.root(context) |> TypedGlamor.toString)>
+      <div className=(CommonStyles.widthContainer |> TypedGlamor.toString)>
         <section>
           <h1> ("Project" |> text) </h1>
           <ul>
@@ -39,8 +39,8 @@ let make = (~context, _:childless) => {
         <section>
           <a href="https://www.algolia.com">
             {switch context {
-            | `Front => <img className=Styles.algoliaLogo src="/search-by-algolia-white.svg" />
-            | `Index => <img className=Styles.algoliaLogo src="/search-by-algolia.svg" />
+            | `Front => <img className=(Styles.algoliaLogo |> TypedGlamor.toString) src="/search-by-algolia-white.svg" />
+            | `Index => <img className=(Styles.algoliaLogo |> TypedGlamor.toString) src="/search-by-algolia.svg" />
             }}
           </a>
         </section>

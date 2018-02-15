@@ -8,7 +8,7 @@ let platform = (icon, name, label) =>
   </div>;
 
 let tooltip = platforms =>
-  <div className=Styles.tooltip>
+  <div className=(Styles.tooltip |> TypedGlamor.toString)>
     {"Platforms:" |> text}
     {platforms |> Js.Array.includes("browser")  ? platform(<Icon.Html5 />,    "browser",  "Browser") : nothing}
     {platforms |> Js.Array.includes("node")     ? platform(<Icon.Nodejs />,   "node",     "Node.js") : nothing}
@@ -21,7 +21,7 @@ let make = (~platforms, _:childless) => {
   ...component,
 
   render: _self =>
-    <div className=("platforms " ++ Styles.root)>
+    <div className=("platforms " ++ (Styles.root |> TypedGlamor.toString))>
       <Tooltip content=tooltip(platforms)>
         ...(
           <Fragment>

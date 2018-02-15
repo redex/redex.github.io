@@ -15,6 +15,7 @@ var TimeAgo = require("../bindings/TimeAgo.js");
 var Version = require("../components/Version.js");
 var Platforms = require("../components/Platforms.js");
 var ReasonReact = require("reason-react/src/ReasonReact.js");
+var TypedGlamor = require("typed-glamor/src/TypedGlamor.bs.js");
 var Js_primitive = require("bs-platform/lib/js/js_primitive.js");
 var PackageStyles = require("../styles/PackageStyles.js");
 
@@ -70,35 +71,35 @@ function make(data, _) {
         tmp$8.href = tmp$9[0];
       }
       return React.createElement("div", {
-                  className: PackageStyles.root
+                  className: TypedGlamor.toString(PackageStyles.root)
                 }, ReasonReact.element(/* None */0, /* None */0, Helmet.make(/* Some */[Config.titleTemplate($$package.name)], /* None */0, /* None */0, /* None */0, /* array */[])), React.createElement("header", {
-                      className: PackageStyles.header
+                      className: TypedGlamor.toString(PackageStyles.header)
                     }, React.createElement("div", {
-                          className: PackageStyles.props
+                          className: TypedGlamor.toString(PackageStyles.props)
                         }, ReasonReact.element(/* None */0, /* None */0, Curry._2(Vrroom.Control[/* IfSome */3][/* make */1], Js_primitive.null_undefined_to_opt($$package.stars), (function (stars) {
                                     return React.createElement("div", {
-                                                className: PackageStyles.stars
-                                              }, Vrroom.text(stars), ReasonReact.element(/* None */0, /* None */0, Icon.Star[/* make */0](/* Some */[PackageStyles.starIcon], /* array */[])));
+                                                className: TypedGlamor.toString(PackageStyles.stars)
+                                              }, Vrroom.text(stars), ReasonReact.element(/* None */0, /* None */0, Icon.Star[/* make */0](/* Some */[TypedGlamor.toString(PackageStyles.starIcon)], /* array */[])));
                                   }))), ReasonReact.element(/* None */0, /* None */0, Score.make($$package, /* array */[])), (match == null) ? React.createElement("div", {
-                                className: PackageStyles.nolicense
+                                className: TypedGlamor.toString(PackageStyles.nolicense)
                               }, Vrroom.text("No license")) : React.createElement("div", {
-                                className: PackageStyles.license
+                                className: TypedGlamor.toString(PackageStyles.license)
                               }, Vrroom.text(match)), React.createElement("div", {
-                              className: PackageStyles.updated
+                              className: TypedGlamor.toString(PackageStyles.updated)
                             }, ReasonReact.element(/* None */0, /* None */0, TimeAgo.make($$package.updated, /* array */[])))), React.createElement("div", {
-                          className: PackageStyles.title
-                        }, ReasonReact.element(/* None */0, /* None */0, Link.make($$package.slug, /* Some */[PackageStyles.name], /* None */0, /* array */[Vrroom.text($$package.name)])), ReasonReact.element(/* None */0, /* None */0, Version.make($$package.version, +($$package.type === "published"), /* array */[])), ReasonReact.element(/* None */0, /* None */0, Platforms.make($$package.platforms, /* array */[]))), React.createElement("div", {
-                          className: PackageStyles.descLine
+                          className: TypedGlamor.toString(PackageStyles.title)
+                        }, ReasonReact.element(/* None */0, /* None */0, Link.make($$package.slug, /* Some */[TypedGlamor.toString(PackageStyles.name)], /* None */0, /* array */[Vrroom.text($$package.name)])), ReasonReact.element(/* None */0, /* None */0, Version.make($$package.version, +($$package.type === "published"), /* array */[])), ReasonReact.element(/* None */0, /* None */0, Platforms.make($$package.platforms, /* array */[]))), React.createElement("div", {
+                          className: TypedGlamor.toString(PackageStyles.descLine)
                         }, ReasonReact.element(/* None */0, /* None */0, Flags.make($$package, /* Some */[/* true */1], /* array */[])), React.createElement("span", {
-                              className: PackageStyles.description
+                              className: TypedGlamor.toString(PackageStyles.description)
                             }, Vrroom.text($$package.description))), React.createElement("div", {
-                          className: PackageStyles.tags
+                          className: TypedGlamor.toString(PackageStyles.tags)
                         }, ReasonReact.element(/* None */0, /* None */0, Icon.Tags[/* make */0](/* Some */[PackageStyles.tagsIcon], /* array */[])), ReasonReact.element(/* None */0, /* None */0, Tag.Category[/* make */2]($$package.category, /* array */[])), ReasonReact.element(/* None */0, /* None */0, Curry._3(Vrroom.Control[/* Map */0][/* make */1], $$package.keywords, /* None */0, (function (keyword) {
                                     return ReasonReact.element(/* Some */[keyword], /* None */0, Tag.Keyword[/* make */1](keyword, /* array */[]));
                                   })))), React.createElement("div", {
-                          className: PackageStyles.links
+                          className: TypedGlamor.toString(PackageStyles.links)
                         }, React.createElement("a", tmp, Vrroom.text("homepage")), React.createElement("a", tmp$2, Vrroom.text("repository")), React.createElement("a", tmp$4, Vrroom.text("npm")), React.createElement("a", tmp$6, Vrroom.text("issues")), React.createElement("a", tmp$8, Vrroom.text("documentation")))), React.createElement("div", {
-                      className: PackageStyles.readme,
+                      className: TypedGlamor.toString(PackageStyles.readme),
                       dangerouslySetInnerHTML: {
                         __html: $$package.readme
                       }

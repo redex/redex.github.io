@@ -28,14 +28,14 @@ let make = (~data, _:childless) => {
   render: _self => {
     let package = data##package;
 
-    <div className=Styles.root>
+    <div className=(Styles.root |> TypedGlamor.toString)>
       <Helmet title=Config.titleTemplate(package##name) />
-      <header className=Styles.header>
-        <div className=Styles.props>
+      <header className=(Styles.header |> TypedGlamor.toString)>
+        <div className=(Styles.props |> TypedGlamor.toString)>
           <Control.IfSome option=(package##stars |> Js.toOption)>
             ...(stars =>
-              <div className=Styles.stars>
-                {stars |> text} <Icon.Star className=Styles.starIcon/>
+              <div className=(Styles.stars |> TypedGlamor.toString)>
+                {stars |> text} <Icon.Star className=(Styles.starIcon |> TypedGlamor.toString)/>
               </div>
             )
           </Control.IfSome>
@@ -43,16 +43,16 @@ let make = (~data, _:childless) => {
           <Score package />
 
           {switch (package##license |> Js.toOption) {
-          | Some(license) => <div className=Styles.license> {license |> text} </div>
-          | None					=> <div className=Styles.nolicense> {"No license" |> text} </div>
+          | Some(license) => <div className=(Styles.license |> TypedGlamor.toString)> {license |> text} </div>
+          | None					=> <div className=(Styles.nolicense |> TypedGlamor.toString)> {"No license" |> text} </div>
           }}
 
-          <div className=Styles.updated> <TimeAgo date=package##updated /> </div>
+          <div className=(Styles.updated |> TypedGlamor.toString)> <TimeAgo date=package##updated /> </div>
         </div>
 
-        <div className=Styles.title>
+        <div className=(Styles.title |> TypedGlamor.toString)>
           /*<span className=Styles.owner> {"package" |> text} </span>*/
-          <Link to_=package##slug className=Styles.name>
+          <Link to_=package##slug className=(Styles.name |> TypedGlamor.toString)>
             {package##name |> text}
           </Link>
 
@@ -61,14 +61,14 @@ let make = (~data, _:childless) => {
           <Platforms platforms=package##platforms />
         </div>
 
-        <div className=Styles.descLine>
+        <div className=(Styles.descLine |> TypedGlamor.toString)>
           <Flags package invert=true />
-          <span className=Styles.description>	
+          <span className=(Styles.description |> TypedGlamor.toString)>	
             {package##description |> text}
           </span>
         </div>
 
-        <div className=Styles.tags>
+        <div className=(Styles.tags |> TypedGlamor.toString)>
           <Icon.Tags className=Styles.tagsIcon />
           <Tag.Category name=package##category />
           <Control.Map items=package##keywords>
@@ -76,7 +76,7 @@ let make = (~data, _:childless) => {
           </Control.Map>
         </div>
 
-        <div className=Styles.links>
+        <div className=(Styles.links |> TypedGlamor.toString)>
           <a href=?Js.toOption(package##homepageUrl)> {"homepage" |> text} </a>
           <a href=?Js.toOption(package##repositoryUrl)> {"repository" |> text} </a>
           <a href=?Js.toOption(package##npmUrl)> {"npm" |> text} </a>
@@ -86,7 +86,7 @@ let make = (~data, _:childless) => {
 
       </header>
 
-      <div className=Styles.readme
+      <div className=(Styles.readme |> TypedGlamor.toString)
            dangerouslySetInnerHTML={ "__html": package##readme } />
     </div>
   }

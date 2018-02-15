@@ -1,38 +1,38 @@
-open! Css
+open TypedGlamor
 
 [%%raw "require('glamor-reset')"]
 
 let _reset = begin
   global "*" [
-    boxSizing BorderBox;
+    unsafe "boxSizing" "border-box";
   ];
 
   global "*:focus" [
-    outlineStyle None
+    outlineStyle none
   ];
 
   global "body" [
-    unsafe "lineHeight" "inherit";
+    lineHeight inherit_;
     color Theme.Color.text;
   ];
 
   global "h1, h2, h3" [
     lineHeight (em 1.1);
-    fontWeight Normal;
+    fontWeight normal;
   ];
 
   global "a" [
-    unsafe "color" "inherit";
+    color inherit_;
   ];
 
   global "button, input, select" [
-    unsafe "background" "none";
-    unsafe "border" "none";
-    unsafe "font" "inherit";
+    background none;
+    border none;
+    font inherit_;
   ];
 
   global "button::-moz-focus-inner" [
-    unsafe "outline" "none";
+    outline none;
   ];
 
   global "ol, ul" [
@@ -46,9 +46,21 @@ let _global = begin
   global "html" [
     fontSize (px 15);
     lineHeight (em 1.25);
-    fontFamily "-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif";
-    boxSizing BorderBox;
-    overflowY Scroll;
+    fontFamilies [
+      "-apple-system";
+      "BlinkMacSystemFont";
+      "Segoe UI";
+      "Roboto";
+      "Oxygen";
+      "Ubuntu";
+      "Cantarell";
+      "Fira Sans";
+      "Droid Sans";
+      "Helvetica Neue";
+      "sans-serif"
+    ];
+    unsafe "boxSizing" "border-box";
+    unsafe "overflowY" "scroll";
   ];
 
   global "html, body, #___gatsby" [

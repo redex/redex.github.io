@@ -6,18 +6,18 @@ let make = (~children, _:childless) => {
   ...component,
 
   render: _self =>
-    <div className=Styles.root>
+    <div className=(Styles.root |> TypedGlamor.toString)>
 
       <Helmet defaultTitle="redex">
         <html lang="en" />
         <meta name="description" content="Package index for the ReasonML/BuckleScript ecosystem" />
       </Helmet>
 
-      <div className=Styles.header>
-        <div className=CommonStyles.widthContainer>
+      <div className=(Styles.header |> TypedGlamor.toString)>
+        <div className=(CommonStyles.widthContainer |> TypedGlamor.toString)>
           <SearchBox />
-          <Link to_="/" className=Styles.title>
-            <svg className=Styles.logo>
+          <Link to_="/" className=(Styles.title |> TypedGlamor.toString)>
+            <svg className=(Styles.logo |> TypedGlamor.toString)>
               /* NOTE: xlink stuff needed for safari */
               <use href="/logo.svg#logo" xmlnsXlink="http://www.w3.org/1999/xlink" xlinkHref="/logo.svg#logo"/>
             </svg>
@@ -25,7 +25,7 @@ let make = (~children, _:childless) => {
         </div>
       </div>
 
-      <div className=CommonStyles.widthContainer>
+      <div className=(CommonStyles.widthContainer |> TypedGlamor.toString)>
         (children())
       </div>
 

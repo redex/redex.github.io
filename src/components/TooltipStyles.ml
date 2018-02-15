@@ -1,31 +1,31 @@
-open Css
+open TypedGlamor
 
-let container = style [
-  position Relative;
-  display InlineFlex;
-  zIndex 50;
+let container = css [
+  position relative;
+  display inlineFlex;
+  zIndex (int 50);
 ]
 
-let tooltip = let size = 0.5 in style [
-  position Absolute;
-  zIndex 55;
-  bottom (pct 100.);
-  left (pct 50.);
-  transform (translate (pct (-50.)) (em (-.size)));
+let tooltip = let size = 0.5 in css [
+  position absolute;
+  zIndex (int 55);
+  offsetBottom (pct 100.);
+  offsetLeft (pct 50.);
+  transforms [translate (pct (-50.)) (em (-.size))];
   color Theme.Color.text;
 
-  selector "&::before" [
-    position Absolute;
+  select "&::before" [
+    position absolute;
     width zero;
     height zero;
-    bottom (em (-.size));
-    left (pct 50.);
+    offsetBottom (em (-.size));
+    offsetLeft (pct 50.);
     marginLeft (em (-.size));
-    transform (translateY (px (-1)));
-    borderLeft (em size) Solid (Obj.magic "transparent");
-    borderRight (em size) Solid (Obj.magic "transparent");
-    borderTop (em size) Solid (hex "eee");
+    transforms [translateY (px (-1))];
+    borderLeft3 (em size) solid transparent;
+    borderRight3 (em size) solid transparent;
+    borderTop3 (em size) solid (hex 0xeee);
     unsafe "content" " ";
-    zIndex 60;
+    zIndex (int 60);
   ]
 ]

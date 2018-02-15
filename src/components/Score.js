@@ -7,6 +7,7 @@ var Vrroom = require("vrroom/src/Vrroom.bs.js");
 var Tooltip = require("./Tooltip.js");
 var ReasonReact = require("reason-react/src/ReasonReact.js");
 var ScoreStyles = require("./ScoreStyles.js");
+var TypedGlamor = require("typed-glamor/src/TypedGlamor.bs.js");
 
 function formatPercentage(number) {
   return (number * 100).toFixed() + "%";
@@ -14,7 +15,7 @@ function formatPercentage(number) {
 
 function factor(name, value) {
   return React.createElement("div", {
-              className: ScoreStyles.factor
+              className: TypedGlamor.toString(ScoreStyles.factor)
             }, React.createElement("span", undefined, Vrroom.text(name)), React.createElement("span", undefined, Vrroom.text(formatPercentage(value))));
 }
 
@@ -24,9 +25,9 @@ function make($$package, _) {
   var newrecord = component.slice();
   newrecord[/* render */9] = (function () {
       return ReasonReact.element(/* None */0, /* None */0, Tooltip.make(React.createElement("div", {
-                          className: ScoreStyles.tooltip
+                          className: TypedGlamor.toString(ScoreStyles.tooltip)
                         }, factor("Quality", $$package.quality), factor("Popularity", $$package.popularity), factor("Maintenance", $$package.maintenance)), React.createElement("span", {
-                          className: ScoreStyles.root
+                          className: TypedGlamor.toString(ScoreStyles.root)
                         }, Vrroom.text(formatPercentage($$package.score)), ReasonReact.element(/* None */0, /* None */0, Icon.Verified[/* make */0](/* Some */[ScoreStyles.icon], /* array */[])))));
     });
   return newrecord;

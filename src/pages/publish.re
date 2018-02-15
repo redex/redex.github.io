@@ -128,14 +128,11 @@ let html = {|
   </ul>
 |};
 
-let style = Css.(merge([
-  CommonStyles.html,
-  style([
-    backgroundColor(Theme.Panel.Color.background),
-    unsafe("padding", "2em 4em"),
-    media("(max-width: 900px)", [
-      unsafe("padding", "1em 2em")
-    ])
+let style = TypedGlamor.(css(~extend=CommonStyles.html, [
+  backgroundColor(Theme.Panel.Color.background),
+  padding2(em(2.), em(4.)),
+  select("@media (max-width: 900px)", [
+    padding2(em(1.), em(2.))
   ])
 ]));
 
@@ -146,7 +143,7 @@ let make = (_:childless) => {
   render: _self =>
     <div>
       <Helmet title=Config.titleTemplate("Publishing Guide") />
-      <div className=style dangerouslySetInnerHTML={ "__html": html } />
+      <div className=(style |> TypedGlamor.toString) dangerouslySetInnerHTML={ "__html": html } />
     </div>
 };
 

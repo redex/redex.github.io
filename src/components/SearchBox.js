@@ -9,6 +9,7 @@ var Config = require("../Config.js");
 var Rebase = require("@glennsl/rebase/src/Rebase.bs.js");
 var Vrroom = require("vrroom/src/Vrroom.bs.js");
 var ReasonReact = require("reason-react/src/ReasonReact.js");
+var TypedGlamor = require("typed-glamor/src/TypedGlamor.bs.js");
 var GatsbyLink = require("gatsby-link");
 var Algoliasearch = require("algoliasearch");
 var SearchBoxStyles = require("./SearchBoxStyles.js");
@@ -46,15 +47,15 @@ function make($staropt$star, _) {
       var state = param[/* state */2];
       var reduce = param[/* reduce */1];
       return React.createElement("div", {
-                  className: SearchBoxStyles.root
+                  className: TypedGlamor.toString(SearchBoxStyles.root)
                 }, React.createElement("div", {
-                      className: SearchBoxStyles.fakeInput
+                      className: TypedGlamor.toString(SearchBoxStyles.fakeInput)
                     }, ReasonReact.element(/* None */0, /* None */0, Icon.Search[/* make */0](/* Some */[SearchBoxStyles.searchIcon], /* array */[])), React.createElement("input", {
                           ref: Curry._1(param[/* handle */0], (function (r, param) {
                                   param[/* state */2][/* inputRef */4][0] = (r == null) ? /* None */0 : [r];
                                   return /* () */0;
                                 })),
-                          className: SearchBoxStyles.input,
+                          className: TypedGlamor.toString(SearchBoxStyles.input),
                           placeholder: "Search packages",
                           value: state[/* query */1],
                           onKeyDown: Curry._1(reduce, (function (e) {
@@ -65,7 +66,7 @@ function make($staropt$star, _) {
                                 }))
                         })), ReasonReact.element(/* None */0, /* None */0, Curry._2(Vrroom.Control[/* If */2][/* make */1], +(Rebase.$$Array[/* length */16](state[/* results */2]) > 0), (function () {
                             return React.createElement("div", {
-                                        className: SearchBoxStyles.results
+                                        className: TypedGlamor.toString(SearchBoxStyles.results)
                                       }, ReasonReact.element(/* None */0, /* None */0, Curry._3(Vrroom.Control[/* Map */0][/* make */1], state[/* results */2], /* None */0, (function ($$package) {
                                                   return ReasonReact.element(/* Some */[$$package.id], /* None */0, SearchResultItem.make($$package, Rebase.Option[/* exists */9]((function ($$this) {
                                                                         return +($$this.name === $$package.name);
@@ -73,11 +74,11 @@ function make($staropt$star, _) {
                                                                         return /* SelectItem */Block.__(2, [p]);
                                                                       })), /* array */[]));
                                                 }))), React.createElement("div", {
-                                            className: SearchBoxStyles.footer
+                                            className: TypedGlamor.toString(SearchBoxStyles.footer)
                                           }, React.createElement("a", {
                                                 href: "https://www.algolia.com"
                                               }, React.createElement("img", {
-                                                    className: SearchBoxStyles.algoliaLogo,
+                                                    className: TypedGlamor.toString(SearchBoxStyles.algoliaLogo),
                                                     src: "/search-by-algolia.svg"
                                                   }))));
                           }))));

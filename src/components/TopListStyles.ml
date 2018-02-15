@@ -1,43 +1,43 @@
-open! Css
+open TypedGlamor
 
-let root = style [
-  display Flex;
-  justifyContent SpaceBetween;
+let root = css [
+  display flex;
+  justifyContent spaceBetween;
   marginBottom (em 0.5);
 ]
 
-let name = style [
-  textDecorationLine None;
+let name = css [
+  textDecoration none;
 
   hover [
-    textDecorationLine (Values [Underline])
+    textDecoration underline
   ];
 ]
 
-let version = style [
+let version = css [
   fontSize (em 0.85);
-  fontStyle Italic;
+  fontStyle italic;
   marginLeft (em 0.5);
   opacity 0.5;
 ]
 
-let updated = style [
+let updated = css [
   opacity 0.5;
   fontSize (em 0.85);
-  unsafe "whiteSpace" "nowrap";
+  whiteSpace nowrap;
   opacity 0.75;
 ]
 
-let stars = style [
+let stars = css [
   opacity 0.5;
   fontSize (em 0.85);
-  unsafe "whiteSpace" "nowrap";
+  whiteSpace nowrap;
   opacity 0.75;
 ]
 
-let starIcon = style [
+let starIcon = css [
   marginLeft (em 0.25);
-  transform (translateY (px (-1)));
+  transforms [translateY (px (-1))];
   unsafe "fill" (Theme.Inverted.Color.text |> Obj.magic); 
   opacity 0.5;
 ]

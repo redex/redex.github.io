@@ -6,6 +6,7 @@ var Curry = require("bs-platform/lib/js/curry.js");
 var React = require("react");
 var Vrroom = require("vrroom/src/Vrroom.bs.js");
 var ReasonReact = require("reason-react/src/ReasonReact.js");
+var TypedGlamor = require("typed-glamor/src/TypedGlamor.bs.js");
 var TooltipStyles = require("./TooltipStyles.js");
 
 var component = ReasonReact.reducerComponent("Tooltip");
@@ -15,7 +16,7 @@ function make(content, child) {
   newrecord[/* render */9] = (function (param) {
       var reduce = param[/* reduce */1];
       return React.createElement("div", {
-                  className: TooltipStyles.container,
+                  className: TypedGlamor.toString(TooltipStyles.container),
                   onMouseEnter: Curry._1(reduce, (function () {
                           return /* true */1;
                         })),
@@ -23,7 +24,7 @@ function make(content, child) {
                           return /* false */0;
                         }))
                 }, param[/* state */2] !== 0 ? React.createElement("div", {
-                        className: TooltipStyles.tooltip
+                        className: TypedGlamor.toString(TooltipStyles.tooltip)
                       }, content) : Vrroom.nothing, child);
     });
   newrecord[/* initialState */10] = (function () {

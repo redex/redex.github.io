@@ -12,6 +12,7 @@ var SearchBox = require("../components/SearchBox.js");
 var Pervasives = require("bs-platform/lib/js/pervasives.js");
 var IndexStyles = require("../styles/IndexStyles.js");
 var ReasonReact = require("reason-react/src/ReasonReact.js");
+var TypedGlamor = require("typed-glamor/src/TypedGlamor.bs.js");
 
 function sort(groups) {
   var copy = groups.slice();
@@ -27,9 +28,9 @@ function make(data, _) {
   var newrecord = component.slice();
   newrecord[/* render */9] = (function () {
       return React.createElement("div", {
-                  className: IndexStyles.root
+                  className: TypedGlamor.toString(IndexStyles.root)
                 }, ReasonReact.element(/* None */0, /* None */0, SearchBox.make(/* Some */[/* true */1], /* array */[])), React.createElement("div", {
-                      className: IndexStyles.keywords
+                      className: TypedGlamor.toString(IndexStyles.keywords)
                     }, ReasonReact.element(/* None */0, /* None */0, Curry._3(Vrroom.Control[/* Map */0][/* make */1], sort(data.keywords.group), /* None */0, (function (keyword) {
                                 return ReasonReact.element(/* Some */[keyword.name], /* None */0, Link.make("/keyword/" + keyword.name, /* None */0, /* None */0, /* array */[
                                                 React.createElement("span", {
@@ -40,7 +41,7 @@ function make(data, _) {
                                                     }, Vrroom.text(Pervasives.string_of_int(keyword.count)))
                                               ]));
                               })))), React.createElement("div", {
-                      className: IndexStyles.lists
+                      className: TypedGlamor.toString(IndexStyles.lists)
                     }, React.createElement("div", undefined, React.createElement("h2", undefined, Vrroom.text("Recent releases")), ReasonReact.element(/* None */0, /* None */0, TopList.make(Graphql.getNodes(data.recentPackages), /* updated */500154939, /* array */[]))), React.createElement("div", undefined, React.createElement("h2", undefined, Vrroom.text("Most popular")), ReasonReact.element(/* None */0, /* None */0, TopList.make(Graphql.getNodes(data.popularPackages), /* stars */67859553, /* array */[])))));
     });
   return newrecord;

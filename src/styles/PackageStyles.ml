@@ -1,155 +1,151 @@
-open! Css
+open TypedGlamor
 
-let root = style [
+let root = css [
   marginBottom (em 1.45);
 ]
 
-let header = style [
-  unsafe "label" "header";
+let header = css [
+  label "header";
   (*backgroundColor (if flags = [||] then Theme.Inverted.Color.background else (hex "aaa"));*)
   backgroundColor Theme.Inverted.Color.background;
   (*background "linear-gradient(to bottom right, hsl(6.9, 70.7%, 52%), hsl(6.9, 70.7%, 58%))";*)
   color Theme.Inverted.Color.text;
-  unsafe "padding" "2em 4em";
+  padding2 ~v:(em 2.) ~h:(em 4.);
 
-  media "(max-width: 900px)" [
-    unsafe "padding" "1em 2em";
+  select "@media (max-width: 900px)" [
+    padding2 ~v:(em 1.) ~h:(em 2.);
   ]
 ]
 
-let props = style [
-  display Flex;
-  justifyContent FlexEnd;
-  alignItems Baseline;
+let props = css [
+  display flex;
+  justifyContent flexEnd;
+  alignItems baseline;
 
-  selector "& > *" [
+  select "& > *" [
     marginLeft (em 1.);
   ];
 ]
 
-let title = style [
-  unsafe "padding" "1em 0 0";
-  display Flex;
-  alignItems Baseline;
+let title = css [
+  padding3 ~top:(em 1.) ~h:zero ~bottom:zero;
+  display flex;
+  alignItems baseline;
 ]
 
-let owner = style [
-  display Block;
+let owner = css [
+  display block;
   opacity 0.75;
   fontSize (em 0.85);
-  unsafe "fontVariant" "small-caps";
+  fontVariant smallCaps;
 ]
 
-let name = style [
+let name = css [
   fontSize (rem 1.5);
-  fontWeight Bold;
-  textDecorationLine None;
+  fontWeight bold;
+  textDecoration none;
   lineHeight (em 1.45);
 
-  selector "&:hover" [
-    textDecorationLine (Values [Underline])
+  select "&:hover" [
+    textDecoration underline
   ];
 ]
 
-let descLine = style [
+let descLine = css [
   marginBottom (em 0.5);
 ]
 
-let description = style [
+let description = css [
   (*whiteSpace "nowrap";*)
   unsafe "textOverflow" "ellipsis";
-  overflow Hidden;
+  overflow hidden;
   opacity 0.75;
 ]
 
-let tags = style [
-  selector "& span" [
+let tags = css [
+  select "& span" [
     fontSize (em 0.85);
     backgroundColor Theme.Inverted.Color.block;
-    unsafe "padding" "0 1ex";
+    padding2 ~v:zero ~h:(ex 1.);
     opacity 1.;
 
-    selector "&:hover" [
+    hover [
       backgroundColor Theme.Inverted.Color.highlightedBlock;
-      cursor Pointer;
+      cursor pointer;
     ];
   ];
 ]
 
-let tagsIcon = style [
+let tagsIcon = css [
   opacity 0.25;
 ]
 
-let right = style [
-  textAlign Right;
+let right = css [
+  textAlign right;
 ]
 
-let updated = style [
+let updated = css [
   fontSize (em 0.85);
-  unsafe "whiteSpace" "nowrap";
+  whiteSpace nowrap;
 ]
 
-let license = style [
+let license = css [
   fontSize (em 0.85);
-  unsafe "whiteSpace" "nowrap";
-  border (px 1) Solid Theme.Inverted.Color.text;
-  unsafe "padding" "0 1ex";
+  whiteSpace nowrap;
+  border3 (px 1) solid Theme.Inverted.Color.text;
+  padding2 ~v:zero ~h:(ex 1.);
 ]
 
-let nolicense = style [
+let nolicense = css [
   fontSize (em 0.85);
-  unsafe "whiteSpace" "nowrap";
-  border (px 1) Solid (hex "0008");
-  color (hex "0008");
-  unsafe "padding" "0 1ex";
+  whiteSpace nowrap;
+  border3 (px 1) solid (hex 0x0008 (* TODO *));
+  color (hex 0x0008 (* TODO *));
+  padding2 ~v:zero ~h:(ex 1.);
 ]
 
-let stars = style [
+let stars = css [
   fontSize (em 0.85);
-  unsafe "whiteSpace" "nowrap";
+  whiteSpace nowrap;
 ]
 
-let starIcon = style [
+let starIcon = css [
   marginLeft (em 0.25);
-  transform (translateY (px (-1)));
+  transforms [translateY (px (-1))];
   opacity 0.5;
 ]
 
-let links = style [
+let links = css [
   label "links";
   
   marginTop (em 3.);
 
-  selector "& > a" [
-    display InlineBlock;
-    textDecorationLine None;
+  select "& > a" [
+    display inlineBlock;
+    textDecoration none;
     marginRight (em 2.);
-    unsafe "fontVariant" "small-caps";
+    fontVariant smallCaps;
 
-    media "(max-width: 450px)" [
+    select "@media (max-width: 450px)" [
       marginRight (em 1.);
     ];
 
-    selector "&:hover" [
-      textDecorationLine (Values [Underline])
+    hover [
+      textDecoration underline
     ];
 
-    selector "&:not([href])" [
-      textDecorationLine None;
+    select "&:not([href])" [
+      textDecoration none;
       opacity 0.25;
     ];
   ];
 ]
 
-let readme = merge [
-  CommonStyles.html;
+let readme = css ~extend:CommonStyles.html [
+  backgroundColor Theme.Panel.Color.background;
+  padding2 ~v:(em 2.) ~h:(em 4.);
 
-  style [
-    backgroundColor Theme.Panel.Color.background;
-    unsafe "padding" "2em 4em";
-
-    media "(max-width: 900px)" [
-      unsafe "padding" "1em 2em";
-    ]
+  select "@media (max-width: 900px)" [
+    padding2 ~v:(em 1.) ~h:(em 2.);
   ]
 ]

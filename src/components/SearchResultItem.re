@@ -43,13 +43,13 @@ let make = (~package, ~isFocused, ~onClick, _:childless) => {
 	...component,
 
 	render: _self =>
-		<div className=Styles.root(~isFlagged=Array.length(package##flags) > 0, ~isFocused) onClick=(_e => onClick(package))>
+		<div className=(Styles.root(~isFlagged=Array.length(package##flags) > 0, ~isFocused) |> TypedGlamor.toString) onClick=(_e => onClick(package))>
 			<div>
-				<span className=Styles.name> {package##name |> text} </span>
-				<span className=Styles.version> {package##version |> text} </span>
+				<span className=(Styles.name |> TypedGlamor.toString)> {package##name |> text} </span>
+				<span className=(Styles.version |> TypedGlamor.toString)> {package##version |> text} </span>
 				<Platforms platforms=package##platforms />
 
-				<div className=Styles.description>	
+				<div className=(Styles.description |> TypedGlamor.toString)>	
 					<Flags package />
 					{package##description |> text}
 				</div>
@@ -57,17 +57,17 @@ let make = (~package, ~isFocused, ~onClick, _:childless) => {
 
 			<div>
 				<div>
-					<span className=Styles.stars>
+					<span className=(Styles.stars |> TypedGlamor.toString)>
 						{switch (package##stars |> Js.toOption) {
 						| Some(stars) => stars |> text
 						| None 				=> "-" |> text
 						}}
-						<Icon.Star className=Styles.starIcon/>
+						<Icon.Star className=(Styles.starIcon |> TypedGlamor.toString)/>
 					</span>
 
 					<Score package />
 				</div>
-			 	<div className=Styles.updated> <TimeAgo date=package##updated /> </div>	
+			 	<div className=(Styles.updated |> TypedGlamor.toString)> <TimeAgo date=package##updated /> </div>	
 			</div>
 		</div>
 };

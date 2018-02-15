@@ -7,7 +7,7 @@ module Flag = {
     ...component,
 
     render: (_self) =>
-      <span className=Styles.flag(style, ~invert)> {label |> text} </span>
+      <span className=(Styles.flag(style, ~invert) |> TypedGlamor.toString)> {label |> text} </span>
   }
 };
 
@@ -16,7 +16,7 @@ let make = (~package, ~invert=false, _:childless) => {
   ...component,
 
   render: _self =>
-    <span className=("flags" ++ Styles.flags)>
+    <span className=("flags" ++ (Styles.flags |> TypedGlamor.toString))>
       {package##_type == "unpublished" ? <Flag label="unpublished" style=`Black invert /> : nothing}
       <Control.Map items=package##flags>
         ...{flag => <Flag key=flag label=flag style=`Heavy invert />}

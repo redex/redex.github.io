@@ -8,6 +8,7 @@ var Footer = require("../components/Footer.js");
 var Helmet = require("../bindings/gatsby/helmet.js");
 var SearchBox = require("../components/SearchBox.js");
 var ReasonReact = require("reason-react/src/ReasonReact.js");
+var TypedGlamor = require("typed-glamor/src/TypedGlamor.bs.js");
 var CommonStyles = require("../styles/CommonStyles.js");
 var IndexLayoutStyles = require("./IndexLayoutStyles.js");
 
@@ -17,7 +18,7 @@ function make(children, _) {
   var newrecord = component.slice();
   newrecord[/* render */9] = (function () {
       return React.createElement("div", {
-                  className: IndexLayoutStyles.root
+                  className: TypedGlamor.toString(IndexLayoutStyles.root)
                 }, ReasonReact.element(/* None */0, /* None */0, Helmet.make(/* None */0, /* None */0, /* Some */["redex"], /* None */0, /* array */[
                           React.createElement("html", {
                                 lang: "en"
@@ -27,17 +28,17 @@ function make(children, _) {
                                 name: "description"
                               })
                         ])), React.createElement("div", {
-                      className: IndexLayoutStyles.header
+                      className: TypedGlamor.toString(IndexLayoutStyles.header)
                     }, React.createElement("div", {
-                          className: CommonStyles.widthContainer
-                        }, ReasonReact.element(/* None */0, /* None */0, SearchBox.make(/* None */0, /* array */[])), ReasonReact.element(/* None */0, /* None */0, Link.make("/", /* Some */[IndexLayoutStyles.title], /* None */0, /* array */[React.createElement("svg", {
-                                        className: IndexLayoutStyles.logo
+                          className: TypedGlamor.toString(CommonStyles.widthContainer)
+                        }, ReasonReact.element(/* None */0, /* None */0, SearchBox.make(/* None */0, /* array */[])), ReasonReact.element(/* None */0, /* None */0, Link.make("/", /* Some */[TypedGlamor.toString(IndexLayoutStyles.title)], /* None */0, /* array */[React.createElement("svg", {
+                                        className: TypedGlamor.toString(IndexLayoutStyles.logo)
                                       }, React.createElement("use", {
                                             href: "/logo.svg#logo",
                                             xlinkHref: "/logo.svg#logo",
                                             xmlnsXlink: "http://www.w3.org/1999/xlink"
                                           }))])))), React.createElement("div", {
-                      className: CommonStyles.widthContainer
+                      className: TypedGlamor.toString(CommonStyles.widthContainer)
                     }, Curry._1(children, /* () */0)), ReasonReact.element(/* None */0, /* None */0, Footer.make(/* Index */-784200974, /* array */[])));
     });
   return newrecord;

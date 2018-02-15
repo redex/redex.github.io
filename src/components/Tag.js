@@ -5,35 +5,33 @@ var Css = require("bs-css/src/Css.js");
 var Link = require("../bindings/gatsby/link.js");
 var Vrroom = require("vrroom/src/Vrroom.bs.js");
 var ReasonReact = require("reason-react/src/ReasonReact.js");
+var TypedGlamor = require("typed-glamor/src/TypedGlamor.bs.js");
 
-var style = Css.style(/* :: */[
-      Css.display(/* InlineBlock */11),
+var style = TypedGlamor.css(/* None */0, /* :: */[
+      TypedGlamor.display(TypedGlamor.inlineBlock),
       /* :: */[
-        Css.opacity(0.75),
+        TypedGlamor.opacity(0.75),
         /* :: */[
-          Css.fontSize(Css.em(0.75)),
+          TypedGlamor.fontSize(TypedGlamor.em(0.75)),
           /* :: */[
-            Css.lineHeight(Css.em(1.6)),
+            TypedGlamor.lineHeight(TypedGlamor.em(1.6)),
             /* :: */[
-              Css.marginLeft(Css.em(0.5)),
+              TypedGlamor.marginLeft(TypedGlamor.em(0.5)),
               /* :: */[
-                Css.unsafe("whiteSpace", "nowrap"),
+                TypedGlamor.whiteSpace(TypedGlamor.nowrap),
                 /* :: */[
-                  Css.backgroundColor(Css.hex("fff3")),
+                  TypedGlamor.backgroundColor(TypedGlamor.hex(65523)),
                   /* :: */[
-                    Css.unsafe("padding", "0 1ex"),
+                    TypedGlamor.padding2(TypedGlamor.zero, TypedGlamor.ex(1)),
                     /* :: */[
-                      Css.textDecorationLine(/* None */0),
+                      TypedGlamor.textDecoration(TypedGlamor.none),
                       /* :: */[
-                        Css.borderRadius(Css.ex(0.5)),
+                        TypedGlamor.borderRadius(TypedGlamor.ex(0.5)),
                         /* :: */[
-                          Css.hover(/* :: */[
-                                Css.opacity(1),
+                          TypedGlamor.hover(/* :: */[
+                                TypedGlamor.opacity(1),
                                 /* :: */[
-                                  Css.textDecorationLine(/* Values */[/* :: */[
-                                          /* Underline */0,
-                                          /* [] */0
-                                        ]]),
+                                  TypedGlamor.textDecoration(TypedGlamor.underline),
                                   /* [] */0
                                 ]
                               ]),
@@ -56,7 +54,7 @@ function make(name, url, $staropt$star, _) {
   var customStyle = $staropt$star ? $staropt$star[0] : "";
   var newrecord = component.slice();
   newrecord[/* render */9] = (function () {
-      return ReasonReact.element(/* None */0, /* None */0, Link.make(url, /* Some */[style + (" " + customStyle)], /* None */0, /* array */[Vrroom.text(name)]));
+      return ReasonReact.element(/* None */0, /* None */0, Link.make(url, /* Some */[TypedGlamor.toString(style) + (" " + customStyle)], /* None */0, /* array */[Vrroom.text(name)]));
     });
   return newrecord;
 }
