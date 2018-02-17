@@ -109,7 +109,7 @@ let title = css [
   fontVariant smallCaps;
   fontSize (rem 2.5);
   lineHeight (em 1.1);
-  color (hex 0xfff6);
+  color (hex "fff6");
 
   select "& > em" [
     fontStyle normal;

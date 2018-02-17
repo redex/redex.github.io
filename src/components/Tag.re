@@ -11,7 +11,7 @@ module Tag = {
       lineHeight(em(1.6)),
       marginLeft(em(0.5)),
       whiteSpace(nowrap),
-      backgroundColor(hex(0xfff3)),
+      backgroundColor(hex("fff3")),
       padding2(~v=zero, ~h=ex(1.)),
       textDecoration(none),
       borderRadius(ex(0.5)),

@@ -24,7 +24,7 @@ let tooltip = let size = 0.5 in css [
     transforms [translateY (px (-1))];
     borderLeft3 (em size) solid transparent;
     borderRight3 (em size) solid transparent;
-    borderTop3 (em size) solid (hex 0xeee);
+    borderTop3 (em size) solid (hex "eee");
     unsafe "content" " ";
     zIndex (int 60);
   ]

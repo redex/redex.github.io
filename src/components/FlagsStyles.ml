@@ -9,15 +9,15 @@ let flag style_ ~invert = css [
   padding2 ~v:zero ~h:(ex 1.);
 
   (match style_ with
-  | `Heavy -> backgroundColor (if invert then hex 0xfffc else Theme.Color.primary)
-  | `Light -> border3 (px 1) solid (if invert then hex 0xfffc else Theme.Color.primary)
-  | `Black -> backgroundColor (if invert then hex 0x0003 (* TODO *) else hex 0x444e));
+  | `Heavy -> backgroundColor (if invert then hex "fffc" else Theme.Color.primary)
+  | `Light -> border3 (px 1) solid (if invert then hex "fffc" else Theme.Color.primary)
+  | `Black -> backgroundColor (if invert then hex "0003" else hex "444e"));
 
   color
     (match style_ with
     | `Heavy -> if invert then Theme.Color.primary else white
     | `Light -> if invert then white else Theme.Color.primary
-    | `Black -> hex 0xfffd);
+    | `Black -> hex "fffd");
 
   borderRadius (ex 0.5);
 ]

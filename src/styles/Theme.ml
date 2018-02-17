@@ -1,22 +1,22 @@
 open TypedGlamor
 
 module Color = struct
-  let primary = hex 0xdd4c39
+  let primary = hex "dd4c39"
   let darkPrimary = hsl (deg 6.9) 65 50
 
   let background = whitesmoke
-  let darkBackground = hex 0xececec
+  let darkBackground = hex "ececec"
 
-  let text = hex 0x444
+  let text = hex "444"
   let link = primary
 
-  let subtleBorder = hex 0xeee
+  let subtleBorder = hex "eee"
 
   let bad = rgba 255 0 0 0.75
 
-  let reason = hex 0xDD4C39
-  let ocaml = hex 0xC87A27
-  let javascript = hex 0xF7E018
+  let reason = hex "DD4C39"
+  let ocaml = hex "C87A27"
+  let javascript = hex "F7E018"
 end
 
 module Panel = struct

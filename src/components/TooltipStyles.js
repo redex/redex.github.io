@@ -53,7 +53,7 @@ var tooltip = TypedGlamor.css(/* None */0, /* :: */[
                                       /* :: */[
                                         TypedGlamor.borderRight3(TypedGlamor.em(0.5), TypedGlamor.solid, TypedGlamor.transparent),
                                         /* :: */[
-                                          TypedGlamor.borderTop3(TypedGlamor.em(0.5), TypedGlamor.solid, TypedGlamor.hex(3822)),
+                                          TypedGlamor.borderTop3(TypedGlamor.em(0.5), TypedGlamor.solid, TypedGlamor.hex("eee")),
                                           /* :: */[
                                             TypedGlamor.unsafe("content", " "),
                                             /* :: */[

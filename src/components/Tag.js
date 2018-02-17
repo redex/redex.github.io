@@ -19,7 +19,7 @@ var style = TypedGlamor.css(/* None */0, /* :: */[
               /* :: */[
                 TypedGlamor.whiteSpace(TypedGlamor.nowrap),
                 /* :: */[
-                  TypedGlamor.backgroundColor(TypedGlamor.hex(65523)),
+                  TypedGlamor.backgroundColor(TypedGlamor.hex("fff3")),
                   /* :: */[
                     TypedGlamor.padding2(TypedGlamor.zero, TypedGlamor.ex(1)),
                     /* :: */[

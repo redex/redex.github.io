@@ -217,7 +217,7 @@ var title = TypedGlamor.css(/* None */0, /* :: */[
             /* :: */[
               TypedGlamor.lineHeight(TypedGlamor.em(1.1)),
               /* :: */[
-                TypedGlamor.color(TypedGlamor.hex(65526)),
+                TypedGlamor.color(TypedGlamor.hex("fff6")),
                 /* :: */[
                   TypedGlamor.select("& > em", /* :: */[
                         TypedGlamor.fontStyle(TypedGlamor.normal),

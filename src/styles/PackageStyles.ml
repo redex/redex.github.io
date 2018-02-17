@@ -99,8 +99,8 @@ let license = css [
 let nolicense = css [
   fontSize (em 0.85);
   whiteSpace nowrap;
-  border3 (px 1) solid (hex 0x0008 (* TODO *));
-  color (hex 0x0008 (* TODO *));
+  border3 (px 1) solid (hex "0008");
+  color (hex "0008");
   padding2 ~v:zero ~h:(ex 1.);
 ]
 

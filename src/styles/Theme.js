@@ -3,23 +3,23 @@
 
 var TypedGlamor = require("typed-glamor/src/TypedGlamor.bs.js");
 
-var primary = TypedGlamor.hex(14502969);
+var primary = TypedGlamor.hex("dd4c39");
 
 var darkPrimary = TypedGlamor.hsl(TypedGlamor.deg(6.9), 65, 50);
 
-var darkBackground = TypedGlamor.hex(15527148);
+var darkBackground = TypedGlamor.hex("ececec");
 
-var text = TypedGlamor.hex(1092);
+var text = TypedGlamor.hex("444");
 
-var subtleBorder = TypedGlamor.hex(3822);
+var subtleBorder = TypedGlamor.hex("eee");
 
 var bad = TypedGlamor.rgba(255, 0, 0, 0.75);
 
-var reason = TypedGlamor.hex(14502969);
+var reason = TypedGlamor.hex("DD4C39");
 
-var ocaml = TypedGlamor.hex(13138471);
+var ocaml = TypedGlamor.hex("C87A27");
 
-var javascript = TypedGlamor.hex(16244760);
+var javascript = TypedGlamor.hex("F7E018");
 
 var Color = /* module */[
   /* primary */primary,

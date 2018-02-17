@@ -171,9 +171,9 @@ var nolicense = TypedGlamor.css(/* None */0, /* :: */[
       /* :: */[
         TypedGlamor.whiteSpace(TypedGlamor.nowrap),
         /* :: */[
-          TypedGlamor.border3(TypedGlamor.px(1), TypedGlamor.solid, TypedGlamor.hex(8)),
+          TypedGlamor.border3(TypedGlamor.px(1), TypedGlamor.solid, TypedGlamor.hex("0008")),
           /* :: */[
-            TypedGlamor.color(TypedGlamor.hex(8)),
+            TypedGlamor.color(TypedGlamor.hex("0008")),
             /* :: */[
               TypedGlamor.padding2(TypedGlamor.zero, TypedGlamor.ex(1)),
               /* [] */0

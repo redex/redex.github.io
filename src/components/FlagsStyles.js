@@ -19,13 +19,13 @@ function flag(style_, invert) {
                         TypedGlamor.padding2(TypedGlamor.zero, TypedGlamor.ex(1)),
                         /* :: */[
                           style_ !== 136970422 ? (
-                              style_ >= 937841383 ? TypedGlamor.backgroundColor(invert ? TypedGlamor.hex(65532) : Theme.Color[/* primary */0]) : TypedGlamor.backgroundColor(invert ? TypedGlamor.hex(3) : TypedGlamor.hex(17486))
-                            ) : TypedGlamor.border3(TypedGlamor.px(1), TypedGlamor.solid, invert ? TypedGlamor.hex(65532) : Theme.Color[/* primary */0]),
+                              style_ >= 937841383 ? TypedGlamor.backgroundColor(invert ? TypedGlamor.hex("fffc") : Theme.Color[/* primary */0]) : TypedGlamor.backgroundColor(invert ? TypedGlamor.hex("0003") : TypedGlamor.hex("444e"))
+                            ) : TypedGlamor.border3(TypedGlamor.px(1), TypedGlamor.solid, invert ? TypedGlamor.hex("fffc") : Theme.Color[/* primary */0]),
                           /* :: */[
                             TypedGlamor.color(style_ !== 136970422 ? (
                                     style_ >= 937841383 ? (
                                         invert ? Theme.Color[/* primary */0] : TypedGlamor.white
-                                      ) : TypedGlamor.hex(65533)
+                                      ) : TypedGlamor.hex("fffd")
                                   ) : (
                                     invert ? TypedGlamor.white : Theme.Color[/* primary */0]
                                   )),
