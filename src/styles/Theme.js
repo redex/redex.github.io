@@ -5,7 +5,7 @@ var TypedGlamor = require("typed-glamor/src/TypedGlamor.bs.js");
 
 var primary = TypedGlamor.hex("dd4c39");
 
-var darkPrimary = TypedGlamor.hsl(TypedGlamor.deg(6.9), 65, 50);
+var darkPrimary = TypedGlamor.hsl(TypedGlamor.num(6.9), 65, 50);
 
 var darkBackground = TypedGlamor.hex("ececec");
 

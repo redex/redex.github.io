@@ -14,7 +14,7 @@ let root = fun ~isFlagged ~isFocused -> css [
   ];
 
   hover [
-    backgroundColor (hsl (deg 6.9) 0 90);
+    backgroundColor (hsl (num 6.9) 0 90);
 
     select "> *" [
       opacity 1.;
@@ -23,7 +23,7 @@ let root = fun ~isFlagged ~isFocused -> css [
 
   backgroundColor (
     if isFocused then
-      hsl (deg 6.9) 90 90
+      hsl (num 6.9) 90 90
     else
       Theme.Panel.Color.background
   );

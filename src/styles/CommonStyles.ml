@@ -110,7 +110,7 @@ let html = css [
   ];
 
   select "& code" [
-    background (hsla (deg 0.) 0 0 0.04);
+    background (hsla (num 0.) 0 0 0.04);
     fontFamilies [
       "'SFMono-Regular'";
       "Consolas";
@@ -130,7 +130,7 @@ let html = css [
     marginBottom (rem 1.45);
     fontSize (rem 0.85);
     lineHeight (rem 1.42);
-    background (hsla (deg 0.) 0 0 0.04);
+    background (hsla (num 0.) 0 0 0.04);
     overflow auto;
     unsafe "wordWrap" "normal";
     padding (rem 1.45);

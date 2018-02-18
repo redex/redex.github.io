@@ -24,7 +24,7 @@ function root(isFlagged, isFocused) {
                               ]),
                           /* :: */[
                             TypedGlamor.hover(/* :: */[
-                                  TypedGlamor.backgroundColor(TypedGlamor.hsl(TypedGlamor.deg(6.9), 0, 90)),
+                                  TypedGlamor.backgroundColor(TypedGlamor.hsl(TypedGlamor.num(6.9), 0, 90)),
                                   /* :: */[
                                     TypedGlamor.select("> *", /* :: */[
                                           TypedGlamor.opacity(1),
@@ -34,7 +34,7 @@ function root(isFlagged, isFocused) {
                                   ]
                                 ]),
                             /* :: */[
-                              TypedGlamor.backgroundColor(isFocused ? TypedGlamor.hsl(TypedGlamor.deg(6.9), 90, 90) : Theme.Panel[/* Color */0][/* background */0]),
+                              TypedGlamor.backgroundColor(isFocused ? TypedGlamor.hsl(TypedGlamor.num(6.9), 90, 90) : Theme.Panel[/* Color */0][/* background */0]),
                               /* :: */[
                                 TypedGlamor.select("> *:last-child", /* :: */[
                                       TypedGlamor.textAlign(TypedGlamor.right),

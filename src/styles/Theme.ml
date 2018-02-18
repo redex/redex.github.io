@@ -2,7 +2,7 @@ open TypedGlamor
 
 module Color = struct
   let primary = hex "dd4c39"
-  let darkPrimary = hsl (deg 6.9) 65 50
+  let darkPrimary = hsl (num 6.9) 65 50
 
   let background = whitesmoke
   let darkBackground = hex "ececec"

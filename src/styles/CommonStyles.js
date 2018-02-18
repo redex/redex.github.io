@@ -181,7 +181,7 @@ var html = TypedGlamor.css(/* None */0, /* :: */[
                               ]),
                           /* :: */[
                             TypedGlamor.select("& code", /* :: */[
-                                  TypedGlamor.background(TypedGlamor.hsla(TypedGlamor.deg(0), 0, 0, 0.04)),
+                                  TypedGlamor.background(TypedGlamor.hsla(TypedGlamor.num(0), 0, 0, 0.04)),
                                   /* :: */[
                                     TypedGlamor.fontFamilies(/* :: */[
                                           "'SFMono-Regular'",
@@ -228,7 +228,7 @@ var html = TypedGlamor.css(/* None */0, /* :: */[
                                       /* :: */[
                                         TypedGlamor.lineHeight(TypedGlamor.rem(1.42)),
                                         /* :: */[
-                                          TypedGlamor.background(TypedGlamor.hsla(TypedGlamor.deg(0), 0, 0, 0.04)),
+                                          TypedGlamor.background(TypedGlamor.hsla(TypedGlamor.num(0), 0, 0, 0.04)),
                                           /* :: */[
                                             TypedGlamor.overflow(TypedGlamor.auto),
                                             /* :: */[

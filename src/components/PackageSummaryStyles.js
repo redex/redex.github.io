@@ -198,7 +198,7 @@ var tags = TypedGlamor.css(/* None */0, /* :: */[
       TypedGlamor.color(Theme.Color[/* link */5]),
       /* :: */[
         TypedGlamor.select("& a", /* :: */[
-              TypedGlamor.backgroundColor(TypedGlamor.hsla(TypedGlamor.deg(6.9), 90, 90, 0.4)),
+              TypedGlamor.backgroundColor(TypedGlamor.hsla(TypedGlamor.num(6.9), 90, 90, 0.4)),
               /* [] */0
             ]),
         /* [] */0

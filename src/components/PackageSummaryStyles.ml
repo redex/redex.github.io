@@ -111,7 +111,7 @@ let tags = css [
   color Theme.Color.link;
 
   select "& a" [
-    backgroundColor (hsla (deg 6.9) 90 90 0.4);
+    backgroundColor (hsla (num 6.9) 90 90 0.4);
   ];
 ]
 
