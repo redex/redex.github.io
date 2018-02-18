@@ -5,9 +5,9 @@ let root = fun ~isFlagged -> css [
   marginBottom (em 0.5);
   lineHeight (em 1.45);
 
-  if isFlagged then select "&" [
+  if isFlagged then add [
     opacity 0.5;
-  ] else  select "&" [
+  ] else add [
     boxShadows [Theme.Shadow.panel];
     backgroundColor Theme.Panel.Color.background;
   ];

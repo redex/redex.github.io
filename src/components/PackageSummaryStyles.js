@@ -12,10 +12,10 @@ function root(isFlagged) {
                 /* :: */[
                   TypedGlamor.lineHeight(TypedGlamor.em(1.45)),
                   /* :: */[
-                    isFlagged ? TypedGlamor.select("&", /* :: */[
+                    isFlagged ? TypedGlamor.add(/* :: */[
                             TypedGlamor.opacity(0.5),
                             /* [] */0
-                          ]) : TypedGlamor.select("&", /* :: */[
+                          ]) : TypedGlamor.add(/* :: */[
                             TypedGlamor.boxShadows(/* :: */[
                                   Theme.Shadow[/* panel */1],
                                   /* [] */0
