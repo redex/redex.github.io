@@ -36,7 +36,7 @@
   "license": "MIT",
   "main": "n/a",
   "scripts": {
-    "bsb": "bsb -make-world -w",
+    "start": "bsb -make-world -w",
     "build": "gatsby build",
     "develop": "gatsby develop",
     "test": "validate_sources",
