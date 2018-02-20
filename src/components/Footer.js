@@ -22,7 +22,7 @@ function make(context, _) {
                                       href: "https://github.com/redex/redex.github.io"
                                     }, Vrroom.text("Source Code Repository"))), React.createElement("li", undefined, React.createElement("a", {
                                       href: "https://github.com/redex/redex.github.io/issues"
-                                    }, Vrroom.text("Support / Bug Tracker"))), React.createElement("li", undefined, ReasonReact.element(/* None */0, /* None */0, Link.make("/publish", /* None */0, /* None */0, /* array */[Vrroom.text("Get Published")]))))), React.createElement("section", undefined, React.createElement("h1", undefined, Vrroom.text("Made with")), React.createElement("ul", undefined, React.createElement("li", undefined, React.createElement("a", {
+                                    }, Vrroom.text("Support / Bug Tracker"))), React.createElement("li", undefined, ReasonReact.element(/* None */0, /* None */0, Link.make("/publish", /* None */0, /* None */0, /* array */[Vrroom.text("Submit a Package")]))))), React.createElement("section", undefined, React.createElement("h1", undefined, Vrroom.text("Made with")), React.createElement("ul", undefined, React.createElement("li", undefined, React.createElement("a", {
                                       href: "https://npms.io/"
                                     }, Vrroom.text("npms.io"))), React.createElement("li", undefined, React.createElement("a", {
                                       href: "https://www.gatsbyjs.org/"

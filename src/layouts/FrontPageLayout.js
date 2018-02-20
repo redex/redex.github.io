@@ -43,7 +43,7 @@ function make(children, _) {
                               className: "left"
                             }), ReasonReact.element(/* None */0, /* None */0, Link.make("/all", /* None */0, /* None */0, /* array */[Vrroom.text("All")])), ReasonReact.element(/* None */0, /* None */0, Link.make("/category/binding", /* None */0, /* None */0, /* array */[Vrroom.text("Bindings")])), ReasonReact.element(/* None */0, /* None */0, Link.make("/category/library", /* None */0, /* None */0, /* array */[Vrroom.text("Libraries")])), ReasonReact.element(/* None */0, /* None */0, Link.make("/category/tool", /* None */0, /* None */0, /* array */[Vrroom.text("Tools")])), ReasonReact.element(/* None */0, /* None */0, Link.make("/category/boilerplate", /* None */0, /* None */0, /* array */[Vrroom.text("Boilerplate")])), React.createElement("span", {
                               className: "right"
-                            }, ReasonReact.element(/* None */0, /* None */0, Link.make("/publish", /* Some */[TypedGlamor.toString(FrontPageLayoutStyles.publishLink)], /* None */0, /* array */[Vrroom.text("Get Published")]))))), React.createElement("div", {
+                            }, ReasonReact.element(/* None */0, /* None */0, Link.make("/publish", /* Some */[TypedGlamor.toString(FrontPageLayoutStyles.publishLink)], /* None */0, /* array */[Vrroom.text("Submit a Package")]))))), React.createElement("div", {
                       className: TypedGlamor.toString(FrontPageLayoutStyles.header)
                     }, React.createElement("div", {
                           className: TypedGlamor.toString(CommonStyles.widthContainer)

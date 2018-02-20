@@ -36,7 +36,7 @@ let make = (~children: unit => ReasonReact.reactElement, _:childless) => {
           <Link to_="/category/tool"> ("Tools" |> text) </Link>
           <Link to_="/category/boilerplate"> ("Boilerplate" |> text) </Link>
           <span className="right">
-            <Link className=(Styles.publishLink |> TypedGlamor.toString) to_="/publish"> ("Get Published" |> text) </Link>
+            <Link className=(Styles.publishLink |> TypedGlamor.toString) to_="/publish"> ("Submit a Package" |> text) </Link>
           </span>
         </div>
       </nav>
