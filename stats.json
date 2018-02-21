@@ -1,96 +1,96 @@
 {
   "assetsByChunkName": {
     "path---platform-node": [
-      "path---platform-node-69854fccb1a500118558.js",
-      "path---platform-node-69854fccb1a500118558.js.map"
+      "path---platform-node-88505d3781567641015f.js",
+      "path---platform-node-88505d3781567641015f.js.map"
     ],
     "path---package-unpublished-viebel-meta-tags-re-re": [
-      "path---package-unpublished-viebel-meta-tags-re-re-8f3a31727bf4aa0b786d.js",
-      "path---package-unpublished-viebel-meta-tags-re-re-8f3a31727bf4aa0b786d.js.map"
+      "path---package-unpublished-viebel-meta-tags-re-re-069661e95f58682f135f.js",
+      "path---package-unpublished-viebel-meta-tags-re-re-069661e95f58682f135f.js.map"
     ],
     "path---package-nebuta-bs-jquery": [
-      "path---package-nebuta-bs-jquery-15c4b208eb18377c638b.js",
-      "path---package-nebuta-bs-jquery-15c4b208eb18377c638b.js.map"
+      "path---package-nebuta-bs-jquery-6611a1a05bb425f1b6d3.js",
+      "path---package-nebuta-bs-jquery-6611a1a05bb425f1b6d3.js.map"
     ],
     "path---package-reason-apollo": [
-      "path---package-reason-apollo-4373ef0a353fb1db9f8d.js",
-      "path---package-reason-apollo-4373ef0a353fb1db9f8d.js.map"
+      "path---package-reason-apollo-ec8a65004fd1e4d348fd.js",
+      "path---package-reason-apollo-ec8a65004fd1e4d348fd.js.map"
     ],
     "path---package-bs-little-parser": [
-      "path---package-bs-little-parser-1a512812bae8206991de.js",
-      "path---package-bs-little-parser-1a512812bae8206991de.js.map"
+      "path---package-bs-little-parser-032640a792c4c72df762.js",
+      "path---package-bs-little-parser-032640a792c4c72df762.js.map"
     ],
     "path---package-bs-reform": [
-      "path---package-bs-reform-317e30169a55c7507ff2.js",
-      "path---package-bs-reform-317e30169a55c7507ff2.js.map"
+      "path---package-bs-reform-20d408f60a79e8038551.js",
+      "path---package-bs-reform-20d408f60a79e8038551.js.map"
     ],
     "path---package-minimist-re": [
-      "path---package-minimist-re-5ea8896663d686db527f.js",
-      "path---package-minimist-re-5ea8896663d686db527f.js.map"
+      "path---package-minimist-re-ed683f326923f1a60c09.js",
+      "path---package-minimist-re-ed683f326923f1a60c09.js.map"
     ],
     "path---package-unpublished-reasonml-community-bs-leaflet": [
-      "path---package-unpublished-reasonml-community-bs-leaflet-92c598008b73ac16a2d4.js",
-      "path---package-unpublished-reasonml-community-bs-leaflet-92c598008b73ac16a2d4.js.map"
+      "path---package-unpublished-reasonml-community-bs-leaflet-6373ea095ef6b4cde420.js",
+      "path---package-unpublished-reasonml-community-bs-leaflet-6373ea095ef6b4cde420.js.map"
     ],
     "path---package-unpublished-reasonml-community-bs-transit-js": [
-      "path---package-unpublished-reasonml-community-bs-transit-js-ca088bb3fba076d58b80.js",
-      "path---package-unpublished-reasonml-community-bs-transit-js-ca088bb3fba076d58b80.js.map"
+      "path---package-unpublished-reasonml-community-bs-transit-js-23ae584b4309eca26ac1.js",
+      "path---package-unpublished-reasonml-community-bs-transit-js-23ae584b4309eca26ac1.js.map"
     ],
     "path---keyword-reactive-programming": [
-      "path---keyword-reactive-programming-05cdcc50cdaeb5b6234c.js",
-      "path---keyword-reactive-programming-05cdcc50cdaeb5b6234c.js.map"
+      "path---keyword-reactive-programming-99109a010c8a4836b15b.js",
+      "path---keyword-reactive-programming-99109a010c8a4836b15b.js.map"
     ],
     "path---package-glennsl-bs-revamp": [
-      "path---package-glennsl-bs-revamp-56c51027385b61f77b87.js",
-      "path---package-glennsl-bs-revamp-56c51027385b61f77b87.js.map"
+      "path---package-glennsl-bs-revamp-7b8351c765da05c75114.js",
+      "path---package-glennsl-bs-revamp-7b8351c765da05c75114.js.map"
     ],
     "path---package-unpublished-af-bs-d-3": [
-      "path---package-unpublished-af-bs-d-3-d6a1cfdd65b71c6998d8.js",
-      "path---package-unpublished-af-bs-d-3-d6a1cfdd65b71c6998d8.js.map"
+      "path---package-unpublished-af-bs-d-3-b1c348cb3676ec415bbd.js",
+      "path---package-unpublished-af-bs-d-3-b1c348cb3676ec415bbd.js.map"
     ],
     "path---keyword-http-client": [
-      "path---keyword-http-client-10b770cf020481061b1f.js",
-      "path---keyword-http-client-10b770cf020481061b1f.js.map"
+      "path---keyword-http-client-1d9fb59418a1b07008ea.js",
+      "path---keyword-http-client-1d9fb59418a1b07008ea.js.map"
     ],
     "path---keyword-analytics": [
-      "path---keyword-analytics-698a4123b8e9d28307c4.js",
-      "path---keyword-analytics-698a4123b8e9d28307c4.js.map"
+      "path---keyword-analytics-dbb04b15d8e1ef93d2bc.js",
+      "path---keyword-analytics-dbb04b15d8e1ef93d2bc.js.map"
     ],
     "path---package-unpublished-glennsl-refetch": [
-      "path---package-unpublished-glennsl-refetch-12f9e6adfed25fe26630.js",
-      "path---package-unpublished-glennsl-refetch-12f9e6adfed25fe26630.js.map"
+      "path---package-unpublished-glennsl-refetch-e3b1d21184071358433e.js",
+      "path---package-unpublished-glennsl-refetch-e3b1d21184071358433e.js.map"
     ],
     "path---package-unpublished-reasonml-community-bs-node": [
-      "path---package-unpublished-reasonml-community-bs-node-7d5e4aea61f83352b7fc.js",
-      "path---package-unpublished-reasonml-community-bs-node-7d5e4aea61f83352b7fc.js.map"
+      "path---package-unpublished-reasonml-community-bs-node-12c43dbd71e38cd3a09b.js",
+      "path---package-unpublished-reasonml-community-bs-node-12c43dbd71e38cd3a09b.js.map"
     ],
     "path---keyword-error-tracking": [
-      "path---keyword-error-tracking-0d292636dabfcd0ecac2.js",
-      "path---keyword-error-tracking-0d292636dabfcd0ecac2.js.map"
+      "path---keyword-error-tracking-b39df7ca60c9babe85cd.js",
+      "path---keyword-error-tracking-b39df7ca60c9babe85cd.js.map"
     ],
     "path---keywords": [
-      "path---keywords-7bc4b5a0ac11d0fa7d3b.js",
-      "path---keywords-7bc4b5a0ac11d0fa7d3b.js.map"
+      "path---keywords-f096f5f378f4274946fd.js",
+      "path---keywords-f096f5f378f4274946fd.js.map"
     ],
     "path---package-re-spring": [
-      "path---package-re-spring-6f7c3e627835990ea4a3.js",
-      "path---package-re-spring-6f7c3e627835990ea4a3.js.map"
+      "path---package-re-spring-12ee6bbdb997ce327232.js",
+      "path---package-re-spring-12ee6bbdb997ce327232.js.map"
     ],
     "path---package-unpublished-glennsl-vrroom": [
-      "path---package-unpublished-glennsl-vrroom-7e903679986d0445694a.js",
-      "path---package-unpublished-glennsl-vrroom-7e903679986d0445694a.js.map"
+      "path---package-unpublished-glennsl-vrroom-0042f80fe53c45c9fc7b.js",
+      "path---package-unpublished-glennsl-vrroom-0042f80fe53c45c9fc7b.js.map"
     ],
     "path---package-bs-most": [
-      "path---package-bs-most-36792e7e7c638d61a7e0.js",
-      "path---package-bs-most-36792e7e7c638d61a7e0.js.map"
+      "path---package-bs-most-6a044a40c7b6350a660f.js",
+      "path---package-bs-most-6a044a40c7b6350a660f.js.map"
     ],
     "path---package-unpublished-glennsl-reasonable-vscode-starter": [
-      "path---package-unpublished-glennsl-reasonable-vscode-starter-83549cdf264801c82965.js",
-      "path---package-unpublished-glennsl-reasonable-vscode-starter-83549cdf264801c82965.js.map"
+      "path---package-unpublished-glennsl-reasonable-vscode-starter-cc3cb5691427a0791261.js",
+      "path---package-unpublished-glennsl-reasonable-vscode-starter-cc3cb5691427a0791261.js.map"
     ],
     "path---package-stroiman-respect": [
-      "path---package-stroiman-respect-bffa086c96b66e520b5b.js",
-      "path---package-stroiman-respect-bffa086c96b66e520b5b.js.map"
+      "path---package-stroiman-respect-1dea95f548a308fb1310.js",
+      "path---package-stroiman-respect-1dea95f548a308fb1310.js.map"
     ],
     "component---src-pages-unpublished-js": [
       "component---src-pages-unpublished-js-337928eb3906109d85ac.js",
@@ -101,372 +101,372 @@
       "component---src-templates-platform-js-3f820e08ecae672b7341.js.map"
     ],
     "path---package-unpublished-glennsl-bs-refmt": [
-      "path---package-unpublished-glennsl-bs-refmt-bb215a48dd09b7c0a010.js",
-      "path---package-unpublished-glennsl-bs-refmt-bb215a48dd09b7c0a010.js.map"
+      "path---package-unpublished-glennsl-bs-refmt-09ae1a49c00507ef94d6.js",
+      "path---package-unpublished-glennsl-bs-refmt-09ae1a49c00507ef94d6.js.map"
     ],
     "path---package-unpublished-reasonml-community-bs-immutablejs": [
-      "path---package-unpublished-reasonml-community-bs-immutablejs-e79d8124a2d1b5722db9.js",
-      "path---package-unpublished-reasonml-community-bs-immutablejs-e79d8124a2d1b5722db9.js.map"
+      "path---package-unpublished-reasonml-community-bs-immutablejs-e24eb1ba6387de4a7af5.js",
+      "path---package-unpublished-reasonml-community-bs-immutablejs-e24eb1ba6387de4a7af5.js.map"
     ],
     "component---src-pages-index-js": [
       "component---src-pages-index-js-54a78872bee472f24b94.js",
       "component---src-pages-index-js-54a78872bee472f24b94.js.map"
     ],
     "path---package-reasonml-in-browser": [
-      "path---package-reasonml-in-browser-576e6c038631bd279d59.js",
-      "path---package-reasonml-in-browser-576e6c038631bd279d59.js.map"
+      "path---package-reasonml-in-browser-d4bc53a3bc4be76825e1.js",
+      "path---package-reasonml-in-browser-d4bc53a3bc4be76825e1.js.map"
     ],
     "path---keyword-async": [
-      "path---keyword-async-fd89258f6e259d45116a.js",
-      "path---keyword-async-fd89258f6e259d45116a.js.map"
+      "path---keyword-async-21f7322f888169988b6d.js",
+      "path---keyword-async-21f7322f888169988b6d.js.map"
     ],
     "path---package-bs-css-core": [
-      "path---package-bs-css-core-6f418f0f170c6101c27d.js",
-      "path---package-bs-css-core-6f418f0f170c6101c27d.js.map"
+      "path---package-bs-css-core-0ae5538a21f3dc0a1bbf.js",
+      "path---package-bs-css-core-0ae5538a21f3dc0a1bbf.js.map"
     ],
     "path---package-unpublished-reasonml-community-bs-glob": [
-      "path---package-unpublished-reasonml-community-bs-glob-93cde2f5c24b70cd3e9c.js",
-      "path---package-unpublished-reasonml-community-bs-glob-93cde2f5c24b70cd3e9c.js.map"
+      "path---package-unpublished-reasonml-community-bs-glob-c6b65052e831a54000c8.js",
+      "path---package-unpublished-reasonml-community-bs-glob-c6b65052e831a54000c8.js.map"
     ],
     "path---package-regql": [
-      "path---package-regql-918c08c9c0772ace258b.js",
-      "path---package-regql-918c08c9c0772ace258b.js.map"
+      "path---package-regql-97ac13d5b6a90747ac6c.js",
+      "path---package-regql-97ac13d5b6a90747ac6c.js.map"
     ],
     "path---package-unpublished-reasonml-community-bs-history": [
-      "path---package-unpublished-reasonml-community-bs-history-a3c7a9aa109f29146d04.js",
-      "path---package-unpublished-reasonml-community-bs-history-a3c7a9aa109f29146d04.js.map"
+      "path---package-unpublished-reasonml-community-bs-history-d9d350b1f22d3a8c7522.js",
+      "path---package-unpublished-reasonml-community-bs-history-d9d350b1f22d3a8c7522.js.map"
     ],
     "path---package-bs-mochajs": [
-      "path---package-bs-mochajs-f42b0ae110cde3b2957f.js",
-      "path---package-bs-mochajs-f42b0ae110cde3b2957f.js.map"
+      "path---package-bs-mochajs-342018a66807b7c18142.js",
+      "path---package-bs-mochajs-342018a66807b7c18142.js.map"
     ],
     "path---package-bs-elm": [
-      "path---package-bs-elm-3b2087c23501a00f4561.js",
-      "path---package-bs-elm-3b2087c23501a00f4561.js.map"
+      "path---package-bs-elm-6b668f6f1206318c7a79.js",
+      "path---package-bs-elm-6b668f6f1206318c7a79.js.map"
     ],
     "path---package-esy-peasy": [
-      "path---package-esy-peasy-eb0ec46ecc13ee269dbd.js",
-      "path---package-esy-peasy-eb0ec46ecc13ee269dbd.js.map"
+      "path---package-esy-peasy-06bc90c3edb4afafec23.js",
+      "path---package-esy-peasy-06bc90c3edb4afafec23.js.map"
     ],
     "path---package-bs-cookie-parser": [
-      "path---package-bs-cookie-parser-d1f9a75dc0a9df7163a5.js",
-      "path---package-bs-cookie-parser-d1f9a75dc0a9df7163a5.js.map"
+      "path---package-bs-cookie-parser-6b66dbbead38e3f34245.js",
+      "path---package-bs-cookie-parser-6b66dbbead38e3f34245.js.map"
     ],
     "path---package-re-classnames": [
-      "path---package-re-classnames-ce445996389d4b96d9e2.js",
-      "path---package-re-classnames-ce445996389d4b96d9e2.js.map"
+      "path---package-re-classnames-799eab5093bd1f6d87d6.js",
+      "path---package-re-classnames-799eab5093bd1f6d87d6.js.map"
     ],
     "path---keyword-boilerplate": [
-      "path---keyword-boilerplate-39c5f2813e5c7870a3c5.js",
-      "path---keyword-boilerplate-39c5f2813e5c7870a3c5.js.map"
+      "path---keyword-boilerplate-ce8f3aa1d9c624db71c1.js",
+      "path---keyword-boilerplate-ce8f3aa1d9c624db71c1.js.map"
     ],
     "path---package-bs-snabbdom": [
-      "path---package-bs-snabbdom-0724ea391d0728dc6150.js",
-      "path---package-bs-snabbdom-0724ea391d0728dc6150.js.map"
+      "path---package-bs-snabbdom-0b78179bb93fcf8b4f2a.js",
+      "path---package-bs-snabbdom-0b78179bb93fcf8b4f2a.js.map"
     ],
     "path---package-bs-react-pdf": [
-      "path---package-bs-react-pdf-bbe38df8118b8d32e678.js",
-      "path---package-bs-react-pdf-bbe38df8118b8d32e678.js.map"
+      "path---package-bs-react-pdf-e0df69584013c578f667.js",
+      "path---package-bs-react-pdf-e0df69584013c578f667.js.map"
     ],
     "path---package-bs-mysql": [
-      "path---package-bs-mysql-803a3e20a026cbab70bd.js",
-      "path---package-bs-mysql-803a3e20a026cbab70bd.js.map"
+      "path---package-bs-mysql-a484dab862dcc4e6c32d.js",
+      "path---package-bs-mysql-a484dab862dcc4e6c32d.js.map"
     ],
     "path---package-bs-webworkers": [
-      "path---package-bs-webworkers-6aab0f37e63031285834.js",
-      "path---package-bs-webworkers-6aab0f37e63031285834.js.map"
+      "path---package-bs-webworkers-054d92cf27583ed92ca1.js",
+      "path---package-bs-webworkers-054d92cf27583ed92ca1.js.map"
     ],
     "path---package-bs-rebass": [
-      "path---package-bs-rebass-fe8cbb2d41eb5f54dc07.js",
-      "path---package-bs-rebass-fe8cbb2d41eb5f54dc07.js.map"
+      "path---package-bs-rebass-5f98ea99a8064194a4b7.js",
+      "path---package-bs-rebass-5f98ea99a8064194a4b7.js.map"
     ],
     "path---package-bs-blueprintjs-labs": [
-      "path---package-bs-blueprintjs-labs-ff2fb98521b0314d6eda.js",
-      "path---package-bs-blueprintjs-labs-ff2fb98521b0314d6eda.js.map"
+      "path---package-bs-blueprintjs-labs-20a3d2777a6d5be59eec.js",
+      "path---package-bs-blueprintjs-labs-20a3d2777a6d5be59eec.js.map"
     ],
     "path---package-unpublished-jchavarri-chrome-extension-starter-reason-react": [
-      "path---package-unpublished-jchavarri-chrome-extension-starter-reason-react-28ca3e949ada38a2aee4.js",
-      "path---package-unpublished-jchavarri-chrome-extension-starter-reason-react-28ca3e949ada38a2aee4.js.map"
+      "path---package-unpublished-jchavarri-chrome-extension-starter-reason-react-88e7033ccb36bbce9bf1.js",
+      "path---package-unpublished-jchavarri-chrome-extension-starter-reason-react-88e7033ccb36bbce9bf1.js.map"
     ],
     "component---src-templates-keyword-js": [
       "component---src-templates-keyword-js-52ba8299a526bd172648.js",
       "component---src-templates-keyword-js-52ba8299a526bd172648.js.map"
     ],
     "path---package-unpublished-glennsl-bs-benchmarkjs": [
-      "path---package-unpublished-glennsl-bs-benchmarkjs-3fefb289b78166855be9.js",
-      "path---package-unpublished-glennsl-bs-benchmarkjs-3fefb289b78166855be9.js.map"
+      "path---package-unpublished-glennsl-bs-benchmarkjs-438107d9e68738fe52db.js",
+      "path---package-unpublished-glennsl-bs-benchmarkjs-438107d9e68738fe52db.js.map"
     ],
     "path---": [
       "path----131f9aef94525eeb6ecd.js",
       "path----131f9aef94525eeb6ecd.js.map"
     ],
     "path---package-bs-glamor": [
-      "path---package-bs-glamor-22e1e2e4b9915d845657.js",
-      "path---package-bs-glamor-22e1e2e4b9915d845657.js.map"
+      "path---package-bs-glamor-9d501fb8028310633987.js",
+      "path---package-bs-glamor-9d501fb8028310633987.js.map"
     ],
     "path---package-bs-abstract": [
-      "path---package-bs-abstract-dca69aa36506caf96b5c.js",
-      "path---package-bs-abstract-dca69aa36506caf96b5c.js.map"
+      "path---package-bs-abstract-18c8c51f613eed7149ba.js",
+      "path---package-bs-abstract-18c8c51f613eed7149ba.js.map"
     ],
     "path---package-bs-downshift": [
-      "path---package-bs-downshift-531675b8c07a11f4b11b.js",
-      "path---package-bs-downshift-531675b8c07a11f4b11b.js.map"
+      "path---package-bs-downshift-a69bf70be6dc594518e5.js",
+      "path---package-bs-downshift-a69bf70be6dc594518e5.js.map"
     ],
     "path---platform-any": [
-      "path---platform-any-f45911b64be1ed46c62f.js",
-      "path---platform-any-f45911b64be1ed46c62f.js.map"
+      "path---platform-any-d67a59540d38d880538a.js",
+      "path---platform-any-d67a59540d38d880538a.js.map"
     ],
     "path---keyword-web-framework": [
-      "path---keyword-web-framework-9b07c17c7a8d64280d1d.js",
-      "path---keyword-web-framework-9b07c17c7a8d64280d1d.js.map"
+      "path---keyword-web-framework-0e31d1b7bd22315a41ec.js",
+      "path---keyword-web-framework-0e31d1b7bd22315a41ec.js.map"
     ],
     "path---package-bs-material-ui-icons": [
-      "path---package-bs-material-ui-icons-82d250b02ad46ce7553c.js",
-      "path---package-bs-material-ui-icons-82d250b02ad46ce7553c.js.map"
+      "path---package-bs-material-ui-icons-9d42e3e788c33e9cddb0.js",
+      "path---package-bs-material-ui-icons-9d42e3e788c33e9cddb0.js.map"
     ],
     "path---package-bs-svg-attachment": [
-      "path---package-bs-svg-attachment-00870b4108ff44b1929d.js",
-      "path---package-bs-svg-attachment-00870b4108ff44b1929d.js.map"
+      "path---package-bs-svg-attachment-4ec2752c5053944568b3.js",
+      "path---package-bs-svg-attachment-4ec2752c5053944568b3.js.map"
     ],
     "path---package-unpublished-kennetpostigo-lwt-node-starter": [
-      "path---package-unpublished-kennetpostigo-lwt-node-starter-e4f67ec7a9b4c164b63e.js",
-      "path---package-unpublished-kennetpostigo-lwt-node-starter-e4f67ec7a9b4c164b63e.js.map"
+      "path---package-unpublished-kennetpostigo-lwt-node-starter-f2b84ce9c4f393175fd8.js",
+      "path---package-unpublished-kennetpostigo-lwt-node-starter-f2b84ce9c4f393175fd8.js.map"
     ],
     "path---keyword-filesystem": [
-      "path---keyword-filesystem-e1b1467f058d1ae7310e.js",
-      "path---keyword-filesystem-e1b1467f058d1ae7310e.js.map"
+      "path---keyword-filesystem-849b970cdad6ad4ee236.js",
+      "path---keyword-filesystem-849b970cdad6ad4ee236.js.map"
     ],
     "path---package-bucklescript-phx": [
-      "path---package-bucklescript-phx-b6b66469dc275256691e.js",
-      "path---package-bucklescript-phx-b6b66469dc275256691e.js.map"
+      "path---package-bucklescript-phx-526b25cc7481de332d76.js",
+      "path---package-bucklescript-phx-526b25cc7481de332d76.js.map"
     ],
     "path---package-bs-knex": [
-      "path---package-bs-knex-45a8c2b7030c641c4a78.js",
-      "path---package-bs-knex-45a8c2b7030c641c4a78.js.map"
+      "path---package-bs-knex-834921eff07dddddb5b9.js",
+      "path---package-bs-knex-834921eff07dddddb5b9.js.map"
     ],
     "path---package-unpublished-bsansouci-rewebrtc": [
-      "path---package-unpublished-bsansouci-rewebrtc-732c1d698a389c375c1a.js",
-      "path---package-unpublished-bsansouci-rewebrtc-732c1d698a389c375c1a.js.map"
+      "path---package-unpublished-bsansouci-rewebrtc-b044b81da2f19b897073.js",
+      "path---package-unpublished-bsansouci-rewebrtc-b044b81da2f19b897073.js.map"
     ],
     "path---package-bs-material-ui-pickers": [
-      "path---package-bs-material-ui-pickers-248272dd718c72a453b5.js",
-      "path---package-bs-material-ui-pickers-248272dd718c72a453b5.js.map"
+      "path---package-bs-material-ui-pickers-366fa5b26b14ae060a0b.js",
+      "path---package-bs-material-ui-pickers-366fa5b26b14ae060a0b.js.map"
     ],
     "path---package-ppx-bsx": [
-      "path---package-ppx-bsx-6c0b898796880d6297e5.js",
-      "path---package-ppx-bsx-6c0b898796880d6297e5.js.map"
+      "path---package-ppx-bsx-f99c87e35e13106316b0.js",
+      "path---package-ppx-bsx-f99c87e35e13106316b0.js.map"
     ],
     "path---package-reason-async": [
-      "path---package-reason-async-ab58efdfc0ffc46e6ec6.js",
-      "path---package-reason-async-ab58efdfc0ffc46e6ec6.js.map"
+      "path---package-reason-async-fc6234a46f7f263aaa6f.js",
+      "path---package-reason-async-fc6234a46f7f263aaa6f.js.map"
     ],
     "path---keyword-platform-api": [
-      "path---keyword-platform-api-112fde731052f56a66f6.js",
-      "path---keyword-platform-api-112fde731052f56a66f6.js.map"
+      "path---keyword-platform-api-0b6bf4d68ef4c8804866.js",
+      "path---keyword-platform-api-0b6bf4d68ef4c8804866.js.map"
     ],
     "path---package-bs-ant-design": [
-      "path---package-bs-ant-design-7ead027227f9be20a663.js",
-      "path---package-bs-ant-design-7ead027227f9be20a663.js.map"
+      "path---package-bs-ant-design-dc8e9deae7c8b173b262.js",
+      "path---package-bs-ant-design-dc8e9deae7c8b173b262.js.map"
     ],
     "path---package-babel-plugin-bucklescript": [
-      "path---package-babel-plugin-bucklescript-8ef08aa33e806a96161a.js",
-      "path---package-babel-plugin-bucklescript-8ef08aa33e806a96161a.js.map"
+      "path---package-babel-plugin-bucklescript-40f8f7949eb17ab8fcb2.js",
+      "path---package-babel-plugin-bucklescript-40f8f7949eb17ab8fcb2.js.map"
     ],
     "path---package-unpublished-glennsl-quickiecheck": [
-      "path---package-unpublished-glennsl-quickiecheck-52498a07fc3da9bafddb.js",
-      "path---package-unpublished-glennsl-quickiecheck-52498a07fc3da9bafddb.js.map"
+      "path---package-unpublished-glennsl-quickiecheck-9831cea3723320f60115.js",
+      "path---package-unpublished-glennsl-quickiecheck-9831cea3723320f60115.js.map"
     ],
     "path---package-bs-react-native": [
-      "path---package-bs-react-native-53b1b0d7ba2bb0f82a09.js",
-      "path---package-bs-react-native-53b1b0d7ba2bb0f82a09.js.map"
+      "path---package-bs-react-native-7fd3c7079650ee07899d.js",
+      "path---package-bs-react-native-7fd3c7079650ee07899d.js.map"
     ],
     "path---keyword-dom": [
-      "path---keyword-dom-0443c0685c35dcb881a8.js",
-      "path---keyword-dom-0443c0685c35dcb881a8.js.map"
+      "path---keyword-dom-76ec0d67f93d6d477361.js",
+      "path---keyword-dom-76ec0d67f93d6d477361.js.map"
     ],
     "path---package-reglinterface": [
-      "path---package-reglinterface-be8dccb9826dd710c213.js",
-      "path---package-reglinterface-be8dccb9826dd710c213.js.map"
+      "path---package-reglinterface-914cbd600c100802364a.js",
+      "path---package-reglinterface-914cbd600c100802364a.js.map"
     ],
     "path---package-unpublished-glennsl-infinite-jest": [
-      "path---package-unpublished-glennsl-infinite-jest-3642c2d26bc2afa7a311.js",
-      "path---package-unpublished-glennsl-infinite-jest-3642c2d26bc2afa7a311.js.map"
+      "path---package-unpublished-glennsl-infinite-jest-395e9dc3b89f712e67cb.js",
+      "path---package-unpublished-glennsl-infinite-jest-395e9dc3b89f712e67cb.js.map"
     ],
     "path---keyword-cli": [
-      "path---keyword-cli-249634a8e6f2fe7bc88d.js",
-      "path---keyword-cli-249634a8e6f2fe7bc88d.js.map"
+      "path---keyword-cli-e522cd94a32cf2755b36.js",
+      "path---keyword-cli-e522cd94a32cf2755b36.js.map"
     ],
     "path---package-reglios": [
-      "path---package-reglios-463af37a2b77d374b55c.js",
-      "path---package-reglios-463af37a2b77d374b55c.js.map"
+      "path---package-reglios-5c2a17c847be81625008.js",
+      "path---package-reglios-5c2a17c847be81625008.js.map"
     ],
     "path---package-bs-dataloader": [
-      "path---package-bs-dataloader-5ab73c4d8629e0b55a0e.js",
-      "path---package-bs-dataloader-5ab73c4d8629e0b55a0e.js.map"
+      "path---package-bs-dataloader-27c78e5b20c2a8c3c004.js",
+      "path---package-bs-dataloader-27c78e5b20c2a8c3c004.js.map"
     ],
     "path---package-re-formality": [
-      "path---package-re-formality-d8be10ce276ccc0a8130.js",
-      "path---package-re-formality-d8be10ce276ccc0a8130.js.map"
+      "path---package-re-formality-b206b3b61414c6d54c92.js",
+      "path---package-re-formality-b206b3b61414c6d54c92.js.map"
     ],
     "path---package-bs-ocaml-protoc-json": [
-      "path---package-bs-ocaml-protoc-json-892c6eb26bb7defc7809.js",
-      "path---package-bs-ocaml-protoc-json-892c6eb26bb7defc7809.js.map"
+      "path---package-bs-ocaml-protoc-json-a6066addd486b794b000.js",
+      "path---package-bs-ocaml-protoc-json-a6066addd486b794b000.js.map"
     ],
     "path---category-tool": [
-      "path---category-tool-1ffa74a36a0440f503bc.js",
-      "path---category-tool-1ffa74a36a0440f503bc.js.map"
+      "path---category-tool-24b5d99cd112becf16c0.js",
+      "path---category-tool-24b5d99cd112becf16c0.js.map"
     ],
     "path---package-reason-node": [
-      "path---package-reason-node-47428d9118ad0467398a.js",
-      "path---package-reason-node-47428d9118ad0467398a.js.map"
+      "path---package-reason-node-6efba096012a5c6eb2ce.js",
+      "path---package-reason-node-6efba096012a5c6eb2ce.js.map"
     ],
     "path---package-bs-sentia-promise": [
-      "path---package-bs-sentia-promise-e97646971161fccb8fd6.js",
-      "path---package-bs-sentia-promise-e97646971161fccb8fd6.js.map"
+      "path---package-bs-sentia-promise-63f7c56c130e90c9e2b4.js",
+      "path---package-bs-sentia-promise-63f7c56c130e90c9e2b4.js.map"
     ],
     "path---keyword-geolocation": [
-      "path---keyword-geolocation-0f7f357d3ea3bf69834a.js",
-      "path---keyword-geolocation-0f7f357d3ea3bf69834a.js.map"
+      "path---keyword-geolocation-5557bcb365c42914cc0f.js",
+      "path---keyword-geolocation-5557bcb365c42914cc0f.js.map"
     ],
     "path---keyword-testing": [
-      "path---keyword-testing-725ade3dcf6171c65586.js",
-      "path---keyword-testing-725ade3dcf6171c65586.js.map"
+      "path---keyword-testing-41362772517b6e8a3f4f.js",
+      "path---keyword-testing-41362772517b6e8a3f4f.js.map"
     ],
     "path---package-bs-mocha": [
-      "path---package-bs-mocha-92cc0e681f39c50ee226.js",
-      "path---package-bs-mocha-92cc0e681f39c50ee226.js.map"
+      "path---package-bs-mocha-8c9d58a1f6ced9604f0a.js",
+      "path---package-bs-mocha-8c9d58a1f6ced9604f0a.js.map"
     ],
     "path---package-glennsl-bs-jest": [
-      "path---package-glennsl-bs-jest-9ae5196eccb1bf51da96.js",
-      "path---package-glennsl-bs-jest-9ae5196eccb1bf51da96.js.map"
+      "path---package-glennsl-bs-jest-1a5a6d25992944132045.js",
+      "path---package-glennsl-bs-jest-1a5a6d25992944132045.js.map"
     ],
     "path---package-bs-graphql-scalar": [
-      "path---package-bs-graphql-scalar-b72c20decfb34e68f88b.js",
-      "path---package-bs-graphql-scalar-b72c20decfb34e68f88b.js.map"
+      "path---package-bs-graphql-scalar-48d9fd9d1f72e9867093.js",
+      "path---package-bs-graphql-scalar-48d9fd9d1f72e9867093.js.map"
     ],
     "path---package-tween-re": [
-      "path---package-tween-re-f616ee75831ae30f3166.js",
-      "path---package-tween-re-f616ee75831ae30f3166.js.map"
+      "path---package-tween-re-976d94fdfdb944560562.js",
+      "path---package-tween-re-976d94fdfdb944560562.js.map"
     ],
     "path---package-unpublished-reasonml-community-bs-discord-js": [
-      "path---package-unpublished-reasonml-community-bs-discord-js-66caf38e6aae496a2eaf.js",
-      "path---package-unpublished-reasonml-community-bs-discord-js-66caf38e6aae496a2eaf.js.map"
+      "path---package-unpublished-reasonml-community-bs-discord-js-d111061dce3275ddb008.js",
+      "path---package-unpublished-reasonml-community-bs-discord-js-d111061dce3275ddb008.js.map"
     ],
     "path---package-bs-restyled": [
-      "path---package-bs-restyled-33774535b7740b42b07a.js",
-      "path---package-bs-restyled-33774535b7740b42b07a.js.map"
+      "path---package-bs-restyled-234379d4cda4c75f6115.js",
+      "path---package-bs-restyled-234379d4cda4c75f6115.js.map"
     ],
     "path---keyword-ssr": [
-      "path---keyword-ssr-add6001e7007ee158d1b.js",
-      "path---keyword-ssr-add6001e7007ee158d1b.js.map"
+      "path---keyword-ssr-7feb9e4d8e35ac46d329.js",
+      "path---keyword-ssr-7feb9e4d8e35ac46d329.js.map"
     ],
     "path---keyword-data-fetching": [
-      "path---keyword-data-fetching-2100c8a0fe0b9c5a38c3.js",
-      "path---keyword-data-fetching-2100c8a0fe0b9c5a38c3.js.map"
+      "path---keyword-data-fetching-621b83d9eb2b39d803c0.js",
+      "path---keyword-data-fetching-621b83d9eb2b39d803c0.js.map"
     ],
     "path---package-astrada-bs-styletron-react": [
-      "path---package-astrada-bs-styletron-react-aeaea496e6ab5afb5841.js",
-      "path---package-astrada-bs-styletron-react-aeaea496e6ab5afb5841.js.map"
+      "path---package-astrada-bs-styletron-react-912cebdbebfdcbf85ace.js",
+      "path---package-astrada-bs-styletron-react-912cebdbebfdcbf85ace.js.map"
     ],
     "path---keyword-collections": [
-      "path---keyword-collections-da4633fff89227c1bff4.js",
-      "path---keyword-collections-da4633fff89227c1bff4.js.map"
+      "path---keyword-collections-18de70f9ae3a715c8315.js",
+      "path---keyword-collections-18de70f9ae3a715c8315.js.map"
     ],
     "path---package-unpublished-glennsl-bs-jsx-rewriter": [
-      "path---package-unpublished-glennsl-bs-jsx-rewriter-ad012dd49f195789fae2.js",
-      "path---package-unpublished-glennsl-bs-jsx-rewriter-ad012dd49f195789fae2.js.map"
+      "path---package-unpublished-glennsl-bs-jsx-rewriter-8b1097fc9ae02261e1ce.js",
+      "path---package-unpublished-glennsl-bs-jsx-rewriter-8b1097fc9ae02261e1ce.js.map"
     ],
     "path---package-reason-these": [
-      "path---package-reason-these-5e9b854e21c200a47868.js",
-      "path---package-reason-these-5e9b854e21c200a47868.js.map"
+      "path---package-reason-these-f8a6f5e6be3d17f32f5b.js",
+      "path---package-reason-these-f8a6f5e6be3d17f32f5b.js.map"
     ],
     "path---keyword-code-generation": [
-      "path---keyword-code-generation-ff21f7d788e114956fb8.js",
-      "path---keyword-code-generation-ff21f7d788e114956fb8.js.map"
+      "path---keyword-code-generation-61be2b8955cf363abc22.js",
+      "path---keyword-code-generation-61be2b8955cf363abc22.js.map"
     ],
     "path---package-unpublished-reasonml-community-bs-socket-io": [
-      "path---package-unpublished-reasonml-community-bs-socket-io-55e7023e4e5986c01e6b.js",
-      "path---package-unpublished-reasonml-community-bs-socket-io-55e7023e4e5986c01e6b.js.map"
+      "path---package-unpublished-reasonml-community-bs-socket-io-9cb8bcf08e8dbf6bdbbd.js",
+      "path---package-unpublished-reasonml-community-bs-socket-io-9cb8bcf08e8dbf6bdbbd.js.map"
     ],
     "path---package-stats-re": [
-      "path---package-stats-re-b7fa13d6194dfca09f48.js",
-      "path---package-stats-re-b7fa13d6194dfca09f48.js.map"
+      "path---package-stats-re-6a5d3f3c45d26dc40e1d.js",
+      "path---package-stats-re-6a5d3f3c45d26dc40e1d.js.map"
     ],
     "path---package-json-r": [
-      "path---package-json-r-380075e40b6558b68ce5.js",
-      "path---package-json-r-380075e40b6558b68ce5.js.map"
+      "path---package-json-r-12805faf8bb7320193a7.js",
+      "path---package-json-r-12805faf8bb7320193a7.js.map"
     ],
     "path---package-unpublished-andrew-kvalheim-bs-geofire": [
-      "path---package-unpublished-andrew-kvalheim-bs-geofire-19ced9f290797316b8f3.js",
-      "path---package-unpublished-andrew-kvalheim-bs-geofire-19ced9f290797316b8f3.js.map"
+      "path---package-unpublished-andrew-kvalheim-bs-geofire-11148497296678108175.js",
+      "path---package-unpublished-andrew-kvalheim-bs-geofire-11148497296678108175.js.map"
     ],
     "component---src-layouts-index-js": [
       "component---src-layouts-index-js-cf6efd1d973098693aae.js",
       "component---src-layouts-index-js-cf6efd1d973098693aae.js.map"
     ],
     "path---package-astrada-bs-react-fela": [
-      "path---package-astrada-bs-react-fela-8436d5d7457fa65c6294.js",
-      "path---package-astrada-bs-react-fela-8436d5d7457fa65c6294.js.map"
+      "path---package-astrada-bs-react-fela-4b274221b4300864af86.js",
+      "path---package-astrada-bs-react-fela-4b274221b4300864af86.js.map"
     ],
     "path---package-bs-amplitude": [
-      "path---package-bs-amplitude-19b4c7292dd96b72e911.js",
-      "path---package-bs-amplitude-19b4c7292dd96b72e911.js.map"
+      "path---package-bs-amplitude-b3cffccfc2734d4125af.js",
+      "path---package-bs-amplitude-b3cffccfc2734d4125af.js.map"
     ],
     "path---platform-native": [
-      "path---platform-native-9eb487fb09694770a69a.js",
-      "path---platform-native-9eb487fb09694770a69a.js.map"
+      "path---platform-native-89ef84f6369ffd391a80.js",
+      "path---platform-native-89ef84f6369ffd391a80.js.map"
     ],
     "path---package-bs-nprogress": [
-      "path---package-bs-nprogress-78ccc6b2392ca134dde0.js",
-      "path---package-bs-nprogress-78ccc6b2392ca134dde0.js.map"
+      "path---package-bs-nprogress-f03397d4ee7d2f34410a.js",
+      "path---package-bs-nprogress-f03397d4ee7d2f34410a.js.map"
     ],
     "path---package-re-localforage": [
-      "path---package-re-localforage-0bfb6a15da39a97286f8.js",
-      "path---package-re-localforage-0bfb6a15da39a97286f8.js.map"
+      "path---package-re-localforage-ff7facf72677595b1095.js",
+      "path---package-re-localforage-ff7facf72677595b1095.js.map"
     ],
     "path---package-bs-ocaml-protoc": [
-      "path---package-bs-ocaml-protoc-31f77307bda57253dd54.js",
-      "path---package-bs-ocaml-protoc-31f77307bda57253dd54.js.map"
+      "path---package-bs-ocaml-protoc-7b4c9301285d5514c715.js",
+      "path---package-bs-ocaml-protoc-7b4c9301285d5514c715.js.map"
     ],
     "path---keyword-sql": [
-      "path---keyword-sql-5fc559eb2af1e13a0442.js",
-      "path---keyword-sql-5fc559eb2af1e13a0442.js.map"
+      "path---keyword-sql-e1a64d95f884d1141635.js",
+      "path---keyword-sql-e1a64d95f884d1141635.js.map"
     ],
     "path---package-glennsl-rebug": [
-      "path---package-glennsl-rebug-5a17c659d48b52c9eb50.js",
-      "path---package-glennsl-rebug-5a17c659d48b52c9eb50.js.map"
+      "path---package-glennsl-rebug-85853ba45bd6944cac6d.js",
+      "path---package-glennsl-rebug-85853ba45bd6944cac6d.js.map"
     ],
     "path---package-bs-material-ui": [
-      "path---package-bs-material-ui-2d1bfdadbf9ccb924adc.js",
-      "path---package-bs-material-ui-2d1bfdadbf9ccb924adc.js.map"
+      "path---package-bs-material-ui-c04a1291bd6e0e8f4598.js",
+      "path---package-bs-material-ui-c04a1291bd6e0e8f4598.js.map"
     ],
     "path---keyword-real-time-communication": [
-      "path---keyword-real-time-communication-f1c2729cec359a9ef7d9.js",
-      "path---keyword-real-time-communication-f1c2729cec359a9ef7d9.js.map"
+      "path---keyword-real-time-communication-d88070b1524707ad37b2.js",
+      "path---keyword-real-time-communication-d88070b1524707ad37b2.js.map"
     ],
     "path---keyword-maps": [
-      "path---keyword-maps-79fde495ad63a82b0def.js",
-      "path---keyword-maps-79fde495ad63a82b0def.js.map"
+      "path---keyword-maps-bbe0b69d4dc0d696e8e5.js",
+      "path---keyword-maps-bbe0b69d4dc0d696e8e5.js.map"
     ],
     "path---package-bs-react-intl": [
-      "path---package-bs-react-intl-8a1cd8abefa76be8e165.js",
-      "path---package-bs-react-intl-8a1cd8abefa76be8e165.js.map"
+      "path---package-bs-react-intl-2605109fd8df16930e17.js",
+      "path---package-bs-react-intl-2605109fd8df16930e17.js.map"
     ],
     "path---package-bs-aeson": [
-      "path---package-bs-aeson-029a3f8aec9174327c5f.js",
-      "path---package-bs-aeson-029a3f8aec9174327c5f.js.map"
+      "path---package-bs-aeson-5a827dbbde6443c4d52b.js",
+      "path---package-bs-aeson-5a827dbbde6443c4d52b.js.map"
     ],
     "path---package-unpublished-slogsdon-reasonably-reactive-rust": [
-      "path---package-unpublished-slogsdon-reasonably-reactive-rust-44f73eb12438f69467ce.js",
-      "path---package-unpublished-slogsdon-reasonably-reactive-rust-44f73eb12438f69467ce.js.map"
+      "path---package-unpublished-slogsdon-reasonably-reactive-rust-ba0295ba079fa81e599b.js",
+      "path---package-unpublished-slogsdon-reasonably-reactive-rust-ba0295ba079fa81e599b.js.map"
     ],
     "path---package-glennsl-rebase": [
-      "path---package-glennsl-rebase-bf9f63855ab694573ba2.js",
-      "path---package-glennsl-rebase-bf9f63855ab694573ba2.js.map"
+      "path---package-glennsl-rebase-b4abe8381a6717bbdc99.js",
+      "path---package-glennsl-rebase-b4abe8381a6717bbdc99.js.map"
     ],
     "path---keyword-state-management": [
-      "path---keyword-state-management-83126f63891b20773c13.js",
-      "path---keyword-state-management-83126f63891b20773c13.js.map"
+      "path---keyword-state-management-0a10930aa4d0bc4499f9.js",
+      "path---keyword-state-management-0a10930aa4d0bc4499f9.js.map"
     ],
     "path---error-404": [
       "path---error-404-a0e39f21c11f6a62c5ab.js",
@@ -477,136 +477,136 @@
       "component---src-pages-all-js-fb762df125547f5c4d67.js.map"
     ],
     "path---package-generator-reason-react-class": [
-      "path---package-generator-reason-react-class-bf7d8730669bd59dd11f.js",
-      "path---package-generator-reason-react-class-bf7d8730669bd59dd11f.js.map"
+      "path---package-generator-reason-react-class-68d14248dc1d706d1e4f.js",
+      "path---package-generator-reason-react-class-68d14248dc1d706d1e4f.js.map"
     ],
     "path---keyword-math": [
-      "path---keyword-math-99726502270fb8e35003.js",
-      "path---keyword-math-99726502270fb8e35003.js.map"
+      "path---keyword-math-8ac0a4159e83e6ce95b6.js",
+      "path---keyword-math-8ac0a4159e83e6ce95b6.js.map"
     ],
     "path---package-bs-promise-router": [
-      "path---package-bs-promise-router-3732d31492ff170e06b9.js",
-      "path---package-bs-promise-router-3732d31492ff170e06b9.js.map"
+      "path---package-bs-promise-router-03f0b428f1c48658944b.js",
+      "path---package-bs-promise-router-03f0b428f1c48658944b.js.map"
     ],
     "path---package-bs-effects": [
-      "path---package-bs-effects-3be320f6c35525f3a26f.js",
-      "path---package-bs-effects-3be320f6c35525f3a26f.js.map"
+      "path---package-bs-effects-2ccf224493b3ddbd9e62.js",
+      "path---package-bs-effects-2ccf224493b3ddbd9e62.js.map"
     ],
     "path---package-glennsl-bs-json": [
-      "path---package-glennsl-bs-json-cfb8e5c4efa4c1dd402d.js",
-      "path---package-glennsl-bs-json-cfb8e5c4efa4c1dd402d.js.map"
+      "path---package-glennsl-bs-json-0d3a98e7a4cc26e7a02f.js",
+      "path---package-glennsl-bs-json-0d3a98e7a4cc26e7a02f.js.map"
     ],
     "path---package-bs-blueprintjs-table": [
-      "path---package-bs-blueprintjs-table-8448bc451738b827fed9.js",
-      "path---package-bs-blueprintjs-table-8448bc451738b827fed9.js.map"
+      "path---package-bs-blueprintjs-table-dd83338dfecdf791bcd6.js",
+      "path---package-bs-blueprintjs-table-dd83338dfecdf791bcd6.js.map"
     ],
     "path---package-bs-numeral": [
-      "path---package-bs-numeral-d5530d010b1a7c84f4b9.js",
-      "path---package-bs-numeral-d5530d010b1a7c84f4b9.js.map"
+      "path---package-bs-numeral-f7d8d00afb0ccbaa9599.js",
+      "path---package-bs-numeral-f7d8d00afb0ccbaa9599.js.map"
     ],
     "path---package-bs-jsverify": [
-      "path---package-bs-jsverify-c8fbaed64c5843330b8c.js",
-      "path---package-bs-jsverify-c8fbaed64c5843330b8c.js.map"
+      "path---package-bs-jsverify-4fedd6e907a261a3d4cf.js",
+      "path---package-bs-jsverify-4fedd6e907a261a3d4cf.js.map"
     ],
     "path---package-reason-relay-scripts": [
-      "path---package-reason-relay-scripts-b7244fb6933a9d4a0a3f.js",
-      "path---package-reason-relay-scripts-b7244fb6933a9d4a0a3f.js.map"
+      "path---package-reason-relay-scripts-702878980902a08ac0ed.js",
+      "path---package-reason-relay-scripts-702878980902a08ac0ed.js.map"
     ],
     "path---package-unpublished-drejohnson-reason-webpack-ssr": [
-      "path---package-unpublished-drejohnson-reason-webpack-ssr-ae1e81b90ad07e99ed44.js",
-      "path---package-unpublished-drejohnson-reason-webpack-ssr-ae1e81b90ad07e99ed44.js.map"
+      "path---package-unpublished-drejohnson-reason-webpack-ssr-31808fe0bbd213232b53.js",
+      "path---package-unpublished-drejohnson-reason-webpack-ssr-31808fe0bbd213232b53.js.map"
     ],
     "path---package-stylite-re": [
-      "path---package-stylite-re-123849ba3f51c44bef20.js",
-      "path---package-stylite-re-123849ba3f51c44bef20.js.map"
+      "path---package-stylite-re-4e579c94eee96c6e0b52.js",
+      "path---package-stylite-re-4e579c94eee96c6e0b52.js.map"
     ],
     "path---keyword-json": [
-      "path---keyword-json-469cf84c4d1fd9ecbcde.js",
-      "path---keyword-json-469cf84c4d1fd9ecbcde.js.map"
+      "path---keyword-json-1cbf20de8a04e5263433.js",
+      "path---keyword-json-1cbf20de8a04e5263433.js.map"
     ],
     "path---package-bs-gcloud": [
-      "path---package-bs-gcloud-bfc7ff25b6a444184bbd.js",
-      "path---package-bs-gcloud-bfc7ff25b6a444184bbd.js.map"
+      "path---package-bs-gcloud-f538ec11b930db415c8a.js",
+      "path---package-bs-gcloud-f538ec11b930db415c8a.js.map"
     ],
     "path---package-re-sync": [
-      "path---package-re-sync-6ad60c65073e8d93ce55.js",
-      "path---package-re-sync-6ad60c65073e8d93ce55.js.map"
+      "path---package-re-sync-7b042c981e2e833b19d1.js",
+      "path---package-re-sync-7b042c981e2e833b19d1.js.map"
     ],
     "path---package-upgrade-reason-syntax": [
-      "path---package-upgrade-reason-syntax-7b1e4285ae0a24daa3f1.js",
-      "path---package-upgrade-reason-syntax-7b1e4285ae0a24daa3f1.js.map"
+      "path---package-upgrade-reason-syntax-469213ed34ce5606a003.js",
+      "path---package-upgrade-reason-syntax-469213ed34ce5606a003.js.map"
     ],
     "path---package-reason-nact": [
-      "path---package-reason-nact-ee06ce6d79618c6e7b62.js",
-      "path---package-reason-nact-ee06ce6d79618c6e7b62.js.map"
+      "path---package-reason-nact-dc536529fcd4b473c06f.js",
+      "path---package-reason-nact-dc536529fcd4b473c06f.js.map"
     ],
     "path---package-unpublished-aaronshaf-parcel-reasonml-starter": [
-      "path---package-unpublished-aaronshaf-parcel-reasonml-starter-d851722b04f23fd05b9a.js",
-      "path---package-unpublished-aaronshaf-parcel-reasonml-starter-d851722b04f23fd05b9a.js.map"
+      "path---package-unpublished-aaronshaf-parcel-reasonml-starter-094b483e7b6cd458e8e9.js",
+      "path---package-unpublished-aaronshaf-parcel-reasonml-starter-094b483e7b6cd458e8e9.js.map"
     ],
     "path---index": [
-      "path---index-4162699c8bb84c8f70a7.js",
-      "path---index-4162699c8bb84c8f70a7.js.map"
+      "path---index-3c8dc662f10c1869a311.js",
+      "path---index-3c8dc662f10c1869a311.js.map"
     ],
     "path---package-astrada-reason-react-toolbox": [
-      "path---package-astrada-reason-react-toolbox-74b155e48dbb6e3ee5bc.js",
-      "path---package-astrada-reason-react-toolbox-74b155e48dbb6e3ee5bc.js.map"
+      "path---package-astrada-reason-react-toolbox-d1362545e6441ae8d381.js",
+      "path---package-astrada-reason-react-toolbox-d1362545e6441ae8d381.js.map"
     ],
     "path---platform-browser": [
-      "path---platform-browser-ae12803486288d7f52b2.js",
-      "path---platform-browser-ae12803486288d7f52b2.js.map"
+      "path---platform-browser-d35e792a2916a9d35dff.js",
+      "path---platform-browser-d35e792a2916a9d35dff.js.map"
     ],
     "path---keyword-utilities": [
-      "path---keyword-utilities-537b55dde97d027dbcbd.js",
-      "path---keyword-utilities-537b55dde97d027dbcbd.js.map"
+      "path---keyword-utilities-6684cfeba4cea7484939.js",
+      "path---keyword-utilities-6684cfeba4cea7484939.js.map"
     ],
     "path---package-unpublished-zploskey-bs-puppeteer": [
-      "path---package-unpublished-zploskey-bs-puppeteer-ca185131a16a3d00b2ab.js",
-      "path---package-unpublished-zploskey-bs-puppeteer-ca185131a16a3d00b2ab.js.map"
+      "path---package-unpublished-zploskey-bs-puppeteer-938b0da71c5347eb18ee.js",
+      "path---package-unpublished-zploskey-bs-puppeteer-938b0da71c5347eb18ee.js.map"
     ],
     "path---package-bs-batteries": [
-      "path---package-bs-batteries-1c8f5d84676d44e7cc06.js",
-      "path---package-bs-batteries-1c8f5d84676d44e7cc06.js.map"
+      "path---package-bs-batteries-3c398b91df85bdadd908.js",
+      "path---package-bs-batteries-3c398b91df85bdadd908.js.map"
     ],
     "path---keyword-opengl": [
-      "path---keyword-opengl-d8beb7269c5c94d10134.js",
-      "path---keyword-opengl-d8beb7269c5c94d10134.js.map"
+      "path---keyword-opengl-334f90b502feaaa2e495.js",
+      "path---keyword-opengl-334f90b502feaaa2e495.js.map"
     ],
     "path---package-unpublished-codinglawyer-reason-react-boilerplate": [
-      "path---package-unpublished-codinglawyer-reason-react-boilerplate-bfa8012a857fed6638e4.js",
-      "path---package-unpublished-codinglawyer-reason-react-boilerplate-bfa8012a857fed6638e4.js.map"
+      "path---package-unpublished-codinglawyer-reason-react-boilerplate-d38dee28872a6c7e2ce6.js",
+      "path---package-unpublished-codinglawyer-reason-react-boilerplate-d38dee28872a6c7e2ce6.js.map"
     ],
     "path---package-phenomic-reason": [
-      "path---package-phenomic-reason-552874eb1fd8f2413c2f.js",
-      "path---package-phenomic-reason-552874eb1fd8f2413c2f.js.map"
+      "path---package-phenomic-reason-433d0440f67d3c757a97.js",
+      "path---package-phenomic-reason-433d0440f67d3c757a97.js.map"
     ],
     "path---keyword-nosql": [
-      "path---keyword-nosql-d3c138eca2e1f5d8d67a.js",
-      "path---keyword-nosql-d3c138eca2e1f5d8d67a.js.map"
+      "path---keyword-nosql-3180c2c716696c967930.js",
+      "path---keyword-nosql-3180c2c716696c967930.js.map"
     ],
     "path---keyword-date-time-manipulation": [
-      "path---keyword-date-time-manipulation-95e1e94b85b50eb06e5d.js",
-      "path---keyword-date-time-manipulation-95e1e94b85b50eb06e5d.js.map"
+      "path---keyword-date-time-manipulation-71ec9c2ecbf7e7a69959.js",
+      "path---keyword-date-time-manipulation-71ec9c2ecbf7e7a69959.js.map"
     ],
     "path---package-reason-simple-server": [
-      "path---package-reason-simple-server-d983c1673cda3b480806.js",
-      "path---package-reason-simple-server-d983c1673cda3b480806.js.map"
+      "path---package-reason-simple-server-162374571e3d204822ca.js",
+      "path---package-reason-simple-server-162374571e3d204822ca.js.map"
     ],
     "path---package-bs-blueprintjs-core": [
-      "path---package-bs-blueprintjs-core-68bdc44885134de47bfc.js",
-      "path---package-bs-blueprintjs-core-68bdc44885134de47bfc.js.map"
+      "path---package-bs-blueprintjs-core-7db20a237e589f760ada.js",
+      "path---package-bs-blueprintjs-core-7db20a237e589f760ada.js.map"
     ],
     "path---package-reason-scripts": [
-      "path---package-reason-scripts-e251a373b2816e171635.js",
-      "path---package-reason-scripts-e251a373b2816e171635.js.map"
+      "path---package-reason-scripts-4c9144d19114be75ceed.js",
+      "path---package-reason-scripts-4c9144d19114be75ceed.js.map"
     ],
     "path---package-bucklescript-tea": [
-      "path---package-bucklescript-tea-054c4a7899b1594c59da.js",
-      "path---package-bucklescript-tea-054c4a7899b1594c59da.js.map"
+      "path---package-bucklescript-tea-31c45613dee83276646f.js",
+      "path---package-bucklescript-tea-31c45613dee83276646f.js.map"
     ],
     "path---package-bs-react-notification-system": [
-      "path---package-bs-react-notification-system-a635ca1bb3dd39c2a1c8.js",
-      "path---package-bs-react-notification-system-a635ca1bb3dd39c2a1c8.js.map"
+      "path---package-bs-react-notification-system-cb395805fa0a98e53856.js",
+      "path---package-bs-react-notification-system-cb395805fa0a98e53856.js.map"
     ],
     "component---src-templates-category-js": [
       "component---src-templates-category-js-c85871b5883b15c84cb9.js",
@@ -617,12 +617,12 @@
       "component---src-pages-404-js-e9eafac2395c742109cd.js.map"
     ],
     "path---package-bs-axios": [
-      "path---package-bs-axios-1bd386ab01c8866abbd5.js",
-      "path---package-bs-axios-1bd386ab01c8866abbd5.js.map"
+      "path---package-bs-axios-969da9925d0d16faba02.js",
+      "path---package-bs-axios-969da9925d0d16faba02.js.map"
     ],
     "path---package-unpublished-sentia-analytics-bs-react-motion": [
-      "path---package-unpublished-sentia-analytics-bs-react-motion-c5c395bcb863c73d0807.js",
-      "path---package-unpublished-sentia-analytics-bs-react-motion-c5c395bcb863c73d0807.js.map"
+      "path---package-unpublished-sentia-analytics-bs-react-motion-3031f07eed32c0ce0010.js",
+      "path---package-unpublished-sentia-analytics-bs-react-motion-3031f07eed32c0ce0010.js.map"
     ],
     "commons": [
       "commons-45c9fe81fd3e3a3244e6.js",
@@ -631,232 +631,232 @@
       "build-js-styles.css.map"
     ],
     "path---package-unpublished-glennsl-reasonable-gatsby-starter": [
-      "path---package-unpublished-glennsl-reasonable-gatsby-starter-d86e4bd58b018d109184.js",
-      "path---package-unpublished-glennsl-reasonable-gatsby-starter-d86e4bd58b018d109184.js.map"
+      "path---package-unpublished-glennsl-reasonable-gatsby-starter-04b0410705198c0c8bab.js",
+      "path---package-unpublished-glennsl-reasonable-gatsby-starter-04b0410705198c0c8bab.js.map"
     ],
     "path---package-bs-humps": [
-      "path---package-bs-humps-2860f17a38b6c0a396ec.js",
-      "path---package-bs-humps-2860f17a38b6c0a396ec.js.map"
+      "path---package-bs-humps-1d420791e70ff7a52131.js",
+      "path---package-bs-humps-1d420791e70ff7a52131.js.map"
     ],
     "path---package-bs-date-fns": [
-      "path---package-bs-date-fns-256b4125a3c47ed41ba8.js",
-      "path---package-bs-date-fns-256b4125a3c47ed41ba8.js.map"
+      "path---package-bs-date-fns-9ac25309d167e21139be.js",
+      "path---package-bs-date-fns-9ac25309d167e21139be.js.map"
     ],
     "path---package-reasonably-typed": [
-      "path---package-reasonably-typed-503d5ae4f0dfa5cb3f46.js",
-      "path---package-reasonably-typed-503d5ae4f0dfa5cb3f46.js.map"
+      "path---package-reasonably-typed-9f54e400f24fc29f3bdb.js",
+      "path---package-reasonably-typed-9f54e400f24fc29f3bdb.js.map"
     ],
     "path---package-clj-collection-apis-reasonml": [
-      "path---package-clj-collection-apis-reasonml-08cc951e6ff8e0ae350f.js",
-      "path---package-clj-collection-apis-reasonml-08cc951e6ff8e0ae350f.js.map"
+      "path---package-clj-collection-apis-reasonml-aa642a1ce7e472c7fa28.js",
+      "path---package-clj-collection-apis-reasonml-aa642a1ce7e472c7fa28.js.map"
     ],
     "path---package-unpublished-astrocoders-bs-react-native-vector-icons": [
-      "path---package-unpublished-astrocoders-bs-react-native-vector-icons-c64d66dd8dfe7317d876.js",
-      "path---package-unpublished-astrocoders-bs-react-native-vector-icons-c64d66dd8dfe7317d876.js.map"
+      "path---package-unpublished-astrocoders-bs-react-native-vector-icons-359d1a312e4364c4a600.js",
+      "path---package-unpublished-astrocoders-bs-react-native-vector-icons-359d1a312e4364c4a600.js.map"
     ],
     "path---package-generator-reasonable-node": [
-      "path---package-generator-reasonable-node-fefa7dfb24b2b63a7b71.js",
-      "path---package-generator-reasonable-node-fefa7dfb24b2b63a7b71.js.map"
+      "path---package-generator-reasonable-node-df6a498ed4ba88a67c8a.js",
+      "path---package-generator-reasonable-node-df6a498ed4ba88a67c8a.js.map"
     ],
     "path---package-bs-antd": [
-      "path---package-bs-antd-91529e96559fda85f341.js",
-      "path---package-bs-antd-91529e96559fda85f341.js.map"
+      "path---package-bs-antd-8cba77e68b8437cd8e75.js",
+      "path---package-bs-antd-8cba77e68b8437cd8e75.js.map"
     ],
     "path---package-unpublished-freebroccolo-bucklescript-electron": [
-      "path---package-unpublished-freebroccolo-bucklescript-electron-04ee0035740a5c7e9216.js",
-      "path---package-unpublished-freebroccolo-bucklescript-electron-04ee0035740a5c7e9216.js.map"
+      "path---package-unpublished-freebroccolo-bucklescript-electron-9aeed1c759f37d2512c0.js",
+      "path---package-unpublished-freebroccolo-bucklescript-electron-9aeed1c759f37d2512c0.js.map"
     ],
     "path---keyword-i-18-n": [
-      "path---keyword-i-18-n-33f308ceee311dd48df1.js",
-      "path---keyword-i-18-n-33f308ceee311dd48df1.js.map"
+      "path---keyword-i-18-n-4331316205b18c2bb54b.js",
+      "path---keyword-i-18-n-4331316205b18c2bb54b.js.map"
     ],
     "path---package-bs-react-art": [
-      "path---package-bs-react-art-1192b774298cf7326e7b.js",
-      "path---package-bs-react-art-1192b774298cf7326e7b.js.map"
+      "path---package-bs-react-art-f296bf075cea2484bd56.js",
+      "path---package-bs-react-art-f296bf075cea2484bd56.js.map"
     ],
     "path---package-bs-blueprintjs-datetime": [
-      "path---package-bs-blueprintjs-datetime-85d99cec730111f1693e.js",
-      "path---package-bs-blueprintjs-datetime-85d99cec730111f1693e.js.map"
+      "path---package-bs-blueprintjs-datetime-cad8232e118950024952.js",
+      "path---package-bs-blueprintjs-datetime-cad8232e118950024952.js.map"
     ],
     "path---404-html": [
       "path---404-html-a0e39f21c11f6a62c5ab.js",
       "path---404-html-a0e39f21c11f6a62c5ab.js.map"
     ],
     "path---package-bs-free": [
-      "path---package-bs-free-490419c5e4674b1de6af.js",
-      "path---package-bs-free-490419c5e4674b1de6af.js.map"
+      "path---package-bs-free-e2ff25446ec3622699fb.js",
+      "path---package-bs-free-e2ff25446ec3622699fb.js.map"
     ],
     "path---package-unpublished-tom-lingham-bs-node-http": [
-      "path---package-unpublished-tom-lingham-bs-node-http-9f38e0a13ef240dccdd1.js",
-      "path---package-unpublished-tom-lingham-bs-node-http-9f38e0a13ef240dccdd1.js.map"
+      "path---package-unpublished-tom-lingham-bs-node-http-d6ea916b7c109d98310d.js",
+      "path---package-unpublished-tom-lingham-bs-node-http-d6ea916b7c109d98310d.js.map"
     ],
     "path---package-bs-apollo-server-express": [
-      "path---package-bs-apollo-server-express-e9f981f6ee3f4ccf48a7.js",
-      "path---package-bs-apollo-server-express-e9f981f6ee3f4ccf48a7.js.map"
+      "path---package-bs-apollo-server-express-8c2585f64e39396a0a9c.js",
+      "path---package-bs-apollo-server-express-8c2585f64e39396a0a9c.js.map"
     ],
     "path---keyword-graphql": [
-      "path---keyword-graphql-22cf5c90e426aa62dd34.js",
-      "path---keyword-graphql-22cf5c90e426aa62dd34.js.map"
+      "path---keyword-graphql-ef261f36b36cafb4a685.js",
+      "path---keyword-graphql-ef261f36b36cafb4a685.js.map"
     ],
     "path---all": [
-      "path---all-78e3c478542760e215d9.js",
-      "path---all-78e3c478542760e215d9.js.map"
+      "path---all-f080edac2dac9642f26a.js",
+      "path---all-f080edac2dac9642f26a.js.map"
     ],
     "component---src-templates-package-js": [
       "component---src-templates-package-js-3b331974c203fd51dcd4.js",
       "component---src-templates-package-js-3b331974c203fd51dcd4.js.map"
     ],
     "path---package-add-reason": [
-      "path---package-add-reason-c4897112a479b8779acc.js",
-      "path---package-add-reason-c4897112a479b8779acc.js.map"
+      "path---package-add-reason-5c12d9a3780b2b91b5f8.js",
+      "path---package-add-reason-5c12d9a3780b2b91b5f8.js.map"
     ],
     "path---package-unpublished-tcoopman-bucklescript-tea-starter-kit": [
-      "path---package-unpublished-tcoopman-bucklescript-tea-starter-kit-71f9948779300b2475e9.js",
-      "path---package-unpublished-tcoopman-bucklescript-tea-starter-kit-71f9948779300b2475e9.js.map"
+      "path---package-unpublished-tcoopman-bucklescript-tea-starter-kit-212271dbc074ffb3462d.js",
+      "path---package-unpublished-tcoopman-bucklescript-tea-starter-kit-212271dbc074ffb3462d.js.map"
     ],
     "path---keyword-database": [
-      "path---keyword-database-bb04c478529e29ea476d.js",
-      "path---keyword-database-bb04c478529e29ea476d.js.map"
+      "path---keyword-database-5052d1a88d80528bc897.js",
+      "path---keyword-database-5052d1a88d80528bc897.js.map"
     ],
     "path---package-bs-css": [
-      "path---package-bs-css-b4615374b8027161e97e.js",
-      "path---package-bs-css-b4615374b8027161e97e.js.map"
+      "path---package-bs-css-70042beac6b802344081.js",
+      "path---package-bs-css-70042beac6b802344081.js.map"
     ],
     "path---package-bs-react-helmet": [
-      "path---package-bs-react-helmet-1b8871400f69770b1879.js",
-      "path---package-bs-react-helmet-1b8871400f69770b1879.js.map"
+      "path---package-bs-react-helmet-84ea4404aea66dde9ab6.js",
+      "path---package-bs-react-helmet-84ea4404aea66dde9ab6.js.map"
     ],
     "path---keyword-parsing": [
-      "path---keyword-parsing-a595c6adbfc3225a09d7.js",
-      "path---keyword-parsing-a595c6adbfc3225a09d7.js.map"
+      "path---keyword-parsing-4f6332c8b4dada7ed638.js",
+      "path---keyword-parsing-4f6332c8b4dada7ed638.js.map"
     ],
     "path---package-unpublished-aweary-reason-vue": [
-      "path---package-unpublished-aweary-reason-vue-5dc31921d8d966bda77e.js",
-      "path---package-unpublished-aweary-reason-vue-5dc31921d8d966bda77e.js.map"
+      "path---package-unpublished-aweary-reason-vue-94100df944e5ab5993b0.js",
+      "path---package-unpublished-aweary-reason-vue-94100df944e5ab5993b0.js.map"
     ],
     "path---keyword-cloud-service-api": [
-      "path---keyword-cloud-service-api-da9458143510b7a1944e.js",
-      "path---keyword-cloud-service-api-da9458143510b7a1944e.js.map"
+      "path---keyword-cloud-service-api-9727b1367d248dff985d.js",
+      "path---keyword-cloud-service-api-9727b1367d248dff985d.js.map"
     ],
     "path---package-bs-graphql-tools": [
-      "path---package-bs-graphql-tools-ad72f40ff4d5be499025.js",
-      "path---package-bs-graphql-tools-ad72f40ff4d5be499025.js.map"
+      "path---package-bs-graphql-tools-710983c46ace796c83ee.js",
+      "path---package-bs-graphql-tools-710983c46ace796c83ee.js.map"
     ],
     "path---package-reason-cli-tools": [
-      "path---package-reason-cli-tools-a81724a12bec9b2cb3ce.js",
-      "path---package-reason-cli-tools-a81724a12bec9b2cb3ce.js.map"
+      "path---package-reason-cli-tools-f115359174daf8b81b80.js",
+      "path---package-reason-cli-tools-f115359174daf8b81b80.js.map"
     ],
     "path---package-bs-websockets": [
-      "path---package-bs-websockets-e41a7b4956222ae9a073.js",
-      "path---package-bs-websockets-e41a7b4956222ae9a073.js.map"
+      "path---package-bs-websockets-0a427a5af0d0337780d3.js",
+      "path---package-bs-websockets-0a427a5af0d0337780d3.js.map"
     ],
     "path---package-reason-webpack-plugin": [
-      "path---package-reason-webpack-plugin-a9c8734af95491af3fbd.js",
-      "path---package-reason-webpack-plugin-a9c8734af95491af3fbd.js.map"
+      "path---package-reason-webpack-plugin-11f36e19b378899a409c.js",
+      "path---package-reason-webpack-plugin-11f36e19b378899a409c.js.map"
     ],
     "path---package-bs-analytics-node": [
-      "path---package-bs-analytics-node-ca5ec7f8d3ed9f4a5e7b.js",
-      "path---package-bs-analytics-node-ca5ec7f8d3ed9f4a5e7b.js.map"
+      "path---package-bs-analytics-node-36dba04649ed046fc844.js",
+      "path---package-bs-analytics-node-36dba04649ed046fc844.js.map"
     ],
     "path---package-unpublished-szymonzmyslony-reason-react-native-navigation": [
-      "path---package-unpublished-szymonzmyslony-reason-react-native-navigation-4d8035d452df6f1de7fa.js",
-      "path---package-unpublished-szymonzmyslony-reason-react-native-navigation-4d8035d452df6f1de7fa.js.map"
+      "path---package-unpublished-szymonzmyslony-reason-react-native-navigation-1ec4da7cccce790d0a3d.js",
+      "path---package-unpublished-szymonzmyslony-reason-react-native-navigation-1ec4da7cccce790d0a3d.js.map"
     ],
     "path---package-unpublished-state-machine-systems-json-codec": [
-      "path---package-unpublished-state-machine-systems-json-codec-05cb2fe9585021e52f72.js",
-      "path---package-unpublished-state-machine-systems-json-codec-05cb2fe9585021e52f72.js.map"
+      "path---package-unpublished-state-machine-systems-json-codec-f404069401c54f35cd0f.js",
+      "path---package-unpublished-state-machine-systems-json-codec-f404069401c54f35cd0f.js.map"
     ],
     "path---package-bs-vscode": [
-      "path---package-bs-vscode-6861f8789fc4d6fa1cbd.js",
-      "path---package-bs-vscode-6861f8789fc4d6fa1cbd.js.map"
+      "path---package-bs-vscode-12dcfe09f633c8f32f1d.js",
+      "path---package-bs-vscode-12dcfe09f633c8f32f1d.js.map"
     ],
     "path---package-bs-dom": [
-      "path---package-bs-dom-5a54154fb24697b8653b.js",
-      "path---package-bs-dom-5a54154fb24697b8653b.js.map"
+      "path---package-bs-dom-aaaac31db813d21c7fd2.js",
+      "path---package-bs-dom-aaaac31db813d21c7fd2.js.map"
     ],
     "path---package-unpublished-slogsdon-bsb-native-starter": [
-      "path---package-unpublished-slogsdon-bsb-native-starter-e0fb648aa85ab2dd1552.js",
-      "path---package-unpublished-slogsdon-bsb-native-starter-e0fb648aa85ab2dd1552.js.map"
+      "path---package-unpublished-slogsdon-bsb-native-starter-a91d83282ed1898f94e2.js",
+      "path---package-unpublished-slogsdon-bsb-native-starter-a91d83282ed1898f94e2.js.map"
     ],
     "path---package-unpublished-spencerwi-generator-ocaml-bucklescript-webpack": [
-      "path---package-unpublished-spencerwi-generator-ocaml-bucklescript-webpack-18a3358390c048f18eac.js",
-      "path---package-unpublished-spencerwi-generator-ocaml-bucklescript-webpack-18a3358390c048f18eac.js.map"
+      "path---package-unpublished-spencerwi-generator-ocaml-bucklescript-webpack-8eb7d0a77f6ce9b0e8e9.js",
+      "path---package-unpublished-spencerwi-generator-ocaml-bucklescript-webpack-8eb7d0a77f6ce9b0e8e9.js.map"
     ],
     "path---package-unpublished-leohxj-reason-rollup-starter": [
-      "path---package-unpublished-leohxj-reason-rollup-starter-caf805360c1f59f34733.js",
-      "path---package-unpublished-leohxj-reason-rollup-starter-caf805360c1f59f34733.js.map"
+      "path---package-unpublished-leohxj-reason-rollup-starter-cc56d353110bbf41a99a.js",
+      "path---package-unpublished-leohxj-reason-rollup-starter-cc56d353110bbf41a99a.js.map"
     ],
     "path---keyword-ui": [
-      "path---keyword-ui-4c20c48bac80d706e017.js",
-      "path---keyword-ui-4c20c48bac80d706e017.js.map"
+      "path---keyword-ui-87c973360fd7da386f3e.js",
+      "path---keyword-ui-87c973360fd7da386f3e.js.map"
     ],
     "path---package-unpublished-schmavery-reprocessing": [
-      "path---package-unpublished-schmavery-reprocessing-56372800a1e297ad94a6.js",
-      "path---package-unpublished-schmavery-reprocessing-56372800a1e297ad94a6.js.map"
+      "path---package-unpublished-schmavery-reprocessing-7f61259e61fab5edb314.js",
+      "path---package-unpublished-schmavery-reprocessing-7f61259e61fab5edb314.js.map"
     ],
     "path---package-unpublished-splish-me-bs-storybook": [
-      "path---package-unpublished-splish-me-bs-storybook-e387c694dd7eeafac6f1.js",
-      "path---package-unpublished-splish-me-bs-storybook-e387c694dd7eeafac6f1.js.map"
+      "path---package-unpublished-splish-me-bs-storybook-f5c603286b92928d7552.js",
+      "path---package-unpublished-splish-me-bs-storybook-f5c603286b92928d7552.js.map"
     ],
     "path---package-reason-elm": [
-      "path---package-reason-elm-86b5b575917fbac6ab16.js",
-      "path---package-reason-elm-86b5b575917fbac6ab16.js.map"
+      "path---package-reason-elm-62723c3d4a8c7a06e693.js",
+      "path---package-reason-elm-62723c3d4a8c7a06e693.js.map"
     ],
     "path---package-bs-expo": [
-      "path---package-bs-expo-0b5eb95fa61e67076f83.js",
-      "path---package-bs-expo-0b5eb95fa61e67076f83.js.map"
+      "path---package-bs-expo-1f0f3673fcaed9e7bd21.js",
+      "path---package-bs-expo-1f0f3673fcaed9e7bd21.js.map"
     ],
     "path---package-bs-director": [
-      "path---package-bs-director-358246a2054e2801c699.js",
-      "path---package-bs-director-358246a2054e2801c699.js.map"
+      "path---package-bs-director-00c89c2a7aadb5cdef8b.js",
+      "path---package-bs-director-00c89c2a7aadb5cdef8b.js.map"
     ],
     "component---src-pages-keywords-js": [
       "component---src-pages-keywords-js-64f6b252becee8001c78.js",
       "component---src-pages-keywords-js-64f6b252becee8001c78.js.map"
     ],
     "path---package-re-elm-app": [
-      "path---package-re-elm-app-ac9aa66193e092ef5ebf.js",
-      "path---package-re-elm-app-ac9aa66193e092ef5ebf.js.map"
+      "path---package-re-elm-app-bb18ee850ebcf66b32cf.js",
+      "path---package-re-elm-app-bb18ee850ebcf66b32cf.js.map"
     ],
     "path---package-bs-express": [
-      "path---package-bs-express-5c9971f4253c7d24c829.js",
-      "path---package-bs-express-5c9971f4253c7d24c829.js.map"
+      "path---package-bs-express-b3cfc1778dc9c6c868c4.js",
+      "path---package-bs-express-b3cfc1778dc9c6c868c4.js.map"
     ],
     "path---publish": [
       "path---publish-a0e39f21c11f6a62c5ab.js",
       "path---publish-a0e39f21c11f6a62c5ab.js.map"
     ],
     "path---package-unpublished-paul-popat-reason-react-electron-boilerplate": [
-      "path---package-unpublished-paul-popat-reason-react-electron-boilerplate-9c3686c304a3cd842947.js",
-      "path---package-unpublished-paul-popat-reason-react-electron-boilerplate-9c3686c304a3cd842947.js.map"
+      "path---package-unpublished-paul-popat-reason-react-electron-boilerplate-218f06a5ffe7d896b006.js",
+      "path---package-unpublished-paul-popat-reason-react-electron-boilerplate-218f06a5ffe7d896b006.js.map"
     ],
     "path---package-rationale": [
-      "path---package-rationale-55dcb07f0038fa98d741.js",
-      "path---package-rationale-55dcb07f0038fa98d741.js.map"
+      "path---package-rationale-465f87bb5dd8454afc38.js",
+      "path---package-rationale-465f87bb5dd8454afc38.js.map"
     ],
     "path---keyword-virtual-dom": [
-      "path---keyword-virtual-dom-d5e3ad0fb5d9092435c7.js",
-      "path---keyword-virtual-dom-d5e3ad0fb5d9092435c7.js.map"
+      "path---keyword-virtual-dom-b4795839e3403c39ef71.js",
+      "path---keyword-virtual-dom-b4795839e3403c39ef71.js.map"
     ],
     "path---package-immutable-re": [
-      "path---package-immutable-re-a6df97a5f220b88950c4.js",
-      "path---package-immutable-re-a6df97a5f220b88950c4.js.map"
+      "path---package-immutable-re-4f822159933a6bcdcff7.js",
+      "path---package-immutable-re-4f822159933a6bcdcff7.js.map"
     ],
     "path---package-unpublished-glennsl-bs-in-a-box": [
-      "path---package-unpublished-glennsl-bs-in-a-box-25f9e27d99c959cdbb16.js",
-      "path---package-unpublished-glennsl-bs-in-a-box-25f9e27d99c959cdbb16.js.map"
+      "path---package-unpublished-glennsl-bs-in-a-box-bb40541821c15b8accfc.js",
+      "path---package-unpublished-glennsl-bs-in-a-box-bb40541821c15b8accfc.js.map"
     ],
     "path---package-unpublished-bsansouci-bsb-native": [
-      "path---package-unpublished-bsansouci-bsb-native-c10eaac5d1c3b1de4aa0.js",
-      "path---package-unpublished-bsansouci-bsb-native-c10eaac5d1c3b1de4aa0.js.map"
+      "path---package-unpublished-bsansouci-bsb-native-57914fc2daa92f2daeec.js",
+      "path---package-unpublished-bsansouci-bsb-native-57914fc2daa92f2daeec.js.map"
     ],
     "path---package-bs-moment": [
-      "path---package-bs-moment-a972f7186a86aff946e8.js",
-      "path---package-bs-moment-a972f7186a86aff946e8.js.map"
+      "path---package-bs-moment-2b10cff0e71db4747e41.js",
+      "path---package-bs-moment-2b10cff0e71db4747e41.js.map"
     ],
     "path---package-reason-react-primitives": [
-      "path---package-reason-react-primitives-4485710698824b0d3215.js",
-      "path---package-reason-react-primitives-4485710698824b0d3215.js.map"
+      "path---package-reason-react-primitives-f2f5e2cb4b66ce357ef8.js",
+      "path---package-reason-react-primitives-f2f5e2cb4b66ce357ef8.js.map"
     ],
     "component---src-pages-publish-js": [
       "component---src-pages-publish-js-9813c99e391c82a33f65.js",
@@ -867,254 +867,258 @@
       "component---src-pages-error-404-js-17ae69e5e8f081b1e29b.js.map"
     ],
     "path---package-reasonable-flowgen": [
-      "path---package-reasonable-flowgen-e71b92d6d3d526c30496.js",
-      "path---package-reasonable-flowgen-e71b92d6d3d526c30496.js.map"
+      "path---package-reasonable-flowgen-008344096958541a7e81.js",
+      "path---package-reasonable-flowgen-008344096958541a7e81.js.map"
     ],
     "path---keyword-svg": [
-      "path---keyword-svg-4bd166274565828b5a30.js",
-      "path---keyword-svg-4bd166274565828b5a30.js.map"
+      "path---keyword-svg-ead997d8758aaffc66a4.js",
+      "path---keyword-svg-ead997d8758aaffc66a4.js.map"
     ],
     "path---keyword-configuration": [
-      "path---keyword-configuration-15d6277f8febefc3cf0e.js",
-      "path---keyword-configuration-15d6277f8febefc3cf0e.js.map"
+      "path---keyword-configuration-7a1faed0d5746cc68932.js",
+      "path---keyword-configuration-7a1faed0d5746cc68932.js.map"
     ],
     "path---keyword-string-manipulation": [
-      "path---keyword-string-manipulation-fe797448203f2a1a411d.js",
-      "path---keyword-string-manipulation-fe797448203f2a1a411d.js.map"
+      "path---keyword-string-manipulation-9d1df371f5f3366bbdb3.js",
+      "path---keyword-string-manipulation-9d1df371f5f3366bbdb3.js.map"
     ],
     "path---package-reductive": [
-      "path---package-reductive-a87644252f1eba84ff1c.js",
-      "path---package-reductive-a87644252f1eba84ff1c.js.map"
+      "path---package-reductive-1304a16f2e688dbb5515.js",
+      "path---package-reductive-1304a16f2e688dbb5515.js.map"
     ],
     "path---package-refmterr": [
-      "path---package-refmterr-f059a34edba373c26302.js",
-      "path---package-refmterr-f059a34edba373c26302.js.map"
+      "path---package-refmterr-e05f53c9ef92be9f6a70.js",
+      "path---package-refmterr-e05f53c9ef92be9f6a70.js.map"
     ],
     "path---keyword-css": [
-      "path---keyword-css-1103946d9b623584d9ad.js",
-      "path---keyword-css-1103946d9b623584d9ad.js.map"
+      "path---keyword-css-5752663e2ccf611e0eef.js",
+      "path---keyword-css-5752663e2ccf611e0eef.js.map"
     ],
     "path---keyword-routing": [
-      "path---keyword-routing-b034c6c3b6e0400b1097.js",
-      "path---keyword-routing-b034c6c3b6e0400b1097.js.map"
+      "path---keyword-routing-6bd751eaf88d2cea4c34.js",
+      "path---keyword-routing-6bd751eaf88d2cea4c34.js.map"
     ],
     "path---package-unpublished-derui-bs-boilerplate": [
-      "path---package-unpublished-derui-bs-boilerplate-ab2cd786505cc91b2d47.js",
-      "path---package-unpublished-derui-bs-boilerplate-ab2cd786505cc91b2d47.js.map"
+      "path---package-unpublished-derui-bs-boilerplate-42692b11d5056da0673a.js",
+      "path---package-unpublished-derui-bs-boilerplate-42692b11d5056da0673a.js.map"
     ],
     "path---keyword-data-serialization": [
-      "path---keyword-data-serialization-b4167fce43524820bb86.js",
-      "path---keyword-data-serialization-b4167fce43524820bb86.js.map"
+      "path---keyword-data-serialization-221ffe04d243c33a2c1e.js",
+      "path---keyword-data-serialization-221ffe04d243c33a2c1e.js.map"
     ],
     "path---package-reason-navigation": [
-      "path---package-reason-navigation-2a5ab01bce34c5211ac8.js",
-      "path---package-reason-navigation-2a5ab01bce34c5211ac8.js.map"
+      "path---package-reason-navigation-7ae948c59bf54664cdc9.js",
+      "path---package-reason-navigation-7ae948c59bf54664cdc9.js.map"
     ],
     "path---package-rex-json": [
-      "path---package-rex-json-22e31eff368696d1f9d6.js",
-      "path---package-rex-json-22e31eff368696d1f9d6.js.map"
+      "path---package-rex-json-8399bc23253062ab5fe3.js",
+      "path---package-rex-json-8399bc23253062ab5fe3.js.map"
     ],
     "path---keyword-http-server": [
-      "path---keyword-http-server-f1ca63e61d50abe1d076.js",
-      "path---keyword-http-server-f1ca63e61d50abe1d076.js.map"
+      "path---keyword-http-server-2b329aacc9cc802a29ae.js",
+      "path---keyword-http-server-2b329aacc9cc802a29ae.js.map"
     ],
     "path---keyword-react": [
-      "path---keyword-react-fe1db6c98e22164b1784.js",
-      "path---keyword-react-fe1db6c98e22164b1784.js.map"
+      "path---keyword-react-b4f0e3d3956c05f454f0.js",
+      "path---keyword-react-b4f0e3d3956c05f454f0.js.map"
     ],
     "app": [
-      "app-5b26cda93094b61d365b.js",
+      "app-1e9e2ea33bcac70a7cd1.js",
       "build-js-styles.css",
-      "app-5b26cda93094b61d365b.js.map",
+      "app-1e9e2ea33bcac70a7cd1.js.map",
       "build-js-styles.css.map"
     ],
     "path---keyword-form-validation": [
-      "path---keyword-form-validation-ae8cfec68b2b5b5c91ab.js",
-      "path---keyword-form-validation-ae8cfec68b2b5b5c91ab.js.map"
+      "path---keyword-form-validation-a50d7fe769421b04dd34.js",
+      "path---keyword-form-validation-a50d7fe769421b04dd34.js.map"
     ],
     "path---package-reason-react": [
-      "path---package-reason-react-b08ca2862ff1d160a2ee.js",
-      "path---package-reason-react-b08ca2862ff1d160a2ee.js.map"
+      "path---package-reason-react-ec527b077583cda19497.js",
+      "path---package-reason-react-ec527b077583cda19497.js.map"
     ],
     "path---unpublished": [
-      "path---unpublished-892d22dcd3eecc2c6e62.js",
-      "path---unpublished-892d22dcd3eecc2c6e62.js.map"
+      "path---unpublished-142951f35009b995b057.js",
+      "path---unpublished-142951f35009b995b057.js.map"
+    ],
+    "path---package-unpublished-srsholmes-colors-re": [
+      "path---package-unpublished-srsholmes-colors-re-fe8b99f14adfc7dbf1af.js",
+      "path---package-unpublished-srsholmes-colors-re-fe8b99f14adfc7dbf1af.js.map"
     ],
     "path---package-reason-nconf": [
-      "path---package-reason-nconf-7dd507d196e329decfd4.js",
-      "path---package-reason-nconf-7dd507d196e329decfd4.js.map"
+      "path---package-reason-nconf-9bc10f8a19a884cb7025.js",
+      "path---package-reason-nconf-9bc10f8a19a884cb7025.js.map"
     ],
     "path---category-binding": [
-      "path---category-binding-054035abb46d086850b6.js",
-      "path---category-binding-054035abb46d086850b6.js.map"
+      "path---category-binding-8d1cfc1c54e79d3d7915.js",
+      "path---category-binding-8d1cfc1c54e79d3d7915.js.map"
     ],
     "path---package-reason-react-native-scripts": [
-      "path---package-reason-react-native-scripts-c1bf3255be1015869c43.js",
-      "path---package-reason-react-native-scripts-c1bf3255be1015869c43.js.map"
+      "path---package-reason-react-native-scripts-3b1e0e29b301f3129df2.js",
+      "path---package-reason-react-native-scripts-3b1e0e29b301f3129df2.js.map"
     ],
     "path---package-bs-atom": [
-      "path---package-bs-atom-877be5dd38e464bf6881.js",
-      "path---package-bs-atom-877be5dd38e464bf6881.js.map"
+      "path---package-bs-atom-07dc1cba43bab520cccf.js",
+      "path---package-bs-atom-07dc1cba43bab520cccf.js.map"
     ],
     "path---package-jaredly-reasongl-android": [
-      "path---package-jaredly-reasongl-android-2e675452436a2d6a6c0f.js",
-      "path---package-jaredly-reasongl-android-2e675452436a2d6a6c0f.js.map"
+      "path---package-jaredly-reasongl-android-1026ca9887fb2aa49274.js",
+      "path---package-jaredly-reasongl-android-1026ca9887fb2aa49274.js.map"
     ],
     "path---package-bs-webapi": [
-      "path---package-bs-webapi-3d2f919d9750c73f672e.js",
-      "path---package-bs-webapi-3d2f919d9750c73f672e.js.map"
+      "path---package-bs-webapi-a4796883e2a16cf1813e.js",
+      "path---package-bs-webapi-a4796883e2a16cf1813e.js.map"
     ],
     "path---package-wokalski-vow": [
-      "path---package-wokalski-vow-75985c7533fd0a3ecd76.js",
-      "path---package-wokalski-vow-75985c7533fd0a3ecd76.js.map"
+      "path---package-wokalski-vow-706aff482d5e09dbf5c2.js",
+      "path---package-wokalski-vow-706aff482d5e09dbf5c2.js.map"
     ],
     "path---keyword-graphics": [
-      "path---keyword-graphics-126512269d96a081383e.js",
-      "path---keyword-graphics-126512269d96a081383e.js.map"
+      "path---keyword-graphics-d430a2f9ea7b7bfc6d3c.js",
+      "path---keyword-graphics-d430a2f9ea7b7bfc6d3c.js.map"
     ],
     "path---category-boilerplate": [
-      "path---category-boilerplate-144858a821bd34c8bd61.js",
-      "path---category-boilerplate-144858a821bd34c8bd61.js.map"
+      "path---category-boilerplate-61fbac7793c893129cad.js",
+      "path---category-boilerplate-61fbac7793c893129cad.js.map"
     ],
     "path---keyword-ppx": [
-      "path---keyword-ppx-34c238ab0d227fc65132.js",
-      "path---keyword-ppx-34c238ab0d227fc65132.js.map"
+      "path---keyword-ppx-11eb73f080107173d712.js",
+      "path---keyword-ppx-11eb73f080107173d712.js.map"
     ],
     "path---package-bs-chalk": [
-      "path---package-bs-chalk-1e563d0a1e150eae5b38.js",
-      "path---package-bs-chalk-1e563d0a1e150eae5b38.js.map"
+      "path---package-bs-chalk-50f131d1f144853330f0.js",
+      "path---package-bs-chalk-50f131d1f144853330f0.js.map"
     ],
     "path---package-bs-firebase": [
-      "path---package-bs-firebase-4ca8a1d2d284dc090d29.js",
-      "path---package-bs-firebase-4ca8a1d2d284dc090d29.js.map"
+      "path---package-bs-firebase-c25e282d256c5353e4a2.js",
+      "path---package-bs-firebase-c25e282d256c5353e4a2.js.map"
     ],
     "path---package-unpublished-alex-schwabauer-bs-raven": [
-      "path---package-unpublished-alex-schwabauer-bs-raven-a6c56d68ffba21a97443.js",
-      "path---package-unpublished-alex-schwabauer-bs-raven-a6c56d68ffba21a97443.js.map"
+      "path---package-unpublished-alex-schwabauer-bs-raven-c2a575251956426b048b.js",
+      "path---package-unpublished-alex-schwabauer-bs-raven-c2a575251956426b048b.js.map"
     ],
     "path---keyword-presentation": [
-      "path---keyword-presentation-352c23ae05e25b668b87.js",
-      "path---keyword-presentation-352c23ae05e25b668b87.js.map"
+      "path---keyword-presentation-5463825e5bf285dd295f.js",
+      "path---keyword-presentation-5463825e5bf285dd295f.js.map"
     ],
     "path---package-reglnative": [
-      "path---package-reglnative-4726399af6703967e659.js",
-      "path---package-reglnative-4726399af6703967e659.js.map"
+      "path---package-reglnative-556807548b77ee7eac37.js",
+      "path---package-reglnative-556807548b77ee7eac37.js.map"
     ],
     "path---package-bstr": [
-      "path---package-bstr-fc874ae3707758432e51.js",
-      "path---package-bstr-fc874ae3707758432e51.js.map"
+      "path---package-bstr-b3b05648dd915f3fddb8.js",
+      "path---package-bstr-b3b05648dd915f3fddb8.js.map"
     ],
     "path---package-bs-reason-apollo": [
-      "path---package-bs-reason-apollo-50b183330e0b7e70a921.js",
-      "path---package-bs-reason-apollo-50b183330e0b7e70a921.js.map"
+      "path---package-bs-reason-apollo-5db0a82fb589f8b8f1d1.js",
+      "path---package-bs-reason-apollo-5db0a82fb589f8b8f1d1.js.map"
     ],
     "path---404": [
       "path---404-a0e39f21c11f6a62c5ab.js",
       "path---404-a0e39f21c11f6a62c5ab.js.map"
     ],
     "path---package-gimme-reason": [
-      "path---package-gimme-reason-136871eb8322bdc501c7.js",
-      "path---package-gimme-reason-136871eb8322bdc501c7.js.map"
+      "path---package-gimme-reason-dd4d047ed9aab1019b48.js",
+      "path---package-gimme-reason-dd4d047ed9aab1019b48.js.map"
     ],
     "component---src-layouts-front-page-layout-js": [
       "component---src-layouts-front-page-layout-js-d1ce5645607f44aaeb6a.js",
       "component---src-layouts-front-page-layout-js-d1ce5645607f44aaeb6a.js.map"
     ],
     "path---package-bs-errors": [
-      "path---package-bs-errors-3ed15031dfe1c1b3c15d.js",
-      "path---package-bs-errors-3ed15031dfe1c1b3c15d.js.map"
+      "path---package-bs-errors-dbdb47b106894bfc8064.js",
+      "path---package-bs-errors-dbdb47b106894bfc8064.js.map"
     ],
     "path---keyword-standard-library": [
-      "path---keyword-standard-library-1b57b1b8134d068a6c14.js",
-      "path---keyword-standard-library-1b57b1b8134d068a6c14.js.map"
+      "path---keyword-standard-library-423edc3169c84828f87f.js",
+      "path---keyword-standard-library-423edc3169c84828f87f.js.map"
     ],
     "path---package-bs-node-debug": [
-      "path---package-bs-node-debug-68cd99af631dbc5998d4.js",
-      "path---package-bs-node-debug-68cd99af631dbc5998d4.js.map"
+      "path---package-bs-node-debug-8cacf83794201aa29513.js",
+      "path---package-bs-node-debug-8cacf83794201aa29513.js.map"
     ],
     "path---package-bs-mongodb": [
-      "path---package-bs-mongodb-9cedc6cb26dd6230b405.js",
-      "path---package-bs-mongodb-9cedc6cb26dd6230b405.js.map"
+      "path---package-bs-mongodb-aa04789a4ab824c901cc.js",
+      "path---package-bs-mongodb-aa04789a4ab824c901cc.js.map"
     ],
     "path---package-bs-next": [
-      "path---package-bs-next-791c1e8df69e97d48a5f.js",
-      "path---package-bs-next-791c1e8df69e97d48a5f.js.map"
+      "path---package-bs-next-cdc465573728e68dd326.js",
+      "path---package-bs-next-cdc465573728e68dd326.js.map"
     ],
     "path---package-reglweb": [
-      "path---package-reglweb-f328e617735fc6cde560.js",
-      "path---package-reglweb-f328e617735fc6cde560.js.map"
+      "path---package-reglweb-a52b5bcc0d13a144e4ae.js",
+      "path---package-reglweb-a52b5bcc0d13a144e4ae.js.map"
     ],
     "path---keyword-development-tools": [
-      "path---keyword-development-tools-68b16cd7dcdbb0711ae9.js",
-      "path---keyword-development-tools-68b16cd7dcdbb0711ae9.js.map"
+      "path---keyword-development-tools-2997cdff58fa1cdc26f6.js",
+      "path---keyword-development-tools-2997cdff58fa1cdc26f6.js.map"
     ],
     "path---package-bs-enzyme": [
-      "path---package-bs-enzyme-bbe9a396887afc6b2c70.js",
-      "path---package-bs-enzyme-bbe9a396887afc6b2c70.js.map"
+      "path---package-bs-enzyme-f4e3ffd8ad6813c4fa3e.js",
+      "path---package-bs-enzyme-f4e3ffd8ad6813c4fa3e.js.map"
     ],
     "path---keyword-animation": [
-      "path---keyword-animation-2f0382f9a32e0e6e42c2.js",
-      "path---keyword-animation-2f0382f9a32e0e6e42c2.js.map"
+      "path---keyword-animation-8f6568696fecdaa4279b.js",
+      "path---keyword-animation-8f6568696fecdaa4279b.js.map"
     ],
     "path---package-redataloader": [
-      "path---package-redataloader-e3c42f69f3408c410758.js",
-      "path---package-redataloader-e3c42f69f3408c410758.js.map"
+      "path---package-redataloader-840f92f296d6847a4c39.js",
+      "path---package-redataloader-840f92f296d6847a4c39.js.map"
     ],
     "path---package-bs-bn-js": [
-      "path---package-bs-bn-js-b4152e2da3879ad04a33.js",
-      "path---package-bs-bn-js-b4152e2da3879ad04a33.js.map"
+      "path---package-bs-bn-js-435024bbba722ffb3320.js",
+      "path---package-bs-bn-js-435024bbba722ffb3320.js.map"
     ],
     "path---package-bs-mysql-2": [
-      "path---package-bs-mysql-2-a0554bf2c7d1ac1b3eb5.js",
-      "path---package-bs-mysql-2-a0554bf2c7d1ac1b3eb5.js.map"
+      "path---package-bs-mysql-2-01cd517814b713f2032b.js",
+      "path---package-bs-mysql-2-01cd517814b713f2032b.js.map"
     ],
     "path---package-bs-react-test-renderer": [
-      "path---package-bs-react-test-renderer-f733e40cf9f1bd93b1e6.js",
-      "path---package-bs-react-test-renderer-f733e40cf9f1bd93b1e6.js.map"
+      "path---package-bs-react-test-renderer-89d1b24cdbd6324d812d.js",
+      "path---package-bs-react-test-renderer-89d1b24cdbd6324d812d.js.map"
     ],
     "path---category-library": [
-      "path---category-library-e091028a508b6906b813.js",
-      "path---category-library-e091028a508b6906b813.js.map"
+      "path---category-library-e25f4f8e75e42dcdfa9c.js",
+      "path---category-library-e25f4f8e75e42dcdfa9c.js.map"
     ],
     "path---package-unpublished-threepointone-bs-nice": [
-      "path---package-unpublished-threepointone-bs-nice-68e22749c4c85c09974a.js",
-      "path---package-unpublished-threepointone-bs-nice-68e22749c4c85c09974a.js.map"
+      "path---package-unpublished-threepointone-bs-nice-1af96f86a738ef26c84b.js",
+      "path---package-unpublished-threepointone-bs-nice-1af96f86a738ef26c84b.js.map"
     ],
     "path---keyword-express": [
-      "path---keyword-express-dadefbff7f824fa54d70.js",
-      "path---keyword-express-dadefbff7f824fa54d70.js.map"
+      "path---keyword-express-2e8bcef50ca15745d1bd.js",
+      "path---keyword-express-2e8bcef50ca15745d1bd.js.map"
     ],
     "path---package-bs-spectacle": [
-      "path---package-bs-spectacle-eb47fbf75b35dd84e510.js",
-      "path---package-bs-spectacle-eb47fbf75b35dd84e510.js.map"
+      "path---package-bs-spectacle-ebe4c1c153c93e3a9df0.js",
+      "path---package-bs-spectacle-ebe4c1c153c93e3a9df0.js.map"
     ],
     "path---package-bs-fetch": [
-      "path---package-bs-fetch-86223981a9d1c973eab7.js",
-      "path---package-bs-fetch-86223981a9d1c973eab7.js.map"
+      "path---package-bs-fetch-ed5f3efbdfa04a5c70d5.js",
+      "path---package-bs-fetch-ed5f3efbdfa04a5c70d5.js.map"
     ],
     "path---package-bs-graphql": [
-      "path---package-bs-graphql-6a527779fddaaa8a1830.js",
-      "path---package-bs-graphql-6a527779fddaaa8a1830.js.map"
+      "path---package-bs-graphql-ce74b1a96636599c665d.js",
+      "path---package-bs-graphql-ce74b1a96636599c665d.js.map"
     ],
     "path---keyword-regular-expressions": [
-      "path---keyword-regular-expressions-0d78ca62fad5620afe65.js",
-      "path---keyword-regular-expressions-0d78ca62fad5620afe65.js.map"
+      "path---keyword-regular-expressions-5a950cc5208b01a950bb.js",
+      "path---keyword-regular-expressions-5a950cc5208b01a950bb.js.map"
     ],
     "path---package-bs-luxon": [
-      "path---package-bs-luxon-f380bbd09d21cf677b03.js",
-      "path---package-bs-luxon-f380bbd09d21cf677b03.js.map"
+      "path---package-bs-luxon-6d17eb2c3ea501c953c8.js",
+      "path---package-bs-luxon-6d17eb2c3ea501c953c8.js.map"
     ],
     "path---package-rollup-plugin-bucklescript": [
-      "path---package-rollup-plugin-bucklescript-de527d5109ca3be64558.js",
-      "path---package-rollup-plugin-bucklescript-de527d5109ca3be64558.js.map"
+      "path---package-rollup-plugin-bucklescript-7dc7d30f65b45b587153.js",
+      "path---package-rollup-plugin-bucklescript-7dc7d30f65b45b587153.js.map"
     ],
     "path---package-bs-spotify-web-api": [
-      "path---package-bs-spotify-web-api-2cdf1a7fab152d173a0d.js",
-      "path---package-bs-spotify-web-api-2cdf1a7fab152d173a0d.js.map"
+      "path---package-bs-spotify-web-api-c921c228b9ee1d44f4d5.js",
+      "path---package-bs-spotify-web-api-c921c228b9ee1d44f4d5.js.map"
     ],
     "path---package-unpublished-glennsl-reasonable-atom-starter": [
-      "path---package-unpublished-glennsl-reasonable-atom-starter-83bb85f15d8507010fe3.js",
-      "path---package-unpublished-glennsl-reasonable-atom-starter-83bb85f15d8507010fe3.js.map"
+      "path---package-unpublished-glennsl-reasonable-atom-starter-514da8f7dd6ffbab6749.js",
+      "path---package-unpublished-glennsl-reasonable-atom-starter-514da8f7dd6ffbab6749.js.map"
     ]
   }
 }
