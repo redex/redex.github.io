@@ -62,7 +62,7 @@ let html = {|
   <h2>Step 3: Submit to redex</h2>
   <p>
     Submitting published and unpublished packages both follow roughly the same process: Add the package to the appropriate
-    collection in <a href="https://github.com/redex/data/blob/source/sources.json">sources.json</a> and
+    collection in <a href="https://github.com/redex/data/blob/master/sources.json">sources.json</a> and
     submit a PR. Or just <a href="https://github.com/redex/data/issues/new">submit an issue</a> with the same information.
 
     <h3>Published package</h3>
