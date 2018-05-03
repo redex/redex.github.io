@@ -1,2 +1,0 @@
-webpackJsonp([95278365523906],{955:function(e,a){e.exports={data:{packages:{edges:[{node:{id:"@glennsl/rebase",updated:"2017-12-31T01:47:44.672Z",name:"@glennsl/rebase",version:"0.2.0",description:"A minimal base library for Reason",keywords:["base","foundation","bucklescript"],license:"MIT",type:"published",stars:16,score:.611548385416536,quality:.8239240031171765,popularity:.04106052708966586,maintenance:1,slug:"packages/@glennsl/rebase"}}]}},pathContext:{keyword:"foundation"}}}});
-//# sourceMappingURL=path---keywords-foundation-859c8ed836ff30a0da97.js.map

@@ -1,2 +1,0 @@
-webpackJsonp([0xc198c3a04c45],{843:function(e,a){e.exports={data:{packages:{edges:[{node:{id:"unpublished/aweary/reason-vue",keywords:["virtual dom"],name:"aweary/reason-vue",version:"0.1.0",category:"binding",flags:["neglected"],platforms:["browser"],description:"Reason bindings to vue.js",type:"unpublished",license:"MIT",updated:"2018-04-24T10:49:08.721Z",stars:18,score:0,quality:0,popularity:0,maintenance:0,slug:"/package/unpublished/aweary/reason-vue"}}]}},pathContext:{keyword:"virtual dom"}}}});
-//# sourceMappingURL=path---keyword-virtual-dom-8f41e98863f93692432c.js.map

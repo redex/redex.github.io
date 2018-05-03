@@ -1,2 +1,0 @@
-webpackJsonp([37798291790630],{913:function(s,e){s.exports={data:{packages:{edges:[{node:{id:"unpublished/reasonml-community/bs-transit-js",updated:"2017-12-23T18:54:42.746Z",name:"reasonml-community/bs-transit-js",version:"0.0.1",description:"BuckleScript bindings for transit-js",keywords:["cqrs","bucklescript","reason"],license:null,type:"unpublished",stars:7,score:0,quality:0,popularity:0,maintenance:0,slug:"packages/unpublished/reasonml-community/bs-transit-js"}}]}},pathContext:{keyword:"cqrs"}}}});
-//# sourceMappingURL=path---keywords-cqrs-bf441d884b7901f12ff8.js.map

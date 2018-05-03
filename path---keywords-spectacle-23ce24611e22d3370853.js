@@ -1,2 +1,0 @@
-webpackJsonp([0x69f31afe1ad5],{1012:function(e,s){e.exports={data:{packages:{edges:[{node:{id:"bs-spectacle",updated:"2018-01-10T22:30:51.992Z",name:"bs-spectacle",version:"1.0.0",description:"Spectacle bindings for Bucklescript",keywords:["bucklescript","spectacle"],license:"MIT",type:"published",stars:0,score:.539219668870818,quality:.6071653819799142,popularity:.025493810937049777,maintenance:.9947063441396466,slug:"packages/bs-spectacle"}}]}},pathContext:{keyword:"spectacle"}}}});
-//# sourceMappingURL=path---keywords-spectacle-23ce24611e22d3370853.js.map

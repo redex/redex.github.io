@@ -1,2 +1,0 @@
-webpackJsonp([75558547259657],{858:function(e,s){e.exports={data:{packages:{edges:[{node:{id:"bs-jest",name:"bs-jest",version:"0.2.0",description:"BuckleScript bindings to the Jest testing framework",keywords:["test","jest","bucklescript"],license:"MIT",updated:"2017-12-06T07:02:23.704Z",stars:50,slug:"packages/bs-jest"}}]}},pathContext:{keyword:"jest"}}}});
-//# sourceMappingURL=path---keywords-jest-2ae6a66697200ee2df54.js.map

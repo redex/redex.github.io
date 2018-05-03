@@ -1,2 +1,0 @@
-webpackJsonp([85708539348022],{947:function(e,n){e.exports={data:{package:{id:"tween.re",updated:"2017-12-14T10:27:34.543Z",name:"tween.re",version:"1.0.0",description:"tween",keywords:["tween"],license:"MIT",type:"published",stars:null,readme:"\n",homepageUrl:null,repositoryUrl:null,npmUrl:"https://www.npmjs.com/package/tween.re",issuesUrl:null,slug:"packages/tween.re"}},pathContext:{id:"tween.re"}}}});
-//# sourceMappingURL=path---packages-tween-re-38eb3b900aa078e3a37d.js.map

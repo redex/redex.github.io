@@ -1,2 +1,0 @@
-webpackJsonp([54444071929185],{955:function(e,s){e.exports={data:{packages:{edges:[{node:{id:"unpublished/reasonml-community/bs-leaflet",updated:"2018-01-03T21:18:57.560Z",name:"reasonml-community/bs-leaflet",version:"0.0.1",description:"BuckleScript bindings for Leaflet.js",keywords:["gis","map","bucklescript"],license:"MIT",type:"unpublished",stars:1,score:0,quality:0,popularity:0,maintenance:0,slug:"packages/unpublished/reasonml-community/bs-leaflet"}}]}},pathContext:{keyword:"gis"}}}});
-//# sourceMappingURL=path---keywords-gis-ccb9dd77ec3ccb4f6f1c.js.map

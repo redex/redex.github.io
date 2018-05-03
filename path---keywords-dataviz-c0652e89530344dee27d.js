@@ -1,2 +1,0 @@
-webpackJsonp([57967936518911],{932:function(e,a){e.exports={data:{packages:{edges:[{node:{id:"unpublished/af/bs-d3",updated:"2018-01-03T21:18:57.599Z",name:"af/bs-d3",version:"0.1.0",description:"Experimental d3 4.x bindings for BuckleScript",keywords:["dataviz","d3.js","bucklescript"],license:"MIT",type:"unpublished",stars:7,score:0,quality:0,popularity:0,maintenance:0,slug:"packages/unpublished/af/bs-d3"}}]}},pathContext:{keyword:"dataviz"}}}});
-//# sourceMappingURL=path---keywords-dataviz-c0652e89530344dee27d.js.map

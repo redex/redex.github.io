@@ -1,2 +1,0 @@
-webpackJsonp([0x8416d8c549a3],{919:function(s,e){s.exports={data:{packages:{edges:[{node:{id:"bs-nprogress",name:"bs-nprogress",version:"0.0.1",description:"BuckleScript bindings to nprogress",keywords:["nprogress","reason","reason","ocaml","bucklescript"],license:"MIT",updated:"2017-12-08T08:40:50.504Z",stars:1,slug:"packages/bs-nprogress"}}]}},pathContext:{keyword:"nprogress"}}}});
-//# sourceMappingURL=path---keywords-nprogress-f79ef66a889dc671250c.js.map

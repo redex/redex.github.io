@@ -1,2 +1,0 @@
-webpackJsonp([40319343679231],{913:function(s,e){s.exports={data:{packages:{edges:[{node:{id:"bs-most",name:"bs-most",version:"0.1.1",description:"Reason/BuckleScript bindings for the Most.js reactive toolkit Edit",keywords:["bucklescript","reason","ocaml","reactive","streams","promise","functional","async","most","most.js"],license:"MIT",updated:"2017-12-06T09:31:48.801Z",stars:15,slug:"packages/bs-most"}}]}},pathContext:{keyword:"most"}}}});
-//# sourceMappingURL=path---keywords-most-6b981ae7b69c17b2175c.js.map

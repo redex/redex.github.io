@@ -1,2 +1,0 @@
-webpackJsonp([50553541571610],{941:function(s,e){s.exports={data:{packages:{edges:[{node:{id:"bs-downshift",updated:"2018-01-03T10:43:56.717Z",name:"bs-downshift",version:"0.1.0",description:"BuckleScript bindings for Downshift",keywords:["react","downshift","bucklescript"],license:"MIT",type:"published",stars:0,score:.3926437557704603,quality:.4949433130142716,popularity:.03094539785892989,maintenance:.6666567789015811,slug:"packages/bs-downshift"}}]}},pathContext:{keyword:"downshift"}}}});
-//# sourceMappingURL=path---keywords-downshift-f55b3e2db9f2bef9acbb.js.map

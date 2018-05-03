@@ -1,2 +1,0 @@
-webpackJsonp([0xf01e0172ab2b],{872:function(e,c){e.exports={data:{packages:{edges:[{node:{id:"bucklescript-phx",name:"bucklescript-phx",version:"0.1.3",description:"BuckleScript binding for Phoenix Channel/Presence to Phoenix's official JavaScript client",keywords:["tea","phoenix","ocaml","bucklescript"],license:"LGPL-3.0",updated:"2017-12-06T07:20:43.811Z",stars:11,slug:"packages/bucklescript-phx"}}]}},pathContext:{keyword:"phoenix"}}}});
-//# sourceMappingURL=path---keywords-phoenix-f5897059f916c6c0d119.js.map

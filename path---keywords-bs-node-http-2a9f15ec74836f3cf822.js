@@ -1,2 +1,0 @@
-webpackJsonp([0x8cdf7504be1d],{931:function(e,t){e.exports={data:{packages:{edges:[{node:{id:"unpublished/TomLingham/bs-node-http",updated:"2017-12-31T20:34:19.660Z",name:"TomLingham/bs-node-http",version:"0.0.5",description:"",keywords:["bucklescript","bs-node-http"],license:"MIT",type:"unpublished",stars:2,score:0,quality:0,popularity:0,maintenance:0,slug:"packages/unpublished/TomLingham/bs-node-http"}}]}},pathContext:{keyword:"bs-node-http"}}}});
-//# sourceMappingURL=path---keywords-bs-node-http-2a9f15ec74836f3cf822.js.map

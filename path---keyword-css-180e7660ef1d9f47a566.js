@@ -1,2 +1,0 @@
-webpackJsonp([0xcbd43380fb9a],{820:function(e,s){e.exports={data:{packages:{edges:[{node:{id:"unpublished/threepointone/bs-nice",keywords:["css"],name:"threepointone/bs-nice",version:"0.1.5",category:"library",flags:["neglected"],platforms:["browser"],description:"css-in-reason",type:"unpublished",license:"MIT",updated:"2018-04-24T10:49:07.965Z",stars:149,score:0,quality:0,popularity:0,maintenance:0,slug:"/package/unpublished/threepointone/bs-nice"}}]}},pathContext:{keyword:"css"}}}});
-//# sourceMappingURL=path---keyword-css-180e7660ef1d9f47a566.js.map

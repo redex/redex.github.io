@@ -1,2 +1,0 @@
-webpackJsonp([0xa578590040d6],{902:function(e,s){e.exports={data:{packages:{edges:[{node:{id:"bs-fetch",name:"bs-fetch",version:"0.2.0",description:"Fetch bindings for BuckleScript",keywords:["fetch","browser","xhr","bucklescript"],license:"MIT",updated:"2017-12-06T07:17:03.158Z",stars:37,slug:"packages/bs-fetch"}}]}},pathContext:{keyword:"fetch"}}}});
-//# sourceMappingURL=path---keywords-fetch-1bc06a083397961185d6.js.map

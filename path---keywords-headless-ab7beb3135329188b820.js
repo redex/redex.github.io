@@ -1,2 +1,0 @@
-webpackJsonp([0xfa86640abfbe],{960:function(e,p){e.exports={data:{packages:{edges:[{node:{id:"unpublished/zploskey/bs-puppeteer",updated:"2018-01-05T02:05:15.192Z",name:"zploskey/bs-puppeteer",version:"0.1.0",description:"",keywords:["browser","headless","scraping","puppeteer","bucklescript"],license:"MIT",type:"unpublished",stars:3,score:0,quality:0,popularity:0,maintenance:0,slug:"packages/unpublished/zploskey/bs-puppeteer"}}]}},pathContext:{keyword:"headless"}}}});
-//# sourceMappingURL=path---keywords-headless-ab7beb3135329188b820.js.map

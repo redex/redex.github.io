@@ -1,2 +1,0 @@
-webpackJsonp([0x723ba8549d4a],{931:function(a,e){a.exports={data:{packages:{edges:[{node:{id:"unpublished/reason-react-native-navigation",name:"reason-react-native-navigation",version:"0.1.0",description:"",keywords:["reason","navigation","reasonml","bucklescript","react-native"],license:"MIT",updated:"2017-12-16T15:20:04.843Z",stars:20,slug:"packages/unpublished/reason-react-native-navigation"}}]}},pathContext:{keyword:"reasonml"}}}});
-//# sourceMappingURL=path---keywords-reasonml-e2b8d56ab8f4fb68214f.js.map

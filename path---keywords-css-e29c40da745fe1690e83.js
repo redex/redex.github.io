@@ -1,2 +1,0 @@
-webpackJsonp([0xf1267338021b],{891:function(s,e){s.exports={data:{packages:{edges:[{node:{id:"bs-glamor",name:"bs-glamor",version:"0.1.3",description:"BuckleScript bindings for glamor",keywords:["glamor","bucklescript","reason","css"],license:"ISC",updated:"2017-12-14T16:36:22.262Z",stars:45,slug:"packages/bs-glamor"}}]}},pathContext:{keyword:"css"}}}});
-//# sourceMappingURL=path---keywords-css-e29c40da745fe1690e83.js.map

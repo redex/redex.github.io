@@ -1,2 +1,0 @@
-webpackJsonp([0xf3fde8f9b5fd],{867:function(e,s){e.exports={data:{packages:{edges:[{node:{id:"bs-next",name:"bs-next",version:"2.0.0",description:"Reason bindings for Next.js",keywords:["next","reasonreact","bucklescript","next.js","reason"],license:"MIT",updated:"2017-12-16T08:03:35.584Z",stars:10,slug:"packages/bs-next"}}]}},pathContext:{keyword:"next"}}}});
-//# sourceMappingURL=path---keywords-next-364df97084e5a6c1af2e.js.map

@@ -1,2 +1,0 @@
-webpackJsonp([0xe05779793f80],{1019:function(e,t){e.exports={data:{packages:{edges:[{node:{id:"bs-moment",updated:"2017-12-30T16:06:49.963Z",name:"bs-moment",version:"0.1.8",description:"BuckleScript bindings for Moment.js",keywords:["date","bucklescript","time","moment"],license:"MIT",type:"published",stars:12,score:.6371919900201062,quality:.8698535335378887,popularity:.07509324839817794,maintenance:.9998665514839353,slug:"packages/bs-moment"}}]}},pathContext:{keyword:"time"}}}});
-//# sourceMappingURL=path---keywords-time-c33f1c23e7daf30cf8b1.js.map

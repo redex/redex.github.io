@@ -1,2 +1,0 @@
-webpackJsonp([18533452448171],{831:function(e,s){e.exports={data:{packages:{edges:[{node:{id:"unpublished/bs-benchmarkjs",name:"bs-benchmarkjs",version:"0.1.0",description:"",keywords:["bucklescript","benchmark.js"],license:"MIT",updated:"2017-12-20T12:35:01.325Z",stars:1,slug:"packages/unpublished/bs-benchmarkjs"}}]}},pathContext:{keyword:"benchmark.js"}}}});
-//# sourceMappingURL=path---keywords-benchmark-js-b898fe539093cb656da8.js.map

@@ -1,2 +1,0 @@
-webpackJsonp([35636886169650],{951:function(e,n){e.exports={data:{packages:{edges:[{node:{id:"bs-enzyme",updated:"2017-12-30T17:33:25.735Z",name:"bs-enzyme",version:"0.3.0",description:"Bucklescript bindings for Enzyme",keywords:["bucklescript","testing","enzyme"],license:"MIT",type:"published",stars:15,score:.6038943421395099,quality:.7861869966228254,popularity:.05173464059822427,maintenance:.9998031969808108,slug:"packages/bs-enzyme"}}]}},pathContext:{keyword:"enzyme"}}}});
-//# sourceMappingURL=path---keywords-enzyme-c293edd9a54f18b22020.js.map

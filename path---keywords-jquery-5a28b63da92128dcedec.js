@@ -1,2 +1,0 @@
-webpackJsonp([0xf76694192399],{859:function(e,s){e.exports={data:{packages:{edges:[{node:{id:"@nebuta/bs-jquery",name:"@nebuta/bs-jquery",version:"0.0.2",description:"jQuery binding for BuckleScript",keywords:["jquery","ocaml","bucklescript"],license:"MIT",updated:"2017-12-18T00:18:41.490Z",stars:null,slug:"packages/@nebuta/bs-jquery"}}]}},pathContext:{keyword:"jquery"}}}});
-//# sourceMappingURL=path---keywords-jquery-5a28b63da92128dcedec.js.map

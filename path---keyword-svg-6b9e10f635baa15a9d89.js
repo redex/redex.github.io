@@ -1,2 +1,0 @@
-webpackJsonp([0xc6f814e9abcc],{839:function(e,s){e.exports={data:{packages:{edges:[{node:{id:"unpublished/af/bs-d3",keywords:["graphics","svg"],name:"af/bs-d3",version:"0.1.0",category:"binding",flags:["neglected"],platforms:["browser"],description:"Experimental d3 4.x bindings for BuckleScript",type:"unpublished",license:"MIT",updated:"2018-04-24T10:49:07.877Z",stars:11,score:0,quality:0,popularity:0,maintenance:0,slug:"/package/unpublished/af/bs-d3"}}]}},pathContext:{keyword:"svg"}}}});
-//# sourceMappingURL=path---keyword-svg-6b9e10f635baa15a9d89.js.map

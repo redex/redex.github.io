@@ -1,2 +1,0 @@
-webpackJsonp([69662490278289],{926:function(e,a){e.exports={data:{packages:{edges:[{node:{id:"bs-chalk",updated:"2018-01-04T19:28:46.594Z",name:"bs-chalk",version:"0.2.0",description:"BuckleScript interface to the node 'chalk' library",keywords:["color","node","bucklescript","chalk"],license:"BSD-2-Clause",type:"published",stars:1,score:.4836437135678737,quality:.40959036641352664,popularity:.03076176883117636,maintenance:.99999995586544,slug:"packages/bs-chalk"}}]}},pathContext:{keyword:"chalk"}}}});
-//# sourceMappingURL=path---keywords-chalk-c08b3523d78de5d38387.js.map

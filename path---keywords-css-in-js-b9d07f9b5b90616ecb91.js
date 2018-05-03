@@ -1,2 +1,0 @@
-webpackJsonp([0xdfac3f27271d],{926:function(e,s){e.exports={data:{packages:{edges:[{node:{id:"unpublished/Astrocoders/restyled",updated:"2018-01-03T21:18:57.589Z",name:"Astrocoders/restyled",version:"1.0.1",description:"Boilerplate for BuckleScript NPM package",keywords:["css","react","bucklescript","css-in-js"],license:"MIT",type:"unpublished",stars:21,score:0,quality:0,popularity:0,maintenance:0,slug:"packages/unpublished/Astrocoders/restyled"}}]}},pathContext:{keyword:"css-in-js"}}}});
-//# sourceMappingURL=path---keywords-css-in-js-b9d07f9b5b90616ecb91.js.map

@@ -1,2 +1,0 @@
-webpackJsonp([0xd6f66efb6cd1],{1025:function(e,a){e.exports={data:{packages:{edges:[{node:{id:"unpublished/aweary/reason-vue",updated:"2018-01-14T05:56:30.371Z",name:"aweary/reason-vue",version:"0.1.0",description:"Reason bindings to vue.js",keywords:["vue","bucklescript"],license:"MIT",type:"unpublished",stars:12,score:0,quality:0,popularity:0,maintenance:0,slug:"packages/unpublished/aweary/reason-vue"}}]}},pathContext:{keyword:"vue"}}}});
-//# sourceMappingURL=path---keywords-vue-9f7c46f31b96ce59a7b7.js.map

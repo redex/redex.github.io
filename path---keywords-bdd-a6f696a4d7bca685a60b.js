@@ -1,2 +1,0 @@
-webpackJsonp([0xb9e881f862d1],{917:function(e,s){e.exports={data:{packages:{edges:[{node:{id:"re-respect",updated:"2018-01-10T17:15:34.495Z",name:"re-respect",version:"0.5.1",description:"BDD-style test framework for Reason/bucklescript",keywords:["bucklescript","testing","bdd"],license:"MIT",type:"published",stars:11,score:.6226417896550951,quality:.8428222369660636,popularity:.056557481615074456,maintenance:1,slug:"packages/re-respect"}}]}},pathContext:{keyword:"bdd"}}}});
-//# sourceMappingURL=path---keywords-bdd-a6f696a4d7bca685a60b.js.map

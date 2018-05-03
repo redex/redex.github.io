@@ -1,2 +1,0 @@
-webpackJsonp([0xef18a9a2bb13],{912:function(s,e){s.exports={data:{packages:{edges:[{node:{id:"bs-axios",updated:"2017-12-31T20:15:23.858Z",name:"bs-axios",version:"0.0.22",description:"Axios bindings for Bucklescript",keywords:["axios","ocaml","bucklescript"],license:"MIT",type:"published",stars:11,score:.5189959036071743,quality:.4960588905374387,popularity:.05792582581310267,maintenance:.9997262783181622,slug:"packages/bs-axios"}}]}},pathContext:{keyword:"axios"}}}});
-//# sourceMappingURL=path---keywords-axios-ae245bad27963a61f67b.js.map

@@ -1,2 +1,0 @@
-webpackJsonp([40343824645959],{888:function(o,s){o.exports={data:{packages:{edges:[{node:{id:"bs-ocaml-protoc-json",name:"bs-ocaml-protoc-json",version:"0.1.1",description:"Protobuf JSON runtime for BuckleScript",keywords:["serialization","json","syntax","protobuf","bucklescript"],license:"MIT",updated:"2017-12-07T20:25:16.727Z",stars:0,slug:"packages/bs-ocaml-protoc-json"}}]}},pathContext:{keyword:"syntax"}}}});
-//# sourceMappingURL=path---keywords-syntax-7b9e0d065bd49f4be0ba.js.map

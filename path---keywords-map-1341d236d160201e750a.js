@@ -1,2 +1,0 @@
-webpackJsonp([0x79b1d3e2f06b],{861:function(e,s){e.exports={data:{packages:{edges:[{node:{id:"bs-dom",name:"bs-dom",version:"0.0.7",description:"A dom binding for bucklescript",keywords:["ocaml","map","bucklescript"],license:"GPL-2.0",updated:"2017-12-04T23:20:49.220Z",stars:9,slug:"packages/bs-dom"}}]}},pathContext:{keyword:"map"}}}});
-//# sourceMappingURL=path---keywords-map-1341d236d160201e750a.js.map

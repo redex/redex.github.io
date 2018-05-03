@@ -1,2 +1,0 @@
-webpackJsonp([0xfa86640abfbe],{906:function(e,p){e.exports={data:{packages:{edges:[{node:{id:"unpublished/bs-puppeteer",name:"bs-puppeteer",version:"0.1.0",description:"",keywords:["bucklescript","puppeteer","headless","browser","scraping"],license:"MIT",updated:"2017-12-16T15:20:04.782Z",stars:2,slug:"packages/unpublished/bs-puppeteer"}}]}},pathContext:{keyword:"headless"}}}});
-//# sourceMappingURL=path---keywords-headless-0f4ae97e4970b370dcaf.js.map

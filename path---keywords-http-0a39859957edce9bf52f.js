@@ -1,2 +1,0 @@
-webpackJsonp([51925415893843],{939:function(e,t){e.exports={data:{packages:{edges:[{node:{id:"unpublished/glennsl/refetch",updated:"2017-12-23T18:54:42.484Z",name:"glennsl/refetch",version:"0.1.0",description:"",keywords:["http","fetch","bucklescript","ajax"],license:"MIT",type:"unpublished",stars:8,score:0,quality:0,popularity:0,maintenance:0,slug:"packages/unpublished/glennsl/refetch"}}]}},pathContext:{keyword:"http"}}}});
-//# sourceMappingURL=path---keywords-http-0a39859957edce9bf52f.js.map
