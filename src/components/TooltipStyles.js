@@ -2,7 +2,7 @@
 'use strict';
 
 var Theme = require("../styles/Theme.js");
-var TypedGlamor = require("typed-glamor/src/TypedGlamor.bs.js");
+var TypedGlamor = require("bs-typed-glamor/src/TypedGlamor.bs.js");
 
 var container = TypedGlamor.css(/* None */0, /* :: */[
       TypedGlamor.position(TypedGlamor.relative),

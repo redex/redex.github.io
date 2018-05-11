@@ -6,7 +6,7 @@ var Curry = require("bs-platform/lib/js/curry.js");
 var React = require("react");
 var Vrroom = require("vrroom/src/Vrroom.bs.js");
 var ReasonReact = require("reason-react/src/ReasonReact.js");
-var TypedGlamor = require("typed-glamor/src/TypedGlamor.bs.js");
+var TypedGlamor = require("bs-typed-glamor/src/TypedGlamor.bs.js");
 var TooltipStyles = require("./TooltipStyles.js");
 
 var component = ReasonReact.reducerComponent("Tooltip");

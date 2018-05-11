@@ -12,7 +12,7 @@ var TimeAgo = require("../bindings/TimeAgo.js");
 var Platforms = require("./Platforms.js");
 var Json_decode = require("@glennsl/bs-json/src/Json_decode.bs.js");
 var ReasonReact = require("reason-react/src/ReasonReact.js");
-var TypedGlamor = require("typed-glamor/src/TypedGlamor.bs.js");
+var TypedGlamor = require("bs-typed-glamor/src/TypedGlamor.bs.js");
 var Js_null_undefined = require("bs-platform/lib/js/js_null_undefined.js");
 var SearchResultItemStyles = require("./SearchResultItemStyles.js");
 

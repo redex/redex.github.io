@@ -2,7 +2,7 @@
 'use strict';
 
 var Theme = require("./Theme.js");
-var TypedGlamor = require("typed-glamor/src/TypedGlamor.bs.js");
+var TypedGlamor = require("bs-typed-glamor/src/TypedGlamor.bs.js");
 var CommonStyles = require("./CommonStyles.js");
 
 var root = TypedGlamor.css(/* None */0, /* :: */[

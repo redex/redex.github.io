@@ -13,7 +13,7 @@ var TimeAgo = require("../bindings/TimeAgo.js");
 var Version = require("./Version.js");
 var Platforms = require("./Platforms.js");
 var ReasonReact = require("reason-react/src/ReasonReact.js");
-var TypedGlamor = require("typed-glamor/src/TypedGlamor.bs.js");
+var TypedGlamor = require("bs-typed-glamor/src/TypedGlamor.bs.js");
 var PackageSummaryStyles = require("./PackageSummaryStyles.js");
 
 var component = ReasonReact.statelessComponent("PackageSummary");

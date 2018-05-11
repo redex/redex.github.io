@@ -24,7 +24,7 @@
     "react-timeago": "^3.4.3",
     "remark": "^8.0.0",
     "remark-html": "^7.0.0",
-    "typed-glamor": "github:glennsl/bs-typed-css",
+    "bs-typed-glamor": "github:glennsl/bs-typed-glamor",
     "vrroom": "github:glennsl/vrroom"
   },
   "keywords": [
@@ -43,12 +43,12 @@
     "clean": "rm -rf data/generated",
     "update-sources": "git submodule update --remote && validate_sources",
     "fetch": "npm run clean && npm run update-sources && fetch_published && fetch_unpublished",
-		"update-search-index": "NODE_ENV=production update_search_index",
+    "update-search-index": "NODE_ENV=production update_search_index",
     "deploy": "npm run build && npm run update-search-index && gh-pages -d public -b master",
     "everything": "npm run fetch && npm run deploy"
   },
   "devDependencies": {
-    "bs-platform": "^2.0.0",
+    "bs-platform": "^3.0.0",
     "gh-pages": "^1.1.0",
     "github-slugger": "^1.2.0",
     "mdast-util-to-string": "^1.0.4",

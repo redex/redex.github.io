@@ -8,7 +8,7 @@ var Footer = require("../components/Footer.js");
 var Helmet = require("../bindings/gatsby/helmet.js");
 var SearchBox = require("../components/SearchBox.js");
 var ReasonReact = require("reason-react/src/ReasonReact.js");
-var TypedGlamor = require("typed-glamor/src/TypedGlamor.bs.js");
+var TypedGlamor = require("bs-typed-glamor/src/TypedGlamor.bs.js");
 var CommonStyles = require("../styles/CommonStyles.js");
 var IndexLayoutStyles = require("./IndexLayoutStyles.js");
 

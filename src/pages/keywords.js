@@ -8,7 +8,7 @@ var Helmet = require("../bindings/gatsby/helmet.js");
 var Vrroom = require("vrroom/src/Vrroom.bs.js");
 var Graphql = require("../utils/Graphql.js");
 var ReasonReact = require("reason-react/src/ReasonReact.js");
-var TypedGlamor = require("typed-glamor/src/TypedGlamor.bs.js");
+var TypedGlamor = require("bs-typed-glamor/src/TypedGlamor.bs.js");
 var PackageSummary = require("../components/PackageSummary.js");
 
 var root = TypedGlamor.css(/* None */0, /* :: */[

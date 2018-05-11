@@ -5,7 +5,7 @@ var Link = require("../bindings/gatsby/link.js");
 var React = require("react");
 var Vrroom = require("vrroom/src/Vrroom.bs.js");
 var ReasonReact = require("reason-react/src/ReasonReact.js");
-var TypedGlamor = require("typed-glamor/src/TypedGlamor.bs.js");
+var TypedGlamor = require("bs-typed-glamor/src/TypedGlamor.bs.js");
 var CommonStyles = require("../styles/CommonStyles.js");
 var FooterStyles = require("./FooterStyles.js");
 

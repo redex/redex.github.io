@@ -15,7 +15,7 @@ var TimeAgo = require("../bindings/TimeAgo.js");
 var Version = require("../components/Version.js");
 var Platforms = require("../components/Platforms.js");
 var ReasonReact = require("reason-react/src/ReasonReact.js");
-var TypedGlamor = require("typed-glamor/src/TypedGlamor.bs.js");
+var TypedGlamor = require("bs-typed-glamor/src/TypedGlamor.bs.js");
 var Js_primitive = require("bs-platform/lib/js/js_primitive.js");
 var PackageStyles = require("../styles/PackageStyles.js");
 

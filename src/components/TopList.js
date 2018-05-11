@@ -8,7 +8,7 @@ var React = require("react");
 var Vrroom = require("vrroom/src/Vrroom.bs.js");
 var TimeAgo = require("../bindings/TimeAgo.js");
 var ReasonReact = require("reason-react/src/ReasonReact.js");
-var TypedGlamor = require("typed-glamor/src/TypedGlamor.bs.js");
+var TypedGlamor = require("bs-typed-glamor/src/TypedGlamor.bs.js");
 var Js_primitive = require("bs-platform/lib/js/js_primitive.js");
 var TopListStyles = require("./TopListStyles.js");
 

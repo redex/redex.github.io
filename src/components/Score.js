@@ -7,7 +7,7 @@ var Vrroom = require("vrroom/src/Vrroom.bs.js");
 var Tooltip = require("./Tooltip.js");
 var ReasonReact = require("reason-react/src/ReasonReact.js");
 var ScoreStyles = require("./ScoreStyles.js");
-var TypedGlamor = require("typed-glamor/src/TypedGlamor.bs.js");
+var TypedGlamor = require("bs-typed-glamor/src/TypedGlamor.bs.js");
 
 function formatPercentage(number) {
   return (number * 100).toFixed() + "%";

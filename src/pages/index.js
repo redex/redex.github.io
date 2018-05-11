@@ -11,7 +11,7 @@ var TopList = require("../components/TopList.js");
 var SearchBox = require("../components/SearchBox.js");
 var IndexStyles = require("../styles/IndexStyles.js");
 var ReasonReact = require("reason-react/src/ReasonReact.js");
-var TypedGlamor = require("typed-glamor/src/TypedGlamor.bs.js");
+var TypedGlamor = require("bs-typed-glamor/src/TypedGlamor.bs.js");
 
 function sort(groups) {
   var copy = groups.slice();
