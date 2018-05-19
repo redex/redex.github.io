@@ -44,8 +44,8 @@
     "update-sources": "git submodule update --remote && validate_sources",
     "fetch": "npm run clean && npm run update-sources && fetch_published && fetch_unpublished",
     "update-search-index": "NODE_ENV=production update_search_index",
-    "deploy": "npm run build && npm run update-search-index && gh-pages -d public -b master",
-    "everything": "npm run fetch && npm run deploy"
+    "deploy": "npm run update-search-index && gh-pages -d public -b master",
+    "everything": "npm run fetch && npm run build && npm run deploy"
   },
   "devDependencies": {
     "bs-platform": "^3.0.0",
