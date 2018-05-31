@@ -8,8 +8,8 @@ let make = (~to_: string,
     ~reactClass,
     ~props={
       "to": to_,
-      "className": Js.Nullable.from_opt(className),
-      "style": Js.Nullable.from_opt(style)
+      "className": Js.Nullable.fromOption(className),
+      "style": Js.Nullable.fromOption(style)
     },
     children
   );

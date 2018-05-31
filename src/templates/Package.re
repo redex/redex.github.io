@@ -22,7 +22,6 @@ let make = (~data, _:childless) => {
         });
       })
     |}];
-    ReasonReact.NoUpdate
   },
 
   render: _self => {

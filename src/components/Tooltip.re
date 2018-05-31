@@ -8,10 +8,10 @@ let make = (~content: ReasonReact.reactElement,
   initialState: () => false,
   reducer: (isHovered, _) => ReasonReact.Update(isHovered),
 
-  render: ({ state: isHovered, reduce }) =>
+  render: ({ state: isHovered, send }) =>
     <div className    = (Styles.container |> TypedGlamor.toString)
-         onMouseEnter = reduce(_e => true)
-         onMouseLeave = reduce(_e => false) >
+         onMouseEnter = (_e => send(true))
+         onMouseLeave = (_e => send(false)) >
       {isHovered ? <div className=(Styles.tooltip |> TypedGlamor.toString)> {content} </div> : nothing}
       {child}
     </div>

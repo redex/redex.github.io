@@ -144,20 +144,20 @@ exports.onCreateNode = async ({ node, loadNodeContent, boundActionCreators: { cr
     const parsed = JSON.parse(content);
     
     if (node.sourceInstanceName === "packages") {
-      const package = parsed;
-      package.slug = path.join("/package", decodeURIComponent(package.id))
+      const pkg = parsed;
+      pkg.slug = path.join("/package", decodeURIComponent(pkg.id))
 
       await new Promise((resolve, reject) => 
         remark()
           .use(codeBlocks)
           .use(headingAnchors)
           .use(html)
-          .process(package.readme, function (err, file) {
+          .process(pkg.readme, function (err, file) {
             if (err) {
               reject(err);
             } else {
-              package.readme = file.contents;
-              transformObject(package, "Packages");
+              pkg.readme = file.contents;
+              transformObject(pkg, "Packages");
               resolve();
             }
           })

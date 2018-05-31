@@ -89,26 +89,24 @@ let make = (~focusOnMount=false, _:childless) => {
         })
       } else if (key === Key.enter) {
         ReasonReact.SideEffects(
-          self => self.state.focused |> Option.forEach(this => self.reduce(() => SelectItem(this))())
+          self => self.state.focused |> Option.forEach(this => self.send(SelectItem(this)))
         )
       } else {
         ReasonReact.NoUpdate
       }
     },
 
-  didMount: ({ state, reduce }) => {
+  didMount: ({ state, send }) => {
     state.searchClient |> Algolia.Helper.on(`result(
-      (results, _) => reduce(() => ResultsChanged(results##hits))()
+      (results, _) => send(ResultsChanged(results##hits))
     )) |> ignore;
 
     if (focusOnMount) {
       state.inputRef^ |> Option.forEach(focus);
     };
-
-    ReasonReact.NoUpdate
   },
 
-  render: ({ state, reduce, handle }) =>
+  render: ({ state, send, handle }) =>
     <div className=(Styles.root |> TypedGlamor.toString)>
 
       <div className=(Styles.fakeInput |> TypedGlamor.toString)>
@@ -116,8 +114,8 @@ let make = (~focusOnMount=false, _:childless) => {
         <input className   = (Styles.input |> TypedGlamor.toString)
                placeholder = "Search packages"
                value       = state.query
-               onChange    = reduce(e => QueryChanged(Obj.magic(e)##target##value))
-               onKeyDown   = reduce(e => KeyDown(Obj.magic(e)##keyCode))
+               onChange    = (e => send(QueryChanged(Obj.magic(e)##target##value)))
+               onKeyDown   = (e => send(KeyDown(Obj.magic(e)##keyCode)))
                ref         = handle((r, { state }) => state.inputRef := Js.toOption(r)) />
       </div>
 
@@ -130,7 +128,7 @@ let make = (~focusOnMount=false, _:childless) => {
                   package
                   isFocused = Option.exists(this => this##name === package##name, state.focused)
                   key       = package##id
-                  onClick   = reduce(p => SelectItem(p))
+                  onClick   = (p => send(SelectItem(p)))
                 />
               )
             </Control.Map>

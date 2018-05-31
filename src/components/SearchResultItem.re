@@ -27,7 +27,7 @@ let decode = json =>
 		"slug":					json |> (field("id", string) |> map(id => "/package/" ++ id)),
 		"name":					json |> field("name", string),
 		"description":	json |> field("description", string),
-		"stars":				json |> optional(field("stars", int)) |> Option.map(string_of_int) |> Js.Nullable.from_opt, /* TODO: nullable should probably return Js.nullable, not Js.null */
+		"stars":				json |> optional(field("stars", int)) |> Option.map(string_of_int) |> Js.Nullable.fromOption, /* TODO: nullable should probably return Js.nullable, not Js.null */
 		"updated":			json |> field("updated", date),
 		"version":			json |> field("version", string),
 		"score":				json |> field("score", Json.Decode.float),
