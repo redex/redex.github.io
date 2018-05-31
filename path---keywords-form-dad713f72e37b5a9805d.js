@@ -1,0 +1,2 @@
+webpackJsonp([0xbb5bd92a1535],{960:function(e,o){e.exports={data:{packages:{edges:[{node:{id:"unpublished/Astrocoders/reform",updated:"2018-01-16T07:17:12.520Z",name:"Astrocoders/reform",version:"2.0.6",description:"Reasonably making forms sound good again",keywords:["form","react","bucklescript"],license:"MIT",type:"unpublished",stars:25,score:0,quality:0,popularity:0,maintenance:0,slug:"packages/unpublished/Astrocoders/reform"}}]}},pathContext:{keyword:"form"}}}});
+//# sourceMappingURL=path---keywords-form-dad713f72e37b5a9805d.js.map

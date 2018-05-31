@@ -1,0 +1,2 @@
+webpackJsonp([29632598594835],{1010:function(e,a){e.exports={data:{packages:{edges:[{node:{id:"bs-react-pdf",updated:"2018-01-09T08:12:39.873Z",name:"bs-react-pdf",version:"0.0.13",description:"react-pdf bindings for bucklescript",keywords:["ocaml","bucklescript","react-pdf"],license:"MIT",type:"published",stars:1,score:.47138279363100744,quality:.3692621575088775,popularity:.03608400071850061,maintenance:.9942135603624829,slug:"packages/bs-react-pdf"}}]}},pathContext:{keyword:"react-pdf"}}}});
+//# sourceMappingURL=path---keywords-react-pdf-d4f0471ab093d39ffa85.js.map

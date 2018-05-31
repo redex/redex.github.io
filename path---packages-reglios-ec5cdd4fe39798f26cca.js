@@ -1,0 +1,2 @@
+webpackJsonp([0xbfac91bc3003],{943:function(e,s){e.exports={data:{package:{id:"reglios",updated:"2017-12-17T10:10:11.785Z",name:"reglios",version:"0.1.19",description:"Reason bindings to OpenGL ES for iOS",keywords:[],license:null,type:"published",stars:null,readme:"\n",homepageUrl:null,repositoryUrl:null,npmUrl:"https://www.npmjs.com/package/reglios",issuesUrl:null,slug:"packages/reglios"}},pathContext:{id:"reglios"}}}});
+//# sourceMappingURL=path---packages-reglios-ec5cdd4fe39798f26cca.js.map

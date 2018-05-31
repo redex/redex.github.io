@@ -1,0 +1,2 @@
+webpackJsonp([86275589954508],{817:function(e,s){e.exports={data:{packages:{edges:[{node:{id:"unpublished/srsholmes/colors.re",keywords:["cli"],name:"srsholmes/colors.re",version:"0.0.4",category:"library",flags:[],platforms:["node"],description:"Style terminal strings with ReasonMl.",type:"unpublished",license:"MIT",updated:"2018-04-24T10:49:07.943Z",stars:2,score:0,quality:0,popularity:0,maintenance:0,slug:"/package/unpublished/srsholmes/colors.re"}}]}},pathContext:{keyword:"cli"}}}});
+//# sourceMappingURL=path---keyword-cli-2d7c7314b99a3bd07c9c.js.map

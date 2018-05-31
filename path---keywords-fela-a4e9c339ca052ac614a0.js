@@ -1,0 +1,2 @@
+webpackJsonp([74336630632189],{955:function(e,a){e.exports={data:{packages:{edges:[{node:{id:"bs-react-fela",updated:"2018-01-11T12:38:25.626Z",name:"bs-react-fela",version:"0.2.2",description:"BuckleScript bindings for react-fela",keywords:["react","fela","bucklescript"],license:"MIT",type:"published",stars:6,score:.48597600359597537,quality:.41189763437895077,popularity:.040834415364631095,maintenance:.9946133368704837,slug:"packages/bs-react-fela"}}]}},pathContext:{keyword:"fela"}}}});
+//# sourceMappingURL=path---keywords-fela-a4e9c339ca052ac614a0.js.map

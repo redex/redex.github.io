@@ -1,0 +1,2 @@
+webpackJsonp([28864770193117],{895:function(s,d){s.exports={data:{packages:{edges:[{node:{id:"unpublished/bs-discord.js",name:"bs-discord.js",version:"0.1.0",description:"BuckleScript bindings for discord.js",keywords:["discord","discord.js","bucklescript"],license:"MIT",updated:"2017-12-16T15:20:04.844Z",stars:4,slug:"packages/unpublished/bs-discord.js"}}]}},pathContext:{keyword:"discord"}}}});
+//# sourceMappingURL=path---keywords-discord-ec7355915c734c5e0b06.js.map

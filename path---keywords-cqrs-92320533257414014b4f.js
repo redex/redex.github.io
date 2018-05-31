@@ -1,0 +1,2 @@
+webpackJsonp([37798291790630],{890:function(s,e){s.exports={data:{packages:{edges:[{node:{id:"unpublished/bs-transit-js",name:"bs-transit-js",version:"0.0.1",description:"BuckleScript bindings for transit-js",keywords:["reason","cqrs","bucklescript"],license:null,updated:"2017-12-16T15:20:04.842Z",stars:7,slug:"packages/unpublished/bs-transit-js"}}]}},pathContext:{keyword:"cqrs"}}}});
+//# sourceMappingURL=path---keywords-cqrs-92320533257414014b4f.js.map

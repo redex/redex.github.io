@@ -1,0 +1,2 @@
+webpackJsonp([0x9f4b56cf6ade],{965:function(s,e){s.exports={data:{packages:{edges:[{node:{id:"unpublished/reasonml-community/bs-history",updated:"2018-01-14T05:56:30.596Z",name:"reasonml-community/bs-history",version:"0.0.1",description:"BuckleScript bindings for History",keywords:["location","history","bucklescript"],license:"MIT",type:"unpublished",stars:4,score:0,quality:0,popularity:0,maintenance:0,slug:"packages/unpublished/reasonml-community/bs-history"}}]}},pathContext:{keyword:"history"}}}});
+//# sourceMappingURL=path---keywords-history-2bef13302ba09444127f.js.map

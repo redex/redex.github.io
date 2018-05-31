@@ -1,0 +1,2 @@
+webpackJsonp([0x7672f49de27b],{893:function(e,s){e.exports={data:{packages:{edges:[{node:{id:"bs-rebug",name:"bs-rebug",version:"0.2.1",description:"Originally a port of [debug](https://github.com/visionmedia/debug) to BuckleScript, but has since expanded a bit.",keywords:["bucklescript","debug"],license:"MIT",updated:"2017-12-01T23:42:46.758Z",stars:null,slug:"packages/bs-rebug"}}]}},pathContext:{keyword:"debug"}}}});
+//# sourceMappingURL=path---keywords-debug-35a636fd0f2356989b2d.js.map

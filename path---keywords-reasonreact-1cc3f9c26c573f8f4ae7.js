@@ -1,0 +1,2 @@
+webpackJsonp([60163504137254],{972:function(e,s){e.exports={data:{packages:{edges:[{node:{id:"bs-next",updated:"2017-12-16T08:03:35.584Z",name:"bs-next",version:"2.0.0",description:"Reason bindings for Next.js",keywords:["next","reasonreact","bucklescript","next.js","reason"],license:"MIT",type:"published",stars:10,score:.5179666180780198,quality:.5115562169291288,popularity:.04151183495174578,maintenance:.9999160307604862,slug:"packages/bs-next"}}]}},pathContext:{keyword:"reasonreact"}}}});
+//# sourceMappingURL=path---keywords-reasonreact-1cc3f9c26c573f8f4ae7.js.map

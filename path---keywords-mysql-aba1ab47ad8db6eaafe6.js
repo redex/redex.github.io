@@ -1,0 +1,2 @@
+webpackJsonp([0x8004ba37615d],{988:function(s,e){s.exports={data:{packages:{edges:[{node:{id:"bs-mysql",updated:"2018-01-13T22:49:57.879Z",name:"bs-mysql",version:"0.1.2",description:"Bucklescript bindings for mysql.js, written in Reason.",keywords:["databases","mysql","bucklescript"],license:"MIT",type:"published",stars:null,score:.14965720636703428,quality:.10417277315839275,popularity:.00496773643671368,maintenance:.3333333333333333,slug:"packages/bs-mysql"}}]}},pathContext:{keyword:"mysql"}}}});
+//# sourceMappingURL=path---keywords-mysql-aba1ab47ad8db6eaafe6.js.map

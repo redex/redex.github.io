@@ -1,0 +1,2 @@
+webpackJsonp([0x9ca3582cb2e6],{979:function(e,n){e.exports={data:{packages:{edges:[{node:{id:"bs-luxon",updated:"2018-01-14T11:39:30.730Z",name:"bs-luxon",version:"0.2.0",description:"Bucklescript bindings for Luxon, written in Reason.",keywords:["date","bucklescript","time","luxon"],license:"MIT",type:"published",stars:1,score:.5634424433344576,quality:.7020631657977556,popularity:.025352872391938175,maintenance:.9827142521655787,slug:"packages/bs-luxon"}}]}},pathContext:{keyword:"luxon"}}}});
+//# sourceMappingURL=path---keywords-luxon-9169258ec65d3e9afea4.js.map

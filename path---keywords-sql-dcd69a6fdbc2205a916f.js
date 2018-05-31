@@ -1,0 +1,2 @@
+webpackJsonp([35801972709167],{1013:function(e,s){e.exports={data:{packages:{edges:[{node:{id:"bs-knex",updated:"2018-01-04T20:31:38.394Z",name:"bs-knex",version:"0.9.0",description:"BuckleScript interface to the node 'knex' library",keywords:["knex","sql","database","node","bucklescript"],license:"BSD-2-Clause",type:"published",stars:1,score:.49131934418609824,quality:.43346074833146114,popularity:.03223177053331423,maintenance:.9999999999999999,slug:"packages/bs-knex"}}]}},pathContext:{keyword:"sql"}}}});
+//# sourceMappingURL=path---keywords-sql-dcd69a6fdbc2205a916f.js.map

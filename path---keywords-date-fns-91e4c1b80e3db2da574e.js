@@ -1,0 +1,2 @@
+webpackJsonp([0xc782d991867e],{935:function(e,s){e.exports={data:{packages:{edges:[{node:{id:"bs-date-fns",updated:"2017-12-27T06:29:24.000Z",name:"bs-date-fns",version:"0.1.2",description:"Bucklescript bindings to date-fns",keywords:["date-fns","bucklescript"],license:"MIT",type:"published",stars:8,score:.48498305857396007,quality:.41202637097717476,popularity:.03926180600637965,maintenance:.993238614795928,slug:"packages/bs-date-fns"}}]}},pathContext:{keyword:"date-fns"}}}});
+//# sourceMappingURL=path---keywords-date-fns-91e4c1b80e3db2da574e.js.map

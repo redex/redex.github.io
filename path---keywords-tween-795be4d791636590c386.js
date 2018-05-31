@@ -1,0 +1,2 @@
+webpackJsonp([0xcb6f256140dd],{1023:function(e,n){e.exports={data:{packages:{edges:[{node:{id:"tween.re",updated:"2017-12-29T10:57:09.949Z",name:"tween.re",version:"1.0.0",description:"tween",keywords:["tween"],license:"MIT",type:"published",stars:null,score:.23678238006722024,quality:.3994835836180364,popularity:.00416164497441446,maintenance:.329944940687898,slug:"packages/tween.re"}}]}},pathContext:{keyword:"tween"}}}});
+//# sourceMappingURL=path---keywords-tween-795be4d791636590c386.js.map

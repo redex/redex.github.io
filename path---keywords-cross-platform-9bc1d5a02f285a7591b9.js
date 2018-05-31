@@ -1,0 +1,2 @@
+webpackJsonp([27502057258461],{914:function(e,s){e.exports={data:{packages:{edges:[{node:{id:"unpublished/glennsl/infinite-jest",updated:"2017-12-23T18:54:42.514Z",name:"glennsl/infinite-jest",version:"0.0.0",description:"",keywords:["jest","bucklescript","testing","cross-platform","reason"],license:"MIT",type:"unpublished",stars:4,score:0,quality:0,popularity:0,maintenance:0,slug:"packages/unpublished/glennsl/infinite-jest"}}]}},pathContext:{keyword:"cross-platform"}}}});
+//# sourceMappingURL=path---keywords-cross-platform-9bc1d5a02f285a7591b9.js.map

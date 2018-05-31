@@ -1,0 +1,2 @@
+webpackJsonp([0x6bbc51535327],{876:function(o,a){o.exports={data:{packages:{edges:[{node:{id:"reason-apollo",name:"reason-apollo",version:"0.5.6",description:"Using Apollo client 2 with Reason",keywords:["reason","apollo","react","graphql"],license:"MIT",updated:"2017-12-05T20:37:58.494Z",stars:27,slug:"packages/reason-apollo"}}]}},pathContext:{keyword:"apollo"}}}});
+//# sourceMappingURL=path---keywords-apollo-96965eb083cdb387ac6b.js.map

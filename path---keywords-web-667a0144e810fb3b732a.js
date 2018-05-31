@@ -1,0 +1,2 @@
+webpackJsonp([0xd09e19defc4d],{1021:function(e,s){e.exports={data:{packages:{edges:[{node:{id:"bs-webapi",updated:"2018-01-03T07:04:34.178Z",name:"bs-webapi",version:"0.8.0",description:"Reason + BuckleScript bindings to DOM",keywords:["dom","bucklescript","web"],license:"MIT",type:"published",stars:99,score:.651023189888279,quality:.8537062859232241,popularity:.13780954673106202,maintenance:.9905084650155431,slug:"packages/bs-webapi"}}]}},pathContext:{keyword:"web"}}}});
+//# sourceMappingURL=path---keywords-web-667a0144e810fb3b732a.js.map

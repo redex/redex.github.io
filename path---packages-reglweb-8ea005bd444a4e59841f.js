@@ -1,0 +1,2 @@
+webpackJsonp([75309244914950],{945:function(e,l){e.exports={data:{package:{id:"reglweb",updated:"2017-12-11T16:11:42.843Z",name:"reglweb",version:"0.1.19",description:"Reason bindings to WebGL",keywords:[],license:null,type:"published",stars:null,readme:"\n",homepageUrl:null,repositoryUrl:null,npmUrl:"https://www.npmjs.com/package/reglweb",issuesUrl:null,slug:"packages/reglweb"}},pathContext:{id:"reglweb"}}}});
+//# sourceMappingURL=path---packages-reglweb-8ea005bd444a4e59841f.js.map

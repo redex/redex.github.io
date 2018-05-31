@@ -1,0 +1,2 @@
+webpackJsonp([0x99bafadf543],{1033:function(e,s){e.exports={data:{packages:{edges:[{node:{id:"bs-webworkers",updated:"2018-01-06T10:47:53.893Z",name:"bs-webworkers",version:"0.2.1",description:"Bucklescript bindings for Web Workers",keywords:["webworkers","bucklescript"],license:"MIT",type:"published",stars:6,score:.5725733534500261,quality:.7020966277966396,popularity:.034126801594658085,maintenance:.99999995586544,slug:"packages/bs-webworkers"}}]}},pathContext:{keyword:"webworkers"}}}});
+//# sourceMappingURL=path---keywords-webworkers-4cd21e53d44b8958b62e.js.map
