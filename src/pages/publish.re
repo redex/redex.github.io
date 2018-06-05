@@ -23,7 +23,7 @@ let html = {|
 
   <p>
     NOTE: The readme and other metadata together must total less than 10k bytes
-    in order to be indexed by the search engine. To avoid going over that limit, 
+    in order to be indexed by the search engine. To avoid going over that limit,
     please keep the contents of the readme to only the essentials, and put
     extensive documentation and such in a separate markdown file linked to from
     the readme. This also has the added benefit of improving search relevance.,
@@ -57,7 +57,7 @@ let html = {|
     Publishing to NPM is not a requirement. If your project is incomplete, experimental or otherwise not yet ready for primetime,
     it might be easier to just depend on the master branch of the source code repository. You can still submit your
     package to redex, where it'll then be marked as unpublished. This is not only intended as a warning, but also to
-    highlight opportunities to contribute. 
+    highlight opportunities to contribute.
 
   <h2>Step 3: Submit to redex</h2>
   <p>
@@ -77,7 +77,7 @@ let html = {|
 
     <h3>Unpublished package</h3>
     <p>
-      Add an entry in the published collection with the follwoing format:
+      Add an entry in the published collection with the following format:
 
 <pre><code>"&lt;owner&gt;/&lt;repository&gt;": {
   "repository": "github:&lt;owner&gt;/&lt;repository&gt;"
@@ -115,7 +115,7 @@ let html = {|
       <p>
         Please try to use only the keywords that are already in use, which are
         listed on the front page. If you don't think you package fits into any of
-        these categories, you may propose a new keyword in the submission PR. 
+        these categories, you may propose a new keyword in the submission PR.
 
     <li>
       <h4>What does the "any" platform mean?</h4>
