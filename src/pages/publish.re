@@ -26,7 +26,7 @@ let html = {|
     in order to be indexed by the search engine. To avoid going over that limit,
     please keep the contents of the readme to only the essentials, and put
     extensive documentation and such in a separate markdown file linked to from
-    the readme. This also has the added benefit of improving search relevance.,
+    the readme. This also has the added benefit of improving search relevance,
     making it easier to find your package when searching for relevant terms.
 
   <h4>Metadata</h4>
@@ -67,7 +67,7 @@ let html = {|
 
     <h3>Published package</h3>
     <p>
-      Add an entry in the published collection with the follwoing format:
+      Add an entry in the published collection with the following format:
 
 <pre><code>"&lt;npm name&gt;": {
   "category": "binding" | "library" | "tool" | "boilerplate",
@@ -114,16 +114,16 @@ let html = {|
       <h4>Which keywords can I use?</h4>
       <p>
         Please try to use only the keywords that are already in use, which are
-        listed on the front page. If you don't think you package fits into any of
+        listed on the front page. If you don't think your package fits into any of
         these categories, you may propose a new keyword in the submission PR.
 
     <li>
       <h4>What does the "any" platform mean?</h4>
       <p>
         The "any" platform means the package is platform-independent, because it
-        avoids using platform-specific features. It's improtant to distinguish
+        avoids using platform-specific features. It's important to distinguish
         a package that is platform-independent from a package that, in one way or
-        another, targets all avilable platforms. These are not equivalent since a
+        another, targets all available platforms. These are not equivalent since a
         platform-independent package will automatically support any new platform.
   </ul>
 |};
