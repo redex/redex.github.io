@@ -1,0 +1,2 @@
+webpackJsonp([0xd4213d5ac91b],{1169:function(e,s){e.exports={data:{packages:{edges:[{node:{type:"published",id:"bs-pixl-xml",name:"bs-pixl-xml",version:"0.1.0",category:"binding",flags:[],platforms:["node","browser"],description:"Bucklescript bindings to pixl-xml",keywords:["xml"],license:"MIT",updated:"2020-06-16T03:33:06.081Z",stars:null,score:.17564807938583243,quality:.5837795461906179,popularity:.0014691872247059496,maintenance:0,slug:"/package/bs-pixl-xml"}}]}},pathContext:{keyword:"xml"}}}});
+//# sourceMappingURL=path---keyword-xml-201b785b7a899cb95521.js.map
