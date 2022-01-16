@@ -7,7 +7,7 @@
     "@glennsl/bs-json": "^2.0.0",
     "@glennsl/rebase": "^0.2.1",
     "algoliasearch": "^3.35.1",
-    "algoliasearch-helper": "^2.28.0",
+    "algoliasearch-helper": "^3.6.2",
     "bs-typed-glamor": "github:glennsl/bs-typed-glamor",
     "gatsby": "^1.9.279",
     "gatsby-link": "^1.6.46",
