@@ -9,7 +9,7 @@
     "algoliasearch": "^3.35.1",
     "algoliasearch-helper": "^3.6.2",
     "bs-typed-glamor": "github:glennsl/bs-typed-glamor",
-    "gatsby": "^1.9.279",
+    "gatsby": "^5.0.1",
     "gatsby-link": "^1.6.46",
     "gatsby-plugin-favicon": "^2.1.1",
     "gatsby-plugin-glamor": "^1.6.13",
